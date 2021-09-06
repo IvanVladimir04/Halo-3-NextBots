@@ -52,7 +52,7 @@ end
 
 concommand.Add("printsounds", function( ply, cmd, args )
 	local marinefolder = "stacker"
-	local root = "sound/marines/"..marinefolder.."/"
+	local root = "sound/"..marinefolder.."/"
 	local path = ""..root.."*"..""
 	local files, directories = file.Find( path, "GAME" )
 	--print(type(files),type(directories))
