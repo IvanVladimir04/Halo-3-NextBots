@@ -924,7 +924,7 @@ function ENT:HasToReload()
 end
 
 function ENT:DoMelee()
-	self:Speak("OnMelee")
+	self:Speak("melee")
 	if IsValid(self.Enemy) then
 		local ang = (self.Enemy:GetPos()-self:GetPos()):GetNormalized():Angle()
 		self:SetAngles(Angle(0,ang.y,0))
