@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Ivan04\marinebp_diffuse"
+      	"$bumpmap" "models\Ivan04\marinebp_zbump"
+	"$halflambert" 1
+
+	"$phong" "1"
+	"$phongexponent" 5
+	"$phongboost"	"3"
+	"$phongfresnelranges"	"[0.01 0.5 1]"
+	"$phongtint"	"{155 180 105}"
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/marinebp_diffuse"
+	"$bumpmap" "models/Ivan04/marinebp_zbump"
+
+}

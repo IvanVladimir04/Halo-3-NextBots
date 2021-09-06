@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/human_wounded_decals"
+	"$translucent" "1"
+}

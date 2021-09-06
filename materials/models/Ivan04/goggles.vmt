@@ -1,0 +1,19 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Ivan04\marine_arm_pack_perm_diffuse"
+	"$bumpmap" "models\Ivan04\marine_arm_pack_perm_zbump"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint"	"[.4 .2 .03]"
+	"$envmapsaturation"	".6"
+	"$envmapcontrast"		".3"
+	"$phong" "1"
+	"$phongboost" "50"
+//	"$phongexponent"		"10"
+	"$phongalbedotint" "45"
+	"$phongexponenttexture" "models\halo\halo_3_odst\rookie\Helmet_Phong"
+	"$phongfresnelranges" "[.5 .5 .5]"
+	"$model" "1"
+
+	"$color2"		"[3 1.5 .7]"
+}

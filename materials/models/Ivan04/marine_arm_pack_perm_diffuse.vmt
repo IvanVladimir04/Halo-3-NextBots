@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/marine_arm_pack_perm_diffuse"
+	"$bumpmap" "marine_arm_pack_perm_zbump"
+	"$phongexponenttexture" "models/Ivan04/marine_arm_pack_perm_spec"
+}

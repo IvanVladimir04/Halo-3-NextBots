@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Ivan04\pilot_decal"
+	"$translucent" 1
+}
