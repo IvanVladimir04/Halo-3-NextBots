@@ -2228,7 +2228,12 @@ end
 function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 	for i = 1, #self.IdleAnim do
 		if self.loco:GetVelocity():IsZero() and self:GetActivity() == self.IdleAnim[i] then
-			self:StartActivity( self.WanderAnim[math.random(1,#self.WanderAnim)] )
+			local anim = self.WanderAnim[math.random(#self.WanderAnim)]
+			if type(anim) == "string" then
+				self:ResetSequence( anim )
+			else
+				self:StartActivity( anim )			-- Move animation
+			end
 		end
 	end
 	local options = options or {}
