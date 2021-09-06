@@ -57,6 +57,8 @@ ENT.BloodEffect = "halo_reach_blood_impact_human"
 
 ENT.LastThinkTime = 0
 
+ENT.ThrownGrenades = 0
+
 ENT.ThinkDelay = 1
 
 ENT.LastCalcTime = 0
@@ -66,8 +68,6 @@ ENT.AimCalculationT = 3
 ENT.NBlink = 0
 
 ENT.AttractAlliesRange = 512
-
-ENT.ThrownGrenades = 0
 
 ENT.LocGravity = 600
 
@@ -388,7 +388,7 @@ function ENT:SetupHoldtypes()
 	self.WarthogGunnerExit = "warthog_g_exit"
 	self.WarthogGunnerIdle = "warthog_g_idle"
 	self.WarthogGunnerFire = "warthog_g_fire"
-	self.DeadAirAnim = "Dead_Fly"
+	self.DeadAirAnim = "any_dead_fly"
 	self.PelicanPassengerLIdleAnims = {
 		[5] = "Pelican_Passenger_Rifle_Idle_L1",
 		[4] = "Pelican_Passenger_Rifle_Idle_L2",
@@ -778,7 +778,7 @@ end
 
 function ENT:OnLeaveGround(ent)
 	if self:Health() <= 0 then 
-		self:ResetSequence(self:GetSequenceActivity(self:LookupSequence(self.DeadAirAnim)))
+		self:ResetSequence(self:LookupSequence(self.DeadAirAnim))
 	else
 		self.LastTimeOnGround = CurTime()
 		local t = self.LastTimeOnGround
@@ -852,6 +852,7 @@ function ENT:OnInjured(dmg)
 			self:SetEnemy(dmg:GetAttacker()) 
 		end
 	end
+	if math.abs(self:Health()) - math.abs(dmg:GetDamage()) <= 0 then return end
 	if !self.SpokeInjured then
 		self.SpokeInjured = true
 		timer.Simple( math.random(5,10), function()
@@ -1505,6 +1506,7 @@ function ENT:CustomBehaviour(ent,range)
 	if self.IsInVehicle then return self:VehicleBehavior(ent,range) end
 	local los = self.HasLOSToTarget
 	local range = range or self.DistToTarget
+	if !self.DistToTarget then self.DistToTarget = range end
 	local can, veh = self:CanEnterAVehicle()
 	if can then
 		self:EnterVehicle(veh)
@@ -2535,7 +2537,11 @@ end
 function ENT:DoKilledAnim()
 	if !self.KilledDmgInfo:IsDamageType(DMG_BLAST) then
 		if self.KilledDmgInfo:GetDamage() <= 150 then
-			self:Speak("OnDeath")
+			if math.random(1,2) == 1 then
+				self:Speak("dth")
+			else
+				self:Speak("dth_mjr")
+			end
 			local anim = self:DetermineDeathAnim(self.KilledDmgInfo)
 			if anim == true then 
 				local wep = ents.Create(self.Weapon:GetClass())
@@ -2570,7 +2576,15 @@ function ENT:DoKilledAnim()
 			end )
 			self:PlaySequenceAndPWait(seq, 1, self:GetPos())
 		else
-			self:Speak("OnDeathPainful")
+			if self.DeathHitGroup == 1 then
+				self:Speak("dth_hdsht")
+			else
+				if math.random(1,2) == 1 then
+					self:Speak("dth_slw")
+				else
+					self:Speak("dth_drama")
+				end
+			end
 			local wep = ents.Create(self.Weapon:GetClass())
 			wep:SetPos(self.Weapon:GetPos())
 			wep:SetAngles(self.Weapon:GetAngles())
@@ -2590,7 +2604,7 @@ function ENT:DoKilledAnim()
 			rag = self:CreateRagdoll(self.KilledDmgInfo)
 		end
 	else
-		self:Speak("OnDeathThrown")
+		self:Speak("dth_fall")
 		self.FlyingDead = true
 		local dir = ((self:GetPos()-self.KilledDmgInfo:GetDamagePosition())):GetNormalized()
 		dir = dir+self:GetUp()*2
@@ -2614,7 +2628,7 @@ function ENT:DoKilledAnim()
 			end
 			coroutine.wait(0.01)
 		end
-		self:PlaySequenceAndWait("Dead_Land")
+		self:PlaySequenceAndWait("any_dead_land")
 		local wep = ents.Create(self.Weapon:GetClass())
 		wep:SetPos(self.Weapon:GetPos())
 		wep:SetAngles(self.Weapon:GetAngles())

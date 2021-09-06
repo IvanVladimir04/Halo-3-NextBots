@@ -1,5 +1,5 @@
 if util.IsValidModel( "models/halo/halo_3/weapons/flamethrower.mdl" ) and file.Exists( "lua/autorun/astw2_halo_3_autorun.lua", "WORKSHOP" ) then
-	CreateConVar( "halo_3_nextbots_ai_type", "Offensive", FCVAR_ARCHIVE, "Type of AI the Halo Reach NextBots will spawn with (if you change this after spawning one its AI type won't change), possible values are Defensive, Offensive and Static. Note not all kind of nextbots can be affected by this!" )
+	CreateConVar( "halo_3_nextbots_ai_type", "Offensive", FCVAR_ARCHIVE, "Type of AI the Halo 3 NextBots will spawn with (if you change this after spawning one its AI type won't change), possible values are Defensive, Offensive and Static. Note not all kind of nextbots can be affected by this!" )
 	CreateConVar( "halo_3_nextbots_ai_difficulty", 2, FCVAR_ARCHIVE, "Difficulty, (1 = easy, 2 = normal, 3 = heroic, 4 = legendary" )
 	CreateConVar( "halo_3_nextbots_ai_heroes", 1, FCVAR_ARCHIVE, "Are hero characters invincible?" )
 	CreateConVar( "halo_3_nextbots_ai_hostile_humans", 0, FCVAR_ARCHIVE, "Are humans hostile to players?" )
@@ -49,46 +49,3 @@ if SERVER then
 	end
 
 end
-
-concommand.Add("printsounds", function( ply, cmd, args )
-	local marinefolder = "stacker"
-	local root = "sound/"..marinefolder.."/"
-	local path = ""..root.."*"..""
-	local files, directories = file.Find( path, "GAME" )
-	--print(type(files),type(directories))
-	--print( "File: " .. files[1], "Folder: " .. directories[1] )
-
-	--PrintTable(files)
-	--PrintTable(directories)
-	local tbl = {}
-	for k, v in pairs(files) do
-		local sound = ""..root..v..""
-		--print(sound) -- sound is the sound path
-		local letters = string.Split( v, "" )
-		--print(v) -- v is the sound
-		local finalvalue = letters[#letters-4] -- just before the .ogg, we are gonna determine if it needs a new category
-		--print(finalvalue)
-		if isnumber(tonumber(finalvalue)) then
-			local altval = letters[#letters-5]
-			local cat = string.Left(v,#letters-4)
-			local num = 1
-			if isnumber(tonumber(altval)) then
-				num = 2
-			end
-			--print(cat,"is number")
-			cat = string.Left(v,#cat-(num))
-			if !tbl["['"..cat.."']"] then tbl["['"..cat.."']"] = {} end
-			sound = string.Right(sound,#sound-6)
-			table.insert(tbl["['"..cat.."']"],sound)
-		else
-			local cat = string.Left(v,#letters-5)
-			--print(cat,"is unique")
-			if !tbl["['"..cat.."']"] then tbl["['"..cat.."']"] = {} end
-			sound = string.Right(sound,#sound-6)
-			table.insert(tbl["['"..cat.."']"],sound)
-		end
-		--table.insert(tbl,sound)
-	end
-	print("Done!")
-	file.Write( ""..marinefolder..".txt", table.ToString(tbl,"sounds",true) )
-end)
