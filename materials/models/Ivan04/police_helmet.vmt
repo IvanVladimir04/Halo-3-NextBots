@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/Ivan04/police_helmet"
-	//"$bumpmap" "models/Ivan04/marine_head_plate_bump"
-	//"$phongexponenttexture" "models/Ivan04/elite_sp_specular"
+	"$bumpmap" "models/Ivan04/police_helmet_zbump"
+	"$phongexponenttexture" "models/Ivan04/police_helmet_cc"
 	
 	//"$blendtintbybasealpha" 1	
 	

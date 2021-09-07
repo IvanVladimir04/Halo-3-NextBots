@@ -1,0 +1,23 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Ivan04\odst_helmet_diffuse"
+	"$bumpmap" "models\Ivan04\odst_helmet_zbump"
+	$normalmapalphaenvmapmask         "1"
+    	
+	//$envmaptint                     "[1 1.2 1.3]"
+	//$envmapfresnel                     "1"
+
+	$halflambert					"1"
+	$nocull                            "1"
+
+	$phong					"1"
+	$phongalbedotint 				"1"
+	$phongexponent 					"7"
+	$phongboost 					"0.8"
+	$phongtint 						"{115 120 170}"
+	$phongfresnelranges 			"[0.2 0.2 0]"
+
+	$rimlight                         "1"
+	$rimlightexponent                 "5"
+	$rimlightboost                     "0.05"
+}

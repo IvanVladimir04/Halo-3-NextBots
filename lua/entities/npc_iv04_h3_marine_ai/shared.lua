@@ -550,7 +550,8 @@ function ENT:SetupHoldtypes()
 			self.TransitionAnims["Crouch_Idle_2_Guard"] = "rifle_crouch_idle_2_guard_idle"
 			self.TransitionAnims["Crouch_Idle_2_Idle"] = "rifle_crouch_idle_2_idle"
 		elseif hold == "rpg" then
-			self.IdleAnim = {"missile_idle_1","missile_idle_1"}
+			self.IdleAnim = {"missile_idle_1","missile_idle_2"}
+			self.IdleCalmAnim = {"missile_idle_1","missile_idle_2"}
 			self.RunAnim = {"missile_move"}
 			self.WalkAnim = {"missile_walk"}
 			self.RunCalmAnim = {"missile_move_passive"}
@@ -749,7 +750,7 @@ function ENT:OnLostSeenEnemy(ent)
 end
 
 function ENT:OnTraceAttack( info, dir, trace )
-	if trace.HitGroup == 1 then
+	if trace.HitGroup == 1 and !self.HeadShotImmune then
 		info:ScaleDamage(3)
 	end
 	if self:Health() - info:GetDamage() < 1 then self.DeathHitGroup = trace.HitGroup return end
@@ -2568,7 +2569,7 @@ function ENT:DoKilledAnim()
 					local rag
 					if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
 						timer.Simple( 60, function()
-							if IsValid(wep) then
+							if IsValid(wep) and !IsValid(wep.Owner) then
 								wep:Remove()
 							end
 							if IsValid(rag) then
@@ -2598,7 +2599,7 @@ function ENT:DoKilledAnim()
 			local rag
 			if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
 				timer.Simple( 60, function()
-					if IsValid(wep) then
+					if IsValid(wep) and !IsValid(wep.Owner) then
 						wep:Remove()
 					end
 					if IsValid(rag) then

@@ -1,6 +1,5 @@
 "VertexLitGeneric"
 {
-	"$baseTexture"  "models/valk/h3/UNSC/Props/Marine/wounded_head_decals_d"
+	"$baseTexture"  "models/Ivan04/wounded_head_decals_d"
 	"$translucent" "1"
-	
 }

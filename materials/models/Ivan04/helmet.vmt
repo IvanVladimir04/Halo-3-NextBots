@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/worker_dif"
+	"$bumpmap" "models/Ivan04/worker_zbump"
+	"$phongexponenttexture" "models/Ivan04/worker_cc"
+	
+	"$color2"		"{223 121 26}"
+}

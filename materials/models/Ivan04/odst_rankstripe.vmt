@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/Ivan04/marine_arm_pack_perm_diffuse"
+	"$translucent" 1
+	"$color2"		"{255 0 0}"
+}

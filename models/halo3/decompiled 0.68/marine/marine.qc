@@ -69,7 +69,7 @@ $texturegroup Arms
 }
 
 
-$surfaceprop "metal"
+$surfaceprop "flesh"
 
 $cdmaterials "models/Ivan04/"
 
