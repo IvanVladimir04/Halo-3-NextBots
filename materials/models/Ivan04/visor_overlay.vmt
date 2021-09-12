@@ -1,27 +1,26 @@
-"VertexlitGeneric"
+"VertexLitGeneric"
 {
-	"$basetexture" "models/Ivan04/visor_overlay_diffuse"
-	//"$bumpmap" "models/Ivan04/marine_head_plate_bump"
-	//"$phongexponenttexture" "models/Ivan04/elite_sp_specular"
-	
-	//"$blendtintbybasealpha" 1	
-	
-	//"$envmap" "env_cubemap"
-	//"$basealphaenvmapmask" 1
-	//"$normalmapalphaenvmapmask" "1"
-	//"$envmaptint" 	"[.05 .05 .05]"
-	
-	//"$halflambert" 1
+	$baseTexture 					"models\halo\halo_3_odst\nmpd\visor_overlay_diffuse"
+	$nocull							"1"
+	$additive 						"1"
+	$selfillum 						"1"
+	$selfillummaskscale 			"10"
+	$color2				"{165 140 105}"
 
-//	$detail "pl/grunt_diffuse"
-//	$detailscale 1
-//	$detailblendfactor .25
-//	$detailblendmode 0	
-	
-	//"$model" 1
-	
-  //  "$phong" "1" 
-	//"$phongboost" ".25"
-	//"$phongfresnelranges" "[.9 1 0 ]" 
-
+			"Proxies" 
+	{
+		UniformNoise
+		{
+			resultVar	$alpha
+			minVal	.035
+			maxVal	.035
+		}
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" 0.1
+			"texturescrollangle" 0	
+		}
+	}
 }
+

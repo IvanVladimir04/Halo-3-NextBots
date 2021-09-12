@@ -1,27 +1,17 @@
-"VertexlitGeneric"
+"VertexLitGeneric"
 {
-	"$basetexture" "models/Ivan04/police_body_diffuse"
-	//"$bumpmap" "models/Ivan04/marine_head_plate_bump"
-	//"$phongexponenttexture" "models/Ivan04/elite_sp_specular"
-	
-	//"$blendtintbybasealpha" 1	
-	
-	//"$envmap" "env_cubemap"
-	//"$basealphaenvmapmask" 1
-	//"$normalmapalphaenvmapmask" "1"
-	//"$envmaptint" 	"[.05 .05 .05]"
-	
-	//"$halflambert" 1
+	"$basetexture" "models\halo\halo_3_odst\nmpd\police_body_diffuse"
+                "$bumpmap" "models\halo\halo_3_odst\nmpd\police_body_zbump"
 
-//	$detail "pl/grunt_diffuse"
-//	$detailscale 1
-//	$detailblendfactor .25
-//	$detailblendmode 0	
-	
-	//"$model" 1
-	
-  //  "$phong" "1" 
-	//"$phongboost" ".25"
-	//"$phongfresnelranges" "[.9 1 0 ]" 
+"$phongexponent" "5"
+ "$halflambert" "1"
+"$phong" "1"
+	"$phongboost"	"0.4"
+	"$phongfresnelranges"	"[.20 .25 .25]"
 
+	
+"$rimlight" "1" 
+"$rimlightexponent" "5" 
+"$rimlightboost" "1.5" 
+"$rimmask" 1
 }

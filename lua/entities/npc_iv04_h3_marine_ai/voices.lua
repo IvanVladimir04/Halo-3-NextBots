@@ -13342,12 +13342,12 @@ ENT.Voices = {
 				}
 	},
 	["Cop1"] = {
-	['cvr_invsgt_1']	=	{
+	['cvr_invsgt']	=	{
 				"cop1/cvr_invsgt_100.ogg",
 				"cop1/cvr_invsgt_101.ogg",
 				"cop1/cvr_invsgt_102.ogg",
 				},
-		['dodge_1']	=	{
+		['dodge']	=	{
 				"cop1/dodge_100.ogg",
 				"cop1/dodge_101.ogg",
 				"cop1/dodge_102.ogg",
@@ -13355,7 +13355,7 @@ ENT.Voices = {
 				"cop1/dodge_104.ogg",
 				"cop1/dodge_105.ogg",
 				},
-		['morefoe_1']	=	{
+		['morefoe']	=	{
 				"cop1/morefoe_100.ogg",
 				"cop1/morefoe_101.ogg",
 				"cop1/morefoe_102.ogg",
@@ -13365,29 +13365,29 @@ ENT.Voices = {
 				"cop1/panic_onfire2.ogg",
 				"cop1/panic_onfire3.ogg",
 				},
-		['srch_pinned_1']	=	{
+		['srch_pinned']	=	{
 				"cop1/srch_pinned_100.ogg",
 				"cop1/srch_pinned_101.ogg",
 				"cop1/srch_pinned_102.ogg",
 				"cop1/srch_pinned_103.ogg",
 				"cop1/srch_pinned_104.ogg",
 				},
-		['foeordr_support_1']	=	{
+		['foeordr_support']	=	{
 				"cop1/foeordr_support_100.ogg",
 				"cop1/foeordr_support_101.ogg",
 				},
-		['hrdfoe_1']	=	{
+		['hrdfoe']	=	{
 				"cop1/hrdfoe_100.ogg",
 				"cop1/hrdfoe_101.ogg",
 				"cop1/hrdfoe_102.ogg",
 				"cop1/hrdfoe_103.ogg",
 				},
-		['hail_tim_1']	=	{
+		['hail_tim']	=	{
 				"cop1/hail_tim_102.ogg",
 				"cop1/hail_tim_103.ogg",
 				"cop1/hail_tim_105.ogg",
 				},
-		['lift_1']	=	{
+		['lift']	=	{
 				"cop1/lift_100.ogg",
 				"cop1/lift_101.ogg",
 				"cop1/lift_102.ogg",
@@ -13397,11 +13397,11 @@ ENT.Voices = {
 				"cop1/lift_106.ogg",
 				"cop1/lift_107.ogg",
 				},
-		['cvr_re_1']	=	{
+		['cvr_re']	=	{
 				"cop1/cvr_re_101.ogg",
 				"cop1/cvr_re_102.ogg",
 				},
-		['look_1']	=	{
+		['look']	=	{
 				"cop1/look_100.ogg",
 				"cop1/look_101.ogg",
 				"cop1/look_102.ogg",
@@ -13411,18 +13411,18 @@ ENT.Voices = {
 				"cop1/look_106.ogg",
 				"cop1/look_107.ogg",
 				},
-		['foundfoe_1']	=	{
+		['foundfoe']	=	{
 				"cop1/foundfoe_100.ogg",
 				"cop1/foundfoe_101.ogg",
 				"cop1/foundfoe_102.ogg",
 				"cop1/foundfoe_103.ogg",
 				},
-		['pstcmbt_1']	=	{
+		['pstcmbt']	=	{
 				"cop1/pstcmbt_100.ogg",
 				"cop1/pstcmbt_101.ogg",
 				"cop1/pstcmbt_102.ogg",
 				},
-		['dth_1']	=	{
+		['dth']	=	{
 				"cop1/dth_100.ogg",
 				"cop1/dth_101.ogg",
 				"cop1/dth_102.ogg",
@@ -13468,7 +13468,7 @@ ENT.Voices = {
 				"cop1/pain_fall6.ogg",
 				"cop1/pain_fall7.ogg",
 				},
-		['pain_mdm_1']	=	{
+		['pain_mdm']	=	{
 				"cop1/pain_mdm_100.ogg",
 				"cop1/pain_mdm_101.ogg",
 				"cop1/pain_mdm_102.ogg",
@@ -13491,29 +13491,29 @@ ENT.Voices = {
 				"cop1/lift18.ogg",
 				"cop1/lift4.ogg",
 				},
-		['rtrt_1']	=	{
+		['rtrt']	=	{
 				"cop1/rtrt_100.ogg",
 				"cop1/rtrt_101.ogg",
 				"cop1/rtrt_104.ogg",
 				"cop1/rtrt_105.ogg",
 				},
-		['warn_incmn_1']	=	{
+		['warn_incmn']	=	{
 				"cop1/warn_incmn_100.ogg",
 				"cop1/warn_incmn_101.ogg",
 				},
-		['grt_1']	=	{
+		['grt']	=	{
 				"cop1/grt_100.ogg",
 				"cop1/grt_101.ogg",
 				"cop1/grt_102.ogg",
 				"cop1/grt_103.ogg",
 				},
-		['scld_plr_hrt_blt_1']	=	{
+		['scld_plr_hrt_blt']	=	{
 				"cop1/scld_plr_hrt_blt_100.ogg",
 				"cop1/scld_plr_hrt_blt_101.ogg",
 				"cop1/scld_plr_hrt_blt_102.ogg",
 				"cop1/scld_plr_hrt_blt_103.ogg",
 				},
-		['bump_1']	=	{
+		['bump']	=	{
 				"cop1/bump_100.ogg",
 				"cop1/bump_101.ogg",
 				"cop1/bump_102.ogg",
@@ -13522,33 +13522,33 @@ ENT.Voices = {
 				"cop1/bump_105.ogg",
 				"cop1/bump_106.ogg",
 				},
-		['scld_plr_wldgrnd_1']	=	{
+		['scld_plr_wldgrnd']	=	{
 				"cop1/scld_plr_wldgrnd_100.ogg",
 				"cop1/scld_plr_wldgrnd_101.ogg",
 				"cop1/scld_plr_wldgrnd_103.ogg",
 				"cop1/scld_plr_wldgrnd_104.ogg",
 				},
-		['seefoe_agg_1']	=	{
+		['seefoe_agg']	=	{
 				"cop1/seefoe_agg_100.ogg",
 				"cop1/seefoe_agg_101.ogg",
 				},
-		['scld_plr_blocking_1']	=	{
+		['scld_plr_blocking']	=	{
 				"cop1/scld_plr_blocking_100.ogg",
 				"cop1/scld_plr_blocking_101.ogg",
 				},
-		['foeordr_advance_1']	=	{
+		['foeordr_advance']	=	{
 				"cop1/foeordr_advance_100.ogg",
 				"cop1/foeordr_advance_101.ogg",
 				"cop1/foeordr_advance_102.ogg",
 				"cop1/foeordr_advance_103.ogg",
 				},
-		['prst_fail_1']	=	{
+		['prst_fail']	=	{
 				"cop1/prst_fail_100.ogg",
 				"cop1/prst_fail_101.ogg",
 				"cop1/prst_fail_102.ogg",
 				"cop1/prst_fail_104.ogg",
 				},
-		['thnk_1']	=	{
+		['thnk']	=	{
 				"cop1/thnk_100.ogg",
 				"cop1/thnk_101.ogg",
 				"cop1/thnk_102.ogg",
@@ -13556,7 +13556,7 @@ ENT.Voices = {
 				"cop1/thnk_104.ogg",
 				"cop1/thnk_105.ogg",
 				},
-		['thrwn_1']	=	{
+		['thrwn']	=	{
 				"cop1/thrwn_100.ogg",
 				"cop1/thrwn_101.ogg",
 				"cop1/thrwn_102.ogg",
@@ -13564,34 +13564,34 @@ ENT.Voices = {
 				"cop1/thrwn_104.ogg",
 				"cop1/thrwn_105.ogg",
 				},
-		['prs_plr_gdgrnd_1']	=	{
+		['prs_plr_gdgrnd']	=	{
 				"cop1/prs_plr_gdgrnd_100.ogg",
 				"cop1/prs_plr_gdgrnd_101.ogg",
 				"cop1/prs_plr_gdgrnd_102.ogg",
 				"cop1/prs_plr_gdgrnd_103.ogg",
 				},
-		['endcmbt_1']	=	{
+		['endcmbt']	=	{
 				"cop1/endcmbt_100.ogg",
 				"cop1/endcmbt_101.ogg",
 				"cop1/endcmbt_102.ogg",
 				},
-		['whn_1']	=	{
+		['whn']	=	{
 				"cop1/whn_100.ogg",
 				"cop1/whn_101.ogg",
 				"cop1/whn_102.ogg",
 				"cop1/whn_103.ogg",
 				"cop1/whn_104.ogg",
 				},
-		['warn_vcl_phntm_1']	=	{
+		['warn_vcl_phntm']	=	{
 				"cop1/warn_vcl_phntm_100.ogg",
 				"cop1/warn_vcl_phntm_101.ogg",
 				"cop1/warn_vcl_phntm_102.ogg",
 				},
-		['warn_incmn_grnd_1']	=	{
+		['warn_incmn_grnd']	=	{
 				"cop1/warn_incmn_grnd_100.ogg",
 				"cop1/warn_incmn_grnd_102.ogg",
 				},
-		['lookcmbt_1']	=	{
+		['lookcmbt']	=	{
 				"cop1/lookcmbt_100.ogg",
 				"cop1/lookcmbt_101.ogg",
 				"cop1/lookcmbt_102.ogg",
@@ -13609,41 +13609,41 @@ ENT.Voices = {
 				"cop1/dth_slnt8.ogg",
 				"cop1/dth_slnt9.ogg",
 				},
-		['ok_plr_trdwpn_1']	=	{
+		['ok_plr_trdwpn']	=	{
 				"cop1/ok_plr_trdwpn_101.ogg",
 				"cop1/ok_plr_trdwpn_102.ogg",
 				"cop1/ok_plr_trdwpn_103.ogg",
 				"cop1/ok_plr_trdwpn_104.ogg",
 				"cop1/ok_plr_trdwpn_105.ogg",
 				},
-		['warn_chr_bggr_1']	=	{
+		['warn_chr_bggr']	=	{
 				"cop1/warn_chr_bggr_100.ogg",
 				"cop1/warn_chr_bggr_101.ogg",
 				},
-		['warn_1']	=	{
+		['warn']	=	{
 				"cop1/warn_100.ogg",
 				"cop1/warn_101.ogg",
 				"cop1/warn_102.ogg",
 				"cop1/warn_103.ogg",
 				"cop1/warn_104.ogg",
 				},
-		['tnt_1']	=	{
+		['tnt']	=	{
 				"cop1/tnt_100.ogg",
 				"cop1/tnt_102.ogg",
 				"cop1/tnt_103.ogg",
 				"cop1/tnt_104.ogg",
 				},
-		['chr_kllfoe_1']	=	{
+		['chr_kllfoe']	=	{
 				"cop1/chr_kllfoe_100.ogg",
 				"cop1/chr_kllfoe_101.ogg",
 				"cop1/chr_kllfoe_102.ogg",
 				},
-		['look_pstcmbt_1']	=	{
+		['look_pstcmbt']	=	{
 				"cop1/look_pstcmbt_100.ogg",
 				"cop1/look_pstcmbt_101.ogg",
 				"cop1/look_pstcmbt_102.ogg",
 				},
-		['whn_re_1']	=	{
+		['whn_re']	=	{
 				"cop1/whn_re_100.ogg",
 				"cop1/whn_re_101.ogg",
 				},
@@ -13658,7 +13658,7 @@ ENT.Voices = {
 				"cop1/pain_mjr8.ogg",
 				"cop1/pain_mjr9.ogg",
 				},
-		['pain_mjr_1']	=	{
+		['pain_mjr']	=	{
 				"cop1/pain_mjr_100.ogg",
 				"cop1/pain_mjr_101.ogg",
 				"cop1/pain_mjr_102.ogg",
@@ -13672,7 +13672,7 @@ ENT.Voices = {
 				"cop1/pain_mjr_110.ogg",
 				"cop1/pain_mjr_111.ogg",
 				},
-		['lmnt_deadplr_mc_1']	=	{
+		['lmnt_deadplr_mc']	=	{
 				"cop1/lmnt_deadplr_mc_100.ogg",
 				"cop1/lmnt_deadplr_mc_101.ogg",
 				"cop1/lmnt_deadplr_mc_103.ogg",
@@ -13688,24 +13688,24 @@ ENT.Voices = {
 				"cop1/dth_hdsht6.ogg",
 				"cop1/dth_hdsht7.ogg",
 				},
-		['dwn_vcl_wrth_1']	=	{
+		['dwn_vcl_wrth']	=	{
 				"cop1/dwn_vcl_wrth_100.ogg",
 				"cop1/dwn_vcl_wrth_101.ogg",
 				},
-		['scld_plr_hrtme_1']	=	{
+		['scld_plr_hrtme']	=	{
 				"cop1/scld_plr_hrtme_100.ogg",
 				"cop1/scld_plr_hrtme_101.ogg",
 				"cop1/scld_plr_hrtme_102.ogg",
 				},
-		['rmd_1']	=	{
+		['rmd']	=	{
 				"cop1/rmd_100.ogg",
 				"cop1/rmd_101.ogg",
 				},
-		['seefoe_tim_1']	=	{
+		['seefoe_tim']	=	{
 				"cop1/seefoe_tim_100.ogg",
 				"cop1/seefoe_tim_101.ogg",
 				},
-		['prs_1']	=	{
+		['prs']	=	{
 				"cop1/prs_100.ogg",
 				"cop1/prs_101.ogg",
 				"cop1/prs_102.ogg",
@@ -13713,7 +13713,7 @@ ENT.Voices = {
 				"cop1/prs_104.ogg",
 				"cop1/prs_105.ogg",
 				},
-		['cvr_1']	=	{
+		['cvr']	=	{
 				"cop1/cvr_100.ogg",
 				"cop1/cvr_101.ogg",
 				"cop1/cvr_102.ogg",
@@ -13723,13 +13723,13 @@ ENT.Voices = {
 				"cop1/dth_drama2.ogg",
 				"cop1/dth_drama3.ogg",
 				},
-		['forgive_1']	=	{
+		['forgive']	=	{
 				"cop1/forgive_100.ogg",
 				"cop1/forgive_101.ogg",
 				"cop1/forgive_102.ogg",
 				"cop1/forgive_103.ogg",
 				},
-		['seefoe_1']	=	{
+		['seefoe']	=	{
 				"cop1/seefoe_100.ogg",
 				"cop1/seefoe_101.ogg",
 				"cop1/seefoe_102.ogg",
@@ -13744,7 +13744,7 @@ ENT.Voices = {
 				"cop1/dth_mjr7.ogg",
 				"cop1/dth_mjr8.ogg",
 				},
-		['srprs_1']	=	{
+		['srprs']	=	{
 				"cop1/srprs_100.ogg",
 				"cop1/srprs_101.ogg",
 				"cop1/srprs_103.ogg",
@@ -13753,23 +13753,23 @@ ENT.Voices = {
 				"cop1/srprs_106.ogg",
 				"cop1/srprs_107.ogg",
 				},
-		['rmd_vcl_wrth_1']	=	{
+		['rmd_vcl_wrth']	=	{
 				"cop1/rmd_vcl_wrth_100.ogg",
 				"cop1/rmd_vcl_wrth_101.ogg",
 				"cop1/rmd_vcl_wrth_102.ogg",
 				"cop1/rmd_vcl_wrth_103.ogg",
 				},
-		['rmd_vcl_phntm_1']	=	{
+		['rmd_vcl_phntm']	=	{
 				"cop1/rmd_vcl_phntm_100.ogg",
 				"cop1/rmd_vcl_phntm_101.ogg",
 				"cop1/rmd_vcl_phntm_102.ogg",
 				"cop1/rmd_vcl_phntm_103.ogg",
 				},
-		['seefoe_upthere_1']	=	{
+		['seefoe_upthere']	=	{
 				"cop1/seefoe_upthere_100.ogg",
 				"cop1/seefoe_upthere_101.ogg",
 				},
-		['pain_fall_1']	=	{
+		['pain_fall']	=	{
 				"cop1/pain_fall_100.ogg",
 				"cop1/pain_fall_101.ogg",
 				"cop1/pain_fall_102.ogg",
@@ -13779,20 +13779,20 @@ ENT.Voices = {
 				"cop1/pain_fall_106.ogg",
 				"cop1/pain_fall_107.ogg",
 				},
-		['pstcmbt_hrd_1']	=	{
+		['pstcmbt_hrd']	=	{
 				"cop1/pstcmbt_hrd_100.ogg",
 				"cop1/pstcmbt_hrd_101.ogg",
 				"cop1/pstcmbt_hrd_102.ogg",
 				"cop1/pstcmbt_hrd_103.ogg",
 				},
-		['dive_1']	=	{
+		['dive']	=	{
 				"cop1/dive_101.ogg",
 				"cop1/dive_102.ogg",
 				"cop1/dive_103.ogg",
 				"cop1/dive_104.ogg",
 				"cop1/dive_105.ogg",
 				},
-		['panic_plsmgrnd_1']	=	{
+		['panic_plsmgrnd']	=	{
 				"cop1/panic_plsmgrnd_100.ogg",
 				"cop1/panic_plsmgrnd_101.ogg",
 				},
@@ -13818,7 +13818,7 @@ ENT.Voices = {
 				"cop1/panic_infctnfrm6.ogg",
 				"cop1/panic_infctnfrm7.ogg",
 				},
-		['pain_1']	=	{
+		['pain']	=	{
 				"cop1/pain_100.ogg",
 				"cop1/pain_101.ogg",
 				"cop1/pain_102.ogg",
@@ -13830,39 +13830,39 @@ ENT.Voices = {
 				"cop1/pain_108.ogg",
 				"cop1/pain_109.ogg",
 				},
-		['seefoe_downthere_1']	=	{
+		['seefoe_downthere']	=	{
 				"cop1/seefoe_downthere_100.ogg",
 				"cop1/seefoe_downthere_101.ogg",
 				"cop1/seefoe_downthere_102.ogg",
 				},
-		['invsgt_1']	=	{
+		['invsgt']	=	{
 				"cop1/invsgt_100.ogg",
 				"cop1/invsgt_102.ogg",
 				"cop1/invsgt_103.ogg",
 				"cop1/invsgt_104.ogg",
 				},
-		['betray_1']	=	{
+		['betray']	=	{
 				"cop1/betray_100.ogg",
 				"cop1/betray_101.ogg",
 				"cop1/betray_102.ogg",
 				"cop1/betray_103.ogg",
 				},
-		['prs_plr_kll_1']	=	{
+		['prs_plr_kll']	=	{
 				"cop1/prs_plr_kll_100.ogg",
 				"cop1/prs_plr_kll_101.ogg",
 				"cop1/prs_plr_kll_102.ogg",
 				"cop1/prs_plr_kll_103.ogg",
 				},
-		['approve_1']	=	{
+		['approve']	=	{
 				"cop1/approve_100.ogg",
 				"cop1/approve_101.ogg",
 				"cop1/approve_102.ogg",
 				},
-		['dwn_1']	=	{
+		['dwn']	=	{
 				"cop1/dwn_100.ogg",
 				"cop1/dwn_101.ogg",
 				},
-		['look_pstcmbt_hrd_1']	=	{
+		['look_pstcmbt_hrd']	=	{
 				"cop1/look_pstcmbt_hrd_100.ogg",
 				"cop1/look_pstcmbt_hrd_101.ogg",
 				},
@@ -13884,12 +13884,12 @@ ENT.Voices = {
 				"cop1/dth7.ogg",
 				"cop1/dth9.ogg",
 				},
-		['newordr_moveon_1']	=	{
+		['newordr_moveon']	=	{
 				"cop1/newordr_moveon_100.ogg",
 				"cop1/newordr_moveon_101.ogg",
 				"cop1/newordr_moveon_102.ogg",
 				},
-		['melee_1']	=	{
+		['melee']	=	{
 				"cop1/melee_100.ogg",
 				"cop1/melee_101.ogg",
 				"cop1/melee_102.ogg",
@@ -13904,13 +13904,13 @@ ENT.Voices = {
 				"cop1/melee_113.ogg",
 				"cop1/melee_114.ogg",
 				},
-		['newordr_retreat_1']	=	{
+		['newordr_retreat']	=	{
 				"cop1/newordr_retreat_100.ogg",
 				"cop1/newordr_retreat_101.ogg",
 				"cop1/newordr_retreat_102.ogg",
 				"cop1/newordr_retreat_103.ogg",
 				},
-		['dth_hdsht_1']	=	{
+		['dth_hdsht']	=	{
 				"cop1/dth_hdsht_100.ogg",
 				"cop1/dth_hdsht_101.ogg",
 				"cop1/dth_hdsht_102.ogg",
@@ -13927,11 +13927,11 @@ ENT.Voices = {
 				"cop1/dth_slw4.ogg",
 				"cop1/dth_slw5.ogg",
 				},
-		['lmnt_deadally_1']	=	{
+		['lmnt_deadally']	=	{
 				"cop1/lmnt_deadally_100.ogg",
 				"cop1/lmnt_deadally_101.ogg",
 				},
-		['stun_1']	=	{
+		['stun']	=	{
 				"cop1/stun_100.ogg",
 				"cop1/stun_101.ogg",
 				"cop1/stun_102.ogg",
@@ -13939,7 +13939,7 @@ ENT.Voices = {
 				"cop1/stun_104.ogg",
 				"cop1/stun_105.ogg",
 				},
-		['chr_1']	=	{
+		['chr']	=	{
 				"cop1/chr_100.ogg",
 				"cop1/chr_101.ogg",
 				"cop1/chr_102.ogg",
@@ -13947,25 +13947,25 @@ ENT.Voices = {
 				"cop1/chr_104.ogg",
 				"cop1/chr_105.ogg",
 				},
-		['lookcmbt_tim_1']	=	{
+		['lookcmbt_tim']	=	{
 				"cop1/lookcmbt_tim_100.ogg",
 				"cop1/lookcmbt_tim_101.ogg",
 				"cop1/lookcmbt_tim_102.ogg",
 				},
-		['lst_cntct_1']	=	{
+		['lst_cntct']	=	{
 				"cop1/lst_cntct_100.ogg",
 				"cop1/lst_cntct_101.ogg",
 				"cop1/lst_cntct_102.ogg",
 				"cop1/lst_cntct_104.ogg",
 				},
-		['look_lngtme_1']	=	{
+		['look_lngtme']	=	{
 				"cop1/look_lngtme_100.ogg",
 				"cop1/look_lngtme_101.ogg",
 				"cop1/look_lngtme_102.ogg",
 				"cop1/look_lngtme_104.ogg",
 				"cop1/look_lngtme_105.ogg",
 				},
-		['prs_plr_kll_lots_1']	=	{
+		['prs_plr_kll_lots']	=	{
 				"cop1/prs_plr_kll_lots_100.ogg",
 				"cop1/prs_plr_kll_lots_102.ogg",
 				"cop1/prs_plr_kll_lots_103.ogg",
@@ -13985,23 +13985,23 @@ ENT.Voices = {
 		}
 	},
 	["Cop2"] = {
-			['cvr_invsgt_1']	=	{
+			['cvr_invsgt']	=	{
 				"cop2/cvr_invsgt_100.ogg",
 				"cop2/cvr_invsgt_101.ogg",
 				},
-		['dodge_1']	=	{
+		['dodge']	=	{
 				"cop2/dodge_100.ogg",
 				"cop2/dodge_101.ogg",
 				"cop2/dodge_102.ogg",
 				"cop2/dodge_103.ogg",
 				"cop2/dodge_104.ogg",
 				},
-		['morefoe_1']	=	{
+		['morefoe']	=	{
 				"cop2/morefoe_100.ogg",
 				"cop2/morefoe_102.ogg",
 				"cop2/morefoe_103.ogg",
 				},
-		['srch_pinned_1']	=	{
+		['srch_pinned']	=	{
 				"cop2/srch_pinned_100.ogg",
 				"cop2/srch_pinned_101.ogg",
 				"cop2/srch_pinned_102.ogg",
@@ -14009,21 +14009,21 @@ ENT.Voices = {
 				"cop2/srch_pinned_104.ogg",
 				"cop2/srch_pinned_105.ogg",
 				},
-		['foeordr_support_1']	=	{
+		['foeordr_support']	=	{
 				"cop2/foeordr_support_100.ogg",
 				"cop2/foeordr_support_101.ogg",
 				},
-		['hrdfoe_1']	=	{
+		['hrdfoe']	=	{
 				"cop2/hrdfoe_100.ogg",
 				"cop2/hrdfoe_101.ogg",
 				"cop2/hrdfoe_102.ogg",
 				"cop2/hrdfoe_103.ogg",
 				},
-		['hail_tim_1']	=	{
+		['hail_tim']	=	{
 				"cop2/hail_tim_100.ogg",
 				"cop2/hail_tim_101.ogg",
 				},
-		['lift_1']	=	{
+		['lift']	=	{
 				"cop2/lift_100.ogg",
 				"cop2/lift_101.ogg",
 				"cop2/lift_102.ogg",
@@ -14031,29 +14031,29 @@ ENT.Voices = {
 				"cop2/lift_104.ogg",
 				"cop2/lift_105.ogg",
 				},
-		['cvr_re_1']	=	{
+		['cvr_re']	=	{
 				"cop2/cvr_re_100.ogg",
 				"cop2/cvr_re_101.ogg",
 				},
-		['lst_cntct_1']	=	{
+		['lst_cntct']	=	{
 				"cop2/lst_cntct_100.ogg",
 				"cop2/lst_cntct_101.ogg",
 				"cop2/lst_cntct_102.ogg",
 				"cop2/lst_cntct_103.ogg",
 				},
-		['forgive_1']	=	{
+		['forgive']	=	{
 				"cop2/forgive_100.ogg",
 				"cop2/forgive_101.ogg",
 				"cop2/forgive_103.ogg",
 				"cop2/forgive_104.ogg",
 				},
-		['pstcmbt_1']	=	{
+		['pstcmbt']	=	{
 				"cop2/pstcmbt_100.ogg",
 				"cop2/pstcmbt_101.ogg",
 				"cop2/pstcmbt_102.ogg",
 				"cop2/pstcmbt_103.ogg",
 				},
-		['look_lngtme_1']	=	{
+		['look_lngtme']	=	{
 				"cop2/look_lngtme_100.ogg",
 				"cop2/look_lngtme_101.ogg",
 				"cop2/look_lngtme_102.ogg",
@@ -14081,13 +14081,13 @@ ENT.Voices = {
 				"cop2/pain8.ogg",
 				"cop2/pain9.ogg",
 				},
-		['pstcmbt_hrd_1']	=	{
+		['pstcmbt_hrd']	=	{
 				"cop2/pstcmbt_hrd_100.ogg",
 				"cop2/pstcmbt_hrd_101.ogg",
 				"cop2/pstcmbt_hrd_102.ogg",
 				"cop2/pstcmbt_hrd_103.ogg",
 				},
-		['pain_mdm_1']	=	{
+		['pain_mdm']	=	{
 				"cop2/pain_mdm_100.ogg",
 				"cop2/pain_mdm_101.ogg",
 				"cop2/pain_mdm_102.ogg",
@@ -14102,27 +14102,27 @@ ENT.Voices = {
 				"cop2/lift5.ogg",
 				"cop2/lift6.ogg",
 				},
-		['rtrt_1']	=	{
+		['rtrt']	=	{
 				"cop2/rtrt_100.ogg",
 				"cop2/rtrt_101.ogg",
 				"cop2/rtrt_102.ogg",
 				},
-		['warn_incmn_1']	=	{
+		['warn_incmn']	=	{
 				"cop2/warn_incmn_100.ogg",
 				"cop2/warn_incmn_101.ogg",
 				},
-		['grt_1']	=	{
+		['grt']	=	{
 				"cop2/grt_101.ogg",
 				"cop2/grt_102.ogg",
 				"cop2/grt_103.ogg",
 				"cop2/grt_104.ogg",
 				},
-		['scld_plr_hrt_blt_1']	=	{
+		['scld_plr_hrt_blt']	=	{
 				"cop2/scld_plr_hrt_blt_100.ogg",
 				"cop2/scld_plr_hrt_blt_101.ogg",
 				"cop2/scld_plr_hrt_blt_102.ogg",
 				},
-		['bump_1']	=	{
+		['bump']	=	{
 				"cop2/bump_100.ogg",
 				"cop2/bump_101.ogg",
 				"cop2/bump_102.ogg",
@@ -14132,68 +14132,68 @@ ENT.Voices = {
 				"cop2/bump_106.ogg",
 				"cop2/bump_107.ogg",
 				},
-		['scld_plr_wldgrnd_1']	=	{
+		['scld_plr_wldgrnd']	=	{
 				"cop2/scld_plr_wldgrnd_100.ogg",
 				"cop2/scld_plr_wldgrnd_101.ogg",
 				},
-		['seefoe_agg_1']	=	{
+		['seefoe_agg']	=	{
 				"cop2/seefoe_agg_100.ogg",
 				"cop2/seefoe_agg_101.ogg",
 				"cop2/seefoe_agg_102.ogg",
 				},
-		['scld_plr_blocking_1']	=	{
+		['scld_plr_blocking']	=	{
 				"cop2/scld_plr_blocking_100.ogg",
 				"cop2/scld_plr_blocking_101.ogg",
 				},
-		['foeordr_advance_1']	=	{
+		['foeordr_advance']	=	{
 				"cop2/foeordr_advance_100.ogg",
 				"cop2/foeordr_advance_101.ogg",
 				},
-		['prst_fail_1']	=	{
+		['prst_fail']	=	{
 				"cop2/prst_fail_100.ogg",
 				"cop2/prst_fail_101.ogg",
 				"cop2/prst_fail_102.ogg",
 				"cop2/prst_fail_103.ogg",
 				},
-		['thnk_1']	=	{
+		['thnk']	=	{
 				"cop2/thnk_100.ogg",
 				"cop2/thnk_101.ogg",
 				"cop2/thnk_102.ogg",
 				},
-		['thrwn_1']	=	{
+		['thrwn']	=	{
 				"cop2/thrwn_100.ogg",
 				"cop2/thrwn_101.ogg",
 				"cop2/thrwn_102.ogg",
 				"cop2/thrwn_103.ogg",
 				"cop2/thrwn_104.ogg",
 				},
-		['prs_plr_gdgrnd_1']	=	{
+		['prs_plr_gdgrnd']	=	{
 				"cop2/prs_plr_gdgrnd_100.ogg",
 				"cop2/prs_plr_gdgrnd_101.ogg",
 				"cop2/prs_plr_gdgrnd_102.ogg",
 				"cop2/prs_plr_gdgrnd_103.ogg",
 				},
-		['endcmbt_1']	=	{
+		['endcmbt']	=	{
 				"cop2/endcmbt_100.ogg",
 				"cop2/endcmbt_101.ogg",
 				"cop2/endcmbt_102.ogg",
 				"cop2/endcmbt_103.ogg",
 				},
-		['whn_1']	=	{
+		['whn']	=	{
 				"cop2/whn_100.ogg",
 				"cop2/whn_101.ogg",
 				"cop2/whn_102.ogg",
 				"cop2/whn_103.ogg",
 				},
-		['warn_vcl_phntm_1']	=	{
+		['warn_vcl_phntm']	=	{
 				"cop2/warn_vcl_phntm_100.ogg",
 				"cop2/warn_vcl_phntm_101.ogg",
 				},
-		['warn_incmn_grnd_1']	=	{
+		['warn_incmn_grnd']	=	{
 				"cop2/warn_incmn_grnd_100.ogg",
 				"cop2/warn_incmn_grnd_101.ogg",
 				},
-		['lookcmbt_1']	=	{
+		['lookcmbt']	=	{
 				"cop2/lookcmbt_100.ogg",
 				"cop2/lookcmbt_101.ogg",
 				"cop2/lookcmbt_103.ogg",
@@ -14209,39 +14209,39 @@ ENT.Voices = {
 				"cop2/dth_slnt7.ogg",
 				"cop2/dth_slnt8.ogg",
 				},
-		['ok_plr_trdwpn_1']	=	{
+		['ok_plr_trdwpn']	=	{
 				"cop2/ok_plr_trdwpn_100.ogg",
 				"cop2/ok_plr_trdwpn_101.ogg",
 				"cop2/ok_plr_trdwpn_102.ogg",
 				"cop2/ok_plr_trdwpn_103.ogg",
 				},
-		['warn_chr_bggr_1']	=	{
+		['warn_chr_bggr']	=	{
 				"cop2/warn_chr_bggr_100.ogg",
 				"cop2/warn_chr_bggr_101.ogg",
 				},
-		['warn_1']	=	{
+		['warn']	=	{
 				"cop2/warn_100.ogg",
 				"cop2/warn_101.ogg",
 				"cop2/warn_102.ogg",
 				"cop2/warn_103.ogg",
 				},
-		['tnt_1']	=	{
+		['tnt']	=	{
 				"cop2/tnt_100.ogg",
 				"cop2/tnt_101.ogg",
 				"cop2/tnt_102.ogg",
 				"cop2/tnt_103.ogg",
 				},
-		['chr_kllfoe_1']	=	{
+		['chr_kllfoe']	=	{
 				"cop2/chr_kllfoe_100.ogg",
 				"cop2/chr_kllfoe_101.ogg",
 				"cop2/chr_kllfoe_102.ogg",
 				},
-		['look_pstcmbt_1']	=	{
+		['look_pstcmbt']	=	{
 				"cop2/look_pstcmbt_100.ogg",
 				"cop2/look_pstcmbt_101.ogg",
 				"cop2/look_pstcmbt_102.ogg",
 				},
-		['whn_re_1']	=	{
+		['whn_re']	=	{
 				"cop2/whn_re_100.ogg",
 				"cop2/whn_re_101.ogg",
 				"cop2/whn_re_102.ogg",
@@ -14259,7 +14259,7 @@ ENT.Voices = {
 				"cop2/pain_mjr8.ogg",
 				"cop2/pain_mjr9.ogg",
 				},
-		['pain_mjr_1']	=	{
+		['pain_mjr']	=	{
 				"cop2/pain_mjr_100.ogg",
 				"cop2/pain_mjr_101.ogg",
 				"cop2/pain_mjr_102.ogg",
@@ -14267,44 +14267,44 @@ ENT.Voices = {
 				"cop2/pain_mjr_104.ogg",
 				"cop2/pain_mjr_105.ogg",
 				},
-		['lmnt_deadplr_mc_1']	=	{
+		['lmnt_deadplr_mc']	=	{
 				"cop2/lmnt_deadplr_mc_100.ogg",
 				"cop2/lmnt_deadplr_mc_102.ogg",
 				"cop2/lmnt_deadplr_mc_103.ogg",
 				"cop2/lmnt_deadplr_mc_104.ogg",
 				"cop2/lmnt_deadplr_mc_105.ogg",
 				},
-		['pain_1']	=	{
+		['pain']	=	{
 				"cop2/pain_100.ogg",
 				"cop2/pain_101.ogg",
 				"cop2/pain_102.ogg",
 				"cop2/pain_103.ogg",
 				"cop2/pain_104.ogg",
 				},
-		['dwn_vcl_wrth_1']	=	{
+		['dwn_vcl_wrth']	=	{
 				"cop2/dwn_vcl_wrth_100.ogg",
 				"cop2/dwn_vcl_wrth_101.ogg",
 				},
-		['scld_plr_hrtme_1']	=	{
+		['scld_plr_hrtme']	=	{
 				"cop2/scld_plr_hrtme_100.ogg",
 				"cop2/scld_plr_hrtme_101.ogg",
 				"cop2/scld_plr_hrtme_102.ogg",
 				},
-		['rmd_1']	=	{
+		['rmd']	=	{
 				"cop2/rmd_100.ogg",
 				"cop2/rmd_101.ogg",
 				"cop2/rmd_102.ogg",
 				"cop2/rmd_103.ogg",
 				},
-		['seefoe_tim_1']	=	{
+		['seefoe_tim']	=	{
 				"cop2/seefoe_tim_100.ogg",
 				"cop2/seefoe_tim_101.ogg",
 				},
-		['prs_1']	=	{
+		['prs']	=	{
 				"cop2/prs_101.ogg",
 				"cop2/prs_102.ogg",
 				},
-		['cvr_1']	=	{
+		['cvr']	=	{
 				"cop2/cvr_100.ogg",
 				"cop2/cvr_101.ogg",
 				},
@@ -14314,45 +14314,45 @@ ENT.Voices = {
 				"cop2/dth_drama3.ogg",
 				"cop2/dth_drama4.ogg",
 				},
-		['betray_1']	=	{
+		['betray']	=	{
 				"cop2/betray_100.ogg",
 				"cop2/betray_101.ogg",
 				"cop2/betray_102.ogg",
 				"cop2/betray_103.ogg",
 				"cop2/betray_104.ogg",
 				},
-		['seefoe_1']	=	{
+		['seefoe']	=	{
 				"cop2/seefoe_100.ogg",
 				"cop2/seefoe_101.ogg",
 				"cop2/seefoe_102.ogg",
 				"cop2/seefoe_103.ogg",
 				},
-		['approve_1']	=	{
+		['approve']	=	{
 				"cop2/approve_100.ogg",
 				"cop2/approve_101.ogg",
 				},
-		['srprs_1']	=	{
+		['srprs']	=	{
 				"cop2/srprs_100.ogg",
 				"cop2/srprs_101.ogg",
 				"cop2/srprs_102.ogg",
 				"cop2/srprs_103.ogg",
 				},
-		['rmd_vcl_wrth_1']	=	{
+		['rmd_vcl_wrth']	=	{
 				"cop2/rmd_vcl_wrth_100.ogg",
 				"cop2/rmd_vcl_wrth_101.ogg",
 				"cop2/rmd_vcl_wrth_102.ogg",
 				"cop2/rmd_vcl_wrth_103.ogg",
 				},
-		['rmd_vcl_phntm_1']	=	{
+		['rmd_vcl_phntm']	=	{
 				"cop2/rmd_vcl_phntm_100.ogg",
 				"cop2/rmd_vcl_phntm_101.ogg",
 				},
-		['seefoe_upthere_1']	=	{
+		['seefoe_upthere']	=	{
 				"cop2/seefoe_upthere_100.ogg",
 				"cop2/seefoe_upthere_101.ogg",
 				"cop2/seefoe_upthere_102.ogg",
 				},
-		['pain_fall_1']	=	{
+		['pain_fall']	=	{
 				"cop2/pain_fall_100.ogg",
 				"cop2/pain_fall_101.ogg",
 				"cop2/pain_fall_102.ogg",
@@ -14371,7 +14371,7 @@ ENT.Voices = {
 				"cop2/pain_fall_115.ogg",
 				"cop2/pain_fall_116.ogg",
 				},
-		['foundfoe_1']	=	{
+		['foundfoe']	=	{
 				"cop2/foundfoe_100.ogg",
 				"cop2/foundfoe_101.ogg",
 				"cop2/foundfoe_102.ogg",
@@ -14379,7 +14379,7 @@ ENT.Voices = {
 				"cop2/foundfoe_104.ogg",
 				"cop2/foundfoe_105.ogg",
 				},
-		['dive_1']	=	{
+		['dive']	=	{
 				"cop2/dive_100.ogg",
 				"cop2/dive_101.ogg",
 				"cop2/dive_102.ogg",
@@ -14387,14 +14387,14 @@ ENT.Voices = {
 				"cop2/dive_104.ogg",
 				"cop2/dive_105.ogg",
 				},
-		['panic_plsmgrnd_1']	=	{
+		['panic_plsmgrnd']	=	{
 				"cop2/panic_plsmgrnd_100.ogg",
 				"cop2/panic_plsmgrnd_101.ogg",
 				"cop2/panic_plsmgrnd_103.ogg",
 				"cop2/panic_plsmgrnd_104.ogg",
 				"cop2/panic_plsmgrnd_105.ogg",
 				},
-		['dth_1']	=	{
+		['dth']	=	{
 				"cop2/dth_100.ogg",
 				"cop2/dth_101.ogg",
 				"cop2/dth_102.ogg",
@@ -14422,18 +14422,18 @@ ENT.Voices = {
 				"cop2/panic_infctnfrm5.ogg",
 				"cop2/panic_infctnfrm6.ogg",
 				},
-		['chr_1']	=	{
+		['chr']	=	{
 				"cop2/chr_100.ogg",
 				"cop2/chr_101.ogg",
 				"cop2/chr_102.ogg",
 				},
-		['seefoe_downthere_1']	=	{
+		['seefoe_downthere']	=	{
 				"cop2/seefoe_downthere_100.ogg",
 				"cop2/seefoe_downthere_101.ogg",
 				"cop2/seefoe_downthere_102.ogg",
 				"cop2/seefoe_downthere_103.ogg",
 				},
-		['lookcmbt_tim_1']	=	{
+		['lookcmbt_tim']	=	{
 				"cop2/lookcmbt_tim_100.ogg",
 				"cop2/lookcmbt_tim_101.ogg",
 				"cop2/lookcmbt_tim_102.ogg",
@@ -14443,7 +14443,7 @@ ENT.Voices = {
 				"cop2/invsgt2.ogg",
 				"cop2/invsgt3.ogg",
 				},
-		['prs_plr_kll_1']	=	{
+		['prs_plr_kll']	=	{
 				"cop2/prs_plr_kll_100.ogg",
 				"cop2/prs_plr_kll_101.ogg",
 				"cop2/prs_plr_kll_102.ogg",
@@ -14458,11 +14458,11 @@ ENT.Voices = {
 				"cop2/dth_hdsht7.ogg",
 				"cop2/dth_hdsht8.ogg",
 				},
-		['dwn_1']	=	{
+		['dwn']	=	{
 				"cop2/dwn_100.ogg",
 				"cop2/dwn_101.ogg",
 				},
-		['look_1']	=	{
+		['look']	=	{
 				"cop2/look_100.ogg",
 				"cop2/look_101.ogg",
 				"cop2/look_102.ogg",
@@ -14487,11 +14487,11 @@ ENT.Voices = {
 				"cop2/dth7.ogg",
 				"cop2/dth8.ogg",
 				},
-		['newordr_moveon_1']	=	{
+		['newordr_moveon']	=	{
 				"cop2/newordr_moveon_100.ogg",
 				"cop2/newordr_moveon_101.ogg",
 				},
-		['melee_1']	=	{
+		['melee']	=	{
 				"cop2/melee_100.ogg",
 				"cop2/melee_101.ogg",
 				"cop2/melee_102.ogg",
@@ -14499,11 +14499,11 @@ ENT.Voices = {
 				"cop2/melee_104.ogg",
 				"cop2/melee_105.ogg",
 				},
-		['newordr_retreat_1']	=	{
+		['newordr_retreat']	=	{
 				"cop2/newordr_retreat_100.ogg",
 				"cop2/newordr_retreat_101.ogg",
 				},
-		['dth_hdsht_1']	=	{
+		['dth_hdsht']	=	{
 				"cop2/dth_hdsht_100.ogg",
 				"cop2/dth_hdsht_101.ogg",
 				"cop2/dth_hdsht_102.ogg",
@@ -14519,11 +14519,11 @@ ENT.Voices = {
 				"cop2/dth_slw2.ogg",
 				"cop2/dth_slw3.ogg",
 				},
-		['lmnt_deadally_1']	=	{
+		['lmnt_deadally']	=	{
 				"cop2/lmnt_deadally_100.ogg",
 				"cop2/lmnt_deadally_101.ogg",
 				},
-		['stun_1']	=	{
+		['stun']	=	{
 				"cop2/stun_100.ogg",
 				"cop2/stun_101.ogg",
 				"cop2/stun_102.ogg",
@@ -14531,7 +14531,7 @@ ENT.Voices = {
 				"cop2/stun_104.ogg",
 				"cop2/stun_105.ogg",
 				},
-		['look_pstcmbt_hrd_1']	=	{
+		['look_pstcmbt_hrd']	=	{
 				"cop2/look_pstcmbt_hrd_100.ogg",
 				"cop2/look_pstcmbt_hrd_101.ogg",
 				"cop2/look_pstcmbt_hrd_102.ogg",
@@ -14571,7 +14571,7 @@ ENT.Voices = {
 				"cop2/pain_fall5.ogg",
 				"cop2/pain_fall6.ogg",
 				},
-		['prs_plr_kll_lots_1']	=	{
+		['prs_plr_kll_lots']	=	{
 				"cop2/prs_plr_kll_lots_100.ogg",
 				"cop2/prs_plr_kll_lots_101.ogg",
 				},
