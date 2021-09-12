@@ -59,6 +59,8 @@ ENT.LastThinkTime = 0
 
 ENT.ThrownGrenades = 0
 
+ENT.DistToTarget = 0
+
 ENT.ThinkDelay = 1
 
 ENT.LastCalcTime = 0
@@ -502,6 +504,10 @@ function ENT:SetupHoldtypes()
 				self.ReloadAnim = self:LookupSequence("rifle_reload")
 				self.ShootAnim = {"rifle_sg_fire"}
 				self:DoGestureSeq("rifle_sg_grip",false)
+			elseif hold == "smg" then
+				self.ReloadAnim = self:LookupSequence("rifle_reload")
+				self.ShootAnim = {"rifle_br_fire_1","rifle_br_fire_2"}
+				self:ManipulateBoneAngles(self:LookupBone("l_hand"),Angle(0,0,90))
 			else
 				self.ReloadAnim = self:LookupSequence("rifle_reload")
 				self.ShootAnim = {"rifle_br_fire_1","rifle_br_fire_2"}
