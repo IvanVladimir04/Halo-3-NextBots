@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
 
-	"$basetexture" "models/halo/halo_3/spartan/multiplayer/mp_scout"
+	"$basetexture" "models/Ivan04/mp_scout"
 	"$vertexalpha"	1
 	"$additive"	1
 }

@@ -1,5 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/Ivan04/gray_50_percent"
-	"$color" "{ 240 171 60 }"
+	"$basetexture" "models/Ivan04/marine_arm_pack_perm_diffuse"
+    "$bumpmap" "models/Ivan04/marine_arm_pack_perm_zbump"
+	"$halflambert" 1
+
+	"$color2" "[10 1.647 0]"
+	"$phong" "1"
 }
