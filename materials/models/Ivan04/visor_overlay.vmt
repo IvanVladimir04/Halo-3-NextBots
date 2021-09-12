@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	$baseTexture 					"models\halo\halo_3_odst\nmpd\visor_overlay_diffuse"
+	$baseTexture 					"models\Ivan04\visor_overlay_diffuse"
 	$nocull							"1"
 	$additive 						"1"
 	$selfillum 						"1"
