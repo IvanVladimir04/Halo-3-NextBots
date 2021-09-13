@@ -100,7 +100,6 @@
 	}
 
 	IV04AddMenuOption( tbl )
-	IV04AddMenuOption( tbl1 )
 	IV04AddMenuOption( tbl2 )
 	IV04AddMenuOption( tbl3 )
 	IV04AddMenuOption( tbl4 )
