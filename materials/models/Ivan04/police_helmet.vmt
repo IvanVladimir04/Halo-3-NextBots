@@ -1,12 +1,12 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models\Ivan04\police_helmet"
-                "$bumpmap" "models\Ivan04\police_helmet_zbump"
+	"$basetexture" "models/Ivan04/police_helmet"
+                "$bumpmap" "models/Ivan04/police_helmet_zbump"
 	"$halflambert" 1
 
 	"$phong" "1"
 	"$phongexponent" 5
-//	"$phongexponenttexture" "models\halo\halo_3_odst\rookie\odst_body_em"
+//	"$phongexponenttexture" "models/Ivan04/odst_body_em"
 	"$phongboost"	"1.5"
 	"$phongtint"	"{105 135 155}"
 	"$phongfresnelranges"	"[0.01 0.5 1]"

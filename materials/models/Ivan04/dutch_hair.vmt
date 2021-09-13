@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Ivan04\hair_planes"
+	"$translucent" 1
+	"$color2"		"{145 115 70}"
+}

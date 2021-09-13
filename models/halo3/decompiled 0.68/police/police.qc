@@ -33,7 +33,7 @@ $bodygroup "Misc"
 
 $surfaceprop "flesh"
 
-$cdmaterials "models\Ivan04\"
+$cdmaterials "models/Ivan04/"
 
 $includemodel "halo3/Marine.mdl"
 

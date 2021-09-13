@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models\Ivan04\odst_body_diffuse"
-	"$bumpmap" "models\Ivan04\odst_body_zbump"
+	"$basetexture" "models/Ivan04/odst_body_diffuse"
+	"$bumpmap" "models/Ivan04/odst_body_zbump"
 	$normalmapalphaenvmapmask         "1"
     	
 	//$envmaptint                     "[1 1.2 1.3]"

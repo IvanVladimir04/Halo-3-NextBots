@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models\Ivan04\marine_head_plate"
-     	"$bumpmap" "models\Ivan04\marine_head_plate_bump"
+	"$basetexture" "models/Ivan04/marine_head_plate"
+     	"$bumpmap" "models/Ivan04/marine_head_plate_bump"
 	"$halflambert" 1
 
 	"$phong" "1"

@@ -1,5 +1,5 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\Ivan04\police_decals"
+	"$basetexture" "models/Ivan04/police_decals"
 	"$translucent" 1
 }

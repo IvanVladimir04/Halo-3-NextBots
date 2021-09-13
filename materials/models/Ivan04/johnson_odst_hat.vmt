@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Ivan04\marine_arm_pack_perm_diffuse_odst"
+     	"$bumpmap" "models\Ivan04\marine_arm_pack_perm_zbump_odst"
+	"$halflambert" 1
+
+	"$phong" "1"
+	"$phongexponent" 5
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[0.01 0.5 1]"
+}

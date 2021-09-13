@@ -14,7 +14,13 @@ H3NBsTbl = {
 
 }
 
+H3NBsColors = {
+
+}
+
 if SERVER then
+
+	util.AddNetworkString( "H3NBsHeroSpawned" )
 
 	H3HS = {} -- Halo 3 Human Squads
 	
@@ -47,5 +53,18 @@ if SERVER then
 	function H3HS:GetCaller(sign)
 		return self.SignalCaller[sign]
 	end
+
+else
+
+	net.Receive( "H3NBsHeroSpawned", function()
+		local ent = net.ReadEntity()
+		local col = net.ReadVector()
+		if !IsValid(ent) then return end
+		ent.HasSpecialColor = true
+		ent.SpecialColor = col
+		H3NBsColors[ent:EntIndex()] = col
+		if !ent.GetPlayerColor then ent.GetPlayerColor = function() return ent.SpecialColor or Vector(0,0,0) end end
+		--print(ent.HasSpecialColor,ent.SpecialColor,HRNBsColors[ent:EntIndex()])
+	end )
 
 end

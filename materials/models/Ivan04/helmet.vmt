@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/Ivan04/worker_dif"
-	"$bumpmap" "models/Ivan04/worker_zbump"
+	"$bumpmap" "models/Ivan04/worker_bump"
 	"$phongexponenttexture" "models/Ivan04/worker_cc"
 	
 }

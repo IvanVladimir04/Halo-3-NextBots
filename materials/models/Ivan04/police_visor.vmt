@@ -1,7 +1,7 @@
 "UnlitGeneric"
 {
-	"$basetexture" "models\halo\halo_3_odst\johnson\gear_light"
-	"$bumpmap" "models\Ivan04\police_helmet_zbump"
+	"$basetexture" "models/Ivan04/gear_light"
+	"$bumpmap" "models/Ivan04/police_helmet_zbump"
 //	"$translucent"	"1"
 	"$envmap" "env_cubemap"
 	"$normalmapalphaenvmapmask" "1"
@@ -9,7 +9,7 @@
 	"$phong" "1"
 	"$phongboost" "50"
 	"$phongalbedotint" "45"
-//	"$phongexponenttexture" "models\halo\halo_3_odst\rookie\Helmet_Phong"
+//	"$phongexponenttexture" "models/Ivan04/Helmet_Phong"
 	"$phonttint"	"{155 135 105}"
 	"$phongfresnelranges" "[.5 .5 .5]"
 	"$model" "1"

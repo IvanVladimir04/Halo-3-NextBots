@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/odst_johnson_head_diffuse"
+	"$bumpmap" "models/Ivan04/odst_johnson_head_zbump"
+
+}

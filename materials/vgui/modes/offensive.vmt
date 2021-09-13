@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/modes/offensive"
+	"$nolod" 1
+	"$vertexalpha" 1
+	"$vertexcolor" 1
+}

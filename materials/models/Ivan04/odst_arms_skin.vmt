@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\Ivan04\odst_arms_skin_diffuse"
+	"$bumpmap" "models\Ivan04\odst_arms_skin_zbump"
+
+"$phongexponent" "5"
+ "$halflambert" "1"
+"$phong" "1"
+	"$phongboost"	"0.4"
+	"$phongfresnelranges"	"[.20 .25 .25]"
+
+	
+"$rimlight" "1" 
+"$rimlightexponent" "5" 
+"$rimlightboost" "1.5" 
+"$rimmask" 1
+}

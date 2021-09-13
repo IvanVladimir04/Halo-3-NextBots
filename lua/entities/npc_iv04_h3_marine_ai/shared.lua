@@ -204,7 +204,7 @@ end
 function ENT:Speak(voice)
 	local character = self.Voices[self.VoiceType]
 	if self.CurrentSound then self.CurrentSound:Stop() end
-	if character[voice] and istable(character[voice]) then
+	if character and character[voice] and istable(character[voice]) then
 		local sound = table.Random(character[voice])
 		self.CurrentSound = CreateSound(self,sound)
 		self.CurrentSound:SetSoundLevel(100)
@@ -522,8 +522,7 @@ function ENT:SetupHoldtypes()
 			self.LandAnim = "rifle_land_soft"
 			self.LandHardAnim = "rifle_land_hard"
 			self.SurpriseAnim = "rifle_warn"
-			self.WarnAnim = "rifle_warn"
-			self.WarnAnim = {"pistol_warn"}
+			self.WarnAnim = {"rifle_warn"}
 			self.CrouchMoveCalmAnim = {"rifle_crouch_move_passive"}
 			self.CrouchIdleAnim = {"rifle_br_crouch_idle"}
 			self.CrouchMoveAnim = {"rifle_crouch_move"}
@@ -804,10 +803,10 @@ function ENT:OnLandOnGround(ent)
 		local seq = self.LandAnim
 		if ( CurTime() - self.LastTimeOnGround ) > 1 then
 			seq = self.LandHardAnim
+			self:Speak("pain_fall")
 		end
 		self.LastTimeOnGround = CurTime()
 		local func = function()
-			self:Speak("pain_fall")
 			self:PlaySequenceAndWait(seq)
 		end
 		table.insert(self.StuffToRunInCoroutine,func)
@@ -1884,7 +1883,7 @@ function ENT:OnOtherKilled( victim, info )
 					if math.random(1,2) == 1 then
 						self:Speak("newordr_charge")
 					else
-						self:Speak("OnOrderAdvance")
+						self:Speak("newordr_advance")
 					end
 					H3HS:Signal("Advance",self)
 					self:PlaySequenceAndPWait(self.AdvanceAnim,1,self:GetPos())
@@ -2098,7 +2097,7 @@ function ENT:ChaseEnt(ent,los)
 end
 
 function ENT:MoveMouth()
-	self:DoGestureSeq("pose_face")
+	self:DoGestureSeq("pose_face",true,0.25,0.75)
 end
 
 function ENT:PoseEyes()
@@ -2366,6 +2365,15 @@ end
 
 function ENT:OnFiring()
 	self:DoGestureSeq(self.ShootAnim[math.random(#self.ShootAnim)])
+	if !self.SpokeShoot then
+		self.SpokeShoot = true
+		timer.Simple( math.random(15,20), function()
+			if IsValid(self) then
+				self.SpokeShoot = false
+			end
+		end )
+		self:Speak("strk")
+	end
 	--if !self.SayingOnFiring and IsValid(self.Enemy) then
 		--self:Speak("OnAttack")
 		--self.SayingOnFiring = true
@@ -2379,7 +2387,7 @@ end
 
 function ENT:FootstepSound()
 	local character = self.Voices[self.VoiceType]
-	if character["OnStep"] and istable(character["OnStep"]) then
+	if character and character["OnStep"] and istable(character["OnStep"]) then
 		local sound = table.Random(character["OnStep"])
 		self:EmitSound(sound,60)
 	end

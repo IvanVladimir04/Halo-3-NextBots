@@ -25,7 +25,7 @@ $bodygroup "head"
 
 $texturegroup Arms
 {
-	{ "bare_arms"  }
+	{ "worker_arms"  }
 	{ "bare_arms_2" }
 	{ "bare_arms_3" }
 	{ "bare_arms_4" }

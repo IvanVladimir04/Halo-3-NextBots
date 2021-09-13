@@ -43,6 +43,7 @@ function ENT:DoInit()
 	if self.EnableFlashlight then
 
 	end
+	self.Unkillable = GetConVar("halo_3_nextbots_ai_heroes"):GetBool()
 end
 
 list.Set( "NPC", "npc_iv04_h3_marine_johnson", {
