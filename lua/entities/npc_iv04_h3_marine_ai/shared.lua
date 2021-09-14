@@ -233,6 +233,10 @@ function ENT:OnStared(weirdo)
 			self:Speak(weirdo.InteractableAllies[self:GetClass()])
 			timer.Simple( 5, function()
 				if IsValid(self) and IsValid(weirdo) and !IsValid(self.Enemy) and !IsValid(weirdo.Enemy) and weirdo.InteractableAlliesResponses[self:GetClass()] then
+					weirdo.LookTarget = self
+					timer.Simple( 2, function()
+						if IsValid(weirdo) then weirdo.LookTarget = nil end
+					end )
 					weirdo:Speak(weirdo.InteractableAlliesResponses[self:GetClass()])
 				end
 			end )

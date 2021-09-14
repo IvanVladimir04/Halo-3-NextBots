@@ -19,6 +19,7 @@ ENT.PossibleWeapons = {
 }
 
 function ENT:DoInit()
+	self.VoiceType = "Marine1"
 	local wep = table.Random(self.PossibleWeapons)
 	self:Give(wep)
 	self:SetBodygroup(4,1)
