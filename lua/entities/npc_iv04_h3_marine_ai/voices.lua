@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-ENT.Voices = {
+ENT.Voices = { -- Fuck you [RS] William I ain't cutting out dialogues
 	["Marine1"] = {
 		["panic_onfire"]	=	{
 				"marines/marine1/panic_onfire1.ogg",

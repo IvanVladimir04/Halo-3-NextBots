@@ -227,7 +227,7 @@ end
 
 function ENT:OnStared(weirdo)
 	if weirdo:IsPlayer() then
-		self:Speak("OnStare")
+		self:Speak("looklngtme")
 	else
 		if weirdo.InteractableAllies[self:GetClass()] then
 			self:Speak(weirdo.InteractableAllies[self:GetClass()])

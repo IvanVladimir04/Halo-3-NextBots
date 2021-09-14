@@ -37,6 +37,13 @@ $bodygroup "Misc"
 	studio "halo3_marine_misc.smd"
 }
 
+$texturegroup Rank
+{
+	{ "odst_rankstripe"  }
+	{ "odst_rankstripe_normal" }
+	{ "odst_rankstripe_cut" }
+}
+
 $surfaceprop "flesh"
 
 $cdmaterials "models/Ivan04/"
