@@ -85,6 +85,12 @@ ENT.CountedAllies = 0
 
 ENT.MentionedAllySpree = false
 
+ENT.InteractableAllies = {}
+
+ENT.PPP = 0
+
+ENT.YPP = 0
+
 ENT.FlinchHitgroups = {
 	[7] = ACT_FLINCH_RIGHTLEG,
 	[3] = ACT_FLINCH_CHEST,
@@ -201,8 +207,8 @@ end
 function ENT:DoInit()
 end
 
-function ENT:Speak(voice)
-	local character = self.Voices[self.VoiceType]
+function ENT:Speak(voice,character)
+	local character = character or self.Voices[self.VoiceType]
 	if self.CurrentSound then self.CurrentSound:Stop() end
 	if character and character[voice] and istable(character[voice]) then
 		local sound = table.Random(character[voice])
@@ -210,6 +216,8 @@ function ENT:Speak(voice)
 		self.CurrentSound:SetSoundLevel(100)
 		self.CurrentSound:Play()
 		self:MoveMouth()
+	--else
+		--print("nosound",character,character[voice],istable(character[voice]),voice,self.VoiceType)
 	end
 end
 
@@ -217,63 +225,103 @@ function ENT:GetCurrentWeaponProficiency()
 	return self.WeaponAccuracy or 1
 end
 
+function ENT:OnStared(weirdo)
+	if weirdo:IsPlayer() then
+		self:Speak("OnStare")
+	else
+		if weirdo.InteractableAllies[self:GetClass()] then
+			self:Speak(weirdo.InteractableAllies[self:GetClass()])
+			timer.Simple( 5, function()
+				if IsValid(self) and IsValid(weirdo) and !IsValid(self.Enemy) and !IsValid(weirdo.Enemy) and weirdo.InteractableAlliesResponses[self:GetClass()] then
+					weirdo:Speak(weirdo.InteractableAlliesResponses[self:GetClass()])
+				end
+			end )
+		end
+	end
+end
+
 function ENT:OnSeenFriendly(ent)
 	--print("friend",ent)
 	if self:Health() < 1 then return end
-	if !IsValid(self.Enemy) and !self.BeingStaredAt and ent:IsPlayer() then
-		local st1 = false
-		local st2 = false
-		local st3 = false
-		local ang1 = ent:GetAimVector():Angle()
-		local ang2 = ( self:GetPos() - ent:GetPos() ):GetNormalized():Angle()
-		local dif = math.abs(math.AngleDifference( ang1.y, ang2.y ))
-		self.BeingStaredAt = true
-		if dif < 60 then
-			timer.Simple( 5*0.33, function()
-				if IsValid(self) and !IsValid(self.Enemy) and ( IsValid(ent) and ent:Health() > 0 ) then
-					local ang1 = ent:GetAimVector():Angle()
-					local ang2 = ( self:GetPos() - ent:GetPos() ):Angle()
-					local dif = math.abs(math.AngleDifference( ang1.y, ang2.y ))
-					if dif < 60 then
-						st1 = true
-					else
+	if !IsValid(self.Enemy) then
+		if !self.Waved and ent:IsPlayer() then
+			self.Waved = true
+			self:Speak(self.GreetQuote or "grt_plr_mc")
+			if self.WaveAnimGesture then
+				self:DoGestureSeq(self.WaveAnim)
+			else
+				local func = function()
+					self:PlaySequenceAndWait(self.WaveAnim)
+				end
+				table.insert(self.StuffToRunInCoroutine,func)
+			end
+			return
+		end
+		if !self.BeingStaredAt and ( ent:IsPlayer() or ( ent.CanInteractWithOthers and !ent.BeingStaredAt ) ) then
+			local st1 = false
+			local st2 = false
+			local st3 = false
+			local ang1 = ent:GetAimVector():Angle()
+			local ang2 = ( self:GetPos() - ent:GetPos() ):GetNormalized():Angle()
+			local dif = math.abs(math.AngleDifference( ang1.y, ang2.y ))
+			self.BeingStaredAt = true
+			--print(dif)
+			if dif <= 60 then
+				self.LookTarget = ent
+				timer.Simple( 5*0.33, function()
+					if IsValid(self) and !IsValid(self.Enemy) and ( IsValid(ent) and ent:Health() > 0 ) then
+						local ang1 = ent:GetAimVector():Angle()
+						local ang2 = ( self:GetPos() - ent:GetPos() ):Angle()
+						local dif = math.abs(math.AngleDifference( ang1.y, ang2.y ))
+						if dif < 60 then
+							--print(dif)
+							st1 = true
+						else
+							self.BeingStaredAt = false
+						end
+					end
+				end )
+				timer.Simple( 5*0.66, function()
+					if IsValid(self) and !IsValid(self.Enemy) and ( IsValid(ent) and ent:Health() > 0 ) then
+						local ang1 = ent:GetAimVector():Angle()
+						local ang2 = ( self:GetPos() - ent:GetPos() ):Angle()
+						local dif = math.abs(math.AngleDifference( ang1.y, ang2.y ))
+						if dif < 60 then
+							st2 = true
+						else
+							self.BeingStaredAt = false
+						end
+					end
+				end )
+				timer.Simple( 5, function()
+					if IsValid(self) and self:Health() > 0 and !IsValid(self.Enemy) and ( IsValid(ent) and ent:Health() > 0 ) then
+						local ang1 = ent:GetAimVector():Angle()
+						local ang2 = ( self:GetPos() - ent:GetPos() ):Angle()
+						local dif = math.abs(math.AngleDifference( ang1.y, ang2.y ))
 						self.BeingStaredAt = false
+						if dif < 60 then
+							st3 = true
+							self:OnStared(ent)
+							self.CommentedStare = true
+							timer.Simple( 20, function()
+								if IsValid(self) then
+									self.CommentedStare = false
+								end
+							end )
+							timer.Simple( 3, function()
+								if IsValid(self) then
+									self.LookTarget = nil
+								end
+							end )
+							--[[timer.Simple(4, function() -- CATCH
+							if ent.SetEnemy then ent:SetEnemy(self) end
+							end )]]
+						else
+							self.LookTarget = nil
+						end
 					end
-				end
-			end )
-			timer.Simple( 5*0.66, function()
-				if IsValid(self) and !IsValid(self.Enemy) and ( IsValid(ent) and ent:Health() > 0 ) then
-					local ang1 = ent:GetAimVector():Angle()
-					local ang2 = ( self:GetPos() - ent:GetPos() ):Angle()
-					local dif = math.abs(math.AngleDifference( ang1.y, ang2.y ))
-					if dif < 60 then
-						st2 = true
-					else
-						self.BeingStaredAt = false
-					end
-				end
-			end )
-			timer.Simple( 5, function()
-				if IsValid(self) and self:Health() > 0 and !IsValid(self.Enemy) and ( IsValid(ent) and ent:Health() > 0 ) then
-					local ang1 = ent:GetAimVector():Angle()
-					local ang2 = ( self:GetPos() - ent:GetPos() ):Angle()
-					local dif = math.abs(math.AngleDifference( ang1.y, ang2.y ))
-					self.BeingStaredAt = false
-					if dif < 60 then
-						st3 = true
-						self:Speak("OnStare")
-						self.CommentedStare = true
-						timer.Simple( 20, function()
-							if IsValid(self) then
-								self.CommentedStare = false
-							end
-						end )
-						--[[timer.Simple(4, function() -- CATCH
-						if ent.SetEnemy then ent:SetEnemy(self) end
-						end )]]
-					end
-				end
-			end )
+				end )
+			end
 		end
 	end
 end
@@ -455,7 +503,7 @@ function ENT:SetupHoldtypes()
 			self.GrenadeAnim = {"rifle_throwgrenade_1","rifle_throwgrenade_2"}
 			self.PushAnim = {"pistol_smash"}
 			self.WarthogPassengerIdle = "Warthog_Passenger_Idle_Pistol"
-			if self.Weapon:GetClass() == "astw2_halo3_magnum" then
+			if self.Weapon:GetClass() == "astw2_halo3_magnum" or self.Weapon:GetClass() == "astw2_halo3_magnum_odst" then
 				self.Weapon.BurstLength = 4
 			end
 			self.WaveAnim = "pistol_wave"
@@ -643,6 +691,12 @@ function ENT:DoCustomIdle()
 		if dist > 300^2 then
 			self:WanderToPosition( (self.StartPosition + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300), self.RunCalmAnim[math.random(1,#self.RunCalmAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
 		end
+	end
+	if math.random(1,2) == 1 then
+		self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+		timer.Simple( math.random(2,3), function()
+			if IsValid(self) then self.SpecificGoal = nil end
+		end )
 	end
 	local seq = self.IdleCalmAnim[math.random(#self.IdleCalmAnim)]
 	self:ResetSequence(seq)
@@ -1411,21 +1465,6 @@ ENT.VehicleSlots = {
 		[3] = "Passenger"
 	}
 }
-
-function ENT:OnSeenFriendly(ent)
-	if !IsValid(self.Enemy) and !self.Waved and ent:IsPlayer() then
-		self.Waved = true
-		self:Speak("grt_plr_mc")
-		if self.WaveAnimGesture then
-			self:DoGestureSeq(self.WaveAnim)
-		else
-			local func = function()
-				self:PlaySequenceAndWait(self.WaveAnim)
-			end
-			table.insert(self.StuffToRunInCoroutine,func)
-		end
-	end
-end
 
 function ENT:EnterVehicle(veh)
 	local dirs = {
@@ -2406,9 +2445,9 @@ function ENT:BodyUpdate()
 		end
 		local goal = self:GetPos()+self.loco:GetVelocity()
 		local y = (goal-self:GetPos()):Angle().y
-		local di = math.AngleDifference(self:GetAngles().y,y)
-		self:SetPoseParameter("move_yaw",-di)
-		self:SetPoseParameter("walk_yaw",-di)
+		local m_y = math.AngleDifference(self:GetAngles().y,y)
+		self:SetPoseParameter("move_yaw",-m_y)
+		self:SetPoseParameter("walk_yaw",-m_y)
 	else
 		self.LMove = nil
 	end
@@ -2418,16 +2457,34 @@ function ENT:BodyUpdate()
 	local di = 0
 	local p
 	local dip = 0
-	if IsValid(self.Enemy) or self.SpecificGoal then
+	if ( IsValid(self.Enemy) or IsValid(self.LookTarget) or self.SpecificGoal ) then
 		goal = self.SpecificGoal
 		if IsValid(self.Enemy) then
 			goal = self.Enemy:WorldSpaceCenter()
+		elseif IsValid(self.LookTarget) then
+			goal = self.LookTarget:WorldSpaceCenter()+(self.LookTarget:OBBMaxs()*0.3)
 		end
-		local an = (goal-self:WorldSpaceCenter()):Angle()
+		local an = (goal-(self:WorldSpaceCenter()+self:GetUp()*30)):Angle()
 		y = an.y
-		di = math.AngleDifference(self:GetAngles().y,y)
+		dify = math.AngleDifference(self:GetAngles().y+self.YPP,y)
+		--print(dify)
+		if math.abs(dify) > 2 then
+			if dify > 0 then
+				di = -2
+			else
+				di = 2
+			end
+		end
 		p = an.p
-		dip = math.AngleDifference(self:GetAngles().p,p)
+		local difp = math.AngleDifference(self:GetAngles().p+self.PPP,p)
+		--print(difp)
+		if math.abs(difp) > 2 then
+			if difp > 0 then
+				dip = -2
+			else
+				dip = 2
+			end
+		end
 		if self.IsInVehicle then
 			if !self.Transitioned and self.VehicleRole == "Gunner" then
 				local vy = math.AngleDifference(self.Vehicle:GetAngles().y+self.LTPP,y)
@@ -2464,9 +2521,28 @@ function ENT:BodyUpdate()
 				end
 			end
 		end
+	else	
+		if self.YPP != 0 then
+			if self.YPP > 0 then
+				di = -math.Clamp( self.YPP, -2, 0 )
+			else
+				di = math.Clamp( self.YPP, 0, 2 )
+			end
+		end
+		if self.PPP != 0 then
+			if self.PPP > 0 then
+				dip = -math.Clamp( self.PPP, -2, 0 )
+			else
+				dip = math.Clamp( self.PPP, 0, 2 )
+			end
+		end
 	end
-	self:SetPoseParameter("body_aim_yaw",-di)
-	self:SetPoseParameter("body_aim_pitch",-dip)
+	self:SetPoseParameter("body_aim_yaw",(self.YPP+(di)))
+	self.YPP = self:GetPoseParameter("body_aim_yaw")
+	--print(self.YPP)
+	self:SetPoseParameter("body_aim_pitch",(self.PPP+(dip)))
+	self.PPP = self:GetPoseParameter("body_aim_pitch")
+	--print(self.PPP)
 	if !self.DoingFlinch and self:Health() > 0 and !self.ThrowingGrenade and !self.DoingMelee and !self.Taunting and !self.ThrowGrenade then
 		self:BodyMoveXY()
 	end

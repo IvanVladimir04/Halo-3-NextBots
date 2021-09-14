@@ -14,6 +14,17 @@ ENT.FriendlyToPlayers = true
 
 ENT.HeadShotImmune = true
 
+ENT.CanInteractWithOthers = true
+
+ENT.InteractableAllies = {
+	["npc_iv04_h3_marine_odst_buck"] = "rookie_look_buck",
+	["npc_iv04_h3_marine_odst_dare"] = "rookie_look_dare"
+}
+
+ENT.InteractableAlliesResponses = {
+
+}
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_smg_odst",
 	"astw2_halo3_smg_odst",

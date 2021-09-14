@@ -14,6 +14,8 @@ ENT.FriendlyToPlayers = true
 
 ENT.EnableFlashlight = true
 
+ENT.GreetQuote = "grt"
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_assaultrifle",
 	"astw2_halo3_assaultrifle",

@@ -14,6 +14,22 @@ ENT.FriendlyToPlayers = true
 
 ENT.HeadShotImmune = true
 
+ENT.GreetQuote = "grt"
+
+ENT.CanInteractWithOthers = true
+
+ENT.InteractableAllies = {
+	["npc_iv04_h3_marine_odst_mickey"] = "buck_look_mickey",
+	["npc_iv04_h3_marine_odst_dutch"] = "buck_look_dutch",
+	["npc_iv04_h3_marine_odst_romeo"] = "buck_look_romeo"
+}
+
+ENT.InteractableAlliesResponses = {
+	["npc_iv04_h3_marine_odst_mickey"] = "buck_look_mickey_re",
+	["npc_iv04_h3_marine_odst_dutch"] = "buck_look_dutch_re",
+	["npc_iv04_h3_marine_odst_romeo"] = "buck_look_romeo_re"
+}
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_assaultrifle",
 	"astw2_halo3_assaultrifle",
@@ -22,6 +38,7 @@ ENT.PossibleWeapons = {
 }
 
 function ENT:DoInit()
+	self.VoiceType = "Buck"
 	self.ColR = 205--math.random(255)
 	self.ColG = 205--math.random(255)
 	self.ColB = 205--math.random(255)

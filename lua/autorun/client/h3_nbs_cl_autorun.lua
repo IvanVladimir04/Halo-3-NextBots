@@ -28,6 +28,28 @@
 			[4] = "vgui/difficulties/4_legendary.png"
 		}
 	}
+	
+	local tbl1 = {
+		c = "Options", -- Category
+		name = "Ivan04",
+		sc = "Halo 3 NextBots", -- Subcategory
+		id = "Halo_3_NextBots", -- Creative name
+		dv = "Offensive", -- Default value (unticked value)
+		d = "Defines how the AI Behaves",
+		cv = "halo_3_nextbots_ai_type",
+		t = "combobox",
+		n = "AI Mode",
+		options = {
+			[1] = "Offensive",
+			[2] = "Defensive",
+			[3] = "Static"
+		},
+		ic = {
+			[1] = "vgui/modes/offensive",
+			[2] = "vgui/modes/defensive",
+			[3] = "vgui/modes/static"
+		}
+	}
 
 	local tbl2 = {
 		c = "Options",
@@ -100,6 +122,7 @@
 	}
 
 	IV04AddMenuOption( tbl )
+	IV04AddMenuOption( tbl1 )
 	IV04AddMenuOption( tbl2 )
 	IV04AddMenuOption( tbl3 )
 	IV04AddMenuOption( tbl4 )

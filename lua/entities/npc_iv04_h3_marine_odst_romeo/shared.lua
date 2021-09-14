@@ -14,6 +14,18 @@ ENT.FriendlyToPlayers = true
 
 ENT.HeadShotImmune = true
 
+ENT.GreetQuote = "grt"
+
+ENT.CanInteractWithOthers = true
+
+ENT.InteractableAllies = {
+	["npc_iv04_h3_marine_odst_buck"] = "romeo_look_buck"
+}
+
+ENT.InteractableAlliesResponses = {
+	["npc_iv04_h3_marine_odst_buck"] = "romeo_look_buck_re"
+}
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_magnum_odst",
 	"astw2_halo3_sniperrifle",
@@ -22,6 +34,7 @@ ENT.PossibleWeapons = {
 }
 
 function ENT:DoInit()
+	self.VoiceType = "Romeo"
 	self.ColR = 30--math.random(255)
 	self.ColG = 60--math.random(255)
 	self.ColB = 125--math.random(255)

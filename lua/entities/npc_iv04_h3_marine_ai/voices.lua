@@ -2,21 +2,21 @@ AddCSLuaFile()
 
 ENT.Voices = {
 	["Marine1"] = {
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"marines/marine1/panic_onfire1.ogg",
 				"marines/marine1/panic_onfire2.ogg",
 				"marines/marine1/panic_onfire3.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"marines/marine1/warn_vcl_phntm1.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"marines/marine1/look_pstcmbt1.ogg",
 				"marines/marine1/look_pstcmbt2.ogg",
 				"marines/marine1/look_pstcmbt30.ogg",
 				"marines/marine1/look_pstcmbt31.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"marines/marine1/warn_chr_bggr1.ogg",
 				"marines/marine1/warn_chr_bggr2.ogg",
 				"marines/marine1/warn_chr_bggr3.ogg",
@@ -26,18 +26,18 @@ ENT.Voices = {
 				"marines/marine1/warn_chr_bggr7.ogg",
 				"marines/marine1/warn_chr_bggr8.ogg",
 				},
-		['chr_kllfoe_vclbmp']	=	{
+		["chr_kllfoe_vclbmp"]	=	{
 				"marines/marine1/chr_kllfoe_vclbmp1.ogg",
 				"marines/marine1/chr_kllfoe_vclbmp2.ogg",
 				"marines/marine1/chr_kllfoe_vclbmp3.ogg",
 				"marines/marine1/chr_kllfoe_vclbmp4.ogg",
 				},
-		['warn_vcl_bnsh']	=	{
+		["warn_vcl_bnsh"]	=	{
 				"marines/marine1/warn_vcl_bnsh1.ogg",
 				"marines/marine1/warn_vcl_bnsh2.ogg",
 				"marines/marine1/warn_vcl_bnsh3.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/marine1/pain1.ogg",
 				"marines/marine1/pain10.ogg",
 				"marines/marine1/pain11.ogg",
@@ -51,19 +51,19 @@ ENT.Voices = {
 				"marines/marine1/pain8.ogg",
 				"marines/marine1/pain9.ogg",
 				},
-		['lookcmbt_fllw']	=	{
+		["lookcmbt_fllw"]	=	{
 				"marines/marine1/lookcmbt_fllw1.ogg",
 				"marines/marine1/lookcmbt_fllw2.ogg",
 				"marines/marine1/lookcmbt_fllw30.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/marine1/cvr_re1.ogg",
 				"marines/marine1/cvr_re2.ogg",
 				"marines/marine1/cvr_re3.ogg",
 				"marines/marine1/cvr_re4.ogg",
 				"marines/marine1/cvr_re5.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"marines/marine1/prs_plr_kll1.ogg",
 				"marines/marine1/prs_plr_kll2.ogg",
 				"marines/marine1/prs_plr_kll3.ogg",
@@ -74,7 +74,7 @@ ENT.Voices = {
 				"marines/marine1/prs_plr_kll8.ogg",
 				"marines/marine1/prs_plr_kll9.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/marine1/dwn1.ogg",
 				"marines/marine1/dwn2.ogg",
 				"marines/marine1/dwn3.ogg",
@@ -82,36 +82,36 @@ ENT.Voices = {
 				"marines/marine1/dwn5.ogg",
 				"marines/marine1/dwn6.ogg",
 				},
-		['_lift']	=	{
+		["_lift"]	=	{
 				"marines/marine1/_lift10.ogg",
 				"marines/marine1/_lift9.ogg",
 				},
-		['chckallybdy']	=	{
+		["chckallybdy"]	=	{
 				"marines/marine1/chckallybdy5.ogg",
 				"marines/marine1/chckallybdy6.ogg",
 				"marines/marine1/chckallybdy7.ogg",
 				"marines/marine1/chckallybdy8.ogg",
 				"marines/marine1/chckallybdy9.ogg",
 				},
-		['rmd_scrb']	=	{
+		["rmd_scrb"]	=	{
 				"marines/marine1/rmd_scrb1.ogg",
 				"marines/marine1/rmd_scrb2.ogg",
 				"marines/marine1/rmd_scrb3.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"marines/marine1/seefoe_downthere1.ogg",
 				"marines/marine1/seefoe_downthere2.ogg",
 				"marines/marine1/seefoe_downthere3.ogg",
 				"marines/marine1/seefoe_downthere4.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/marine1/newordr_exitvcl1.ogg",
 				"marines/marine1/newordr_exitvcl2.ogg",
 				"marines/marine1/newordr_exitvcl3.ogg",
 				"marines/marine1/newordr_exitvcl4.ogg",
 				"marines/marine1/newordr_exitvcl5.ogg",
 				},
-		['join_stayback']	=	{
+		["join_stayback"]	=	{
 				"marines/marine1/join_stayback1.ogg",
 				"marines/marine1/join_stayback10.ogg",
 				"marines/marine1/join_stayback11.ogg",
@@ -123,7 +123,7 @@ ENT.Voices = {
 				"marines/marine1/join_stayback8.ogg",
 				"marines/marine1/join_stayback9.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"marines/marine1/cower1.ogg",
 				"marines/marine1/cower2.ogg",
 				"marines/marine1/cower3.ogg",
@@ -132,7 +132,7 @@ ENT.Voices = {
 				"marines/marine1/cower6.ogg",
 				"marines/marine1/cower7.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/marine1/thnk1.ogg",
 				"marines/marine1/thnk10.ogg",
 				"marines/marine1/thnk11.ogg",
@@ -146,7 +146,7 @@ ENT.Voices = {
 				"marines/marine1/thnk8.ogg",
 				"marines/marine1/thnk9.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"marines/marine1/scld_plr_hrt_blt1.ogg",
 				"marines/marine1/scld_plr_hrt_blt2.ogg",
 				"marines/marine1/scld_plr_hrt_blt3.ogg",
@@ -156,20 +156,20 @@ ENT.Voices = {
 				"marines/marine1/scld_plr_hrt_blt7.ogg",
 				"marines/marine1/scld_plr_hrt_blt8.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/marine1/foeordr_support1.ogg",
 				"marines/marine1/foeordr_support3.ogg",
 				"marines/marine1/foeordr_support4.ogg",
 				"marines/marine1/foeordr_support5.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/marine1/pstcmbt_brt1.ogg",
 				"marines/marine1/pstcmbt_brt2.ogg",
 				"marines/marine1/pstcmbt_brt3.ogg",
 				"marines/marine1/pstcmbt_brt4.ogg",
 				"marines/marine1/pstcmbt_brt6.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/marine1/grt_plr_mc10.ogg",
 				"marines/marine1/grt_plr_mc11.ogg",
 				"marines/marine1/grt_plr_mc12.ogg",
@@ -183,13 +183,13 @@ ENT.Voices = {
 				"marines/marine1/grt_plr_mc8.ogg",
 				"marines/marine1/grt_plr_mc9.ogg",
 				},
-		['rmd_wpn_hmmr']	=	{
+		["rmd_wpn_hmmr"]	=	{
 				"marines/marine1/rmd_wpn_hmmr1.ogg",
 				"marines/marine1/rmd_wpn_hmmr2.ogg",
 				"marines/marine1/rmd_wpn_hmmr3.ogg",
 				"marines/marine1/rmd_wpn_hmmr4.ogg",
 				},
-		['tchallybdy']	=	{
+		["tchallybdy"]	=	{
 				"marines/marine1/tchallybdy1.ogg",
 				"marines/marine1/tchallybdy2.ogg",
 				"marines/marine1/tchallybdy3.ogg",
@@ -198,7 +198,7 @@ ENT.Voices = {
 				"marines/marine1/tchallybdy6.ogg",
 				"marines/marine1/tchallybdy7.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/marine1/foundfoe_prst1.ogg",
 				"marines/marine1/foundfoe_prst10.ogg",
 				"marines/marine1/foundfoe_prst11.ogg",
@@ -219,7 +219,7 @@ ENT.Voices = {
 				"marines/marine1/foundfoe_prst8.ogg",
 				"marines/marine1/foundfoe_prst9.ogg",
 				},
-		['ordr_keepwatch']	=	{
+		["ordr_keepwatch"]	=	{
 				"marines/marine1/ordr_keepwatch1.ogg",
 				"marines/marine1/ordr_keepwatch2.ogg",
 				"marines/marine1/ordr_keepwatch3.ogg",
@@ -228,12 +228,12 @@ ENT.Voices = {
 				"marines/marine1/ordr_keepwatch6.ogg",
 				"marines/marine1/ordr_keepwatch7.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/marine1/pain_mjr1.ogg",
 				"marines/marine1/pain_mjr3.ogg",
 				"marines/marine1/pain_mjr4.ogg",
 				},
-		['kamikaze']	=	{
+		["kamikaze"]	=	{
 				"marines/marine1/kamikaze1.ogg",
 				"marines/marine1/kamikaze10.ogg",
 				"marines/marine1/kamikaze11.ogg",
@@ -256,25 +256,25 @@ ENT.Voices = {
 				"marines/marine1/kamikaze8.ogg",
 				"marines/marine1/kamikaze9.ogg",
 				},
-		['warn_brsrk']	=	{
+		["warn_brsrk"]	=	{
 				"marines/marine1/warn_brsrk1.ogg",
 				"marines/marine1/warn_brsrk2.ogg",
 				"marines/marine1/warn_brsrk3.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"marines/marine1/seefoe_agg1.ogg",
 				"marines/marine1/seefoe_agg2.ogg",
 				"marines/marine1/seefoe_agg3.ogg",
 				"marines/marine1/seefoe_agg5.ogg",
 				"marines/marine1/seefoe_agg6.ogg",
 				},
-		['chr_kllfoe_blt']	=	{
+		["chr_kllfoe_blt"]	=	{
 				"marines/marine1/chr_kllfoe_blt1.ogg",
 				"marines/marine1/chr_kllfoe_blt2.ogg",
 				"marines/marine1/chr_kllfoe_blt3.ogg",
 				"marines/marine1/chr_kllfoe_blt4.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/marine1/thnk_plr_btrwpn1.ogg",
 				"marines/marine1/thnk_plr_btrwpn10.ogg",
 				"marines/marine1/thnk_plr_btrwpn11.ogg",
@@ -289,29 +289,29 @@ ENT.Voices = {
 				"marines/marine1/thnk_plr_btrwpn8.ogg",
 				"marines/marine1/thnk_plr_btrwpn9.ogg",
 				},
-		['scrn_plr_mc']	=	{
+		["scrn_plr_mc"]	=	{
 				"marines/marine1/scrn_plr_mc1.ogg",
 				"marines/marine1/scrn_plr_mc2.ogg",
 				"marines/marine1/scrn_plr_mc3.ogg",
 				},
-		['newordr_charge']	=	{
+		["newordr_charge"]	=	{
 				"marines/marine1/newordr_charge2.ogg",
 				"marines/marine1/newordr_charge3.ogg",
 				"marines/marine1/newordr_charge4.ogg",
 				"marines/marine1/newordr_charge5.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/marine1/dive1.ogg",
 				"marines/marine1/dive2.ogg",
 				"marines/marine1/dive3.ogg",
 				},
-		['grt_intovcl_imdvr']	=	{
+		["grt_intovcl_imdvr"]	=	{
 				"marines/marine1/grt_intovcl_imdvr1.ogg",
 				"marines/marine1/grt_intovcl_imdvr2.ogg",
 				"marines/marine1/grt_intovcl_imdvr3.ogg",
 				"marines/marine1/grt_intovcl_imdvr4.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/marine1/pstcmbt1.ogg",
 				"marines/marine1/pstcmbt2.ogg",
 				"marines/marine1/pstcmbt3.ogg",
@@ -321,14 +321,14 @@ ENT.Voices = {
 				"marines/marine1/pstcmbt7.ogg",
 				"marines/marine1/pstcmbt8.ogg",
 				},
-		['newordr_fallback']	=	{
+		["newordr_fallback"]	=	{
 				"marines/marine1/newordr_fallback1.ogg",
 				"marines/marine1/newordr_fallback2.ogg",
 				"marines/marine1/newordr_fallback3.ogg",
 				"marines/marine1/newordr_fallback4.ogg",
 				"marines/marine1/newordr_fallback5.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"marines/marine1/panic_infctnfrm1.ogg",
 				"marines/marine1/panic_infctnfrm2.ogg",
 				"marines/marine1/panic_infctnfrm3.ogg",
@@ -339,7 +339,7 @@ ENT.Voices = {
 				"marines/marine1/panic_infctnfrm8.ogg",
 				"marines/marine1/panic_infctnfrm9.ogg",
 				},
-		['strk_grnd']	=	{
+		["strk_grnd"]	=	{
 				"marines/marine1/strk_grnd1.ogg",
 				"marines/marine1/strk_grnd10.ogg",
 				"marines/marine1/strk_grnd2.ogg",
@@ -351,7 +351,7 @@ ENT.Voices = {
 				"marines/marine1/strk_grnd8.ogg",
 				"marines/marine1/strk_grnd9.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/marine1/pstcmbt_ez1.ogg",
 				"marines/marine1/pstcmbt_ez2.ogg",
 				"marines/marine1/pstcmbt_ez3.ogg",
@@ -360,7 +360,7 @@ ENT.Voices = {
 				"marines/marine1/pstcmbt_ez6.ogg",
 				"marines/marine1/pstcmbt_ez7.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"marines/marine1/scld_plr_kllally10.ogg",
 				"marines/marine1/scld_plr_kllally11.ogg",
 				"marines/marine1/scld_plr_kllally12.ogg",
@@ -371,7 +371,7 @@ ENT.Voices = {
 				"marines/marine1/scld_plr_kllally8.ogg",
 				"marines/marine1/scld_plr_kllally9.ogg",
 				},
-		['warn_pureforms']	=	{
+		["warn_pureforms"]	=	{
 				"marines/marine1/warn_pureforms1.ogg",
 				"marines/marine1/warn_pureforms2.ogg",
 				"marines/marine1/warn_pureforms3.ogg",
@@ -380,15 +380,15 @@ ENT.Voices = {
 				"marines/marine1/warn_pureforms6.ogg",
 				"marines/marine1/warn_pureforms7.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"marines/marine1/dth_reanimated7.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/marine1/ok_plr_arb1.ogg",
 				"marines/marine1/ok_plr_arb3.ogg",
 				"marines/marine1/ok_plr_arb4.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/marine1/look1.ogg",
 				"marines/marine1/look10.ogg",
 				"marines/marine1/look11.ogg",
@@ -413,12 +413,12 @@ ENT.Voices = {
 				"marines/marine1/look8.ogg",
 				"marines/marine1/look9.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/marine1/thnk_plr_arb1.ogg",
 				"marines/marine1/thnk_plr_arb2.ogg",
 				"marines/marine1/thnk_plr_arb3.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/marine1/hail_plr_arb1.ogg",
 				"marines/marine1/hail_plr_arb2.ogg",
 				"marines/marine1/hail_plr_arb3.ogg",
@@ -434,7 +434,7 @@ ENT.Voices = {
 				"marines/marine1/hail_plr_arb5.ogg",
 				"marines/marine1/hail_plr_arb6.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/marine1/prs_plr_mc10.ogg",
 				"marines/marine1/prs_plr_mc2.ogg",
 				"marines/marine1/prs_plr_mc4.ogg",
@@ -444,7 +444,7 @@ ENT.Voices = {
 				"marines/marine1/prs_plr_mc8.ogg",
 				"marines/marine1/prs_plr_mc9.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"marines/marine1/lookcmbt1.ogg",
 				"marines/marine1/lookcmbt10.ogg",
 				"marines/marine1/lookcmbt2.ogg",
@@ -463,7 +463,7 @@ ENT.Voices = {
 				"marines/marine1/lookcmbt8.ogg",
 				"marines/marine1/lookcmbt9.ogg",
 				},
-		['chr_vcljmp']	=	{
+		["chr_vcljmp"]	=	{
 				"marines/marine1/chr_vcljmp1.ogg",
 				"marines/marine1/chr_vcljmp10.ogg",
 				"marines/marine1/chr_vcljmp11.ogg",
@@ -476,31 +476,31 @@ ENT.Voices = {
 				"marines/marine1/chr_vcljmp8.ogg",
 				"marines/marine1/chr_vcljmp9.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/marine1/dth_fall5.ogg",
 				"marines/marine1/dth_fall6.ogg",
 				"marines/marine1/dth_fall7.ogg",
 				"marines/marine1/dth_fall8.ogg",
 				},
-		['join_re']	=	{
+		["join_re"]	=	{
 				"marines/marine1/join_re1.ogg",
 				"marines/marine1/join_re2.ogg",
 				"marines/marine1/join_re3.ogg",
 				"marines/marine1/join_re4.ogg",
 				},
-		['entervcl']	=	{
+		["entervcl"]	=	{
 				"marines/marine1/entervcl1.ogg",
 				"marines/marine1/entervcl2.ogg",
 				"marines/marine1/entervcl3.ogg",
 				"marines/marine1/entervcl4.ogg",
 				},
-		['join_prst']	=	{
+		["join_prst"]	=	{
 				"marines/marine1/join_prst1.ogg",
 				"marines/marine1/join_prst2.ogg",
 				"marines/marine1/join_prst3.ogg",
 				"marines/marine1/join_prst4.ogg",
 				},
-		['chr_kllfoe_stkplsm']	=	{
+		["chr_kllfoe_stkplsm"]	=	{
 				"marines/marine1/chr_kllfoe_stkplsm1.ogg",
 				"marines/marine1/chr_kllfoe_stkplsm2.ogg",
 				"marines/marine1/chr_kllfoe_stkplsm3.ogg",
@@ -508,7 +508,7 @@ ENT.Voices = {
 				"marines/marine1/chr_kllfoe_stkplsm6.ogg",
 				"marines/marine1/chr_kllfoe_stkplsm7.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/marine1/scrn1.ogg",
 				"marines/marine1/scrn10.ogg",
 				"marines/marine1/scrn11.ogg",
@@ -521,21 +521,21 @@ ENT.Voices = {
 				"marines/marine1/scrn8.ogg",
 				"marines/marine1/scrn9.ogg",
 				},
-		['jamies_a_jackass']	=	{
+		["jamies_a_jackass"]	=	{
 				"marines/marine1/jamies_a_jackass22.ogg",
 				},
-		['stayback_tim']	=	{
+		["stayback_tim"]	=	{
 				"marines/marine1/stayback_tim6.ogg",
 				"marines/marine1/stayback_tim7.ogg",
 				"marines/marine1/stayback_tim8.ogg",
 				"marines/marine1/stayback_tim9.ogg",
 				},
-		['dwn_scrb']	=	{
+		["dwn_scrb"]	=	{
 				"marines/marine1/dwn_scrb1.ogg",
 				"marines/marine1/dwn_scrb2.ogg",
 				"marines/marine1/dwn_scrb3.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/marine1/ordr_chkfoebdy1.ogg",
 				"marines/marine1/ordr_chkfoebdy10.ogg",
 				"marines/marine1/ordr_chkfoebdy11.ogg",
@@ -549,7 +549,7 @@ ENT.Voices = {
 				"marines/marine1/ordr_chkfoebdy8.ogg",
 				"marines/marine1/ordr_chkfoebdy9.ogg",
 				},
-		['look_pstcmbt_ez']	=	{
+		["look_pstcmbt_ez"]	=	{
 				"marines/marine1/look_pstcmbt_ez2.ogg",
 				"marines/marine1/look_pstcmbt_ez3.ogg",
 				"marines/marine1/look_pstcmbt_ez30.ogg",
@@ -557,14 +557,14 @@ ENT.Voices = {
 				"marines/marine1/look_pstcmbt_ez32.ogg",
 				"marines/marine1/look_pstcmbt_ez4.ogg",
 				},
-		['grt_intovcl']	=	{
+		["grt_intovcl"]	=	{
 				"marines/marine1/grt_intovcl1.ogg",
 				"marines/marine1/grt_intovcl2.ogg",
 				"marines/marine1/grt_intovcl3.ogg",
 				"marines/marine1/grt_intovcl4.ogg",
 				"marines/marine1/grt_intovcl5.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/marine1/grt_plr_arb10.ogg",
 				"marines/marine1/grt_plr_arb11.ogg",
 				"marines/marine1/grt_plr_arb12.ogg",
@@ -572,7 +572,7 @@ ENT.Voices = {
 				"marines/marine1/grt_plr_arb8.ogg",
 				"marines/marine1/grt_plr_arb9.ogg",
 				},
-		['ordr_grenade_all']	=	{
+		["ordr_grenade_all"]	=	{
 				"marines/marine1/ordr_grenade_all1.ogg",
 				"marines/marine1/ordr_grenade_all2.ogg",
 				"marines/marine1/ordr_grenade_all3.ogg",
@@ -580,7 +580,7 @@ ENT.Voices = {
 				"marines/marine1/ordr_grenade_all7.ogg",
 				"marines/marine1/ordr_grenade_all8.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/marine1/prs_plr_arb1.ogg",
 				"marines/marine1/prs_plr_arb2.ogg",
 				"marines/marine1/prs_plr_arb3.ogg",
@@ -589,7 +589,7 @@ ENT.Voices = {
 				"marines/marine1/prs_plr_arb6.ogg",
 				"marines/marine1/prs_plr_arb7.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/marine1/whn1.ogg",
 				"marines/marine1/whn10.ogg",
 				"marines/marine1/whn2.ogg",
@@ -601,14 +601,14 @@ ENT.Voices = {
 				"marines/marine1/whn8.ogg",
 				"marines/marine1/whn9.ogg",
 				},
-		['status_re']	=	{
+		["status_re"]	=	{
 				"marines/marine1/status_re1.ogg",
 				"marines/marine1/status_re2.ogg",
 				"marines/marine1/status_re3.ogg",
 				"marines/marine1/status_re4.ogg",
 				"marines/marine1/status_re5.ogg",
 				},
-		['scld_plr_vclcrash']	=	{
+		["scld_plr_vclcrash"]	=	{
 				"marines/marine1/scld_plr_vclcrash1.ogg",
 				"marines/marine1/scld_plr_vclcrash10.ogg",
 				"marines/marine1/scld_plr_vclcrash11.ogg",
@@ -619,7 +619,7 @@ ENT.Voices = {
 				"marines/marine1/scld_plr_vclcrash6.ogg",
 				"marines/marine1/scld_plr_vclcrash9.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/marine1/crs1.ogg",
 				"marines/marine1/crs10.ogg",
 				"marines/marine1/crs11.ogg",
@@ -632,7 +632,7 @@ ENT.Voices = {
 				"marines/marine1/crs4.ogg",
 				"marines/marine1/crs5.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"marines/marine1/melee1.ogg",
 				"marines/marine1/melee10.ogg",
 				"marines/marine1/melee11.ogg",
@@ -645,12 +645,12 @@ ENT.Voices = {
 				"marines/marine1/melee8.ogg",
 				"marines/marine1/melee9.ogg",
 				},
-		['scld_plr_vclcrazy']	=	{
+		["scld_plr_vclcrazy"]	=	{
 				"marines/marine1/scld_plr_vclcrazy1.ogg",
 				"marines/marine1/scld_plr_vclcrazy2.ogg",
 				"marines/marine1/scld_plr_vclcrazy3.ogg",
 				},
-		['ordr_openfire']	=	{
+		["ordr_openfire"]	=	{
 				"marines/marine1/ordr_openfire1.ogg",
 				"marines/marine1/ordr_openfire2.ogg",
 				"marines/marine1/ordr_openfire3.ogg",
@@ -659,19 +659,19 @@ ENT.Voices = {
 				"marines/marine1/ordr_openfire6.ogg",
 				"marines/marine1/ordr_openfire7.ogg",
 				},
-		['join_emrg_re']	=	{
+		["join_emrg_re"]	=	{
 				"marines/marine1/join_emrg_re1.ogg",
 				"marines/marine1/join_emrg_re2.ogg",
 				"marines/marine1/join_emrg_re3.ogg",
 				"marines/marine1/join_emrg_re4.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"marines/marine1/warn_flood1.ogg",
 				"marines/marine1/warn_flood2.ogg",
 				"marines/marine1/warn_flood3.ogg",
 				"marines/marine1/warn_flood4.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/marine1/ok1.ogg",
 				"marines/marine1/ok10.ogg",
 				"marines/marine1/ok12.ogg",
@@ -683,22 +683,22 @@ ENT.Voices = {
 				"marines/marine1/ok7.ogg",
 				"marines/marine1/ok8.ogg",
 				},
-		['brsrk']	=	{
+		["brsrk"]	=	{
 				"marines/marine1/brsrk1.ogg",
 				"marines/marine1/brsrk2.ogg",
 				"marines/marine1/brsrk3.ogg",
 				},
-		['strk_grnd_uncvr']	=	{
+		["strk_grnd_uncvr"]	=	{
 				"marines/marine1/strk_grnd_uncvr1.ogg",
 				"marines/marine1/strk_grnd_uncvr3.ogg",
 				"marines/marine1/strk_grnd_uncvr5.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/marine1/dth_slnt1.ogg",
 				"marines/marine1/dth_slnt2.ogg",
 				"marines/marine1/dth_slnt3.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/marine1/hail1.ogg",
 				"marines/marine1/hail2.ogg",
 				"marines/marine1/hail3.ogg",
@@ -706,7 +706,7 @@ ENT.Voices = {
 				"marines/marine1/hail31.ogg",
 				"marines/marine1/hail4.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/marine1/forgive1.ogg",
 				"marines/marine1/forgive2.ogg",
 				"marines/marine1/forgive3.ogg",
@@ -715,12 +715,12 @@ ENT.Voices = {
 				"marines/marine1/forgive6.ogg",
 				"marines/marine1/forgive8.ogg",
 				},
-		['prs_plr_kll_vclbmp']	=	{
+		["prs_plr_kll_vclbmp"]	=	{
 				"marines/marine1/prs_plr_kll_vclbmp1.ogg",
 				"marines/marine1/prs_plr_kll_vclbmp2.ogg",
 				"marines/marine1/prs_plr_kll_vclbmp3.ogg",
 				},
-		['grt_plr_vcl_empty']	=	{
+		["grt_plr_vcl_empty"]	=	{
 				"marines/marine1/grt_plr_vcl_empty1.ogg",
 				"marines/marine1/grt_plr_vcl_empty3.ogg",
 				"marines/marine1/grt_plr_vcl_empty30.ogg",
@@ -728,47 +728,47 @@ ENT.Voices = {
 				"marines/marine1/grt_plr_vcl_empty32.ogg",
 				"marines/marine1/grt_plr_vcl_empty4.ogg",
 				},
-		['ordr_keepwatch_agg']	=	{
+		["ordr_keepwatch_agg"]	=	{
 				"marines/marine1/ordr_keepwatch_agg1.ogg",
 				"marines/marine1/ordr_keepwatch_agg2.ogg",
 				"marines/marine1/ordr_keepwatch_agg3.ogg",
 				"marines/marine1/ordr_keepwatch_agg6.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/marine1/thnk_plr_mc1.ogg",
 				"marines/marine1/thnk_plr_mc2.ogg",
 				},
-		['rmd_wpn_snpr']	=	{
+		["rmd_wpn_snpr"]	=	{
 				"marines/marine1/rmd_wpn_snpr1.ogg",
 				"marines/marine1/rmd_wpn_snpr2.ogg",
 				"marines/marine1/rmd_wpn_snpr3.ogg",
 				"marines/marine1/rmd_wpn_snpr4.ogg",
 				"marines/marine1/rmd_wpn_snpr5.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/marine1/crs_betrayingplr_arb1.ogg",
 				"marines/marine1/crs_betrayingplr_arb3.ogg",
 				"marines/marine1/crs_betrayingplr_arb4.ogg",
 				"marines/marine1/crs_betrayingplr_arb5.ogg",
 				},
-		['warn_incmn_vclbm']	=	{
+		["warn_incmn_vclbm"]	=	{
 				"marines/marine1/warn_incmn_vclbm1.ogg",
 				"marines/marine1/warn_incmn_vclbm2.ogg",
 				"marines/marine1/warn_incmn_vclbm3.ogg",
 				},
-		['prs_plr_kll_mjr']	=	{
+		["prs_plr_kll_mjr"]	=	{
 				"marines/marine1/prs_plr_kll_mjr1.ogg",
 				"marines/marine1/prs_plr_kll_mjr2.ogg",
 				"marines/marine1/prs_plr_kll_mjr3.ogg",
 				"marines/marine1/prs_plr_kll_mjr4.ogg",
 				},
-		['warn_trrt_dply']	=	{
+		["warn_trrt_dply"]	=	{
 				"marines/marine1/warn_trrt_dply1.ogg",
 				"marines/marine1/warn_trrt_dply3.ogg",
 				"marines/marine1/warn_trrt_dply4.ogg",
 				"marines/marine1/warn_trrt_dply5.ogg",
 				},
-		['regret']	=	{
+		["regret"]	=	{
 				"marines/marine1/regret1.ogg",
 				"marines/marine1/regret2.ogg",
 				"marines/marine1/regret3.ogg",
@@ -778,26 +778,26 @@ ENT.Voices = {
 				"marines/marine1/regret7.ogg",
 				"marines/marine1/regret8.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/marine1/pstcmbt_hrd1.ogg",
 				"marines/marine1/pstcmbt_hrd2.ogg",
 				"marines/marine1/pstcmbt_hrd3.ogg",
 				},
-		['ordr_prst_keeplooking']	=	{
+		["ordr_prst_keeplooking"]	=	{
 				"marines/marine1/ordr_prst_keeplooking2.ogg",
 				"marines/marine1/ordr_prst_keeplooking3.ogg",
 				"marines/marine1/ordr_prst_keeplooking4.ogg",
 				"marines/marine1/ordr_prst_keeplooking5.ogg",
 				"marines/marine1/ordr_prst_keeplooking6.ogg",
 				},
-		['ordr_invsgt']	=	{
+		["ordr_invsgt"]	=	{
 				"marines/marine1/ordr_invsgt1.ogg",
 				"marines/marine1/ordr_invsgt2.ogg",
 				"marines/marine1/ordr_invsgt4.ogg",
 				"marines/marine1/ordr_invsgt5.ogg",
 				"marines/marine1/ordr_invsgt6.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"marines/marine1/hrdfoe12.ogg",
 				"marines/marine1/hrdfoe13.ogg",
 				"marines/marine1/hrdfoe14.ogg",
@@ -811,7 +811,7 @@ ENT.Voices = {
 				"marines/marine1/hrdfoe22.ogg",
 				"marines/marine1/hrdfoe23.ogg",
 				},
-		['ordr_re']	=	{
+		["ordr_re"]	=	{
 				"marines/marine1/ordr_re1.ogg",
 				"marines/marine1/ordr_re2.ogg",
 				"marines/marine1/ordr_re3.ogg",
@@ -819,14 +819,14 @@ ENT.Voices = {
 				"marines/marine1/ordr_re7.ogg",
 				"marines/marine1/ordr_re9.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/marine1/dth_hdsht1.ogg",
 				"marines/marine1/dth_hdsht2.ogg",
 				"marines/marine1/dth_hdsht3.ogg",
 				"marines/marine1/dth_hdsht4.ogg",
 				"marines/marine1/dth_hdsht5.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/marine1/strk1.ogg",
 				"marines/marine1/strk10.ogg",
 				"marines/marine1/strk11.ogg",
@@ -844,14 +844,14 @@ ENT.Voices = {
 				"marines/marine1/strk8.ogg",
 				"marines/marine1/strk9.ogg",
 				},
-		['prs_plr_sniping']	=	{
+		["prs_plr_sniping"]	=	{
 				"marines/marine1/prs_plr_sniping1.ogg",
 				"marines/marine1/prs_plr_sniping2.ogg",
 				"marines/marine1/prs_plr_sniping3.ogg",
 				"marines/marine1/prs_plr_sniping4.ogg",
 				"marines/marine1/prs_plr_sniping5.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/marine1/fall1.ogg",
 				"marines/marine1/fall2.ogg",
 				"marines/marine1/fall3.ogg",
@@ -859,35 +859,35 @@ ENT.Voices = {
 				"marines/marine1/fall5.ogg",
 				"marines/marine1/fall6.ogg",
 				},
-		['warn_scrb']	=	{
+		["warn_scrb"]	=	{
 				"marines/marine1/warn_scrb1.ogg",
 				"marines/marine1/warn_scrb2.ogg",
 				"marines/marine1/warn_scrb3.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/marine1/stun1.ogg",
 				"marines/marine1/stun2.ogg",
 				"marines/marine1/stun3.ogg",
 				},
-		['dwn_wpn_snpr']	=	{
+		["dwn_wpn_snpr"]	=	{
 				"marines/marine1/dwn_wpn_snpr1.ogg",
 				"marines/marine1/dwn_wpn_snpr2.ogg",
 				"marines/marine1/dwn_wpn_snpr3.ogg",
 				"marines/marine1/dwn_wpn_snpr4.ogg",
 				},
-		['entervcl_psngr']	=	{
+		["entervcl_psngr"]	=	{
 				"marines/marine1/entervcl_psngr1.ogg",
 				"marines/marine1/entervcl_psngr2.ogg",
 				"marines/marine1/entervcl_psngr3.ogg",
 				"marines/marine1/entervcl_psngr4.ogg",
 				},
-		['crs_mjrfoe']	=	{
+		["crs_mjrfoe"]	=	{
 				"marines/marine1/crs_mjrfoe1.ogg",
 				"marines/marine1/crs_mjrfoe2.ogg",
 				"marines/marine1/crs_mjrfoe3.ogg",
 				"marines/marine1/crs_mjrfoe4.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"marines/marine1/look_lngtme1.ogg",
 				"marines/marine1/look_lngtme11.ogg",
 				"marines/marine1/look_lngtme14.ogg",
@@ -914,29 +914,29 @@ ENT.Voices = {
 				"marines/marine1/look_lngtme8.ogg",
 				"marines/marine1/look_lngtme9.ogg",
 				},
-		['invt_vcl_gnr']	=	{
+		["invt_vcl_gnr"]	=	{
 				"marines/marine1/invt_vcl_gnr1.ogg",
 				"marines/marine1/invt_vcl_gnr2.ogg",
 				"marines/marine1/invt_vcl_gnr3.ogg",
 				},
-		['newordr_advance']	=	{
+		["newordr_advance"]	=	{
 				"marines/marine1/newordr_advance2.ogg",
 				"marines/marine1/newordr_advance3.ogg",
 				"marines/marine1/newordr_advance4.ogg",
 				"marines/marine1/newordr_advance5.ogg",
 				},
-		['rmd_vcl_ghst']	=	{
+		["rmd_vcl_ghst"]	=	{
 				"marines/marine1/rmd_vcl_ghst1.ogg",
 				"marines/marine1/rmd_vcl_ghst2.ogg",
 				"marines/marine1/rmd_vcl_ghst3.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/marine1/foeordr_flanking1.ogg",
 				"marines/marine1/foeordr_flanking2.ogg",
 				"marines/marine1/foeordr_flanking3.ogg",
 				"marines/marine1/foeordr_flanking4.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/marine1/cvr4.ogg",
 				"marines/marine1/cvr5.ogg",
 				"marines/marine1/cvr6.ogg",
@@ -944,7 +944,7 @@ ENT.Voices = {
 				"marines/marine1/cvr8.ogg",
 				"marines/marine1/cvr9.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"marines/marine1/rmd1.ogg",
 				"marines/marine1/rmd2.ogg",
 				"marines/marine1/rmd3.ogg",
@@ -954,18 +954,18 @@ ENT.Voices = {
 				"marines/marine1/rmd7.ogg",
 				"marines/marine1/rmd8.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"marines/marine1/warn_fldreanimate1.ogg",
 				"marines/marine1/warn_fldreanimate2.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/marine1/charge1.ogg",
 				"marines/marine1/charge2.ogg",
 				"marines/marine1/charge3.ogg",
 				"marines/marine1/charge4.ogg",
 				"marines/marine1/charge5.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/marine1/scld_plr_hrtme1.ogg",
 				"marines/marine1/scld_plr_hrtme2.ogg",
 				"marines/marine1/scld_plr_hrtme3.ogg",
@@ -976,7 +976,7 @@ ENT.Voices = {
 				"marines/marine1/scld_plr_hrtme8.ogg",
 				"marines/marine1/scld_plr_hrtme9.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/marine1/warn1.ogg",
 				"marines/marine1/warn2.ogg",
 				"marines/marine1/warn3.ogg",
@@ -985,7 +985,7 @@ ENT.Voices = {
 				"marines/marine1/warn6.ogg",
 				"marines/marine1/warn7.ogg",
 				},
-		['prst_fail']	=	{
+		["prst_fail"]	=	{
 				"marines/marine1/prst_fail1.ogg",
 				"marines/marine1/prst_fail10.ogg",
 				"marines/marine1/prst_fail11.ogg",
@@ -1002,13 +1002,13 @@ ENT.Voices = {
 				"marines/marine1/prst_fail8.ogg",
 				"marines/marine1/prst_fail9.ogg",
 				},
-		['foundfoe_re']	=	{
+		["foundfoe_re"]	=	{
 				"marines/marine1/foundfoe_re1.ogg",
 				"marines/marine1/foundfoe_re2.ogg",
 				"marines/marine1/foundfoe_re3.ogg",
 				"marines/marine1/foundfoe_re4.ogg",
 				},
-		['hail_agg']	=	{
+		["hail_agg"]	=	{
 				"marines/marine1/hail_agg1.ogg",
 				"marines/marine1/hail_agg2.ogg",
 				"marines/marine1/hail_agg3.ogg",
@@ -1017,19 +1017,19 @@ ENT.Voices = {
 				"marines/marine1/hail_agg32.ogg",
 				"marines/marine1/hail_agg33.ogg",
 				},
-		['grt_intovcl_mine']	=	{
+		["grt_intovcl_mine"]	=	{
 				"marines/marine1/grt_intovcl_mine1.ogg",
 				"marines/marine1/grt_intovcl_mine2.ogg",
 				"marines/marine1/grt_intovcl_mine3.ogg",
 				},
-		['chckallybdyf']	=	{
+		["chckallybdyf"]	=	{
 				"marines/marine1/chckallybdyf1.ogg",
 				"marines/marine1/chckallybdyf2.ogg",
 				"marines/marine1/chckallybdyf3.ogg",
 				"marines/marine1/chckallybdyf4.ogg",
 				"marines/marine1/chckallybdyf5.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/marine1/pld1.ogg",
 				"marines/marine1/pld2.ogg",
 				"marines/marine1/pld3.ogg",
@@ -1037,17 +1037,17 @@ ENT.Voices = {
 				"marines/marine1/pld5.ogg",
 				"marines/marine1/pld6.ogg",
 				},
-		['dwn_vcl_chpr']	=	{
+		["dwn_vcl_chpr"]	=	{
 				"marines/marine1/dwn_vcl_chpr1.ogg",
 				"marines/marine1/dwn_vcl_chpr4.ogg",
 				"marines/marine1/dwn_vcl_chpr5.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/marine1/dodge1.ogg",
 				"marines/marine1/dodge2.ogg",
 				"marines/marine1/dodge3.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/marine1/thrtn1.ogg",
 				"marines/marine1/thrtn10.ogg",
 				"marines/marine1/thrtn11.ogg",
@@ -1063,18 +1063,18 @@ ENT.Voices = {
 				"marines/marine1/thrtn8.ogg",
 				"marines/marine1/thrtn9.ogg",
 				},
-		['newordr_fllwplr']	=	{
+		["newordr_fllwplr"]	=	{
 				"marines/marine1/newordr_fllwplr1.ogg",
 				"marines/marine1/newordr_fllwplr2.ogg",
 				"marines/marine1/newordr_fllwplr3.ogg",
 				"marines/marine1/newordr_fllwplr4.ogg",
 				},
-		['pld_mjrfoe']	=	{
+		["pld_mjrfoe"]	=	{
 				"marines/marine1/pld_mjrfoe1.ogg",
 				"marines/marine1/pld_mjrfoe2.ogg",
 				"marines/marine1/pld_mjrfoe3.ogg",
 				},
-		['pstcmbt_fld']	=	{
+		["pstcmbt_fld"]	=	{
 				"marines/marine1/pstcmbt_fld10.ogg",
 				"marines/marine1/pstcmbt_fld11.ogg",
 				"marines/marine1/pstcmbt_fld12.ogg",
@@ -1086,7 +1086,7 @@ ENT.Voices = {
 				"marines/marine1/pstcmbt_fld20.ogg",
 				"marines/marine1/pstcmbt_fld21.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"marines/marine1/panic_plsmgrnd1.ogg",
 				"marines/marine1/panic_plsmgrnd2.ogg",
 				"marines/marine1/panic_plsmgrnd3.ogg",
@@ -1094,13 +1094,13 @@ ENT.Voices = {
 				"marines/marine1/panic_plsmgrnd5.ogg",
 				"marines/marine1/panic_plsmgrnd6.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/marine1/foeordr_fallback1.ogg",
 				"marines/marine1/foeordr_fallback3.ogg",
 				"marines/marine1/foeordr_fallback4.ogg",
 				"marines/marine1/foeordr_fallback6.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/marine1/hail_plr_mc1.ogg",
 				"marines/marine1/hail_plr_mc2.ogg",
 				"marines/marine1/hail_plr_mc3.ogg",
@@ -1110,13 +1110,13 @@ ENT.Voices = {
 				"marines/marine1/hail_plr_mc7.ogg",
 				"marines/marine1/hail_plr_mc8.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/marine1/foeordr_advance1.ogg",
 				"marines/marine1/foeordr_advance2.ogg",
 				"marines/marine1/foeordr_advance3.ogg",
 				"marines/marine1/foeordr_advance4.ogg",
 				},
-		['injured']	=	{
+		["injured"]	=	{
 				"marines/marine1/injured1.ogg",
 				"marines/marine1/injured10.ogg",
 				"marines/marine1/injured11.ogg",
@@ -1139,7 +1139,7 @@ ENT.Voices = {
 				"marines/marine1/injured8.ogg",
 				"marines/marine1/injured9.ogg",
 				},
-		['look_plr_fllw']	=	{
+		["look_plr_fllw"]	=	{
 				"marines/marine1/look_plr_fllw1.ogg",
 				"marines/marine1/look_plr_fllw2.ogg",
 				"marines/marine1/look_plr_fllw3.ogg",
@@ -1147,13 +1147,13 @@ ENT.Voices = {
 				"marines/marine1/look_plr_fllw31.ogg",
 				"marines/marine1/look_plr_fllw32.ogg",
 				},
-		['warn_wpn_hmmr']	=	{
+		["warn_wpn_hmmr"]	=	{
 				"marines/marine1/warn_wpn_hmmr1.ogg",
 				"marines/marine1/warn_wpn_hmmr2.ogg",
 				"marines/marine1/warn_wpn_hmmr3.ogg",
 				"marines/marine1/warn_wpn_hmmr4.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/marine1/chr_kllfoe1.ogg",
 				"marines/marine1/chr_kllfoe2.ogg",
 				"marines/marine1/chr_kllfoe3.ogg",
@@ -1162,24 +1162,24 @@ ENT.Voices = {
 				"marines/marine1/chr_kllfoe6.ogg",
 				"marines/marine1/chr_kllfoe8.ogg",
 				},
-		['rmd_vcl_chpr']	=	{
+		["rmd_vcl_chpr"]	=	{
 				"marines/marine1/rmd_vcl_chpr1.ogg",
 				"marines/marine1/rmd_vcl_chpr2.ogg",
 				"marines/marine1/rmd_vcl_chpr3.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"marines/marine1/dwn_vcl_wrth1.ogg",
 				"marines/marine1/dwn_vcl_wrth2.ogg",
 				"marines/marine1/dwn_vcl_wrth3.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/marine1/scld1.ogg",
 				"marines/marine1/scld2.ogg",
 				"marines/marine1/scld3.ogg",
 				"marines/marine1/scld4.ogg",
 				"marines/marine1/scld5.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"marines/marine1/warn_swarm1.ogg",
 				"marines/marine1/warn_swarm2.ogg",
 				"marines/marine1/warn_swarm3.ogg",
@@ -1187,12 +1187,12 @@ ENT.Voices = {
 				"marines/marine1/warn_swarm5.ogg",
 				"marines/marine1/warn_swarm6.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/marine1/panic1.ogg",
 				"marines/marine1/panic2.ogg",
 				"marines/marine1/panic3.ogg",
 				},
-		['cvr_invsgt']	=	{
+		["cvr_invsgt"]	=	{
 				"marines/marine1/cvr_invsgt1.ogg",
 				"marines/marine1/cvr_invsgt10.ogg",
 				"marines/marine1/cvr_invsgt2.ogg",
@@ -1203,7 +1203,7 @@ ENT.Voices = {
 				"marines/marine1/cvr_invsgt8.ogg",
 				"marines/marine1/cvr_invsgt9.ogg",
 				},
-		['join_invsgt']	=	{
+		["join_invsgt"]	=	{
 				"marines/marine1/join_invsgt1.ogg",
 				"marines/marine1/join_invsgt2.ogg",
 				"marines/marine1/join_invsgt3.ogg",
@@ -1212,19 +1212,19 @@ ENT.Voices = {
 				"marines/marine1/join_invsgt6.ogg",
 				"marines/marine1/join_invsgt7.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/marine1/lmnt1.ogg",
 				"marines/marine1/lmnt2.ogg",
 				"marines/marine1/lmnt3.ogg",
 				"marines/marine1/lmnt4.ogg",
 				"marines/marine1/lmnt5.ogg",
 				},
-		['dwn_vcl_ghst']	=	{
+		["dwn_vcl_ghst"]	=	{
 				"marines/marine1/dwn_vcl_ghst1.ogg",
 				"marines/marine1/dwn_vcl_ghst2.ogg",
 				"marines/marine1/dwn_vcl_ghst3.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/marine1/scld_plr_mc1.ogg",
 				"marines/marine1/scld_plr_mc2.ogg",
 				"marines/marine1/scld_plr_mc3.ogg",
@@ -1233,11 +1233,11 @@ ENT.Voices = {
 				"marines/marine1/scld_plr_mc7.ogg",
 				"marines/marine1/scld_plr_mc8.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"marines/marine1/rmd_vcl_phntm1.ogg",
 				"marines/marine1/rmd_vcl_phntm2.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"marines/marine1/invsgt1.ogg",
 				"marines/marine1/invsgt13.ogg",
 				"marines/marine1/invsgt14.ogg",
@@ -1251,13 +1251,13 @@ ENT.Voices = {
 				"marines/marine1/invsgt5.ogg",
 				"marines/marine1/invsgt6.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"marines/marine1/hail_tim1.ogg",
 				"marines/marine1/hail_tim2.ogg",
 				"marines/marine1/hail_tim30.ogg",
 				"marines/marine1/hail_tim31.ogg",
 				},
-		['warn_stlth_again']	=	{
+		["warn_stlth_again"]	=	{
 				"marines/marine1/warn_stlth_again1.ogg",
 				"marines/marine1/warn_stlth_again2.ogg",
 				"marines/marine1/warn_stlth_again3.ogg",
@@ -1265,7 +1265,7 @@ ENT.Voices = {
 				"marines/marine1/warn_stlth_again5.ogg",
 				"marines/marine1/warn_stlth_again6.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"marines/marine1/srprs1.ogg",
 				"marines/marine1/srprs11.ogg",
 				"marines/marine1/srprs2.ogg",
@@ -1274,7 +1274,7 @@ ENT.Voices = {
 				"marines/marine1/srprs5.ogg",
 				"marines/marine1/srprs9.ogg",
 				},
-		['srchend']	=	{
+		["srchend"]	=	{
 				"marines/marine1/srchend1.ogg",
 				"marines/marine1/srchend2.ogg",
 				"marines/marine1/srchend3.ogg",
@@ -1282,7 +1282,7 @@ ENT.Voices = {
 				"marines/marine1/srchend5.ogg",
 				"marines/marine1/srchend6.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"marines/marine1/foundfoe11.ogg",
 				"marines/marine1/foundfoe12.ogg",
 				"marines/marine1/foundfoe13.ogg",
@@ -1300,7 +1300,7 @@ ENT.Voices = {
 				"marines/marine1/foundfoe25.ogg",
 				"marines/marine1/foundfoe5.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"marines/marine1/look_pstcmbt_hrd1.ogg",
 				"marines/marine1/look_pstcmbt_hrd2.ogg",
 				"marines/marine1/look_pstcmbt_hrd3.ogg",
@@ -1308,7 +1308,7 @@ ENT.Voices = {
 				"marines/marine1/look_pstcmbt_hrd31.ogg",
 				"marines/marine1/look_pstcmbt_hrd32.ogg",
 				},
-		['ordr_pinned']	=	{
+		["ordr_pinned"]	=	{
 				"marines/marine1/ordr_pinned1.ogg",
 				"marines/marine1/ordr_pinned2.ogg",
 				"marines/marine1/ordr_pinned3.ogg",
@@ -1317,7 +1317,7 @@ ENT.Voices = {
 				"marines/marine1/ordr_pinned6.ogg",
 				"marines/marine1/ordr_pinned7.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/marine1/tnt1.ogg",
 				"marines/marine1/tnt10.ogg",
 				"marines/marine1/tnt11.ogg",
@@ -1336,19 +1336,19 @@ ENT.Voices = {
 				"marines/marine1/tnt8.ogg",
 				"marines/marine1/tnt9.ogg",
 				},
-		['warn_vcl_ghst']	=	{
+		["warn_vcl_ghst"]	=	{
 				"marines/marine1/warn_vcl_ghst1.ogg",
 				"marines/marine1/warn_vcl_ghst2.ogg",
 				"marines/marine1/warn_vcl_ghst3.ogg",
 				"marines/marine1/warn_vcl_ghst4.ogg",
 				},
-		['strk_snpr']	=	{
+		["strk_snpr"]	=	{
 				"marines/marine1/strk_snpr2.ogg",
 				"marines/marine1/strk_snpr3.ogg",
 				"marines/marine1/strk_snpr4.ogg",
 				"marines/marine1/strk_snpr5.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/marine1/meleeleap1.ogg",
 				"marines/marine1/meleeleap2.ogg",
 				"marines/marine1/meleeleap3.ogg",
@@ -1359,44 +1359,44 @@ ENT.Voices = {
 				"marines/marine1/meleeleap8.ogg",
 				"marines/marine1/meleeleap9.ogg",
 				},
-		['rmd_stlth']	=	{
+		["rmd_stlth"]	=	{
 				"marines/marine1/rmd_stlth1.ogg",
 				"marines/marine1/rmd_stlth2.ogg",
 				"marines/marine1/rmd_stlth3.ogg",
 				"marines/marine1/rmd_stlth4.ogg",
 				"marines/marine1/rmd_stlth5.ogg",
 				},
-		['tnt_re']	=	{
+		["tnt_re"]	=	{
 				"marines/marine1/tnt_re1.ogg",
 				"marines/marine1/tnt_re2.ogg",
 				"marines/marine1/tnt_re3.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"marines/marine1/rmd_vcl_wrth1.ogg",
 				"marines/marine1/rmd_vcl_wrth2.ogg",
 				"marines/marine1/rmd_vcl_wrth3.ogg",
 				"marines/marine1/rmd_vcl_wrth4.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"marines/marine1/scld_plr_wldgrnd1.ogg",
 				"marines/marine1/scld_plr_wldgrnd2.ogg",
 				"marines/marine1/scld_plr_wldgrnd3.ogg",
 				"marines/marine1/scld_plr_wldgrnd4.ogg",
 				"marines/marine1/scld_plr_wldgrnd5.ogg",
 				},
-		['newordr_arrival']	=	{
+		["newordr_arrival"]	=	{
 				"marines/marine1/newordr_arrival3.ogg",
 				"marines/marine1/newordr_arrival4.ogg",
 				"marines/marine1/newordr_arrival5.ogg",
 				"marines/marine1/newordr_arrival6.ogg",
 				},
-		['stayback_agg']	=	{
+		["stayback_agg"]	=	{
 				"marines/marine1/stayback_agg1.ogg",
 				"marines/marine1/stayback_agg2.ogg",
 				"marines/marine1/stayback_agg3.ogg",
 				"marines/marine1/stayback_agg4.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"marines/marine1/warn_incmn_grnd1.ogg",
 				"marines/marine1/warn_incmn_grnd10.ogg",
 				"marines/marine1/warn_incmn_grnd12.ogg",
@@ -1412,13 +1412,13 @@ ENT.Voices = {
 				"marines/marine1/warn_incmn_grnd8.ogg",
 				"marines/marine1/warn_incmn_grnd9.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"marines/marine1/seefoe_tim1.ogg",
 				"marines/marine1/seefoe_tim2.ogg",
 				"marines/marine1/seefoe_tim3.ogg",
 				"marines/marine1/seefoe_tim4.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"marines/marine1/whn_re1.ogg",
 				"marines/marine1/whn_re2.ogg",
 				"marines/marine1/whn_re3.ogg",
@@ -1428,7 +1428,7 @@ ENT.Voices = {
 				"marines/marine1/whn_re7.ogg",
 				"marines/marine1/whn_re8.ogg",
 				},
-		['whn_hrtblt']	=	{
+		["whn_hrtblt"]	=	{
 				"marines/marine1/whn_hrtblt1.ogg",
 				"marines/marine1/whn_hrtblt2.ogg",
 				"marines/marine1/whn_hrtblt3.ogg",
@@ -1436,7 +1436,7 @@ ENT.Voices = {
 				"marines/marine1/whn_hrtblt5.ogg",
 				"marines/marine1/whn_hrtblt6.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/marine1/lift1.ogg",
 				"marines/marine1/lift2.ogg",
 				"marines/marine1/lift3.ogg",
@@ -1446,17 +1446,17 @@ ENT.Voices = {
 				"marines/marine1/lift7.ogg",
 				"marines/marine1/lift8.ogg",
 				},
-		['rmd_vcl_bnsh']	=	{
+		["rmd_vcl_bnsh"]	=	{
 				"marines/marine1/rmd_vcl_bnsh1.ogg",
 				"marines/marine1/rmd_vcl_bnsh2.ogg",
 				"marines/marine1/rmd_vcl_bnsh3.ogg",
 				},
-		['warn_wpn_snpr']	=	{
+		["warn_wpn_snpr"]	=	{
 				"marines/marine1/warn_wpn_snpr1.ogg",
 				"marines/marine1/warn_wpn_snpr2.ogg",
 				"marines/marine1/warn_wpn_snpr3.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/marine1/scld_plr_arb1.ogg",
 				"marines/marine1/scld_plr_arb10.ogg",
 				"marines/marine1/scld_plr_arb11.ogg",
@@ -1469,31 +1469,31 @@ ENT.Voices = {
 				"marines/marine1/scld_plr_arb8.ogg",
 				"marines/marine1/scld_plr_arb9.ogg",
 				},
-		['warn_vcl_wrth']	=	{
+		["warn_vcl_wrth"]	=	{
 				"marines/marine1/warn_vcl_wrth1.ogg",
 				"marines/marine1/warn_vcl_wrth2.ogg",
 				"marines/marine1/warn_vcl_wrth3.ogg",
 				},
-		['tnt_mjrfoe']	=	{
+		["tnt_mjrfoe"]	=	{
 				"marines/marine1/tnt_mjrfoe2.ogg",
 				"marines/marine1/tnt_mjrfoe3.ogg",
 				"marines/marine1/tnt_mjrfoe4.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/marine1/newordr_support1.ogg",
 				"marines/marine1/newordr_support2.ogg",
 				"marines/marine1/newordr_support3.ogg",
 				"marines/marine1/newordr_support4.ogg",
 				"marines/marine1/newordr_support5.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"marines/marine1/morefoe1.ogg",
 				"marines/marine1/morefoe2.ogg",
 				"marines/marine1/morefoe3.ogg",
 				"marines/marine1/morefoe4.ogg",
 				"marines/marine1/morefoe5.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/marine1/scld_plr_blocking1.ogg",
 				"marines/marine1/scld_plr_blocking2.ogg",
 				"marines/marine1/scld_plr_blocking3.ogg",
@@ -1502,7 +1502,7 @@ ENT.Voices = {
 				"marines/marine1/scld_plr_blocking6.ogg",
 				"marines/marine1/scld_plr_blocking7.ogg",
 				},
-		['chkfoebdy']	=	{
+		["chkfoebdy"]	=	{
 				"marines/marine1/chkfoebdy1.ogg",
 				"marines/marine1/chkfoebdy2.ogg",
 				"marines/marine1/chkfoebdy3.ogg",
@@ -1511,7 +1511,7 @@ ENT.Voices = {
 				"marines/marine1/chkfoebdy6.ogg",
 				"marines/marine1/chkfoebdy7.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/marine1/betray1.ogg",
 				"marines/marine1/betray2.ogg",
 				"marines/marine1/betray3.ogg",
@@ -1522,7 +1522,7 @@ ENT.Voices = {
 				"marines/marine1/betray8.ogg",
 				"marines/marine1/betray9.ogg",
 				},
-		['strk_vcl_gnr']	=	{
+		["strk_vcl_gnr"]	=	{
 				"marines/marine1/strk_vcl_gnr10.ogg",
 				"marines/marine1/strk_vcl_gnr11.ogg",
 				"marines/marine1/strk_vcl_gnr12.ogg",
@@ -1535,13 +1535,13 @@ ENT.Voices = {
 				"marines/marine1/strk_vcl_gnr8.ogg",
 				"marines/marine1/strk_vcl_gnr9.ogg",
 				},
-		['warn_chr_hntr']	=	{
+		["warn_chr_hntr"]	=	{
 				"marines/marine1/warn_chr_hntr1.ogg",
 				"marines/marine1/warn_chr_hntr2.ogg",
 				"marines/marine1/warn_chr_hntr3.ogg",
 				"marines/marine1/warn_chr_hntr4.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/marine1/lst_cntct1.ogg",
 				"marines/marine1/lst_cntct10.ogg",
 				"marines/marine1/lst_cntct11.ogg",
@@ -1556,7 +1556,7 @@ ENT.Voices = {
 				"marines/marine1/lst_cntct8.ogg",
 				"marines/marine1/lst_cntct9.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/marine1/look_plr_arb2.ogg",
 				"marines/marine1/look_plr_arb3.ogg",
 				"marines/marine1/look_plr_arb30.ogg",
@@ -1565,40 +1565,40 @@ ENT.Voices = {
 				"marines/marine1/look_plr_arb33.ogg",
 				"marines/marine1/look_plr_arb4.ogg",
 				},
-		['warn_vcl_chpr']	=	{
+		["warn_vcl_chpr"]	=	{
 				"marines/marine1/warn_vcl_chpr1.ogg",
 				"marines/marine1/warn_vcl_chpr2.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/marine1/ok_plr_mc1.ogg",
 				"marines/marine1/ok_plr_mc2.ogg",
 				"marines/marine1/ok_plr_mc3.ogg",
 				"marines/marine1/ok_plr_mc4.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/marine1/foeordr_retreat1.ogg",
 				"marines/marine1/foeordr_retreat2.ogg",
 				"marines/marine1/foeordr_retreat3.ogg",
 				"marines/marine1/foeordr_retreat4.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/marine1/neworder_flanking1.ogg",
 				"marines/marine1/neworder_flanking3.ogg",
 				"marines/marine1/neworder_flanking4.ogg",
 				"marines/marine1/neworder_flanking5.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/marine1/newordr_retreat1.ogg",
 				"marines/marine1/newordr_retreat2.ogg",
 				"marines/marine1/newordr_retreat3.ogg",
 				"marines/marine1/newordr_retreat4.ogg",
 				},
-		['scld_plr_wldvcl']	=	{
+		["scld_plr_wldvcl"]	=	{
 				"marines/marine1/scld_plr_wldvcl1.ogg",
 				"marines/marine1/scld_plr_wldvcl2.ogg",
 				"marines/marine1/scld_plr_wldvcl3.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/marine1/kllmytrgt1.ogg",
 				"marines/marine1/kllmytrgt2.ogg",
 				"marines/marine1/kllmytrgt3.ogg",
@@ -1607,13 +1607,13 @@ ENT.Voices = {
 				"marines/marine1/kllmytrgt6.ogg",
 				"marines/marine1/kllmytrgt7.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/marine1/newordr_leaveplr1.ogg",
 				"marines/marine1/newordr_leaveplr2.ogg",
 				"marines/marine1/newordr_leaveplr3.ogg",
 				"marines/marine1/newordr_leaveplr4.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"marines/marine1/warn_incmn1.ogg",
 				"marines/marine1/warn_incmn10.ogg",
 				"marines/marine1/warn_incmn11.ogg",
@@ -1626,7 +1626,7 @@ ENT.Voices = {
 				"marines/marine1/warn_incmn8.ogg",
 				"marines/marine1/warn_incmn9.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/marine1/approve1.ogg",
 				"marines/marine1/approve2.ogg",
 				"marines/marine1/approve3.ogg",
@@ -1637,13 +1637,13 @@ ENT.Voices = {
 				"marines/marine1/approve8.ogg",
 				"marines/marine1/approve9.ogg",
 				},
-		['foeordr_charge']	=	{
+		["foeordr_charge"]	=	{
 				"marines/marine1/foeordr_charge1.ogg",
 				"marines/marine1/foeordr_charge2.ogg",
 				"marines/marine1/foeordr_charge3.ogg",
 				"marines/marine1/foeordr_charge4.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"marines/marine1/seefoe_upthere1.ogg",
 				"marines/marine1/seefoe_upthere3.ogg",
 				"marines/marine1/seefoe_upthere4.ogg",
@@ -1651,17 +1651,17 @@ ENT.Voices = {
 				"marines/marine1/seefoe_upthere6.ogg",
 				"marines/marine1/seefoe_upthere7.ogg",
 				},
-		['rmd_trrt']	=	{
+		["rmd_trrt"]	=	{
 				"marines/marine1/rmd_trrt1.ogg",
 				"marines/marine1/rmd_trrt2.ogg",
 				"marines/marine1/rmd_trrt3.ogg",
 				},
-		['entervcl_gnr']	=	{
+		["entervcl_gnr"]	=	{
 				"marines/marine1/entervcl_gnr1.ogg",
 				"marines/marine1/entervcl_gnr2.ogg",
 				"marines/marine1/entervcl_gnr3.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/marine1/ok_plr_trdwpn1.ogg",
 				"marines/marine1/ok_plr_trdwpn10.ogg",
 				"marines/marine1/ok_plr_trdwpn11.ogg",
@@ -1674,11 +1674,11 @@ ENT.Voices = {
 				"marines/marine1/ok_plr_trdwpn8.ogg",
 				"marines/marine1/ok_plr_trdwpn9.ogg",
 				},
-		['grt_intovcl_imgnr']	=	{
+		["grt_intovcl_imgnr"]	=	{
 				"marines/marine1/grt_intovcl_imgnr1.ogg",
 				"marines/marine1/grt_intovcl_imgnr2.ogg",
 				},
-		['ask_invsgt_fail']	=	{
+		["ask_invsgt_fail"]	=	{
 				"marines/marine1/ask_invsgt_fail2.ogg",
 				"marines/marine1/ask_invsgt_fail3.ogg",
 				"marines/marine1/ask_invsgt_fail4.ogg",
@@ -1687,13 +1687,13 @@ ENT.Voices = {
 				"marines/marine1/ask_invsgt_fail8.ogg",
 				"marines/marine1/ask_invsgt_fail9.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"marines/marine1/lmnt_deadally1.ogg",
 				"marines/marine1/lmnt_deadally2.ogg",
 				"marines/marine1/lmnt_deadally3.ogg",
 				"marines/marine1/lmnt_deadally4.ogg",
 				},
-		['prs_plr_kll_blt']	=	{
+		["prs_plr_kll_blt"]	=	{
 				"marines/marine1/prs_plr_kll_blt1.ogg",
 				"marines/marine1/prs_plr_kll_blt2.ogg",
 				"marines/marine1/prs_plr_kll_blt3.ogg",
@@ -1703,14 +1703,14 @@ ENT.Voices = {
 				"marines/marine1/prs_plr_kll_blt7.ogg",
 				"marines/marine1/prs_plr_kll_blt8.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/marine1/newordr_moveon1.ogg",
 				"marines/marine1/newordr_moveon2.ogg",
 				"marines/marine1/newordr_moveon3.ogg",
 				"marines/marine1/newordr_moveon4.ogg",
 				"marines/marine1/newordr_moveon5.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/marine1/look_plr_mc1.ogg",
 				"marines/marine1/look_plr_mc2.ogg",
 				"marines/marine1/look_plr_mc3.ogg",
@@ -1721,31 +1721,31 @@ ENT.Voices = {
 				"marines/marine1/look_plr_mc4.ogg",
 				"marines/marine1/look_plr_mc5.ogg",
 				},
-		['warn_incmn_fldbm']	=	{
+		["warn_incmn_fldbm"]	=	{
 				"marines/marine1/warn_incmn_fldbm1.ogg",
 				"marines/marine1/warn_incmn_fldbm2.ogg",
 				"marines/marine1/warn_incmn_fldbm3.ogg",
 				},
-		['ask_prst_fail']	=	{
+		["ask_prst_fail"]	=	{
 				"marines/marine1/ask_prst_fail1.ogg",
 				"marines/marine1/ask_prst_fail2.ogg",
 				"marines/marine1/ask_prst_fail3.ogg",
 				"marines/marine1/ask_prst_fail4.ogg",
 				"marines/marine1/ask_prst_fail5.ogg",
 				},
-		['thrtn_foe_re']	=	{
+		["thrtn_foe_re"]	=	{
 				"marines/marine1/thrtn_foe_re1.ogg",
 				"marines/marine1/thrtn_foe_re2.ogg",
 				"marines/marine1/thrtn_foe_re3.ogg",
 				"marines/marine1/thrtn_foe_re4.ogg",
 				"marines/marine1/thrtn_foe_re6.ogg",
 				},
-		['join_emrg']	=	{
+		["join_emrg"]	=	{
 				"marines/marine1/join_emrg1.ogg",
 				"marines/marine1/join_emrg2.ogg",
 				"marines/marine1/join_emrg3.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/marine1/seefoe11.ogg",
 				"marines/marine1/seefoe12.ogg",
 				"marines/marine1/seefoe14.ogg",
@@ -1761,7 +1761,7 @@ ENT.Voices = {
 				"marines/marine1/seefoe8.ogg",
 				"marines/marine1/seefoe9.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/marine1/dth1.ogg",
 				"marines/marine1/dth10.ogg",
 				"marines/marine1/dth11.ogg",
@@ -1776,14 +1776,14 @@ ENT.Voices = {
 				"marines/marine1/dth8.ogg",
 				"marines/marine1/dth9.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"marines/marine1/prs_plr_gdgrnd1.ogg",
 				"marines/marine1/prs_plr_gdgrnd2.ogg",
 				"marines/marine1/prs_plr_gdgrnd3.ogg",
 				"marines/marine1/prs_plr_gdgrnd4.ogg",
 				"marines/marine1/prs_plr_gdgrnd5.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"marines/marine1/dth_slw1.ogg",
 				"marines/marine1/dth_slw2.ogg",
 				"marines/marine1/dth_slw3.ogg",
@@ -1793,38 +1793,38 @@ ENT.Voices = {
 				"marines/marine1/dth_slw7.ogg",
 				"marines/marine1/dth_slw8.ogg",
 				},
-		['ordr_prst']	=	{
+		["ordr_prst"]	=	{
 				"marines/marine1/ordr_prst1.ogg",
 				"marines/marine1/ordr_prst2.ogg",
 				"marines/marine1/ordr_prst3.ogg",
 				"marines/marine1/ordr_prst4.ogg",
 				"marines/marine1/ordr_prst5.ogg",
 				},
-		['ok_plr_trdst_gnr']	=	{
+		["ok_plr_trdst_gnr"]	=	{
 				"marines/marine1/ok_plr_trdst_gnr1.ogg",
 				"marines/marine1/ok_plr_trdst_gnr3.ogg",
 				"marines/marine1/ok_plr_trdst_gnr4.ogg",
 				"marines/marine1/ok_plr_trdst_gnr5.ogg",
 				},
-		['entervcl_trrt']	=	{
+		["entervcl_trrt"]	=	{
 				"marines/marine1/entervcl_trrt1.ogg",
 				"marines/marine1/entervcl_trrt2.ogg",
 				},
-		['crs_betrayingplr_mc']	=	{
+		["crs_betrayingplr_mc"]	=	{
 				"marines/marine1/crs_betrayingplr_mc1.ogg",
 				"marines/marine1/crs_betrayingplr_mc2.ogg",
 				"marines/marine1/crs_betrayingplr_mc3.ogg",
 				},
-		['thrtn_mjrfoe']	=	{
+		["thrtn_mjrfoe"]	=	{
 				"marines/marine1/thrtn_mjrfoe1.ogg",
 				"marines/marine1/thrtn_mjrfoe3.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/marine1/ok_plr_trdst_dvr3.ogg",
 				"marines/marine1/ok_plr_trdst_dvr4.ogg",
 				"marines/marine1/ok_plr_trdst_dvr5.ogg",
 				},
-		['grt_plr_srprs']	=	{
+		["grt_plr_srprs"]	=	{
 				"marines/marine1/grt_plr_srprs1.ogg",
 				"marines/marine1/grt_plr_srprs2.ogg",
 				"marines/marine1/grt_plr_srprs3.ogg",
@@ -1832,7 +1832,7 @@ ENT.Voices = {
 				"marines/marine1/grt_plr_srprs31.ogg",
 				"marines/marine1/grt_plr_srprs4.ogg",
 				},
-		['captured']	=	{
+		["captured"]	=	{
 				"marines/marine1/captured1.ogg",
 				"marines/marine1/captured10.ogg",
 				"marines/marine1/captured11.ogg",
@@ -1857,7 +1857,7 @@ ENT.Voices = {
 				"marines/marine1/captured8.ogg",
 				"marines/marine1/captured9.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/marine1/stayback1.ogg",
 				"marines/marine1/stayback10.ogg",
 				"marines/marine1/stayback11.ogg",
@@ -1872,7 +1872,7 @@ ENT.Voices = {
 				"marines/marine1/stayback8.ogg",
 				"marines/marine1/stayback9.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/marine1/lmnt_deadplr_arb1.ogg",
 				"marines/marine1/lmnt_deadplr_arb2.ogg",
 				"marines/marine1/lmnt_deadplr_arb3.ogg",
@@ -1881,16 +1881,16 @@ ENT.Voices = {
 				"marines/marine1/lmnt_deadplr_arb7.ogg",
 				"marines/marine1/lmnt_deadplr_arb8.ogg",
 				},
-		['ask_chkallybdy']	=	{
+		["ask_chkallybdy"]	=	{
 				"marines/marine1/ask_chkallybdy1.ogg",
 				"marines/marine1/ask_chkallybdy2.ogg",
 				"marines/marine1/ask_chkallybdy3.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"marines/marine1/prs_plr_kll_lots1.ogg",
 				"marines/marine1/prs_plr_kll_lots2.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/marine1/pain_mdm2.ogg",
 				"marines/marine1/pain_mdm3.ogg",
 				"marines/marine1/pain_mdm4.ogg",
@@ -1899,7 +1899,7 @@ ENT.Voices = {
 				"marines/marine1/pain_mdm7.ogg",
 				"marines/marine1/pain_mdm8.ogg",
 				},
-		['pain_shld']	=	{
+		["pain_shld"]	=	{
 				"marines/marine1/pain_shld1.ogg",
 				"marines/marine1/pain_shld2.ogg",
 				"marines/marine1/pain_shld3.ogg",
@@ -1909,7 +1909,7 @@ ENT.Voices = {
 				"marines/marine1/pain_shld7.ogg",
 				"marines/marine1/pain_shld8.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"marines/marine1/lookcmbt_tim1.ogg",
 				"marines/marine1/lookcmbt_tim2.ogg",
 				"marines/marine1/lookcmbt_tim3.ogg",
@@ -1919,7 +1919,7 @@ ENT.Voices = {
 				"marines/marine1/lookcmbt_tim33.ogg",
 				"marines/marine1/lookcmbt_tim4.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/marine1/prs1.ogg",
 				"marines/marine1/prs2.ogg",
 				"marines/marine1/prs3.ogg",
@@ -1927,7 +1927,7 @@ ENT.Voices = {
 				"marines/marine1/prs5.ogg",
 				"marines/marine1/prs6.ogg",
 				},
-		['invt_vcl']	=	{
+		["invt_vcl"]	=	{
 				"marines/marine1/invt_vcl1.ogg",
 				"marines/marine1/invt_vcl2.ogg",
 				"marines/marine1/invt_vcl3.ogg",
@@ -1935,7 +1935,7 @@ ENT.Voices = {
 				"marines/marine1/invt_vcl5.ogg",
 				"marines/marine1/invt_vcl6.ogg",
 				},
-		['arb']	=	{
+		["arb"]	=	{
 				"marines/marine1/arb30.ogg",
 				"marines/marine1/arb31.ogg",
 				"marines/marine1/arb32.ogg",
@@ -1943,7 +1943,7 @@ ENT.Voices = {
 				"marines/marine1/arb34.ogg",
 				"marines/marine1/arb35.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/marine1/pain_fall1.ogg",
 				"marines/marine1/pain_fall2.ogg",
 				"marines/marine1/pain_fall3.ogg",
@@ -1951,7 +1951,7 @@ ENT.Voices = {
 				"marines/marine1/pain_fall5.ogg",
 				"marines/marine1/pain_fall6.ogg",
 				},
-		['ordr_grenade']	=	{
+		["ordr_grenade"]	=	{
 				"marines/marine1/ordr_grenade1.ogg",
 				"marines/marine1/ordr_grenade2.ogg",
 				"marines/marine1/ordr_grenade3.ogg",
@@ -1959,11 +1959,11 @@ ENT.Voices = {
 				"marines/marine1/ordr_grenade5.ogg",
 				"marines/marine1/ordr_grenade6.ogg",
 				},
-		['prs_plr_kll_wmelee']	=	{
+		["prs_plr_kll_wmelee"]	=	{
 				"marines/marine1/prs_plr_kll_wmelee1.ogg",
 				"marines/marine1/prs_plr_kll_wmelee2.ogg",
 				},
-		['prst']	=	{
+		["prst"]	=	{
 				"marines/marine1/prst1.ogg",
 				"marines/marine1/prst2.ogg",
 				"marines/marine1/prst3.ogg",
@@ -1972,7 +1972,7 @@ ENT.Voices = {
 				"marines/marine1/prst6.ogg",
 				"marines/marine1/prst7.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"marines/marine1/srch_pinned1.ogg",
 				"marines/marine1/srch_pinned10.ogg",
 				"marines/marine1/srch_pinned11.ogg",
@@ -1986,7 +1986,7 @@ ENT.Voices = {
 				"marines/marine1/srch_pinned8.ogg",
 				"marines/marine1/srch_pinned9.ogg",
 				},
-		['reanimate']	=	{
+		["reanimate"]	=	{
 				"marines/marine1/reanimate10.ogg",
 				"marines/marine1/reanimate11.ogg",
 				"marines/marine1/reanimate12.ogg",
@@ -1995,38 +1995,38 @@ ENT.Voices = {
 				"marines/marine1/reanimate8.ogg",
 				"marines/marine1/reanimate9.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/marine1/scrn_plr_arb1.ogg",
 				"marines/marine1/scrn_plr_arb2.ogg",
 				"marines/marine1/scrn_plr_arb3.ogg",
 				"marines/marine1/scrn_plr_arb4.ogg",
 				},
-		['ask_chkallybdyf']	=	{
+		["ask_chkallybdyf"]	=	{
 				"marines/marine1/ask_chkallybdyf1.ogg",
 				"marines/marine1/ask_chkallybdyf3.ogg",
 				"marines/marine1/ask_chkallybdyf4.ogg",
 				"marines/marine1/ask_chkallybdyf5.ogg",
 				"marines/marine1/ask_chkallybdyf6.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/marine1/bump1.ogg",
 				"marines/marine1/bump2.ogg",
 				"marines/marine1/bump3.ogg",
 				},
-		['pstcmbt_agg']	=	{
+		["pstcmbt_agg"]	=	{
 				"marines/marine1/pstcmbt_agg1.ogg",
 				"marines/marine1/pstcmbt_agg2.ogg",
 				"marines/marine1/pstcmbt_agg3.ogg",
 				"marines/marine1/pstcmbt_agg4.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/marine1/newordr_entervcl2.ogg",
 				"marines/marine1/newordr_entervcl3.ogg",
 				"marines/marine1/newordr_entervcl4.ogg",
 				"marines/marine1/newordr_entervcl5.ogg",
 				"marines/marine1/newordr_entervcl6.ogg",
 				},
-		['invsgt_fail']	=	{
+		["invsgt_fail"]	=	{
 				"marines/marine1/invsgt_fail1.ogg",
 				"marines/marine1/invsgt_fail10.ogg",
 				"marines/marine1/invsgt_fail11.ogg",
@@ -2042,12 +2042,12 @@ ENT.Voices = {
 				"marines/marine1/invsgt_fail8.ogg",
 				"marines/marine1/invsgt_fail9.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/marine1/dth_mjr1.ogg",
 				"marines/marine1/dth_mjr2.ogg",
 				"marines/marine1/dth_mjr3.ogg",
 				},
-		['lookcmbt_agg']	=	{
+		["lookcmbt_agg"]	=	{
 				"marines/marine1/lookcmbt_agg1.ogg",
 				"marines/marine1/lookcmbt_agg2.ogg",
 				"marines/marine1/lookcmbt_agg30.ogg",
@@ -2055,7 +2055,7 @@ ENT.Voices = {
 				"marines/marine1/lookcmbt_agg32.ogg",
 				"marines/marine1/lookcmbt_agg4.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/marine1/scrn_plr_wrswpn1.ogg",
 				"marines/marine1/scrn_plr_wrswpn10.ogg",
 				"marines/marine1/scrn_plr_wrswpn2.ogg",
@@ -2067,7 +2067,7 @@ ENT.Voices = {
 				"marines/marine1/scrn_plr_wrswpn8.ogg",
 				"marines/marine1/scrn_plr_wrswpn9.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/marine1/lmnt_deadplr_mc1.ogg",
 				"marines/marine1/lmnt_deadplr_mc12.ogg",
 				"marines/marine1/lmnt_deadplr_mc14.ogg",
@@ -2077,7 +2077,7 @@ ENT.Voices = {
 				"marines/marine1/lmnt_deadplr_mc6.ogg",
 				"marines/marine1/lmnt_deadplr_mc7.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/marine1/grt10.ogg",
 				"marines/marine1/grt11.ogg",
 				"marines/marine1/grt12.ogg",
@@ -2096,13 +2096,13 @@ ENT.Voices = {
 				"marines/marine1/grt8.ogg",
 				"marines/marine1/grt9.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"marines/marine1/pstcmbt_tim1.ogg",
 				"marines/marine1/pstcmbt_tim2.ogg",
 				"marines/marine1/pstcmbt_tim3.ogg",
 				"marines/marine1/pstcmbt_tim4.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/marine1/chr1.ogg",
 				"marines/marine1/chr2.ogg",
 				"marines/marine1/chr4.ogg",
@@ -2110,38 +2110,38 @@ ENT.Voices = {
 				"marines/marine1/chr7.ogg",
 				"marines/marine1/chr8.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/marine1/shotfoebdy10.ogg",
 				"marines/marine1/shotfoebdy6.ogg",
 				"marines/marine1/shotfoebdy7.ogg",
 				"marines/marine1/shotfoebdy8.ogg",
 				"marines/marine1/shotfoebdy9.ogg",
 				},
-		['ordr_stayback']	=	{
+		["ordr_stayback"]	=	{
 				"marines/marine1/ordr_stayback1.ogg",
 				"marines/marine1/ordr_stayback2.ogg",
 				"marines/marine1/ordr_stayback3.ogg",
 				"marines/marine1/ordr_stayback4.ogg",
 				"marines/marine1/ordr_stayback6.ogg",
 				},
-		['status']	=	{
+		["status"]	=	{
 				"marines/marine1/status1.ogg",
 				"marines/marine1/status2.ogg",
 				"marines/marine1/status3.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"marines/marine1/dth_drama1.ogg",
 				"marines/marine1/dth_drama2.ogg",
 				"marines/marine1/dth_drama3.ogg",
 				"marines/marine1/dth_drama4.ogg",
 				"marines/marine1/dth_drama5.ogg",
 				},
-		['ordr_keepwatch_tim']	=	{
+		["ordr_keepwatch_tim"]	=	{
 				"marines/marine1/ordr_keepwatch_tim1.ogg",
 				"marines/marine1/ordr_keepwatch_tim2.ogg",
 				"marines/marine1/ordr_keepwatch_tim3.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/marine1/endcmbt1.ogg",
 				"marines/marine1/endcmbt2.ogg",
 				"marines/marine1/endcmbt3.ogg",
@@ -2150,23 +2150,23 @@ ENT.Voices = {
 				"marines/marine1/endcmbt6.ogg",
 				"marines/marine1/endcmbt7.ogg",
 				},
-		['warn_stlth']	=	{
+		["warn_stlth"]	=	{
 				"marines/marine1/warn_stlth1.ogg",
 				"marines/marine1/warn_stlth2.ogg",
 				"marines/marine1/warn_stlth3.ogg",
 				"marines/marine1/warn_stlth4.ogg",
 				},
-		['entervcl_drvr']	=	{
+		["entervcl_drvr"]	=	{
 				"marines/marine1/entervcl_drvr1.ogg",
 				"marines/marine1/entervcl_drvr2.ogg",
 				"marines/marine1/entervcl_drvr3.ogg",
 				},
-		['dwn_vcl_bnsh']	=	{
+		["dwn_vcl_bnsh"]	=	{
 				"marines/marine1/dwn_vcl_bnsh1.ogg",
 				"marines/marine1/dwn_vcl_bnsh2.ogg",
 				"marines/marine1/dwn_vcl_bnsh3.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/marine1/thrwn1.ogg",
 				"marines/marine1/thrwn2.ogg",
 				"marines/marine1/thrwn3.ogg",
@@ -2174,7 +2174,7 @@ ENT.Voices = {
 				"marines/marine1/thrwn5.ogg",
 				"marines/marine1/thrwn6.ogg",
 				},
-		['mc']	=	{
+		["mc"]	=	{
 				"marines/marine1/mc30.ogg",
 				"marines/marine1/mc31.ogg",
 				"marines/marine1/mc32.ogg",
@@ -2182,18 +2182,18 @@ ENT.Voices = {
 				"marines/marine1/mc34.ogg",
 				"marines/marine1/mc35.ogg",
 				},
-		['warn_trrt']	=	{
+		["warn_trrt"]	=	{
 				"marines/marine1/warn_trrt1.ogg",
 				"marines/marine1/warn_trrt2.ogg",
 				}
 	},
 	["Marine2"] = {
-	['crs_mjrfoe']	=	{
+	["crs_mjrfoe"]	=	{
 				"marines/marine2/crs_mjrfoe1.ogg",
 				"marines/marine2/crs_mjrfoe2.ogg",
 				"marines/marine2/crs_mjrfoe3.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"marines/marine2/look_lngtme1.ogg",
 				"marines/marine2/look_lngtme10.ogg",
 				"marines/marine2/look_lngtme13.ogg",
@@ -2202,45 +2202,45 @@ ENT.Voices = {
 				"marines/marine2/look_lngtme8.ogg",
 				"marines/marine2/look_lngtme9.ogg",
 				},
-		['invt_vcl_gnr']	=	{
+		["invt_vcl_gnr"]	=	{
 				"marines/marine2/invt_vcl_gnr1.ogg",
 				"marines/marine2/invt_vcl_gnr3.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"marines/marine2/whn_re1.ogg",
 				"marines/marine2/whn_re2.ogg",
 				"marines/marine2/whn_re3.ogg",
 				"marines/marine2/whn_re4.ogg",
 				},
-		['newordr_advance']	=	{
+		["newordr_advance"]	=	{
 				"marines/marine2/newordr_advance1.ogg",
 				"marines/marine2/newordr_advance2.ogg",
 				"marines/marine2/newordr_advance4.ogg",
 				},
-		['rmd_vcl_ghst']	=	{
+		["rmd_vcl_ghst"]	=	{
 				"marines/marine2/rmd_vcl_ghst1.ogg",
 				"marines/marine2/rmd_vcl_ghst2.ogg",
 				"marines/marine2/rmd_vcl_ghst3.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/marine2/foeordr_flanking1.ogg",
 				"marines/marine2/foeordr_flanking2.ogg",
 				"marines/marine2/foeordr_flanking4.ogg",
 				"marines/marine2/foeordr_flanking5.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"marines/marine2/look_pstcmbt1.ogg",
 				"marines/marine2/look_pstcmbt2.ogg",
 				"marines/marine2/look_pstcmbt4.ogg",
 				"marines/marine2/look_pstcmbt5.ogg",
 				},
-		['grt_intovcl_imgnr']	=	{
+		["grt_intovcl_imgnr"]	=	{
 				"marines/marine2/grt_intovcl_imgnr1.ogg",
 				"marines/marine2/grt_intovcl_imgnr2.ogg",
 				"marines/marine2/grt_intovcl_imgnr5.ogg",
 				"marines/marine2/grt_intovcl_imgnr6.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/marine2/whn1.ogg",
 				"marines/marine2/whn2.ogg",
 				"marines/marine2/whn3.ogg",
@@ -2249,19 +2249,19 @@ ENT.Voices = {
 				"marines/marine2/whn6.ogg",
 				"marines/marine2/whn7.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"marines/marine2/rmd1.ogg",
 				"marines/marine2/rmd2.ogg",
 				"marines/marine2/rmd3.ogg",
 				},
-		['reanimat']	=	{
+		["reanimat"]	=	{
 				"marines/marine2/reanimate.ogg",
 				},
-		['warn_wpn_snpr']	=	{
+		["warn_wpn_snpr"]	=	{
 				"marines/marine2/warn_wpn_snpr1.ogg",
 				"marines/marine2/warn_wpn_snpr2.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/marine2/tnt1.ogg",
 				"marines/marine2/tnt10.ogg",
 				"marines/marine2/tnt11.ogg",
@@ -2274,30 +2274,30 @@ ENT.Voices = {
 				"marines/marine2/tnt8.ogg",
 				"marines/marine2/tnt9.ogg",
 				},
-		['warn_vcl_wrth']	=	{
+		["warn_vcl_wrth"]	=	{
 				"marines/marine2/warn_vcl_wrth1.ogg",
 				"marines/marine2/warn_vcl_wrth2.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"marines/marine2/warn_vcl_phntm1.ogg",
 				"marines/marine2/warn_vcl_phntm2.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"marines/marine2/warn_fldreanimate1.ogg",
 				"marines/marine2/warn_fldreanimate2.ogg",
 				"marines/marine2/warn_fldreanimate4.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/marine2/charge1.ogg",
 				"marines/marine2/charge2.ogg",
 				"marines/marine2/charge3.ogg",
 				"marines/marine2/charge4.ogg",
 				},
-		['warn_vcl_bnsh']	=	{
+		["warn_vcl_bnsh"]	=	{
 				"marines/marine2/warn_vcl_bnsh1.ogg",
 				"marines/marine2/warn_vcl_bnsh4.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/marine2/scld_plr_hrtme1.ogg",
 				"marines/marine2/scld_plr_hrtme11.ogg",
 				"marines/marine2/scld_plr_hrtme12.ogg",
@@ -2311,14 +2311,14 @@ ENT.Voices = {
 				"marines/marine2/scld_plr_hrtme8.ogg",
 				"marines/marine2/scld_plr_hrtme9.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/marine2/pain1.ogg",
 				"marines/marine2/pain3.ogg",
 				"marines/marine2/pain4.ogg",
 				"marines/marine2/pain5.ogg",
 				"marines/marine2/pain6.ogg",
 				},
-		['prst_fail']	=	{
+		["prst_fail"]	=	{
 				"marines/marine2/prst_fail10.ogg",
 				"marines/marine2/prst_fail2.ogg",
 				"marines/marine2/prst_fail3.ogg",
@@ -2328,32 +2328,32 @@ ENT.Voices = {
 				"marines/marine2/prst_fail7.ogg",
 				"marines/marine2/prst_fail9.ogg",
 				},
-		['regret']	=	{
+		["regret"]	=	{
 				"marines/marine2/regret1.ogg",
 				"marines/marine2/regret2.ogg",
 				},
-		['lookcmbt_fllw']	=	{
+		["lookcmbt_fllw"]	=	{
 				"marines/marine2/lookcmbt_fllw1.ogg",
 				"marines/marine2/lookcmbt_fllw2.ogg",
 				"marines/marine2/lookcmbt_fllw4.ogg",
 				},
-		['foundfoe_re']	=	{
+		["foundfoe_re"]	=	{
 				"marines/marine2/foundfoe_re1.ogg",
 				"marines/marine2/foundfoe_re2.ogg",
 				"marines/marine2/foundfoe_re3.ogg",
 				"marines/marine2/foundfoe_re4.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/marine2/pstcmbt1.ogg",
 				"marines/marine2/pstcmbt2.ogg",
 				"marines/marine2/pstcmbt6.ogg",
 				"marines/marine2/pstcmbt9.ogg",
 				},
-		['warn_trrt_dply']	=	{
+		["warn_trrt_dply"]	=	{
 				"marines/marine2/warn_trrt_dply1.ogg",
 				"marines/marine2/warn_trrt_dply3.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/marine2/cvr2.ogg",
 				"marines/marine2/cvr3.ogg",
 				"marines/marine2/cvr4.ogg",
@@ -2361,62 +2361,62 @@ ENT.Voices = {
 				"marines/marine2/cvr6.ogg",
 				"marines/marine2/cvr7.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/marine2/cvr_re1.ogg",
 				"marines/marine2/cvr_re2.ogg",
 				"marines/marine2/cvr_re3.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"marines/marine2/prs_plr_kll1.ogg",
 				"marines/marine2/prs_plr_kll2.ogg",
 				"marines/marine2/prs_plr_kll3.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/marine2/dwn1.ogg",
 				"marines/marine2/dwn2.ogg",
 				"marines/marine2/dwn3.ogg",
 				"marines/marine2/dwn4.ogg",
 				},
-		['hail_agg']	=	{
+		["hail_agg"]	=	{
 				"marines/marine2/hail_agg1.ogg",
 				"marines/marine2/hail_agg2.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"marines/marine2/warn_swarm1.ogg",
 				"marines/marine2/warn_swarm2.ogg",
 				"marines/marine2/warn_swarm3.ogg",
 				"marines/marine2/warn_swarm4.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"marines/marine2/panic_onfire1.ogg",
 				"marines/marine2/panic_onfire2.ogg",
 				"marines/marine2/panic_onfire3.ogg",
 				"marines/marine2/panic_onfire4.ogg",
 				},
-		['grt_intovcl_mine']	=	{
+		["grt_intovcl_mine"]	=	{
 				"marines/marine2/grt_intovcl_mine1.ogg",
 				"marines/marine2/grt_intovcl_mine3.ogg",
 				"marines/marine2/grt_intovcl_mine4.ogg",
 				},
-		['chckallybdyf']	=	{
+		["chckallybdyf"]	=	{
 				"marines/marine2/chckallybdyf1.ogg",
 				"marines/marine2/chckallybdyf2.ogg",
 				"marines/marine2/chckallybdyf3.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/marine2/newordr_support1.ogg",
 				"marines/marine2/newordr_support2.ogg",
 				"marines/marine2/newordr_support3.ogg",
 				},
-		['dwn_vcl_chpr']	=	{
+		["dwn_vcl_chpr"]	=	{
 				"marines/marine2/dwn_vcl_chpr1.ogg",
 				"marines/marine2/dwn_vcl_chpr2.ogg",
 				},
-		['rmd_scrb']	=	{
+		["rmd_scrb"]	=	{
 				"marines/marine2/rmd_scrb1.ogg",
 				"marines/marine2/rmd_scrb2.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/marine2/pld1.ogg",
 				"marines/marine2/pld2.ogg",
 				"marines/marine2/pld3.ogg",
@@ -2425,41 +2425,41 @@ ENT.Voices = {
 				"marines/marine2/pld6.ogg",
 				"marines/marine2/pld9.ogg",
 				},
-		['warn_scrb']	=	{
+		["warn_scrb"]	=	{
 				"marines/marine2/warn_scrb1.ogg",
 				"marines/marine2/warn_scrb3.ogg",
 				},
-		['firefly_chines']	=	{
+		["firefly_chines"]	=	{
 				"marines/marine2/firefly_chinese.ogg",
 				},
-		['ask_chkallybdy']	=	{
+		["ask_chkallybdy"]	=	{
 				"marines/marine2/ask_chkallybdy1.ogg",
 				"marines/marine2/ask_chkallybdy2.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/marine2/foeordr_support1.ogg",
 				"marines/marine2/foeordr_support2.ogg",
 				"marines/marine2/foeordr_support3.ogg",
 				},
-		['warn_incmn_vclbm']	=	{
+		["warn_incmn_vclbm"]	=	{
 				"marines/marine2/warn_incmn_vclbm1.ogg",
 				"marines/marine2/warn_incmn_vclbm2.ogg",
 				},
-		['scld_plr_wldvcl']	=	{
+		["scld_plr_wldvcl"]	=	{
 				"marines/marine2/scld_plr_wldvcl1.ogg",
 				},
-		['entervcl_drvr']	=	{
+		["entervcl_drvr"]	=	{
 				"marines/marine2/entervcl_drvr1.ogg",
 				"marines/marine2/entervcl_drvr2.ogg",
 				"marines/marine2/entervcl_drvr3.ogg",
 				},
-		['chr_vcljmp']	=	{
+		["chr_vcljmp"]	=	{
 				"marines/marine2/chr_vcljmp1.ogg",
 				"marines/marine2/chr_vcljmp2.ogg",
 				"marines/marine2/chr_vcljmp3.ogg",
 				"marines/marine2/chr_vcljmp4.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/marine2/thrtn1.ogg",
 				"marines/marine2/thrtn10.ogg",
 				"marines/marine2/thrtn2.ogg",
@@ -2470,52 +2470,52 @@ ENT.Voices = {
 				"marines/marine2/thrtn8.ogg",
 				"marines/marine2/thrtn9.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"marines/marine2/seefoe_downthere1.ogg",
 				"marines/marine2/seefoe_downthere2.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/marine2/prs_plr_mc1.ogg",
 				"marines/marine2/prs_plr_mc2.ogg",
 				"marines/marine2/prs_plr_mc3.ogg",
 				"marines/marine2/prs_plr_mc4.ogg",
 				"marines/marine2/prs_plr_mc5.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/marine2/newordr_exitvcl1.ogg",
 				"marines/marine2/newordr_exitvcl2.ogg",
 				"marines/marine2/newordr_exitvcl3.ogg",
 				},
-		['join_stayback']	=	{
+		["join_stayback"]	=	{
 				"marines/marine2/join_stayback1.ogg",
 				"marines/marine2/join_stayback2.ogg",
 				"marines/marine2/join_stayback3.ogg",
 				"marines/marine2/join_stayback4.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"marines/marine2/cower1.ogg",
 				"marines/marine2/cower5.ogg",
 				"marines/marine2/cower6.ogg",
 				"marines/marine2/cower7.ogg",
 				"marines/marine2/cower8.ogg",
 				},
-		['_prs_plr_kll_vclbmp']	=	{
+		["_prs_plr_kll_vclbmp"]	=	{
 				"marines/marine2/_prs_plr_kll_vclbmp1.ogg",
 				"marines/marine2/_prs_plr_kll_vclbmp2.ogg",
 				"marines/marine2/_prs_plr_kll_vclbmp3.ogg",
 				},
-		['newordr_fllwplr']	=	{
+		["newordr_fllwplr"]	=	{
 				"marines/marine2/newordr_fllwplr1.ogg",
 				"marines/marine2/newordr_fllwplr2.ogg",
 				"marines/marine2/newordr_fllwplr3.ogg",
 				"marines/marine2/newordr_fllwplr4.ogg",
 				},
-		['pld_mjrfoe']	=	{
+		["pld_mjrfoe"]	=	{
 				"marines/marine2/pld_mjrfoe1.ogg",
 				"marines/marine2/pld_mjrfoe2.ogg",
 				"marines/marine2/pld_mjrfoe3.ogg",
 				},
-		['pstcmbt_fld']	=	{
+		["pstcmbt_fld"]	=	{
 				"marines/marine2/pstcmbt_fld1.ogg",
 				"marines/marine2/pstcmbt_fld2.ogg",
 				"marines/marine2/pstcmbt_fld3.ogg",
@@ -2523,24 +2523,24 @@ ENT.Voices = {
 				"marines/marine2/pstcmbt_fld5.ogg",
 				"marines/marine2/pstcmbt_fld6.ogg",
 				},
-		['ok_plr_trdst_gnr']	=	{
+		["ok_plr_trdst_gnr"]	=	{
 				"marines/marine2/ok_plr_trdst_gnr1.ogg",
 				"marines/marine2/ok_plr_trdst_gnr2.ogg",
 				"marines/marine2/ok_plr_trdst_gnr3.ogg",
 				"marines/marine2/ok_plr_trdst_gnr6.ogg",
 				"marines/marine2/ok_plr_trdst_gnr7.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"marines/marine2/panic_plsmgrnd1.ogg",
 				"marines/marine2/panic_plsmgrnd3.ogg",
 				"marines/marine2/panic_plsmgrnd4.ogg",
 				"marines/marine2/panic_plsmgrnd5.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/marine2/pstcmbt_brt1.ogg",
 				"marines/marine2/pstcmbt_brt2.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/marine2/grt_plr_mc1.ogg",
 				"marines/marine2/grt_plr_mc2.ogg",
 				"marines/marine2/grt_plr_mc3.ogg",
@@ -2549,23 +2549,23 @@ ENT.Voices = {
 				"marines/marine2/grt_plr_mc7.ogg",
 				"marines/marine2/grt_plr_mc8.ogg",
 				},
-		['warn_chr_hntr']	=	{
+		["warn_chr_hntr"]	=	{
 				"marines/marine2/warn_chr_hntr1.ogg",
 				"marines/marine2/warn_chr_hntr2.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"marines/marine2/warn_chr_bggr1.ogg",
 				"marines/marine2/warn_chr_bggr2.ogg",
 				"marines/marine2/warn_chr_bggr3.ogg",
 				"marines/marine2/warn_chr_bggr4.ogg",
 				"marines/marine2/warn_chr_bggr5.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/marine2/foeordr_fallback1.ogg",
 				"marines/marine2/foeordr_fallback2.ogg",
 				"marines/marine2/foeordr_fallback3.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/marine2/hail_plr_mc10.ogg",
 				"marines/marine2/hail_plr_mc4.ogg",
 				"marines/marine2/hail_plr_mc5.ogg",
@@ -2573,12 +2573,12 @@ ENT.Voices = {
 				"marines/marine2/hail_plr_mc7.ogg",
 				"marines/marine2/hail_plr_mc8.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/marine2/foeordr_advance1.ogg",
 				"marines/marine2/foeordr_advance2.ogg",
 				"marines/marine2/foeordr_advance3.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/marine2/foundfoe_prst1.ogg",
 				"marines/marine2/foundfoe_prst10.ogg",
 				"marines/marine2/foundfoe_prst2.ogg",
@@ -2588,7 +2588,7 @@ ENT.Voices = {
 				"marines/marine2/foundfoe_prst6.ogg",
 				"marines/marine2/foundfoe_prst7.ogg",
 				},
-		['injured']	=	{
+		["injured"]	=	{
 				"marines/marine2/injured1.ogg",
 				"marines/marine2/injured2.ogg",
 				"marines/marine2/injured3.ogg",
@@ -2598,7 +2598,7 @@ ENT.Voices = {
 				"marines/marine2/injured7.ogg",
 				"marines/marine2/injured8.ogg",
 				},
-		['warn_brsrk']	=	{
+		["warn_brsrk"]	=	{
 				"marines/marine2/warn_brsrk1.ogg",
 				"marines/marine2/warn_brsrk2.ogg",
 				"marines/marine2/warn_brsrk3.ogg",
@@ -2607,28 +2607,28 @@ ENT.Voices = {
 				"marines/marine2/warn_brsrk6.ogg",
 				"marines/marine2/warn_brsrk7.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/marine2/warn1.ogg",
 				"marines/marine2/warn2.ogg",
 				"marines/marine2/warn3.ogg",
 				"marines/marine2/warn4.ogg",
 				"marines/marine2/warn5.ogg",
 				},
-		['look_plr_fllw']	=	{
+		["look_plr_fllw"]	=	{
 				"marines/marine2/look_plr_fllw1.ogg",
 				"marines/marine2/look_plr_fllw2.ogg",
 				"marines/marine2/look_plr_fllw3.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"marines/marine2/seefoe_upthere1.ogg",
 				"marines/marine2/seefoe_upthere2.ogg",
 				},
-		['tnt_mjrfoe']	=	{
+		["tnt_mjrfoe"]	=	{
 				"marines/marine2/tnt_mjrfoe1.ogg",
 				"marines/marine2/tnt_mjrfoe2.ogg",
 				"marines/marine2/tnt_mjrfoe4.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/marine2/pain_mjr1.ogg",
 				"marines/marine2/pain_mjr2.ogg",
 				"marines/marine2/pain_mjr3.ogg",
@@ -2636,51 +2636,51 @@ ENT.Voices = {
 				"marines/marine2/pain_mjr5.ogg",
 				"marines/marine2/pain_mjr6.ogg",
 				},
-		['kamikaze']	=	{
+		["kamikaze"]	=	{
 				"marines/marine2/kamikaze1.ogg",
 				"marines/marine2/kamikaze2.ogg",
 				"marines/marine2/kamikaze3.ogg",
 				"marines/marine2/kamikaze4.ogg",
 				"marines/marine2/kamikaze5.ogg",
 				},
-		['warn_wpn_hmmr']	=	{
+		["warn_wpn_hmmr"]	=	{
 				"marines/marine2/warn_wpn_hmmr1.ogg",
 				"marines/marine2/warn_wpn_hmmr2.ogg",
 				"marines/marine2/warn_wpn_hmmr3.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/marine2/chr_kllfoe1.ogg",
 				"marines/marine2/chr_kllfoe2.ogg",
 				"marines/marine2/chr_kllfoe3.ogg",
 				"marines/marine2/chr_kllfoe4.ogg",
 				},
-		['rmd_vcl_chpr']	=	{
+		["rmd_vcl_chpr"]	=	{
 				"marines/marine2/rmd_vcl_chpr1.ogg",
 				"marines/marine2/rmd_vcl_chpr2.ogg",
 				"marines/marine2/rmd_vcl_chpr3.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"marines/marine2/dwn_vcl_wrth1.ogg",
 				"marines/marine2/dwn_vcl_wrth2.ogg",
 				},
-		['chr_kllfoe_blt']	=	{
+		["chr_kllfoe_blt"]	=	{
 				"marines/marine2/chr_kllfoe_blt2.ogg",
 				"marines/marine2/chr_kllfoe_blt3.ogg",
 				"marines/marine2/chr_kllfoe_blt4.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/marine2/scld1.ogg",
 				"marines/marine2/scld2.ogg",
 				"marines/marine2/scld4.ogg",
 				"marines/marine2/scld6.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/marine2/thrwn1.ogg",
 				"marines/marine2/thrwn2.ogg",
 				"marines/marine2/thrwn3.ogg",
 				"marines/marine2/thrwn6.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/marine2/thnk_plr_btrwpn1.ogg",
 				"marines/marine2/thnk_plr_btrwpn10.ogg",
 				"marines/marine2/thnk_plr_btrwpn11.ogg",
@@ -2693,22 +2693,22 @@ ENT.Voices = {
 				"marines/marine2/thnk_plr_btrwpn7.ogg",
 				"marines/marine2/thnk_plr_btrwpn9.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"marines/marine2/dth_drama1.ogg",
 				"marines/marine2/dth_drama2.ogg",
 				"marines/marine2/dth_drama3.ogg",
 				},
-		['newordr_charge']	=	{
+		["newordr_charge"]	=	{
 				"marines/marine2/newordr_charge1.ogg",
 				"marines/marine2/newordr_charge2.ogg",
 				"marines/marine2/newordr_charge3.ogg",
 				},
-		['thrtn_mjrfoe']	=	{
+		["thrtn_mjrfoe"]	=	{
 				"marines/marine2/thrtn_mjrfoe1.ogg",
 				"marines/marine2/thrtn_mjrfoe2.ogg",
 				"marines/marine2/thrtn_mjrfoe3.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/marine2/dive1.ogg",
 				"marines/marine2/dive2.ogg",
 				"marines/marine2/dive3.ogg",
@@ -2718,16 +2718,16 @@ ENT.Voices = {
 				"marines/marine2/dive7.ogg",
 				"marines/marine2/dive8.ogg",
 				},
-		['thrtn_foe_re']	=	{
+		["thrtn_foe_re"]	=	{
 				"marines/marine2/thrtn_foe_re1.ogg",
 				"marines/marine2/thrtn_foe_re2.ogg",
 				"marines/marine2/thrtn_foe_re4.ogg",
 				},
-		['dwn_wpn_snpr']	=	{
+		["dwn_wpn_snpr"]	=	{
 				"marines/marine2/dwn_wpn_snpr1.ogg",
 				"marines/marine2/dwn_wpn_snpr2.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/marine2/lmnt1.ogg",
 				"marines/marine2/lmnt2.ogg",
 				"marines/marine2/lmnt4.ogg",
@@ -2736,31 +2736,31 @@ ENT.Voices = {
 				"marines/marine2/lmnt7.ogg",
 				"marines/marine2/lmnt8.ogg",
 				},
-		['grt_intovcl_imdvr']	=	{
+		["grt_intovcl_imdvr"]	=	{
 				"marines/marine2/grt_intovcl_imdvr1.ogg",
 				"marines/marine2/grt_intovcl_imdvr2.ogg",
 				"marines/marine2/grt_intovcl_imdvr3.ogg",
 				"marines/marine2/grt_intovcl_imdvr4.ogg",
 				"marines/marine2/grt_intovcl_imdvr6.ogg",
 				},
-		['dwn_vcl_ghst']	=	{
+		["dwn_vcl_ghst"]	=	{
 				"marines/marine2/dwn_vcl_ghst1.ogg",
 				"marines/marine2/dwn_vcl_ghst2.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/marine2/thnk_plr_arb1.ogg",
 				"marines/marine2/thnk_plr_arb2.ogg",
 				"marines/marine2/thnk_plr_arb3.ogg",
 				"marines/marine2/thnk_plr_arb4.ogg",
 				"marines/marine2/thnk_plr_arb5.ogg",
 				},
-		['newordr_fallback']	=	{
+		["newordr_fallback"]	=	{
 				"marines/marine2/newordr_fallback1.ogg",
 				"marines/marine2/newordr_fallback2.ogg",
 				"marines/marine2/newordr_fallback3.ogg",
 				"marines/marine2/newordr_fallback6.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/marine2/thnk1.ogg",
 				"marines/marine2/thnk16.ogg",
 				"marines/marine2/thnk2.ogg",
@@ -2769,19 +2769,19 @@ ENT.Voices = {
 				"marines/marine2/thnk7.ogg",
 				"marines/marine2/thnk8.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/marine2/scld_plr_mc1.ogg",
 				"marines/marine2/scld_plr_mc2.ogg",
 				"marines/marine2/scld_plr_mc3.ogg",
 				"marines/marine2/scld_plr_mc4.ogg",
 				"marines/marine2/scld_plr_mc5.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/marine2/look_plr_arb1.ogg",
 				"marines/marine2/look_plr_arb2.ogg",
 				"marines/marine2/look_plr_arb3.ogg",
 				},
-		['strk_grnd']	=	{
+		["strk_grnd"]	=	{
 				"marines/marine2/strk_grnd1.ogg",
 				"marines/marine2/strk_grnd2.ogg",
 				"marines/marine2/strk_grnd3.ogg",
@@ -2789,16 +2789,16 @@ ENT.Voices = {
 				"marines/marine2/strk_grnd5.ogg",
 				"marines/marine2/strk_grnd6.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"marines/marine2/rmd_vcl_phntm1.ogg",
 				"marines/marine2/rmd_vcl_phntm2.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/marine2/pstcmbt_ez1.ogg",
 				"marines/marine2/pstcmbt_ez2.ogg",
 				"marines/marine2/pstcmbt_ez3.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"marines/marine2/invsgt1.ogg",
 				"marines/marine2/invsgt2.ogg",
 				"marines/marine2/invsgt3.ogg",
@@ -2808,14 +2808,14 @@ ENT.Voices = {
 				"marines/marine2/invsgt7.ogg",
 				"marines/marine2/invsgt8.ogg",
 				},
-		['tchallybdy']	=	{
+		["tchallybdy"]	=	{
 				"marines/marine2/tchallybdy1.ogg",
 				"marines/marine2/tchallybdy2.ogg",
 				"marines/marine2/tchallybdy3.ogg",
 				"marines/marine2/tchallybdy4.ogg",
 				"marines/marine2/tchallybdy5.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"marines/marine2/scld_plr_kllally1.ogg",
 				"marines/marine2/scld_plr_kllally10.ogg",
 				"marines/marine2/scld_plr_kllally2.ogg",
@@ -2827,11 +2827,11 @@ ENT.Voices = {
 				"marines/marine2/scld_plr_kllally8.ogg",
 				"marines/marine2/scld_plr_kllally9.ogg",
 				},
-		['warn_pureforms']	=	{
+		["warn_pureforms"]	=	{
 				"marines/marine2/warn_pureforms1.ogg",
 				"marines/marine2/warn_pureforms2.ogg",
 				},
-		['strk_vcl_gnr']	=	{
+		["strk_vcl_gnr"]	=	{
 				"marines/marine2/strk_vcl_gnr1.ogg",
 				"marines/marine2/strk_vcl_gnr10.ogg",
 				"marines/marine2/strk_vcl_gnr2.ogg",
@@ -2842,7 +2842,7 @@ ENT.Voices = {
 				"marines/marine2/strk_vcl_gnr8.ogg",
 				"marines/marine2/strk_vcl_gnr9.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"marines/marine2/srprs1.ogg",
 				"marines/marine2/srprs10.ogg",
 				"marines/marine2/srprs11.ogg",
@@ -2854,25 +2854,25 @@ ENT.Voices = {
 				"marines/marine2/srprs8.ogg",
 				"marines/marine2/srprs9.ogg",
 				},
-		['foeordr_charge']	=	{
+		["foeordr_charge"]	=	{
 				"marines/marine2/foeordr_charge1.ogg",
 				"marines/marine2/foeordr_charge2.ogg",
 				"marines/marine2/foeordr_charge3.ogg",
 				"marines/marine2/foeordr_charge4.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/marine2/ok_plr_arb1.ogg",
 				"marines/marine2/ok_plr_arb2.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"marines/marine2/hail_tim1.ogg",
 				"marines/marine2/hail_tim2.ogg",
 				},
-		['warn_stlth_again']	=	{
+		["warn_stlth_again"]	=	{
 				"marines/marine2/warn_stlth_again1.ogg",
 				"marines/marine2/warn_stlth_again2.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/marine2/look1.ogg",
 				"marines/marine2/look10.ogg",
 				"marines/marine2/look11.ogg",
@@ -2884,28 +2884,28 @@ ENT.Voices = {
 				"marines/marine2/look8.ogg",
 				"marines/marine2/look9.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/marine2/neworder_flanking1.ogg",
 				"marines/marine2/neworder_flanking2.ogg",
 				"marines/marine2/neworder_flanking3.ogg",
 				"marines/marine2/neworder_flanking4.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"marines/marine2/pstcmbt_tim1.ogg",
 				"marines/marine2/pstcmbt_tim2.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/marine2/hail_plr_arb1.ogg",
 				"marines/marine2/hail_plr_arb2.ogg",
 				"marines/marine2/hail_plr_arb5.ogg",
 				"marines/marine2/hail_plr_arb6.ogg",
 				"marines/marine2/hail_plr_arb9.ogg",
 				},
-		['join_emrg']	=	{
+		["join_emrg"]	=	{
 				"marines/marine2/join_emrg1.ogg",
 				"marines/marine2/join_emrg2.ogg",
 				},
-		['grt_plr_vcl']	=	{
+		["grt_plr_vcl"]	=	{
 				"marines/marine2/grt_plr_vcl1.ogg",
 				"marines/marine2/grt_plr_vcl2.ogg",
 				"marines/marine2/grt_plr_vcl3.ogg",
@@ -2913,7 +2913,7 @@ ENT.Voices = {
 				"marines/marine2/grt_plr_vcl5.ogg",
 				"marines/marine2/grt_plr_vcl7.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"marines/marine2/lookcmbt1.ogg",
 				"marines/marine2/lookcmbt10.ogg",
 				"marines/marine2/lookcmbt11.ogg",
@@ -2927,7 +2927,7 @@ ENT.Voices = {
 				"marines/marine2/lookcmbt8.ogg",
 				"marines/marine2/lookcmbt9.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"marines/marine2/foundfoe1.ogg",
 				"marines/marine2/foundfoe10.ogg",
 				"marines/marine2/foundfoe11.ogg",
@@ -2940,13 +2940,13 @@ ENT.Voices = {
 				"marines/marine2/foundfoe8.ogg",
 				"marines/marine2/foundfoe9.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"marines/marine2/look_pstcmbt_hrd1.ogg",
 				"marines/marine2/look_pstcmbt_hrd2.ogg",
 				"marines/marine2/look_pstcmbt_hrd3.ogg",
 				"marines/marine2/look_pstcmbt_hrd5.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/marine2/dth_fall1.ogg",
 				"marines/marine2/dth_fall2.ogg",
 				"marines/marine2/dth_fall3.ogg",
@@ -2955,33 +2955,33 @@ ENT.Voices = {
 				"marines/marine2/dth_fall6.ogg",
 				"marines/marine2/dth_fall7.ogg",
 				},
-		['stayback_tim']	=	{
+		["stayback_tim"]	=	{
 				"marines/marine2/stayback_tim1.ogg",
 				"marines/marine2/stayback_tim3.ogg",
 				"marines/marine2/stayback_tim5.ogg",
 				"marines/marine2/stayback_tim6.ogg",
 				},
-		['join_re']	=	{
+		["join_re"]	=	{
 				"marines/marine2/join_re1.ogg",
 				"marines/marine2/join_re2.ogg",
 				"marines/marine2/join_re3.ogg",
 				"marines/marine2/join_re4.ogg",
 				},
-		['stayback_agg']	=	{
+		["stayback_agg"]	=	{
 				"marines/marine2/stayback_agg1.ogg",
 				"marines/marine2/stayback_agg2.ogg",
 				},
-		['entervcl']	=	{
+		["entervcl"]	=	{
 				"marines/marine2/entervcl1.ogg",
 				"marines/marine2/entervcl2.ogg",
 				"marines/marine2/entervcl3.ogg",
 				},
-		['join_prst']	=	{
+		["join_prst"]	=	{
 				"marines/marine2/join_prst1.ogg",
 				"marines/marine2/join_prst2.ogg",
 				"marines/marine2/join_prst3.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/marine2/approve1.ogg",
 				"marines/marine2/approve2.ogg",
 				"marines/marine2/approve3.ogg",
@@ -2989,46 +2989,46 @@ ENT.Voices = {
 				"marines/marine2/approve5.ogg",
 				"marines/marine2/approve6.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/marine2/fall1.ogg",
 				"marines/marine2/fall2.ogg",
 				},
-		['warn_vcl_ghst']	=	{
+		["warn_vcl_ghst"]	=	{
 				"marines/marine2/warn_vcl_ghst1.ogg",
 				"marines/marine2/warn_vcl_ghst2.ogg",
 				},
-		['status']	=	{
+		["status"]	=	{
 				"marines/marine2/status1.ogg",
 				"marines/marine2/status2.ogg",
 				"marines/marine2/status3.ogg",
 				},
-		['chr_kllfoe_stkplsm']	=	{
+		["chr_kllfoe_stkplsm"]	=	{
 				"marines/marine2/chr_kllfoe_stkplsm1.ogg",
 				"marines/marine2/chr_kllfoe_stkplsm2.ogg",
 				"marines/marine2/chr_kllfoe_stkplsm3.ogg",
 				"marines/marine2/chr_kllfoe_stkplsm4.ogg",
 				},
-		['strk_snpr']	=	{
+		["strk_snpr"]	=	{
 				"marines/marine2/strk_snpr1.ogg",
 				"marines/marine2/strk_snpr2.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/marine2/meleeleap1.ogg",
 				"marines/marine2/meleeleap2.ogg",
 				},
-		['srchend']	=	{
+		["srchend"]	=	{
 				"marines/marine2/srchend1.ogg",
 				"marines/marine2/srchend2.ogg",
 				"marines/marine2/srchend3.ogg",
 				},
-		['lookcmbt_agg']	=	{
+		["lookcmbt_agg"]	=	{
 				"marines/marine2/lookcmbt_agg1.ogg",
 				"marines/marine2/lookcmbt_agg2.ogg",
 				"marines/marine2/lookcmbt_agg3.ogg",
 				"marines/marine2/lookcmbt_agg5.ogg",
 				"marines/marine2/lookcmbt_agg6.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"marines/marine2/srch_pinned1.ogg",
 				"marines/marine2/srch_pinned2.ogg",
 				"marines/marine2/srch_pinned3.ogg",
@@ -3039,7 +3039,7 @@ ENT.Voices = {
 				"marines/marine2/srch_pinned8.ogg",
 				"marines/marine2/srch_pinned9.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/marine2/scrn1.ogg",
 				"marines/marine2/scrn12.ogg",
 				"marines/marine2/scrn2.ogg",
@@ -3050,7 +3050,7 @@ ENT.Voices = {
 				"marines/marine2/scrn8.ogg",
 				"marines/marine2/scrn9.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/marine2/shotfoebdy2.ogg",
 				"marines/marine2/shotfoebdy3.ogg",
 				"marines/marine2/shotfoebdy4.ogg",
@@ -3058,21 +3058,21 @@ ENT.Voices = {
 				"marines/marine2/shotfoebdy6.ogg",
 				"marines/marine2/shotfoebdy8.ogg",
 				},
-		['tnt_re']	=	{
+		["tnt_re"]	=	{
 				"marines/marine2/tnt_re1.ogg",
 				"marines/marine2/tnt_re2.ogg",
 				"marines/marine2/tnt_re3.ogg",
 				"marines/marine2/tnt_re4.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"marines/marine2/rmd_vcl_wrth1.ogg",
 				"marines/marine2/rmd_vcl_wrth2.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"marines/marine2/seefoe_tim1.ogg",
 				"marines/marine2/seefoe_tim2.ogg",
 				},
-		['invsgt_fail']	=	{
+		["invsgt_fail"]	=	{
 				"marines/marine2/invsgt_fail1.ogg",
 				"marines/marine2/invsgt_fail2.ogg",
 				"marines/marine2/invsgt_fail3.ogg",
@@ -3081,22 +3081,22 @@ ENT.Voices = {
 				"marines/marine2/invsgt_fail6.ogg",
 				"marines/marine2/invsgt_fail7.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"marines/marine2/scld_plr_wldgrnd1.ogg",
 				"marines/marine2/scld_plr_wldgrnd3.ogg",
 				"marines/marine2/scld_plr_wldgrnd4.ogg",
 				"marines/marine2/scld_plr_wldgrnd5.ogg",
 				"marines/marine2/scld_plr_wldgrnd6.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"marines/marine2/seefoe_agg1.ogg",
 				"marines/marine2/seefoe_agg2.ogg",
 				},
-		['dwn_scrb']	=	{
+		["dwn_scrb"]	=	{
 				"marines/marine2/dwn_scrb1.ogg",
 				"marines/marine2/dwn_scrb2.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/marine2/seefoe1.ogg",
 				"marines/marine2/seefoe10.ogg",
 				"marines/marine2/seefoe11.ogg",
@@ -3108,14 +3108,14 @@ ENT.Voices = {
 				"marines/marine2/seefoe8.ogg",
 				"marines/marine2/seefoe9.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/marine2/ordr_chkfoebdy1.ogg",
 				"marines/marine2/ordr_chkfoebdy2.ogg",
 				"marines/marine2/ordr_chkfoebdy3.ogg",
 				"marines/marine2/ordr_chkfoebdy4.ogg",
 				"marines/marine2/ordr_chkfoebdy5.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/marine2/scrn_plr_wrswpn1.ogg",
 				"marines/marine2/scrn_plr_wrswpn10.ogg",
 				"marines/marine2/scrn_plr_wrswpn11.ogg",
@@ -3133,20 +3133,20 @@ ENT.Voices = {
 				"marines/marine2/scrn_plr_wrswpn8.ogg",
 				"marines/marine2/scrn_plr_wrswpn9.ogg",
 				},
-		['scrn_plr_mc']	=	{
+		["scrn_plr_mc"]	=	{
 				"marines/marine2/scrn_plr_mc1.ogg",
 				"marines/marine2/scrn_plr_mc2.ogg",
 				},
-		['ask_chkallybdyf']	=	{
+		["ask_chkallybdyf"]	=	{
 				"marines/marine2/ask_chkallybdyf1.ogg",
 				"marines/marine2/ask_chkallybdyf2.ogg",
 				},
-		['grt_intovcl']	=	{
+		["grt_intovcl"]	=	{
 				"marines/marine2/grt_intovcl1.ogg",
 				"marines/marine2/grt_intovcl2.ogg",
 				"marines/marine2/grt_intovcl3.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"marines/marine2/warn_incmn_grnd1.ogg",
 				"marines/marine2/warn_incmn_grnd10.ogg",
 				"marines/marine2/warn_incmn_grnd2.ogg",
@@ -3157,56 +3157,56 @@ ENT.Voices = {
 				"marines/marine2/warn_incmn_grnd8.ogg",
 				"marines/marine2/warn_incmn_grnd9.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/marine2/grt_plr_arb1.ogg",
 				"marines/marine2/grt_plr_arb2.ogg",
 				"marines/marine2/grt_plr_arb4.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/marine2/scrn_plr_arb1.ogg",
 				"marines/marine2/scrn_plr_arb2.ogg",
 				"marines/marine2/scrn_plr_arb3.ogg",
 				"marines/marine2/scrn_plr_arb4.ogg",
 				"marines/marine2/scrn_plr_arb6.ogg",
 				},
-		['scld_plr_wldvc']	=	{
+		["scld_plr_wldvc"]	=	{
 				"marines/marine2/scld_plr_wldvc2.ogg",
 				"marines/marine2/scld_plr_wldvc3.ogg",
 				"marines/marine2/scld_plr_wldvc4.ogg",
 				},
-		['prst']	=	{
+		["prst"]	=	{
 				"marines/marine2/prst1.ogg",
 				"marines/marine2/prst2.ogg",
 				"marines/marine2/prst3.ogg",
 				"marines/marine2/prst4.ogg",
 				"marines/marine2/prst5.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/marine2/lift1.ogg",
 				"marines/marine2/lift3.ogg",
 				"marines/marine2/lift4.ogg",
 				"marines/marine2/lift5.ogg",
 				"marines/marine2/lift6.ogg",
 				},
-		['rmd_vcl_bnsh']	=	{
+		["rmd_vcl_bnsh"]	=	{
 				"marines/marine2/rmd_vcl_bnsh1.ogg",
 				"marines/marine2/rmd_vcl_bnsh2.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/marine2/prs_plr_arb1.ogg",
 				"marines/marine2/prs_plr_arb2.ogg",
 				"marines/marine2/prs_plr_arb3.ogg",
 				"marines/marine2/prs_plr_arb4.ogg",
 				"marines/marine2/prs_plr_arb5.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/marine2/scld_plr_arb1.ogg",
 				"marines/marine2/scld_plr_arb2.ogg",
 				"marines/marine2/scld_plr_arb3.ogg",
 				"marines/marine2/scld_plr_arb5.ogg",
 				"marines/marine2/scld_plr_arb6.ogg",
 				},
-		['scld_plr_vclcrash']	=	{
+		["scld_plr_vclcrash"]	=	{
 				"marines/marine2/scld_plr_vclcrash1.ogg",
 				"marines/marine2/scld_plr_vclcrash10.ogg",
 				"marines/marine2/scld_plr_vclcrash11.ogg",
@@ -3218,7 +3218,7 @@ ENT.Voices = {
 				"marines/marine2/scld_plr_vclcrash8.ogg",
 				"marines/marine2/scld_plr_vclcrash9.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"marines/marine2/scld_plr_hrt_blt1.ogg",
 				"marines/marine2/scld_plr_hrt_blt2.ogg",
 				"marines/marine2/scld_plr_hrt_blt3.ogg",
@@ -3227,70 +3227,70 @@ ENT.Voices = {
 				"marines/marine2/scld_plr_hrt_blt6.ogg",
 				"marines/marine2/scld_plr_hrt_blt7.ogg",
 				},
-		['rmd_wpn_hmm']	=	{
+		["rmd_wpn_hmm"]	=	{
 				"marines/marine2/rmd_wpn_hmmr.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/marine2/kllmytrgt1.ogg",
 				"marines/marine2/kllmytrgt2.ogg",
 				"marines/marine2/kllmytrgt3.ogg",
 				"marines/marine2/kllmytrgt4.ogg",
 				"marines/marine2/kllmytrgt5.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/marine2/scld_plr_blocking1.ogg",
 				"marines/marine2/scld_plr_blocking2.ogg",
 				"marines/marine2/scld_plr_blocking3.ogg",
 				"marines/marine2/scld_plr_blocking4.ogg",
 				},
-		['rmd_trrt']	=	{
+		["rmd_trrt"]	=	{
 				"marines/marine2/rmd_trrt1.ogg",
 				"marines/marine2/rmd_trrt2.ogg",
 				},
-		['rmd_stlth']	=	{
+		["rmd_stlth"]	=	{
 				"marines/marine2/rmd_stlth1.ogg",
 				"marines/marine2/rmd_stlth2.ogg",
 				},
-		['status_re']	=	{
+		["status_re"]	=	{
 				"marines/marine2/status_re1.ogg",
 				"marines/marine2/status_re2.ogg",
 				"marines/marine2/status_re4.ogg",
 				"marines/marine2/status_re5.ogg",
 				"marines/marine2/status_re6.ogg",
 				},
-		['invt_vcl']	=	{
+		["invt_vcl"]	=	{
 				"marines/marine2/invt_vcl1.ogg",
 				"marines/marine2/invt_vcl2.ogg",
 				"marines/marine2/invt_vcl3.ogg",
 				"marines/marine2/invt_vcl4.ogg",
 				"marines/marine2/invt_vcl5.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/marine2/dth_mjr1.ogg",
 				"marines/marine2/dth_mjr2.ogg",
 				"marines/marine2/dth_mjr3.ogg",
 				},
-		['pstcmbt_agg']	=	{
+		["pstcmbt_agg"]	=	{
 				"marines/marine2/pstcmbt_agg1.ogg",
 				"marines/marine2/pstcmbt_agg2.ogg",
 				"marines/marine2/pstcmbt_agg4.ogg",
 				},
-		['warn_vcl_chpr']	=	{
+		["warn_vcl_chpr"]	=	{
 				"marines/marine2/warn_vcl_chpr1.ogg",
 				"marines/marine2/warn_vcl_chpr2.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/marine2/ok_plr_mc1.ogg",
 				"marines/marine2/ok_plr_mc2.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"marines/marine2/lookcmbt_tim1.ogg",
 				"marines/marine2/lookcmbt_tim2.ogg",
 				"marines/marine2/lookcmbt_tim3.ogg",
 				"marines/marine2/lookcmbt_tim4.ogg",
 				"marines/marine2/lookcmbt_tim5.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/marine2/crs1.ogg",
 				"marines/marine2/crs10.ogg",
 				"marines/marine2/crs11.ogg",
@@ -3301,7 +3301,7 @@ ENT.Voices = {
 				"marines/marine2/crs7.ogg",
 				"marines/marine2/crs8.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/marine2/newordr_retreat1.ogg",
 				"marines/marine2/newordr_retreat2.ogg",
 				"marines/marine2/newordr_retreat3.ogg",
@@ -3312,23 +3312,23 @@ ENT.Voices = {
 				"marines/marine2/newordr_retreat8.ogg",
 				"marines/marine2/newordr_retreat9.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"marines/marine2/melee1.ogg",
 				"marines/marine2/melee3.ogg",
 				"marines/marine2/melee4.ogg",
 				},
-		['scld_plr_vclcrazy']	=	{
+		["scld_plr_vclcrazy"]	=	{
 				"marines/marine2/scld_plr_vclcrazy1.ogg",
 				"marines/marine2/scld_plr_vclcrazy2.ogg",
 				"marines/marine2/scld_plr_vclcrazy3.ogg",
 				"marines/marine2/scld_plr_vclcrazy4.ogg",
 				"marines/marine2/scld_plr_vclcrazy5.ogg",
 				},
-		['prs_plr_sniping']	=	{
+		["prs_plr_sniping"]	=	{
 				"marines/marine2/prs_plr_sniping1.ogg",
 				"marines/marine2/prs_plr_sniping2.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"marines/marine2/warn_incmn1.ogg",
 				"marines/marine2/warn_incmn2.ogg",
 				"marines/marine2/warn_incmn3.ogg",
@@ -3338,29 +3338,29 @@ ENT.Voices = {
 				"marines/marine2/warn_incmn7.ogg",
 				"marines/marine2/warn_incmn9.ogg",
 				},
-		['prs_plr_kll_wmelee']	=	{
+		["prs_plr_kll_wmelee"]	=	{
 				"marines/marine2/prs_plr_kll_wmelee1.ogg",
 				"marines/marine2/prs_plr_kll_wmelee2.ogg",
 				"marines/marine2/prs_plr_kll_wmelee3.ogg",
 				},
-		['join_emrg_re']	=	{
+		["join_emrg_re"]	=	{
 				"marines/marine2/join_emrg_re1.ogg",
 				"marines/marine2/join_emrg_re2.ogg",
 				"marines/marine2/join_emrg_re3.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"marines/marine2/prs_plr_kll_lots1.ogg",
 				"marines/marine2/prs_plr_kll_lots2.ogg",
 				"marines/marine2/prs_plr_kll_lots4.ogg",
 				"marines/marine2/prs_plr_kll_lots5.ogg",
 				"marines/marine2/prs_plr_kll_lots6.ogg",
 				},
-		['cvr_invsgt']	=	{
+		["cvr_invsgt"]	=	{
 				"marines/marine2/cvr_invsgt1.ogg",
 				"marines/marine2/cvr_invsgt2.ogg",
 				"marines/marine2/cvr_invsgt3.ogg",
 				},
-		['captured']	=	{
+		["captured"]	=	{
 				"marines/marine2/captured1.ogg",
 				"marines/marine2/captured10.ogg",
 				"marines/marine2/captured11.ogg",
@@ -3378,7 +3378,7 @@ ENT.Voices = {
 				"marines/marine2/captured6.ogg",
 				"marines/marine2/captured7.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/marine2/ok_plr_trdwpn1.ogg",
 				"marines/marine2/ok_plr_trdwpn2.ogg",
 				"marines/marine2/ok_plr_trdwpn3.ogg",
@@ -3386,11 +3386,11 @@ ENT.Voices = {
 				"marines/marine2/ok_plr_trdwpn5.ogg",
 				"marines/marine2/ok_plr_trdwpn6.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"marines/marine2/warn_flood1.ogg",
 				"marines/marine2/warn_flood2.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/marine2/ok1.ogg",
 				"marines/marine2/ok2.ogg",
 				"marines/marine2/ok3.ogg",
@@ -3398,37 +3398,37 @@ ENT.Voices = {
 				"marines/marine2/ok5.ogg",
 				"marines/marine2/ok6.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"marines/marine2/lmnt_deadally1.ogg",
 				"marines/marine2/lmnt_deadally2.ogg",
 				},
-		['brsrk']	=	{
+		["brsrk"]	=	{
 				"marines/marine2/brsrk1.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/marine2/panic1.ogg",
 				"marines/marine2/panic2.ogg",
 				"marines/marine2/panic6.ogg",
 				"marines/marine2/panic7.ogg",
 				"marines/marine2/panic8.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/marine2/prs1.ogg",
 				"marines/marine2/prs2.ogg",
 				"marines/marine2/prs3.ogg",
 				"marines/marine2/prs4.ogg",
 				"marines/marine2/prs5.ogg",
 				},
-		['strk_grnd_uncvr']	=	{
+		["strk_grnd_uncvr"]	=	{
 				"marines/marine2/strk_grnd_uncvr1.ogg",
 				"marines/marine2/strk_grnd_uncvr2.ogg",
 				},
-		['ask_prst_fail']	=	{
+		["ask_prst_fail"]	=	{
 				"marines/marine2/ask_prst_fail1.ogg",
 				"marines/marine2/ask_prst_fail3.ogg",
 				"marines/marine2/ask_prst_fail4.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/marine2/dth_slnt1.ogg",
 				"marines/marine2/dth_slnt2.ogg",
 				"marines/marine2/dth_slnt3.ogg",
@@ -3439,7 +3439,7 @@ ENT.Voices = {
 				"marines/marine2/dth_slnt8.ogg",
 				"marines/marine2/dth_slnt9.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/marine2/hail1.ogg",
 				"marines/marine2/hail2.ogg",
 				"marines/marine2/hail4.ogg",
@@ -3447,7 +3447,7 @@ ENT.Voices = {
 				"marines/marine2/hail8.ogg",
 				"marines/marine2/hail9.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"marines/marine2/panic_infctnfrm1.ogg",
 				"marines/marine2/panic_infctnfrm2.ogg",
 				"marines/marine2/panic_infctnfrm3.ogg",
@@ -3456,17 +3456,17 @@ ENT.Voices = {
 				"marines/marine2/panic_infctnfrm7.ogg",
 				"marines/marine2/panic_infctnfrm8.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/marine2/forgive1.ogg",
 				"marines/marine2/forgive2.ogg",
 				"marines/marine2/forgive3.ogg",
 				"marines/marine2/forgive4.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"marines/marine2/prs_plr_gdgrnd1.ogg",
 				"marines/marine2/prs_plr_gdgrnd2.ogg",
 				},
-		['pain_shld']	=	{
+		["pain_shld"]	=	{
 				"marines/marine2/pain_shld1.ogg",
 				"marines/marine2/pain_shld2.ogg",
 				"marines/marine2/pain_shld3.ogg",
@@ -3476,7 +3476,7 @@ ENT.Voices = {
 				"marines/marine2/pain_shld8.ogg",
 				"marines/marine2/pain_shld9.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/marine2/pain_mdm1.ogg",
 				"marines/marine2/pain_mdm2.ogg",
 				"marines/marine2/pain_mdm3.ogg",
@@ -3485,45 +3485,45 @@ ENT.Voices = {
 				"marines/marine2/pain_mdm6.ogg",
 				"marines/marine2/pain_mdm7.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/marine2/pain_fall1.ogg",
 				"marines/marine2/pain_fall2.ogg",
 				"marines/marine2/pain_fall3.ogg",
 				"marines/marine2/pain_fall4.ogg",
 				"marines/marine2/pain_fall5.ogg",
 				},
-		['entervcl_trrt']	=	{
+		["entervcl_trrt"]	=	{
 				"marines/marine2/entervcl_trrt1.ogg",
 				"marines/marine2/entervcl_trrt2.ogg",
 				"marines/marine2/entervcl_trrt3.ogg",
 				},
-		['crs_betrayingplr_mc']	=	{
+		["crs_betrayingplr_mc"]	=	{
 				"marines/marine2/crs_betrayingplr_mc1.ogg",
 				"marines/marine2/crs_betrayingplr_mc2.ogg",
 				},
-		['ordr_re']	=	{
+		["ordr_re"]	=	{
 				"marines/marine2/ordr_re1.ogg",
 				"marines/marine2/ordr_re2.ogg",
 				"marines/marine2/ordr_re3.ogg",
 				},
-		['newordr_arrival']	=	{
+		["newordr_arrival"]	=	{
 				"marines/marine2/newordr_arrival1.ogg",
 				"marines/marine2/newordr_arrival2.ogg",
 				"marines/marine2/newordr_arrival3.ogg",
 				},
-		['grt_plr_vcl_empty']	=	{
+		["grt_plr_vcl_empty"]	=	{
 				"marines/marine2/grt_plr_vcl_empty1.ogg",
 				"marines/marine2/grt_plr_vcl_empty2.ogg",
 				"marines/marine2/grt_plr_vcl_empty3.ogg",
 				"marines/marine2/grt_plr_vcl_empty4.ogg",
 				},
-		['chkfoebdy']	=	{
+		["chkfoebdy"]	=	{
 				"marines/marine2/chkfoebdy1.ogg",
 				"marines/marine2/chkfoebdy2.ogg",
 				"marines/marine2/chkfoebdy4.ogg",
 				"marines/marine2/chkfoebdy5.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/marine2/stayback1.ogg",
 				"marines/marine2/stayback10.ogg",
 				"marines/marine2/stayback11.ogg",
@@ -3536,11 +3536,11 @@ ENT.Voices = {
 				"marines/marine2/stayback8.ogg",
 				"marines/marine2/stayback9.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/marine2/thnk_plr_mc1.ogg",
 				"marines/marine2/thnk_plr_mc2.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/marine2/dth1.ogg",
 				"marines/marine2/dth2.ogg",
 				"marines/marine2/dth4.ogg",
@@ -3548,34 +3548,34 @@ ENT.Voices = {
 				"marines/marine2/dth7.ogg",
 				"marines/marine2/dth8.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/marine2/chr1.ogg",
 				"marines/marine2/chr2.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/marine2/grt1.ogg",
 				"marines/marine2/grt3.ogg",
 				"marines/marine2/grt5.ogg",
 				"marines/marine2/grt7.ogg",
 				},
-		['rmd_wpn_snpr']	=	{
+		["rmd_wpn_snpr"]	=	{
 				"marines/marine2/rmd_wpn_snpr1.ogg",
 				"marines/marine2/rmd_wpn_snpr2.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/marine2/crs_betrayingplr_arb1.ogg",
 				"marines/marine2/crs_betrayingplr_arb2.ogg",
 				"marines/marine2/crs_betrayingplr_arb3.ogg",
 				"marines/marine2/crs_betrayingplr_arb4.ogg",
 				"marines/marine2/crs_betrayingplr_arb5.ogg",
 				},
-		['chr_kllfoe_vclbmp']	=	{
+		["chr_kllfoe_vclbmp"]	=	{
 				"marines/marine2/chr_kllfoe_vclbmp1.ogg",
 				"marines/marine2/chr_kllfoe_vclbmp2.ogg",
 				"marines/marine2/chr_kllfoe_vclbmp3.ogg",
 				"marines/marine2/chr_kllfoe_vclbmp4.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/marine2/betray1.ogg",
 				"marines/marine2/betray2.ogg",
 				"marines/marine2/betray3.ogg",
@@ -3584,38 +3584,38 @@ ENT.Voices = {
 				"marines/marine2/betray6.ogg",
 				"marines/marine2/betray7.ogg",
 				},
-		['warn_incmn_fldbm']	=	{
+		["warn_incmn_fldbm"]	=	{
 				"marines/marine2/warn_incmn_fldbm1.ogg",
 				"marines/marine2/warn_incmn_fldbm2.ogg",
 				},
-		['prs_plr_kll_mjr']	=	{
+		["prs_plr_kll_mjr"]	=	{
 				"marines/marine2/prs_plr_kll_mjr1.ogg",
 				"marines/marine2/prs_plr_kll_mjr2.ogg",
 				"marines/marine2/prs_plr_kll_mjr3.ogg",
 				"marines/marine2/prs_plr_kll_mjr4.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/marine2/look_plr_mc1.ogg",
 				"marines/marine2/look_plr_mc2.ogg",
 				"marines/marine2/look_plr_mc3.ogg",
 				"marines/marine2/look_plr_mc4.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/marine2/newordr_moveon1.ogg",
 				"marines/marine2/newordr_moveon2.ogg",
 				"marines/marine2/newordr_moveon3.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/marine2/pstcmbt_hrd1.ogg",
 				"marines/marine2/pstcmbt_hrd2.ogg",
 				},
-		['prs_plr_kll_blt']	=	{
+		["prs_plr_kll_blt"]	=	{
 				"marines/marine2/prs_plr_kll_blt1.ogg",
 				"marines/marine2/prs_plr_kll_blt2.ogg",
 				"marines/marine2/prs_plr_kll_blt3.ogg",
 				"marines/marine2/prs_plr_kll_blt4.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/marine2/lmnt_deadplr_arb1.ogg",
 				"marines/marine2/lmnt_deadplr_arb2.ogg",
 				"marines/marine2/lmnt_deadplr_arb3.ogg",
@@ -3623,19 +3623,19 @@ ENT.Voices = {
 				"marines/marine2/lmnt_deadplr_arb5.ogg",
 				"marines/marine2/lmnt_deadplr_arb6.ogg",
 				},
-		['whn_hrtblt']	=	{
+		["whn_hrtblt"]	=	{
 				"marines/marine2/whn_hrtblt1.ogg",
 				"marines/marine2/whn_hrtblt2.ogg",
 				"marines/marine2/whn_hrtblt3.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/marine2/endcmbt1.ogg",
 				"marines/marine2/endcmbt2.ogg",
 				"marines/marine2/endcmbt3.ogg",
 				"marines/marine2/endcmbt4.ogg",
 				"marines/marine2/endcmbt5.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/marine2/bump10.ogg",
 				"marines/marine2/bump3.ogg",
 				"marines/marine2/bump6.ogg",
@@ -3643,7 +3643,7 @@ ENT.Voices = {
 				"marines/marine2/bump8.ogg",
 				"marines/marine2/bump9.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"marines/marine2/hrdfoe2.ogg",
 				"marines/marine2/hrdfoe3.ogg",
 				"marines/marine2/hrdfoe5.ogg",
@@ -3651,20 +3651,20 @@ ENT.Voices = {
 				"marines/marine2/hrdfoe8.ogg",
 				"marines/marine2/hrdfoe9.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/marine2/newordr_entervcl1.ogg",
 				"marines/marine2/newordr_entervcl2.ogg",
 				"marines/marine2/newordr_entervcl3.ogg",
 				"marines/marine2/newordr_entervcl4.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/marine2/dodge1.ogg",
 				"marines/marine2/dodge2.ogg",
 				"marines/marine2/dodge3.ogg",
 				"marines/marine2/dodge4.ogg",
 				"marines/marine2/dodge5.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/marine2/dth_hdsht1.ogg",
 				"marines/marine2/dth_hdsht3.ogg",
 				"marines/marine2/dth_hdsht4.ogg",
@@ -3674,14 +3674,14 @@ ENT.Voices = {
 				"marines/marine2/dth_hdsht8.ogg",
 				"marines/marine2/dth_hdsht9.ogg",
 				},
-		['grt_plr_srprs']	=	{
+		["grt_plr_srprs"]	=	{
 				"marines/marine2/grt_plr_srprs1.ogg",
 				"marines/marine2/grt_plr_srprs2.ogg",
 				"marines/marine2/grt_plr_srprs3.ogg",
 				"marines/marine2/grt_plr_srprs4.ogg",
 				"marines/marine2/grt_plr_srprs5.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/marine2/strk1.ogg",
 				"marines/marine2/strk10.ogg",
 				"marines/marine2/strk11.ogg",
@@ -3696,56 +3696,56 @@ ENT.Voices = {
 				"marines/marine2/strk8.ogg",
 				"marines/marine2/strk9.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/marine2/lmnt_deadplr_mc1.ogg",
 				"marines/marine2/lmnt_deadplr_mc3.ogg",
 				"marines/marine2/lmnt_deadplr_mc4.ogg",
 				"marines/marine2/lmnt_deadplr_mc5.ogg",
 				"marines/marine2/lmnt_deadplr_mc6.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/marine2/newordr_leaveplr1.ogg",
 				"marines/marine2/newordr_leaveplr2.ogg",
 				"marines/marine2/newordr_leaveplr3.ogg",
 				"marines/marine2/newordr_leaveplr4.ogg",
 				"marines/marine2/newordr_leaveplr5.ogg",
 				},
-		['ask_invsgt_fail']	=	{
+		["ask_invsgt_fail"]	=	{
 				"marines/marine2/ask_invsgt_fail1.ogg",
 				"marines/marine2/ask_invsgt_fail2.ogg",
 				"marines/marine2/ask_invsgt_fail3.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/marine2/ok_plr_trdst_dvr1.ogg",
 				"marines/marine2/ok_plr_trdst_dvr2.ogg",
 				"marines/marine2/ok_plr_trdst_dvr5.ogg",
 				"marines/marine2/ok_plr_trdst_dvr6.ogg",
 				"marines/marine2/ok_plr_trdst_dvr8.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/marine2/stun1.ogg",
 				"marines/marine2/stun2.ogg",
 				"marines/marine2/stun3.ogg",
 				"marines/marine2/stun4.ogg",
 				"marines/marine2/stun5.ogg",
 				},
-		['entervcl_gnr']	=	{
+		["entervcl_gnr"]	=	{
 				"marines/marine2/entervcl_gnr1.ogg",
 				"marines/marine2/entervcl_gnr2.ogg",
 				"marines/marine2/entervcl_gnr3.ogg",
 				},
-		['join_invsgt']	=	{
+		["join_invsgt"]	=	{
 				"marines/marine2/join_invsgt1.ogg",
 				"marines/marine2/join_invsgt2.ogg",
 				"marines/marine2/join_invsgt3.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/marine2/foeordr_retreat1.ogg",
 				"marines/marine2/foeordr_retreat2.ogg",
 				"marines/marine2/foeordr_retreat3.ogg",
 				"marines/marine2/foeordr_retreat4.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/marine2/lst_cntct1.ogg",
 				"marines/marine2/lst_cntct2.ogg",
 				"marines/marine2/lst_cntct3.ogg",
@@ -3755,26 +3755,26 @@ ENT.Voices = {
 				"marines/marine2/lst_cntct7.ogg",
 				"marines/marine2/lst_cntct8.ogg",
 				},
-		['look_pstcmbt_ez']	=	{
+		["look_pstcmbt_ez"]	=	{
 				"marines/marine2/look_pstcmbt_ez1.ogg",
 				"marines/marine2/look_pstcmbt_ez2.ogg",
 				"marines/marine2/look_pstcmbt_ez3.ogg",
 				},
-		['warn_stlth']	=	{
+		["warn_stlth"]	=	{
 				"marines/marine2/warn_stlth1.ogg",
 				"marines/marine2/warn_stlth2.ogg",
 				"marines/marine2/warn_stlth3.ogg",
 				"marines/marine2/warn_stlth4.ogg",
 				},
-		['chckallybdy']	=	{
+		["chckallybdy"]	=	{
 				"marines/marine2/chckallybdy1.ogg",
 				"marines/marine2/chckallybdy2.ogg",
 				},
-		['dwn_vcl_bnsh']	=	{
+		["dwn_vcl_bnsh"]	=	{
 				"marines/marine2/dwn_vcl_bnsh1.ogg",
 				"marines/marine2/dwn_vcl_bnsh2.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"marines/marine2/morefoe1.ogg",
 				"marines/marine2/morefoe2.ogg",
 				"marines/marine2/morefoe3.ogg",
@@ -3783,29 +3783,29 @@ ENT.Voices = {
 				"marines/marine2/morefoe6.ogg",
 				"marines/marine2/morefoe8.ogg",
 				},
-		['entervcl_psngr']	=	{
+		["entervcl_psngr"]	=	{
 				"marines/marine2/entervcl_psngr1.ogg",
 				"marines/marine2/entervcl_psngr2.ogg",
 				"marines/marine2/entervcl_psngr3.ogg",
 				"marines/marine2/entervcl_psngr4.ogg",
 				},
-		['warn_trrt']	=	{
+		["warn_trrt"]	=	{
 				"marines/marine2/warn_trrt1.ogg",
 				"marines/marine2/warn_trrt2.ogg",
 				}
 	},
 	["Marine3"] = {
-	['whn_re']	=	{
+	["whn_re"]	=	{
 				"marines/marine3/whn_re1.ogg",
 				"marines/marine3/whn_re3.ogg",
 				},
-		['crs_mjrfoe']	=	{
+		["crs_mjrfoe"]	=	{
 				"marines/marine3/crs_mjrfoe1.ogg",
 				"marines/marine3/crs_mjrfoe2.ogg",
 				"marines/marine3/crs_mjrfoe3.ogg",
 				"marines/marine3/crs_mjrfoe4.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"marines/marine3/look_lngtme1.ogg",
 				"marines/marine3/look_lngtme10.ogg",
 				"marines/marine3/look_lngtme11.ogg",
@@ -3829,7 +3829,7 @@ ENT.Voices = {
 				"marines/marine3/look_lngtme8.ogg",
 				"marines/marine3/look_lngtme9.ogg",
 				},
-		['chr_vcljmp']	=	{
+		["chr_vcljmp"]	=	{
 				"marines/marine3/chr_vcljmp1.ogg",
 				"marines/marine3/chr_vcljmp10.ogg",
 				"marines/marine3/chr_vcljmp11.ogg",
@@ -3838,7 +3838,7 @@ ENT.Voices = {
 				"marines/marine3/chr_vcljmp3.ogg",
 				"marines/marine3/chr_vcljmp9.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/marine3/whn1.ogg",
 				"marines/marine3/whn2.ogg",
 				"marines/marine3/whn3.ogg",
@@ -3847,16 +3847,16 @@ ENT.Voices = {
 				"marines/marine3/whn6.ogg",
 				"marines/marine3/whn7.ogg",
 				},
-		['invt_vcl_gnr']	=	{
+		["invt_vcl_gnr"]	=	{
 				"marines/marine3/invt_vcl_gnr1.ogg",
 				"marines/marine3/invt_vcl_gnr2.ogg",
 				"marines/marine3/invt_vcl_gnr3.ogg",
 				},
-		['warn_wpn_snpr']	=	{
+		["warn_wpn_snpr"]	=	{
 				"marines/marine3/warn_wpn_snpr1.ogg",
 				"marines/marine3/warn_wpn_snpr2.ogg",
 				},
-		['tchkallybdy']	=	{
+		["tchkallybdy"]	=	{
 				"marines/marine3/tchkallybdy1.ogg",
 				"marines/marine3/tchkallybdy2.ogg",
 				"marines/marine3/tchkallybdy3.ogg",
@@ -3864,42 +3864,42 @@ ENT.Voices = {
 				"marines/marine3/tchkallybdy5.ogg",
 				"marines/marine3/tchkallybdy6.ogg",
 				},
-		['warn_vcl_wrth']	=	{
+		["warn_vcl_wrth"]	=	{
 				"marines/marine3/warn_vcl_wrth1.ogg",
 				"marines/marine3/warn_vcl_wrth2.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"marines/marine3/warn_vcl_phntm1.ogg",
 				"marines/marine3/warn_vcl_phntm2.ogg",
 				},
-		['newordr_advance']	=	{
+		["newordr_advance"]	=	{
 				"marines/marine3/newordr_advance1.ogg",
 				"marines/marine3/newordr_advance2.ogg",
 				"marines/marine3/newordr_advance3.ogg",
 				"marines/marine3/newordr_advance4.ogg",
 				},
-		['rmd_vcl_ghst']	=	{
+		["rmd_vcl_ghst"]	=	{
 				"marines/marine3/rmd_vcl_ghst1.ogg",
 				"marines/marine3/rmd_vcl_ghst2.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/marine3/foeordr_flanking1.ogg",
 				"marines/marine3/foeordr_flanking2.ogg",
 				"marines/marine3/foeordr_flanking3.ogg",
 				"marines/marine3/foeordr_flanking4.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/marine3/cvr1.ogg",
 				"marines/marine3/cvr2.ogg",
 				"marines/marine3/cvr3.ogg",
 				"marines/marine3/cvr4.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"marines/marine3/seefoe_tim1.ogg",
 				"marines/marine3/seefoe_tim2.ogg",
 				"marines/marine3/seefoe_tim3.ogg",
 				},
-		['prs_plr_kll_blt']	=	{
+		["prs_plr_kll_blt"]	=	{
 				"marines/marine3/prs_plr_kll_blt1.ogg",
 				"marines/marine3/prs_plr_kll_blt2.ogg",
 				"marines/marine3/prs_plr_kll_blt3.ogg",
@@ -3909,7 +3909,7 @@ ENT.Voices = {
 				"marines/marine3/prs_plr_kll_blt7.ogg",
 				"marines/marine3/prs_plr_kll_blt8.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"marines/marine3/rmd1.ogg",
 				"marines/marine3/rmd2.ogg",
 				"marines/marine3/rmd3.ogg",
@@ -3918,48 +3918,48 @@ ENT.Voices = {
 				"marines/marine3/rmd6.ogg",
 				"marines/marine3/rmd7.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"marines/marine3/warn_chr_bggr1.ogg",
 				"marines/marine3/warn_chr_bggr2.ogg",
 				},
-		['srchend']	=	{
+		["srchend"]	=	{
 				"marines/marine3/srchend1.ogg",
 				"marines/marine3/srchend2.ogg",
 				"marines/marine3/srchend3.ogg",
 				"marines/marine3/srchend4.ogg",
 				},
-		['warn_trrt_dply']	=	{
+		["warn_trrt_dply"]	=	{
 				"marines/marine3/warn_trrt_dply1.ogg",
 				"marines/marine3/warn_trrt_dply2.ogg",
 				},
-		['newordr_arrival']	=	{
+		["newordr_arrival"]	=	{
 				"marines/marine3/newordr_arrival1.ogg",
 				"marines/marine3/newordr_arrival2.ogg",
 				"marines/marine3/newordr_arrival3.ogg",
 				"marines/marine3/newordr_arrival4.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"marines/marine3/warn_swarm1.ogg",
 				"marines/marine3/warn_swarm2.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"marines/marine3/warn_fldreanimate1.ogg",
 				"marines/marine3/warn_fldreanimate2.ogg",
 				"marines/marine3/warn_fldreanimate3.ogg",
 				"marines/marine3/warn_fldreanimate4.ogg",
 				"marines/marine3/warn_fldreanimate5.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/marine3/charge1.ogg",
 				"marines/marine3/charge2.ogg",
 				"marines/marine3/charge3.ogg",
 				},
-		['warn_vcl_bnsh']	=	{
+		["warn_vcl_bnsh"]	=	{
 				"marines/marine3/warn_vcl_bnsh1.ogg",
 				"marines/marine3/warn_vcl_bnsh2.ogg",
 				"marines/marine3/warn_vcl_bnsh3.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/marine3/scld_plr_hrtme1.ogg",
 				"marines/marine3/scld_plr_hrtme2.ogg",
 				"marines/marine3/scld_plr_hrtme3.ogg",
@@ -3969,7 +3969,7 @@ ENT.Voices = {
 				"marines/marine3/scld_plr_hrtme7.ogg",
 				"marines/marine3/scld_plr_hrtme8.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/marine3/pain1.ogg",
 				"marines/marine3/pain2.ogg",
 				"marines/marine3/pain3.ogg",
@@ -3979,7 +3979,7 @@ ENT.Voices = {
 				"marines/marine3/pain7.ogg",
 				"marines/marine3/pain8.ogg",
 				},
-		['prst_fail']	=	{
+		["prst_fail"]	=	{
 				"marines/marine3/prst_fail1.ogg",
 				"marines/marine3/prst_fail10.ogg",
 				"marines/marine3/prst_fail11.ogg",
@@ -3992,15 +3992,15 @@ ENT.Voices = {
 				"marines/marine3/prst_fail8.ogg",
 				"marines/marine3/prst_fail9.ogg",
 				},
-		['entervcl_drvr']	=	{
+		["entervcl_drvr"]	=	{
 				"marines/marine3/entervcl_drvr1.ogg",
 				"marines/marine3/entervcl_drvr2.ogg",
 				},
-		['lookcmbt_fllw']	=	{
+		["lookcmbt_fllw"]	=	{
 				"marines/marine3/lookcmbt_fllw1.ogg",
 				"marines/marine3/lookcmbt_fllw2.ogg",
 				},
-		['foundfoe_re']	=	{
+		["foundfoe_re"]	=	{
 				"marines/marine3/foundfoe_re1.ogg",
 				"marines/marine3/foundfoe_re2.ogg",
 				"marines/marine3/foundfoe_re3.ogg",
@@ -4008,35 +4008,35 @@ ENT.Voices = {
 				"marines/marine3/foundfoe_re5.ogg",
 				"marines/marine3/foundfoe_re6.ogg",
 				},
-		['warn_scrb']	=	{
+		["warn_scrb"]	=	{
 				"marines/marine3/warn_scrb1.ogg",
 				"marines/marine3/warn_scrb2.ogg",
 				"marines/marine3/warn_scrb3.ogg",
 				"marines/marine3/warn_scrb4.ogg",
 				},
-		['ordr_grenade_all']	=	{
+		["ordr_grenade_all"]	=	{
 				"marines/marine3/ordr_grenade_all1.ogg",
 				"marines/marine3/ordr_grenade_all2.ogg",
 				"marines/marine3/ordr_grenade_all4.ogg",
 				"marines/marine3/ordr_grenade_all5.ogg",
 				},
-		['warn_incmn_vclbm']	=	{
+		["warn_incmn_vclbm"]	=	{
 				"marines/marine3/warn_incmn_vclbm1.ogg",
 				"marines/marine3/warn_incmn_vclbm2.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/marine3/cvr_re1.ogg",
 				"marines/marine3/cvr_re2.ogg",
 				"marines/marine3/cvr_re3.ogg",
 				"marines/marine3/cvr_re4.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"marines/marine3/prs_plr_kll1.ogg",
 				"marines/marine3/prs_plr_kll2.ogg",
 				"marines/marine3/prs_plr_kll3.ogg",
 				"marines/marine3/prs_plr_kll4.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/marine3/dwn1.ogg",
 				"marines/marine3/dwn2.ogg",
 				"marines/marine3/dwn3.ogg",
@@ -4044,12 +4044,12 @@ ENT.Voices = {
 				"marines/marine3/dwn5.ogg",
 				"marines/marine3/dwn6.ogg",
 				},
-		['hail_agg']	=	{
+		["hail_agg"]	=	{
 				"marines/marine3/hail_agg1.ogg",
 				"marines/marine3/hail_agg2.ogg",
 				"marines/marine3/hail_agg3.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/marine3/grt10.ogg",
 				"marines/marine3/grt11.ogg",
 				"marines/marine3/grt5.ogg",
@@ -4058,17 +4058,17 @@ ENT.Voices = {
 				"marines/marine3/grt8.ogg",
 				"marines/marine3/grt9.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/marine3/dth_mjr1.ogg",
 				"marines/marine3/dth_mjr2.ogg",
 				"marines/marine3/dth_mjr3.ogg",
 				"marines/marine3/dth_mjr4.ogg",
 				},
-		['grt_intovcl_mine']	=	{
+		["grt_intovcl_mine"]	=	{
 				"marines/marine3/grt_intovcl_mine1.ogg",
 				"marines/marine3/grt_intovcl_mine2.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"marines/marine3/warn_incmn1.ogg",
 				"marines/marine3/warn_incmn2.ogg",
 				"marines/marine3/warn_incmn3.ogg",
@@ -4077,22 +4077,22 @@ ENT.Voices = {
 				"marines/marine3/warn_incmn6.ogg",
 				"marines/marine3/warn_incmn7.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/marine3/newordr_support1.ogg",
 				"marines/marine3/newordr_support2.ogg",
 				"marines/marine3/newordr_support3.ogg",
 				"marines/marine3/newordr_support4.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/marine3/panic1.ogg",
 				"marines/marine3/panic2.ogg",
 				"marines/marine3/panic3.ogg",
 				},
-		['rmd_scrb']	=	{
+		["rmd_scrb"]	=	{
 				"marines/marine3/rmd_scrb3.ogg",
 				"marines/marine3/rmd_scrb4.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/marine3/pld1.ogg",
 				"marines/marine3/pld3.ogg",
 				"marines/marine3/pld4.ogg",
@@ -4100,44 +4100,44 @@ ENT.Voices = {
 				"marines/marine3/pld6.ogg",
 				"marines/marine3/pld7.ogg",
 				},
-		['warn_chr_hntr']	=	{
+		["warn_chr_hntr"]	=	{
 				"marines/marine3/warn_chr_hntr1.ogg",
 				"marines/marine3/warn_chr_hntr2.ogg",
 				},
-		['warn_brsrk']	=	{
+		["warn_brsrk"]	=	{
 				"marines/marine3/warn_brsrk1.ogg",
 				"marines/marine3/warn_brsrk2.ogg",
 				},
-		['dwn_vcl_chpr']	=	{
+		["dwn_vcl_chpr"]	=	{
 				"marines/marine3/dwn_vcl_chpr1.ogg",
 				"marines/marine3/dwn_vcl_chpr2.ogg",
 				"marines/marine3/dwn_vcl_chpr3.ogg",
 				"marines/marine3/dwn_vcl_chpr4.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/marine3/warn1.ogg",
 				"marines/marine3/warn3.ogg",
 				"marines/marine3/warn4.ogg",
 				"marines/marine3/warn5.ogg",
 				"marines/marine3/warn6.ogg",
 				},
-		['scld_plr_wldvcl']	=	{
+		["scld_plr_wldvcl"]	=	{
 				"marines/marine3/scld_plr_wldvcl1.ogg",
 				"marines/marine3/scld_plr_wldvcl2.ogg",
 				},
-		['tnt_mjrfoe']	=	{
+		["tnt_mjrfoe"]	=	{
 				"marines/marine3/tnt_mjrfoe1.ogg",
 				"marines/marine3/tnt_mjrfoe2.ogg",
 				"marines/marine3/tnt_mjrfoe3.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/marine3/dodge1.ogg",
 				"marines/marine3/dodge2.ogg",
 				"marines/marine3/dodge3.ogg",
 				"marines/marine3/dodge4.ogg",
 				"marines/marine3/dodge6.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/marine3/tnt1.ogg",
 				"marines/marine3/tnt10.ogg",
 				"marines/marine3/tnt11.ogg",
@@ -4155,7 +4155,7 @@ ENT.Voices = {
 				"marines/marine3/tnt8.ogg",
 				"marines/marine3/tnt9.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/marine3/thrtn1.ogg",
 				"marines/marine3/thrtn10.ogg",
 				"marines/marine3/thrtn11.ogg",
@@ -4169,73 +4169,73 @@ ENT.Voices = {
 				"marines/marine3/thrtn8.ogg",
 				"marines/marine3/thrtn9.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"marines/marine3/seefoe_downthere1.ogg",
 				"marines/marine3/seefoe_downthere2.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/marine3/thrwn1.ogg",
 				"marines/marine3/thrwn2.ogg",
 				"marines/marine3/thrwn3.ogg",
 				"marines/marine3/thrwn4.ogg",
 				"marines/marine3/thrwn5.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/marine3/newordr_exitvcl1.ogg",
 				"marines/marine3/newordr_exitvcl2.ogg",
 				"marines/marine3/newordr_exitvcl3.ogg",
 				"marines/marine3/newordr_exitvcl4.ogg",
 				"marines/marine3/newordr_exitvcl5.ogg",
 				},
-		['join_stayback']	=	{
+		["join_stayback"]	=	{
 				"marines/marine3/join_stayback1.ogg",
 				"marines/marine3/join_stayback2.ogg",
 				"marines/marine3/join_stayback3.ogg",
 				"marines/marine3/join_stayback4.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"marines/marine3/cower1.ogg",
 				"marines/marine3/cower2.ogg",
 				"marines/marine3/cower3.ogg",
 				"marines/marine3/cower4.ogg",
 				"marines/marine3/cower9.ogg",
 				},
-		['thrtn_mjrfoe']	=	{
+		["thrtn_mjrfoe"]	=	{
 				"marines/marine3/thrtn_mjrfoe1.ogg",
 				"marines/marine3/thrtn_mjrfoe3.ogg",
 				},
-		['newordr_fllwplr']	=	{
+		["newordr_fllwplr"]	=	{
 				"marines/marine3/newordr_fllwplr1.ogg",
 				"marines/marine3/newordr_fllwplr2.ogg",
 				"marines/marine3/newordr_fllwplr3.ogg",
 				"marines/marine3/newordr_fllwplr4.ogg",
 				},
-		['chkallybdy']	=	{
+		["chkallybdy"]	=	{
 				"marines/marine3/chkallybdy1.ogg",
 				"marines/marine3/chkallybdy2.ogg",
 				"marines/marine3/chkallybdy3.ogg",
 				},
-		['pstcmbt_fld']	=	{
+		["pstcmbt_fld"]	=	{
 				"marines/marine3/pstcmbt_fld1.ogg",
 				"marines/marine3/pstcmbt_fld2.ogg",
 				"marines/marine3/pstcmbt_fld3.ogg",
 				"marines/marine3/pstcmbt_fld4.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/marine3/foeordr_support1.ogg",
 				"marines/marine3/foeordr_support2.ogg",
 				"marines/marine3/foeordr_support3.ogg",
 				"marines/marine3/foeordr_support4.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"marines/marine3/panic_plsmgrnd2.ogg",
 				"marines/marine3/panic_plsmgrnd4.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/marine3/pstcmbt_brt1.ogg",
 				"marines/marine3/pstcmbt_brt2.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/marine3/grt_plr_mc2.ogg",
 				"marines/marine3/grt_plr_mc3.ogg",
 				"marines/marine3/grt_plr_mc5.ogg",
@@ -4244,25 +4244,25 @@ ENT.Voices = {
 				"marines/marine3/grt_plr_mc8.ogg",
 				"marines/marine3/grt_plr_mc9.ogg",
 				},
-		['thrtn_foe_re']	=	{
+		["thrtn_foe_re"]	=	{
 				"marines/marine3/thrtn_foe_re1.ogg",
 				"marines/marine3/thrtn_foe_re2.ogg",
 				"marines/marine3/thrtn_foe_re3.ogg",
 				"marines/marine3/thrtn_foe_re4.ogg",
 				"marines/marine3/thrtn_foe_re5.ogg",
 				},
-		['rmd_wpn_hmmr']	=	{
+		["rmd_wpn_hmmr"]	=	{
 				"marines/marine3/rmd_wpn_hmmr1.ogg",
 				"marines/marine3/rmd_wpn_hmmr2.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/marine3/foeordr_fallback1.ogg",
 				"marines/marine3/foeordr_fallback2.ogg",
 				"marines/marine3/foeordr_fallback3.ogg",
 				"marines/marine3/foeordr_fallback4.ogg",
 				"marines/marine3/foeordr_fallback5.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/marine3/hail_plr_mc1.ogg",
 				"marines/marine3/hail_plr_mc2.ogg",
 				"marines/marine3/hail_plr_mc3.ogg",
@@ -4270,11 +4270,11 @@ ENT.Voices = {
 				"marines/marine3/hail_plr_mc5.ogg",
 				"marines/marine3/hail_plr_mc6.ogg",
 				},
-		['join_emrg']	=	{
+		["join_emrg"]	=	{
 				"marines/marine3/join_emrg3.ogg",
 				"marines/marine3/join_emrg4.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/marine3/foundfoe_prst1.ogg",
 				"marines/marine3/foundfoe_prst10.ogg",
 				"marines/marine3/foundfoe_prst11.ogg",
@@ -4287,7 +4287,7 @@ ENT.Voices = {
 				"marines/marine3/foundfoe_prst8.ogg",
 				"marines/marine3/foundfoe_prst9.ogg",
 				},
-		['injured']	=	{
+		["injured"]	=	{
 				"marines/marine3/injured2.ogg",
 				"marines/marine3/injured3.ogg",
 				"marines/marine3/injured4.ogg",
@@ -4296,11 +4296,11 @@ ENT.Voices = {
 				"marines/marine3/injured7.ogg",
 				"marines/marine3/injured9.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"marines/marine3/dth_slw1.ogg",
 				"marines/marine3/dth_slw2.ogg",
 				},
-		['strk_vcl_gnr']	=	{
+		["strk_vcl_gnr"]	=	{
 				"marines/marine3/strk_vcl_gnr1.ogg",
 				"marines/marine3/strk_vcl_gnr10.ogg",
 				"marines/marine3/strk_vcl_gnr11.ogg",
@@ -4313,15 +4313,15 @@ ENT.Voices = {
 				"marines/marine3/strk_vcl_gnr8.ogg",
 				"marines/marine3/strk_vcl_gnr9.ogg",
 				},
-		['look_plr_fllw']	=	{
+		["look_plr_fllw"]	=	{
 				"marines/marine3/look_plr_fllw3.ogg",
 				"marines/marine3/look_plr_fllw4.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/marine3/thnk_plr_arb1.ogg",
 				"marines/marine3/thnk_plr_arb2.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/marine3/thnk1.ogg",
 				"marines/marine3/thnk10.ogg",
 				"marines/marine3/thnk11.ogg",
@@ -4334,60 +4334,60 @@ ENT.Voices = {
 				"marines/marine3/thnk8.ogg",
 				"marines/marine3/thnk9.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/marine3/pain_mjr1.ogg",
 				"marines/marine3/pain_mjr2.ogg",
 				"marines/marine3/pain_mjr3.ogg",
 				},
-		['kamikaze']	=	{
+		["kamikaze"]	=	{
 				"marines/marine3/kamikaze1.ogg",
 				"marines/marine3/kamikaze2.ogg",
 				"marines/marine3/kamikaze3.ogg",
 				},
-		['warn_wpn_hmmr']	=	{
+		["warn_wpn_hmmr"]	=	{
 				"marines/marine3/warn_wpn_hmmr1.ogg",
 				"marines/marine3/warn_wpn_hmmr2.ogg",
 				"marines/marine3/warn_wpn_hmmr3.ogg",
 				"marines/marine3/warn_wpn_hmmr4.ogg",
 				"marines/marine3/warn_wpn_hmmr5.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/marine3/chr_kllfoe1.ogg",
 				"marines/marine3/chr_kllfoe2.ogg",
 				"marines/marine3/chr_kllfoe3.ogg",
 				"marines/marine3/chr_kllfoe4.ogg",
 				"marines/marine3/chr_kllfoe5.ogg",
 				},
-		['rmd_vcl_chpr']	=	{
+		["rmd_vcl_chpr"]	=	{
 				"marines/marine3/rmd_vcl_chpr1.ogg",
 				"marines/marine3/rmd_vcl_chpr2.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"marines/marine3/dwn_vcl_wrth1.ogg",
 				"marines/marine3/dwn_vcl_wrth2.ogg",
 				"marines/marine3/dwn_vcl_wrth3.ogg",
 				"marines/marine3/dwn_vcl_wrth4.ogg",
 				"marines/marine3/dwn_vcl_wrth5.ogg",
 				},
-		['chr_kllfoe_blt']	=	{
+		["chr_kllfoe_blt"]	=	{
 				"marines/marine3/chr_kllfoe_blt1.ogg",
 				"marines/marine3/chr_kllfoe_blt2.ogg",
 				"marines/marine3/chr_kllfoe_blt3.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/marine3/scld1.ogg",
 				"marines/marine3/scld2.ogg",
 				"marines/marine3/scld3.ogg",
 				"marines/marine3/scld4.ogg",
 				"marines/marine3/scld5.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/marine3/stun1.ogg",
 				"marines/marine3/stun2.ogg",
 				"marines/marine3/stun3.ogg",
 				"marines/marine3/stun4.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/marine3/thnk_plr_btrwpn1.ogg",
 				"marines/marine3/thnk_plr_btrwpn2.ogg",
 				"marines/marine3/thnk_plr_btrwpn3.ogg",
@@ -4398,7 +4398,7 @@ ENT.Voices = {
 				"marines/marine3/thnk_plr_btrwpn8.ogg",
 				"marines/marine3/thnk_plr_btrwpn9.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"marines/marine3/dth_drama1.ogg",
 				"marines/marine3/dth_drama2.ogg",
 				"marines/marine3/dth_drama3.ogg",
@@ -4407,14 +4407,14 @@ ENT.Voices = {
 				"marines/marine3/dth_drama6.ogg",
 				"marines/marine3/dth_drama8.ogg",
 				},
-		['newordr_charge']	=	{
+		["newordr_charge"]	=	{
 				"marines/marine3/newordr_charge1.ogg",
 				"marines/marine3/newordr_charge2.ogg",
 				"marines/marine3/newordr_charge3.ogg",
 				"marines/marine3/newordr_charge4.ogg",
 				"marines/marine3/newordr_charge5.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/marine3/seefoe1.ogg",
 				"marines/marine3/seefoe10.ogg",
 				"marines/marine3/seefoe11.ogg",
@@ -4427,53 +4427,53 @@ ENT.Voices = {
 				"marines/marine3/seefoe8.ogg",
 				"marines/marine3/seefoe9.ogg",
 				},
-		['join_invsgt']	=	{
+		["join_invsgt"]	=	{
 				"marines/marine3/join_invsgt1.ogg",
 				"marines/marine3/join_invsgt2.ogg",
 				"marines/marine3/join_invsgt3.ogg",
 				"marines/marine3/join_invsgt4.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/marine3/pain_fall1.ogg",
 				"marines/marine3/pain_fall3.ogg",
 				"marines/marine3/pain_fall4.ogg",
 				"marines/marine3/pain_fall5.ogg",
 				},
-		['stayback_agg']	=	{
+		["stayback_agg"]	=	{
 				"marines/marine3/stayback_agg1.ogg",
 				"marines/marine3/stayback_agg2.ogg",
 				"marines/marine3/stayback_agg3.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/marine3/lmnt1.ogg",
 				"marines/marine3/lmnt2.ogg",
 				"marines/marine3/lmnt4.ogg",
 				"marines/marine3/lmnt5.ogg",
 				},
-		['grt_intovcl_imdvr']	=	{
+		["grt_intovcl_imdvr"]	=	{
 				"marines/marine3/grt_intovcl_imdvr1.ogg",
 				"marines/marine3/grt_intovcl_imdvr2.ogg",
 				},
-		['dwn_vcl_ghst']	=	{
+		["dwn_vcl_ghst"]	=	{
 				"marines/marine3/dwn_vcl_ghst1.ogg",
 				"marines/marine3/dwn_vcl_ghst2.ogg",
 				},
-		['grt_plr_vcl_empty']	=	{
+		["grt_plr_vcl_empty"]	=	{
 				"marines/marine3/grt_plr_vcl_empty1.ogg",
 				"marines/marine3/grt_plr_vcl_empty4.ogg",
 				},
-		['newordr_fallback']	=	{
+		["newordr_fallback"]	=	{
 				"marines/marine3/newordr_fallback1.ogg",
 				"marines/marine3/newordr_fallback2.ogg",
 				"marines/marine3/newordr_fallback3.ogg",
 				"marines/marine3/newordr_fallback4.ogg",
 				},
-		['stayback_tim']	=	{
+		["stayback_tim"]	=	{
 				"marines/marine3/stayback_tim1.ogg",
 				"marines/marine3/stayback_tim2.ogg",
 				"marines/marine3/stayback_tim3.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/marine3/scld_plr_mc1.ogg",
 				"marines/marine3/scld_plr_mc2.ogg",
 				"marines/marine3/scld_plr_mc3.ogg",
@@ -4481,12 +4481,12 @@ ENT.Voices = {
 				"marines/marine3/scld_plr_mc5.ogg",
 				"marines/marine3/scld_plr_mc6.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/marine3/look_plr_arb2.ogg",
 				"marines/marine3/look_plr_arb3.ogg",
 				"marines/marine3/look_plr_arb4.ogg",
 				},
-		['strk_grnd']	=	{
+		["strk_grnd"]	=	{
 				"marines/marine3/strk_grnd1.ogg",
 				"marines/marine3/strk_grnd2.ogg",
 				"marines/marine3/strk_grnd3.ogg",
@@ -4494,18 +4494,18 @@ ENT.Voices = {
 				"marines/marine3/strk_grnd5.ogg",
 				"marines/marine3/strk_grnd6.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"marines/marine3/rmd_vcl_phntm1.ogg",
 				"marines/marine3/rmd_vcl_phntm2.ogg",
 				"marines/marine3/rmd_vcl_phntm3.ogg",
 				"marines/marine3/rmd_vcl_phntm4.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/marine3/pstcmbt_ez1.ogg",
 				"marines/marine3/pstcmbt_ez2.ogg",
 				"marines/marine3/pstcmbt_ez3.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"marines/marine3/invsgt1.ogg",
 				"marines/marine3/invsgt10.ogg",
 				"marines/marine3/invsgt11.ogg",
@@ -4518,11 +4518,11 @@ ENT.Voices = {
 				"marines/marine3/invsgt8.ogg",
 				"marines/marine3/invsgt9.ogg",
 				},
-		['dwn_wpn_snpr']	=	{
+		["dwn_wpn_snpr"]	=	{
 				"marines/marine3/dwn_wpn_snpr1.ogg",
 				"marines/marine3/dwn_wpn_snpr2.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"marines/marine3/scld_plr_kllally1.ogg",
 				"marines/marine3/scld_plr_kllally10.ogg",
 				"marines/marine3/scld_plr_kllally3.ogg",
@@ -4532,19 +4532,19 @@ ENT.Voices = {
 				"marines/marine3/scld_plr_kllally8.ogg",
 				"marines/marine3/scld_plr_kllally9.ogg",
 				},
-		['warn_pureforms']	=	{
+		["warn_pureforms"]	=	{
 				"marines/marine3/warn_pureforms2.ogg",
 				"marines/marine3/warn_pureforms3.ogg",
 				"marines/marine3/warn_pureforms4.ogg",
 				},
-		['status']	=	{
+		["status"]	=	{
 				"marines/marine3/status1.ogg",
 				"marines/marine3/status2.ogg",
 				"marines/marine3/status3.ogg",
 				"marines/marine3/status4.ogg",
 				"marines/marine3/status5.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"marines/marine3/srprs1.ogg",
 				"marines/marine3/srprs11.ogg",
 				"marines/marine3/srprs2.ogg",
@@ -4555,24 +4555,24 @@ ENT.Voices = {
 				"marines/marine3/srprs8.ogg",
 				"marines/marine3/srprs9.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"marines/marine3/dth_reanimated1.ogg",
 				"marines/marine3/dth_reanimated2.ogg",
 				"marines/marine3/dth_reanimated3.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/marine3/ok_plr_arb1.ogg",
 				"marines/marine3/ok_plr_arb2.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"marines/marine3/hail_tim1.ogg",
 				"marines/marine3/hail_tim3.ogg",
 				},
-		['warn_stlth_again']	=	{
+		["warn_stlth_again"]	=	{
 				"marines/marine3/warn_stlth_again1.ogg",
 				"marines/marine3/warn_stlth_again2.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/marine3/look1.ogg",
 				"marines/marine3/look10.ogg",
 				"marines/marine3/look12.ogg",
@@ -4585,17 +4585,17 @@ ENT.Voices = {
 				"marines/marine3/look8.ogg",
 				"marines/marine3/look9.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/marine3/neworder_flanking1.ogg",
 				"marines/marine3/neworder_flanking2.ogg",
 				"marines/marine3/neworder_flanking3.ogg",
 				"marines/marine3/neworder_flanking4.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"marines/marine3/pstcmbt_tim1.ogg",
 				"marines/marine3/pstcmbt_tim2.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/marine3/hail_plr_arb1.ogg",
 				"marines/marine3/hail_plr_arb2.ogg",
 				"marines/marine3/hail_plr_arb3.ogg",
@@ -4603,7 +4603,7 @@ ENT.Voices = {
 				"marines/marine3/hail_plr_arb5.ogg",
 				"marines/marine3/hail_plr_arb6.ogg",
 				},
-		['srch_pinned_']	=	{
+		["srch_pinned"]	=	{
 				"marines/marine3/srch_pinned_1.ogg",
 				"marines/marine3/srch_pinned_10.ogg",
 				"marines/marine3/srch_pinned_2.ogg",
@@ -4615,11 +4615,11 @@ ENT.Voices = {
 				"marines/marine3/srch_pinned_8.ogg",
 				"marines/marine3/srch_pinned_9.ogg",
 				},
-		['grt_plr_vcl']	=	{
+		["grt_plr_vcl"]	=	{
 				"marines/marine3/grt_plr_vcl1.ogg",
 				"marines/marine3/grt_plr_vcl2.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"marines/marine3/lookcmbt1.ogg",
 				"marines/marine3/lookcmbt10.ogg",
 				"marines/marine3/lookcmbt2.ogg",
@@ -4631,7 +4631,7 @@ ENT.Voices = {
 				"marines/marine3/lookcmbt8.ogg",
 				"marines/marine3/lookcmbt9.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"marines/marine3/foundfoe1.ogg",
 				"marines/marine3/foundfoe10.ogg",
 				"marines/marine3/foundfoe11.ogg",
@@ -4647,48 +4647,48 @@ ENT.Voices = {
 				"marines/marine3/foundfoe8.ogg",
 				"marines/marine3/foundfoe9.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"marines/marine3/look_pstcmbt_hrd1.ogg",
 				"marines/marine3/look_pstcmbt_hrd3.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/marine3/dth_fall1.ogg",
 				"marines/marine3/dth_fall2.ogg",
 				"marines/marine3/dth_fall3.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/marine3/shotfoebdy1.ogg",
 				"marines/marine3/shotfoebdy2.ogg",
 				"marines/marine3/shotfoebdy3.ogg",
 				"marines/marine3/shotfoebdy4.ogg",
 				"marines/marine3/shotfoebdy5.ogg",
 				},
-		['join_re']	=	{
+		["join_re"]	=	{
 				"marines/marine3/join_re1.ogg",
 				"marines/marine3/join_re2.ogg",
 				"marines/marine3/join_re3.ogg",
 				"marines/marine3/join_re4.ogg",
 				},
-		['ordr_pinned']	=	{
+		["ordr_pinned"]	=	{
 				"marines/marine3/ordr_pinned1.ogg",
 				"marines/marine3/ordr_pinned2.ogg",
 				"marines/marine3/ordr_pinned3.ogg",
 				"marines/marine3/ordr_pinned4.ogg",
 				"marines/marine3/ordr_pinned5.ogg",
 				},
-		['entervcl']	=	{
+		["entervcl"]	=	{
 				"marines/marine3/entervcl1.ogg",
 				"marines/marine3/entervcl2.ogg",
 				"marines/marine3/entervcl3.ogg",
 				"marines/marine3/entervcl4.ogg",
 				},
-		['join_prst']	=	{
+		["join_prst"]	=	{
 				"marines/marine3/join_prst1.ogg",
 				"marines/marine3/join_prst2.ogg",
 				"marines/marine3/join_prst3.ogg",
 				"marines/marine3/join_prst4.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/marine3/approve1.ogg",
 				"marines/marine3/approve2.ogg",
 				"marines/marine3/approve3.ogg",
@@ -4696,33 +4696,33 @@ ENT.Voices = {
 				"marines/marine3/approve5.ogg",
 				"marines/marine3/approve6.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"marines/marine3/seefoe_upthere1.ogg",
 				"marines/marine3/seefoe_upthere2.ogg",
 				},
-		['warn_vcl_ghst']	=	{
+		["warn_vcl_ghst"]	=	{
 				"marines/marine3/warn_vcl_ghst1.ogg",
 				"marines/marine3/warn_vcl_ghst2.ogg",
 				"marines/marine3/warn_vcl_ghst3.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"marines/marine3/seefoe_agg1.ogg",
 				"marines/marine3/seefoe_agg3.ogg",
 				"marines/marine3/seefoe_agg4.ogg",
 				"marines/marine3/seefoe_agg5.ogg",
 				"marines/marine3/seefoe_agg6.ogg",
 				},
-		['chr_kllfoe_stkplsm']	=	{
+		["chr_kllfoe_stkplsm"]	=	{
 				"marines/marine3/chr_kllfoe_stkplsm1.ogg",
 				"marines/marine3/chr_kllfoe_stkplsm2.ogg",
 				},
-		['strk_snpr']	=	{
+		["strk_snpr"]	=	{
 				"marines/marine3/strk_snpr1.ogg",
 				"marines/marine3/strk_snpr2.ogg",
 				"marines/marine3/strk_snpr3.ogg",
 				"marines/marine3/strk_snpr4.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/marine3/meleeleap1.ogg",
 				"marines/marine3/meleeleap2.ogg",
 				"marines/marine3/meleeleap3.ogg",
@@ -4731,7 +4731,7 @@ ENT.Voices = {
 				"marines/marine3/meleeleap6.ogg",
 				"marines/marine3/meleeleap7.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/marine3/scrn_plr_wrswpn1.ogg",
 				"marines/marine3/scrn_plr_wrswpn10.ogg",
 				"marines/marine3/scrn_plr_wrswpn11.ogg",
@@ -4742,16 +4742,16 @@ ENT.Voices = {
 				"marines/marine3/scrn_plr_wrswpn7.ogg",
 				"marines/marine3/scrn_plr_wrswpn9.ogg",
 				},
-		['lookcmbt_agg']	=	{
+		["lookcmbt_agg"]	=	{
 				"marines/marine3/lookcmbt_agg1.ogg",
 				"marines/marine3/lookcmbt_agg2.ogg",
 				},
-		['scrn_plr_mc']	=	{
+		["scrn_plr_mc"]	=	{
 				"marines/marine3/scrn_plr_mc1.ogg",
 				"marines/marine3/scrn_plr_mc2.ogg",
 				"marines/marine3/scrn_plr_mc3.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/marine3/scrn1.ogg",
 				"marines/marine3/scrn10.ogg",
 				"marines/marine3/scrn11.ogg",
@@ -4764,28 +4764,28 @@ ENT.Voices = {
 				"marines/marine3/scrn8.ogg",
 				"marines/marine3/scrn9.ogg",
 				},
-		['regret']	=	{
+		["regret"]	=	{
 				"marines/marine3/regret1.ogg",
 				"marines/marine3/regret2.ogg",
 				"marines/marine3/regret3.ogg",
 				"marines/marine3/regret4.ogg",
 				},
-		['tnt_re']	=	{
+		["tnt_re"]	=	{
 				"marines/marine3/tnt_re1.ogg",
 				"marines/marine3/tnt_re2.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"marines/marine3/rmd_vcl_wrth1.ogg",
 				"marines/marine3/rmd_vcl_wrth3.ogg",
 				},
-		['ordr_re']	=	{
+		["ordr_re"]	=	{
 				"marines/marine3/ordr_re1.ogg",
 				"marines/marine3/ordr_re2.ogg",
 				"marines/marine3/ordr_re3.ogg",
 				"marines/marine3/ordr_re5.ogg",
 				"marines/marine3/ordr_re6.ogg",
 				},
-		['invsgt_fail']	=	{
+		["invsgt_fail"]	=	{
 				"marines/marine3/invsgt_fail1.ogg",
 				"marines/marine3/invsgt_fail10.ogg",
 				"marines/marine3/invsgt_fail11.ogg",
@@ -4797,12 +4797,12 @@ ENT.Voices = {
 				"marines/marine3/invsgt_fail8.ogg",
 				"marines/marine3/invsgt_fail9.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"marines/marine3/scld_plr_wldgrnd1.ogg",
 				"marines/marine3/scld_plr_wldgrnd2.ogg",
 				"marines/marine3/scld_plr_wldgrnd3.ogg",
 				},
-		['scld_plr_vclcrash']	=	{
+		["scld_plr_vclcrash"]	=	{
 				"marines/marine3/scld_plr_vclcrash1.ogg",
 				"marines/marine3/scld_plr_vclcrash2.ogg",
 				"marines/marine3/scld_plr_vclcrash4.ogg",
@@ -4810,11 +4810,11 @@ ENT.Voices = {
 				"marines/marine3/scld_plr_vclcrash6.ogg",
 				"marines/marine3/scld_plr_vclcrash7.ogg",
 				},
-		['dwn_scrb']	=	{
+		["dwn_scrb"]	=	{
 				"marines/marine3/dwn_scrb1.ogg",
 				"marines/marine3/dwn_scrb2.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"marines/marine3/scld_plr_hrt_blt1.ogg",
 				"marines/marine3/scld_plr_hrt_blt10.ogg",
 				"marines/marine3/scld_plr_hrt_blt11.ogg",
@@ -4827,33 +4827,33 @@ ENT.Voices = {
 				"marines/marine3/scld_plr_hrt_blt8.ogg",
 				"marines/marine3/scld_plr_hrt_blt9.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/marine3/ordr_chkfoebdy3.ogg",
 				"marines/marine3/ordr_chkfoebdy4.ogg",
 				"marines/marine3/ordr_chkfoebdy5.ogg",
 				"marines/marine3/ordr_chkfoebdy6.ogg",
 				},
-		['prs_plr_sniping']	=	{
+		["prs_plr_sniping"]	=	{
 				"marines/marine3/prs_plr_sniping1.ogg",
 				"marines/marine3/prs_plr_sniping2.ogg",
 				},
-		['reanimate']	=	{
+		["reanimate"]	=	{
 				"marines/marine3/reanimate1.ogg",
 				"marines/marine3/reanimate2.ogg",
 				"marines/marine3/reanimate3.ogg",
 				},
-		['ask_chkallybdyf']	=	{
+		["ask_chkallybdyf"]	=	{
 				"marines/marine3/ask_chkallybdyf1.ogg",
 				"marines/marine3/ask_chkallybdyf2.ogg",
 				"marines/marine3/ask_chkallybdyf3.ogg",
 				},
-		['grt_intovcl']	=	{
+		["grt_intovcl"]	=	{
 				"marines/marine3/grt_intovcl1.ogg",
 				"marines/marine3/grt_intovcl2.ogg",
 				"marines/marine3/grt_intovcl3.ogg",
 				"marines/marine3/grt_intovcl4.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"marines/marine3/warn_incmn_grnd1.ogg",
 				"marines/marine3/warn_incmn_grnd2.ogg",
 				"marines/marine3/warn_incmn_grnd3.ogg",
@@ -4863,7 +4863,7 @@ ENT.Voices = {
 				"marines/marine3/warn_incmn_grnd7.ogg",
 				"marines/marine3/warn_incmn_grnd8.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/marine3/grt_plr_arb1.ogg",
 				"marines/marine3/grt_plr_arb2.ogg",
 				"marines/marine3/grt_plr_arb3.ogg",
@@ -4872,30 +4872,30 @@ ENT.Voices = {
 				"marines/marine3/grt_plr_arb6.ogg",
 				"marines/marine3/grt_plr_arb7.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/marine3/scrn_plr_arb1.ogg",
 				"marines/marine3/scrn_plr_arb2.ogg",
 				},
-		['rmd_trrt']	=	{
+		["rmd_trrt"]	=	{
 				"marines/marine3/rmd_trrt1.ogg",
 				"marines/marine3/rmd_trrt2.ogg",
 				"marines/marine3/rmd_trrt3.ogg",
 				},
-		['rmd_stlth']	=	{
+		["rmd_stlth"]	=	{
 				"marines/marine3/rmd_stlth1.ogg",
 				"marines/marine3/rmd_stlth2.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/marine3/lift1.ogg",
 				"marines/marine3/lift2.ogg",
 				"marines/marine3/lift3.ogg",
 				"marines/marine3/lift4.ogg",
 				},
-		['rmd_vcl_bnsh']	=	{
+		["rmd_vcl_bnsh"]	=	{
 				"marines/marine3/rmd_vcl_bnsh1.ogg",
 				"marines/marine3/rmd_vcl_bnsh2.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/marine3/prs_plr_arb1.ogg",
 				"marines/marine3/prs_plr_arb2.ogg",
 				"marines/marine3/prs_plr_arb3.ogg",
@@ -4903,7 +4903,7 @@ ENT.Voices = {
 				"marines/marine3/prs_plr_arb5.ogg",
 				"marines/marine3/prs_plr_arb6.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/marine3/scld_plr_arb1.ogg",
 				"marines/marine3/scld_plr_arb2.ogg",
 				"marines/marine3/scld_plr_arb3.ogg",
@@ -4912,23 +4912,23 @@ ENT.Voices = {
 				"marines/marine3/scld_plr_arb6.ogg",
 				"marines/marine3/scld_plr_arb7.ogg",
 				},
-		['grt_intovcl_imgnr']	=	{
+		["grt_intovcl_imgnr"]	=	{
 				"marines/marine3/grt_intovcl_imgnr1.ogg",
 				"marines/marine3/grt_intovcl_imgnr2.ogg",
 				"marines/marine3/grt_intovcl_imgnr3.ogg",
 				},
-		['pstcmbt_agg']	=	{
+		["pstcmbt_agg"]	=	{
 				"marines/marine3/pstcmbt_agg1.ogg",
 				"marines/marine3/pstcmbt_agg2.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/marine3/pstcmbt1.ogg",
 				"marines/marine3/pstcmbt2.ogg",
 				"marines/marine3/pstcmbt5.ogg",
 				"marines/marine3/pstcmbt6.ogg",
 				"marines/marine3/pstcmbt7.ogg",
 				},
-		['prst']	=	{
+		["prst"]	=	{
 				"marines/marine3/prst1.ogg",
 				"marines/marine3/prst2.ogg",
 				"marines/marine3/prst3.ogg",
@@ -4936,14 +4936,14 @@ ENT.Voices = {
 				"marines/marine3/prst5.ogg",
 				"marines/marine3/prst6.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/marine3/scld_plr_blocking5.ogg",
 				"marines/marine3/scld_plr_blocking6.ogg",
 				"marines/marine3/scld_plr_blocking7.ogg",
 				"marines/marine3/scld_plr_blocking8.ogg",
 				"marines/marine3/scld_plr_blocking9.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/marine3/prs_plr_mc1.ogg",
 				"marines/marine3/prs_plr_mc2.ogg",
 				"marines/marine3/prs_plr_mc4.ogg",
@@ -4953,12 +4953,12 @@ ENT.Voices = {
 				"marines/marine3/prs_plr_mc8.ogg",
 				"marines/marine3/prs_plr_mc9.ogg",
 				},
-		['prs_plr_kll_wmelee']	=	{
+		["prs_plr_kll_wmelee"]	=	{
 				"marines/marine3/prs_plr_kll_wmelee1.ogg",
 				"marines/marine3/prs_plr_kll_wmelee3.ogg",
 				"marines/marine3/prs_plr_kll_wmelee4.ogg",
 				},
-		['status_re']	=	{
+		["status_re"]	=	{
 				"marines/marine3/status_re1.ogg",
 				"marines/marine3/status_re2.ogg",
 				"marines/marine3/status_re3.ogg",
@@ -4966,7 +4966,7 @@ ENT.Voices = {
 				"marines/marine3/status_re5.ogg",
 				"marines/marine3/status_re6.ogg",
 				},
-		['invt_vcl']	=	{
+		["invt_vcl"]	=	{
 				"marines/marine3/invt_vcl1.ogg",
 				"marines/marine3/invt_vcl2.ogg",
 				"marines/marine3/invt_vcl3.ogg",
@@ -4974,7 +4974,7 @@ ENT.Voices = {
 				"marines/marine3/invt_vcl5.ogg",
 				"marines/marine3/invt_vcl6.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/marine3/dive1.ogg",
 				"marines/marine3/dive2.ogg",
 				"marines/marine3/dive3.ogg",
@@ -4982,26 +4982,26 @@ ENT.Voices = {
 				"marines/marine3/dive5.ogg",
 				"marines/marine3/dive6.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"marines/marine3/panic_onfire1.ogg",
 				"marines/marine3/panic_onfire2.ogg",
 				"marines/marine3/panic_onfire3.ogg",
 				},
-		['warn_vcl_chpr']	=	{
+		["warn_vcl_chpr"]	=	{
 				"marines/marine3/warn_vcl_chpr1.ogg",
 				"marines/marine3/warn_vcl_chpr2.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/marine3/ok_plr_mc1.ogg",
 				"marines/marine3/ok_plr_mc2.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"marines/marine3/lookcmbt_tim1.ogg",
 				"marines/marine3/lookcmbt_tim2.ogg",
 				"marines/marine3/lookcmbt_tim3.ogg",
 				"marines/marine3/lookcmbt_tim4.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/marine3/crs1.ogg",
 				"marines/marine3/crs10.ogg",
 				"marines/marine3/crs12.ogg",
@@ -5012,23 +5012,23 @@ ENT.Voices = {
 				"marines/marine3/crs8.ogg",
 				"marines/marine3/crs9.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/marine3/newordr_retreat1.ogg",
 				"marines/marine3/newordr_retreat2.ogg",
 				"marines/marine3/newordr_retreat3.ogg",
 				"marines/marine3/newordr_retreat4.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"marines/marine3/melee1.ogg",
 				"marines/marine3/melee2.ogg",
 				"marines/marine3/melee3.ogg",
 				},
-		['scld_plr_vclcrazy']	=	{
+		["scld_plr_vclcrazy"]	=	{
 				"marines/marine3/scld_plr_vclcrazy1.ogg",
 				"marines/marine3/scld_plr_vclcrazy2.ogg",
 				"marines/marine3/scld_plr_vclcrazy3.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/marine3/prs1.ogg",
 				"marines/marine3/prs2.ogg",
 				"marines/marine3/prs4.ogg",
@@ -5036,7 +5036,7 @@ ENT.Voices = {
 				"marines/marine3/prs6.ogg",
 				"marines/marine3/prs7.ogg",
 				},
-		['ordr_openfire']	=	{
+		["ordr_openfire"]	=	{
 				"marines/marine3/ordr_openfire1.ogg",
 				"marines/marine3/ordr_openfire2.ogg",
 				"marines/marine3/ordr_openfire3.ogg",
@@ -5045,26 +5045,26 @@ ENT.Voices = {
 				"marines/marine3/ordr_openfire6.ogg",
 				"marines/marine3/ordr_openfire7.ogg",
 				},
-		['pld_mjrfoe']	=	{
+		["pld_mjrfoe"]	=	{
 				"marines/marine3/pld_mjrfoe1.ogg",
 				"marines/marine3/pld_mjrfoe3.ogg",
 				"marines/marine3/pld_mjrfoe5.ogg",
 				},
-		['join_emrg_re']	=	{
+		["join_emrg_re"]	=	{
 				"marines/marine3/join_emrg_re2.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"marines/marine3/prs_plr_kll_lots1.ogg",
 				"marines/marine3/prs_plr_kll_lots2.ogg",
 				"marines/marine3/prs_plr_kll_lots3.ogg",
 				"marines/marine3/prs_plr_kll_lots4.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"marines/marine3/panic_infctnfrm1.ogg",
 				"marines/marine3/panic_infctnfrm2.ogg",
 				"marines/marine3/panic_infctnfrm3.ogg",
 				},
-		['captured']	=	{
+		["captured"]	=	{
 				"marines/marine3/captured1.ogg",
 				"marines/marine3/captured2.ogg",
 				"marines/marine3/captured3.ogg",
@@ -5073,7 +5073,7 @@ ENT.Voices = {
 				"marines/marine3/captured6.ogg",
 				"marines/marine3/captured7.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/marine3/ok_plr_trdwpn1.ogg",
 				"marines/marine3/ok_plr_trdwpn2.ogg",
 				"marines/marine3/ok_plr_trdwpn3.ogg",
@@ -5083,11 +5083,11 @@ ENT.Voices = {
 				"marines/marine3/ok_plr_trdwpn7.ogg",
 				"marines/marine3/ok_plr_trdwpn8.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"marines/marine3/warn_flood1.ogg",
 				"marines/marine3/warn_flood2.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/marine3/ok1.ogg",
 				"marines/marine3/ok2.ogg",
 				"marines/marine3/ok3.ogg",
@@ -5098,34 +5098,34 @@ ENT.Voices = {
 				"marines/marine3/ok8.ogg",
 				"marines/marine3/ok9.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"marines/marine3/lmnt_deadally1.ogg",
 				},
-		['brsrk']	=	{
+		["brsrk"]	=	{
 				"marines/marine3/brsrk1.ogg",
 				},
-		['pain_shld']	=	{
+		["pain_shld"]	=	{
 				"marines/marine3/pain_shld3.ogg",
 				"marines/marine3/pain_shld7.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/marine3/pain_mdm1.ogg",
 				"marines/marine3/pain_mdm2.ogg",
 				"marines/marine3/pain_mdm3.ogg",
 				"marines/marine3/pain_mdm4.ogg",
 				"marines/marine3/pain_mdm5.ogg",
 				},
-		['strk_grnd_uncvr']	=	{
+		["strk_grnd_uncvr"]	=	{
 				"marines/marine3/strk_grnd_uncvr1.ogg",
 				"marines/marine3/strk_grnd_uncvr2.ogg",
 				},
-		['ask_prst_fail']	=	{
+		["ask_prst_fail"]	=	{
 				"marines/marine3/ask_prst_fail1.ogg",
 				"marines/marine3/ask_prst_fail3.ogg",
 				"marines/marine3/ask_prst_fail4.ogg",
 				"marines/marine3/ask_prst_fail5.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/marine3/endcmbt1.ogg",
 				"marines/marine3/endcmbt2.ogg",
 				"marines/marine3/endcmbt3.ogg",
@@ -5133,24 +5133,24 @@ ENT.Voices = {
 				"marines/marine3/endcmbt5.ogg",
 				"marines/marine3/endcmbt6.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/marine3/hail1.ogg",
 				"marines/marine3/hail2.ogg",
 				"marines/marine3/hail3.ogg",
 				"marines/marine3/hail4.ogg",
 				"marines/marine3/hail5.ogg",
 				},
-		['ask_chkallybdy']	=	{
+		["ask_chkallybdy"]	=	{
 				"marines/marine3/ask_chkallybdy1.ogg",
 				"marines/marine3/ask_chkallybdy2.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/marine3/forgive1.ogg",
 				"marines/marine3/forgive2.ogg",
 				"marines/marine3/forgive3.ogg",
 				"marines/marine3/forgive4.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"marines/marine3/prs_plr_gdgrnd1.ogg",
 				"marines/marine3/prs_plr_gdgrnd2.ogg",
 				"marines/marine3/prs_plr_gdgrnd3.ogg",
@@ -5159,33 +5159,33 @@ ENT.Voices = {
 				"marines/marine3/prs_plr_gdgrnd6.ogg",
 				"marines/marine3/prs_plr_gdgrnd8.ogg",
 				},
-		['prs_plr_kll_vclbmp']	=	{
+		["prs_plr_kll_vclbmp"]	=	{
 				"marines/marine3/prs_plr_kll_vclbmp1.ogg",
 				"marines/marine3/prs_plr_kll_vclbmp2.ogg",
 				"marines/marine3/prs_plr_kll_vclbmp3.ogg",
 				},
-		['ordr_grenade']	=	{
+		["ordr_grenade"]	=	{
 				"marines/marine3/ordr_grenade1.ogg",
 				"marines/marine3/ordr_grenade2.ogg",
 				"marines/marine3/ordr_grenade3.ogg",
 				"marines/marine3/ordr_grenade4.ogg",
 				"marines/marine3/ordr_grenade5.ogg",
 				},
-		['ok_plr_trdst_gnr']	=	{
+		["ok_plr_trdst_gnr"]	=	{
 				"marines/marine3/ok_plr_trdst_gnr1.ogg",
 				"marines/marine3/ok_plr_trdst_gnr2.ogg",
 				"marines/marine3/ok_plr_trdst_gnr3.ogg",
 				},
-		['entervcl_trrt']	=	{
+		["entervcl_trrt"]	=	{
 				"marines/marine3/entervcl_trrt1.ogg",
 				"marines/marine3/entervcl_trrt2.ogg",
 				"marines/marine3/entervcl_trrt3.ogg",
 				},
-		['crs_betrayingplr_mc']	=	{
+		["crs_betrayingplr_mc"]	=	{
 				"marines/marine3/crs_betrayingplr_mc1.ogg",
 				"marines/marine3/crs_betrayingplr_mc2.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"marines/marine3/morefoe1.ogg",
 				"marines/marine3/morefoe2.ogg",
 				"marines/marine3/morefoe3.ogg",
@@ -5193,21 +5193,21 @@ ENT.Voices = {
 				"marines/marine3/morefoe5.ogg",
 				"marines/marine3/morefoe6.ogg",
 				},
-		['dwn_vcl_bnsh']	=	{
+		["dwn_vcl_bnsh"]	=	{
 				"marines/marine3/dwn_vcl_bnsh1.ogg",
 				"marines/marine3/dwn_vcl_bnsh2.ogg",
 				},
-		['grt_plr_srprs']	=	{
+		["grt_plr_srprs"]	=	{
 				"marines/marine3/grt_plr_srprs1.ogg",
 				"marines/marine3/grt_plr_srprs2.ogg",
 				"marines/marine3/grt_plr_srprs3.ogg",
 				"marines/marine3/grt_plr_srprs6.ogg",
 				},
-		['chr_kllfoe_vclbmp']	=	{
+		["chr_kllfoe_vclbmp"]	=	{
 				"marines/marine3/chr_kllfoe_vclbmp1.ogg",
 				"marines/marine3/chr_kllfoe_vclbmp2.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/marine3/stayback1.ogg",
 				"marines/marine3/stayback11.ogg",
 				"marines/marine3/stayback12.ogg",
@@ -5220,35 +5220,35 @@ ENT.Voices = {
 				"marines/marine3/stayback8.ogg",
 				"marines/marine3/stayback9.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/marine3/thnk_plr_mc1.ogg",
 				"marines/marine3/thnk_plr_mc2.ogg",
 				},
-		['chkallybdyf']	=	{
+		["chkallybdyf"]	=	{
 				"marines/marine3/chkallybdyf1.ogg",
 				"marines/marine3/chkallybdyf3.ogg",
 				"marines/marine3/chkallybdyf4.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/marine3/chr1.ogg",
 				"marines/marine3/chr2.ogg",
 				"marines/marine3/chr4.ogg",
 				},
-		['foeordr_charge']	=	{
+		["foeordr_charge"]	=	{
 				"marines/marine3/foeordr_charge1.ogg",
 				"marines/marine3/foeordr_charge2.ogg",
 				"marines/marine3/foeordr_charge3.ogg",
 				"marines/marine3/foeordr_charge4.ogg",
 				},
-		['rmd_wpn_snpr']	=	{
+		["rmd_wpn_snpr"]	=	{
 				"marines/marine3/rmd_wpn_snpr1.ogg",
 				"marines/marine3/rmd_wpn_snpr2.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/marine3/crs_betrayingplr_arb1.ogg",
 				"marines/marine3/crs_betrayingplr_arb2.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/marine3/dth_slnt1.ogg",
 				"marines/marine3/dth_slnt2.ogg",
 				"marines/marine3/dth_slnt3.ogg",
@@ -5256,51 +5256,51 @@ ENT.Voices = {
 				"marines/marine3/dth_slnt7.ogg",
 				"marines/marine3/dth_slnt8.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"marines/marine3/look_pstcmbt1.ogg",
 				"marines/marine3/look_pstcmbt2.ogg",
 				"marines/marine3/look_pstcmbt3.ogg",
 				"marines/marine3/look_pstcmbt4.ogg",
 				},
-		['warn_incmn_fldbm']	=	{
+		["warn_incmn_fldbm"]	=	{
 				"marines/marine3/warn_incmn_fldbm1.ogg",
 				"marines/marine3/warn_incmn_fldbm2.ogg",
 				"marines/marine3/warn_incmn_fldbm3.ogg",
 				"marines/marine3/warn_incmn_fldbm4.ogg",
 				},
-		['prs_plr_kll_mjr']	=	{
+		["prs_plr_kll_mjr"]	=	{
 				"marines/marine3/prs_plr_kll_mjr1.ogg",
 				"marines/marine3/prs_plr_kll_mjr2.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/marine3/look_plr_mc1.ogg",
 				"marines/marine3/look_plr_mc2.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/marine3/newordr_moveon1.ogg",
 				"marines/marine3/newordr_moveon2.ogg",
 				"marines/marine3/newordr_moveon3.ogg",
 				"marines/marine3/newordr_moveon4.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/marine3/pstcmbt_hrd1.ogg",
 				"marines/marine3/pstcmbt_hrd2.ogg",
 				},
-		['entervlc_gnr']	=	{
+		["entervlc_gnr"]	=	{
 				"marines/marine3/entervlc_gnr1.ogg",
 				"marines/marine3/entervlc_gnr2.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/marine3/foeordr_advance1.ogg",
 				"marines/marine3/foeordr_advance2.ogg",
 				"marines/marine3/foeordr_advance3.ogg",
 				"marines/marine3/foeordr_advance4.ogg",
 				},
-		['whn_hrtblt']	=	{
+		["whn_hrtblt"]	=	{
 				"marines/marine3/whn_hrtblt1.ogg",
 				"marines/marine3/whn_hrtblt2.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/marine3/lmnt_deadplr_arb1.ogg",
 				"marines/marine3/lmnt_deadplr_arb2.ogg",
 				"marines/marine3/lmnt_deadplr_arb3.ogg",
@@ -5308,12 +5308,12 @@ ENT.Voices = {
 				"marines/marine3/lmnt_deadplr_arb5.ogg",
 				"marines/marine3/lmnt_deadplr_arb6.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/marine3/bump1.ogg",
 				"marines/marine3/bump2.ogg",
 				"marines/marine3/bump8.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"marines/marine3/hrdfoe1.ogg",
 				"marines/marine3/hrdfoe10.ogg",
 				"marines/marine3/hrdfoe2.ogg",
@@ -5325,13 +5325,13 @@ ENT.Voices = {
 				"marines/marine3/hrdfoe8.ogg",
 				"marines/marine3/hrdfoe9.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/marine3/newordr_entervcl1.ogg",
 				"marines/marine3/newordr_entervcl2.ogg",
 				"marines/marine3/newordr_entervcl4.ogg",
 				"marines/marine3/newordr_entervcl5.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/marine3/betray1.ogg",
 				"marines/marine3/betray2.ogg",
 				"marines/marine3/betray3.ogg",
@@ -5341,7 +5341,7 @@ ENT.Voices = {
 				"marines/marine3/betray7.ogg",
 				"marines/marine3/betray9.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/marine3/dth_hdsht1.ogg",
 				"marines/marine3/dth_hdsht2.ogg",
 				"marines/marine3/dth_hdsht3.ogg",
@@ -5349,13 +5349,13 @@ ENT.Voices = {
 				"marines/marine3/dth_hdsht5.ogg",
 				"marines/marine3/dth_hdsht6.ogg",
 				},
-		['cvr_invsgt']	=	{
+		["cvr_invsgt"]	=	{
 				"marines/marine3/cvr_invsgt1.ogg",
 				"marines/marine3/cvr_invsgt2.ogg",
 				"marines/marine3/cvr_invsgt3.ogg",
 				"marines/marine3/cvr_invsgt5.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/marine3/strk1.ogg",
 				"marines/marine3/strk10.ogg",
 				"marines/marine3/strk11.ogg",
@@ -5368,7 +5368,7 @@ ENT.Voices = {
 				"marines/marine3/strk8.ogg",
 				"marines/marine3/strk9.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/marine3/lmnt_deadplr_mc1.ogg",
 				"marines/marine3/lmnt_deadplr_mc2.ogg",
 				"marines/marine3/lmnt_deadplr_mc3.ogg",
@@ -5376,36 +5376,36 @@ ENT.Voices = {
 				"marines/marine3/lmnt_deadplr_mc6.ogg",
 				"marines/marine3/lmnt_deadplr_mc8.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/marine3/newordr_leaveplr1.ogg",
 				"marines/marine3/newordr_leaveplr2.ogg",
 				"marines/marine3/newordr_leaveplr3.ogg",
 				"marines/marine3/newordr_leaveplr4.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/marine3/dth1.ogg",
 				"marines/marine3/dth2.ogg",
 				"marines/marine3/dth3.ogg",
 				"marines/marine3/dth4.ogg",
 				"marines/marine3/dth5.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/marine3/ok_plr_trdst_dvr1.ogg",
 				"marines/marine3/ok_plr_trdst_dvr2.ogg",
 				"marines/marine3/ok_plr_trdst_dvr3.ogg",
 				},
-		['lmnt_deadall']	=	{
+		["lmnt_deadall"]	=	{
 				"marines/marine3/lmnt_deadall2.ogg",
 				"marines/marine3/lmnt_deadall3.ogg",
 				"marines/marine3/lmnt_deadall5.ogg",
 				},
-		['ordr_stayback']	=	{
+		["ordr_stayback"]	=	{
 				"marines/marine3/ordr_stayback1.ogg",
 				"marines/marine3/ordr_stayback2.ogg",
 				"marines/marine3/ordr_stayback3.ogg",
 				"marines/marine3/ordr_stayback4.ogg",
 				},
-		['ask_invsgt_fail']	=	{
+		["ask_invsgt_fail"]	=	{
 				"marines/marine3/ask_invsgt_fail1.ogg",
 				"marines/marine3/ask_invsgt_fail2.ogg",
 				"marines/marine3/ask_invsgt_fail3.ogg",
@@ -5413,13 +5413,13 @@ ENT.Voices = {
 				"marines/marine3/ask_invsgt_fail5.ogg",
 				"marines/marine3/ask_invsgt_fail6.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/marine3/kllmytrgt1.ogg",
 				"marines/marine3/kllmytrgt2.ogg",
 				"marines/marine3/kllmytrgt3.ogg",
 				"marines/marine3/kllmytrgt4.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/marine3/lst_cntct1.ogg",
 				"marines/marine3/lst_cntct10.ogg",
 				"marines/marine3/lst_cntct2.ogg",
@@ -5431,50 +5431,50 @@ ENT.Voices = {
 				"marines/marine3/lst_cntct8.ogg",
 				"marines/marine3/lst_cntct9.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/marine3/fall1.ogg",
 				"marines/marine3/fall2.ogg",
 				"marines/marine3/fall3.ogg",
 				},
-		['warn_stlth']	=	{
+		["warn_stlth"]	=	{
 				"marines/marine3/warn_stlth1.ogg",
 				"marines/marine3/warn_stlth2.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/marine3/foeordr_retreat1.ogg",
 				"marines/marine3/foeordr_retreat2.ogg",
 				"marines/marine3/foeordr_retreat3.ogg",
 				"marines/marine3/foeordr_retreat4.ogg",
 				},
-		['chkfoebdy']	=	{
+		["chkfoebdy"]	=	{
 				"marines/marine3/chkfoebdy1.ogg",
 				"marines/marine3/chkfoebdy2.ogg",
 				"marines/marine3/chkfoebdy3.ogg",
 				"marines/marine3/chkfoebdy4.ogg",
 				},
-		['look_pstcmbt_ez']	=	{
+		["look_pstcmbt_ez"]	=	{
 				"marines/marine3/look_pstcmbt_ez1.ogg",
 				"marines/marine3/look_pstcmbt_ez2.ogg",
 				"marines/marine3/look_pstcmbt_ez3.ogg",
 				},
-		['entervcl_psngr']	=	{
+		["entervcl_psngr"]	=	{
 				"marines/marine3/entervcl_psngr1.ogg",
 				"marines/marine3/entervcl_psngr2.ogg",
 				},
-		['warn_trrt']	=	{
+		["warn_trrt"]	=	{
 				"marines/marine3/warn_trrt1.ogg",
 				"marines/marine3/warn_trrt2.ogg",
 				}
 	},
 	["Marine4"] = {
-	['crs_mjrfoe']	=	{
+	["crs_mjrfoe"]	=	{
 				"marines/marine4/crs_mjrfoe1.ogg",
 				"marines/marine4/crs_mjrfoe2.ogg",
 				"marines/marine4/crs_mjrfoe3.ogg",
 				"marines/marine4/crs_mjrfoe4.ogg",
 				"marines/marine4/crs_mjrfoe6.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"marines/marine4/look_lngtme1.ogg",
 				"marines/marine4/look_lngtme11.ogg",
 				"marines/marine4/look_lngtme12.ogg",
@@ -5483,15 +5483,15 @@ ENT.Voices = {
 				"marines/marine4/look_lngtme5.ogg",
 				"marines/marine4/look_lngtme6.ogg",
 				},
-		['invt_vcl_gnr']	=	{
+		["invt_vcl_gnr"]	=	{
 				"marines/marine4/invt_vcl_gnr1.ogg",
 				"marines/marine4/invt_vcl_gnr2.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"marines/marine4/whn_re1.ogg",
 				"marines/marine4/whn_re2.ogg",
 				},
-		['chr_vcljmp']	=	{
+		["chr_vcljmp"]	=	{
 				"marines/marine4/chr_vcljmp1.ogg",
 				"marines/marine4/chr_vcljmp2.ogg",
 				"marines/marine4/chr_vcljmp3.ogg",
@@ -5499,7 +5499,7 @@ ENT.Voices = {
 				"marines/marine4/chr_vcljmp5.ogg",
 				"marines/marine4/chr_vcljmp6.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/marine4/whn1.ogg",
 				"marines/marine4/whn2.ogg",
 				"marines/marine4/whn3.ogg",
@@ -5507,80 +5507,80 @@ ENT.Voices = {
 				"marines/marine4/whn5.ogg",
 				"marines/marine4/whn6.ogg",
 				},
-		['newordr_advance']	=	{
+		["newordr_advance"]	=	{
 				"marines/marine4/newordr_advance1.ogg",
 				"marines/marine4/newordr_advance3.ogg",
 				"marines/marine4/newordr_advance4.ogg",
 				"marines/marine4/newordr_advance5.ogg",
 				},
-		['rmd_vcl_ghst']	=	{
+		["rmd_vcl_ghst"]	=	{
 				"marines/marine4/rmd_vcl_ghst1.ogg",
 				"marines/marine4/rmd_vcl_ghst2.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/marine4/foeordr_flanking1.ogg",
 				"marines/marine4/foeordr_flanking2.ogg",
 				"marines/marine4/foeordr_flanking3.ogg",
 				"marines/marine4/foeordr_flanking4.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/marine4/cvr1.ogg",
 				"marines/marine4/cvr2.ogg",
 				"marines/marine4/cvr3.ogg",
 				"marines/marine4/cvr4.ogg",
 				},
-		['warn_wpn_snpr']	=	{
+		["warn_wpn_snpr"]	=	{
 				"marines/marine4/warn_wpn_snpr1.ogg",
 				"marines/marine4/warn_wpn_snpr2.ogg",
 				},
-		['thrtn_foe_re']	=	{
+		["thrtn_foe_re"]	=	{
 				"marines/marine4/thrtn_foe_re1.ogg",
 				"marines/marine4/thrtn_foe_re3.ogg",
 				"marines/marine4/thrtn_foe_re4.ogg",
 				"marines/marine4/thrtn_foe_re5.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"marines/marine4/rmd2.ogg",
 				"marines/marine4/rmd3.ogg",
 				"marines/marine4/rmd4.ogg",
 				"marines/marine4/rmd5.ogg",
 				"marines/marine4/rmd6.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"marines/marine4/warn_chr_bggr1.ogg",
 				"marines/marine4/warn_chr_bggr2.ogg",
 				},
-		['warn_wpn_hmm']	=	{
+		["warn_wpn_hmm"]	=	{
 				"marines/marine4/warn_wpn_hmm4.ogg",
 				"marines/marine4/warn_wpn_hmm5.ogg",
 				},
-		['warn_vcl_wrth']	=	{
+		["warn_vcl_wrth"]	=	{
 				"marines/marine4/warn_vcl_wrth1.ogg",
 				"marines/marine4/warn_vcl_wrth2.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"marines/marine4/warn_vcl_phntm1.ogg",
 				"marines/marine4/warn_vcl_phntm2.ogg",
 				},
-		['srchend']	=	{
+		["srchend"]	=	{
 				"marines/marine4/srchend1.ogg",
 				"marines/marine4/srchend2.ogg",
 				"marines/marine4/srchend3.ogg",
 				"marines/marine4/srchend4.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"marines/marine4/warn_fldreanimate1.ogg",
 				"marines/marine4/warn_fldreanimate2.ogg",
 				},
-		['chr_kllfoe_vclbmp']	=	{
+		["chr_kllfoe_vclbmp"]	=	{
 				"marines/marine4/chr_kllfoe_vclbmp1.ogg",
 				"marines/marine4/chr_kllfoe_vclbmp2.ogg",
 				},
-		['warn_vcl_bnsh']	=	{
+		["warn_vcl_bnsh"]	=	{
 				"marines/marine4/warn_vcl_bnsh1.ogg",
 				"marines/marine4/warn_vcl_bnsh2.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/marine4/scld_plr_hrtme1.ogg",
 				"marines/marine4/scld_plr_hrtme2.ogg",
 				"marines/marine4/scld_plr_hrtme3.ogg",
@@ -5590,13 +5590,13 @@ ENT.Voices = {
 				"marines/marine4/scld_plr_hrtme7.ogg",
 				"marines/marine4/scld_plr_hrtme8.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/marine4/pain1.ogg",
 				"marines/marine4/pain2.ogg",
 				"marines/marine4/pain3.ogg",
 				"marines/marine4/pain4.ogg",
 				},
-		['prst_fail']	=	{
+		["prst_fail"]	=	{
 				"marines/marine4/prst_fail1.ogg",
 				"marines/marine4/prst_fail10.ogg",
 				"marines/marine4/prst_fail2.ogg",
@@ -5607,7 +5607,7 @@ ENT.Voices = {
 				"marines/marine4/prst_fail8.ogg",
 				"marines/marine4/prst_fail9.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/marine4/prs_plr_mc1.ogg",
 				"marines/marine4/prs_plr_mc2.ogg",
 				"marines/marine4/prs_plr_mc3.ogg",
@@ -5615,83 +5615,83 @@ ENT.Voices = {
 				"marines/marine4/prs_plr_mc5.ogg",
 				"marines/marine4/prs_plr_mc7.ogg",
 				},
-		['lookcmbt_fllw']	=	{
+		["lookcmbt_fllw"]	=	{
 				"marines/marine4/lookcmbt_fllw2.ogg",
 				"marines/marine4/lookcmbt_fllw3.ogg",
 				},
-		['foundfoe_re']	=	{
+		["foundfoe_re"]	=	{
 				"marines/marine4/foundfoe_re1.ogg",
 				"marines/marine4/foundfoe_re2.ogg",
 				"marines/marine4/foundfoe_re3.ogg",
 				"marines/marine4/foundfoe_re4.ogg",
 				},
-		['warn_trrt_dply']	=	{
+		["warn_trrt_dply"]	=	{
 				"marines/marine4/warn_trrt_dply1.ogg",
 				"marines/marine4/warn_trrt_dply3.ogg",
 				},
-		['grt_intovcl_imgnr']	=	{
+		["grt_intovcl_imgnr"]	=	{
 				"marines/marine4/grt_intovcl_imgnr1.ogg",
 				"marines/marine4/grt_intovcl_imgnr2.ogg",
 				"marines/marine4/grt_intovcl_imgnr3.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"marines/marine4/warn_swarm1.ogg",
 				"marines/marine4/warn_swarm2.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/marine4/cvr_re1.ogg",
 				"marines/marine4/cvr_re2.ogg",
 				"marines/marine4/cvr_re3.ogg",
 				"marines/marine4/cvr_re4.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"marines/marine4/prs_plr_kll1.ogg",
 				"marines/marine4/prs_plr_kll2.ogg",
 				"marines/marine4/prs_plr_kll3.ogg",
 				"marines/marine4/prs_plr_kll4.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/marine4/dwn1.ogg",
 				"marines/marine4/dwn2.ogg",
 				"marines/marine4/dwn3.ogg",
 				"marines/marine4/dwn4.ogg",
 				},
-		['hail_agg']	=	{
+		["hail_agg"]	=	{
 				"marines/marine4/hail_agg1.ogg",
 				"marines/marine4/hail_agg2.ogg",
 				},
-		['stayback_agg']	=	{
+		["stayback_agg"]	=	{
 				"marines/marine4/stayback_agg1.ogg",
 				"marines/marine4/stayback_agg2.ogg",
 				},
-		['look_pstcmbt_ez']	=	{
+		["look_pstcmbt_ez"]	=	{
 				"marines/marine4/look_pstcmbt_ez1.ogg",
 				"marines/marine4/look_pstcmbt_ez2.ogg",
 				},
-		['grt_intovcl_mine']	=	{
+		["grt_intovcl_mine"]	=	{
 				"marines/marine4/grt_intovcl_mine1.ogg",
 				"marines/marine4/grt_intovcl_mine3.ogg",
 				},
-		['warn_scrb']	=	{
+		["warn_scrb"]	=	{
 				"marines/marine4/warn_scrb1.ogg",
 				"marines/marine4/warn_scrb4.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/marine4/newordr_support1.ogg",
 				"marines/marine4/newordr_support2.ogg",
 				"marines/marine4/newordr_support3.ogg",
 				"marines/marine4/newordr_support4.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/marine4/panic1.ogg",
 				"marines/marine4/panic2.ogg",
 				"marines/marine4/panic3.ogg",
 				},
-		['rmd_scrb']	=	{
+		["rmd_scrb"]	=	{
 				"marines/marine4/rmd_scrb1.ogg",
 				"marines/marine4/rmd_scrb2.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/marine4/pld1.ogg",
 				"marines/marine4/pld2.ogg",
 				"marines/marine4/pld3.ogg",
@@ -5701,45 +5701,45 @@ ENT.Voices = {
 				"marines/marine4/pld7.ogg",
 				"marines/marine4/pld8.ogg",
 				},
-		['warn_incmn_vclbm']	=	{
+		["warn_incmn_vclbm"]	=	{
 				"marines/marine4/warn_incmn_vclbm1.ogg",
 				"marines/marine4/warn_incmn_vclbm2.ogg",
 				},
-		['prs_plr_kll_wmelee']	=	{
+		["prs_plr_kll_wmelee"]	=	{
 				"marines/marine4/prs_plr_kll_wmelee2.ogg",
 				"marines/marine4/prs_plr_kll_wmelee3.ogg",
 				"marines/marine4/prs_plr_kll_wmelee4.ogg",
 				},
-		['dwn_vcl_chpr']	=	{
+		["dwn_vcl_chpr"]	=	{
 				"marines/marine4/dwn_vcl_chpr1.ogg",
 				"marines/marine4/dwn_vcl_chpr2.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/marine4/charge1.ogg",
 				"marines/marine4/charge2.ogg",
 				"marines/marine4/charge3.ogg",
 				},
-		['cvr_invsgt']	=	{
+		["cvr_invsgt"]	=	{
 				"marines/marine4/cvr_invsgt1.ogg",
 				"marines/marine4/cvr_invsgt2.ogg",
 				"marines/marine4/cvr_invsgt3.ogg",
 				"marines/marine4/cvr_invsgt4.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/marine4/prs1.ogg",
 				"marines/marine4/prs2.ogg",
 				"marines/marine4/prs3.ogg",
 				"marines/marine4/prs4.ogg",
 				},
-		['entervcl_drvr']	=	{
+		["entervcl_drvr"]	=	{
 				"marines/marine4/entervcl_drvr1.ogg",
 				"marines/marine4/entervcl_drvr2.ogg",
 				},
-		['warn_chr_hntr']	=	{
+		["warn_chr_hntr"]	=	{
 				"marines/marine4/warn_chr_hntr1.ogg",
 				"marines/marine4/warn_chr_hntr2.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/marine4/thrtn1.ogg",
 				"marines/marine4/thrtn10.ogg",
 				"marines/marine4/thrtn11.ogg",
@@ -5752,67 +5752,67 @@ ENT.Voices = {
 				"marines/marine4/thrtn5.ogg",
 				"marines/marine4/thrtn7.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"marines/marine4/seefoe_downthere2.ogg",
 				"marines/marine4/seefoe_downthere3.ogg",
 				},
-		['warn_brsrk']	=	{
+		["warn_brsrk"]	=	{
 				"marines/marine4/warn_brsrk1.ogg",
 				"marines/marine4/warn_brsrk2.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/marine4/newordr_exitvcl1.ogg",
 				"marines/marine4/newordr_exitvcl2.ogg",
 				"marines/marine4/newordr_exitvcl3.ogg",
 				"marines/marine4/newordr_exitvcl4.ogg",
 				},
-		['join_stayback']	=	{
+		["join_stayback"]	=	{
 				"marines/marine4/join_stayback1.ogg",
 				"marines/marine4/join_stayback2.ogg",
 				"marines/marine4/join_stayback3.ogg",
 				"marines/marine4/join_stayback4.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"marines/marine4/cower1.ogg",
 				"marines/marine4/cower2.ogg",
 				"marines/marine4/cower3.ogg",
 				"marines/marine4/cower4.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/marine4/warn1.ogg",
 				"marines/marine4/warn3.ogg",
 				"marines/marine4/warn4.ogg",
 				"marines/marine4/warn5.ogg",
 				"marines/marine4/warn6.ogg",
 				},
-		['newordr_fllwplr']	=	{
+		["newordr_fllwplr"]	=	{
 				"marines/marine4/newordr_fllwplr1.ogg",
 				"marines/marine4/newordr_fllwplr2.ogg",
 				"marines/marine4/newordr_fllwplr3.ogg",
 				"marines/marine4/newordr_fllwplr4.ogg",
 				},
-		['pld_mjrfoe']	=	{
+		["pld_mjrfoe"]	=	{
 				"marines/marine4/pld_mjrfoe1.ogg",
 				"marines/marine4/pld_mjrfoe2.ogg",
 				},
-		['pstcmbt_fld']	=	{
+		["pstcmbt_fld"]	=	{
 				"marines/marine4/pstcmbt_fld1.ogg",
 				"marines/marine4/pstcmbt_fld2.ogg",
 				},
-		['ok_plr_trdst_gnr']	=	{
+		["ok_plr_trdst_gnr"]	=	{
 				"marines/marine4/ok_plr_trdst_gnr1.ogg",
 				"marines/marine4/ok_plr_trdst_gnr2.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"marines/marine4/panic_plsmgrnd1.ogg",
 				"marines/marine4/panic_plsmgrnd2.ogg",
 				"marines/marine4/panic_plsmgrnd3.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/marine4/pstcmbt_brt1.ogg",
 				"marines/marine4/pstcmbt_brt2.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/marine4/grt_plr_mc1.ogg",
 				"marines/marine4/grt_plr_mc3.ogg",
 				"marines/marine4/grt_plr_mc4.ogg",
@@ -5820,7 +5820,7 @@ ENT.Voices = {
 				"marines/marine4/grt_plr_mc6.ogg",
 				"marines/marine4/grt_plr_mc7.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/marine4/seefoe1.ogg",
 				"marines/marine4/seefoe11.ogg",
 				"marines/marine4/seefoe13.ogg",
@@ -5832,17 +5832,17 @@ ENT.Voices = {
 				"marines/marine4/seefoe8.ogg",
 				"marines/marine4/seefoe9.ogg",
 				},
-		['rmd_wpn_hmmr']	=	{
+		["rmd_wpn_hmmr"]	=	{
 				"marines/marine4/rmd_wpn_hmmr1.ogg",
 				"marines/marine4/rmd_wpn_hmmr2.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/marine4/foeordr_fallback1.ogg",
 				"marines/marine4/foeordr_fallback2.ogg",
 				"marines/marine4/foeordr_fallback3.ogg",
 				"marines/marine4/foeordr_fallback4.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/marine4/hail_plr_mc1.ogg",
 				"marines/marine4/hail_plr_mc2.ogg",
 				"marines/marine4/hail_plr_mc3.ogg",
@@ -5850,11 +5850,11 @@ ENT.Voices = {
 				"marines/marine4/hail_plr_mc5.ogg",
 				"marines/marine4/hail_plr_mc7.ogg",
 				},
-		['join_emrg']	=	{
+		["join_emrg"]	=	{
 				"marines/marine4/join_emrg1.ogg",
 				"marines/marine4/join_emrg2.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/marine4/foundfoe_prst1.ogg",
 				"marines/marine4/foundfoe_prst10.ogg",
 				"marines/marine4/foundfoe_prst11.ogg",
@@ -5868,7 +5868,7 @@ ENT.Voices = {
 				"marines/marine4/foundfoe_prst8.ogg",
 				"marines/marine4/foundfoe_prst9.ogg",
 				},
-		['injured']	=	{
+		["injured"]	=	{
 				"marines/marine4/injured1.ogg",
 				"marines/marine4/injured2.ogg",
 				"marines/marine4/injured3.ogg",
@@ -5876,11 +5876,11 @@ ENT.Voices = {
 				"marines/marine4/injured5.ogg",
 				"marines/marine4/injured6.ogg",
 				},
-		['tnt_mjrfoe']	=	{
+		["tnt_mjrfoe"]	=	{
 				"marines/marine4/tnt_mjrfoe1.ogg",
 				"marines/marine4/tnt_mjrfoe2.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/marine4/tnt1.ogg",
 				"marines/marine4/tnt10.ogg",
 				"marines/marine4/tnt11.ogg",
@@ -5897,22 +5897,22 @@ ENT.Voices = {
 				"marines/marine4/tnt8.ogg",
 				"marines/marine4/tnt9.ogg",
 				},
-		['look_plr_fllw']	=	{
+		["look_plr_fllw"]	=	{
 				"marines/marine4/look_plr_fllw1.ogg",
 				"marines/marine4/look_plr_fllw2.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/marine4/thrwn1.ogg",
 				"marines/marine4/thrwn2.ogg",
 				"marines/marine4/thrwn3.ogg",
 				},
-		['thrtn_mjrfoe']	=	{
+		["thrtn_mjrfoe"]	=	{
 				"marines/marine4/thrtn_mjrfoe1.ogg",
 				"marines/marine4/thrtn_mjrfoe2.ogg",
 				"marines/marine4/thrtn_mjrfoe3.ogg",
 				"marines/marine4/thrtn_mjrfoe4.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/marine4/pain_mjr1.ogg",
 				"marines/marine4/pain_mjr2.ogg",
 				"marines/marine4/pain_mjr3.ogg",
@@ -5921,44 +5921,44 @@ ENT.Voices = {
 				"marines/marine4/pain_mjr6.ogg",
 				"marines/marine4/pain_mjr7.ogg",
 				},
-		['kamikaze']	=	{
+		["kamikaze"]	=	{
 				"marines/marine4/kamikaze1.ogg",
 				"marines/marine4/kamikaze2.ogg",
 				"marines/marine4/kamikaze3.ogg",
 				"marines/marine4/kamikaze4.ogg",
 				},
-		['warn_wpn_hmmr']	=	{
+		["warn_wpn_hmmr"]	=	{
 				"marines/marine4/warn_wpn_hmmr2.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/marine4/chr_kllfoe1.ogg",
 				"marines/marine4/chr_kllfoe2.ogg",
 				"marines/marine4/chr_kllfoe3.ogg",
 				"marines/marine4/chr_kllfoe4.ogg",
 				},
-		['rmd_vcl_chpr']	=	{
+		["rmd_vcl_chpr"]	=	{
 				"marines/marine4/rmd_vcl_chpr1.ogg",
 				"marines/marine4/rmd_vcl_chpr2.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"marines/marine4/dwn_vcl_wrth1.ogg",
 				"marines/marine4/dwn_vcl_wrth2.ogg",
 				},
-		['chr_kllfoe_blt']	=	{
+		["chr_kllfoe_blt"]	=	{
 				"marines/marine4/chr_kllfoe_blt1.ogg",
 				"marines/marine4/chr_kllfoe_blt2.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/marine4/scld1.ogg",
 				"marines/marine4/scld2.ogg",
 				"marines/marine4/scld3.ogg",
 				"marines/marine4/scld5.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"marines/marine4/dth_slw1.ogg",
 				"marines/marine4/dth_slw2.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/marine4/thnk_plr_btrwpn1.ogg",
 				"marines/marine4/thnk_plr_btrwpn10.ogg",
 				"marines/marine4/thnk_plr_btrwpn13.ogg",
@@ -5969,29 +5969,29 @@ ENT.Voices = {
 				"marines/marine4/thnk_plr_btrwpn6.ogg",
 				"marines/marine4/thnk_plr_btrwpn8.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"marines/marine4/dth_drama1.ogg",
 				"marines/marine4/dth_drama2.ogg",
 				"marines/marine4/dth_drama3.ogg",
 				"marines/marine4/dth_drama4.ogg",
 				},
-		['newordr_charge']	=	{
+		["newordr_charge"]	=	{
 				"marines/marine4/newordr_charge1.ogg",
 				"marines/marine4/newordr_charge2.ogg",
 				"marines/marine4/newordr_charge3.ogg",
 				"marines/marine4/newordr_charge4.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/marine4/thnk_plr_arb1.ogg",
 				"marines/marine4/thnk_plr_arb2.ogg",
 				},
-		['join_invsgt']	=	{
+		["join_invsgt"]	=	{
 				"marines/marine4/join_invsgt1.ogg",
 				"marines/marine4/join_invsgt2.ogg",
 				"marines/marine4/join_invsgt3.ogg",
 				"marines/marine4/join_invsgt4.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/marine4/thnk1.ogg",
 				"marines/marine4/thnk2.ogg",
 				"marines/marine4/thnk3.ogg",
@@ -6001,36 +6001,36 @@ ENT.Voices = {
 				"marines/marine4/thnk7.ogg",
 				"marines/marine4/thnk8.ogg",
 				},
-		['tchallybdy']	=	{
+		["tchallybdy"]	=	{
 				"marines/marine4/tchallybdy1.ogg",
 				"marines/marine4/tchallybdy2.ogg",
 				"marines/marine4/tchallybdy3.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/marine4/lmnt1.ogg",
 				"marines/marine4/lmnt3.ogg",
 				"marines/marine4/lmnt4.ogg",
 				},
-		['grt_intovcl_imdvr']	=	{
+		["grt_intovcl_imdvr"]	=	{
 				"marines/marine4/grt_intovcl_imdvr1.ogg",
 				"marines/marine4/grt_intovcl_imdvr2.ogg",
 				"marines/marine4/grt_intovcl_imdvr3.ogg",
 				},
-		['dwn_vcl_ghst']	=	{
+		["dwn_vcl_ghst"]	=	{
 				"marines/marine4/dwn_vcl_ghst1.ogg",
 				"marines/marine4/dwn_vcl_ghst2.ogg",
 				},
-		['entervcl_gnr']	=	{
+		["entervcl_gnr"]	=	{
 				"marines/marine4/entervcl_gnr1.ogg",
 				"marines/marine4/entervcl_gnr2.ogg",
 				},
-		['newordr_fallback']	=	{
+		["newordr_fallback"]	=	{
 				"marines/marine4/newordr_fallback1.ogg",
 				"marines/marine4/newordr_fallback2.ogg",
 				"marines/marine4/newordr_fallback3.ogg",
 				"marines/marine4/newordr_fallback4.ogg",
 				},
-		['strk_vcl_gnr']	=	{
+		["strk_vcl_gnr"]	=	{
 				"marines/marine4/strk_vcl_gnr1.ogg",
 				"marines/marine4/strk_vcl_gnr10.ogg",
 				"marines/marine4/strk_vcl_gnr11.ogg",
@@ -6042,7 +6042,7 @@ ENT.Voices = {
 				"marines/marine4/strk_vcl_gnr7.ogg",
 				"marines/marine4/strk_vcl_gnr8.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/marine4/scld_plr_mc1.ogg",
 				"marines/marine4/scld_plr_mc2.ogg",
 				"marines/marine4/scld_plr_mc3.ogg",
@@ -6050,11 +6050,11 @@ ENT.Voices = {
 				"marines/marine4/scld_plr_mc5.ogg",
 				"marines/marine4/scld_plr_mc6.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/marine4/look_plr_arb1.ogg",
 				"marines/marine4/look_plr_arb2.ogg",
 				},
-		['strk_grnd']	=	{
+		["strk_grnd"]	=	{
 				"marines/marine4/strk_grnd1.ogg",
 				"marines/marine4/strk_grnd2.ogg",
 				"marines/marine4/strk_grnd3.ogg",
@@ -6063,15 +6063,15 @@ ENT.Voices = {
 				"marines/marine4/strk_grnd6.ogg",
 				"marines/marine4/strk_grnd7.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"marines/marine4/rmd_vcl_phntm1.ogg",
 				"marines/marine4/rmd_vcl_phntm2.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/marine4/pstcmbt_ez1.ogg",
 				"marines/marine4/pstcmbt_ez2.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"marines/marine4/invsgt1.ogg",
 				"marines/marine4/invsgt11.ogg",
 				"marines/marine4/invsgt2.ogg",
@@ -6083,13 +6083,13 @@ ENT.Voices = {
 				"marines/marine4/invsgt8.ogg",
 				"marines/marine4/invsgt9.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/marine4/shotfoebdy1.ogg",
 				"marines/marine4/shotfoebdy2.ogg",
 				"marines/marine4/shotfoebdy3.ogg",
 				"marines/marine4/shotfoebdy4.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"marines/marine4/scld_plr_kllally1.ogg",
 				"marines/marine4/scld_plr_kllally2.ogg",
 				"marines/marine4/scld_plr_kllally3.ogg",
@@ -6100,37 +6100,37 @@ ENT.Voices = {
 				"marines/marine4/scld_plr_kllally8.ogg",
 				"marines/marine4/scld_plr_kllally9.ogg",
 				},
-		['warn_pureforms']	=	{
+		["warn_pureforms"]	=	{
 				"marines/marine4/warn_pureforms1.ogg",
 				"marines/marine4/warn_pureforms2.ogg",
 				},
-		['ask_invsgt_fail']	=	{
+		["ask_invsgt_fail"]	=	{
 				"marines/marine4/ask_invsgt_fail1.ogg",
 				"marines/marine4/ask_invsgt_fail2.ogg",
 				"marines/marine4/ask_invsgt_fail3.ogg",
 				"marines/marine4/ask_invsgt_fail4.ogg",
 				},
-		['stayback_tim']	=	{
+		["stayback_tim"]	=	{
 				"marines/marine4/stayback_tim1.ogg",
 				"marines/marine4/stayback_tim4.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"marines/marine4/dth_reanimated1.ogg",
 				"marines/marine4/dth_reanimated2.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/marine4/ok_plr_arb1.ogg",
 				"marines/marine4/ok_plr_arb2.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"marines/marine4/hail_tim1.ogg",
 				"marines/marine4/hail_tim2.ogg",
 				},
-		['warn_stlth_again']	=	{
+		["warn_stlth_again"]	=	{
 				"marines/marine4/warn_stlth_again3.ogg",
 				"marines/marine4/warn_stlth_again4.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/marine4/look1.ogg",
 				"marines/marine4/look2.ogg",
 				"marines/marine4/look3.ogg",
@@ -6141,17 +6141,17 @@ ENT.Voices = {
 				"marines/marine4/look8.ogg",
 				"marines/marine4/look9.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/marine4/neworder_flanking1.ogg",
 				"marines/marine4/neworder_flanking3.ogg",
 				"marines/marine4/neworder_flanking4.ogg",
 				"marines/marine4/neworder_flanking5.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"marines/marine4/pstcmbt_tim1.ogg",
 				"marines/marine4/pstcmbt_tim2.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/marine4/hail_plr_arb2.ogg",
 				"marines/marine4/hail_plr_arb3.ogg",
 				"marines/marine4/hail_plr_arb4.ogg",
@@ -6159,15 +6159,15 @@ ENT.Voices = {
 				"marines/marine4/hail_plr_arb6.ogg",
 				"marines/marine4/hail_plr_arb7.ogg",
 				},
-		['dwn_wpn_snpr']	=	{
+		["dwn_wpn_snpr"]	=	{
 				"marines/marine4/dwn_wpn_snpr1.ogg",
 				"marines/marine4/dwn_wpn_snpr2.ogg",
 				},
-		['grt_plr_vcl']	=	{
+		["grt_plr_vcl"]	=	{
 				"marines/marine4/grt_plr_vcl1.ogg",
 				"marines/marine4/grt_plr_vcl2.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"marines/marine4/lookcmbt1.ogg",
 				"marines/marine4/lookcmbt2.ogg",
 				"marines/marine4/lookcmbt3.ogg",
@@ -6176,7 +6176,7 @@ ENT.Voices = {
 				"marines/marine4/lookcmbt7.ogg",
 				"marines/marine4/lookcmbt8.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"marines/marine4/foundfoe1.ogg",
 				"marines/marine4/foundfoe10.ogg",
 				"marines/marine4/foundfoe11.ogg",
@@ -6192,18 +6192,18 @@ ENT.Voices = {
 				"marines/marine4/foundfoe8.ogg",
 				"marines/marine4/foundfoe9.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"marines/marine4/look_pstcmbt_hrd1.ogg",
 				"marines/marine4/look_pstcmbt_hrd2.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/marine4/dth_fall1.ogg",
 				"marines/marine4/dth_fall3.ogg",
 				"marines/marine4/dth_fall4.ogg",
 				"marines/marine4/dth_fall5.ogg",
 				"marines/marine4/dth_fall6.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/marine4/pstcmbt1.ogg",
 				"marines/marine4/pstcmbt10.ogg",
 				"marines/marine4/pstcmbt11.ogg",
@@ -6211,7 +6211,7 @@ ENT.Voices = {
 				"marines/marine4/pstcmbt6.ogg",
 				"marines/marine4/pstcmbt7.ogg",
 				},
-		['join_re']	=	{
+		["join_re"]	=	{
 				"marines/marine4/join_re1.ogg",
 				"marines/marine4/join_re10.ogg",
 				"marines/marine4/join_re11.ogg",
@@ -6222,30 +6222,30 @@ ENT.Voices = {
 				"marines/marine4/join_re6.ogg",
 				"marines/marine4/join_re7.ogg",
 				},
-		['status']	=	{
+		["status"]	=	{
 				"marines/marine4/status1.ogg",
 				"marines/marine4/status2.ogg",
 				},
-		['entervcl']	=	{
+		["entervcl"]	=	{
 				"marines/marine4/entervcl1.ogg",
 				"marines/marine4/entervcl2.ogg",
 				"marines/marine4/entervcl3.ogg",
 				"marines/marine4/entervcl4.ogg",
 				},
-		['join_prst']	=	{
+		["join_prst"]	=	{
 				"marines/marine4/join_prst1.ogg",
 				"marines/marine4/join_prst2.ogg",
 				"marines/marine4/join_prst3.ogg",
 				"marines/marine4/join_prst4.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/marine4/approve1.ogg",
 				"marines/marine4/approve2.ogg",
 				"marines/marine4/approve3.ogg",
 				"marines/marine4/approve4.ogg",
 				"marines/marine4/approve5.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"marines/marine4/srprs1.ogg",
 				"marines/marine4/srprs2.ogg",
 				"marines/marine4/srprs3.ogg",
@@ -6253,11 +6253,11 @@ ENT.Voices = {
 				"marines/marine4/srprs5.ogg",
 				"marines/marine4/srprs6.ogg",
 				},
-		['warn_vcl_ghst']	=	{
+		["warn_vcl_ghst"]	=	{
 				"marines/marine4/warn_vcl_ghst1.ogg",
 				"marines/marine4/warn_vcl_ghst2.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"marines/marine4/srch_pinned1.ogg",
 				"marines/marine4/srch_pinned2.ogg",
 				"marines/marine4/srch_pinned3.ogg",
@@ -6267,35 +6267,35 @@ ENT.Voices = {
 				"marines/marine4/srch_pinned7.ogg",
 				"marines/marine4/srch_pinned8.ogg",
 				},
-		['chr_kllfoe_stkplsm']	=	{
+		["chr_kllfoe_stkplsm"]	=	{
 				"marines/marine4/chr_kllfoe_stkplsm1.ogg",
 				"marines/marine4/chr_kllfoe_stkplsm2.ogg",
 				"marines/marine4/chr_kllfoe_stkplsm3.ogg",
 				"marines/marine4/chr_kllfoe_stkplsm5.ogg",
 				},
-		['strk_snpr']	=	{
+		["strk_snpr"]	=	{
 				"marines/marine4/strk_snpr1.ogg",
 				"marines/marine4/strk_snpr2.ogg",
 				"marines/marine4/strk_snpr3.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/marine4/meleeleap1.ogg",
 				"marines/marine4/meleeleap2.ogg",
 				"marines/marine4/meleeleap3.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"marines/marine4/seefoe_upthere2.ogg",
 				"marines/marine4/seefoe_upthere3.ogg",
 				},
-		['lookcmbt_agg']	=	{
+		["lookcmbt_agg"]	=	{
 				"marines/marine4/lookcmbt_agg1.ogg",
 				"marines/marine4/lookcmbt_agg2.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"marines/marine4/seefoe_tim1.ogg",
 				"marines/marine4/seefoe_tim2.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/marine4/scrn1.ogg",
 				"marines/marine4/scrn2.ogg",
 				"marines/marine4/scrn3.ogg",
@@ -6305,11 +6305,11 @@ ENT.Voices = {
 				"marines/marine4/scrn7.ogg",
 				"marines/marine4/scrn8.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"marines/marine4/seefoe_agg1.ogg",
 				"marines/marine4/seefoe_agg2.ogg",
 				},
-		['tnt_re']	=	{
+		["tnt_re"]	=	{
 				"marines/marine4/tnt_re1.ogg",
 				"marines/marine4/tnt_re4.ogg",
 				"marines/marine4/tnt_re5.ogg",
@@ -6317,11 +6317,11 @@ ENT.Voices = {
 				"marines/marine4/tnt_re7.ogg",
 				"marines/marine4/tnt_re8.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"marines/marine4/rmd_vcl_wrth1.ogg",
 				"marines/marine4/rmd_vcl_wrth2.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/marine4/scrn_plr_wrswpn1.ogg",
 				"marines/marine4/scrn_plr_wrswpn2.ogg",
 				"marines/marine4/scrn_plr_wrswpn3.ogg",
@@ -6331,7 +6331,7 @@ ENT.Voices = {
 				"marines/marine4/scrn_plr_wrswpn8.ogg",
 				"marines/marine4/scrn_plr_wrswpn9.ogg",
 				},
-		['invsgt_fail']	=	{
+		["invsgt_fail"]	=	{
 				"marines/marine4/invsgt_fail1.ogg",
 				"marines/marine4/invsgt_fail10.ogg",
 				"marines/marine4/invsgt_fail2.ogg",
@@ -6343,19 +6343,19 @@ ENT.Voices = {
 				"marines/marine4/invsgt_fail8.ogg",
 				"marines/marine4/invsgt_fail9.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"marines/marine4/scld_plr_wldgrnd1.ogg",
 				"marines/marine4/scld_plr_wldgrnd3.ogg",
 				},
-		['scrn_plr_mc']	=	{
+		["scrn_plr_mc"]	=	{
 				"marines/marine4/scrn_plr_mc1.ogg",
 				"marines/marine4/scrn_plr_mc2.ogg",
 				},
-		['dwn_scrb']	=	{
+		["dwn_scrb"]	=	{
 				"marines/marine4/dwn_scrb3.ogg",
 				"marines/marine4/dwn_scrb5.ogg",
 				},
-		['scld_plr_vclcrash']	=	{
+		["scld_plr_vclcrash"]	=	{
 				"marines/marine4/scld_plr_vclcrash1.ogg",
 				"marines/marine4/scld_plr_vclcrash12.ogg",
 				"marines/marine4/scld_plr_vclcrash3.ogg",
@@ -6363,29 +6363,29 @@ ENT.Voices = {
 				"marines/marine4/scld_plr_vclcrash8.ogg",
 				"marines/marine4/scld_plr_vclcrash9.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/marine4/ordr_chkfoebdy1.ogg",
 				"marines/marine4/ordr_chkfoebdy2.ogg",
 				"marines/marine4/ordr_chkfoebdy3.ogg",
 				"marines/marine4/ordr_chkfoebdy5.ogg",
 				},
-		['scld_plr_wldvcl']	=	{
+		["scld_plr_wldvcl"]	=	{
 				"marines/marine4/scld_plr_wldvcl1.ogg",
 				},
-		['scld_plr_wldvc']	=	{
+		["scld_plr_wldvc"]	=	{
 				"marines/marine4/scld_plr_wldvc2.ogg",
 				},
-		['ask_chkallybdyf']	=	{
+		["ask_chkallybdyf"]	=	{
 				"marines/marine4/ask_chkallybdyf1.ogg",
 				"marines/marine4/ask_chkallybdyf2.ogg",
 				},
-		['grt_intovcl']	=	{
+		["grt_intovcl"]	=	{
 				"marines/marine4/grt_intovcl1.ogg",
 				"marines/marine4/grt_intovcl2.ogg",
 				"marines/marine4/grt_intovcl3.ogg",
 				"marines/marine4/grt_intovcl4.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"marines/marine4/warn_incmn_grnd1.ogg",
 				"marines/marine4/warn_incmn_grnd2.ogg",
 				"marines/marine4/warn_incmn_grnd3.ogg",
@@ -6395,7 +6395,7 @@ ENT.Voices = {
 				"marines/marine4/warn_incmn_grnd7.ogg",
 				"marines/marine4/warn_incmn_grnd8.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/marine4/grt_plr_arb1.ogg",
 				"marines/marine4/grt_plr_arb2.ogg",
 				"marines/marine4/grt_plr_arb3.ogg",
@@ -6403,19 +6403,19 @@ ENT.Voices = {
 				"marines/marine4/grt_plr_arb7.ogg",
 				"marines/marine4/grt_plr_arb9.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/marine4/scrn_plr_arb1.ogg",
 				"marines/marine4/scrn_plr_arb2.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"marines/marine4/scld_plr_hrt_blt1.ogg",
 				"marines/marine4/scld_plr_hrt_blt2.ogg",
 				},
-		['reanimate']	=	{
+		["reanimate"]	=	{
 				"marines/marine4/reanimate1.ogg",
 				"marines/marine4/reanimate2.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/marine4/betray1.ogg",
 				"marines/marine4/betray2.ogg",
 				"marines/marine4/betray3.ogg",
@@ -6425,11 +6425,11 @@ ENT.Voices = {
 				"marines/marine4/betray7.ogg",
 				"marines/marine4/betray8.ogg",
 				},
-		['rmd_vcl_bnsh']	=	{
+		["rmd_vcl_bnsh"]	=	{
 				"marines/marine4/rmd_vcl_bnsh1.ogg",
 				"marines/marine4/rmd_vcl_bnsh3.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/marine4/prs_plr_arb1.ogg",
 				"marines/marine4/prs_plr_arb2.ogg",
 				"marines/marine4/prs_plr_arb4.ogg",
@@ -6438,7 +6438,7 @@ ENT.Voices = {
 				"marines/marine4/prs_plr_arb7.ogg",
 				"marines/marine4/prs_plr_arb9.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/marine4/scld_plr_arb1.ogg",
 				"marines/marine4/scld_plr_arb3.ogg",
 				"marines/marine4/scld_plr_arb4.ogg",
@@ -6446,7 +6446,7 @@ ENT.Voices = {
 				"marines/marine4/scld_plr_arb6.ogg",
 				"marines/marine4/scld_plr_arb7.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/marine4/grt1.ogg",
 				"marines/marine4/grt2.ogg",
 				"marines/marine4/grt3.ogg",
@@ -6456,49 +6456,49 @@ ENT.Voices = {
 				"marines/marine4/grt8.ogg",
 				"marines/marine4/grt9.ogg",
 				},
-		['rmd_trrt']	=	{
+		["rmd_trrt"]	=	{
 				"marines/marine4/rmd_trrt1.ogg",
 				"marines/marine4/rmd_trrt2.ogg",
 				},
-		['rmd_stlth']	=	{
+		["rmd_stlth"]	=	{
 				"marines/marine4/rmd_stlth1.ogg",
 				"marines/marine4/rmd_stlth2.ogg",
 				},
-		['regret']	=	{
+		["regret"]	=	{
 				"marines/marine4/regret2.ogg",
 				"marines/marine4/regret3.ogg",
 				"marines/marine4/regret5.ogg",
 				"marines/marine4/regret6.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/marine4/scld_plr_blocking1.ogg",
 				"marines/marine4/scld_plr_blocking2.ogg",
 				"marines/marine4/scld_plr_blocking4.ogg",
 				"marines/marine4/scld_plr_blocking5.ogg",
 				"marines/marine4/scld_plr_blocking6.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/marine4/dth_mjr1.ogg",
 				"marines/marine4/dth_mjr2.ogg",
 				"marines/marine4/dth_mjr3.ogg",
 				},
-		['pstcmbt_agg']	=	{
+		["pstcmbt_agg"]	=	{
 				"marines/marine4/pstcmbt_agg1.ogg",
 				"marines/marine4/pstcmbt_agg2.ogg",
 				},
-		['status_re']	=	{
+		["status_re"]	=	{
 				"marines/marine4/status_re1.ogg",
 				"marines/marine4/status_re2.ogg",
 				"marines/marine4/status_re3.ogg",
 				"marines/marine4/status_re4.ogg",
 				},
-		['invt_vcl']	=	{
+		["invt_vcl"]	=	{
 				"marines/marine4/invt_vcl1.ogg",
 				"marines/marine4/invt_vcl2.ogg",
 				"marines/marine4/invt_vcl4.ogg",
 				"marines/marine4/invt_vcl5.ogg",
 				},
-		['prst']	=	{
+		["prst"]	=	{
 				"marines/marine4/prst1.ogg",
 				"marines/marine4/prst2.ogg",
 				"marines/marine4/prst3.ogg",
@@ -6506,24 +6506,24 @@ ENT.Voices = {
 				"marines/marine4/prst7.ogg",
 				"marines/marine4/prst8.ogg",
 				},
-		['prs_plr_sniping']	=	{
+		["prs_plr_sniping"]	=	{
 				"marines/marine4/prs_plr_sniping1.ogg",
 				"marines/marine4/prs_plr_sniping2.ogg",
 				},
-		['warn_vcl_chpr']	=	{
+		["warn_vcl_chpr"]	=	{
 				"marines/marine4/warn_vcl_chpr1.ogg",
 				"marines/marine4/warn_vcl_chpr2.ogg",
 				"marines/marine4/warn_vcl_chpr3.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/marine4/ok_plr_mc2.ogg",
 				"marines/marine4/ok_plr_mc3.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"marines/marine4/lookcmbt_tim1.ogg",
 				"marines/marine4/lookcmbt_tim2.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/marine4/crs12.ogg",
 				"marines/marine4/crs13.ogg",
 				"marines/marine4/crs15.ogg",
@@ -6535,59 +6535,59 @@ ENT.Voices = {
 				"marines/marine4/crs5.ogg",
 				"marines/marine4/crs9.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/marine4/newordr_retreat1.ogg",
 				"marines/marine4/newordr_retreat2.ogg",
 				"marines/marine4/newordr_retreat3.ogg",
 				"marines/marine4/newordr_retreat4.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"marines/marine4/melee1.ogg",
 				"marines/marine4/melee2.ogg",
 				"marines/marine4/melee3.ogg",
 				},
-		['scld_plr_vclcrazy']	=	{
+		["scld_plr_vclcrazy"]	=	{
 				"marines/marine4/scld_plr_vclcrazy1.ogg",
 				"marines/marine4/scld_plr_vclcrazy3.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/marine4/pain_fall1.ogg",
 				"marines/marine4/pain_fall2.ogg",
 				"marines/marine4/pain_fall3.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"marines/marine4/warn_incmn1.ogg",
 				"marines/marine4/warn_incmn2.ogg",
 				"marines/marine4/warn_incmn3.ogg",
 				"marines/marine4/warn_incmn4.ogg",
 				},
-		['grt_plr_vcl_empty']	=	{
+		["grt_plr_vcl_empty"]	=	{
 				"marines/marine4/grt_plr_vcl_empty1.ogg",
 				"marines/marine4/grt_plr_vcl_empty2.ogg",
 				"marines/marine4/grt_plr_vcl_empty3.ogg",
 				},
-		['join_emrg_re']	=	{
+		["join_emrg_re"]	=	{
 				"marines/marine4/join_emrg_re1.ogg",
 				"marines/marine4/join_emrg_re2.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"marines/marine4/prs_plr_kll_lots1.ogg",
 				"marines/marine4/prs_plr_kll_lots2.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/marine4/pain_mdm1.ogg",
 				"marines/marine4/pain_mdm2.ogg",
 				"marines/marine4/pain_mdm3.ogg",
 				"marines/marine4/pain_mdm4.ogg",
 				},
-		['captured']	=	{
+		["captured"]	=	{
 				"marines/marine4/captured1.ogg",
 				"marines/marine4/captured2.ogg",
 				"marines/marine4/captured3.ogg",
 				"marines/marine4/captured4.ogg",
 				"marines/marine4/captured5.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/marine4/ok_plr_trdwpn10.ogg",
 				"marines/marine4/ok_plr_trdwpn11.ogg",
 				"marines/marine4/ok_plr_trdwpn12.ogg",
@@ -6597,11 +6597,11 @@ ENT.Voices = {
 				"marines/marine4/ok_plr_trdwpn16.ogg",
 				"marines/marine4/ok_plr_trdwpn9.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"marines/marine4/warn_flood1.ogg",
 				"marines/marine4/warn_flood2.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/marine4/ok1.ogg",
 				"marines/marine4/ok2.ogg",
 				"marines/marine4/ok3.ogg",
@@ -6611,37 +6611,37 @@ ENT.Voices = {
 				"marines/marine4/ok7.ogg",
 				"marines/marine4/ok8.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"marines/marine4/lmnt_deadally1.ogg",
 				"marines/marine4/lmnt_deadally2.ogg",
 				},
-		['brsrk']	=	{
+		["brsrk"]	=	{
 				"marines/marine4/brsrk1.ogg",
 				"marines/marine4/brsrk2.ogg",
 				"marines/marine4/brsrk3.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"marines/marine4/panic_onfire1.ogg",
 				"marines/marine4/panic_onfire2.ogg",
 				"marines/marine4/panic_onfire3.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"marines/marine4/panic_infctnfrm1.ogg",
 				"marines/marine4/panic_infctnfrm2.ogg",
 				"marines/marine4/panic_infctnfrm3.ogg",
 				"marines/marine4/panic_infctnfrm4.ogg",
 				},
-		['strk_grnd_uncvr']	=	{
+		["strk_grnd_uncvr"]	=	{
 				"marines/marine4/strk_grnd_uncvr1.ogg",
 				"marines/marine4/strk_grnd_uncvr2.ogg",
 				},
-		['ask_prst_fail']	=	{
+		["ask_prst_fail"]	=	{
 				"marines/marine4/ask_prst_fail1.ogg",
 				"marines/marine4/ask_prst_fail2.ogg",
 				"marines/marine4/ask_prst_fail3.ogg",
 				"marines/marine4/ask_prst_fail4.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/marine4/endcmbt1.ogg",
 				"marines/marine4/endcmbt2.ogg",
 				"marines/marine4/endcmbt3.ogg",
@@ -6649,67 +6649,67 @@ ENT.Voices = {
 				"marines/marine4/endcmbt6.ogg",
 				"marines/marine4/endcmbt7.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/marine4/hail1.ogg",
 				"marines/marine4/hail2.ogg",
 				"marines/marine4/hail3.ogg",
 				"marines/marine4/hail4.ogg",
 				},
-		['pain_shld']	=	{
+		["pain_shld"]	=	{
 				"marines/marine4/pain_shld1.ogg",
 				"marines/marine4/pain_shld2.ogg",
 				"marines/marine4/pain_shld3.ogg",
 				"marines/marine4/pain_shld4.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/marine4/forgive1.ogg",
 				"marines/marine4/forgive2.ogg",
 				"marines/marine4/forgive3.ogg",
 				"marines/marine4/forgive4.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"marines/marine4/prs_plr_gdgrnd1.ogg",
 				"marines/marine4/prs_plr_gdgrnd2.ogg",
 				},
-		['prs_plr_kll_vclbmp']	=	{
+		["prs_plr_kll_vclbmp"]	=	{
 				"marines/marine4/prs_plr_kll_vclbmp1.ogg",
 				"marines/marine4/prs_plr_kll_vclbmp2.ogg",
 				},
-		['ordr_re']	=	{
+		["ordr_re"]	=	{
 				"marines/marine4/ordr_re1.ogg",
 				"marines/marine4/ordr_re4.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/marine4/fall1.ogg",
 				"marines/marine4/fall2.ogg",
 				"marines/marine4/fall3.ogg",
 				},
-		['entervcl_trrt']	=	{
+		["entervcl_trrt"]	=	{
 				"marines/marine4/entervcl_trrt1.ogg",
 				"marines/marine4/entervcl_trrt2.ogg",
 				},
-		['crs_betrayingplr_mc']	=	{
+		["crs_betrayingplr_mc"]	=	{
 				"marines/marine4/crs_betrayingplr_mc2.ogg",
 				"marines/marine4/crs_betrayingplr_mc3.ogg",
 				},
-		['dwn_vcl_bnsh']	=	{
+		["dwn_vcl_bnsh"]	=	{
 				"marines/marine4/dwn_vcl_bnsh1.ogg",
 				"marines/marine4/dwn_vcl_bnsh2.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/marine4/dive2.ogg",
 				"marines/marine4/dive3.ogg",
 				"marines/marine4/dive4.ogg",
 				},
-		['grt_plr_srprs']	=	{
+		["grt_plr_srprs"]	=	{
 				"marines/marine4/grt_plr_srprs1.ogg",
 				"marines/marine4/grt_plr_srprs2.ogg",
 				},
-		['chckallybydf']	=	{
+		["chckallybydf"]	=	{
 				"marines/marine4/chckallybydf1.ogg",
 				"marines/marine4/chckallybydf3.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/marine4/stayback1.ogg",
 				"marines/marine4/stayback11.ogg",
 				"marines/marine4/stayback13.ogg",
@@ -6721,69 +6721,69 @@ ENT.Voices = {
 				"marines/marine4/stayback8.ogg",
 				"marines/marine4/stayback9.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/marine4/thnk_plr_mc1.ogg",
 				"marines/marine4/thnk_plr_mc2.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/marine4/dth1.ogg",
 				"marines/marine4/dth2.ogg",
 				"marines/marine4/dth3.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/marine4/chr1.ogg",
 				"marines/marine4/chr2.ogg",
 				"marines/marine4/chr5.ogg",
 				},
-		['foeordr_charge']	=	{
+		["foeordr_charge"]	=	{
 				"marines/marine4/foeordr_charge1.ogg",
 				"marines/marine4/foeordr_charge2.ogg",
 				"marines/marine4/foeordr_charge3.ogg",
 				"marines/marine4/foeordr_charge4.ogg",
 				},
-		['rmd_wpn_snpr']	=	{
+		["rmd_wpn_snpr"]	=	{
 				"marines/marine4/rmd_wpn_snpr1.ogg",
 				"marines/marine4/rmd_wpn_snpr2.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/marine4/crs_betrayingplr_arb1.ogg",
 				"marines/marine4/crs_betrayingplr_arb2.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/marine4/foeordr_support1.ogg",
 				"marines/marine4/foeordr_support2.ogg",
 				"marines/marine4/foeordr_support3.ogg",
 				"marines/marine4/foeordr_support4.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/marine4/dth_slnt1.ogg",
 				"marines/marine4/dth_slnt2.ogg",
 				"marines/marine4/dth_slnt3.ogg",
 				},
-		['warn_incmn_fldbm']	=	{
+		["warn_incmn_fldbm"]	=	{
 				"marines/marine4/warn_incmn_fldbm2.ogg",
 				"marines/marine4/warn_incmn_fldbm3.ogg",
 				},
-		['prs_plr_kll_mjr']	=	{
+		["prs_plr_kll_mjr"]	=	{
 				"marines/marine4/prs_plr_kll_mjr1.ogg",
 				"marines/marine4/prs_plr_kll_mjr2.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/marine4/look_plr_mc1.ogg",
 				"marines/marine4/look_plr_mc2.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/marine4/newordr_moveon1.ogg",
 				"marines/marine4/newordr_moveon2.ogg",
 				"marines/marine4/newordr_moveon3.ogg",
 				"marines/marine4/newordr_moveon4.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/marine4/pstcmbt_hrd1.ogg",
 				"marines/marine4/pstcmbt_hrd3.ogg",
 				"marines/marine4/pstcmbt_hrd4.ogg",
 				},
-		['prs_plr_kll_blt']	=	{
+		["prs_plr_kll_blt"]	=	{
 				"marines/marine4/prs_plr_kll_blt1.ogg",
 				"marines/marine4/prs_plr_kll_blt2.ogg",
 				"marines/marine4/prs_plr_kll_blt3.ogg",
@@ -6791,7 +6791,7 @@ ENT.Voices = {
 				"marines/marine4/prs_plr_kll_blt5.ogg",
 				"marines/marine4/prs_plr_kll_blt6.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/marine4/lmnt_deadplr_arb1.ogg",
 				"marines/marine4/lmnt_deadplr_arb2.ogg",
 				"marines/marine4/lmnt_deadplr_arb3.ogg",
@@ -6799,24 +6799,24 @@ ENT.Voices = {
 				"marines/marine4/lmnt_deadplr_arb5.ogg",
 				"marines/marine4/lmnt_deadplr_arb6.ogg",
 				},
-		['whn_hrtblt']	=	{
+		["whn_hrtblt"]	=	{
 				"marines/marine4/whn_hrtblt1.ogg",
 				"marines/marine4/whn_hrtblt2.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/marine4/foeordr_advance1.ogg",
 				"marines/marine4/foeordr_advance3.ogg",
 				"marines/marine4/foeordr_advance4.ogg",
 				"marines/marine4/foeordr_advance5.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/marine4/bump1.ogg",
 				"marines/marine4/bump2.ogg",
 				"marines/marine4/bump3.ogg",
 				"marines/marine4/bump4.ogg",
 				"marines/marine4/bump5.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"marines/marine4/hrdfoe1.ogg",
 				"marines/marine4/hrdfoe10.ogg",
 				"marines/marine4/hrdfoe2.ogg",
@@ -6828,29 +6828,29 @@ ENT.Voices = {
 				"marines/marine4/hrdfoe8.ogg",
 				"marines/marine4/hrdfoe9.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/marine4/newordr_entervcl1.ogg",
 				"marines/marine4/newordr_entervcl2.ogg",
 				"marines/marine4/newordr_entervcl3.ogg",
 				"marines/marine4/newordr_entervcl4.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/marine4/dodge1.ogg",
 				"marines/marine4/dodge2.ogg",
 				"marines/marine4/dodge3.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/marine4/dth_hdsht1.ogg",
 				"marines/marine4/dth_hdsht2.ogg",
 				"marines/marine4/dth_hdsht3.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"marines/marine4/morefoe2.ogg",
 				"marines/marine4/morefoe3.ogg",
 				"marines/marine4/morefoe4.ogg",
 				"marines/marine4/morefoe6.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/marine4/strk1.ogg",
 				"marines/marine4/strk10.ogg",
 				"marines/marine4/strk11.ogg",
@@ -6863,7 +6863,7 @@ ENT.Voices = {
 				"marines/marine4/strk8.ogg",
 				"marines/marine4/strk9.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/marine4/lmnt_deadplr_mc1.ogg",
 				"marines/marine4/lmnt_deadplr_mc10.ogg",
 				"marines/marine4/lmnt_deadplr_mc4.ogg",
@@ -6872,45 +6872,45 @@ ENT.Voices = {
 				"marines/marine4/lmnt_deadplr_mc7.ogg",
 				"marines/marine4/lmnt_deadplr_mc9.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/marine4/newordr_leaveplr1.ogg",
 				"marines/marine4/newordr_leaveplr2.ogg",
 				"marines/marine4/newordr_leaveplr4.ogg",
 				"marines/marine4/newordr_leaveplr5.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/marine4/lift1.ogg",
 				"marines/marine4/lift2.ogg",
 				"marines/marine4/lift3.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/marine4/ok_plr_trdst_dvr3.ogg",
 				"marines/marine4/ok_plr_trdst_dvr4.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/marine4/stun1.ogg",
 				"marines/marine4/stun2.ogg",
 				"marines/marine4/stun3.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/marine4/kllmytrgt1.ogg",
 				"marines/marine4/kllmytrgt2.ogg",
 				"marines/marine4/kllmytrgt3.ogg",
 				"marines/marine4/kllmytrgt5.ogg",
 				"marines/marine4/kllmytrgt6.ogg",
 				},
-		['ask_chkallybdy']	=	{
+		["ask_chkallybdy"]	=	{
 				"marines/marine4/ask_chkallybdy1.ogg",
 				"marines/marine4/ask_chkallybdy2.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/marine4/foeordr_retreat1.ogg",
 				"marines/marine4/foeordr_retreat2.ogg",
 				"marines/marine4/foeordr_retreat3.ogg",
 				"marines/marine4/foeordr_retreat4.ogg",
 				"marines/marine4/foeordr_retreat5.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/marine4/lst_cntct1.ogg",
 				"marines/marine4/lst_cntct10.ogg",
 				"marines/marine4/lst_cntct2.ogg",
@@ -6920,68 +6920,68 @@ ENT.Voices = {
 				"marines/marine4/lst_cntct8.ogg",
 				"marines/marine4/lst_cntct9.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"marines/marine4/look_pstcmbt1.ogg",
 				"marines/marine4/look_pstcmbt4.ogg",
 				},
-		['warn_stlth']	=	{
+		["warn_stlth"]	=	{
 				"marines/marine4/warn_stlth1.ogg",
 				"marines/marine4/warn_stlth4.ogg",
 				},
-		['chckallybdy']	=	{
+		["chckallybdy"]	=	{
 				"marines/marine4/chckallybdy1.ogg",
 				"marines/marine4/chckallybdy3.ogg",
 				},
-		['chkfoebdy']	=	{
+		["chkfoebdy"]	=	{
 				"marines/marine4/chkfoebdy1.ogg",
 				"marines/marine4/chkfoebdy2.ogg",
 				"marines/marine4/chkfoebdy3.ogg",
 				"marines/marine4/chkfoebdy4.ogg",
 				},
-		['newordr_arrival']	=	{
+		["newordr_arrival"]	=	{
 				"marines/marine4/newordr_arrival1.ogg",
 				"marines/marine4/newordr_arrival2.ogg",
 				"marines/marine4/newordr_arrival3.ogg",
 				"marines/marine4/newordr_arrival4.ogg",
 				},
-		['entervcl_psngr']	=	{
+		["entervcl_psngr"]	=	{
 				"marines/marine4/entervcl_psngr1.ogg",
 				"marines/marine4/entervcl_psngr3.ogg",
 				},
-		['warn_trrt']	=	{
+		["warn_trrt"]	=	{
 				"marines/marine4/warn_trrt1.ogg",
 				"marines/marine4/warn_trrt2.ogg",
 				}
 	},
 	["Marine5"] = {
-	['panic_onfire']	=	{
+	["panic_onfire"]	=	{
 				"marines/marine5/panic_onfire1.ogg",
 				"marines/marine5/panic_onfire2.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"marines/marine5/warn_vcl_phntm1.ogg",
 				"marines/marine5/warn_vcl_phntm2.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"marines/marine5/look_pstcmbt1.ogg",
 				"marines/marine5/look_pstcmbt3.ogg",
 				"marines/marine5/look_pstcmbt4.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"marines/marine5/warn_chr_bggr1.ogg",
 				"marines/marine5/warn_chr_bggr2.ogg",
 				"marines/marine5/warn_chr_bggr3.ogg",
 				"marines/marine5/warn_chr_bggr4.ogg",
 				},
-		['status']	=	{
+		["status"]	=	{
 				"marines/marine5/status1.ogg",
 				"marines/marine5/status2.ogg",
 				},
-		['warn_vcl_bnsh']	=	{
+		["warn_vcl_bnsh"]	=	{
 				"marines/marine5/warn_vcl_bnsh1.ogg",
 				"marines/marine5/warn_vcl_bnsh2.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/marine5/pain1.ogg",
 				"marines/marine5/pain2.ogg",
 				"marines/marine5/pain3.ogg",
@@ -6989,17 +6989,17 @@ ENT.Voices = {
 				"marines/marine5/pain5.ogg",
 				"marines/marine5/pain6.ogg",
 				},
-		['lookcmbt_fllw']	=	{
+		["lookcmbt_fllw"]	=	{
 				"marines/marine5/lookcmbt_fllw3.ogg",
 				"marines/marine5/lookcmbt_fllw4.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/marine5/cvr_re1.ogg",
 				"marines/marine5/cvr_re2.ogg",
 				"marines/marine5/cvr_re3.ogg",
 				"marines/marine5/cvr_re4.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"marines/marine5/prs_plr_kll1.ogg",
 				"marines/marine5/prs_plr_kll2.ogg",
 				"marines/marine5/prs_plr_kll3.ogg",
@@ -7007,7 +7007,7 @@ ENT.Voices = {
 				"marines/marine5/prs_plr_kll5.ogg",
 				"marines/marine5/prs_plr_kll6.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/marine5/dwn1.ogg",
 				"marines/marine5/dwn2.ogg",
 				"marines/marine5/dwn3.ogg",
@@ -7016,33 +7016,33 @@ ENT.Voices = {
 				"marines/marine5/dwn6.ogg",
 				"marines/marine5/dwn7.ogg",
 				},
-		['neworder_fallback']	=	{
+		["neworder_fallback"]	=	{
 				"marines/marine5/neworder_fallback1.ogg",
 				"marines/marine5/neworder_fallback2.ogg",
 				"marines/marine5/neworder_fallback3.ogg",
 				"marines/marine5/neworder_fallback4.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/marine5/newordr_support1.ogg",
 				"marines/marine5/newordr_support2.ogg",
 				"marines/marine5/newordr_support4.ogg",
 				"marines/marine5/newordr_support5.ogg",
 				},
-		['rmd_scrb']	=	{
+		["rmd_scrb"]	=	{
 				"marines/marine5/rmd_scrb1.ogg",
 				"marines/marine5/rmd_scrb2.ogg",
 				},
-		['scld_plr_wlddgrnd']	=	{
+		["scld_plr_wlddgrnd"]	=	{
 				"marines/marine5/scld_plr_wlddgrnd1.ogg",
 				"marines/marine5/scld_plr_wlddgrnd2.ogg",
 				},
-		['panic_infctfrm']	=	{
+		["panic_infctfrm"]	=	{
 				"marines/marine5/panic_infctfrm1.ogg",
 				"marines/marine5/panic_infctfrm2.ogg",
 				"marines/marine5/panic_infctfrm3.ogg",
 				"marines/marine5/panic_infctfrm4.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/marine5/newordr_exitvcl1.ogg",
 				"marines/marine5/newordr_exitvcl2.ogg",
 				"marines/marine5/newordr_exitvcl3.ogg",
@@ -7050,14 +7050,14 @@ ENT.Voices = {
 				"marines/marine5/newordr_exitvcl5.ogg",
 				"marines/marine5/newordr_exitvcl6.ogg",
 				},
-		['join_stayback']	=	{
+		["join_stayback"]	=	{
 				"marines/marine5/join_stayback1.ogg",
 				"marines/marine5/join_stayback2.ogg",
 				"marines/marine5/join_stayback3.ogg",
 				"marines/marine5/join_stayback4.ogg",
 				"marines/marine5/join_stayback5.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"marines/marine5/cower1.ogg",
 				"marines/marine5/cower10.ogg",
 				"marines/marine5/cower13.ogg",
@@ -7067,7 +7067,7 @@ ENT.Voices = {
 				"marines/marine5/cower8.ogg",
 				"marines/marine5/cower9.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/marine5/thnk1.ogg",
 				"marines/marine5/thnk10.ogg",
 				"marines/marine5/thnk3.ogg",
@@ -7076,7 +7076,7 @@ ENT.Voices = {
 				"marines/marine5/thnk8.ogg",
 				"marines/marine5/thnk9.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"marines/marine5/scld_plr_hrt_blt1.ogg",
 				"marines/marine5/scld_plr_hrt_blt2.ogg",
 				"marines/marine5/scld_plr_hrt_blt3.ogg",
@@ -7085,17 +7085,17 @@ ENT.Voices = {
 				"marines/marine5/scld_plr_hrt_blt6.ogg",
 				"marines/marine5/scld_plr_hrt_blt7.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/marine5/foeordr_support1.ogg",
 				"marines/marine5/foeordr_support2.ogg",
 				"marines/marine5/foeordr_support5.ogg",
 				"marines/marine5/foeordr_support7.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/marine5/pstcmbt_brt1.ogg",
 				"marines/marine5/pstcmbt_brt4.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/marine5/grt_plr_mc1.ogg",
 				"marines/marine5/grt_plr_mc3.ogg",
 				"marines/marine5/grt_plr_mc4.ogg",
@@ -7103,18 +7103,18 @@ ENT.Voices = {
 				"marines/marine5/grt_plr_mc6.ogg",
 				"marines/marine5/grt_plr_mc8.ogg",
 				},
-		['rmd_wpn_hmmr']	=	{
+		["rmd_wpn_hmmr"]	=	{
 				"marines/marine5/rmd_wpn_hmmr2.ogg",
 				"marines/marine5/rmd_wpn_hmmr3.ogg",
 				},
-		['tchallybdy']	=	{
+		["tchallybdy"]	=	{
 				"marines/marine5/tchallybdy1.ogg",
 				"marines/marine5/tchallybdy2.ogg",
 				"marines/marine5/tchallybdy3.ogg",
 				"marines/marine5/tchallybdy4.ogg",
 				"marines/marine5/tchallybdy5.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/marine5/foundfoe_prst10.ogg",
 				"marines/marine5/foundfoe_prst11.ogg",
 				"marines/marine5/foundfoe_prst12.ogg",
@@ -7126,41 +7126,41 @@ ENT.Voices = {
 				"marines/marine5/foundfoe_prst8.ogg",
 				"marines/marine5/foundfoe_prst9.ogg",
 				},
-		['ordr_keepwatch']	=	{
+		["ordr_keepwatch"]	=	{
 				"marines/marine5/ordr_keepwatch1.ogg",
 				"marines/marine5/ordr_keepwatch2.ogg",
 				"marines/marine5/ordr_keepwatch3.ogg",
 				"marines/marine5/ordr_keepwatch4.ogg",
 				"marines/marine5/ordr_keepwatch5.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/marine5/pain_mjr1.ogg",
 				"marines/marine5/pain_mjr11.ogg",
 				"marines/marine5/pain_mjr12.ogg",
 				"marines/marine5/pain_mjr4.ogg",
 				"marines/marine5/pain_mjr9.ogg",
 				},
-		['kamikaze']	=	{
+		["kamikaze"]	=	{
 				"marines/marine5/kamikaze1.ogg",
 				"marines/marine5/kamikaze2.ogg",
 				"marines/marine5/kamikaze3.ogg",
 				},
-		['warn_brsrk']	=	{
+		["warn_brsrk"]	=	{
 				"marines/marine5/warn_brsrk1.ogg",
 				"marines/marine5/warn_brsrk2.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"marines/marine5/seefoe_agg2.ogg",
 				"marines/marine5/seefoe_agg3.ogg",
 				},
-		['chr_kllfoe_blt']	=	{
+		["chr_kllfoe_blt"]	=	{
 				"marines/marine5/chr_kllfoe_blt1.ogg",
 				"marines/marine5/chr_kllfoe_blt2.ogg",
 				"marines/marine5/chr_kllfoe_blt3.ogg",
 				"marines/marine5/chr_kllfoe_blt4.ogg",
 				"marines/marine5/chr_kllfoe_blt5.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/marine5/thnk_plr_btrwpn1.ogg",
 				"marines/marine5/thnk_plr_btrwpn2.ogg",
 				"marines/marine5/thnk_plr_btrwpn3.ogg",
@@ -7170,30 +7170,30 @@ ENT.Voices = {
 				"marines/marine5/thnk_plr_btrwpn7.ogg",
 				"marines/marine5/thnk_plr_btrwpn9.ogg",
 				},
-		['scrn_plr_mc']	=	{
+		["scrn_plr_mc"]	=	{
 				"marines/marine5/scrn_plr_mc1.ogg",
 				"marines/marine5/scrn_plr_mc2.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/marine5/dth_mjr1.ogg",
 				"marines/marine5/dth_mjr10.ogg",
 				"marines/marine5/dth_mjr2.ogg",
 				"marines/marine5/dth_mjr3.ogg",
 				"marines/marine5/dth_mjr4.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/marine5/pstcmbt1.ogg",
 				"marines/marine5/pstcmbt2.ogg",
 				"marines/marine5/pstcmbt5.ogg",
 				"marines/marine5/pstcmbt6.ogg",
 				"marines/marine5/pstcmbt7.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/marine5/look_plr_arb1.ogg",
 				"marines/marine5/look_plr_arb2.ogg",
 				"marines/marine5/look_plr_arb3.ogg",
 				},
-		['strk_grnd']	=	{
+		["strk_grnd"]	=	{
 				"marines/marine5/strk_grnd1.ogg",
 				"marines/marine5/strk_grnd2.ogg",
 				"marines/marine5/strk_grnd3.ogg",
@@ -7202,11 +7202,11 @@ ENT.Voices = {
 				"marines/marine5/strk_grnd6.ogg",
 				"marines/marine5/strk_grnd7.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/marine5/pstcmbt_ez1.ogg",
 				"marines/marine5/pstcmbt_ez2.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"marines/marine5/scld_plr_kllally1.ogg",
 				"marines/marine5/scld_plr_kllally2.ogg",
 				"marines/marine5/scld_plr_kllally4.ogg",
@@ -7216,27 +7216,27 @@ ENT.Voices = {
 				"marines/marine5/scld_plr_kllally8.ogg",
 				"marines/marine5/scld_plr_kllally9.ogg",
 				},
-		['warn_pureforms']	=	{
+		["warn_pureforms"]	=	{
 				"marines/marine5/warn_pureforms1.ogg",
 				"marines/marine5/warn_pureforms2.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/marine5/dth1.ogg",
 				"marines/marine5/dth2.ogg",
 				"marines/marine5/dth3.ogg",
 				"marines/marine5/dth4.ogg",
 				"marines/marine5/dth5.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/marine5/ok_plr_arb1.ogg",
 				"marines/marine5/ok_plr_arb2.ogg",
 				"marines/marine5/ok_plr_arb3.ogg",
 				},
-		['gtr_intovcl_imdvr']	=	{
+		["gtr_intovcl_imdvr"]	=	{
 				"marines/marine5/gtr_intovcl_imdvr1.ogg",
 				"marines/marine5/gtr_intovcl_imdvr2.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/marine5/look1.ogg",
 				"marines/marine5/look10.ogg",
 				"marines/marine5/look2.ogg",
@@ -7247,11 +7247,11 @@ ENT.Voices = {
 				"marines/marine5/look8.ogg",
 				"marines/marine5/look9.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/marine5/thnk_plr_arb1.ogg",
 				"marines/marine5/thnk_plr_arb2.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/marine5/hail_plr_arb1.ogg",
 				"marines/marine5/hail_plr_arb2.ogg",
 				"marines/marine5/hail_plr_arb4.ogg",
@@ -7259,11 +7259,11 @@ ENT.Voices = {
 				"marines/marine5/hail_plr_arb6.ogg",
 				"marines/marine5/hail_plr_arb7.ogg",
 				},
-		['grt_plr_vcl']	=	{
+		["grt_plr_vcl"]	=	{
 				"marines/marine5/grt_plr_vcl1.ogg",
 				"marines/marine5/grt_plr_vcl3.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"marines/marine5/lookcmbt1.ogg",
 				"marines/marine5/lookcmbt10.ogg",
 				"marines/marine5/lookcmbt2.ogg",
@@ -7275,47 +7275,47 @@ ENT.Voices = {
 				"marines/marine5/lookcmbt8.ogg",
 				"marines/marine5/lookcmbt9.ogg",
 				},
-		['chr_vcljmp']	=	{
+		["chr_vcljmp"]	=	{
 				"marines/marine5/chr_vcljmp1.ogg",
 				"marines/marine5/chr_vcljmp3.ogg",
 				"marines/marine5/chr_vcljmp4.ogg",
 				"marines/marine5/chr_vcljmp6.ogg",
 				"marines/marine5/chr_vcljmp7.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/marine5/dth_fall1.ogg",
 				"marines/marine5/dth_fall3.ogg",
 				"marines/marine5/dth_fall4.ogg",
 				"marines/marine5/dth_fall5.ogg",
 				"marines/marine5/dth_fall6.ogg",
 				},
-		['join_re']	=	{
+		["join_re"]	=	{
 				"marines/marine5/join_re1.ogg",
 				"marines/marine5/join_re3.ogg",
 				"marines/marine5/join_re4.ogg",
 				"marines/marine5/join_re5.ogg",
 				"marines/marine5/join_re6.ogg",
 				},
-		['entervcl']	=	{
+		["entervcl"]	=	{
 				"marines/marine5/entervcl1.ogg",
 				"marines/marine5/entervcl2.ogg",
 				"marines/marine5/entervcl3.ogg",
 				"marines/marine5/entervcl4.ogg",
 				},
-		['join_prst']	=	{
+		["join_prst"]	=	{
 				"marines/marine5/join_prst1.ogg",
 				"marines/marine5/join_prst2.ogg",
 				"marines/marine5/join_prst3.ogg",
 				"marines/marine5/join_prst4.ogg",
 				},
-		['chr_kllfoe_stkplsm']	=	{
+		["chr_kllfoe_stkplsm"]	=	{
 				"marines/marine5/chr_kllfoe_stkplsm1.ogg",
 				"marines/marine5/chr_kllfoe_stkplsm2.ogg",
 				"marines/marine5/chr_kllfoe_stkplsm3.ogg",
 				"marines/marine5/chr_kllfoe_stkplsm4.ogg",
 				"marines/marine5/chr_kllfoe_stkplsm5.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/marine5/scrn1.ogg",
 				"marines/marine5/scrn2.ogg",
 				"marines/marine5/scrn3.ogg",
@@ -7324,32 +7324,32 @@ ENT.Voices = {
 				"marines/marine5/scrn7.ogg",
 				"marines/marine5/scrn8.ogg",
 				},
-		['stayback_tim']	=	{
+		["stayback_tim"]	=	{
 				"marines/marine5/stayback_tim1.ogg",
 				"marines/marine5/stayback_tim3.ogg",
 				},
-		['dwn_scrb']	=	{
+		["dwn_scrb"]	=	{
 				"marines/marine5/dwn_scrb1.ogg",
 				"marines/marine5/dwn_scrb2.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/marine5/ordr_chkfoebdy1.ogg",
 				"marines/marine5/ordr_chkfoebdy3.ogg",
 				"marines/marine5/ordr_chkfoebdy4.ogg",
 				"marines/marine5/ordr_chkfoebdy5.ogg",
 				},
-		['look_pstcmbt_ez']	=	{
+		["look_pstcmbt_ez"]	=	{
 				"marines/marine5/look_pstcmbt_ez1.ogg",
 				"marines/marine5/look_pstcmbt_ez3.ogg",
 				},
-		['grt_intovcl']	=	{
+		["grt_intovcl"]	=	{
 				"marines/marine5/grt_intovcl1.ogg",
 				"marines/marine5/grt_intovcl2.ogg",
 				"marines/marine5/grt_intovcl3.ogg",
 				"marines/marine5/grt_intovcl4.ogg",
 				"marines/marine5/grt_intovcl5.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/marine5/grt_plr_arb1.ogg",
 				"marines/marine5/grt_plr_arb2.ogg",
 				"marines/marine5/grt_plr_arb3.ogg",
@@ -7359,13 +7359,13 @@ ENT.Voices = {
 				"marines/marine5/grt_plr_arb8.ogg",
 				"marines/marine5/grt_plr_arb9.ogg",
 				},
-		['ordr_grenade_all']	=	{
+		["ordr_grenade_all"]	=	{
 				"marines/marine5/ordr_grenade_all1.ogg",
 				"marines/marine5/ordr_grenade_all2.ogg",
 				"marines/marine5/ordr_grenade_all3.ogg",
 				"marines/marine5/ordr_grenade_all4.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/marine5/prs_plr_arb1.ogg",
 				"marines/marine5/prs_plr_arb2.ogg",
 				"marines/marine5/prs_plr_arb3.ogg",
@@ -7373,21 +7373,21 @@ ENT.Voices = {
 				"marines/marine5/prs_plr_arb5.ogg",
 				"marines/marine5/prs_plr_arb6.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/marine5/whn1.ogg",
 				"marines/marine5/whn2.ogg",
 				"marines/marine5/whn4.ogg",
 				"marines/marine5/whn8.ogg",
 				"marines/marine5/whn9.ogg",
 				},
-		['status_re']	=	{
+		["status_re"]	=	{
 				"marines/marine5/status_re1.ogg",
 				"marines/marine5/status_re2.ogg",
 				"marines/marine5/status_re3.ogg",
 				"marines/marine5/status_re4.ogg",
 				"marines/marine5/status_re5.ogg",
 				},
-		['scld_plr_vclcrash']	=	{
+		["scld_plr_vclcrash"]	=	{
 				"marines/marine5/scld_plr_vclcrash1.ogg",
 				"marines/marine5/scld_plr_vclcrash2.ogg",
 				"marines/marine5/scld_plr_vclcrash3.ogg",
@@ -7395,7 +7395,7 @@ ENT.Voices = {
 				"marines/marine5/scld_plr_vclcrash6.ogg",
 				"marines/marine5/scld_plr_vclcrash7.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/marine5/crs1.ogg",
 				"marines/marine5/crs11.ogg",
 				"marines/marine5/crs12.ogg",
@@ -7404,7 +7404,7 @@ ENT.Voices = {
 				"marines/marine5/crs6.ogg",
 				"marines/marine5/crs8.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"marines/marine5/melee1.ogg",
 				"marines/marine5/melee2.ogg",
 				"marines/marine5/melee4.ogg",
@@ -7413,26 +7413,26 @@ ENT.Voices = {
 				"marines/marine5/melee7.ogg",
 				"marines/marine5/melee8.ogg",
 				},
-		['scld_plr_vclcrazy']	=	{
+		["scld_plr_vclcrazy"]	=	{
 				"marines/marine5/scld_plr_vclcrazy3.ogg",
 				"marines/marine5/scld_plr_vclcrazy4.ogg",
 				},
-		['ordr_openfire']	=	{
+		["ordr_openfire"]	=	{
 				"marines/marine5/ordr_openfire1.ogg",
 				"marines/marine5/ordr_openfire2.ogg",
 				"marines/marine5/ordr_openfire5.ogg",
 				"marines/marine5/ordr_openfire6.ogg",
 				"marines/marine5/ordr_openfire7.ogg",
 				},
-		['join_emrg_re']	=	{
+		["join_emrg_re"]	=	{
 				"marines/marine5/join_emrg_re1.ogg",
 				"marines/marine5/join_emrg_re2.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"marines/marine5/warn_flood1.ogg",
 				"marines/marine5/warn_flood2.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/marine5/ok1.ogg",
 				"marines/marine5/ok2.ogg",
 				"marines/marine5/ok3.ogg",
@@ -7440,14 +7440,14 @@ ENT.Voices = {
 				"marines/marine5/ok8.ogg",
 				"marines/marine5/ok9.ogg",
 				},
-		['brsrk']	=	{
+		["brsrk"]	=	{
 				"marines/marine5/brsrk1.ogg",
 				},
-		['strk_grnd_uncvr']	=	{
+		["strk_grnd_uncvr"]	=	{
 				"marines/marine5/strk_grnd_uncvr1.ogg",
 				"marines/marine5/strk_grnd_uncvr2.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/marine5/dth_slnt10.ogg",
 				"marines/marine5/dth_slnt11.ogg",
 				"marines/marine5/dth_slnt12.ogg",
@@ -7455,79 +7455,79 @@ ENT.Voices = {
 				"marines/marine5/dth_slnt14.ogg",
 				"marines/marine5/dth_slnt9.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/marine5/hail1.ogg",
 				"marines/marine5/hail2.ogg",
 				"marines/marine5/hail3.ogg",
 				"marines/marine5/hail4.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/marine5/forgive1.ogg",
 				"marines/marine5/forgive2.ogg",
 				"marines/marine5/forgive3.ogg",
 				"marines/marine5/forgive4.ogg",
 				},
-		['prs_plr_kll_vclbmp']	=	{
+		["prs_plr_kll_vclbmp"]	=	{
 				"marines/marine5/prs_plr_kll_vclbmp1.ogg",
 				"marines/marine5/prs_plr_kll_vclbmp2.ogg",
 				},
-		['grt_plr_vcl_empty']	=	{
+		["grt_plr_vcl_empty"]	=	{
 				"marines/marine5/grt_plr_vcl_empty1.ogg",
 				"marines/marine5/grt_plr_vcl_empty2.ogg",
 				"marines/marine5/grt_plr_vcl_empty3.ogg",
 				"marines/marine5/grt_plr_vcl_empty4.ogg",
 				},
-		['ordr_keepwatch_agg']	=	{
+		["ordr_keepwatch_agg"]	=	{
 				"marines/marine5/ordr_keepwatch_agg1.ogg",
 				"marines/marine5/ordr_keepwatch_agg2.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/marine5/thnk_plr_mc1.ogg",
 				"marines/marine5/thnk_plr_mc2.ogg",
 				},
-		['rmd_wpn_snpr']	=	{
+		["rmd_wpn_snpr"]	=	{
 				"marines/marine5/rmd_wpn_snpr1.ogg",
 				"marines/marine5/rmd_wpn_snpr2.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/marine5/crs_betrayingplr_arb2.ogg",
 				"marines/marine5/crs_betrayingplr_arb3.ogg",
 				},
-		['warn_incmn_vclbm']	=	{
+		["warn_incmn_vclbm"]	=	{
 				"marines/marine5/warn_incmn_vclbm1.ogg",
 				"marines/marine5/warn_incmn_vclbm2.ogg",
 				},
-		['prs_plr_kll_mjr']	=	{
+		["prs_plr_kll_mjr"]	=	{
 				"marines/marine5/prs_plr_kll_mjr1.ogg",
 				"marines/marine5/prs_plr_kll_mjr3.ogg",
 				},
-		['warn_trrt_dply']	=	{
+		["warn_trrt_dply"]	=	{
 				"marines/marine5/warn_trrt_dply1.ogg",
 				"marines/marine5/warn_trrt_dply2.ogg",
 				},
-		['regret']	=	{
+		["regret"]	=	{
 				"marines/marine5/regret1.ogg",
 				"marines/marine5/regret2.ogg",
 				"marines/marine5/regret3.ogg",
 				"marines/marine5/regret4.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/marine5/pstcmbt_hrd1.ogg",
 				"marines/marine5/pstcmbt_hrd2.ogg",
 				},
-		['ordr_prst_keeplooking']	=	{
+		["ordr_prst_keeplooking"]	=	{
 				"marines/marine5/ordr_prst_keeplooking1.ogg",
 				"marines/marine5/ordr_prst_keeplooking2.ogg",
 				"marines/marine5/ordr_prst_keeplooking3.ogg",
 				"marines/marine5/ordr_prst_keeplooking4.ogg",
 				},
-		['ordr_invsgt']	=	{
+		["ordr_invsgt"]	=	{
 				"marines/marine5/ordr_invsgt1.ogg",
 				"marines/marine5/ordr_invsgt2.ogg",
 				"marines/marine5/ordr_invsgt3.ogg",
 				"marines/marine5/ordr_invsgt4.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"marines/marine5/hrdfoe1.ogg",
 				"marines/marine5/hrdfoe10.ogg",
 				"marines/marine5/hrdfoe2.ogg",
@@ -7538,7 +7538,7 @@ ENT.Voices = {
 				"marines/marine5/hrdfoe8.ogg",
 				"marines/marine5/hrdfoe9.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/marine5/scrn_plr_wrswpn1.ogg",
 				"marines/marine5/scrn_plr_wrswpn10.ogg",
 				"marines/marine5/scrn_plr_wrswpn3.ogg",
@@ -7548,7 +7548,7 @@ ENT.Voices = {
 				"marines/marine5/scrn_plr_wrswpn8.ogg",
 				"marines/marine5/scrn_plr_wrswpn9.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/marine5/dth_hdsht2.ogg",
 				"marines/marine5/dth_hdsht3.ogg",
 				"marines/marine5/dth_hdsht4.ogg",
@@ -7557,7 +7557,7 @@ ENT.Voices = {
 				"marines/marine5/dth_hdsht7.ogg",
 				"marines/marine5/dth_hdsht8.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/marine5/strk1.ogg",
 				"marines/marine5/strk10.ogg",
 				"marines/marine5/strk12.ogg",
@@ -7570,12 +7570,12 @@ ENT.Voices = {
 				"marines/marine5/strk8.ogg",
 				"marines/marine5/strk9.ogg",
 				},
-		['prs_plr_sniping']	=	{
+		["prs_plr_sniping"]	=	{
 				"marines/marine5/prs_plr_sniping1.ogg",
 				"marines/marine5/prs_plr_sniping2.ogg",
 				"marines/marine5/prs_plr_sniping3.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/marine5/fall1.ogg",
 				"marines/marine5/fall2.ogg",
 				"marines/marine5/fall3.ogg",
@@ -7583,68 +7583,68 @@ ENT.Voices = {
 				"marines/marine5/fall5.ogg",
 				"marines/marine5/fall6.ogg",
 				},
-		['warn_scrb']	=	{
+		["warn_scrb"]	=	{
 				"marines/marine5/warn_scrb1.ogg",
 				"marines/marine5/warn_scrb2.ogg",
 				"marines/marine5/warn_scrb3.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/marine5/stun1.ogg",
 				"marines/marine5/stun2.ogg",
 				},
-		['dwn_wpn_snpr']	=	{
+		["dwn_wpn_snpr"]	=	{
 				"marines/marine5/dwn_wpn_snpr1.ogg",
 				"marines/marine5/dwn_wpn_snpr2.ogg",
 				},
-		['entervcl_psngr']	=	{
+		["entervcl_psngr"]	=	{
 				"marines/marine5/entervcl_psngr1.ogg",
 				"marines/marine5/entervcl_psngr2.ogg",
 				},
-		['crs_mjrfoe']	=	{
+		["crs_mjrfoe"]	=	{
 				"marines/marine5/crs_mjrfoe1.ogg",
 				"marines/marine5/crs_mjrfoe3.ogg",
 				},
-		['invt_vcl_gnr']	=	{
+		["invt_vcl_gnr"]	=	{
 				"marines/marine5/invt_vcl_gnr1.ogg",
 				"marines/marine5/invt_vcl_gnr2.ogg",
 				},
-		['newordr_advance']	=	{
+		["newordr_advance"]	=	{
 				"marines/marine5/newordr_advance1.ogg",
 				"marines/marine5/newordr_advance2.ogg",
 				"marines/marine5/newordr_advance3.ogg",
 				"marines/marine5/newordr_advance4.ogg",
 				},
-		['rmd_vcl_ghst']	=	{
+		["rmd_vcl_ghst"]	=	{
 				"marines/marine5/rmd_vcl_ghst1.ogg",
 				"marines/marine5/rmd_vcl_ghst2.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/marine5/foeordr_flanking1.ogg",
 				"marines/marine5/foeordr_flanking2.ogg",
 				"marines/marine5/foeordr_flanking3.ogg",
 				"marines/marine5/foeordr_flanking4.ogg",
 				"marines/marine5/foeordr_flanking5.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/marine5/cvr1.ogg",
 				"marines/marine5/cvr2.ogg",
 				"marines/marine5/cvr3.ogg",
 				"marines/marine5/cvr4.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"marines/marine5/rmd1.ogg",
 				"marines/marine5/rmd2.ogg",
 				"marines/marine5/rmd3.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"marines/marine5/warn_fldreanimate1.ogg",
 				"marines/marine5/warn_fldreanimate2.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/marine5/charge1.ogg",
 				"marines/marine5/charge2.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/marine5/scld_plr_hrtme1.ogg",
 				"marines/marine5/scld_plr_hrtme10.ogg",
 				"marines/marine5/scld_plr_hrtme2.ogg",
@@ -7653,7 +7653,7 @@ ENT.Voices = {
 				"marines/marine5/scld_plr_hrtme7.ogg",
 				"marines/marine5/scld_plr_hrtme9.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/marine5/warn1.ogg",
 				"marines/marine5/warn2.ogg",
 				"marines/marine5/warn3.ogg",
@@ -7662,7 +7662,7 @@ ENT.Voices = {
 				"marines/marine5/warn7.ogg",
 				"marines/marine5/warn8.ogg",
 				},
-		['prst_fail']	=	{
+		["prst_fail"]	=	{
 				"marines/marine5/prst_fail1.ogg",
 				"marines/marine5/prst_fail10.ogg",
 				"marines/marine5/prst_fail2.ogg",
@@ -7674,21 +7674,21 @@ ENT.Voices = {
 				"marines/marine5/prst_fail8.ogg",
 				"marines/marine5/prst_fail9.ogg",
 				},
-		['foundfoe_re']	=	{
+		["foundfoe_re"]	=	{
 				"marines/marine5/foundfoe_re1.ogg",
 				"marines/marine5/foundfoe_re2.ogg",
 				"marines/marine5/foundfoe_re3.ogg",
 				"marines/marine5/foundfoe_re4.ogg",
 				},
-		['hail_agg']	=	{
+		["hail_agg"]	=	{
 				"marines/marine5/hail_agg1.ogg",
 				"marines/marine5/hail_agg2.ogg",
 				},
-		['grt_intovcl_mine']	=	{
+		["grt_intovcl_mine"]	=	{
 				"marines/marine5/grt_intovcl_mine1.ogg",
 				"marines/marine5/grt_intovcl_mine2.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/marine5/pld14.ogg",
 				"marines/marine5/pld15.ogg",
 				"marines/marine5/pld16.ogg",
@@ -7696,15 +7696,15 @@ ENT.Voices = {
 				"marines/marine5/pld18.ogg",
 				"marines/marine5/pld19.ogg",
 				},
-		['dwn_vcl_chpr']	=	{
+		["dwn_vcl_chpr"]	=	{
 				"marines/marine5/dwn_vcl_chpr1.ogg",
 				"marines/marine5/dwn_vcl_chpr2.ogg",
 				},
-		['entervcl_drvr']	=	{
+		["entervcl_drvr"]	=	{
 				"marines/marine5/entervcl_drvr1.ogg",
 				"marines/marine5/entervcl_drvr2.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/marine5/thrtn1.ogg",
 				"marines/marine5/thrtn10.ogg",
 				"marines/marine5/thrtn14.ogg",
@@ -7717,25 +7717,25 @@ ENT.Voices = {
 				"marines/marine5/thrtn8.ogg",
 				"marines/marine5/thrtn9.ogg",
 				},
-		['dnw_vcl_ghst']	=	{
+		["dnw_vcl_ghst"]	=	{
 				"marines/marine5/dnw_vcl_ghst1.ogg",
 				"marines/marine5/dnw_vcl_ghst2.ogg",
 				},
-		['newordr_fllwplr']	=	{
+		["newordr_fllwplr"]	=	{
 				"marines/marine5/newordr_fllwplr1.ogg",
 				"marines/marine5/newordr_fllwplr2.ogg",
 				"marines/marine5/newordr_fllwplr3.ogg",
 				"marines/marine5/newordr_fllwplr4.ogg",
 				},
-		['pld_mjrfoe']	=	{
+		["pld_mjrfoe"]	=	{
 				"marines/marine5/pld_mjrfoe1.ogg",
 				"marines/marine5/pld_mjrfoe2.ogg",
 				},
-		['pstcmbt_fld']	=	{
+		["pstcmbt_fld"]	=	{
 				"marines/marine5/pstcmbt_fld1.ogg",
 				"marines/marine5/pstcmbt_fld2.ogg",
 				},
-		['looklngtme']	=	{
+		["looklngtme"]	=	{
 				"marines/marine5/looklngtme1.ogg",
 				"marines/marine5/looklngtme11.ogg",
 				"marines/marine5/looklngtme12.ogg",
@@ -7749,13 +7749,13 @@ ENT.Voices = {
 				"marines/marine5/looklngtme8.ogg",
 				"marines/marine5/looklngtme9.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/marine5/foeordr_fallback1.ogg",
 				"marines/marine5/foeordr_fallback2.ogg",
 				"marines/marine5/foeordr_fallback3.ogg",
 				"marines/marine5/foeordr_fallback4.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/marine5/hail_plr_mc1.ogg",
 				"marines/marine5/hail_plr_mc2.ogg",
 				"marines/marine5/hail_plr_mc3.ogg",
@@ -7763,13 +7763,13 @@ ENT.Voices = {
 				"marines/marine5/hail_plr_mc5.ogg",
 				"marines/marine5/hail_plr_mc6.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/marine5/foeordr_advance1.ogg",
 				"marines/marine5/foeordr_advance2.ogg",
 				"marines/marine5/foeordr_advance3.ogg",
 				"marines/marine5/foeordr_advance4.ogg",
 				},
-		['injured']	=	{
+		["injured"]	=	{
 				"marines/marine5/injured1.ogg",
 				"marines/marine5/injured10.ogg",
 				"marines/marine5/injured2.ogg",
@@ -7781,72 +7781,72 @@ ENT.Voices = {
 				"marines/marine5/injured8.ogg",
 				"marines/marine5/injured9.ogg",
 				},
-		['look_plr_fllw']	=	{
+		["look_plr_fllw"]	=	{
 				"marines/marine5/look_plr_fllw1.ogg",
 				"marines/marine5/look_plr_fllw2.ogg",
 				},
-		['warn_wpn_hmmr']	=	{
+		["warn_wpn_hmmr"]	=	{
 				"marines/marine5/warn_wpn_hmmr1.ogg",
 				"marines/marine5/warn_wpn_hmmr3.ogg",
 				"marines/marine5/warn_wpn_hmmr4.ogg",
 				"marines/marine5/warn_wpn_hmmr5.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/marine5/chr_kllfoe1.ogg",
 				"marines/marine5/chr_kllfoe2.ogg",
 				"marines/marine5/chr_kllfoe3.ogg",
 				"marines/marine5/chr_kllfoe4.ogg",
 				"marines/marine5/chr_kllfoe5.ogg",
 				},
-		['rmd_vcl_chpr']	=	{
+		["rmd_vcl_chpr"]	=	{
 				"marines/marine5/rmd_vcl_chpr1.ogg",
 				"marines/marine5/rmd_vcl_chpr2.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"marines/marine5/dwn_vcl_wrth1.ogg",
 				"marines/marine5/dwn_vcl_wrth2.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/marine5/scld1.ogg",
 				"marines/marine5/scld2.ogg",
 				"marines/marine5/scld3.ogg",
 				"marines/marine5/scld4.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"marines/marine5/warn_swarm1.ogg",
 				"marines/marine5/warn_swarm2.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"marines/marine5/dth_drama1.ogg",
 				"marines/marine5/dth_drama2.ogg",
 				"marines/marine5/dth_drama3.ogg",
 				"marines/marine5/dth_drama5.ogg",
 				},
-		['cvr_invsgt']	=	{
+		["cvr_invsgt"]	=	{
 				"marines/marine5/cvr_invsgt1.ogg",
 				"marines/marine5/cvr_invsgt2.ogg",
 				"marines/marine5/cvr_invsgt3.ogg",
 				"marines/marine5/cvr_invsgt4.ogg",
 				"marines/marine5/cvr_invsgt5.ogg",
 				},
-		['join_invsgt']	=	{
+		["join_invsgt"]	=	{
 				"marines/marine5/join_invsgt1.ogg",
 				"marines/marine5/join_invsgt2.ogg",
 				"marines/marine5/join_invsgt3.ogg",
 				"marines/marine5/join_invsgt4.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/marine5/lmnt1.ogg",
 				"marines/marine5/lmnt3.ogg",
 				"marines/marine5/lmnt4.ogg",
 				},
-		['neworder_charge']	=	{
+		["neworder_charge"]	=	{
 				"marines/marine5/neworder_charge1.ogg",
 				"marines/marine5/neworder_charge2.ogg",
 				"marines/marine5/neworder_charge3.ogg",
 				"marines/marine5/neworder_charge5.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/marine5/scld_plr_mc1.ogg",
 				"marines/marine5/scld_plr_mc3.ogg",
 				"marines/marine5/scld_plr_mc4.ogg",
@@ -7854,11 +7854,11 @@ ENT.Voices = {
 				"marines/marine5/scld_plr_mc6.ogg",
 				"marines/marine5/scld_plr_mc8.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"marines/marine5/rmd_vcl_phntm1.ogg",
 				"marines/marine5/rmd_vcl_phntm2.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"marines/marine5/invsgt1.ogg",
 				"marines/marine5/invsgt10.ogg",
 				"marines/marine5/invsgt11.ogg",
@@ -7868,29 +7868,29 @@ ENT.Voices = {
 				"marines/marine5/invsgt6.ogg",
 				"marines/marine5/invsgt7.ogg",
 				},
-		['schrend']	=	{
+		["schrend"]	=	{
 				"marines/marine5/schrend1.ogg",
 				"marines/marine5/schrend2.ogg",
 				"marines/marine5/schrend3.ogg",
 				"marines/marine5/schrend4.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"marines/marine5/hail_tim1.ogg",
 				"marines/marine5/hail_tim2.ogg",
 				"marines/marine5/hail_tim3.ogg",
 				},
-		['warn_stlth_again']	=	{
+		["warn_stlth_again"]	=	{
 				"marines/marine5/warn_stlth_again1.ogg",
 				"marines/marine5/warn_stlth_again3.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"marines/marine5/srprs10.ogg",
 				"marines/marine5/srprs14.ogg",
 				"marines/marine5/srprs4.ogg",
 				"marines/marine5/srprs6.ogg",
 				"marines/marine5/srprs7.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"marines/marine5/foundfoe1.ogg",
 				"marines/marine5/foundfoe10.ogg",
 				"marines/marine5/foundfoe11.ogg",
@@ -7908,17 +7908,17 @@ ENT.Voices = {
 				"marines/marine5/foundfoe8.ogg",
 				"marines/marine5/foundfoe9.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"marines/marine5/look_pstcmbt_hrd1.ogg",
 				"marines/marine5/look_pstcmbt_hrd2.ogg",
 				},
-		['ordr_pinned']	=	{
+		["ordr_pinned"]	=	{
 				"marines/marine5/ordr_pinned1.ogg",
 				"marines/marine5/ordr_pinned2.ogg",
 				"marines/marine5/ordr_pinned3.ogg",
 				"marines/marine5/ordr_pinned4.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/marine5/tnt1.ogg",
 				"marines/marine5/tnt10.ogg",
 				"marines/marine5/tnt11.ogg",
@@ -7939,43 +7939,43 @@ ENT.Voices = {
 				"marines/marine5/tnt8.ogg",
 				"marines/marine5/tnt9.ogg",
 				},
-		['warn_vcl_ghst']	=	{
+		["warn_vcl_ghst"]	=	{
 				"marines/marine5/warn_vcl_ghst1.ogg",
 				"marines/marine5/warn_vcl_ghst2.ogg",
 				},
-		['strk_snpr']	=	{
+		["strk_snpr"]	=	{
 				"marines/marine5/strk_snpr1.ogg",
 				"marines/marine5/strk_snpr2.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/marine5/meleeleap1.ogg",
 				"marines/marine5/meleeleap2.ogg",
 				"marines/marine5/meleeleap3.ogg",
 				"marines/marine5/meleeleap4.ogg",
 				},
-		['rmd_stlth']	=	{
+		["rmd_stlth"]	=	{
 				"marines/marine5/rmd_stlth1.ogg",
 				"marines/marine5/rmd_stlth2.ogg",
 				},
-		['tnt_re']	=	{
+		["tnt_re"]	=	{
 				"marines/marine5/tnt_re1.ogg",
 				"marines/marine5/tnt_re2.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"marines/marine5/rmd_vcl_wrth1.ogg",
 				"marines/marine5/rmd_vcl_wrth2.ogg",
 				},
-		['newordr_arrival']	=	{
+		["newordr_arrival"]	=	{
 				"marines/marine5/newordr_arrival1.ogg",
 				"marines/marine5/newordr_arrival2.ogg",
 				"marines/marine5/newordr_arrival3.ogg",
 				"marines/marine5/newordr_arrival4.ogg",
 				},
-		['stayback_agg']	=	{
+		["stayback_agg"]	=	{
 				"marines/marine5/stayback_agg1.ogg",
 				"marines/marine5/stayback_agg2.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"marines/marine5/warn_incmn_grnd1.ogg",
 				"marines/marine5/warn_incmn_grnd2.ogg",
 				"marines/marine5/warn_incmn_grnd3.ogg",
@@ -7986,19 +7986,19 @@ ENT.Voices = {
 				"marines/marine5/warn_incmn_grnd8.ogg",
 				"marines/marine5/warn_incmn_grnd9.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"marines/marine5/seefoe_tim1.ogg",
 				"marines/marine5/seefoe_tim2.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"marines/marine5/whn_re1.ogg",
 				"marines/marine5/whn_re2.ogg",
 				},
-		['whn_hrtblt']	=	{
+		["whn_hrtblt"]	=	{
 				"marines/marine5/whn_hrtblt1.ogg",
 				"marines/marine5/whn_hrtblt2.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/marine5/betray1.ogg",
 				"marines/marine5/betray2.ogg",
 				"marines/marine5/betray3.ogg",
@@ -8008,17 +8008,17 @@ ENT.Voices = {
 				"marines/marine5/betray7.ogg",
 				"marines/marine5/betray8.ogg",
 				},
-		['rmd_vcl_bnsh']	=	{
+		["rmd_vcl_bnsh"]	=	{
 				"marines/marine5/rmd_vcl_bnsh1.ogg",
 				"marines/marine5/rmd_vcl_bnsh2.ogg",
 				},
-		['ordr_re']	=	{
+		["ordr_re"]	=	{
 				"marines/marine5/ordr_re1.ogg",
 				"marines/marine5/ordr_re2.ogg",
 				"marines/marine5/ordr_re3.ogg",
 				"marines/marine5/ordr_re4.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/marine5/scld_plr_arb1.ogg",
 				"marines/marine5/scld_plr_arb2.ogg",
 				"marines/marine5/scld_plr_arb3.ogg",
@@ -8026,34 +8026,34 @@ ENT.Voices = {
 				"marines/marine5/scld_plr_arb6.ogg",
 				"marines/marine5/scld_plr_arb7.ogg",
 				},
-		['chkfoebdy']	=	{
+		["chkfoebdy"]	=	{
 				"marines/marine5/chkfoebdy1.ogg",
 				"marines/marine5/chkfoebdy2.ogg",
 				"marines/marine5/chkfoebdy3.ogg",
 				"marines/marine5/chkfoebdy4.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/marine5/neworder_flanking1.ogg",
 				"marines/marine5/neworder_flanking2.ogg",
 				"marines/marine5/neworder_flanking3.ogg",
 				"marines/marine5/neworder_flanking4.ogg",
 				"marines/marine5/neworder_flanking5.ogg",
 				},
-		['ask_invsgt_fail']	=	{
+		["ask_invsgt_fail"]	=	{
 				"marines/marine5/ask_invsgt_fail1.ogg",
 				"marines/marine5/ask_invsgt_fail2.ogg",
 				"marines/marine5/ask_invsgt_fail3.ogg",
 				"marines/marine5/ask_invsgt_fail5.ogg",
 				},
-		['chckallybdy']	=	{
+		["chckallybdy"]	=	{
 				"marines/marine5/chckallybdy1.ogg",
 				"marines/marine5/chckallybdy2.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/marine5/scld_plr_blocking1.ogg",
 				"marines/marine5/scld_plr_blocking2.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/marine5/lst_cntct1.ogg",
 				"marines/marine5/lst_cntct10.ogg",
 				"marines/marine5/lst_cntct2.ogg",
@@ -8064,52 +8064,52 @@ ENT.Voices = {
 				"marines/marine5/lst_cntct8.ogg",
 				"marines/marine5/lst_cntct9.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/marine5/newordr_leaveplr1.ogg",
 				"marines/marine5/newordr_leaveplr2.ogg",
 				"marines/marine5/newordr_leaveplr3.ogg",
 				"marines/marine5/newordr_leaveplr4.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/marine5/shotfoebdy1.ogg",
 				"marines/marine5/shotfoebdy3.ogg",
 				"marines/marine5/shotfoebdy4.ogg",
 				"marines/marine5/shotfoebdy6.ogg",
 				"marines/marine5/shotfoebdy7.ogg",
 				},
-		['warn_chr_hntr']	=	{
+		["warn_chr_hntr"]	=	{
 				"marines/marine5/warn_chr_hntr1.ogg",
 				"marines/marine5/warn_chr_hntr2.ogg",
 				"marines/marine5/warn_chr_hntr3.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/marine5/ok_plr_trdst_dvr1.ogg",
 				"marines/marine5/ok_plr_trdst_dvr2.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/marine5/kllmytrgt1.ogg",
 				"marines/marine5/kllmytrgt2.ogg",
 				"marines/marine5/kllmytrgt3.ogg",
 				"marines/marine5/kllmytrgt4.ogg",
 				},
-		['warn_vcl_chpr']	=	{
+		["warn_vcl_chpr"]	=	{
 				"marines/marine5/warn_vcl_chpr1.ogg",
 				"marines/marine5/warn_vcl_chpr2.ogg",
 				"marines/marine5/warn_vcl_chpr3.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/marine5/ok_plr_mc1.ogg",
 				"marines/marine5/ok_plr_mc2.ogg",
 				"marines/marine5/ok_plr_mc3.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/marine5/foeordr_retreat1.ogg",
 				"marines/marine5/foeordr_retreat2.ogg",
 				"marines/marine5/foeordr_retreat3.ogg",
 				"marines/marine5/foeordr_retreat4.ogg",
 				"marines/marine5/foeordr_retreat5.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/marine5/seefoe11.ogg",
 				"marines/marine5/seefoe12.ogg",
 				"marines/marine5/seefoe13.ogg",
@@ -8121,17 +8121,17 @@ ENT.Voices = {
 				"marines/marine5/seefoe4.ogg",
 				"marines/marine5/seefoe9.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/marine5/newordr_retreat1.ogg",
 				"marines/marine5/newordr_retreat2.ogg",
 				"marines/marine5/newordr_retreat3.ogg",
 				"marines/marine5/newordr_retreat4.ogg",
 				},
-		['scld_plr_wldvcl']	=	{
+		["scld_plr_wldvcl"]	=	{
 				"marines/marine5/scld_plr_wldvcl1.ogg",
 				"marines/marine5/scld_plr_wldvcl2.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/marine5/lmnt_deadplr_arb10.ogg",
 				"marines/marine5/lmnt_deadplr_arb11.ogg",
 				"marines/marine5/lmnt_deadplr_arb13.ogg",
@@ -8140,18 +8140,18 @@ ENT.Voices = {
 				"marines/marine5/lmnt_deadplr_arb16.ogg",
 				"marines/marine5/lmnt_deadplr_arb18.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/marine5/dive1.ogg",
 				"marines/marine5/dive3.ogg",
 				"marines/marine5/dive5.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"marines/marine5/warn_incmn1.ogg",
 				"marines/marine5/warn_incmn2.ogg",
 				"marines/marine5/warn_incmn3.ogg",
 				"marines/marine5/warn_incmn8.ogg",
 				},
-		['prst']	=	{
+		["prst"]	=	{
 				"marines/marine5/prst1.ogg",
 				"marines/marine5/prst2.ogg",
 				"marines/marine5/prst3.ogg",
@@ -8159,17 +8159,17 @@ ENT.Voices = {
 				"marines/marine5/prst6.ogg",
 				"marines/marine5/prst7.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/marine5/bump1.ogg",
 				"marines/marine5/bump2.ogg",
 				"marines/marine5/bump3.ogg",
 				"marines/marine5/bump4.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"marines/marine5/seefoe_upthere1.ogg",
 				"marines/marine5/seefoe_upthere2.ogg",
 				},
-		['prs_plr_kll_blt']	=	{
+		["prs_plr_kll_blt"]	=	{
 				"marines/marine5/prs_plr_kll_blt1.ogg",
 				"marines/marine5/prs_plr_kll_blt2.ogg",
 				"marines/marine5/prs_plr_kll_blt3.ogg",
@@ -8177,7 +8177,7 @@ ENT.Voices = {
 				"marines/marine5/prs_plr_kll_blt5.ogg",
 				"marines/marine5/prs_plr_kll_blt7.ogg",
 				},
-		['captured']	=	{
+		["captured"]	=	{
 				"marines/marine5/captured1.ogg",
 				"marines/marine5/captured10.ogg",
 				"marines/marine5/captured11.ogg",
@@ -8191,7 +8191,7 @@ ENT.Voices = {
 				"marines/marine5/captured8.ogg",
 				"marines/marine5/captured9.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/marine5/ok_plr_trdwpn1.ogg",
 				"marines/marine5/ok_plr_trdwpn2.ogg",
 				"marines/marine5/ok_plr_trdwpn3.ogg",
@@ -8200,49 +8200,49 @@ ENT.Voices = {
 				"marines/marine5/ok_plr_trdwpn6.ogg",
 				"marines/marine5/ok_plr_trdwpn8.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/marine5/newordr_moveon1.ogg",
 				"marines/marine5/newordr_moveon3.ogg",
 				"marines/marine5/newordr_moveon4.ogg",
 				"marines/marine5/newordr_moveon5.ogg",
 				},
-		['warn_wpn_snpr']	=	{
+		["warn_wpn_snpr"]	=	{
 				"marines/marine5/warn_wpn_snpr1.ogg",
 				"marines/marine5/warn_wpn_snpr2.ogg",
 				"marines/marine5/warn_wpn_snpr3.ogg",
 				"marines/marine5/warn_wpn_snpr4.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"marines/marine5/lmnt_deadally1.ogg",
 				"marines/marine5/lmnt_deadally2.ogg",
 				"marines/marine5/lmnt_deadally3.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/marine5/look_plr_mc1.ogg",
 				"marines/marine5/look_plr_mc3.ogg",
 				"marines/marine5/look_plr_mc4.ogg",
 				},
-		['warn_incmn_fldbm']	=	{
+		["warn_incmn_fldbm"]	=	{
 				"marines/marine5/warn_incmn_fldbm1.ogg",
 				"marines/marine5/warn_incmn_fldbm2.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/marine5/dodge1.ogg",
 				"marines/marine5/dodge2.ogg",
 				"marines/marine5/dodge4.ogg",
 				"marines/marine5/dodge5.ogg",
 				},
-		['ask_chkallybdy']	=	{
+		["ask_chkallybdy"]	=	{
 				"marines/marine5/ask_chkallybdy1.ogg",
 				"marines/marine5/ask_chkallybdy2.ogg",
 				},
-		['ask_prst_fail']	=	{
+		["ask_prst_fail"]	=	{
 				"marines/marine5/ask_prst_fail1.ogg",
 				"marines/marine5/ask_prst_fail2.ogg",
 				"marines/marine5/ask_prst_fail3.ogg",
 				"marines/marine5/ask_prst_fail4.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/marine5/endcmbt1.ogg",
 				"marines/marine5/endcmbt2.ogg",
 				"marines/marine5/endcmbt3.ogg",
@@ -8250,72 +8250,72 @@ ENT.Voices = {
 				"marines/marine5/endcmbt5.ogg",
 				"marines/marine5/endcmbt8.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/marine5/approve1.ogg",
 				"marines/marine5/approve2.ogg",
 				"marines/marine5/approve3.ogg",
 				"marines/marine5/approve4.ogg",
 				},
-		['foeordr_charge']	=	{
+		["foeordr_charge"]	=	{
 				"marines/marine5/foeordr_charge1.ogg",
 				"marines/marine5/foeordr_charge2.ogg",
 				"marines/marine5/foeordr_charge3.ogg",
 				"marines/marine5/foeordr_charge4.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"marines/marine5/pstcmbt_tim1.ogg",
 				"marines/marine5/pstcmbt_tim2.ogg",
 				"marines/marine5/pstcmbt_tim3.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"marines/marine5/prs_plr_gdgrnd1.ogg",
 				"marines/marine5/prs_plr_gdgrnd2.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"marines/marine5/prs_plr_kll_lots1.ogg",
 				"marines/marine5/prs_plr_kll_lots2.ogg",
 				},
-		['chr_kllfoe_vclbmp']	=	{
+		["chr_kllfoe_vclbmp"]	=	{
 				"marines/marine5/chr_kllfoe_vclbmp1.ogg",
 				"marines/marine5/chr_kllfoe_vclbmp3.ogg",
 				},
-		['thrtn_mjrfoe']	=	{
+		["thrtn_mjrfoe"]	=	{
 				"marines/marine5/thrtn_mjrfoe1.ogg",
 				"marines/marine5/thrtn_mjrfoe2.ogg",
 				},
-		['entervcl_trrt']	=	{
+		["entervcl_trrt"]	=	{
 				"marines/marine5/entervcl_trrt1.ogg",
 				"marines/marine5/entervcl_trrt2.ogg",
 				},
-		['crs_betrayingplr_mc']	=	{
+		["crs_betrayingplr_mc"]	=	{
 				"marines/marine5/crs_betrayingplr_mc1.ogg",
 				"marines/marine5/crs_betrayingplr_mc2.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/marine5/lift2.ogg",
 				"marines/marine5/lift3.ogg",
 				"marines/marine5/lift6.ogg",
 				"marines/marine5/lift7.ogg",
 				"marines/marine5/lift8.ogg",
 				},
-		['ordr_prst']	=	{
+		["ordr_prst"]	=	{
 				"marines/marine5/ordr_prst1.ogg",
 				"marines/marine5/ordr_prst2.ogg",
 				"marines/marine5/ordr_prst3.ogg",
 				"marines/marine5/ordr_prst4.ogg",
 				},
-		['grt_plr_srprs']	=	{
+		["grt_plr_srprs"]	=	{
 				"marines/marine5/grt_plr_srprs1.ogg",
 				"marines/marine5/grt_plr_srprs3.ogg",
 				"marines/marine5/grt_plr_srprs5.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"marines/marine5/dth_reanimated1.ogg",
 				"marines/marine5/dth_reanimated2.ogg",
 				"marines/marine5/dth_reanimated5.ogg",
 				"marines/marine5/dth_reanimated6.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/marine5/stayback1.ogg",
 				"marines/marine5/stayback10.ogg",
 				"marines/marine5/stayback11.ogg",
@@ -8327,14 +8327,14 @@ ENT.Voices = {
 				"marines/marine5/stayback8.ogg",
 				"marines/marine5/stayback9.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/marine5/pain_mdm1.ogg",
 				"marines/marine5/pain_mdm2.ogg",
 				"marines/marine5/pain_mdm3.ogg",
 				"marines/marine5/pain_mdm4.ogg",
 				"marines/marine5/pain_mdm6.ogg",
 				},
-		['pain_shld']	=	{
+		["pain_shld"]	=	{
 				"marines/marine5/pain_shld1.ogg",
 				"marines/marine5/pain_shld2.ogg",
 				"marines/marine5/pain_shld4.ogg",
@@ -8343,48 +8343,48 @@ ENT.Voices = {
 				"marines/marine5/pain_shld7.ogg",
 				"marines/marine5/pain_shld8.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"marines/marine5/lookcmbt_tim1.ogg",
 				"marines/marine5/lookcmbt_tim4.ogg",
 				"marines/marine5/lookcmbt_tim5.ogg",
 				"marines/marine5/lookcmbt_tim6.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"marines/marine5/panic_plsmgrnd1.ogg",
 				"marines/marine5/panic_plsmgrnd2.ogg",
 				"marines/marine5/panic_plsmgrnd3.ogg",
 				"marines/marine5/panic_plsmgrnd4.ogg",
 				"marines/marine5/panic_plsmgrnd5.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/marine5/prs1.ogg",
 				"marines/marine5/prs2.ogg",
 				"marines/marine5/prs3.ogg",
 				"marines/marine5/prs4.ogg",
 				},
-		['invt_vcl']	=	{
+		["invt_vcl"]	=	{
 				"marines/marine5/invt_vcl1.ogg",
 				"marines/marine5/invt_vcl2.ogg",
 				"marines/marine5/invt_vcl3.ogg",
 				"marines/marine5/invt_vcl4.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/marine5/pain_fall1.ogg",
 				"marines/marine5/pain_fall2.ogg",
 				"marines/marine5/pain_fall3.ogg",
 				},
-		['ordr_grenade']	=	{
+		["ordr_grenade"]	=	{
 				"marines/marine5/ordr_grenade1.ogg",
 				"marines/marine5/ordr_grenade2.ogg",
 				"marines/marine5/ordr_grenade3.ogg",
 				"marines/marine5/ordr_grenade4.ogg",
 				},
-		['prs_plr_kll_wmelee']	=	{
+		["prs_plr_kll_wmelee"]	=	{
 				"marines/marine5/prs_plr_kll_wmelee1.ogg",
 				"marines/marine5/prs_plr_kll_wmelee2.ogg",
 				"marines/marine5/prs_plr_kll_wmelee3.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/marine5/prs_plr_mc1.ogg",
 				"marines/marine5/prs_plr_mc3.ogg",
 				"marines/marine5/prs_plr_mc4.ogg",
@@ -8392,22 +8392,22 @@ ENT.Voices = {
 				"marines/marine5/prs_plr_mc7.ogg",
 				"marines/marine5/prs_plr_mc8.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"marines/marine5/morefoe1.ogg",
 				"marines/marine5/morefoe2.ogg",
 				"marines/marine5/morefoe3.ogg",
 				"marines/marine5/morefoe4.ogg",
 				},
-		['reanimate']	=	{
+		["reanimate"]	=	{
 				"marines/marine5/reanimate1.ogg",
 				"marines/marine5/reanimate3.ogg",
 				"marines/marine5/reanimate4.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/marine5/scrn_plr_arb1.ogg",
 				"marines/marine5/scrn_plr_arb2.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"marines/marine5/srch_pinned1.ogg",
 				"marines/marine5/srch_pinned10.ogg",
 				"marines/marine5/srch_pinned11.ogg",
@@ -8417,37 +8417,37 @@ ENT.Voices = {
 				"marines/marine5/srch_pinned7.ogg",
 				"marines/marine5/srch_pinned8.ogg",
 				},
-		['ask_chkallybdyf']	=	{
+		["ask_chkallybdyf"]	=	{
 				"marines/marine5/ask_chkallybdyf1.ogg",
 				"marines/marine5/ask_chkallybdyf2.ogg",
 				},
-		['rmd_trrt']	=	{
+		["rmd_trrt"]	=	{
 				"marines/marine5/rmd_trrt1.ogg",
 				"marines/marine5/rmd_trrt2.ogg",
 				},
-		['pstcmbt_agg']	=	{
+		["pstcmbt_agg"]	=	{
 				"marines/marine5/pstcmbt_agg1.ogg",
 				"marines/marine5/pstcmbt_agg2.ogg",
 				},
-		['warn_vcl_wrth']	=	{
+		["warn_vcl_wrth"]	=	{
 				"marines/marine5/warn_vcl_wrth1.ogg",
 				"marines/marine5/warn_vcl_wrth2.ogg",
 				},
-		['join_emrg']	=	{
+		["join_emrg"]	=	{
 				"marines/marine5/join_emrg1.ogg",
 				"marines/marine5/join_emrg2.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/marine5/newordr_entervcl1.ogg",
 				"marines/marine5/newordr_entervcl2.ogg",
 				"marines/marine5/newordr_entervcl3.ogg",
 				"marines/marine5/newordr_entervcl4.ogg",
 				},
-		['grt_intovcl_imgnr']	=	{
+		["grt_intovcl_imgnr"]	=	{
 				"marines/marine5/grt_intovcl_imgnr1.ogg",
 				"marines/marine5/grt_intovcl_imgnr2.ogg",
 				},
-		['invsgt_fail']	=	{
+		["invsgt_fail"]	=	{
 				"marines/marine5/invsgt_fail1.ogg",
 				"marines/marine5/invsgt_fail10.ogg",
 				"marines/marine5/invsgt_fail2.ogg",
@@ -8458,18 +8458,18 @@ ENT.Voices = {
 				"marines/marine5/invsgt_fail8.ogg",
 				"marines/marine5/invsgt_fail9.ogg",
 				},
-		['lookcmbt_agg']	=	{
+		["lookcmbt_agg"]	=	{
 				"marines/marine5/lookcmbt_agg1.ogg",
 				"marines/marine5/lookcmbt_agg2.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/marine5/panic1.ogg",
 				"marines/marine5/panic2.ogg",
 				"marines/marine5/panic3.ogg",
 				"marines/marine5/panic4.ogg",
 				"marines/marine5/panic6.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/marine5/lmnt_deadplr_mc1.ogg",
 				"marines/marine5/lmnt_deadplr_mc2.ogg",
 				"marines/marine5/lmnt_deadplr_mc3.ogg",
@@ -8477,43 +8477,43 @@ ENT.Voices = {
 				"marines/marine5/lmnt_deadplr_mc5.ogg",
 				"marines/marine5/lmnt_deadplr_mc7.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/marine5/grt2.ogg",
 				"marines/marine5/grt3.ogg",
 				"marines/marine5/grt4.ogg",
 				"marines/marine5/grt5.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"marines/marine5/seefoe_downthere1.ogg",
 				"marines/marine5/seefoe_downthere2.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/marine5/chr1.ogg",
 				"marines/marine5/chr2.ogg",
 				"marines/marine5/chr4.ogg",
 				},
-		['ok_plr_trdst_grn']	=	{
+		["ok_plr_trdst_grn"]	=	{
 				"marines/marine5/ok_plr_trdst_grn1.ogg",
 				"marines/marine5/ok_plr_trdst_grn2.ogg",
 				"marines/marine5/ok_plr_trdst_grn3.ogg",
 				"marines/marine5/ok_plr_trdst_grn4.ogg",
 				},
-		['ordr_stayback']	=	{
+		["ordr_stayback"]	=	{
 				"marines/marine5/ordr_stayback1.ogg",
 				"marines/marine5/ordr_stayback2.ogg",
 				"marines/marine5/ordr_stayback3.ogg",
 				"marines/marine5/ordr_stayback4.ogg",
 				},
-		['chkallybdyf']	=	{
+		["chkallybdyf"]	=	{
 				"marines/marine5/chkallybdyf1.ogg",
 				"marines/marine5/chkallybdyf2.ogg",
 				},
-		['ordr_keepwatch_tim']	=	{
+		["ordr_keepwatch_tim"]	=	{
 				"marines/marine5/ordr_keepwatch_tim1.ogg",
 				"marines/marine5/ordr_keepwatch_tim2.ogg",
 				"marines/marine5/ordr_keepwatch_tim3.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"marines/marine5/dth_slw1.ogg",
 				"marines/marine5/dth_slw2.ogg",
 				"marines/marine5/dth_slw3.ogg",
@@ -8521,7 +8521,7 @@ ENT.Voices = {
 				"marines/marine5/dth_slw5.ogg",
 				"marines/marine5/dth_slw6.ogg",
 				},
-		['strk_vcl_gnr']	=	{
+		["strk_vcl_gnr"]	=	{
 				"marines/marine5/strk_vcl_gnr1.ogg",
 				"marines/marine5/strk_vcl_gnr10.ogg",
 				"marines/marine5/strk_vcl_gnr2.ogg",
@@ -8533,37 +8533,37 @@ ENT.Voices = {
 				"marines/marine5/strk_vcl_gnr8.ogg",
 				"marines/marine5/strk_vcl_gnr9.ogg",
 				},
-		['warn_stlth']	=	{
+		["warn_stlth"]	=	{
 				"marines/marine5/warn_stlth3.ogg",
 				"marines/marine5/warn_stlth4.ogg",
 				},
-		['thrtn_foe_re']	=	{
+		["thrtn_foe_re"]	=	{
 				"marines/marine5/thrtn_foe_re1.ogg",
 				"marines/marine5/thrtn_foe_re2.ogg",
 				"marines/marine5/thrtn_foe_re3.ogg",
 				"marines/marine5/thrtn_foe_re4.ogg",
 				"marines/marine5/thrtn_foe_re5.ogg",
 				},
-		['dwn_vcl_bnsh']	=	{
+		["dwn_vcl_bnsh"]	=	{
 				"marines/marine5/dwn_vcl_bnsh1.ogg",
 				"marines/marine5/dwn_vcl_bnsh2.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/marine5/thrwn1.ogg",
 				"marines/marine5/thrwn2.ogg",
 				"marines/marine5/thrwn3.ogg",
 				},
-		['tnt_mjrfoe']	=	{
+		["tnt_mjrfoe"]	=	{
 				"marines/marine5/tnt_mjrfoe1.ogg",
 				"marines/marine5/tnt_mjrfoe3.ogg",
 				},
-		['warn_trrt']	=	{
+		["warn_trrt"]	=	{
 				"marines/marine5/warn_trrt1.ogg",
 				"marines/marine5/warn_trrt3.ogg",
 				}
 	},
 	["Marine6"] = {
-	['thrtn_foe_re']	=	{
+	["thrtn_foe_re"]	=	{
 				"marines/marine6/thrtn_foe_re1.ogg",
 				"marines/marine6/thrtn_foe_re2.ogg",
 				"marines/marine6/thrtn_foe_re3.ogg",
@@ -8571,21 +8571,21 @@ ENT.Voices = {
 				"marines/marine6/thrtn_foe_re6.ogg",
 				"marines/marine6/thrtn_foe_re9.ogg",
 				},
-		['crs_mjrfoe']	=	{
+		["crs_mjrfoe"]	=	{
 				"marines/marine6/crs_mjrfoe1.ogg",
 				"marines/marine6/crs_mjrfoe2.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"marines/marine6/whn_re2.ogg",
 				"marines/marine6/whn_re3.ogg",
 				"marines/marine6/whn_re4.ogg",
 				},
-		['whn_hrtblt']	=	{
+		["whn_hrtblt"]	=	{
 				"marines/marine6/whn_hrtblt1.ogg",
 				"marines/marine6/whn_hrtblt3.ogg",
 				"marines/marine6/whn_hrtblt4.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/marine6/whn1.ogg",
 				"marines/marine6/whn10.ogg",
 				"marines/marine6/whn11.ogg",
@@ -8597,12 +8597,12 @@ ENT.Voices = {
 				"marines/marine6/whn8.ogg",
 				"marines/marine6/whn9.ogg",
 				},
-		['invt_vcl_gnr']	=	{
+		["invt_vcl_gnr"]	=	{
 				"marines/marine6/invt_vcl_gnr1.ogg",
 				"marines/marine6/invt_vcl_gnr2.ogg",
 				"marines/marine6/invt_vcl_gnr3.ogg",
 				},
-		['scld_plr_vclcrash']	=	{
+		["scld_plr_vclcrash"]	=	{
 				"marines/marine6/scld_plr_vclcrash1.ogg",
 				"marines/marine6/scld_plr_vclcrash2.ogg",
 				"marines/marine6/scld_plr_vclcrash4.ogg",
@@ -8610,95 +8610,95 @@ ENT.Voices = {
 				"marines/marine6/scld_plr_vclcrash6.ogg",
 				"marines/marine6/scld_plr_vclcrash8.ogg",
 				},
-		['warn_wpm_hmmr']	=	{
+		["warn_wpm_hmmr"]	=	{
 				"marines/marine6/warn_wpm_hmmr1.ogg",
 				"marines/marine6/warn_wpm_hmmr2.ogg",
 				},
-		['warn_vcl_wrth']	=	{
+		["warn_vcl_wrth"]	=	{
 				"marines/marine6/warn_vcl_wrth1.ogg",
 				"marines/marine6/warn_vcl_wrth2.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"marines/marine6/warn_vcl_phntm1.ogg",
 				"marines/marine6/warn_vcl_phntm2.ogg",
 				},
-		['newordr_advance']	=	{
+		["newordr_advance"]	=	{
 				"marines/marine6/newordr_advance3.ogg",
 				"marines/marine6/newordr_advance4.ogg",
 				"marines/marine6/newordr_advance5.ogg",
 				"marines/marine6/newordr_advance6.ogg",
 				},
-		['rmd_vcl_ghst']	=	{
+		["rmd_vcl_ghst"]	=	{
 				"marines/marine6/rmd_vcl_ghst1.ogg",
 				"marines/marine6/rmd_vcl_ghst2.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/marine6/foeordr_flanking1.ogg",
 				"marines/marine6/foeordr_flanking3.ogg",
 				"marines/marine6/foeordr_flanking5.ogg",
 				"marines/marine6/foeordr_flanking6.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/marine6/cvr1.ogg",
 				"marines/marine6/cvr2.ogg",
 				"marines/marine6/cvr3.ogg",
 				"marines/marine6/cvr4.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"marines/marine6/seefoe_tim1.ogg",
 				"marines/marine6/seefoe_tim2.ogg",
 				},
-		['grt_plr_vcl_empty']	=	{
+		["grt_plr_vcl_empty"]	=	{
 				"marines/marine6/grt_plr_vcl_empty1.ogg",
 				"marines/marine6/grt_plr_vcl_empty2.ogg",
 				"marines/marine6/grt_plr_vcl_empty3.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"marines/marine6/rmd1.ogg",
 				"marines/marine6/rmd2.ogg",
 				"marines/marine6/rmd3.ogg",
 				"marines/marine6/rmd4.ogg",
 				"marines/marine6/rmd5.ogg",
 				},
-		['reanimat']	=	{
+		["reanimat"]	=	{
 				"marines/marine6/reanimate.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"marines/marine6/srprs1.ogg",
 				"marines/marine6/srprs2.ogg",
 				"marines/marine6/srprs3.ogg",
 				"marines/marine6/srprs4.ogg",
 				"marines/marine6/srprs5.ogg",
 				},
-		['warn_trrt_dply']	=	{
+		["warn_trrt_dply"]	=	{
 				"marines/marine6/warn_trrt_dply1.ogg",
 				"marines/marine6/warn_trrt_dply3.ogg",
 				},
-		['newordr_arrival']	=	{
+		["newordr_arrival"]	=	{
 				"marines/marine6/newordr_arrival1.ogg",
 				"marines/marine6/newordr_arrival2.ogg",
 				"marines/marine6/newordr_arrival4.ogg",
 				"marines/marine6/newordr_arrival5.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"marines/marine6/warn_swarm1.ogg",
 				"marines/marine6/warn_swarm2.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"marines/marine6/warn_fldreanimate2.ogg",
 				"marines/marine6/warn_fldreanimate3.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/marine6/charge1.ogg",
 				"marines/marine6/charge2.ogg",
 				"marines/marine6/charge3.ogg",
 				"marines/marine6/charge4.ogg",
 				},
-		['warn_vcl_bnsh']	=	{
+		["warn_vcl_bnsh"]	=	{
 				"marines/marine6/warn_vcl_bnsh1.ogg",
 				"marines/marine6/warn_vcl_bnsh3.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/marine6/scld_plr_hrtme10.ogg",
 				"marines/marine6/scld_plr_hrtme11.ogg",
 				"marines/marine6/scld_plr_hrtme13.ogg",
@@ -8710,13 +8710,13 @@ ENT.Voices = {
 				"marines/marine6/scld_plr_hrtme8.ogg",
 				"marines/marine6/scld_plr_hrtme9.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/marine6/pain1.ogg",
 				"marines/marine6/pain3.ogg",
 				"marines/marine6/pain4.ogg",
 				"marines/marine6/pain5.ogg",
 				},
-		['prst_fail']	=	{
+		["prst_fail"]	=	{
 				"marines/marine6/prst_fail12.ogg",
 				"marines/marine6/prst_fail13.ogg",
 				"marines/marine6/prst_fail15.ogg",
@@ -8728,27 +8728,27 @@ ENT.Voices = {
 				"marines/marine6/prst_fail8.ogg",
 				"marines/marine6/prst_fail9.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/marine6/foeordr_retreat2.ogg",
 				"marines/marine6/foeordr_retreat4.ogg",
 				"marines/marine6/foeordr_retreat7.ogg",
 				"marines/marine6/foeordr_retreat8.ogg",
 				},
-		['lookcmbt_fllw']	=	{
+		["lookcmbt_fllw"]	=	{
 				"marines/marine6/lookcmbt_fllw1.ogg",
 				"marines/marine6/lookcmbt_fllw2.ogg",
 				},
-		['foundfoe_re']	=	{
+		["foundfoe_re"]	=	{
 				"marines/marine6/foundfoe_re1.ogg",
 				"marines/marine6/foundfoe_re2.ogg",
 				"marines/marine6/foundfoe_re3.ogg",
 				"marines/marine6/foundfoe_re6.ogg",
 				},
-		['warn_scrb']	=	{
+		["warn_scrb"]	=	{
 				"marines/marine6/warn_scrb1.ogg",
 				"marines/marine6/warn_scrb2.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/marine6/betray12.ogg",
 				"marines/marine6/betray13.ogg",
 				"marines/marine6/betray15.ogg",
@@ -8759,61 +8759,61 @@ ENT.Voices = {
 				"marines/marine6/betray8.ogg",
 				"marines/marine6/betray9.ogg",
 				},
-		['warn_incmn_vclbm']	=	{
+		["warn_incmn_vclbm"]	=	{
 				"marines/marine6/warn_incmn_vclbm2.ogg",
 				"marines/marine6/warn_incmn_vclbm3.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/marine6/cvr_re2.ogg",
 				"marines/marine6/cvr_re3.ogg",
 				"marines/marine6/cvr_re5.ogg",
 				"marines/marine6/cvr_re7.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"marines/marine6/prs_plr_kll1.ogg",
 				"marines/marine6/prs_plr_kll2.ogg",
 				"marines/marine6/prs_plr_kll3.ogg",
 				"marines/marine6/prs_plr_kll4.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/marine6/dwn1.ogg",
 				"marines/marine6/dwn2.ogg",
 				"marines/marine6/dwn4.ogg",
 				"marines/marine6/dwn5.ogg",
 				"marines/marine6/dwn6.ogg",
 				},
-		['hail_agg']	=	{
+		["hail_agg"]	=	{
 				"marines/marine6/hail_agg1.ogg",
 				"marines/marine6/hail_agg2.ogg",
 				},
-		['rmd_wpm_snpr']	=	{
+		["rmd_wpm_snpr"]	=	{
 				"marines/marine6/rmd_wpm_snpr2.ogg",
 				"marines/marine6/rmd_wpm_snpr3.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/marine6/dodge1.ogg",
 				"marines/marine6/dodge2.ogg",
 				"marines/marine6/dodge3.ogg",
 				},
-		['grt_intovcl_mine']	=	{
+		["grt_intovcl_mine"]	=	{
 				"marines/marine6/grt_intovcl_mine1.ogg",
 				"marines/marine6/grt_intovcl_mine2.ogg",
 				"marines/marine6/grt_intovcl_mine3.ogg",
 				"marines/marine6/grt_intovcl_mine5.ogg",
 				},
-		['pld_mjrfoe']	=	{
+		["pld_mjrfoe"]	=	{
 				"marines/marine6/pld_mjrfoe1.ogg",
 				"marines/marine6/pld_mjrfoe3.ogg",
 				"marines/marine6/pld_mjrfoe4.ogg",
 				"marines/marine6/pld_mjrfoe6.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/marine6/newordr_support1.ogg",
 				"marines/marine6/newordr_support2.ogg",
 				"marines/marine6/newordr_support3.ogg",
 				"marines/marine6/newordr_support4.ogg",
 				},
-		['pain_shld']	=	{
+		["pain_shld"]	=	{
 				"marines/marine6/pain_shld1.ogg",
 				"marines/marine6/pain_shld10.ogg",
 				"marines/marine6/pain_shld11.ogg",
@@ -8821,11 +8821,11 @@ ENT.Voices = {
 				"marines/marine6/pain_shld6.ogg",
 				"marines/marine6/pain_shld9.ogg",
 				},
-		['rmd_scrb']	=	{
+		["rmd_scrb"]	=	{
 				"marines/marine6/rmd_scrb2.ogg",
 				"marines/marine6/rmd_scrb3.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/marine6/pld1.ogg",
 				"marines/marine6/pld12.ogg",
 				"marines/marine6/pld13.ogg",
@@ -8835,43 +8835,43 @@ ENT.Voices = {
 				"marines/marine6/pld4.ogg",
 				"marines/marine6/pld9.ogg",
 				},
-		['warn_chr_hntr']	=	{
+		["warn_chr_hntr"]	=	{
 				"marines/marine6/warn_chr_hntr1.ogg",
 				"marines/marine6/warn_chr_hntr3.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"marines/marine6/warn_chr_bggr1.ogg",
 				"marines/marine6/warn_chr_bggr2.ogg",
 				},
-		['ask_chkallybdy']	=	{
+		["ask_chkallybdy"]	=	{
 				"marines/marine6/ask_chkallybdy1.ogg",
 				"marines/marine6/ask_chkallybdy3.ogg",
 				},
-		['warn_brsrk']	=	{
+		["warn_brsrk"]	=	{
 				"marines/marine6/warn_brsrk1.ogg",
 				"marines/marine6/warn_brsrk3.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/marine6/warn1.ogg",
 				"marines/marine6/warn2.ogg",
 				"marines/marine6/warn3.ogg",
 				"marines/marine6/warn4.ogg",
 				},
-		['scld_plr_wldvcl']	=	{
+		["scld_plr_wldvcl"]	=	{
 				"marines/marine6/scld_plr_wldvcl1.ogg",
 				"marines/marine6/scld_plr_wldvcl2.ogg",
 				},
-		['entervcl_drvr']	=	{
+		["entervcl_drvr"]	=	{
 				"marines/marine6/entervcl_drvr2.ogg",
 				"marines/marine6/entervcl_drvr3.ogg",
 				"marines/marine6/entervcl_drvr4.ogg",
 				"marines/marine6/entervcl_drvr5.ogg",
 				},
-		['tnt_mjrfoe']	=	{
+		["tnt_mjrfoe"]	=	{
 				"marines/marine6/tnt_mjrfoe1.ogg",
 				"marines/marine6/tnt_mjrfoe2.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/marine6/thrtn1.ogg",
 				"marines/marine6/thrtn10.ogg",
 				"marines/marine6/thrtn11.ogg",
@@ -8885,11 +8885,11 @@ ENT.Voices = {
 				"marines/marine6/thrtn6.ogg",
 				"marines/marine6/thrtn9.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"marines/marine6/seefoe_downthere1.ogg",
 				"marines/marine6/seefoe_downthere2.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/marine6/tnt1.ogg",
 				"marines/marine6/tnt10.ogg",
 				"marines/marine6/tnt11.ogg",
@@ -8903,54 +8903,54 @@ ENT.Voices = {
 				"marines/marine6/tnt8.ogg",
 				"marines/marine6/tnt9.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/marine6/newordr_exitvcl1.ogg",
 				"marines/marine6/newordr_exitvcl2.ogg",
 				"marines/marine6/newordr_exitvcl5.ogg",
 				"marines/marine6/newordr_exitvcl7.ogg",
 				},
-		['join_stayback']	=	{
+		["join_stayback"]	=	{
 				"marines/marine6/join_stayback1.ogg",
 				"marines/marine6/join_stayback3.ogg",
 				"marines/marine6/join_stayback5.ogg",
 				"marines/marine6/join_stayback7.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/marine6/thrwn1.ogg",
 				"marines/marine6/thrwn2.ogg",
 				"marines/marine6/thrwn3.ogg",
 				},
-		['thrtn_mjrfoe']	=	{
+		["thrtn_mjrfoe"]	=	{
 				"marines/marine6/thrtn_mjrfoe1.ogg",
 				"marines/marine6/thrtn_mjrfoe2.ogg",
 				},
-		['newordr_fllwplr']	=	{
+		["newordr_fllwplr"]	=	{
 				"marines/marine6/newordr_fllwplr1.ogg",
 				"marines/marine6/newordr_fllwplr2.ogg",
 				"marines/marine6/newordr_fllwplr3.ogg",
 				"marines/marine6/newordr_fllwplr4.ogg",
 				},
-		['chkallybdy']	=	{
+		["chkallybdy"]	=	{
 				"marines/marine6/chkallybdy3.ogg",
 				"marines/marine6/chkallybdy5.ogg",
 				},
-		['pstcmbt_fld']	=	{
+		["pstcmbt_fld"]	=	{
 				"marines/marine6/pstcmbt_fld3.ogg",
 				"marines/marine6/pstcmbt_fld4.ogg",
 				},
-		['ok_plr_trdst_gnr']	=	{
+		["ok_plr_trdst_gnr"]	=	{
 				"marines/marine6/ok_plr_trdst_gnr1.ogg",
 				"marines/marine6/ok_plr_trdst_gnr2.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"marines/marine6/panic_plsmgrnd1.ogg",
 				"marines/marine6/panic_plsmgrnd2.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/marine6/pstcmbt_brt1.ogg",
 				"marines/marine6/pstcmbt_brt3.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/marine6/grt_plr_mc1.ogg",
 				"marines/marine6/grt_plr_mc11.ogg",
 				"marines/marine6/grt_plr_mc12.ogg",
@@ -8959,19 +8959,19 @@ ENT.Voices = {
 				"marines/marine6/grt_plr_mc6.ogg",
 				"marines/marine6/grt_plr_mc9.ogg",
 				},
-		['zdth_drama']	=	{
+		["zdth_drama"]	=	{
 				"marines/marine6/zdth_drama1.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"marines/marine6/dth_slw1.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/marine6/foeordr_fallback1.ogg",
 				"marines/marine6/foeordr_fallback2.ogg",
 				"marines/marine6/foeordr_fallback3.ogg",
 				"marines/marine6/foeordr_fallback4.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/marine6/hail_plr_mc1.ogg",
 				"marines/marine6/hail_plr_mc2.ogg",
 				"marines/marine6/hail_plr_mc3.ogg",
@@ -8979,11 +8979,11 @@ ENT.Voices = {
 				"marines/marine6/hail_plr_mc6.ogg",
 				"marines/marine6/hail_plr_mc7.ogg",
 				},
-		['join_emrg']	=	{
+		["join_emrg"]	=	{
 				"marines/marine6/join_emrg1.ogg",
 				"marines/marine6/join_emrg2.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/marine6/foundfoe_prst1.ogg",
 				"marines/marine6/foundfoe_prst10.ogg",
 				"marines/marine6/foundfoe_prst11.ogg",
@@ -9000,7 +9000,7 @@ ENT.Voices = {
 				"marines/marine6/foundfoe_prst6.ogg",
 				"marines/marine6/foundfoe_prst8.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/marine6/thnk_plr_btrwpn1.ogg",
 				"marines/marine6/thnk_plr_btrwpn10.ogg",
 				"marines/marine6/thnk_plr_btrwpn11.ogg",
@@ -9012,11 +9012,11 @@ ENT.Voices = {
 				"marines/marine6/thnk_plr_btrwpn8.ogg",
 				"marines/marine6/thnk_plr_btrwpn9.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/marine6/thnk_plr_arb1.ogg",
 				"marines/marine6/thnk_plr_arb2.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/marine6/thnk1.ogg",
 				"marines/marine6/thnk2.ogg",
 				"marines/marine6/thnk3.ogg",
@@ -9027,24 +9027,24 @@ ENT.Voices = {
 				"marines/marine6/thnk8.ogg",
 				"marines/marine6/thnk9.ogg",
 				},
-		['look_plr_fllw']	=	{
+		["look_plr_fllw"]	=	{
 				"marines/marine6/look_plr_fllw1.ogg",
 				"marines/marine6/look_plr_fllw2.ogg",
 				},
-		['ordr_keepwatch']	=	{
+		["ordr_keepwatch"]	=	{
 				"marines/marine6/ordr_keepwatch1.ogg",
 				"marines/marine6/ordr_keepwatch2.ogg",
 				"marines/marine6/ordr_keepwatch4.ogg",
 				"marines/marine6/ordr_keepwatch6.ogg",
 				},
-		['tchkallybdy']	=	{
+		["tchkallybdy"]	=	{
 				"marines/marine6/tchkallybdy1.ogg",
 				"marines/marine6/tchkallybdy3.ogg",
 				"marines/marine6/tchkallybdy4.ogg",
 				"marines/marine6/tchkallybdy5.ogg",
 				"marines/marine6/tchkallybdy7.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/marine6/pain_mjr1.ogg",
 				"marines/marine6/pain_mjr10.ogg",
 				"marines/marine6/pain_mjr11.ogg",
@@ -9058,65 +9058,65 @@ ENT.Voices = {
 				"marines/marine6/pain_mjr8.ogg",
 				"marines/marine6/pain_mjr9.ogg",
 				},
-		['kamikaze']	=	{
+		["kamikaze"]	=	{
 				"marines/marine6/kamikaze1.ogg",
 				"marines/marine6/kamikaze2.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/marine6/kllmytrgt1.ogg",
 				"marines/marine6/kllmytrgt2.ogg",
 				"marines/marine6/kllmytrgt4.ogg",
 				"marines/marine6/kllmytrgt7.ogg",
 				"marines/marine6/kllmytrgt8.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/marine6/chr_kllfoe1.ogg",
 				"marines/marine6/chr_kllfoe3.ogg",
 				"marines/marine6/chr_kllfoe5.ogg",
 				"marines/marine6/chr_kllfoe6.ogg",
 				"marines/marine6/chr_kllfoe8.ogg",
 				},
-		['rmd_vcl_chpr']	=	{
+		["rmd_vcl_chpr"]	=	{
 				"marines/marine6/rmd_vcl_chpr1.ogg",
 				"marines/marine6/rmd_vcl_chpr2.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"marines/marine6/dwn_vcl_wrth1.ogg",
 				"marines/marine6/dwn_vcl_wrth2.ogg",
 				"marines/marine6/dwn_vcl_wrth3.ogg",
 				},
-		['chr_kllfoe_blt']	=	{
+		["chr_kllfoe_blt"]	=	{
 				"marines/marine6/chr_kllfoe_blt1.ogg",
 				"marines/marine6/chr_kllfoe_blt2.ogg",
 				"marines/marine6/chr_kllfoe_blt3.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/marine6/scld1.ogg",
 				"marines/marine6/scld3.ogg",
 				"marines/marine6/scld4.ogg",
 				"marines/marine6/scld8.ogg",
 				},
-		['dwn_wpm_snpr']	=	{
+		["dwn_wpm_snpr"]	=	{
 				"marines/marine6/dwn_wpm_snpr1.ogg",
 				"marines/marine6/dwn_wpm_snpr3.ogg",
 				},
-		['ordr_keepwatch_tim']	=	{
+		["ordr_keepwatch_tim"]	=	{
 				"marines/marine6/ordr_keepwatch_tim4.ogg",
 				"marines/marine6/ordr_keepwatch_tim5.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"marines/marine6/dth_drama3.ogg",
 				"marines/marine6/dth_drama4.ogg",
 				"marines/marine6/dth_drama5.ogg",
 				"marines/marine6/dth_drama6.ogg",
 				},
-		['newordr_charge']	=	{
+		["newordr_charge"]	=	{
 				"marines/marine6/newordr_charge1.ogg",
 				"marines/marine6/newordr_charge2.ogg",
 				"marines/marine6/newordr_charge3.ogg",
 				"marines/marine6/newordr_charge4.ogg",
 				},
-		['strk_vcl_gnr']	=	{
+		["strk_vcl_gnr"]	=	{
 				"marines/marine6/strk_vcl_gnr1.ogg",
 				"marines/marine6/strk_vcl_gnr10.ogg",
 				"marines/marine6/strk_vcl_gnr11.ogg",
@@ -9128,14 +9128,14 @@ ENT.Voices = {
 				"marines/marine6/strk_vcl_gnr8.ogg",
 				"marines/marine6/strk_vcl_gnr9.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/marine6/dth_mjr1.ogg",
 				"marines/marine6/dth_mjr2.ogg",
 				"marines/marine6/dth_mjr3.ogg",
 				"marines/marine6/dth_mjr4.ogg",
 				"marines/marine6/dth_mjr5.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/marine6/seefoe1.ogg",
 				"marines/marine6/seefoe10.ogg",
 				"marines/marine6/seefoe2.ogg",
@@ -9147,7 +9147,7 @@ ENT.Voices = {
 				"marines/marine6/seefoe8.ogg",
 				"marines/marine6/seefoe9.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/marine6/lift1.ogg",
 				"marines/marine6/lift2.ogg",
 				"marines/marine6/lift3.ogg",
@@ -9155,39 +9155,39 @@ ENT.Voices = {
 				"marines/marine6/lift5.ogg",
 				"marines/marine6/lift6.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/marine6/lmnt1.ogg",
 				"marines/marine6/lmnt2.ogg",
 				"marines/marine6/lmnt4.ogg",
 				"marines/marine6/lmnt5.ogg",
 				"marines/marine6/lmnt7.ogg",
 				},
-		['grt_intovcl_imdvr']	=	{
+		["grt_intovcl_imdvr"]	=	{
 				"marines/marine6/grt_intovcl_imdvr1.ogg",
 				"marines/marine6/grt_intovcl_imdvr2.ogg",
 				},
-		['dwn_vcl_ghst']	=	{
+		["dwn_vcl_ghst"]	=	{
 				"marines/marine6/dwn_vcl_ghst1.ogg",
 				"marines/marine6/dwn_vcl_ghst2.ogg",
 				"marines/marine6/dwn_vcl_ghst3.ogg",
 				},
-		['stayback_tim']	=	{
+		["stayback_tim"]	=	{
 				"marines/marine6/stayback_tim3.ogg",
 				"marines/marine6/stayback_tim4.ogg",
 				"marines/marine6/stayback_tim5.ogg",
 				},
-		['newordr_fallback']	=	{
+		["newordr_fallback"]	=	{
 				"marines/marine6/newordr_fallback1.ogg",
 				"marines/marine6/newordr_fallback3.ogg",
 				"marines/marine6/newordr_fallback4.ogg",
 				"marines/marine6/newordr_fallback5.ogg",
 				},
-		['chkallybdyf']	=	{
+		["chkallybdyf"]	=	{
 				"marines/marine6/chkallybdyf1.ogg",
 				"marines/marine6/chkallybdyf3.ogg",
 				"marines/marine6/chkallybdyf4.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/marine6/scld_plr_mc1.ogg",
 				"marines/marine6/scld_plr_mc15.ogg",
 				"marines/marine6/scld_plr_mc2.ogg",
@@ -9197,11 +9197,11 @@ ENT.Voices = {
 				"marines/marine6/scld_plr_mc8.ogg",
 				"marines/marine6/scld_plr_mc9.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/marine6/look_plr_arb1.ogg",
 				"marines/marine6/look_plr_arb2.ogg",
 				},
-		['strk_grnd']	=	{
+		["strk_grnd"]	=	{
 				"marines/marine6/strk_grnd1.ogg",
 				"marines/marine6/strk_grnd2.ogg",
 				"marines/marine6/strk_grnd3.ogg",
@@ -9210,18 +9210,18 @@ ENT.Voices = {
 				"marines/marine6/strk_grnd7.ogg",
 				"marines/marine6/strk_grnd8.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"marines/marine6/rmd_vcl_phntm1.ogg",
 				"marines/marine6/rmd_vcl_phntm2.ogg",
 				"marines/marine6/rmd_vcl_phntm3.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/marine6/pstcmbt_ez1.ogg",
 				"marines/marine6/pstcmbt_ez2.ogg",
 				"marines/marine6/pstcmbt_ez3.ogg",
 				"marines/marine6/pstcmbt_ez5.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"marines/marine6/invsgt1.ogg",
 				"marines/marine6/invsgt10.ogg",
 				"marines/marine6/invsgt11.ogg",
@@ -9236,11 +9236,11 @@ ENT.Voices = {
 				"marines/marine6/invsgt6.ogg",
 				"marines/marine6/invsgt8.ogg",
 				},
-		['stayback_agg']	=	{
+		["stayback_agg"]	=	{
 				"marines/marine6/stayback_agg2.ogg",
 				"marines/marine6/stayback_agg5.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"marines/marine6/scld_plr_kllally1.ogg",
 				"marines/marine6/scld_plr_kllally10.ogg",
 				"marines/marine6/scld_plr_kllally11.ogg",
@@ -9252,42 +9252,42 @@ ENT.Voices = {
 				"marines/marine6/scld_plr_kllally8.ogg",
 				"marines/marine6/scld_plr_kllally9.ogg",
 				},
-		['warn_pureforms']	=	{
+		["warn_pureforms"]	=	{
 				"marines/marine6/warn_pureforms2.ogg",
 				"marines/marine6/warn_pureforms3.ogg",
 				},
-		['ordr_prst']	=	{
+		["ordr_prst"]	=	{
 				"marines/marine6/ordr_prst2.ogg",
 				"marines/marine6/ordr_prst4.ogg",
 				"marines/marine6/ordr_prst7.ogg",
 				"marines/marine6/ordr_prst8.ogg",
 				"marines/marine6/ordr_prst9.ogg",
 				},
-		['status']	=	{
+		["status"]	=	{
 				"marines/marine6/status2.ogg",
 				"marines/marine6/status3.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"marines/marine6/dth_reanimated1.ogg",
 				"marines/marine6/dth_reanimated2.ogg",
 				"marines/marine6/dth_reanimated4.ogg",
 				"marines/marine6/dth_reanimated5.ogg",
 				"marines/marine6/dth_reanimated6.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/marine6/ok_plr_arb2.ogg",
 				"marines/marine6/ok_plr_arb3.ogg",
 				"marines/marine6/ok_plr_arb4.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"marines/marine6/hail_tim2.ogg",
 				"marines/marine6/hail_tim3.ogg",
 				},
-		['warn_stlth_again']	=	{
+		["warn_stlth_again"]	=	{
 				"marines/marine6/warn_stlth_again1.ogg",
 				"marines/marine6/warn_stlth_again2.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/marine6/look1.ogg",
 				"marines/marine6/look10.ogg",
 				"marines/marine6/look2.ogg",
@@ -9297,17 +9297,17 @@ ENT.Voices = {
 				"marines/marine6/look8.ogg",
 				"marines/marine6/look9.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/marine6/neworder_flanking2.ogg",
 				"marines/marine6/neworder_flanking4.ogg",
 				"marines/marine6/neworder_flanking5.ogg",
 				"marines/marine6/neworder_flanking6.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"marines/marine6/pstcmbt_tim1.ogg",
 				"marines/marine6/pstcmbt_tim3.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/marine6/hail_plr_arb1.ogg",
 				"marines/marine6/hail_plr_arb2.ogg",
 				"marines/marine6/hail_plr_arb3.ogg",
@@ -9315,19 +9315,19 @@ ENT.Voices = {
 				"marines/marine6/hail_plr_arb6.ogg",
 				"marines/marine6/hail_plr_arb7.ogg",
 				},
-		['srchend']	=	{
+		["srchend"]	=	{
 				"marines/marine6/srchend2.ogg",
 				"marines/marine6/srchend3.ogg",
 				"marines/marine6/srchend6.ogg",
 				"marines/marine6/srchend7.ogg",
 				},
-		['grt_plr_vcl']	=	{
+		["grt_plr_vcl"]	=	{
 				"marines/marine6/grt_plr_vcl3.ogg",
 				"marines/marine6/grt_plr_vcl4.ogg",
 				"marines/marine6/grt_plr_vcl5.ogg",
 				"marines/marine6/grt_plr_vcl6.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"marines/marine6/lookcmbt1.ogg",
 				"marines/marine6/lookcmbt10.ogg",
 				"marines/marine6/lookcmbt11.ogg",
@@ -9338,7 +9338,7 @@ ENT.Voices = {
 				"marines/marine6/lookcmbt4.ogg",
 				"marines/marine6/lookcmbt7.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"marines/marine6/foundfoe1.ogg",
 				"marines/marine6/foundfoe11.ogg",
 				"marines/marine6/foundfoe13.ogg",
@@ -9350,16 +9350,16 @@ ENT.Voices = {
 				"marines/marine6/foundfoe8.ogg",
 				"marines/marine6/foundfoe9.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"marines/marine6/look_pstcmbt_hrd3.ogg",
 				"marines/marine6/look_pstcmbt_hrd4.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/marine6/dth_fall1.ogg",
 				"marines/marine6/dth_fall2.ogg",
 				"marines/marine6/dth_fall3.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"marines/marine6/srch_pinned10.ogg",
 				"marines/marine6/srch_pinned11.ogg",
 				"marines/marine6/srch_pinned18.ogg",
@@ -9370,66 +9370,66 @@ ENT.Voices = {
 				"marines/marine6/srch_pinned8.ogg",
 				"marines/marine6/srch_pinned9.ogg",
 				},
-		['join_re']	=	{
+		["join_re"]	=	{
 				"marines/marine6/join_re1.ogg",
 				"marines/marine6/join_re2.ogg",
 				"marines/marine6/join_re4.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/marine6/shotfoebdy1.ogg",
 				"marines/marine6/shotfoebdy2.ogg",
 				"marines/marine6/shotfoebdy3.ogg",
 				"marines/marine6/shotfoebdy4.ogg",
 				"marines/marine6/shotfoebdy5.ogg",
 				},
-		['entervcl']	=	{
+		["entervcl"]	=	{
 				"marines/marine6/entervcl2.ogg",
 				"marines/marine6/entervcl4.ogg",
 				"marines/marine6/entervcl5.ogg",
 				"marines/marine6/entervcl6.ogg",
 				},
-		['join_prst']	=	{
+		["join_prst"]	=	{
 				"marines/marine6/join_prst1.ogg",
 				"marines/marine6/join_prst2.ogg",
 				"marines/marine6/join_prst3.ogg",
 				"marines/marine6/join_prst4.ogg",
 				"marines/marine6/join_prst6.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/marine6/approve1.ogg",
 				"marines/marine6/approve2.ogg",
 				"marines/marine6/approve3.ogg",
 				"marines/marine6/approve4.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"marines/marine6/seefoe_upthere1.ogg",
 				"marines/marine6/seefoe_upthere2.ogg",
 				},
-		['warn_vcl_ghst']	=	{
+		["warn_vcl_ghst"]	=	{
 				"marines/marine6/warn_vcl_ghst1.ogg",
 				"marines/marine6/warn_vcl_ghst2.ogg",
 				"marines/marine6/warn_vcl_ghst3.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"marines/marine6/seefoe_agg1.ogg",
 				"marines/marine6/seefoe_agg2.ogg",
 				"marines/marine6/seefoe_agg3.ogg",
 				},
-		['chr_kllfoe_stkplsm']	=	{
+		["chr_kllfoe_stkplsm"]	=	{
 				"marines/marine6/chr_kllfoe_stkplsm1.ogg",
 				"marines/marine6/chr_kllfoe_stkplsm2.ogg",
 				"marines/marine6/chr_kllfoe_stkplsm3.ogg",
 				},
-		['strk_snpr']	=	{
+		["strk_snpr"]	=	{
 				"marines/marine6/strk_snpr1.ogg",
 				"marines/marine6/strk_snpr2.ogg",
 				"marines/marine6/strk_snpr3.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/marine6/meleeleap2.ogg",
 				"marines/marine6/meleeleap3.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/marine6/scrn_plr_wrswpn1.ogg",
 				"marines/marine6/scrn_plr_wrswpn10.ogg",
 				"marines/marine6/scrn_plr_wrswpn2.ogg",
@@ -9440,16 +9440,16 @@ ENT.Voices = {
 				"marines/marine6/scrn_plr_wrswpn7.ogg",
 				"marines/marine6/scrn_plr_wrswpn8.ogg",
 				},
-		['lookcmbt_agg']	=	{
+		["lookcmbt_agg"]	=	{
 				"marines/marine6/lookcmbt_agg2.ogg",
 				"marines/marine6/lookcmbt_agg4.ogg",
 				},
-		['scrn_plr_mc']	=	{
+		["scrn_plr_mc"]	=	{
 				"marines/marine6/scrn_plr_mc1.ogg",
 				"marines/marine6/scrn_plr_mc2.ogg",
 				"marines/marine6/scrn_plr_mc3.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/marine6/scrn1.ogg",
 				"marines/marine6/scrn10.ogg",
 				"marines/marine6/scrn11.ogg",
@@ -9464,19 +9464,19 @@ ENT.Voices = {
 				"marines/marine6/scrn8.ogg",
 				"marines/marine6/scrn9.ogg",
 				},
-		['rmd_wpm_hmmr']	=	{
+		["rmd_wpm_hmmr"]	=	{
 				"marines/marine6/rmd_wpm_hmmr1.ogg",
 				"marines/marine6/rmd_wpm_hmmr2.ogg",
 				},
-		['tnt_re']	=	{
+		["tnt_re"]	=	{
 				"marines/marine6/tnt_re1.ogg",
 				"marines/marine6/tnt_re3.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"marines/marine6/rmd_vcl_wrth1.ogg",
 				"marines/marine6/rmd_vcl_wrth2.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/marine6/lmnt_deadplr_arb2.ogg",
 				"marines/marine6/lmnt_deadplr_arb3.ogg",
 				"marines/marine6/lmnt_deadplr_arb4.ogg",
@@ -9484,7 +9484,7 @@ ENT.Voices = {
 				"marines/marine6/lmnt_deadplr_arb6.ogg",
 				"marines/marine6/lmnt_deadplr_arb7.ogg",
 				},
-		['invsgt_fail']	=	{
+		["invsgt_fail"]	=	{
 				"marines/marine6/invsgt_fail1.ogg",
 				"marines/marine6/invsgt_fail10.ogg",
 				"marines/marine6/invsgt_fail11.ogg",
@@ -9495,21 +9495,21 @@ ENT.Voices = {
 				"marines/marine6/invsgt_fail7.ogg",
 				"marines/marine6/invsgt_fail9.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"marines/marine6/scld_plr_wldgrnd1.ogg",
 				"marines/marine6/scld_plr_wldgrnd2.ogg",
 				"marines/marine6/scld_plr_wldgrnd3.ogg",
 				},
-		['warn_wpm_snpr']	=	{
+		["warn_wpm_snpr"]	=	{
 				"marines/marine6/warn_wpm_snpr1.ogg",
 				"marines/marine6/warn_wpm_snpr2.ogg",
 				"marines/marine6/warn_wpm_snpr3.ogg",
 				},
-		['dwn_scrb']	=	{
+		["dwn_scrb"]	=	{
 				"marines/marine6/dwn_scrb1.ogg",
 				"marines/marine6/dwn_scrb2.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"marines/marine6/scld_plr_hrt_blt1.ogg",
 				"marines/marine6/scld_plr_hrt_blt10.ogg",
 				"marines/marine6/scld_plr_hrt_blt3.ogg",
@@ -9519,35 +9519,35 @@ ENT.Voices = {
 				"marines/marine6/scld_plr_hrt_blt7.ogg",
 				"marines/marine6/scld_plr_hrt_blt8.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/marine6/ordr_chkfoebdy10.ogg",
 				"marines/marine6/ordr_chkfoebdy3.ogg",
 				"marines/marine6/ordr_chkfoebdy5.ogg",
 				"marines/marine6/ordr_chkfoebdy6.ogg",
 				"marines/marine6/ordr_chkfoebdy7.ogg",
 				},
-		['prs_plr_sniping']	=	{
+		["prs_plr_sniping"]	=	{
 				"marines/marine6/prs_plr_sniping1.ogg",
 				"marines/marine6/prs_plr_sniping2.ogg",
 				},
-		['regret']	=	{
+		["regret"]	=	{
 				"marines/marine6/regret1.ogg",
 				"marines/marine6/regret2.ogg",
 				"marines/marine6/regret4.ogg",
 				"marines/marine6/regret6.ogg",
 				},
-		['ask_chkallybdyf']	=	{
+		["ask_chkallybdyf"]	=	{
 				"marines/marine6/ask_chkallybdyf1.ogg",
 				"marines/marine6/ask_chkallybdyf2.ogg",
 				"marines/marine6/ask_chkallybdyf3.ogg",
 				},
-		['grt_intovcl']	=	{
+		["grt_intovcl"]	=	{
 				"marines/marine6/grt_intovcl1.ogg",
 				"marines/marine6/grt_intovcl2.ogg",
 				"marines/marine6/grt_intovcl3.ogg",
 				"marines/marine6/grt_intovcl7.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"marines/marine6/warn_incmn_grnd1.ogg",
 				"marines/marine6/warn_incmn_grnd10.ogg",
 				"marines/marine6/warn_incmn_grnd11.ogg",
@@ -9559,7 +9559,7 @@ ENT.Voices = {
 				"marines/marine6/warn_incmn_grnd7.ogg",
 				"marines/marine6/warn_incmn_grnd8.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/marine6/grt_plr_arb1.ogg",
 				"marines/marine6/grt_plr_arb11.ogg",
 				"marines/marine6/grt_plr_arb2.ogg",
@@ -9568,29 +9568,29 @@ ENT.Voices = {
 				"marines/marine6/grt_plr_arb6.ogg",
 				"marines/marine6/grt_plr_arb9.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/marine6/scrn_plr_arb1.ogg",
 				"marines/marine6/scrn_plr_arb2.ogg",
 				"marines/marine6/scrn_plr_arb3.ogg",
 				},
-		['rmd_stlth']	=	{
+		["rmd_stlth"]	=	{
 				"marines/marine6/rmd_stlth1.ogg",
 				"marines/marine6/rmd_stlth2.ogg",
 				},
-		['rmd_trrt']	=	{
+		["rmd_trrt"]	=	{
 				"marines/marine6/rmd_trrt1.ogg",
 				"marines/marine6/rmd_trrt2.ogg",
 				},
-		['look_lngtime']	=	{
+		["look_lngtime"]	=	{
 				"marines/marine6/look_lngtime10.ogg",
 				"marines/marine6/look_lngtime12.ogg",
 				"marines/marine6/look_lngtime13.ogg",
 				},
-		['rmd_vcl_bnsh']	=	{
+		["rmd_vcl_bnsh"]	=	{
 				"marines/marine6/rmd_vcl_bnsh1.ogg",
 				"marines/marine6/rmd_vcl_bnsh2.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/marine6/prs_plr_arb1.ogg",
 				"marines/marine6/prs_plr_arb2.ogg",
 				"marines/marine6/prs_plr_arb3.ogg",
@@ -9599,7 +9599,7 @@ ENT.Voices = {
 				"marines/marine6/prs_plr_arb6.ogg",
 				"marines/marine6/prs_plr_arb7.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/marine6/scld_plr_arb2.ogg",
 				"marines/marine6/scld_plr_arb3.ogg",
 				"marines/marine6/scld_plr_arb6.ogg",
@@ -9607,18 +9607,18 @@ ENT.Voices = {
 				"marines/marine6/scld_plr_arb8.ogg",
 				"marines/marine6/scld_plr_arb9.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/marine6/dive1.ogg",
 				"marines/marine6/dive2.ogg",
 				"marines/marine6/dive3.ogg",
 				"marines/marine6/dive4.ogg",
 				},
-		['pstcmbt_agg']	=	{
+		["pstcmbt_agg"]	=	{
 				"marines/marine6/pstcmbt_agg1.ogg",
 				"marines/marine6/pstcmbt_agg2.ogg",
 				"marines/marine6/pstcmbt_agg4.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/marine6/pstcmbt1.ogg",
 				"marines/marine6/pstcmbt2.ogg",
 				"marines/marine6/pstcmbt4.ogg",
@@ -9627,7 +9627,7 @@ ENT.Voices = {
 				"marines/marine6/pstcmbt7.ogg",
 				"marines/marine6/pstcmbt9.ogg",
 				},
-		['prst']	=	{
+		["prst"]	=	{
 				"marines/marine6/prst3.ogg",
 				"marines/marine6/prst4.ogg",
 				"marines/marine6/prst5.ogg",
@@ -9635,14 +9635,14 @@ ENT.Voices = {
 				"marines/marine6/prst8.ogg",
 				"marines/marine6/prst9.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/marine6/scld_plr_blocking1.ogg",
 				"marines/marine6/scld_plr_blocking2.ogg",
 				"marines/marine6/scld_plr_blocking3.ogg",
 				"marines/marine6/scld_plr_blocking6.ogg",
 				"marines/marine6/scld_plr_blocking7.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/marine6/prs_plr_mc1.ogg",
 				"marines/marine6/prs_plr_mc2.ogg",
 				"marines/marine6/prs_plr_mc3.ogg",
@@ -9651,47 +9651,47 @@ ENT.Voices = {
 				"marines/marine6/prs_plr_mc7.ogg",
 				"marines/marine6/prs_plr_mc8.ogg",
 				},
-		['prs_plr_kll_wmelee']	=	{
+		["prs_plr_kll_wmelee"]	=	{
 				"marines/marine6/prs_plr_kll_wmelee1.ogg",
 				"marines/marine6/prs_plr_kll_wmelee3.ogg",
 				},
-		['status_re']	=	{
+		["status_re"]	=	{
 				"marines/marine6/status_re1.ogg",
 				"marines/marine6/status_re2.ogg",
 				"marines/marine6/status_re5.ogg",
 				"marines/marine6/status_re7.ogg",
 				},
-		['invt_vcl']	=	{
+		["invt_vcl"]	=	{
 				"marines/marine6/invt_vcl1.ogg",
 				"marines/marine6/invt_vcl3.ogg",
 				"marines/marine6/invt_vcl4.ogg",
 				"marines/marine6/invt_vcl5.ogg",
 				},
-		['cvr_invsgt']	=	{
+		["cvr_invsgt"]	=	{
 				"marines/marine6/cvr_invsgt1.ogg",
 				"marines/marine6/cvr_invsgt2.ogg",
 				"marines/marine6/cvr_invsgt4.ogg",
 				"marines/marine6/cvr_invsgt5.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"marines/marine6/panic_infctnfrm1.ogg",
 				"marines/marine6/panic_infctnfrm2.ogg",
 				},
-		['warn_vcl_chpr']	=	{
+		["warn_vcl_chpr"]	=	{
 				"marines/marine6/warn_vcl_chpr1.ogg",
 				"marines/marine6/warn_vcl_chpr2.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/marine6/ok_plr_mc1.ogg",
 				"marines/marine6/ok_plr_mc2.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"marines/marine6/lookcmbt_tim1.ogg",
 				"marines/marine6/lookcmbt_tim2.ogg",
 				"marines/marine6/lookcmbt_tim3.ogg",
 				"marines/marine6/lookcmbt_tim4.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/marine6/crs1.ogg",
 				"marines/marine6/crs11.ogg",
 				"marines/marine6/crs3.ogg",
@@ -9700,21 +9700,21 @@ ENT.Voices = {
 				"marines/marine6/crs7.ogg",
 				"marines/marine6/crs9.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/marine6/newordr_retreat1.ogg",
 				"marines/marine6/newordr_retreat2.ogg",
 				"marines/marine6/newordr_retreat3.ogg",
 				"marines/marine6/newordr_retreat4.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"marines/marine6/melee1.ogg",
 				"marines/marine6/melee3.ogg",
 				"marines/marine6/melee4.ogg",
 				},
-		['scld_plr_vclcrazy']	=	{
+		["scld_plr_vclcrazy"]	=	{
 				"marines/marine6/scld_plr_vclcrazy3.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/marine6/prs1.ogg",
 				"marines/marine6/prs2.ogg",
 				"marines/marine6/prs3.ogg",
@@ -9725,7 +9725,7 @@ ENT.Voices = {
 				"marines/marine6/prs8.ogg",
 				"marines/marine6/prs9.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"marines/marine6/warn_incmn1.ogg",
 				"marines/marine6/warn_incmn2.ogg",
 				"marines/marine6/warn_incmn3.ogg",
@@ -9733,29 +9733,29 @@ ENT.Voices = {
 				"marines/marine6/warn_incmn5.ogg",
 				"marines/marine6/warn_incmn6.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"marines/marine6/panic_onfire3.ogg",
 				"marines/marine6/panic_onfire4.ogg",
 				"marines/marine6/panic_onfire5.ogg",
 				},
-		['join_emrg_re']	=	{
+		["join_emrg_re"]	=	{
 				"marines/marine6/join_emrg_re1.ogg",
 				"marines/marine6/join_emrg_re2.ogg",
 				"marines/marine6/join_emrg_re3.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"marines/marine6/prs_plr_kll_lots1.ogg",
 				"marines/marine6/prs_plr_kll_lots2.ogg",
 				"marines/marine6/prs_plr_kll_lots3.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/marine6/panic.ogg",
 				},
-		['entervcl_gnr']	=	{
+		["entervcl_gnr"]	=	{
 				"marines/marine6/entervcl_gnr1.ogg",
 				"marines/marine6/entervcl_gnr4.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/marine6/ok_plr_trdwpn1.ogg",
 				"marines/marine6/ok_plr_trdwpn10.ogg",
 				"marines/marine6/ok_plr_trdwpn2.ogg",
@@ -9766,13 +9766,13 @@ ENT.Voices = {
 				"marines/marine6/ok_plr_trdwpn8.ogg",
 				"marines/marine6/ok_plr_trdwpn9.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"marines/marine6/warn_flood1.ogg",
 				"marines/marine6/warn_flood2.ogg",
 				"marines/marine6/warn_flood3.ogg",
 				"marines/marine6/warn_flood4.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/marine6/ok1.ogg",
 				"marines/marine6/ok10.ogg",
 				"marines/marine6/ok2.ogg",
@@ -9782,14 +9782,14 @@ ENT.Voices = {
 				"marines/marine6/ok6.ogg",
 				"marines/marine6/ok8.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"marines/marine6/lmnt_deadally1.ogg",
 				"marines/marine6/lmnt_deadally2.ogg",
 				},
-		['brsrk']	=	{
+		["brsrk"]	=	{
 				"marines/marine6/brsrk1.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/marine6/pain_mdm1.ogg",
 				"marines/marine6/pain_mdm2.ogg",
 				"marines/marine6/pain_mdm4.ogg",
@@ -9799,7 +9799,7 @@ ENT.Voices = {
 				"marines/marine6/pain_mdm8.ogg",
 				"marines/marine6/pain_mdm9.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/marine6/pain_fall1.ogg",
 				"marines/marine6/pain_fall2.ogg",
 				"marines/marine6/pain_fall3.ogg",
@@ -9809,35 +9809,35 @@ ENT.Voices = {
 				"marines/marine6/pain_fall8.ogg",
 				"marines/marine6/pain_fall9.ogg",
 				},
-		['strk_grnd_uncvr']	=	{
+		["strk_grnd_uncvr"]	=	{
 				"marines/marine6/strk_grnd_uncvr1.ogg",
 				"marines/marine6/strk_grnd_uncvr2.ogg",
 				},
-		['ask_prst_fail']	=	{
+		["ask_prst_fail"]	=	{
 				"marines/marine6/ask_prst_fail1.ogg",
 				"marines/marine6/ask_prst_fail3.ogg",
 				"marines/marine6/ask_prst_fail5.ogg",
 				"marines/marine6/ask_prst_fail7.ogg",
 				"marines/marine6/ask_prst_fail9.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/marine6/dth_slnt1.ogg",
 				"marines/marine6/dth_slnt4.ogg",
 				"marines/marine6/dth_slnt5.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/marine6/hail1.ogg",
 				"marines/marine6/hail2.ogg",
 				"marines/marine6/hail3.ogg",
 				"marines/marine6/hail4.ogg",
 				},
-		['ordr_re']	=	{
+		["ordr_re"]	=	{
 				"marines/marine6/ordr_re1.ogg",
 				"marines/marine6/ordr_re2.ogg",
 				"marines/marine6/ordr_re3.ogg",
 				"marines/marine6/ordr_re4.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/marine6/forgive2.ogg",
 				"marines/marine6/forgive3.ogg",
 				"marines/marine6/forgive4.ogg",
@@ -9846,16 +9846,16 @@ ENT.Voices = {
 				"marines/marine6/forgive8.ogg",
 				"marines/marine6/forgive9.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"marines/marine6/prs_plr_gdgrnd1.ogg",
 				"marines/marine6/prs_plr_gdgrnd2.ogg",
 				"marines/marine6/prs_plr_gdgrnd3.ogg",
 				},
-		['prs_plr_kll_vclbmp']	=	{
+		["prs_plr_kll_vclbmp"]	=	{
 				"marines/marine6/prs_plr_kll_vclbmp1.ogg",
 				"marines/marine6/prs_plr_kll_vclbmp2.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/marine6/endcmbt1.ogg",
 				"marines/marine6/endcmbt10.ogg",
 				"marines/marine6/endcmbt15.ogg",
@@ -9863,41 +9863,41 @@ ENT.Voices = {
 				"marines/marine6/endcmbt6.ogg",
 				"marines/marine6/endcmbt9.ogg",
 				},
-		['chr_vcljmp']	=	{
+		["chr_vcljmp"]	=	{
 				"marines/marine6/chr_vcljmp2.ogg",
 				"marines/marine6/chr_vcljmp3.ogg",
 				"marines/marine6/chr_vcljmp4.ogg",
 				"marines/marine6/chr_vcljmp5.ogg",
 				"marines/marine6/chr_vcljmp6.ogg",
 				},
-		['entervcl_trrt']	=	{
+		["entervcl_trrt"]	=	{
 				"marines/marine6/entervcl_trrt1.ogg",
 				"marines/marine6/entervcl_trrt2.ogg",
 				},
-		['crs_betrayingplr_mc']	=	{
+		["crs_betrayingplr_mc"]	=	{
 				"marines/marine6/crs_betrayingplr_mc3.ogg",
 				"marines/marine6/crs_betrayingplr_mc4.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"marines/marine6/morefoe1.ogg",
 				"marines/marine6/morefoe2.ogg",
 				"marines/marine6/morefoe3.ogg",
 				"marines/marine6/morefoe4.ogg",
 				"marines/marine6/morefoe5.ogg",
 				},
-		['dwn_vcl_bnsh']	=	{
+		["dwn_vcl_bnsh"]	=	{
 				"marines/marine6/dwn_vcl_bnsh1.ogg",
 				"marines/marine6/dwn_vcl_bnsh2.ogg",
 				},
-		['grt_plr_srprs']	=	{
+		["grt_plr_srprs"]	=	{
 				"marines/marine6/grt_plr_srprs1.ogg",
 				"marines/marine6/grt_plr_srprs2.ogg",
 				},
-		['ordr_keepwatch_agg']	=	{
+		["ordr_keepwatch_agg"]	=	{
 				"marines/marine6/ordr_keepwatch_agg2.ogg",
 				"marines/marine6/ordr_keepwatch_agg4.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/marine6/stayback1.ogg",
 				"marines/marine6/stayback10.ogg",
 				"marines/marine6/stayback13.ogg",
@@ -9908,70 +9908,70 @@ ENT.Voices = {
 				"marines/marine6/stayback8.ogg",
 				"marines/marine6/stayback9.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/marine6/thnk_plr_mc1.ogg",
 				"marines/marine6/thnk_plr_mc2.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/marine6/dth1.ogg",
 				"marines/marine6/dth2.ogg",
 				"marines/marine6/dth3.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/marine6/chr1.ogg",
 				"marines/marine6/chr2.ogg",
 				"marines/marine6/chr3.ogg",
 				},
-		['foeordr_charge']	=	{
+		["foeordr_charge"]	=	{
 				"marines/marine6/foeordr_charge1.ogg",
 				"marines/marine6/foeordr_charge3.ogg",
 				"marines/marine6/foeordr_charge4.ogg",
 				"marines/marine6/foeordr_charge5.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/marine6/grt1.ogg",
 				"marines/marine6/grt2.ogg",
 				"marines/marine6/grt3.ogg",
 				"marines/marine6/grt5.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/marine6/crs_betrayingplr_arb2.ogg",
 				"marines/marine6/crs_betrayingplr_arb3.ogg",
 				},
-		['join_invsgt']	=	{
+		["join_invsgt"]	=	{
 				"marines/marine6/join_invsgt1.ogg",
 				"marines/marine6/join_invsgt2.ogg",
 				"marines/marine6/join_invsgt4.ogg",
 				"marines/marine6/join_invsgt5.ogg",
 				},
-		['chr_kllfoe_vclbmp']	=	{
+		["chr_kllfoe_vclbmp"]	=	{
 				"marines/marine6/chr_kllfoe_vclbmp1.ogg",
 				"marines/marine6/chr_kllfoe_vclbmp2.ogg",
 				"marines/marine6/chr_kllfoe_vclbmp3.ogg",
 				},
-		['warn_incmn_fldbm']	=	{
+		["warn_incmn_fldbm"]	=	{
 				"marines/marine6/warn_incmn_fldbm1.ogg",
 				"marines/marine6/warn_incmn_fldbm2.ogg",
 				},
-		['prs_plr_kll_mjr']	=	{
+		["prs_plr_kll_mjr"]	=	{
 				"marines/marine6/prs_plr_kll_mjr1.ogg",
 				"marines/marine6/prs_plr_kll_mjr3.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/marine6/look_plr_mc1.ogg",
 				"marines/marine6/look_plr_mc2.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/marine6/newordr_moveon1.ogg",
 				"marines/marine6/newordr_moveon2.ogg",
 				"marines/marine6/newordr_moveon3.ogg",
 				"marines/marine6/newordr_moveon4.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/marine6/pstcmbt_hrd1.ogg",
 				"marines/marine6/pstcmbt_hrd3.ogg",
 				},
-		['prs_plr_kll_blt']	=	{
+		["prs_plr_kll_blt"]	=	{
 				"marines/marine6/prs_plr_kll_blt1.ogg",
 				"marines/marine6/prs_plr_kll_blt2.ogg",
 				"marines/marine6/prs_plr_kll_blt3.ogg",
@@ -9979,13 +9979,13 @@ ENT.Voices = {
 				"marines/marine6/prs_plr_kll_blt5.ogg",
 				"marines/marine6/prs_plr_kll_blt6.ogg",
 				},
-		['ordr_prst_keeplooking']	=	{
+		["ordr_prst_keeplooking"]	=	{
 				"marines/marine6/ordr_prst_keeplooking1.ogg",
 				"marines/marine6/ordr_prst_keeplooking2.ogg",
 				"marines/marine6/ordr_prst_keeplooking3.ogg",
 				"marines/marine6/ordr_prst_keeplooking4.ogg",
 				},
-		['ordr_invsgt']	=	{
+		["ordr_invsgt"]	=	{
 				"marines/marine6/ordr_invsgt1.ogg",
 				"marines/marine6/ordr_invsgt2.ogg",
 				"marines/marine6/ordr_invsgt3.ogg",
@@ -9993,12 +9993,12 @@ ENT.Voices = {
 				"marines/marine6/ordr_invsgt6.ogg",
 				"marines/marine6/ordr_invsgt7.ogg",
 				},
-		['grt_intovcl_imgnr']	=	{
+		["grt_intovcl_imgnr"]	=	{
 				"marines/marine6/grt_intovcl_imgnr1.ogg",
 				"marines/marine6/grt_intovcl_imgnr2.ogg",
 				"marines/marine6/grt_intovcl_imgnr3.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/marine6/bump10.ogg",
 				"marines/marine6/bump11.ogg",
 				"marines/marine6/bump12.ogg",
@@ -10008,7 +10008,7 @@ ENT.Voices = {
 				"marines/marine6/bump16.ogg",
 				"marines/marine6/bump9.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"marines/marine6/hrdfoe1.ogg",
 				"marines/marine6/hrdfoe2.ogg",
 				"marines/marine6/hrdfoe3.ogg",
@@ -10017,17 +10017,17 @@ ENT.Voices = {
 				"marines/marine6/hrdfoe6.ogg",
 				"marines/marine6/hrdfoe7.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/marine6/newordr_entervcl2.ogg",
 				"marines/marine6/newordr_entervcl4.ogg",
 				"marines/marine6/newordr_entervcl5.ogg",
 				"marines/marine6/newordr_entervcl7.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/marine6/fall1.ogg",
 				"marines/marine6/fall2.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/marine6/dth_hdsht1.ogg",
 				"marines/marine6/dth_hdsht3.ogg",
 				"marines/marine6/dth_hdsht4.ogg",
@@ -10035,11 +10035,11 @@ ENT.Voices = {
 				"marines/marine6/dth_hdsht6.ogg",
 				"marines/marine6/dth_hdsht7.ogg",
 				},
-		['dwn_vcl_chpr']	=	{
+		["dwn_vcl_chpr"]	=	{
 				"marines/marine6/dwn_vcl_chpr1.ogg",
 				"marines/marine6/dwn_vcl_chpr2.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/marine6/strk1.ogg",
 				"marines/marine6/strk10.ogg",
 				"marines/marine6/strk11.ogg",
@@ -10051,7 +10051,7 @@ ENT.Voices = {
 				"marines/marine6/strk8.ogg",
 				"marines/marine6/strk9.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/marine6/lmnt_deadplr_mc1.ogg",
 				"marines/marine6/lmnt_deadplr_mc2.ogg",
 				"marines/marine6/lmnt_deadplr_mc3.ogg",
@@ -10059,46 +10059,46 @@ ENT.Voices = {
 				"marines/marine6/lmnt_deadplr_mc5.ogg",
 				"marines/marine6/lmnt_deadplr_mc7.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/marine6/newordr_leaveplr1.ogg",
 				"marines/marine6/newordr_leaveplr2.ogg",
 				"marines/marine6/newordr_leaveplr3.ogg",
 				"marines/marine6/newordr_leaveplr4.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/marine6/foeordr_advance1.ogg",
 				"marines/marine6/foeordr_advance2.ogg",
 				"marines/marine6/foeordr_advance3.ogg",
 				"marines/marine6/foeordr_advance4.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/marine6/ok_plr_trdst_dvr2.ogg",
 				"marines/marine6/ok_plr_trdst_dvr3.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/marine6/stun1.ogg",
 				"marines/marine6/stun2.ogg",
 				"marines/marine6/stun3.ogg",
 				},
-		['ordr_stayback']	=	{
+		["ordr_stayback"]	=	{
 				"marines/marine6/ordr_stayback11.ogg",
 				"marines/marine6/ordr_stayback7.ogg",
 				"marines/marine6/ordr_stayback8.ogg",
 				"marines/marine6/ordr_stayback9.ogg",
 				},
-		['ask_invsgt_fail']	=	{
+		["ask_invsgt_fail"]	=	{
 				"marines/marine6/ask_invsgt_fail1.ogg",
 				"marines/marine6/ask_invsgt_fail2.ogg",
 				"marines/marine6/ask_invsgt_fail3.ogg",
 				"marines/marine6/ask_invsgt_fail4.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/marine6/foeordr_support2.ogg",
 				"marines/marine6/foeordr_support3.ogg",
 				"marines/marine6/foeordr_support4.ogg",
 				"marines/marine6/foeordr_support5.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/marine6/lst_cntct1.ogg",
 				"marines/marine6/lst_cntct10.ogg",
 				"marines/marine6/lst_cntct11.ogg",
@@ -10109,16 +10109,16 @@ ENT.Voices = {
 				"marines/marine6/lst_cntct7.ogg",
 				"marines/marine6/lst_cntct9.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"marines/marine6/look_pstcmbt1.ogg",
 				"marines/marine6/look_pstcmbt2.ogg",
 				"marines/marine6/look_pstcmbt4.ogg",
 				},
-		['warn_stlth']	=	{
+		["warn_stlth"]	=	{
 				"marines/marine6/warn_stlth1.ogg",
 				"marines/marine6/warn_stlth2.ogg",
 				},
-		['look_longtime']	=	{
+		["look_longtime"]	=	{
 				"marines/marine6/look_longtime1.ogg",
 				"marines/marine6/look_longtime14.ogg",
 				"marines/marine6/look_longtime15.ogg",
@@ -10128,31 +10128,31 @@ ENT.Voices = {
 				"marines/marine6/look_longtime7.ogg",
 				"marines/marine6/look_longtime8.ogg",
 				},
-		['chkfoebdy']	=	{
+		["chkfoebdy"]	=	{
 				"marines/marine6/chkfoebdy1.ogg",
 				"marines/marine6/chkfoebdy3.ogg",
 				"marines/marine6/chkfoebdy5.ogg",
 				"marines/marine6/chkfoebdy7.ogg",
 				},
-		['look_pstcmbt_ez']	=	{
+		["look_pstcmbt_ez"]	=	{
 				"marines/marine6/look_pstcmbt_ez2.ogg",
 				"marines/marine6/look_pstcmbt_ez4.ogg",
 				},
-		['entervcl_psngr']	=	{
+		["entervcl_psngr"]	=	{
 				"marines/marine6/entervcl_psngr1.ogg",
 				"marines/marine6/entervcl_psngr2.ogg",
 				},
-		['warn_trrt']	=	{
+		["warn_trrt"]	=	{
 				"marines/marine6/warn_trrt1.ogg",
 				"marines/marine6/warn_trrt3.ogg",
 				}
 	},
 	["Reynolds"] = {
-	['crs_betraingplr_mc']	=	{
+	["crs_betraingplr_mc"]	=	{
 				"marines/reynolds/crs_betraingplr_mc1.ogg",
 				"marines/reynolds/crs_betraingplr_mc2.ogg",
 				},
-		['crs_mjrfoe']	=	{
+		["crs_mjrfoe"]	=	{
 				"marines/reynolds/crs_mjrfoe1.ogg",
 				"marines/reynolds/crs_mjrfoe2.ogg",
 				"marines/reynolds/crs_mjrfoe3.ogg",
@@ -10162,7 +10162,7 @@ ENT.Voices = {
 				"marines/reynolds/crs_mjrfoe8.ogg",
 				"marines/reynolds/crs_mjrfoe9.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"marines/reynolds/look_lngtme1.ogg",
 				"marines/reynolds/look_lngtme2.ogg",
 				"marines/reynolds/look_lngtme4.ogg",
@@ -10171,36 +10171,36 @@ ENT.Voices = {
 				"marines/reynolds/look_lngtme8.ogg",
 				"marines/reynolds/look_lngtme9.ogg",
 				},
-		['invt_vcl_gnr']	=	{
+		["invt_vcl_gnr"]	=	{
 				"marines/reynolds/invt_vcl_gnr1.ogg",
 				"marines/reynolds/invt_vcl_gnr2.ogg",
 				"marines/reynolds/invt_vcl_gnr3.ogg",
 				},
-		['new_ordr_advance']	=	{
+		["new_ordr_advance"]	=	{
 				"marines/reynolds/new_ordr_advance1.ogg",
 				"marines/reynolds/new_ordr_advance2.ogg",
 				"marines/reynolds/new_ordr_advance3.ogg",
 				"marines/reynolds/new_ordr_advance4.ogg",
 				"marines/reynolds/new_ordr_advance5.ogg",
 				},
-		['rmd_vcl_ghst']	=	{
+		["rmd_vcl_ghst"]	=	{
 				"marines/reynolds/rmd_vcl_ghst1.ogg",
 				"marines/reynolds/rmd_vcl_ghst2.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/reynolds/foeordr_flanking1.ogg",
 				"marines/reynolds/foeordr_flanking2.ogg",
 				"marines/reynolds/foeordr_flanking3.ogg",
 				"marines/reynolds/foeordr_flanking4.ogg",
 				"marines/reynolds/foeordr_flanking5.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/reynolds/cvr1.ogg",
 				"marines/reynolds/cvr2.ogg",
 				"marines/reynolds/cvr3.ogg",
 				"marines/reynolds/cvr4.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"marines/reynolds/rmd1.ogg",
 				"marines/reynolds/rmd2.ogg",
 				"marines/reynolds/rmd3.ogg",
@@ -10208,18 +10208,18 @@ ENT.Voices = {
 				"marines/reynolds/rmd5.ogg",
 				"marines/reynolds/rmd6.ogg",
 				},
-		['reanimate']	=	{
+		["reanimate"]	=	{
 				"marines/reynolds/reanimate.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"marines/reynolds/whn_re1.ogg",
 				"marines/reynolds/whn_re2.ogg",
 				},
-		['whn_hrtblt']	=	{
+		["whn_hrtblt"]	=	{
 				"marines/reynolds/whn_hrtblt1.ogg",
 				"marines/reynolds/whn_hrtblt2.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/reynolds/whn1.ogg",
 				"marines/reynolds/whn2.ogg",
 				"marines/reynolds/whn3.ogg",
@@ -10227,21 +10227,21 @@ ENT.Voices = {
 				"marines/reynolds/whn5.ogg",
 				"marines/reynolds/whn6.ogg",
 				},
-		['warn_wpn_snpr']	=	{
+		["warn_wpn_snpr"]	=	{
 				"marines/reynolds/warn_wpn_snpr1.ogg",
 				"marines/reynolds/warn_wpn_snpr2.ogg",
 				"marines/reynolds/warn_wpn_snpr3.ogg",
 				},
-		['chr_kllfoe_vclbmp']	=	{
+		["chr_kllfoe_vclbmp"]	=	{
 				"marines/reynolds/chr_kllfoe_vclbmp1.ogg",
 				"marines/reynolds/chr_kllfoe_vclbmp3.ogg",
 				"marines/reynolds/chr_kllfoe_vclbmp4.ogg",
 				},
-		['warn_vcl_bnsh']	=	{
+		["warn_vcl_bnsh"]	=	{
 				"marines/reynolds/warn_vcl_bnsh1.ogg",
 				"marines/reynolds/warn_vcl_bnsh2.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/reynolds/scld_plr_hrtme1.ogg",
 				"marines/reynolds/scld_plr_hrtme10.ogg",
 				"marines/reynolds/scld_plr_hrtme11.ogg",
@@ -10254,36 +10254,36 @@ ENT.Voices = {
 				"marines/reynolds/scld_plr_hrtme8.ogg",
 				"marines/reynolds/scld_plr_hrtme9.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/reynolds/pain1.ogg",
 				"marines/reynolds/pain4.ogg",
 				"marines/reynolds/pain5.ogg",
 				},
-		['warn_brsrk']	=	{
+		["warn_brsrk"]	=	{
 				"marines/reynolds/warn_brsrk1.ogg",
 				"marines/reynolds/warn_brsrk2.ogg",
 				},
-		['warn_vcl_wrth']	=	{
+		["warn_vcl_wrth"]	=	{
 				"marines/reynolds/warn_vcl_wrth1.ogg",
 				"marines/reynolds/warn_vcl_wrth2.ogg",
 				},
-		['lookcmbt_fllw']	=	{
+		["lookcmbt_fllw"]	=	{
 				"marines/reynolds/lookcmbt_fllw1.ogg",
 				"marines/reynolds/lookcmbt_fllw2.ogg",
 				"marines/reynolds/lookcmbt_fllw3.ogg",
 				"marines/reynolds/lookcmbt_fllw4.ogg",
 				},
-		['foundfoe_re']	=	{
+		["foundfoe_re"]	=	{
 				"marines/reynolds/foundfoe_re1.ogg",
 				"marines/reynolds/foundfoe_re2.ogg",
 				"marines/reynolds/foundfoe_re3.ogg",
 				"marines/reynolds/foundfoe_re5.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"marines/reynolds/warn_vcl_phntm1.ogg",
 				"marines/reynolds/warn_vcl_phntm2.ogg",
 				},
-		['captured']	=	{
+		["captured"]	=	{
 				"marines/reynolds/captured1.ogg",
 				"marines/reynolds/captured2.ogg",
 				"marines/reynolds/captured3.ogg",
@@ -10292,23 +10292,23 @@ ENT.Voices = {
 				"marines/reynolds/captured6.ogg",
 				"marines/reynolds/captured7.ogg",
 				},
-		['rmd_stlth']	=	{
+		["rmd_stlth"]	=	{
 				"marines/reynolds/rmd_stlth1.ogg",
 				"marines/reynolds/rmd_stlth2.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/reynolds/cvr_re1.ogg",
 				"marines/reynolds/cvr_re2.ogg",
 				"marines/reynolds/cvr_re3.ogg",
 				"marines/reynolds/cvr_re4.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"marines/reynolds/prs_plr_kll1.ogg",
 				"marines/reynolds/prs_plr_kll2.ogg",
 				"marines/reynolds/prs_plr_kll3.ogg",
 				"marines/reynolds/prs_plr_kll4.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/reynolds/dwn1.ogg",
 				"marines/reynolds/dwn2.ogg",
 				"marines/reynolds/dwn3.ogg",
@@ -10317,7 +10317,7 @@ ENT.Voices = {
 				"marines/reynolds/dwn6.ogg",
 				"marines/reynolds/dwn7.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/reynolds/kllmytrgt1.ogg",
 				"marines/reynolds/kllmytrgt2.ogg",
 				"marines/reynolds/kllmytrgt3.ogg",
@@ -10325,40 +10325,40 @@ ENT.Voices = {
 				"marines/reynolds/kllmytrgt5.ogg",
 				"marines/reynolds/kllmytrgt6.ogg",
 				},
-		['warn_trrt_dply']	=	{
+		["warn_trrt_dply"]	=	{
 				"marines/reynolds/warn_trrt_dply1.ogg",
 				"marines/reynolds/warn_trrt_dply2.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/reynolds/charge1.ogg",
 				"marines/reynolds/charge2.ogg",
 				},
-		['grt_intovcl_mine']	=	{
+		["grt_intovcl_mine"]	=	{
 				"marines/reynolds/grt_intovcl_mine1.ogg",
 				"marines/reynolds/grt_intovcl_mine2.ogg",
 				},
-		['chckallybdyf']	=	{
+		["chckallybdyf"]	=	{
 				"marines/reynolds/chckallybdyf1.ogg",
 				"marines/reynolds/chckallybdyf2.ogg",
 				"marines/reynolds/chckallybdyf3.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/reynolds/newordr_support2.ogg",
 				"marines/reynolds/newordr_support3.ogg",
 				"marines/reynolds/newordr_support4.ogg",
 				"marines/reynolds/newordr_support5.ogg",
 				"marines/reynolds/newordr_support6.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"marines/reynolds/warn_swarm1.ogg",
 				"marines/reynolds/warn_swarm2.ogg",
 				},
-		['rmd_scrb']	=	{
+		["rmd_scrb"]	=	{
 				"marines/reynolds/rmd_scrb1.ogg",
 				"marines/reynolds/rmd_scrb2.ogg",
 				"marines/reynolds/rmd_scrb3.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/reynolds/pld1.ogg",
 				"marines/reynolds/pld2.ogg",
 				"marines/reynolds/pld5.ogg",
@@ -10366,7 +10366,7 @@ ENT.Voices = {
 				"marines/reynolds/pld7.ogg",
 				"marines/reynolds/pld9.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/reynolds/thnk1.ogg",
 				"marines/reynolds/thnk10.ogg",
 				"marines/reynolds/thnk11.ogg",
@@ -10378,22 +10378,22 @@ ENT.Voices = {
 				"marines/reynolds/thnk8.ogg",
 				"marines/reynolds/thnk9.ogg",
 				},
-		['newordr_arrival']	=	{
+		["newordr_arrival"]	=	{
 				"marines/reynolds/newordr_arrival1.ogg",
 				"marines/reynolds/newordr_arrival2.ogg",
 				"marines/reynolds/newordr_arrival3.ogg",
 				"marines/reynolds/newordr_arrival4.ogg",
 				},
-		['ask_chkallybdy']	=	{
+		["ask_chkallybdy"]	=	{
 				"marines/reynolds/ask_chkallybdy1.ogg",
 				"marines/reynolds/ask_chkallybdy2.ogg",
 				},
-		['warn_scrb']	=	{
+		["warn_scrb"]	=	{
 				"marines/reynolds/warn_scrb1.ogg",
 				"marines/reynolds/warn_scrb2.ogg",
 				"marines/reynolds/warn_scrb3.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/reynolds/betray1.ogg",
 				"marines/reynolds/betray2.ogg",
 				"marines/reynolds/betray3.ogg",
@@ -10403,15 +10403,15 @@ ENT.Voices = {
 				"marines/reynolds/betray7.ogg",
 				"marines/reynolds/betray8.ogg",
 				},
-		['warn_incmn_vclbm']	=	{
+		["warn_incmn_vclbm"]	=	{
 				"marines/reynolds/warn_incmn_vclbm1.ogg",
 				"marines/reynolds/warn_incmn_vclbm2.ogg",
 				},
-		['entervcl_drvr']	=	{
+		["entervcl_drvr"]	=	{
 				"marines/reynolds/entervcl_drvr1.ogg",
 				"marines/reynolds/entervcl_drvr2.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"marines/reynolds/warn_incmn_grnd10.ogg",
 				"marines/reynolds/warn_incmn_grnd11.ogg",
 				"marines/reynolds/warn_incmn_grnd2.ogg",
@@ -10423,7 +10423,7 @@ ENT.Voices = {
 				"marines/reynolds/warn_incmn_grnd8.ogg",
 				"marines/reynolds/warn_incmn_grnd9.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/reynolds/thrtn1.ogg",
 				"marines/reynolds/thrtn10.ogg",
 				"marines/reynolds/thrtn11.ogg",
@@ -10436,38 +10436,38 @@ ENT.Voices = {
 				"marines/reynolds/thrtn8.ogg",
 				"marines/reynolds/thrtn9.ogg",
 				},
-		['panic_infctfrm']	=	{
+		["panic_infctfrm"]	=	{
 				"marines/reynolds/panic_infctfrm1.ogg",
 				"marines/reynolds/panic_infctfrm2.ogg",
 				"marines/reynolds/panic_infctfrm3.ogg",
 				"marines/reynolds/panic_infctfrm4.ogg",
 				"marines/reynolds/panic_infctfrm5.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"marines/reynolds/dth_reanimated1.ogg",
 				"marines/reynolds/dth_reanimated2.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/reynolds/newordr_exitvcl1.ogg",
 				"marines/reynolds/newordr_exitvcl2.ogg",
 				"marines/reynolds/newordr_exitvcl3.ogg",
 				"marines/reynolds/newordr_exitvcl4.ogg",
 				"marines/reynolds/newordr_exitvcl5.ogg",
 				},
-		['join_stayback']	=	{
+		["join_stayback"]	=	{
 				"marines/reynolds/join_stayback1.ogg",
 				"marines/reynolds/join_stayback2.ogg",
 				"marines/reynolds/join_stayback3.ogg",
 				"marines/reynolds/join_stayback4.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"marines/reynolds/cower1.ogg",
 				"marines/reynolds/cower2.ogg",
 				"marines/reynolds/cower5.ogg",
 				"marines/reynolds/cower8.ogg",
 				"marines/reynolds/cower9.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"marines/reynolds/warn_incmn1.ogg",
 				"marines/reynolds/warn_incmn2.ogg",
 				"marines/reynolds/warn_incmn3.ogg",
@@ -10475,37 +10475,37 @@ ENT.Voices = {
 				"marines/reynolds/warn_incmn5.ogg",
 				"marines/reynolds/warn_incmn6.ogg",
 				},
-		['newordr_fllwplr']	=	{
+		["newordr_fllwplr"]	=	{
 				"marines/reynolds/newordr_fllwplr1.ogg",
 				"marines/reynolds/newordr_fllwplr2.ogg",
 				"marines/reynolds/newordr_fllwplr3.ogg",
 				"marines/reynolds/newordr_fllwplr4.ogg",
 				},
-		['pld_mjrfoe']	=	{
+		["pld_mjrfoe"]	=	{
 				"marines/reynolds/pld_mjrfoe2.ogg",
 				"marines/reynolds/pld_mjrfoe3.ogg",
 				"marines/reynolds/pld_mjrfoe4.ogg",
 				},
-		['pstcmbt_fld']	=	{
+		["pstcmbt_fld"]	=	{
 				"marines/reynolds/pstcmbt_fld1.ogg",
 				"marines/reynolds/pstcmbt_fld2.ogg",
 				"marines/reynolds/pstcmbt_fld3.ogg",
 				},
-		['ok_plr_trdst_gnr']	=	{
+		["ok_plr_trdst_gnr"]	=	{
 				"marines/reynolds/ok_plr_trdst_gnr1.ogg",
 				"marines/reynolds/ok_plr_trdst_gnr2.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"marines/reynolds/panic_plsmgrnd1.ogg",
 				"marines/reynolds/panic_plsmgrnd2.ogg",
 				"marines/reynolds/panic_plsmgrnd4.ogg",
 				"marines/reynolds/panic_plsmgrnd5.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/reynolds/pstcmbt_brt2.ogg",
 				"marines/reynolds/pstcmbt_brt4.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/reynolds/grt_plr_mc1.ogg",
 				"marines/reynolds/grt_plr_mc2.ogg",
 				"marines/reynolds/grt_plr_mc4.ogg",
@@ -10514,25 +10514,25 @@ ENT.Voices = {
 				"marines/reynolds/grt_plr_mc7.ogg",
 				"marines/reynolds/grt_plr_mc8.ogg",
 				},
-		['prst']	=	{
+		["prst"]	=	{
 				"marines/reynolds/prst2.ogg",
 				"marines/reynolds/prst3.ogg",
 				"marines/reynolds/prst4.ogg",
 				"marines/reynolds/prst5.ogg",
 				"marines/reynolds/prst6.ogg",
 				},
-		['rmd_wpn_hmmr']	=	{
+		["rmd_wpn_hmmr"]	=	{
 				"marines/reynolds/rmd_wpn_hmmr1.ogg",
 				"marines/reynolds/rmd_wpn_hmmr2.ogg",
 				"marines/reynolds/rmd_wpn_hmmr3.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/reynolds/foeordr_fallback1.ogg",
 				"marines/reynolds/foeordr_fallback2.ogg",
 				"marines/reynolds/foeordr_fallback3.ogg",
 				"marines/reynolds/foeordr_fallback4.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/reynolds/hail_plr_mc1.ogg",
 				"marines/reynolds/hail_plr_mc2.ogg",
 				"marines/reynolds/hail_plr_mc3.ogg",
@@ -10542,13 +10542,13 @@ ENT.Voices = {
 				"marines/reynolds/hail_plr_mc8.ogg",
 				"marines/reynolds/hail_plr_mc9.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/reynolds/foeordr_advance1.ogg",
 				"marines/reynolds/foeordr_advance2.ogg",
 				"marines/reynolds/foeordr_advance3.ogg",
 				"marines/reynolds/foeordr_advance4.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/reynolds/foundfoe_prst1.ogg",
 				"marines/reynolds/foundfoe_prst10.ogg",
 				"marines/reynolds/foundfoe_prst11.ogg",
@@ -10562,67 +10562,67 @@ ENT.Voices = {
 				"marines/reynolds/foundfoe_prst8.ogg",
 				"marines/reynolds/foundfoe_prst9.ogg",
 				},
-		['brsr']	=	{
+		["brsr"]	=	{
 				"marines/reynolds/brsrk.ogg",
 				},
-		['warn_fld_reanimate']	=	{
+		["warn_fld_reanimate"]	=	{
 				"marines/reynolds/warn_fld_reanimate1.ogg",
 				"marines/reynolds/warn_fld_reanimate2.ogg",
 				"marines/reynolds/warn_fld_reanimate3.ogg",
 				},
-		['warn_chr_hntr']	=	{
+		["warn_chr_hntr"]	=	{
 				"marines/reynolds/warn_chr_hntr1.ogg",
 				"marines/reynolds/warn_chr_hntr2.ogg",
 				},
-		['look_plr_fllw']	=	{
+		["look_plr_fllw"]	=	{
 				"marines/reynolds/look_plr_fllw1.ogg",
 				"marines/reynolds/look_plr_fllw2.ogg",
 				},
-		['ordr_keepwatch']	=	{
+		["ordr_keepwatch"]	=	{
 				"marines/reynolds/ordr_keepwatch1.ogg",
 				"marines/reynolds/ordr_keepwatch2.ogg",
 				"marines/reynolds/ordr_keepwatch3.ogg",
 				"marines/reynolds/ordr_keepwatch4.ogg",
 				"marines/reynolds/ordr_keepwatch6.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"marines/reynolds/warn_chr_bggr1.ogg",
 				"marines/reynolds/warn_chr_bggr2.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/reynolds/pain_mjr1.ogg",
 				"marines/reynolds/pain_mjr2.ogg",
 				"marines/reynolds/pain_mjr3.ogg",
 				"marines/reynolds/pain_mjr4.ogg",
 				},
-		['kamikaze']	=	{
+		["kamikaze"]	=	{
 				"marines/reynolds/kamikaze12.ogg",
 				"marines/reynolds/kamikaze13.ogg",
 				},
-		['warn_wpn_hmmr']	=	{
+		["warn_wpn_hmmr"]	=	{
 				"marines/reynolds/warn_wpn_hmmr1.ogg",
 				"marines/reynolds/warn_wpn_hmmr2.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/reynolds/chr_kllfoe1.ogg",
 				"marines/reynolds/chr_kllfoe2.ogg",
 				"marines/reynolds/chr_kllfoe3.ogg",
 				"marines/reynolds/chr_kllfoe4.ogg",
 				"marines/reynolds/chr_kllfoe5.ogg",
 				},
-		['rmd_vcl_chpr']	=	{
+		["rmd_vcl_chpr"]	=	{
 				"marines/reynolds/rmd_vcl_chpr1.ogg",
 				"marines/reynolds/rmd_vcl_chpr2.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"marines/reynolds/dwn_vcl_wrth1.ogg",
 				"marines/reynolds/dwn_vcl_wrth2.ogg",
 				},
-		['chr_kllfoe_blt']	=	{
+		["chr_kllfoe_blt"]	=	{
 				"marines/reynolds/chr_kllfoe_blt1.ogg",
 				"marines/reynolds/chr_kllfoe_blt2.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/reynolds/scld1.ogg",
 				"marines/reynolds/scld2.ogg",
 				"marines/reynolds/scld3.ogg",
@@ -10630,7 +10630,7 @@ ENT.Voices = {
 				"marines/reynolds/scld5.ogg",
 				"marines/reynolds/scld6.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/reynolds/warn1.ogg",
 				"marines/reynolds/warn2.ogg",
 				"marines/reynolds/warn3.ogg",
@@ -10639,23 +10639,23 @@ ENT.Voices = {
 				"marines/reynolds/warn6.ogg",
 				"marines/reynolds/warn7.ogg",
 				},
-		['ordr_keepwatch_tim']	=	{
+		["ordr_keepwatch_tim"]	=	{
 				"marines/reynolds/ordr_keepwatch_tim1.ogg",
 				"marines/reynolds/ordr_keepwatch_tim2.ogg",
 				"marines/reynolds/ordr_keepwatch_tim3.ogg",
 				},
-		['ordr_grenade']	=	{
+		["ordr_grenade"]	=	{
 				"marines/reynolds/ordr_grenade1.ogg",
 				"marines/reynolds/ordr_grenade3.ogg",
 				"marines/reynolds/ordr_grenade5.ogg",
 				},
-		['newordr_charge']	=	{
+		["newordr_charge"]	=	{
 				"marines/reynolds/newordr_charge1.ogg",
 				"marines/reynolds/newordr_charge3.ogg",
 				"marines/reynolds/newordr_charge4.ogg",
 				"marines/reynolds/newordr_charge5.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"marines/reynolds/srprs1.ogg",
 				"marines/reynolds/srprs2.ogg",
 				"marines/reynolds/srprs3.ogg",
@@ -10665,16 +10665,16 @@ ENT.Voices = {
 				"marines/reynolds/srprs7.ogg",
 				"marines/reynolds/srprs8.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/reynolds/dive1.ogg",
 				"marines/reynolds/dive2.ogg",
 				"marines/reynolds/dive3.ogg",
 				},
-		['tnt_mjrfoe']	=	{
+		["tnt_mjrfoe"]	=	{
 				"marines/reynolds/tnt_mjrfoe1.ogg",
 				"marines/reynolds/tnt_mjrfoe2.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/reynolds/tnt1.ogg",
 				"marines/reynolds/tnt10.ogg",
 				"marines/reynolds/tnt11.ogg",
@@ -10689,38 +10689,38 @@ ENT.Voices = {
 				"marines/reynolds/tnt8.ogg",
 				"marines/reynolds/tnt9.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/reynolds/lmnt1.ogg",
 				"marines/reynolds/lmnt2.ogg",
 				"marines/reynolds/lmnt3.ogg",
 				"marines/reynolds/lmnt4.ogg",
 				},
-		['grt_intovcl_imdvr']	=	{
+		["grt_intovcl_imdvr"]	=	{
 				"marines/reynolds/grt_intovcl_imdvr1.ogg",
 				"marines/reynolds/grt_intovcl_imdvr2.ogg",
 				},
-		['dwn_vcl_ghst']	=	{
+		["dwn_vcl_ghst"]	=	{
 				"marines/reynolds/dwn_vcl_ghst1.ogg",
 				"marines/reynolds/dwn_vcl_ghst2.ogg",
 				},
-		['look_plr_pstcmbt_ez']	=	{
+		["look_plr_pstcmbt_ez"]	=	{
 				"marines/reynolds/look_plr_pstcmbt_ez1.ogg",
 				"marines/reynolds/look_plr_pstcmbt_ez3.ogg",
 				},
-		['newordr_fallback']	=	{
+		["newordr_fallback"]	=	{
 				"marines/reynolds/newordr_fallback1.ogg",
 				"marines/reynolds/newordr_fallback2.ogg",
 				"marines/reynolds/newordr_fallback3.ogg",
 				"marines/reynolds/newordr_fallback4.ogg",
 				"marines/reynolds/newordr_fallback5.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/reynolds/thrwn1.ogg",
 				"marines/reynolds/thrwn2.ogg",
 				"marines/reynolds/thrwn3.ogg",
 				"marines/reynolds/thrwn4.ogg",
 				},
-		['hdfoe']	=	{
+		["hdfoe"]	=	{
 				"marines/reynolds/hdfoe10.ogg",
 				"marines/reynolds/hdfoe2.ogg",
 				"marines/reynolds/hdfoe3.ogg",
@@ -10731,11 +10731,11 @@ ENT.Voices = {
 				"marines/reynolds/hdfoe8.ogg",
 				"marines/reynolds/hdfoe9.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/reynolds/look_plr_arb1.ogg",
 				"marines/reynolds/look_plr_arb2.ogg",
 				},
-		['strk_grnd']	=	{
+		["strk_grnd"]	=	{
 				"marines/reynolds/strk_grnd1.ogg",
 				"marines/reynolds/strk_grnd10.ogg",
 				"marines/reynolds/strk_grnd2.ogg",
@@ -10746,17 +10746,17 @@ ENT.Voices = {
 				"marines/reynolds/strk_grnd7.ogg",
 				"marines/reynolds/strk_grnd9.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"marines/reynolds/rmd_vcl_phntm1.ogg",
 				"marines/reynolds/rmd_vcl_phntm2.ogg",
 				"marines/reynolds/rmd_vcl_phntm3.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/reynolds/pstcmbt_ez1.ogg",
 				"marines/reynolds/pstcmbt_ez2.ogg",
 				"marines/reynolds/pstcmbt_ez3.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"marines/reynolds/invsgt1.ogg",
 				"marines/reynolds/invsgt10.ogg",
 				"marines/reynolds/invsgt2.ogg",
@@ -10767,12 +10767,12 @@ ENT.Voices = {
 				"marines/reynolds/invsgt8.ogg",
 				"marines/reynolds/invsgt9.ogg",
 				},
-		['thrtn_mjrfoe']	=	{
+		["thrtn_mjrfoe"]	=	{
 				"marines/reynolds/thrtn_mjrfoe1.ogg",
 				"marines/reynolds/thrtn_mjrfoe2.ogg",
 				"marines/reynolds/thrtn_mjrfoe3.ogg",
 				},
-		['thrtn_foe_re']	=	{
+		["thrtn_foe_re"]	=	{
 				"marines/reynolds/thrtn_foe_re1.ogg",
 				"marines/reynolds/thrtn_foe_re2.ogg",
 				"marines/reynolds/thrtn_foe_re3.ogg",
@@ -10780,11 +10780,11 @@ ENT.Voices = {
 				"marines/reynolds/thrtn_foe_re5.ogg",
 				"marines/reynolds/thrtn_foe_re6.ogg",
 				},
-		['warn_pureforms']	=	{
+		["warn_pureforms"]	=	{
 				"marines/reynolds/warn_pureforms1.ogg",
 				"marines/reynolds/warn_pureforms3.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/reynolds/thnk_plr_btrwpn1.ogg",
 				"marines/reynolds/thnk_plr_btrwpn10.ogg",
 				"marines/reynolds/thnk_plr_btrwpn4.ogg",
@@ -10794,11 +10794,11 @@ ENT.Voices = {
 				"marines/reynolds/thnk_plr_btrwpn8.ogg",
 				"marines/reynolds/thnk_plr_btrwpn9.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/reynolds/thnk_plr_arb1.ogg",
 				"marines/reynolds/thnk_plr_arb2.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/reynolds/dth1.ogg",
 				"marines/reynolds/dth2.ogg",
 				"marines/reynolds/dth3.ogg",
@@ -10809,21 +10809,21 @@ ENT.Voices = {
 				"marines/reynolds/dth8.ogg",
 				"marines/reynolds/dth9.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/reynolds/ok_plr_arb2.ogg",
 				"marines/reynolds/ok_plr_arb3.ogg",
 				"marines/reynolds/ok_plr_arb5.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"marines/reynolds/hail_tim1.ogg",
 				"marines/reynolds/hail_tim2.ogg",
 				},
-		['warn_stlth_again']	=	{
+		["warn_stlth_again"]	=	{
 				"marines/reynolds/warn_stlth_again1.ogg",
 				"marines/reynolds/warn_stlth_again2.ogg",
 				"marines/reynolds/warn_stlth_again3.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/reynolds/look1.ogg",
 				"marines/reynolds/look10.ogg",
 				"marines/reynolds/look11.ogg",
@@ -10839,18 +10839,18 @@ ENT.Voices = {
 				"marines/reynolds/look8.ogg",
 				"marines/reynolds/look9.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/reynolds/neworder_flanking1.ogg",
 				"marines/reynolds/neworder_flanking2.ogg",
 				"marines/reynolds/neworder_flanking3.ogg",
 				"marines/reynolds/neworder_flanking4.ogg",
 				"marines/reynolds/neworder_flanking5.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"marines/reynolds/pstcmbt_tim1.ogg",
 				"marines/reynolds/pstcmbt_tim2.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/reynolds/hail_plr_arb1.ogg",
 				"marines/reynolds/hail_plr_arb2.ogg",
 				"marines/reynolds/hail_plr_arb3.ogg",
@@ -10858,15 +10858,15 @@ ENT.Voices = {
 				"marines/reynolds/hail_plr_arb5.ogg",
 				"marines/reynolds/hail_plr_arb6.ogg",
 				},
-		['look_plr_pstcmbt']	=	{
+		["look_plr_pstcmbt"]	=	{
 				"marines/reynolds/look_plr_pstcmbt1.ogg",
 				"marines/reynolds/look_plr_pstcmbt2.ogg",
 				},
-		['grt_plr_vcl']	=	{
+		["grt_plr_vcl"]	=	{
 				"marines/reynolds/grt_plr_vcl1.ogg",
 				"marines/reynolds/grt_plr_vcl2.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"marines/reynolds/lookcmbt10.ogg",
 				"marines/reynolds/lookcmbt11.ogg",
 				"marines/reynolds/lookcmbt12.ogg",
@@ -10878,7 +10878,7 @@ ENT.Voices = {
 				"marines/reynolds/lookcmbt8.ogg",
 				"marines/reynolds/lookcmbt9.ogg",
 				},
-		['tchallybdy']	=	{
+		["tchallybdy"]	=	{
 				"marines/reynolds/tchallybdy10.ogg",
 				"marines/reynolds/tchallybdy3.ogg",
 				"marines/reynolds/tchallybdy4.ogg",
@@ -10886,7 +10886,7 @@ ENT.Voices = {
 				"marines/reynolds/tchallybdy8.ogg",
 				"marines/reynolds/tchallybdy9.ogg",
 				},
-		['chr_vcljmp']	=	{
+		["chr_vcljmp"]	=	{
 				"marines/reynolds/chr_vcljmp1.ogg",
 				"marines/reynolds/chr_vcljmp2.ogg",
 				"marines/reynolds/chr_vcljmp3.ogg",
@@ -10894,7 +10894,7 @@ ENT.Voices = {
 				"marines/reynolds/chr_vcljmp5.ogg",
 				"marines/reynolds/chr_vcljmp6.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/reynolds/dth_fall1.ogg",
 				"marines/reynolds/dth_fall2.ogg",
 				"marines/reynolds/dth_fall3.ogg",
@@ -10902,7 +10902,7 @@ ENT.Voices = {
 				"marines/reynolds/dth_fall5.ogg",
 				"marines/reynolds/dth_fall8.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/reynolds/foeordr_support1.ogg",
 				"marines/reynolds/foeordr_support2.ogg",
 				"marines/reynolds/foeordr_support3.ogg",
@@ -10910,7 +10910,7 @@ ENT.Voices = {
 				"marines/reynolds/foeordr_support5.ogg",
 				"marines/reynolds/foeordr_support6.ogg",
 				},
-		['strk_vcl_gnr']	=	{
+		["strk_vcl_gnr"]	=	{
 				"marines/reynolds/strk_vcl_gnr1.ogg",
 				"marines/reynolds/strk_vcl_gnr10.ogg",
 				"marines/reynolds/strk_vcl_gnr2.ogg",
@@ -10922,13 +10922,13 @@ ENT.Voices = {
 				"marines/reynolds/strk_vcl_gnr8.ogg",
 				"marines/reynolds/strk_vcl_gnr9.ogg",
 				},
-		['ordr_pinned']	=	{
+		["ordr_pinned"]	=	{
 				"marines/reynolds/ordr_pinned1.ogg",
 				"marines/reynolds/ordr_pinned2.ogg",
 				"marines/reynolds/ordr_pinned3.ogg",
 				"marines/reynolds/ordr_pinned4.ogg",
 				},
-		['entervcl']	=	{
+		["entervcl"]	=	{
 				"marines/reynolds/entervcl1.ogg",
 				"marines/reynolds/entervcl2.ogg",
 				"marines/reynolds/entervcl3.ogg",
@@ -10936,57 +10936,57 @@ ENT.Voices = {
 				"marines/reynolds/entervcl5.ogg",
 				"marines/reynolds/entervcl6.ogg",
 				},
-		['stayback_agg']	=	{
+		["stayback_agg"]	=	{
 				"marines/reynolds/stayback_agg1.ogg",
 				"marines/reynolds/stayback_agg2.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/reynolds/approve1.ogg",
 				"marines/reynolds/approve2.ogg",
 				"marines/reynolds/approve3.ogg",
 				"marines/reynolds/approve4.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/reynolds/prs1.ogg",
 				"marines/reynolds/prs2.ogg",
 				"marines/reynolds/prs3.ogg",
 				"marines/reynolds/prs4.ogg",
 				},
-		['warn_vcl_ghst']	=	{
+		["warn_vcl_ghst"]	=	{
 				"marines/reynolds/warn_vcl_ghst1.ogg",
 				"marines/reynolds/warn_vcl_ghst2.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/reynolds/shotfoebdy10.ogg",
 				"marines/reynolds/shotfoebdy11.ogg",
 				"marines/reynolds/shotfoebdy12.ogg",
 				"marines/reynolds/shotfoebdy13.ogg",
 				"marines/reynolds/shotfoebdy14.ogg",
 				},
-		['chr_kllfoe_stkplsm']	=	{
+		["chr_kllfoe_stkplsm"]	=	{
 				"marines/reynolds/chr_kllfoe_stkplsm1.ogg",
 				"marines/reynolds/chr_kllfoe_stkplsm2.ogg",
 				},
-		['strk_snpr']	=	{
+		["strk_snpr"]	=	{
 				"marines/reynolds/strk_snpr1.ogg",
 				"marines/reynolds/strk_snpr2.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/reynolds/meleeleap1.ogg",
 				"marines/reynolds/meleeleap2.ogg",
 				"marines/reynolds/meleeleap3.ogg",
 				},
-		['ordr_prst']	=	{
+		["ordr_prst"]	=	{
 				"marines/reynolds/ordr_prst1.ogg",
 				"marines/reynolds/ordr_prst2.ogg",
 				"marines/reynolds/ordr_prst3.ogg",
 				"marines/reynolds/ordr_prst4.ogg",
 				},
-		['lookcmbt_agg']	=	{
+		["lookcmbt_agg"]	=	{
 				"marines/reynolds/lookcmbt_agg1.ogg",
 				"marines/reynolds/lookcmbt_agg2.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"marines/reynolds/scld_plr_hrt_blt1.ogg",
 				"marines/reynolds/scld_plr_hrt_blt2.ogg",
 				"marines/reynolds/scld_plr_hrt_blt3.ogg",
@@ -10997,7 +10997,7 @@ ENT.Voices = {
 				"marines/reynolds/scld_plr_hrt_blt8.ogg",
 				"marines/reynolds/scld_plr_hrt_blt9.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/reynolds/scrn1.ogg",
 				"marines/reynolds/scrn2.ogg",
 				"marines/reynolds/scrn3.ogg",
@@ -11007,21 +11007,21 @@ ENT.Voices = {
 				"marines/reynolds/scrn7.ogg",
 				"marines/reynolds/scrn8.ogg",
 				},
-		['status']	=	{
+		["status"]	=	{
 				"marines/reynolds/status1.ogg",
 				"marines/reynolds/status2.ogg",
 				},
-		['tnt_re']	=	{
+		["tnt_re"]	=	{
 				"marines/reynolds/tnt_re1.ogg",
 				"marines/reynolds/tnt_re2.ogg",
 				"marines/reynolds/tnt_re3.ogg",
 				"marines/reynolds/tnt_re4.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"marines/reynolds/rmd_vcl_wrth3.ogg",
 				"marines/reynolds/rmd_vcl_wrth4.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"marines/reynolds/srch_pinned1.ogg",
 				"marines/reynolds/srch_pinned10.ogg",
 				"marines/reynolds/srch_pinned11.ogg",
@@ -11032,50 +11032,50 @@ ENT.Voices = {
 				"marines/reynolds/srch_pinned7.ogg",
 				"marines/reynolds/srch_pinned9.ogg",
 				},
-		['stayback_tim']	=	{
+		["stayback_tim"]	=	{
 				"marines/reynolds/stayback_tim1.ogg",
 				"marines/reynolds/stayback_tim2.ogg",
 				"marines/reynolds/stayback_tim3.ogg",
 				"marines/reynolds/stayback_tim4.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"marines/reynolds/scld_plr_wldgrnd1.ogg",
 				"marines/reynolds/scld_plr_wldgrnd2.ogg",
 				"marines/reynolds/scld_plr_wldgrnd3.ogg",
 				"marines/reynolds/scld_plr_wldgrnd4.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"marines/reynolds/seefoe_upthere1.ogg",
 				"marines/reynolds/seefoe_upthere2.ogg",
 				},
-		['dwn_scrb']	=	{
+		["dwn_scrb"]	=	{
 				"marines/reynolds/dwn_scrb1.ogg",
 				"marines/reynolds/dwn_scrb2.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"marines/reynolds/seefoe_tim3.ogg",
 				"marines/reynolds/seefoe_tim4.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/reynolds/ordr_chkfoebdy1.ogg",
 				"marines/reynolds/ordr_chkfoebdy2.ogg",
 				"marines/reynolds/ordr_chkfoebdy3.ogg",
 				"marines/reynolds/ordr_chkfoebdy6.ogg",
 				"marines/reynolds/ordr_chkfoebdy7.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"marines/reynolds/seefoe_downthere1.ogg",
 				"marines/reynolds/seefoe_downthere2.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"marines/reynolds/seefoe_agg1.ogg",
 				"marines/reynolds/seefoe_agg2.ogg",
 				},
-		['ask_chkallybdyf']	=	{
+		["ask_chkallybdyf"]	=	{
 				"marines/reynolds/ask_chkallybdyf1.ogg",
 				"marines/reynolds/ask_chkallybdyf2.ogg",
 				},
-		['grt_intovcl']	=	{
+		["grt_intovcl"]	=	{
 				"marines/reynolds/grt_intovcl1.ogg",
 				"marines/reynolds/grt_intovcl2.ogg",
 				"marines/reynolds/grt_intovcl3.ogg",
@@ -11084,11 +11084,11 @@ ENT.Voices = {
 				"marines/reynolds/grt_intovcl6.ogg",
 				"marines/reynolds/grt_intovcl7.ogg",
 				},
-		['look_plr_pstcmbt_hrd']	=	{
+		["look_plr_pstcmbt_hrd"]	=	{
 				"marines/reynolds/look_plr_pstcmbt_hrd1.ogg",
 				"marines/reynolds/look_plr_pstcmbt_hrd3.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/reynolds/grt_plr_arb1.ogg",
 				"marines/reynolds/grt_plr_arb2.ogg",
 				"marines/reynolds/grt_plr_arb3.ogg",
@@ -11096,12 +11096,12 @@ ENT.Voices = {
 				"marines/reynolds/grt_plr_arb5.ogg",
 				"marines/reynolds/grt_plr_arb6.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/reynolds/scrn_plr_arb1.ogg",
 				"marines/reynolds/scrn_plr_arb2.ogg",
 				"marines/reynolds/scrn_plr_arb3.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/reynolds/seefoe1.ogg",
 				"marines/reynolds/seefoe10.ogg",
 				"marines/reynolds/seefoe11.ogg",
@@ -11116,7 +11116,7 @@ ENT.Voices = {
 				"marines/reynolds/seefoe7.ogg",
 				"marines/reynolds/seefoe8.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/reynolds/scrn_plr_wrswpn1.ogg",
 				"marines/reynolds/scrn_plr_wrswpn10.ogg",
 				"marines/reynolds/scrn_plr_wrswpn2.ogg",
@@ -11127,19 +11127,19 @@ ENT.Voices = {
 				"marines/reynolds/scrn_plr_wrswpn7.ogg",
 				"marines/reynolds/scrn_plr_wrswpn9.ogg",
 				},
-		['ordr_grenade_all']	=	{
+		["ordr_grenade_all"]	=	{
 				"marines/reynolds/ordr_grenade_all1.ogg",
 				"marines/reynolds/ordr_grenade_all2.ogg",
 				"marines/reynolds/ordr_grenade_all3.ogg",
 				"marines/reynolds/ordr_grenade_all5.ogg",
 				"marines/reynolds/ordr_grenade_all6.ogg",
 				},
-		['rmd_vcl_bnsh']	=	{
+		["rmd_vcl_bnsh"]	=	{
 				"marines/reynolds/rmd_vcl_bnsh3.ogg",
 				"marines/reynolds/rmd_vcl_bnsh4.ogg",
 				"marines/reynolds/rmd_vcl_bnsh5.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/reynolds/prs_plr_arb1.ogg",
 				"marines/reynolds/prs_plr_arb2.ogg",
 				"marines/reynolds/prs_plr_arb3.ogg",
@@ -11147,7 +11147,7 @@ ENT.Voices = {
 				"marines/reynolds/prs_plr_arb6.ogg",
 				"marines/reynolds/prs_plr_arb7.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/reynolds/scld_plr_arb1.ogg",
 				"marines/reynolds/scld_plr_arb2.ogg",
 				"marines/reynolds/scld_plr_arb3.ogg",
@@ -11158,24 +11158,24 @@ ENT.Voices = {
 				"marines/reynolds/scld_plr_arb8.ogg",
 				"marines/reynolds/scld_plr_arb9.ogg",
 				},
-		['scnr_plr_mc']	=	{
+		["scnr_plr_mc"]	=	{
 				"marines/reynolds/scnr_plr_mc1.ogg",
 				"marines/reynolds/scnr_plr_mc2.ogg",
 				},
-		['scld_plr_wldvcl']	=	{
+		["scld_plr_wldvcl"]	=	{
 				"marines/reynolds/scld_plr_wldvcl1.ogg",
 				"marines/reynolds/scld_plr_wldvcl2.ogg",
 				"marines/reynolds/scld_plr_wldvcl3.ogg",
 				"marines/reynolds/scld_plr_wldvcl4.ogg",
 				},
-		['regret']	=	{
+		["regret"]	=	{
 				"marines/reynolds/regret1.ogg",
 				"marines/reynolds/regret2.ogg",
 				"marines/reynolds/regret3.ogg",
 				"marines/reynolds/regret4.ogg",
 				"marines/reynolds/regret5.ogg",
 				},
-		['scld_plr_vclcrash']	=	{
+		["scld_plr_vclcrash"]	=	{
 				"marines/reynolds/scld_plr_vclcrash1.ogg",
 				"marines/reynolds/scld_plr_vclcrash2.ogg",
 				"marines/reynolds/scld_plr_vclcrash3.ogg",
@@ -11184,7 +11184,7 @@ ENT.Voices = {
 				"marines/reynolds/scld_plr_vclcrash7.ogg",
 				"marines/reynolds/scld_plr_vclcrash8.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/reynolds/scld_plr_blocking1.ogg",
 				"marines/reynolds/scld_plr_blocking2.ogg",
 				"marines/reynolds/scld_plr_blocking3.ogg",
@@ -11193,7 +11193,7 @@ ENT.Voices = {
 				"marines/reynolds/scld_plr_blocking6.ogg",
 				"marines/reynolds/scld_plr_blocking7.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/reynolds/scld_plr_mc1.ogg",
 				"marines/reynolds/scld_plr_mc10.ogg",
 				"marines/reynolds/scld_plr_mc11.ogg",
@@ -11204,7 +11204,7 @@ ENT.Voices = {
 				"marines/reynolds/scld_plr_mc7.ogg",
 				"marines/reynolds/scld_plr_mc9.ogg",
 				},
-		['scld_plr_kllallyl']	=	{
+		["scld_plr_kllallyl"]	=	{
 				"marines/reynolds/scld_plr_kllallyl1.ogg",
 				"marines/reynolds/scld_plr_kllallyl2.ogg",
 				"marines/reynolds/scld_plr_kllallyl4.ogg",
@@ -11214,13 +11214,13 @@ ENT.Voices = {
 				"marines/reynolds/scld_plr_kllallyl8.ogg",
 				"marines/reynolds/scld_plr_kllallyl9.ogg",
 				},
-		['status_re']	=	{
+		["status_re"]	=	{
 				"marines/reynolds/status_re1.ogg",
 				"marines/reynolds/status_re2.ogg",
 				"marines/reynolds/status_re3.ogg",
 				"marines/reynolds/status_re6.ogg",
 				},
-		['invt_vcl']	=	{
+		["invt_vcl"]	=	{
 				"marines/reynolds/invt_vcl1.ogg",
 				"marines/reynolds/invt_vcl2.ogg",
 				"marines/reynolds/invt_vcl3.ogg",
@@ -11228,30 +11228,30 @@ ENT.Voices = {
 				"marines/reynolds/invt_vcl5.ogg",
 				"marines/reynolds/invt_vcl6.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"marines/reynolds/dth_slw1.ogg",
 				"marines/reynolds/dth_slw3.ogg",
 				"marines/reynolds/dth_slw4.ogg",
 				},
-		['rmd_trrt']	=	{
+		["rmd_trrt"]	=	{
 				"marines/reynolds/rmd_trrt1.ogg",
 				"marines/reynolds/rmd_trrt2.ogg",
 				},
-		['warn_vcl_chpr']	=	{
+		["warn_vcl_chpr"]	=	{
 				"marines/reynolds/warn_vcl_chpr1.ogg",
 				"marines/reynolds/warn_vcl_chpr2.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/reynolds/ok_plr_mc1.ogg",
 				"marines/reynolds/ok_plr_mc2.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"marines/reynolds/lookcmbt_tim1.ogg",
 				"marines/reynolds/lookcmbt_tim2.ogg",
 				"marines/reynolds/lookcmbt_tim3.ogg",
 				"marines/reynolds/lookcmbt_tim6.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/reynolds/crs1.ogg",
 				"marines/reynolds/crs10.ogg",
 				"marines/reynolds/crs11.ogg",
@@ -11263,7 +11263,7 @@ ENT.Voices = {
 				"marines/reynolds/crs7.ogg",
 				"marines/reynolds/crs9.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/reynolds/newordr_retreat1.ogg",
 				"marines/reynolds/newordr_retreat2.ogg",
 				"marines/reynolds/newordr_retreat3.ogg",
@@ -11271,26 +11271,26 @@ ENT.Voices = {
 				"marines/reynolds/newordr_retreat5.ogg",
 				"marines/reynolds/newordr_retreat6.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"marines/reynolds/melee1.ogg",
 				"marines/reynolds/melee2.ogg",
 				"marines/reynolds/melee3.ogg",
 				},
-		['scld_plr_vclcrazy']	=	{
+		["scld_plr_vclcrazy"]	=	{
 				"marines/reynolds/scld_plr_vclcrazy1.ogg",
 				"marines/reynolds/scld_plr_vclcrazy2.ogg",
 				},
-		['region']	=	{
+		["region"]	=	{
 				"marines/reynolds/region_1.ogg",
 				},
-		['ordr_openfire']	=	{
+		["ordr_openfire"]	=	{
 				"marines/reynolds/ordr_openfire1.ogg",
 				"marines/reynolds/ordr_openfire2.ogg",
 				"marines/reynolds/ordr_openfire3.ogg",
 				"marines/reynolds/ordr_openfire4.ogg",
 				"marines/reynolds/ordr_openfire5.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/reynolds/dth_slnt1.ogg",
 				"marines/reynolds/dth_slnt10.ogg",
 				"marines/reynolds/dth_slnt14.ogg",
@@ -11303,15 +11303,15 @@ ENT.Voices = {
 				"marines/reynolds/dth_slnt8.ogg",
 				"marines/reynolds/dth_slnt9.ogg",
 				},
-		['pstcmbt_agg']	=	{
+		["pstcmbt_agg"]	=	{
 				"marines/reynolds/pstcmbt_agg1.ogg",
 				"marines/reynolds/pstcmbt_agg2.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"marines/reynolds/prs_plr_kll_lots1.ogg",
 				"marines/reynolds/prs_plr_kll_lots2.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/reynolds/pstcmbt1.ogg",
 				"marines/reynolds/pstcmbt10.ogg",
 				"marines/reynolds/pstcmbt11.ogg",
@@ -11322,11 +11322,11 @@ ENT.Voices = {
 				"marines/reynolds/pstcmbt8.ogg",
 				"marines/reynolds/pstcmbt9.ogg",
 				},
-		['entervcl_gnr']	=	{
+		["entervcl_gnr"]	=	{
 				"marines/reynolds/entervcl_gnr1.ogg",
 				"marines/reynolds/entervcl_gnr2.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/reynolds/ok_plr_trdwpn1.ogg",
 				"marines/reynolds/ok_plr_trdwpn10.ogg",
 				"marines/reynolds/ok_plr_trdwpn2.ogg",
@@ -11338,11 +11338,11 @@ ENT.Voices = {
 				"marines/reynolds/ok_plr_trdwpn8.ogg",
 				"marines/reynolds/ok_plr_trdwpn9.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"marines/reynolds/warn_flood1.ogg",
 				"marines/reynolds/warn_flood2.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/reynolds/ok1.ogg",
 				"marines/reynolds/ok2.ogg",
 				"marines/reynolds/ok3.ogg",
@@ -11352,17 +11352,17 @@ ENT.Voices = {
 				"marines/reynolds/ok7.ogg",
 				"marines/reynolds/ok8.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"marines/reynolds/lmnt_deadally1.ogg",
 				"marines/reynolds/lmnt_deadally2.ogg",
 				"marines/reynolds/lmnt_deadally3.ogg",
 				},
-		['prs_prl_sniping']	=	{
+		["prs_prl_sniping"]	=	{
 				"marines/reynolds/prs_prl_sniping1.ogg",
 				"marines/reynolds/prs_prl_sniping2.ogg",
 				"marines/reynolds/prs_prl_sniping3.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/reynolds/prs_plr_mc1.ogg",
 				"marines/reynolds/prs_plr_mc2.ogg",
 				"marines/reynolds/prs_plr_mc3.ogg",
@@ -11370,25 +11370,25 @@ ENT.Voices = {
 				"marines/reynolds/prs_plr_mc5.ogg",
 				"marines/reynolds/prs_plr_mc6.ogg",
 				},
-		['prs_plr_kll_wmelee']	=	{
+		["prs_plr_kll_wmelee"]	=	{
 				"marines/reynolds/prs_plr_kll_wmelee1.ogg",
 				"marines/reynolds/prs_plr_kll_wmelee2.ogg",
 				"marines/reynolds/prs_plr_kll_wmelee3.ogg",
 				"marines/reynolds/prs_plr_kll_wmelee4.ogg",
 				"marines/reynolds/prs_plr_kll_wmelee5.ogg",
 				},
-		['strk_grnd_uncvr']	=	{
+		["strk_grnd_uncvr"]	=	{
 				"marines/reynolds/strk_grnd_uncvr1.ogg",
 				"marines/reynolds/strk_grnd_uncvr2.ogg",
 				"marines/reynolds/strk_grnd_uncvr3.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/reynolds/grt1.ogg",
 				"marines/reynolds/grt2.ogg",
 				"marines/reynolds/grt3.ogg",
 				"marines/reynolds/grt4.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/reynolds/endcmbt1.ogg",
 				"marines/reynolds/endcmbt2.ogg",
 				"marines/reynolds/endcmbt3.ogg",
@@ -11396,18 +11396,18 @@ ENT.Voices = {
 				"marines/reynolds/endcmbt5.ogg",
 				"marines/reynolds/endcmbt7.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/reynolds/hail1.ogg",
 				"marines/reynolds/hail2.ogg",
 				"marines/reynolds/hail3.ogg",
 				"marines/reynolds/hail5.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"marines/reynolds/dth_drama1.ogg",
 				"marines/reynolds/dth_drama2.ogg",
 				"marines/reynolds/dth_drama3.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/reynolds/forgive1.ogg",
 				"marines/reynolds/forgive2.ogg",
 				"marines/reynolds/forgive3.ogg",
@@ -11416,61 +11416,61 @@ ENT.Voices = {
 				"marines/reynolds/forgive6.ogg",
 				"marines/reynolds/forgive7.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"marines/reynolds/prs_plr_gdgrnd1.ogg",
 				"marines/reynolds/prs_plr_gdgrnd2.ogg",
 				},
-		['prs_plr_kll_vclbmp']	=	{
+		["prs_plr_kll_vclbmp"]	=	{
 				"marines/reynolds/prs_plr_kll_vclbmp1.ogg",
 				"marines/reynolds/prs_plr_kll_vclbmp2.ogg",
 				"marines/reynolds/prs_plr_kll_vclbmp3.ogg",
 				"marines/reynolds/prs_plr_kll_vclbmp4.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"marines/reynolds/panic_onfire1.ogg",
 				"marines/reynolds/panic_onfire2.ogg",
 				"marines/reynolds/panic_onfire3.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/reynolds/panic1.ogg",
 				"marines/reynolds/panic2.ogg",
 				},
-		['entervcl_trrt']	=	{
+		["entervcl_trrt"]	=	{
 				"marines/reynolds/entervcl_trrt1.ogg",
 				"marines/reynolds/entervcl_trrt2.ogg",
 				"marines/reynolds/entervcl_trrt3.ogg",
 				"marines/reynolds/entervcl_trrt4.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/reynolds/pain_mdm1.ogg",
 				"marines/reynolds/pain_mdm2.ogg",
 				"marines/reynolds/pain_mdm3.ogg",
 				"marines/reynolds/pain_mdm4.ogg",
 				"marines/reynolds/pain_mdm5.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/reynolds/pain_fall1.ogg",
 				"marines/reynolds/pain_fall2.ogg",
 				"marines/reynolds/pain_fall3.ogg",
 				"marines/reynolds/pain_fall4.ogg",
 				"marines/reynolds/pain_fall5.ogg",
 				},
-		['foe_ordr_charge']	=	{
+		["foe_ordr_charge"]	=	{
 				"marines/reynolds/foe_ordr_charge1.ogg",
 				"marines/reynolds/foe_ordr_charge2.ogg",
 				"marines/reynolds/foe_ordr_charge3.ogg",
 				"marines/reynolds/foe_ordr_charge4.ogg",
 				},
-		['grt_plr_srprs']	=	{
+		["grt_plr_srprs"]	=	{
 				"marines/reynolds/grt_plr_srprs1.ogg",
 				"marines/reynolds/grt_plr_srprs2.ogg",
 				"marines/reynolds/grt_plr_srprs3.ogg",
 				},
-		['ordr_keepwatch_agg']	=	{
+		["ordr_keepwatch_agg"]	=	{
 				"marines/reynolds/ordr_keepwatch_agg1.ogg",
 				"marines/reynolds/ordr_keepwatch_agg2.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/reynolds/stayback1.ogg",
 				"marines/reynolds/stayback10.ogg",
 				"marines/reynolds/stayback11.ogg",
@@ -11484,65 +11484,65 @@ ENT.Voices = {
 				"marines/reynolds/stayback8.ogg",
 				"marines/reynolds/stayback9.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/reynolds/thnk_plr_mc1.ogg",
 				"marines/reynolds/thnk_plr_mc2.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/reynolds/fall1.ogg",
 				"marines/reynolds/fall2.ogg",
 				"marines/reynolds/fall3.ogg",
 				"marines/reynolds/fall4.ogg",
 				},
-		['dwn_vcl_bnsh']	=	{
+		["dwn_vcl_bnsh"]	=	{
 				"marines/reynolds/dwn_vcl_bnsh1.ogg",
 				"marines/reynolds/dwn_vcl_bnsh2.ogg",
 				},
-		['dwn_wpn_snpr']	=	{
+		["dwn_wpn_snpr"]	=	{
 				"marines/reynolds/dwn_wpn_snpr1.ogg",
 				"marines/reynolds/dwn_wpn_snpr2.ogg",
 				},
-		['rmd_wpn_snpr']	=	{
+		["rmd_wpn_snpr"]	=	{
 				"marines/reynolds/rmd_wpn_snpr1.ogg",
 				"marines/reynolds/rmd_wpn_snpr2.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/reynolds/crs_betrayingplr_arb1.ogg",
 				"marines/reynolds/crs_betrayingplr_arb2.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/reynolds/dodge1.ogg",
 				"marines/reynolds/dodge2.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/reynolds/chr1.ogg",
 				"marines/reynolds/chr2.ogg",
 				},
-		['warn_incmn_fldbm']	=	{
+		["warn_incmn_fldbm"]	=	{
 				"marines/reynolds/warn_incmn_fldbm1.ogg",
 				"marines/reynolds/warn_incmn_fldbm2.ogg",
 				"marines/reynolds/warn_incmn_fldbm3.ogg",
 				},
-		['prs_plr_kll_mjr']	=	{
+		["prs_plr_kll_mjr"]	=	{
 				"marines/reynolds/prs_plr_kll_mjr1.ogg",
 				"marines/reynolds/prs_plr_kll_mjr2.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/reynolds/look_plr_mc1.ogg",
 				"marines/reynolds/look_plr_mc3.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/reynolds/newordr_moveon1.ogg",
 				"marines/reynolds/newordr_moveon2.ogg",
 				"marines/reynolds/newordr_moveon3.ogg",
 				"marines/reynolds/newordr_moveon5.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/reynolds/pstcmbt_hrd1.ogg",
 				"marines/reynolds/pstcmbt_hrd3.ogg",
 				"marines/reynolds/pstcmbt_hrd4.ogg",
 				},
-		['prs_plr_kll_blt']	=	{
+		["prs_plr_kll_blt"]	=	{
 				"marines/reynolds/prs_plr_kll_blt1.ogg",
 				"marines/reynolds/prs_plr_kll_blt2.ogg",
 				"marines/reynolds/prs_plr_kll_blt3.ogg",
@@ -11550,7 +11550,7 @@ ENT.Voices = {
 				"marines/reynolds/prs_plr_kll_blt5.ogg",
 				"marines/reynolds/prs_plr_kll_blt6.ogg",
 				},
-		['injured']	=	{
+		["injured"]	=	{
 				"marines/reynolds/injured1.ogg",
 				"marines/reynolds/injured11.ogg",
 				"marines/reynolds/injured13.ogg",
@@ -11563,13 +11563,13 @@ ENT.Voices = {
 				"marines/reynolds/injured7.ogg",
 				"marines/reynolds/injured9.ogg",
 				},
-		['ordr_invsgt']	=	{
+		["ordr_invsgt"]	=	{
 				"marines/reynolds/ordr_invsgt1.ogg",
 				"marines/reynolds/ordr_invsgt2.ogg",
 				"marines/reynolds/ordr_invsgt3.ogg",
 				"marines/reynolds/ordr_invsgt4.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/reynolds/lmnt_deadplr_arb1.ogg",
 				"marines/reynolds/lmnt_deadplr_arb2.ogg",
 				"marines/reynolds/lmnt_deadplr_arb3.ogg",
@@ -11577,7 +11577,7 @@ ENT.Voices = {
 				"marines/reynolds/lmnt_deadplr_arb7.ogg",
 				"marines/reynolds/lmnt_deadplr_arb9.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/reynolds/bump1.ogg",
 				"marines/reynolds/bump10.ogg",
 				"marines/reynolds/bump2.ogg",
@@ -11588,11 +11588,11 @@ ENT.Voices = {
 				"marines/reynolds/bump8.ogg",
 				"marines/reynolds/bump9.ogg",
 				},
-		['grt_plr_vcl_empty']	=	{
+		["grt_plr_vcl_empty"]	=	{
 				"marines/reynolds/grt_plr_vcl_empty1.ogg",
 				"marines/reynolds/grt_plr_vcl_empty2.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/reynolds/newordr_entervcl1.ogg",
 				"marines/reynolds/newordr_entervcl2.ogg",
 				"marines/reynolds/newordr_entervcl3.ogg",
@@ -11600,7 +11600,7 @@ ENT.Voices = {
 				"marines/reynolds/newordr_entervcl5.ogg",
 				"marines/reynolds/newordr_entervcl6.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/reynolds/dth_mjr1.ogg",
 				"marines/reynolds/dth_mjr10.ogg",
 				"marines/reynolds/dth_mjr2.ogg",
@@ -11611,7 +11611,7 @@ ENT.Voices = {
 				"marines/reynolds/dth_mjr7.ogg",
 				"marines/reynolds/dth_mjr9.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/reynolds/dth_hdsht1.ogg",
 				"marines/reynolds/dth_hdsht10.ogg",
 				"marines/reynolds/dth_hdsht11.ogg",
@@ -11626,14 +11626,14 @@ ENT.Voices = {
 				"marines/reynolds/dth_hdsht8.ogg",
 				"marines/reynolds/dth_hdsht9.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/reynolds/lift1.ogg",
 				"marines/reynolds/lift2.ogg",
 				"marines/reynolds/lift3.ogg",
 				"marines/reynolds/lift4.ogg",
 				"marines/reynolds/lift5.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/reynolds/strk1.ogg",
 				"marines/reynolds/strk10.ogg",
 				"marines/reynolds/strk11.ogg",
@@ -11647,7 +11647,7 @@ ENT.Voices = {
 				"marines/reynolds/strk7.ogg",
 				"marines/reynolds/strk8.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/reynolds/lmnt_deadplr_mc1.ogg",
 				"marines/reynolds/lmnt_deadplr_mc2.ogg",
 				"marines/reynolds/lmnt_deadplr_mc3.ogg",
@@ -11656,46 +11656,46 @@ ENT.Voices = {
 				"marines/reynolds/lmnt_deadplr_mc6.ogg",
 				"marines/reynolds/lmnt_deadplr_mc7.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/reynolds/newordr_leaveplr1.ogg",
 				"marines/reynolds/newordr_leaveplr2.ogg",
 				"marines/reynolds/newordr_leaveplr3.ogg",
 				"marines/reynolds/newordr_leaveplr4.ogg",
 				},
-		['grt_intovcl_imgnr']	=	{
+		["grt_intovcl_imgnr"]	=	{
 				"marines/reynolds/grt_intovcl_imgnr1.ogg",
 				"marines/reynolds/grt_intovcl_imgnr2.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/reynolds/ok_plr_trdst_dvr1.ogg",
 				"marines/reynolds/ok_plr_trdst_dvr2.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/reynolds/stun1.ogg",
 				"marines/reynolds/stun2.ogg",
 				"marines/reynolds/stun3.ogg",
 				"marines/reynolds/stun4.ogg",
 				},
-		['ordr_stayback']	=	{
+		["ordr_stayback"]	=	{
 				"marines/reynolds/ordr_stayback1.ogg",
 				"marines/reynolds/ordr_stayback2.ogg",
 				"marines/reynolds/ordr_stayback3.ogg",
 				"marines/reynolds/ordr_stayback4.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/reynolds/foeordr_retreat1.ogg",
 				"marines/reynolds/foeordr_retreat2.ogg",
 				"marines/reynolds/foeordr_retreat3.ogg",
 				"marines/reynolds/foeordr_retreat4.ogg",
 				"marines/reynolds/foeordr_retreat5.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"marines/reynolds/morefoe1.ogg",
 				"marines/reynolds/morefoe2.ogg",
 				"marines/reynolds/morefoe3.ogg",
 				"marines/reynolds/morefoe4.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/reynolds/lst_cntct1.ogg",
 				"marines/reynolds/lst_cntct10.ogg",
 				"marines/reynolds/lst_cntct2.ogg",
@@ -11707,19 +11707,19 @@ ENT.Voices = {
 				"marines/reynolds/lst_cntct8.ogg",
 				"marines/reynolds/lst_cntct9.ogg",
 				},
-		['dwn_vcl_chpr']	=	{
+		["dwn_vcl_chpr"]	=	{
 				"marines/reynolds/dwn_vcl_chpr1.ogg",
 				"marines/reynolds/dwn_vcl_chpr2.ogg",
 				},
-		['warn_stlth']	=	{
+		["warn_stlth"]	=	{
 				"marines/reynolds/warn_stlth1.ogg",
 				"marines/reynolds/warn_stlth2.ogg",
 				},
-		['chckallybdy']	=	{
+		["chckallybdy"]	=	{
 				"marines/reynolds/chckallybdy1.ogg",
 				"marines/reynolds/chckallybdy3.ogg",
 				},
-		['chkfoebdy']	=	{
+		["chkfoebdy"]	=	{
 				"marines/reynolds/chkfoebdy1.ogg",
 				"marines/reynolds/chkfoebdy2.ogg",
 				"marines/reynolds/chkfoebdy3.ogg",
@@ -11727,29 +11727,29 @@ ENT.Voices = {
 				"marines/reynolds/chkfoebdy6.ogg",
 				"marines/reynolds/chkfoebdy7.ogg",
 				},
-		['hail_agg']	=	{
+		["hail_agg"]	=	{
 				"marines/reynolds/hail_agg1.ogg",
 				"marines/reynolds/hail_agg3.ogg",
 				},
-		['entervcl_psngr']	=	{
+		["entervcl_psngr"]	=	{
 				"marines/reynolds/entervcl_psngr1.ogg",
 				"marines/reynolds/entervcl_psngr2.ogg",
 				"marines/reynolds/entervcl_psngr3.ogg",
 				"marines/reynolds/entervcl_psngr4.ogg",
 				},
-		['warn_trrt']	=	{
+		["warn_trrt"]	=	{
 				"marines/reynolds/warn_trrt1.ogg",
 				"marines/reynolds/warn_trrt2.ogg",
 				}
 	},
 	["Stacker"] = {
-	['crs_mjrfoe']	=	{
+	["crs_mjrfoe"]	=	{
 				"marines/stacker/crs_mjrfoe1.ogg",
 				"marines/stacker/crs_mjrfoe2.ogg",
 				"marines/stacker/crs_mjrfoe4.ogg",
 				"marines/stacker/crs_mjrfoe6.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"marines/stacker/look_lngtme1.ogg",
 				"marines/stacker/look_lngtme10.ogg",
 				"marines/stacker/look_lngtme2.ogg",
@@ -11760,35 +11760,35 @@ ENT.Voices = {
 				"marines/stacker/look_lngtme8.ogg",
 				"marines/stacker/look_lngtme9.ogg",
 				},
-		['invt_vcl_gnr']	=	{
+		["invt_vcl_gnr"]	=	{
 				"marines/stacker/invt_vcl_gnr1.ogg",
 				"marines/stacker/invt_vcl_gnr2.ogg",
 				"marines/stacker/invt_vcl_gnr3.ogg",
 				"marines/stacker/invt_vcl_gnr4.ogg",
 				},
-		['newordr_advance']	=	{
+		["newordr_advance"]	=	{
 				"marines/stacker/newordr_advance1.ogg",
 				"marines/stacker/newordr_advance2.ogg",
 				"marines/stacker/newordr_advance4.ogg",
 				"marines/stacker/newordr_advance5.ogg",
 				"marines/stacker/newordr_advance8.ogg",
 				},
-		['rmd_vcl_ghst']	=	{
+		["rmd_vcl_ghst"]	=	{
 				"marines/stacker/rmd_vcl_ghst1.ogg",
 				"marines/stacker/rmd_vcl_ghst2.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/stacker/foeordr_flanking1.ogg",
 				"marines/stacker/foeordr_flanking2.ogg",
 				"marines/stacker/foeordr_flanking3.ogg",
 				"marines/stacker/foeordr_flanking4.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/stacker/cvr1.ogg",
 				"marines/stacker/cvr2.ogg",
 				"marines/stacker/cvr3.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"marines/stacker/rmd1.ogg",
 				"marines/stacker/rmd2.ogg",
 				"marines/stacker/rmd4.ogg",
@@ -11797,26 +11797,26 @@ ENT.Voices = {
 				"marines/stacker/rmd8.ogg",
 				"marines/stacker/rmd9.ogg",
 				},
-		['reanimat']	=	{
+		["reanimat"]	=	{
 				"marines/stacker/reanimate.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"marines/stacker/warn_fldreanimate2.ogg",
 				"marines/stacker/warn_fldreanimate3.ogg",
 				"marines/stacker/warn_fldreanimate4.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/stacker/charge2.ogg",
 				"marines/stacker/charge3.ogg",
 				"marines/stacker/charge4.ogg",
 				"marines/stacker/charge5.ogg",
 				"marines/stacker/charge6.ogg",
 				},
-		['warn_vcl_bnsh']	=	{
+		["warn_vcl_bnsh"]	=	{
 				"marines/stacker/warn_vcl_bnsh1.ogg",
 				"marines/stacker/warn_vcl_bnsh2.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/stacker/scld_plr_hrtme1.ogg",
 				"marines/stacker/scld_plr_hrtme11.ogg",
 				"marines/stacker/scld_plr_hrtme12.ogg",
@@ -11826,30 +11826,30 @@ ENT.Voices = {
 				"marines/stacker/scld_plr_hrtme6.ogg",
 				"marines/stacker/scld_plr_hrtme9.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/stacker/pain1.ogg",
 				"marines/stacker/pain2.ogg",
 				"marines/stacker/pain3.ogg",
 				"marines/stacker/pain4.ogg",
 				},
-		['lookcmbt_fllw']	=	{
+		["lookcmbt_fllw"]	=	{
 				"marines/stacker/lookcmbt_fllw2.ogg",
 				"marines/stacker/lookcmbt_fllw3.ogg",
 				"marines/stacker/lookcmbt_fllw4.ogg",
 				"marines/stacker/lookcmbt_fllw5.ogg",
 				},
-		['foundfoe_re']	=	{
+		["foundfoe_re"]	=	{
 				"marines/stacker/foundfoe_re1.ogg",
 				"marines/stacker/foundfoe_re2.ogg",
 				"marines/stacker/foundfoe_re3.ogg",
 				"marines/stacker/foundfoe_re6.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/stacker/cvr_re2.ogg",
 				"marines/stacker/cvr_re3.ogg",
 				"marines/stacker/cvr_re4.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"marines/stacker/prs_plr_kll10.ogg",
 				"marines/stacker/prs_plr_kll12.ogg",
 				"marines/stacker/prs_plr_kll13.ogg",
@@ -11859,43 +11859,43 @@ ENT.Voices = {
 				"marines/stacker/prs_plr_kll6.ogg",
 				"marines/stacker/prs_plr_kll9.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/stacker/dwn1.ogg",
 				"marines/stacker/dwn2.ogg",
 				"marines/stacker/dwn3.ogg",
 				"marines/stacker/dwn6.ogg",
 				},
-		['hail_agg']	=	{
+		["hail_agg"]	=	{
 				"marines/stacker/hail_agg1.ogg",
 				"marines/stacker/hail_agg5.ogg",
 				"marines/stacker/hail_agg8.ogg",
 				"marines/stacker/hail_agg9.ogg",
 				},
-		['grt_intovcl_mine']	=	{
+		["grt_intovcl_mine"]	=	{
 				"marines/stacker/grt_intovcl_mine3.ogg",
 				"marines/stacker/grt_intovcl_mine5.ogg",
 				"marines/stacker/grt_intovcl_mine6.ogg",
 				},
-		['chckallybdyf']	=	{
+		["chckallybdyf"]	=	{
 				"marines/stacker/chckallybdyf1.ogg",
 				"marines/stacker/chckallybdyf3.ogg",
 				"marines/stacker/chckallybdyf4.ogg",
 				},
-		['chckallybdy']	=	{
+		["chckallybdy"]	=	{
 				"marines/stacker/chckallybdy2.ogg",
 				"marines/stacker/chckallybdy4.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"marines/stacker/whn_re7.ogg",
 				"marines/stacker/whn_re8.ogg",
 				"marines/stacker/whn_re9.ogg",
 				},
-		['rmd_scrb']	=	{
+		["rmd_scrb"]	=	{
 				"marines/stacker/rmd_scrb2.ogg",
 				"marines/stacker/rmd_scrb3.ogg",
 				"marines/stacker/rmd_scrb4.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/stacker/pld10.ogg",
 				"marines/stacker/pld12.ogg",
 				"marines/stacker/pld13.ogg",
@@ -11906,12 +11906,12 @@ ENT.Voices = {
 				"marines/stacker/pld8.ogg",
 				"marines/stacker/pld9.ogg",
 				},
-		['whn_hrtblt']	=	{
+		["whn_hrtblt"]	=	{
 				"marines/stacker/whn_hrtblt1.ogg",
 				"marines/stacker/whn_hrtblt2.ogg",
 				"marines/stacker/whn_hrtblt4.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/stacker/whn2.ogg",
 				"marines/stacker/whn3.ogg",
 				"marines/stacker/whn5.ogg",
@@ -11919,25 +11919,25 @@ ENT.Voices = {
 				"marines/stacker/whn8.ogg",
 				"marines/stacker/whn9.ogg",
 				},
-		['ask_chkallybdy']	=	{
+		["ask_chkallybdy"]	=	{
 				"marines/stacker/ask_chkallybdy3.ogg",
 				"marines/stacker/ask_chkallybdy4.ogg",
 				"marines/stacker/ask_chkallybdy5.ogg",
 				},
-		['warn_wpn_snpr']	=	{
+		["warn_wpn_snpr"]	=	{
 				"marines/stacker/warn_wpn_snpr1.ogg",
 				"marines/stacker/warn_wpn_snpr3.ogg",
 				"marines/stacker/warn_wpn_snpr4.ogg",
 				},
-		['warn_wpn_hmm']	=	{
+		["warn_wpn_hmm"]	=	{
 				"marines/stacker/warn_wpn_hmmr.ogg",
 				},
-		['warn_vcl_wrth']	=	{
+		["warn_vcl_wrth"]	=	{
 				"marines/stacker/warn_vcl_wrth1.ogg",
 				"marines/stacker/warn_vcl_wrth3.ogg",
 				"marines/stacker/warn_vcl_wrth4.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/stacker/dodge1.ogg",
 				"marines/stacker/dodge2.ogg",
 				"marines/stacker/dodge3.ogg",
@@ -11945,11 +11945,11 @@ ENT.Voices = {
 				"marines/stacker/dodge6.ogg",
 				"marines/stacker/dodge7.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"marines/stacker/warn_vcl_phntm1.ogg",
 				"marines/stacker/warn_vcl_phntm4.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/stacker/thrtn1.ogg",
 				"marines/stacker/thrtn10.ogg",
 				"marines/stacker/thrtn11.ogg",
@@ -11966,17 +11966,17 @@ ENT.Voices = {
 				"marines/stacker/thrtn8.ogg",
 				"marines/stacker/thrtn9.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"marines/stacker/seefoe_downthere1.ogg",
 				"marines/stacker/seefoe_downthere2.ogg",
 				},
-		['tchallybdy']	=	{
+		["tchallybdy"]	=	{
 				"marines/stacker/tchallybdy13.ogg",
 				"marines/stacker/tchallybdy3.ogg",
 				"marines/stacker/tchallybdy5.ogg",
 				"marines/stacker/tchallybdy7.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/stacker/newordr_exitvcl1.ogg",
 				"marines/stacker/newordr_exitvcl2.ogg",
 				"marines/stacker/newordr_exitvcl3.ogg",
@@ -11985,7 +11985,7 @@ ENT.Voices = {
 				"marines/stacker/newordr_exitvcl6.ogg",
 				"marines/stacker/newordr_exitvcl7.ogg",
 				},
-		['join_stayback']	=	{
+		["join_stayback"]	=	{
 				"marines/stacker/join_stayback1.ogg",
 				"marines/stacker/join_stayback10.ogg",
 				"marines/stacker/join_stayback11.ogg",
@@ -11995,47 +11995,47 @@ ENT.Voices = {
 				"marines/stacker/join_stayback6.ogg",
 				"marines/stacker/join_stayback8.ogg",
 				},
-		['rmd_stlth']	=	{
+		["rmd_stlth"]	=	{
 				"marines/stacker/rmd_stlth1.ogg",
 				"marines/stacker/rmd_stlth2.ogg",
 				},
-		['warn_trrt_dply']	=	{
+		["warn_trrt_dply"]	=	{
 				"marines/stacker/warn_trrt_dply3.ogg",
 				"marines/stacker/warn_trrt_dply4.ogg",
 				"marines/stacker/warn_trrt_dply5.ogg",
 				},
-		['newordr_fllwplr']	=	{
+		["newordr_fllwplr"]	=	{
 				"marines/stacker/newordr_fllwplr2.ogg",
 				"marines/stacker/newordr_fllwplr3.ogg",
 				"marines/stacker/newordr_fllwplr4.ogg",
 				"marines/stacker/newordr_fllwplr5.ogg",
 				},
-		['pld_mjrfoe']	=	{
+		["pld_mjrfoe"]	=	{
 				"marines/stacker/pld_mjrfoe1.ogg",
 				"marines/stacker/pld_mjrfoe3.ogg",
 				"marines/stacker/pld_mjrfoe5.ogg",
 				"marines/stacker/pld_mjrfoe6.ogg",
 				},
-		['pstcmbt_fld']	=	{
+		["pstcmbt_fld"]	=	{
 				"marines/stacker/pstcmbt_fld1.ogg",
 				"marines/stacker/pstcmbt_fld3.ogg",
 				"marines/stacker/pstcmbt_fld4.ogg",
 				},
-		['pain_shld']	=	{
+		["pain_shld"]	=	{
 				"marines/stacker/pain_shld1.ogg",
 				"marines/stacker/pain_shld2.ogg",
 				"marines/stacker/pain_shld3.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"marines/stacker/panic_plsmgrnd1.ogg",
 				"marines/stacker/panic_plsmgrnd2.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/stacker/pstcmbt_brt2.ogg",
 				"marines/stacker/pstcmbt_brt4.ogg",
 				"marines/stacker/pstcmbt_brt5.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/stacker/grt_plr_mc1.ogg",
 				"marines/stacker/grt_plr_mc10.ogg",
 				"marines/stacker/grt_plr_mc2.ogg",
@@ -12047,19 +12047,19 @@ ENT.Voices = {
 				"marines/stacker/grt_plr_mc8.ogg",
 				"marines/stacker/grt_plr_mc9.ogg",
 				},
-		['chr_kllfoe_vclbmp']	=	{
+		["chr_kllfoe_vclbmp"]	=	{
 				"marines/stacker/chr_kllfoe_vclbmp1.ogg",
 				"marines/stacker/chr_kllfoe_vclbmp10.ogg",
 				"marines/stacker/chr_kllfoe_vclbmp3.ogg",
 				"marines/stacker/chr_kllfoe_vclbmp7.ogg",
 				"marines/stacker/chr_kllfoe_vclbmp8.ogg",
 				},
-		['rmd_wpn_hmmr']	=	{
+		["rmd_wpn_hmmr"]	=	{
 				"marines/stacker/rmd_wpn_hmmr1.ogg",
 				"marines/stacker/rmd_wpn_hmmr2.ogg",
 				"marines/stacker/rmd_wpn_hmmr3.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/stacker/foeordr_fallback1.ogg",
 				"marines/stacker/foeordr_fallback2.ogg",
 				"marines/stacker/foeordr_fallback3.ogg",
@@ -12067,7 +12067,7 @@ ENT.Voices = {
 				"marines/stacker/foeordr_fallback5.ogg",
 				"marines/stacker/foeordr_fallback6.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/stacker/hail_plr_mc1.ogg",
 				"marines/stacker/hail_plr_mc10.ogg",
 				"marines/stacker/hail_plr_mc2.ogg",
@@ -12077,13 +12077,13 @@ ENT.Voices = {
 				"marines/stacker/hail_plr_mc8.ogg",
 				"marines/stacker/hail_plr_mc9.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/stacker/foeordr_advance1.ogg",
 				"marines/stacker/foeordr_advance2.ogg",
 				"marines/stacker/foeordr_advance3.ogg",
 				"marines/stacker/foeordr_advance5.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/stacker/foundfoe_prst1.ogg",
 				"marines/stacker/foundfoe_prst10.ogg",
 				"marines/stacker/foundfoe_prst12.ogg",
@@ -12094,7 +12094,7 @@ ENT.Voices = {
 				"marines/stacker/foundfoe_prst8.ogg",
 				"marines/stacker/foundfoe_prst9.ogg",
 				},
-		['injured']	=	{
+		["injured"]	=	{
 				"marines/stacker/injured10.ogg",
 				"marines/stacker/injured13.ogg",
 				"marines/stacker/injured14.ogg",
@@ -12105,28 +12105,28 @@ ENT.Voices = {
 				"marines/stacker/injured8.ogg",
 				"marines/stacker/injured9.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"marines/stacker/warn_swarm1.ogg",
 				"marines/stacker/warn_swarm2.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/stacker/thrwn1.ogg",
 				"marines/stacker/thrwn2.ogg",
 				"marines/stacker/thrwn3.ogg",
 				"marines/stacker/thrwn4.ogg",
 				"marines/stacker/thrwn5.ogg",
 				},
-		['look_plr_fllw']	=	{
+		["look_plr_fllw"]	=	{
 				"marines/stacker/look_plr_fllw1.ogg",
 				"marines/stacker/look_plr_fllw2.ogg",
 				},
-		['ordr_keepwatch']	=	{
+		["ordr_keepwatch"]	=	{
 				"marines/stacker/ordr_keepwatch1.ogg",
 				"marines/stacker/ordr_keepwatch3.ogg",
 				"marines/stacker/ordr_keepwatch5.ogg",
 				"marines/stacker/ordr_keepwatch9.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/stacker/newordr_support1.ogg",
 				"marines/stacker/newordr_support3.ogg",
 				"marines/stacker/newordr_support4.ogg",
@@ -12134,33 +12134,33 @@ ENT.Voices = {
 				"marines/stacker/newordr_support7.ogg",
 				"marines/stacker/newordr_support8.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/stacker/pain_mjr1.ogg",
 				"marines/stacker/pain_mjr2.ogg",
 				"marines/stacker/pain_mjr3.ogg",
 				},
-		['warn_scrb']	=	{
+		["warn_scrb"]	=	{
 				"marines/stacker/warn_scrb3.ogg",
 				"marines/stacker/warn_scrb4.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"marines/stacker/hail_tim1.ogg",
 				"marines/stacker/hail_tim2.ogg",
 				},
-		['ordr_prst']	=	{
+		["ordr_prst"]	=	{
 				"marines/stacker/ordr_prst1.ogg",
 				"marines/stacker/ordr_prst3.ogg",
 				},
-		['rmd_vcl_chpr']	=	{
+		["rmd_vcl_chpr"]	=	{
 				"marines/stacker/rmd_vcl_chpr2.ogg",
 				"marines/stacker/rmd_vcl_chpr3.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"marines/stacker/dwn_vcl_wrth1.ogg",
 				"marines/stacker/dwn_vcl_wrth3.ogg",
 				"marines/stacker/dwn_vcl_wrth4.ogg",
 				},
-		['chr_kllfoe_blt']	=	{
+		["chr_kllfoe_blt"]	=	{
 				"marines/stacker/chr_kllfoe_blt1.ogg",
 				"marines/stacker/chr_kllfoe_blt2.ogg",
 				"marines/stacker/chr_kllfoe_blt3.ogg",
@@ -12168,7 +12168,7 @@ ENT.Voices = {
 				"marines/stacker/chr_kllfoe_blt6.ogg",
 				"marines/stacker/chr_kllfoe_blt7.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/stacker/scld1.ogg",
 				"marines/stacker/scld2.ogg",
 				"marines/stacker/scld3.ogg",
@@ -12176,19 +12176,19 @@ ENT.Voices = {
 				"marines/stacker/scld7.ogg",
 				"marines/stacker/scld8.ogg",
 				},
-		['warn_incmn_vclbm']	=	{
+		["warn_incmn_vclbm"]	=	{
 				"marines/stacker/warn_incmn_vclbm2.ogg",
 				"marines/stacker/warn_incmn_vclbm4.ogg",
 				},
-		['ordr_keepwatch_tim']	=	{
+		["ordr_keepwatch_tim"]	=	{
 				"marines/stacker/ordr_keepwatch_tim1.ogg",
 				"marines/stacker/ordr_keepwatch_tim4.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/stacker/panic1.ogg",
 				"marines/stacker/panic2.ogg",
 				},
-		['newordr_charge']	=	{
+		["newordr_charge"]	=	{
 				"marines/stacker/newordr_charge1.ogg",
 				"marines/stacker/newordr_charge2.ogg",
 				"marines/stacker/newordr_charge3.ogg",
@@ -12197,7 +12197,7 @@ ENT.Voices = {
 				"marines/stacker/newordr_charge6.ogg",
 				"marines/stacker/newordr_charge7.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/stacker/shotfoebdy1.ogg",
 				"marines/stacker/shotfoebdy10.ogg",
 				"marines/stacker/shotfoebdy12.ogg",
@@ -12205,7 +12205,7 @@ ENT.Voices = {
 				"marines/stacker/shotfoebdy3.ogg",
 				"marines/stacker/shotfoebdy4.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/stacker/dive1.ogg",
 				"marines/stacker/dive11.ogg",
 				"marines/stacker/dive12.ogg",
@@ -12218,14 +12218,14 @@ ENT.Voices = {
 				"marines/stacker/dive8.ogg",
 				"marines/stacker/dive9.ogg",
 				},
-		['ordr_grenade']	=	{
+		["ordr_grenade"]	=	{
 				"marines/stacker/ordr_grenade10.ogg",
 				"marines/stacker/ordr_grenade2.ogg",
 				"marines/stacker/ordr_grenade5.ogg",
 				"marines/stacker/ordr_grenade7.ogg",
 				"marines/stacker/ordr_grenade9.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"marines/stacker/warn_incmn1.ogg",
 				"marines/stacker/warn_incmn2.ogg",
 				"marines/stacker/warn_incmn3.ogg",
@@ -12233,30 +12233,30 @@ ENT.Voices = {
 				"marines/stacker/warn_incmn7.ogg",
 				"marines/stacker/warn_incmn8.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/stacker/lmnt1.ogg",
 				"marines/stacker/lmnt2.ogg",
 				"marines/stacker/lmnt3.ogg",
 				"marines/stacker/lmnt4.ogg",
 				},
-		['prs_plr_kll_wmelee']	=	{
+		["prs_plr_kll_wmelee"]	=	{
 				"marines/stacker/prs_plr_kll_wmelee2.ogg",
 				"marines/stacker/prs_plr_kll_wmelee3.ogg",
 				"marines/stacker/prs_plr_kll_wmelee4.ogg",
 				"marines/stacker/prs_plr_kll_wmelee5.ogg",
 				"marines/stacker/prs_plr_kll_wmelee8.ogg",
 				},
-		['dwn_vcl_ghst']	=	{
+		["dwn_vcl_ghst"]	=	{
 				"marines/stacker/dwn_vcl_ghst1.ogg",
 				"marines/stacker/dwn_vcl_ghst2.ogg",
 				"marines/stacker/dwn_vcl_ghst4.ogg",
 				"marines/stacker/dwn_vcl_ghst5.ogg",
 				},
-		['warn_chr_hntr']	=	{
+		["warn_chr_hntr"]	=	{
 				"marines/stacker/warn_chr_hntr1.ogg",
 				"marines/stacker/warn_chr_hntr2.ogg",
 				},
-		['newordr_fallback']	=	{
+		["newordr_fallback"]	=	{
 				"marines/stacker/newordr_fallback1.ogg",
 				"marines/stacker/newordr_fallback2.ogg",
 				"marines/stacker/newordr_fallback3.ogg",
@@ -12266,11 +12266,11 @@ ENT.Voices = {
 				"marines/stacker/newordr_fallback8.ogg",
 				"marines/stacker/newordr_fallback9.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"marines/stacker/warn_chr_bggr2.ogg",
 				"marines/stacker/warn_chr_bggr4.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/stacker/scld_plr_mc11.ogg",
 				"marines/stacker/scld_plr_mc2.ogg",
 				"marines/stacker/scld_plr_mc3.ogg",
@@ -12278,32 +12278,32 @@ ENT.Voices = {
 				"marines/stacker/scld_plr_mc7.ogg",
 				"marines/stacker/scld_plr_mc9.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"marines/stacker/panic_infctnfrm1.ogg",
 				"marines/stacker/panic_infctnfrm3.ogg",
 				"marines/stacker/panic_infctnfrm4.ogg",
 				},
-		['strk_grnd']	=	{
+		["strk_grnd"]	=	{
 				"marines/stacker/strk_grnd1.ogg",
 				"marines/stacker/strk_grnd3.ogg",
 				"marines/stacker/strk_grnd4.ogg",
 				"marines/stacker/strk_grnd6.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"marines/stacker/rmd_vcl_phntm2.ogg",
 				"marines/stacker/rmd_vcl_phntm3.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/stacker/pstcmbt_ez1.ogg",
 				"marines/stacker/pstcmbt_ez2.ogg",
 				"marines/stacker/pstcmbt_ez3.ogg",
 				"marines/stacker/pstcmbt_ez4.ogg",
 				},
-		['warn_brsrk']	=	{
+		["warn_brsrk"]	=	{
 				"marines/stacker/warn_brsrk1.ogg",
 				"marines/stacker/warn_brsrk4.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/stacker/warn1.ogg",
 				"marines/stacker/warn10.ogg",
 				"marines/stacker/warn11.ogg",
@@ -12313,7 +12313,7 @@ ENT.Voices = {
 				"marines/stacker/warn6.ogg",
 				"marines/stacker/warn8.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"marines/stacker/scld_plr_kllally1.ogg",
 				"marines/stacker/scld_plr_kllally10.ogg",
 				"marines/stacker/scld_plr_kllally2.ogg",
@@ -12323,19 +12323,19 @@ ENT.Voices = {
 				"marines/stacker/scld_plr_kllally8.ogg",
 				"marines/stacker/scld_plr_kllally9.ogg",
 				},
-		['warn_pureforms']	=	{
+		["warn_pureforms"]	=	{
 				"marines/stacker/warn_pureforms1.ogg",
 				"marines/stacker/warn_pureforms2.ogg",
 				"marines/stacker/warn_pureforms4.ogg",
 				},
-		['tnt_mjrfoe']	=	{
+		["tnt_mjrfoe"]	=	{
 				"marines/stacker/tnt_mjrfoe1.ogg",
 				"marines/stacker/tnt_mjrfoe10.ogg",
 				"marines/stacker/tnt_mjrfoe2.ogg",
 				"marines/stacker/tnt_mjrfoe8.ogg",
 				"marines/stacker/tnt_mjrfoe9.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/stacker/tnt10.ogg",
 				"marines/stacker/tnt11.ogg",
 				"marines/stacker/tnt12.ogg",
@@ -12356,7 +12356,7 @@ ENT.Voices = {
 				"marines/stacker/tnt8.ogg",
 				"marines/stacker/tnt9.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/stacker/dth1.ogg",
 				"marines/stacker/dth10.ogg",
 				"marines/stacker/dth2.ogg",
@@ -12368,23 +12368,23 @@ ENT.Voices = {
 				"marines/stacker/dth8.ogg",
 				"marines/stacker/dth9.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/stacker/ok_plr_arb1.ogg",
 				"marines/stacker/ok_plr_arb2.ogg",
 				"marines/stacker/ok_plr_arb3.ogg",
 				"marines/stacker/ok_plr_arb4.ogg",
 				"marines/stacker/ok_plr_arb5.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/stacker/pain_mdm1.ogg",
 				"marines/stacker/pain_mdm2.ogg",
 				"marines/stacker/pain_mdm3.ogg",
 				},
-		['warn_stlth_again']	=	{
+		["warn_stlth_again"]	=	{
 				"marines/stacker/warn_stlth_again2.ogg",
 				"marines/stacker/warn_stlth_again3.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/stacker/look1.ogg",
 				"marines/stacker/look10.ogg",
 				"marines/stacker/look11.ogg",
@@ -12397,17 +12397,17 @@ ENT.Voices = {
 				"marines/stacker/look8.ogg",
 				"marines/stacker/look9.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/stacker/neworder_flanking2.ogg",
 				"marines/stacker/neworder_flanking3.ogg",
 				"marines/stacker/neworder_flanking4.ogg",
 				"marines/stacker/neworder_flanking5.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"marines/stacker/pstcmbt_tim1.ogg",
 				"marines/stacker/pstcmbt_tim2.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/stacker/hail_plr_arb1.ogg",
 				"marines/stacker/hail_plr_arb2.ogg",
 				"marines/stacker/hail_plr_arb3.ogg",
@@ -12415,18 +12415,18 @@ ENT.Voices = {
 				"marines/stacker/hail_plr_arb5.ogg",
 				"marines/stacker/hail_plr_arb8.ogg",
 				},
-		['thrtn_mjrfoe']	=	{
+		["thrtn_mjrfoe"]	=	{
 				"marines/stacker/thrtn_mjrfoe1.ogg",
 				"marines/stacker/thrtn_mjrfoe2.ogg",
 				"marines/stacker/thrtn_mjrfoe3.ogg",
 				"marines/stacker/thrtn_mjrfoe4.ogg",
 				},
-		['grt_plr_vcl']	=	{
+		["grt_plr_vcl"]	=	{
 				"marines/stacker/grt_plr_vcl1.ogg",
 				"marines/stacker/grt_plr_vcl2.ogg",
 				"marines/stacker/grt_plr_vcl4.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"marines/stacker/lookcmbt1.ogg",
 				"marines/stacker/lookcmbt11.ogg",
 				"marines/stacker/lookcmbt12.ogg",
@@ -12435,31 +12435,31 @@ ENT.Voices = {
 				"marines/stacker/lookcmbt5.ogg",
 				"marines/stacker/lookcmbt7.ogg",
 				},
-		['thrtn_foe_re']	=	{
+		["thrtn_foe_re"]	=	{
 				"marines/stacker/thrtn_foe_re1.ogg",
 				"marines/stacker/thrtn_foe_re2.ogg",
 				"marines/stacker/thrtn_foe_re5.ogg",
 				"marines/stacker/thrtn_foe_re6.ogg",
 				"marines/stacker/thrtn_foe_re9.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"marines/stacker/look_pstcmbt_hrd1.ogg",
 				"marines/stacker/look_pstcmbt_hrd2.ogg",
 				"marines/stacker/look_pstcmbt_hrd3.ogg",
 				"marines/stacker/look_pstcmbt_hrd4.ogg",
 				"marines/stacker/look_pstcmbt_hrd5.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/stacker/dth_fall1.ogg",
 				"marines/stacker/dth_fall2.ogg",
 				"marines/stacker/dth_fall3.ogg",
 				"marines/stacker/dth_fall4.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/stacker/chr3.ogg",
 				"marines/stacker/chr9.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/stacker/thnk_plr_btrwpn1.ogg",
 				"marines/stacker/thnk_plr_btrwpn10.ogg",
 				"marines/stacker/thnk_plr_btrwpn11.ogg",
@@ -12472,30 +12472,30 @@ ENT.Voices = {
 				"marines/stacker/thnk_plr_btrwpn7.ogg",
 				"marines/stacker/thnk_plr_btrwpn8.ogg",
 				},
-		['ordr_pinned']	=	{
+		["ordr_pinned"]	=	{
 				"marines/stacker/ordr_pinned1.ogg",
 				"marines/stacker/ordr_pinned3.ogg",
 				"marines/stacker/ordr_pinned5.ogg",
 				"marines/stacker/ordr_pinned6.ogg",
 				},
-		['entervcl']	=	{
+		["entervcl"]	=	{
 				"marines/stacker/entervcl1.ogg",
 				"marines/stacker/entervcl2.ogg",
 				"marines/stacker/entervcl3.ogg",
 				"marines/stacker/entervcl4.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/stacker/thnk_plr_arb1.ogg",
 				"marines/stacker/thnk_plr_arb2.ogg",
 				"marines/stacker/thnk_plr_arb3.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/stacker/approve1.ogg",
 				"marines/stacker/approve2.ogg",
 				"marines/stacker/approve4.ogg",
 				"marines/stacker/approve6.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/stacker/thnk1.ogg",
 				"marines/stacker/thnk2.ogg",
 				"marines/stacker/thnk3.ogg",
@@ -12504,22 +12504,22 @@ ENT.Voices = {
 				"marines/stacker/thnk6.ogg",
 				"marines/stacker/thnk8.ogg",
 				},
-		['warn_vcl_ghst']	=	{
+		["warn_vcl_ghst"]	=	{
 				"marines/stacker/warn_vcl_ghst1.ogg",
 				"marines/stacker/warn_vcl_ghst3.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"marines/stacker/morefoe2.ogg",
 				"marines/stacker/morefoe3.ogg",
 				"marines/stacker/morefoe5.ogg",
 				"marines/stacker/morefoe6.ogg",
 				},
-		['chr_kllfoe_stkplsm']	=	{
+		["chr_kllfoe_stkplsm"]	=	{
 				"marines/stacker/chr_kllfoe_stkplsm1.ogg",
 				"marines/stacker/chr_kllfoe_stkplsm2.ogg",
 				"marines/stacker/chr_kllfoe_stkplsm3.ogg",
 				},
-		['strk_snpr']	=	{
+		["strk_snpr"]	=	{
 				"marines/stacker/strk_snpr10.ogg",
 				"marines/stacker/strk_snpr11.ogg",
 				"marines/stacker/strk_snpr4.ogg",
@@ -12527,13 +12527,13 @@ ENT.Voices = {
 				"marines/stacker/strk_snpr6.ogg",
 				"marines/stacker/strk_snpr9.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/stacker/meleeleap1.ogg",
 				"marines/stacker/meleeleap3.ogg",
 				"marines/stacker/meleeleap4.ogg",
 				"marines/stacker/meleeleap5.ogg",
 				},
-		['strk_vcl_gnr']	=	{
+		["strk_vcl_gnr"]	=	{
 				"marines/stacker/strk_vcl_gnr1.ogg",
 				"marines/stacker/strk_vcl_gnr12.ogg",
 				"marines/stacker/strk_vcl_gnr2.ogg",
@@ -12543,18 +12543,18 @@ ENT.Voices = {
 				"marines/stacker/strk_vcl_gnr7.ogg",
 				"marines/stacker/strk_vcl_gnr9.ogg",
 				},
-		['lookcmbt_agg']	=	{
+		["lookcmbt_agg"]	=	{
 				"marines/stacker/lookcmbt_agg1.ogg",
 				"marines/stacker/lookcmbt_agg2.ogg",
 				"marines/stacker/lookcmbt_agg3.ogg",
 				"marines/stacker/lookcmbt_agg4.ogg",
 				},
-		['ask_chkallybdyf']	=	{
+		["ask_chkallybdyf"]	=	{
 				"marines/stacker/ask_chkallybdyf2.ogg",
 				"marines/stacker/ask_chkallybdyf4.ogg",
 				"marines/stacker/ask_chkallybdyf5.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/stacker/scrn10.ogg",
 				"marines/stacker/scrn3.ogg",
 				"marines/stacker/scrn4.ogg",
@@ -12564,38 +12564,38 @@ ENT.Voices = {
 				"marines/stacker/scrn8.ogg",
 				"marines/stacker/scrn9.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/stacker/dth_slnt1.ogg",
 				"marines/stacker/dth_slnt2.ogg",
 				"marines/stacker/dth_slnt3.ogg",
 				"marines/stacker/dth_slnt4.ogg",
 				"marines/stacker/dth_slnt5.ogg",
 				},
-		['tnt_re']	=	{
+		["tnt_re"]	=	{
 				"marines/stacker/tnt_re1.ogg",
 				"marines/stacker/tnt_re3.ogg",
 				"marines/stacker/tnt_re5.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"marines/stacker/rmd_vcl_wrth1.ogg",
 				"marines/stacker/rmd_vcl_wrth2.ogg",
 				"marines/stacker/rmd_vcl_wrth6.ogg",
 				},
-		['stayback_agg']	=	{
+		["stayback_agg"]	=	{
 				"marines/stacker/stayback_agg2.ogg",
 				"marines/stacker/stayback_agg3.ogg",
 				},
-		['stayback_tim']	=	{
+		["stayback_tim"]	=	{
 				"marines/stacker/stayback_tim1.ogg",
 				"marines/stacker/stayback_tim5.ogg",
 				"marines/stacker/stayback_tim6.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"marines/stacker/scld_plr_wldgrnd1.ogg",
 				"marines/stacker/scld_plr_wldgrnd2.ogg",
 				"marines/stacker/scld_plr_wldgrnd3.ogg",
 				},
-		['scld_plr_vclcrash']	=	{
+		["scld_plr_vclcrash"]	=	{
 				"marines/stacker/scld_plr_vclcrash1.ogg",
 				"marines/stacker/scld_plr_vclcrash10.ogg",
 				"marines/stacker/scld_plr_vclcrash11.ogg",
@@ -12608,21 +12608,21 @@ ENT.Voices = {
 				"marines/stacker/scld_plr_vclcrash8.ogg",
 				"marines/stacker/scld_plr_vclcrash9.ogg",
 				},
-		['dwn_scrb']	=	{
+		["dwn_scrb"]	=	{
 				"marines/stacker/dwn_scrb1.ogg",
 				"marines/stacker/dwn_scrb2.ogg",
 				},
-		['status']	=	{
+		["status"]	=	{
 				"marines/stacker/status1.ogg",
 				"marines/stacker/status2.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/stacker/ordr_chkfoebdy1.ogg",
 				"marines/stacker/ordr_chkfoebdy3.ogg",
 				"marines/stacker/ordr_chkfoebdy8.ogg",
 				"marines/stacker/ordr_chkfoebdy9.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"marines/stacker/srprs1.ogg",
 				"marines/stacker/srprs2.ogg",
 				"marines/stacker/srprs3.ogg",
@@ -12632,7 +12632,7 @@ ENT.Voices = {
 				"marines/stacker/srprs7.ogg",
 				"marines/stacker/srprs8.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"marines/stacker/srch_pinned10.ogg",
 				"marines/stacker/srch_pinned17.ogg",
 				"marines/stacker/srch_pinned2.ogg",
@@ -12641,7 +12641,7 @@ ENT.Voices = {
 				"marines/stacker/srch_pinned7.ogg",
 				"marines/stacker/srch_pinned8.ogg",
 				},
-		['look_pstcmbt_ez']	=	{
+		["look_pstcmbt_ez"]	=	{
 				"marines/stacker/look_pstcmbt_ez1.ogg",
 				"marines/stacker/look_pstcmbt_ez3.ogg",
 				"marines/stacker/look_pstcmbt_ez4.ogg",
@@ -12649,18 +12649,18 @@ ENT.Voices = {
 				"marines/stacker/look_pstcmbt_ez6.ogg",
 				"marines/stacker/look_pstcmbt_ez7.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/stacker/pain_fall1.ogg",
 				"marines/stacker/pain_fall2.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"marines/stacker/warn_incmn_grnd1.ogg",
 				"marines/stacker/warn_incmn_grnd2.ogg",
 				"marines/stacker/warn_incmn_grnd3.ogg",
 				"marines/stacker/warn_incmn_grnd4.ogg",
 				"marines/stacker/warn_incmn_grnd5.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/stacker/grt_plr_arb1.ogg",
 				"marines/stacker/grt_plr_arb2.ogg",
 				"marines/stacker/grt_plr_arb3.ogg",
@@ -12669,35 +12669,35 @@ ENT.Voices = {
 				"marines/stacker/grt_plr_arb6.ogg",
 				"marines/stacker/grt_plr_arb7.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/stacker/scrn_plr_arb1.ogg",
 				"marines/stacker/scrn_plr_arb2.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"marines/stacker/seefoe_upthere2.ogg",
 				"marines/stacker/seefoe_upthere3.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"marines/stacker/seefoe_tim1.ogg",
 				"marines/stacker/seefoe_tim2.ogg",
 				},
-		['ordr_grenade_all']	=	{
+		["ordr_grenade_all"]	=	{
 				"marines/stacker/ordr_grenade_all1.ogg",
 				"marines/stacker/ordr_grenade_all2.ogg",
 				"marines/stacker/ordr_grenade_all3.ogg",
 				},
-		['rmd_vcl_bnsh']	=	{
+		["rmd_vcl_bnsh"]	=	{
 				"marines/stacker/rmd_vcl_bnsh1.ogg",
 				"marines/stacker/rmd_vcl_bnsh2.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/stacker/prs_plr_arb1.ogg",
 				"marines/stacker/prs_plr_arb3.ogg",
 				"marines/stacker/prs_plr_arb4.ogg",
 				"marines/stacker/prs_plr_arb5.ogg",
 				"marines/stacker/prs_plr_arb6.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/stacker/scld_plr_arb10.ogg",
 				"marines/stacker/scld_plr_arb11.ogg",
 				"marines/stacker/scld_plr_arb2.ogg",
@@ -12707,13 +12707,13 @@ ENT.Voices = {
 				"marines/stacker/scld_plr_arb8.ogg",
 				"marines/stacker/scld_plr_arb9.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"marines/stacker/seefoe_agg1.ogg",
 				"marines/stacker/seefoe_agg2.ogg",
 				"marines/stacker/seefoe_agg4.ogg",
 				"marines/stacker/seefoe_agg5.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/stacker/seefoe1.ogg",
 				"marines/stacker/seefoe10.ogg",
 				"marines/stacker/seefoe11.ogg",
@@ -12724,7 +12724,7 @@ ENT.Voices = {
 				"marines/stacker/seefoe6.ogg",
 				"marines/stacker/seefoe9.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/stacker/scrn_plr_wrswpn1.ogg",
 				"marines/stacker/scrn_plr_wrswpn12.ogg",
 				"marines/stacker/scrn_plr_wrswpn13.ogg",
@@ -12738,26 +12738,26 @@ ENT.Voices = {
 				"marines/stacker/scrn_plr_wrswpn7.ogg",
 				"marines/stacker/scrn_plr_wrswpn8.ogg",
 				},
-		['scrn_plr_mc']	=	{
+		["scrn_plr_mc"]	=	{
 				"marines/stacker/scrn_plr_mc1.ogg",
 				"marines/stacker/scrn_plr_mc2.ogg",
 				"marines/stacker/scrn_plr_mc5.ogg",
 				"marines/stacker/scrn_plr_mc6.ogg",
 				"marines/stacker/scrn_plr_mc7.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/stacker/scld_plr_blocking1.ogg",
 				"marines/stacker/scld_plr_blocking2.ogg",
 				"marines/stacker/scld_plr_blocking3.ogg",
 				"marines/stacker/scld_plr_blocking5.ogg",
 				},
-		['regret']	=	{
+		["regret"]	=	{
 				"marines/stacker/regret1.ogg",
 				"marines/stacker/regret4.ogg",
 				"marines/stacker/regret6.ogg",
 				"marines/stacker/regret7.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/stacker/kllmytrgt1.ogg",
 				"marines/stacker/kllmytrgt2.ogg",
 				"marines/stacker/kllmytrgt4.ogg",
@@ -12765,13 +12765,13 @@ ENT.Voices = {
 				"marines/stacker/kllmytrgt6.ogg",
 				"marines/stacker/kllmytrgt9.ogg",
 				},
-		['status_re']	=	{
+		["status_re"]	=	{
 				"marines/stacker/status_re1.ogg",
 				"marines/stacker/status_re2.ogg",
 				"marines/stacker/status_re7.ogg",
 				"marines/stacker/status_re8.ogg",
 				},
-		['invt_vcl']	=	{
+		["invt_vcl"]	=	{
 				"marines/stacker/invt_vcl1.ogg",
 				"marines/stacker/invt_vcl2.ogg",
 				"marines/stacker/invt_vcl5.ogg",
@@ -12780,7 +12780,7 @@ ENT.Voices = {
 				"marines/stacker/invt_vcl8.ogg",
 				"marines/stacker/invt_vcl9.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"marines/stacker/scld_plr_hrt_blt1.ogg",
 				"marines/stacker/scld_plr_hrt_blt10.ogg",
 				"marines/stacker/scld_plr_hrt_blt13.ogg",
@@ -12794,29 +12794,29 @@ ENT.Voices = {
 				"marines/stacker/scld_plr_hrt_blt8.ogg",
 				"marines/stacker/scld_plr_hrt_blt9.ogg",
 				},
-		['entervcl_drvr']	=	{
+		["entervcl_drvr"]	=	{
 				"marines/stacker/entervcl_drvr1.ogg",
 				"marines/stacker/entervcl_drvr3.ogg",
 				"marines/stacker/entervcl_drvr4.ogg",
 				},
-		['warn_vcl_chpr']	=	{
+		["warn_vcl_chpr"]	=	{
 				"marines/stacker/warn_vcl_chpr2.ogg",
 				"marines/stacker/warn_vcl_chpr3.ogg",
 				"marines/stacker/warn_vcl_chpr4.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/stacker/ok_plr_mc1.ogg",
 				"marines/stacker/ok_plr_mc2.ogg",
 				"marines/stacker/ok_plr_mc3.ogg",
 				"marines/stacker/ok_plr_mc4.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"marines/stacker/lookcmbt_tim1.ogg",
 				"marines/stacker/lookcmbt_tim2.ogg",
 				"marines/stacker/lookcmbt_tim3.ogg",
 				"marines/stacker/lookcmbt_tim4.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/stacker/crs10.ogg",
 				"marines/stacker/crs11.ogg",
 				"marines/stacker/crs12.ogg",
@@ -12832,13 +12832,13 @@ ENT.Voices = {
 				"marines/stacker/crs7.ogg",
 				"marines/stacker/crs8.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/stacker/newordr_retreat2.ogg",
 				"marines/stacker/newordr_retreat3.ogg",
 				"marines/stacker/newordr_retreat4.ogg",
 				"marines/stacker/newordr_retreat5.ogg",
 				},
-		['scld_plr_wldvcl']	=	{
+		["scld_plr_wldvcl"]	=	{
 				"marines/stacker/scld_plr_wldvcl1.ogg",
 				"marines/stacker/scld_plr_wldvcl2.ogg",
 				"marines/stacker/scld_plr_wldvcl4.ogg",
@@ -12846,21 +12846,21 @@ ENT.Voices = {
 				"marines/stacker/scld_plr_wldvcl6.ogg",
 				"marines/stacker/scld_plr_wldvcl7.ogg",
 				},
-		['scld_plr_vclcrazy']	=	{
+		["scld_plr_vclcrazy"]	=	{
 				"marines/stacker/scld_plr_vclcrazy1.ogg",
 				"marines/stacker/scld_plr_vclcrazy2.ogg",
 				"marines/stacker/scld_plr_vclcrazy3.ogg",
 				"marines/stacker/scld_plr_vclcrazy4.ogg",
 				},
-		['pstcmbt_agg']	=	{
+		["pstcmbt_agg"]	=	{
 				"marines/stacker/pstcmbt_agg1.ogg",
 				"marines/stacker/pstcmbt_agg5.ogg",
 				},
-		['ordr_openfire']	=	{
+		["ordr_openfire"]	=	{
 				"marines/stacker/ordr_openfire2.ogg",
 				"marines/stacker/ordr_openfire4.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/stacker/pstcmbt1.ogg",
 				"marines/stacker/pstcmbt10.ogg",
 				"marines/stacker/pstcmbt11.ogg",
@@ -12868,7 +12868,7 @@ ENT.Voices = {
 				"marines/stacker/pstcmbt5.ogg",
 				"marines/stacker/pstcmbt9.ogg",
 				},
-		['prst']	=	{
+		["prst"]	=	{
 				"marines/stacker/prst1.ogg",
 				"marines/stacker/prst11.ogg",
 				"marines/stacker/prst12.ogg",
@@ -12877,12 +12877,12 @@ ENT.Voices = {
 				"marines/stacker/prst7.ogg",
 				"marines/stacker/prst9.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"marines/stacker/prs_plr_kll_lots2.ogg",
 				"marines/stacker/prs_plr_kll_lots3.ogg",
 				"marines/stacker/prs_plr_kll_lots5.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/stacker/prs_plr_mc11.ogg",
 				"marines/stacker/prs_plr_mc3.ogg",
 				"marines/stacker/prs_plr_mc4.ogg",
@@ -12891,14 +12891,14 @@ ENT.Voices = {
 				"marines/stacker/prs_plr_mc8.ogg",
 				"marines/stacker/prs_plr_mc9.ogg",
 				},
-		['captured']	=	{
+		["captured"]	=	{
 				"marines/stacker/captured1.ogg",
 				"marines/stacker/captured2.ogg",
 				"marines/stacker/captured3.ogg",
 				"marines/stacker/captured4.ogg",
 				"marines/stacker/captured5.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/stacker/ok_plr_trdwpn1.ogg",
 				"marines/stacker/ok_plr_trdwpn11.ogg",
 				"marines/stacker/ok_plr_trdwpn13.ogg",
@@ -12909,11 +12909,11 @@ ENT.Voices = {
 				"marines/stacker/ok_plr_trdwpn6.ogg",
 				"marines/stacker/ok_plr_trdwpn8.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"marines/stacker/warn_flood1.ogg",
 				"marines/stacker/warn_flood2.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/stacker/ok1.ogg",
 				"marines/stacker/ok2.ogg",
 				"marines/stacker/ok3.ogg",
@@ -12924,7 +12924,7 @@ ENT.Voices = {
 				"marines/stacker/ok8.ogg",
 				"marines/stacker/ok9.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"marines/stacker/lmnt_deadally12.ogg",
 				"marines/stacker/lmnt_deadally2.ogg",
 				"marines/stacker/lmnt_deadally4.ogg",
@@ -12932,19 +12932,19 @@ ENT.Voices = {
 				"marines/stacker/lmnt_deadally8.ogg",
 				"marines/stacker/lmnt_deadally9.ogg",
 				},
-		['grt_plr_srprs']	=	{
+		["grt_plr_srprs"]	=	{
 				"marines/stacker/grt_plr_srprs1.ogg",
 				"marines/stacker/grt_plr_srprs2.ogg",
 				"marines/stacker/grt_plr_srprs3.ogg",
 				"marines/stacker/grt_plr_srprs4.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/stacker/dth_mjr1.ogg",
 				"marines/stacker/dth_mjr2.ogg",
 				"marines/stacker/dth_mjr3.ogg",
 				"marines/stacker/dth_mjr4.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/stacker/lmnt_deadplr_arb1.ogg",
 				"marines/stacker/lmnt_deadplr_arb2.ogg",
 				"marines/stacker/lmnt_deadplr_arb3.ogg",
@@ -12952,11 +12952,11 @@ ENT.Voices = {
 				"marines/stacker/lmnt_deadplr_arb6.ogg",
 				"marines/stacker/lmnt_deadplr_arb7.ogg",
 				},
-		['strk_grnd_uncvr']	=	{
+		["strk_grnd_uncvr"]	=	{
 				"marines/stacker/strk_grnd_uncvr1.ogg",
 				"marines/stacker/strk_grnd_uncvr5.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/stacker/prs1.ogg",
 				"marines/stacker/prs11.ogg",
 				"marines/stacker/prs15.ogg",
@@ -12964,7 +12964,7 @@ ENT.Voices = {
 				"marines/stacker/prs4.ogg",
 				"marines/stacker/prs6.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/stacker/endcmbt1.ogg",
 				"marines/stacker/endcmbt13.ogg",
 				"marines/stacker/endcmbt16.ogg",
@@ -12974,7 +12974,7 @@ ENT.Voices = {
 				"marines/stacker/endcmbt8.ogg",
 				"marines/stacker/endcmbt9.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/stacker/hail1.ogg",
 				"marines/stacker/hail10.ogg",
 				"marines/stacker/hail2.ogg",
@@ -12983,11 +12983,11 @@ ENT.Voices = {
 				"marines/stacker/hail6.ogg",
 				"marines/stacker/hail8.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"marines/stacker/panic_onfire1.ogg",
 				"marines/stacker/panic_onfire2.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/stacker/forgive1.ogg",
 				"marines/stacker/forgive3.ogg",
 				"marines/stacker/forgive4.ogg",
@@ -12995,31 +12995,31 @@ ENT.Voices = {
 				"marines/stacker/forgive6.ogg",
 				"marines/stacker/forgive7.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"marines/stacker/prs_plr_gdgrnd2.ogg",
 				"marines/stacker/prs_plr_gdgrnd4.ogg",
 				},
-		['prs_plr_kll_vclbmp']	=	{
+		["prs_plr_kll_vclbmp"]	=	{
 				"marines/stacker/prs_plr_kll_vclbmp1.ogg",
 				"marines/stacker/prs_plr_kll_vclbmp2.ogg",
 				"marines/stacker/prs_plr_kll_vclbmp4.ogg",
 				"marines/stacker/prs_plr_kll_vclbmp5.ogg",
 				"marines/stacker/prs_plr_kll_vclbmp6.ogg",
 				},
-		['chkfoebdy']	=	{
+		["chkfoebdy"]	=	{
 				"marines/stacker/chkfoebdy1.ogg",
 				"marines/stacker/chkfoebdy2.ogg",
 				"marines/stacker/chkfoebdy3.ogg",
 				"marines/stacker/chkfoebdy4.ogg",
 				"marines/stacker/chkfoebdy7.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/stacker/fall1.ogg",
 				"marines/stacker/fall2.ogg",
 				"marines/stacker/fall3.ogg",
 				"marines/stacker/fall4.ogg",
 				},
-		['entervcl_trrt']	=	{
+		["entervcl_trrt"]	=	{
 				"marines/stacker/entervcl_trrt1.ogg",
 				"marines/stacker/entervcl_trrt2.ogg",
 				"marines/stacker/entervcl_trrt3.ogg",
@@ -13027,16 +13027,16 @@ ENT.Voices = {
 				"marines/stacker/entervcl_trrt6.ogg",
 				"marines/stacker/entervcl_trrt9.ogg",
 				},
-		['crs_betrayingplr_mc']	=	{
+		["crs_betrayingplr_mc"]	=	{
 				"marines/stacker/crs_betrayingplr_mc2.ogg",
 				"marines/stacker/crs_betrayingplr_mc3.ogg",
 				},
-		['dwn_wpn_snpr']	=	{
+		["dwn_wpn_snpr"]	=	{
 				"marines/stacker/dwn_wpn_snpr1.ogg",
 				"marines/stacker/dwn_wpn_snpr2.ogg",
 				"marines/stacker/dwn_wpn_snpr3.ogg",
 				},
-		['newordr_arrival']	=	{
+		["newordr_arrival"]	=	{
 				"marines/stacker/newordr_arrival1.ogg",
 				"marines/stacker/newordr_arrival2.ogg",
 				"marines/stacker/newordr_arrival3.ogg",
@@ -13044,7 +13044,7 @@ ENT.Voices = {
 				"marines/stacker/newordr_arrival5.ogg",
 				"marines/stacker/newordr_arrival6.ogg",
 				},
-		['grt_plr_vcl_empty']	=	{
+		["grt_plr_vcl_empty"]	=	{
 				"marines/stacker/grt_plr_vcl_empty1.ogg",
 				"marines/stacker/grt_plr_vcl_empty2.ogg",
 				"marines/stacker/grt_plr_vcl_empty4.ogg",
@@ -13052,12 +13052,12 @@ ENT.Voices = {
 				"marines/stacker/grt_plr_vcl_empty6.ogg",
 				"marines/stacker/grt_plr_vcl_empty7.ogg",
 				},
-		['ordr_keepwatch_agg']	=	{
+		["ordr_keepwatch_agg"]	=	{
 				"marines/stacker/ordr_keepwatch_agg1.ogg",
 				"marines/stacker/ordr_keepwatch_agg3.ogg",
 				"marines/stacker/ordr_keepwatch_agg5.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/stacker/stayback1.ogg",
 				"marines/stacker/stayback10.ogg",
 				"marines/stacker/stayback11.ogg",
@@ -13066,13 +13066,13 @@ ENT.Voices = {
 				"marines/stacker/stayback7.ogg",
 				"marines/stacker/stayback8.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/stacker/thnk_plr_mc1.ogg",
 				"marines/stacker/thnk_plr_mc3.ogg",
 				"marines/stacker/thnk_plr_mc5.ogg",
 				"marines/stacker/thnk_plr_mc6.ogg",
 				},
-		['foeordr_charge']	=	{
+		["foeordr_charge"]	=	{
 				"marines/stacker/foeordr_charge1.ogg",
 				"marines/stacker/foeordr_charge2.ogg",
 				"marines/stacker/foeordr_charge3.ogg",
@@ -13080,7 +13080,7 @@ ENT.Voices = {
 				"marines/stacker/foeordr_charge5.ogg",
 				"marines/stacker/foeordr_charge6.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/stacker/grt1.ogg",
 				"marines/stacker/grt10.ogg",
 				"marines/stacker/grt3.ogg",
@@ -13088,22 +13088,22 @@ ENT.Voices = {
 				"marines/stacker/grt6.ogg",
 				"marines/stacker/grt8.ogg",
 				},
-		['grt_intovcl_imgnr']	=	{
+		["grt_intovcl_imgnr"]	=	{
 				"marines/stacker/grt_intovcl_imgnr1.ogg",
 				"marines/stacker/grt_intovcl_imgnr5.ogg",
 				"marines/stacker/grt_intovcl_imgnr6.ogg",
 				"marines/stacker/grt_intovcl_imgnr7.ogg",
 				},
-		['rmd_wpn_snpr']	=	{
+		["rmd_wpn_snpr"]	=	{
 				"marines/stacker/rmd_wpn_snpr2.ogg",
 				"marines/stacker/rmd_wpn_snpr5.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/stacker/crs_betrayingplr_arb1.ogg",
 				"marines/stacker/crs_betrayingplr_arb2.ogg",
 				"marines/stacker/crs_betrayingplr_arb3.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/stacker/chr_kllfoe1.ogg",
 				"marines/stacker/chr_kllfoe10.ogg",
 				"marines/stacker/chr_kllfoe11.ogg",
@@ -13112,23 +13112,23 @@ ENT.Voices = {
 				"marines/stacker/chr_kllfoe4.ogg",
 				"marines/stacker/chr_kllfoe8.ogg",
 				},
-		['entervcl_gnr']	=	{
+		["entervcl_gnr"]	=	{
 				"marines/stacker/entervcl_gnr1.ogg",
 				"marines/stacker/entervcl_gnr2.ogg",
 				"marines/stacker/entervcl_gnr3.ogg",
 				"marines/stacker/entervcl_gnr5.ogg",
 				},
-		['warn_incmn_fldbm']	=	{
+		["warn_incmn_fldbm"]	=	{
 				"marines/stacker/warn_incmn_fldbm1.ogg",
 				"marines/stacker/warn_incmn_fldbm2.ogg",
 				"marines/stacker/warn_incmn_fldbm3.ogg",
 				},
-		['prs_plr_kll_mjr']	=	{
+		["prs_plr_kll_mjr"]	=	{
 				"marines/stacker/prs_plr_kll_mjr2.ogg",
 				"marines/stacker/prs_plr_kll_mjr4.ogg",
 				"marines/stacker/prs_plr_kll_mjr5.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/stacker/look_plr_mc1.ogg",
 				"marines/stacker/look_plr_mc2.ogg",
 				"marines/stacker/look_plr_mc3.ogg",
@@ -13136,7 +13136,7 @@ ENT.Voices = {
 				"marines/stacker/look_plr_mc5.ogg",
 				"marines/stacker/look_plr_mc6.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/stacker/newordr_moveon1.ogg",
 				"marines/stacker/newordr_moveon2.ogg",
 				"marines/stacker/newordr_moveon3.ogg",
@@ -13144,12 +13144,12 @@ ENT.Voices = {
 				"marines/stacker/newordr_moveon6.ogg",
 				"marines/stacker/newordr_moveon7.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/stacker/pstcmbt_hrd1.ogg",
 				"marines/stacker/pstcmbt_hrd2.ogg",
 				"marines/stacker/pstcmbt_hrd3.ogg",
 				},
-		['prs_plr_kll_blt']	=	{
+		["prs_plr_kll_blt"]	=	{
 				"marines/stacker/prs_plr_kll_blt1.ogg",
 				"marines/stacker/prs_plr_kll_blt2.ogg",
 				"marines/stacker/prs_plr_kll_blt3.ogg",
@@ -13158,21 +13158,21 @@ ENT.Voices = {
 				"marines/stacker/prs_plr_kll_blt6.ogg",
 				"marines/stacker/prs_plr_kll_blt7.ogg",
 				},
-		['chr_vcljmp']	=	{
+		["chr_vcljmp"]	=	{
 				"marines/stacker/chr_vcljmp2.ogg",
 				"marines/stacker/chr_vcljmp4.ogg",
 				"marines/stacker/chr_vcljmp5.ogg",
 				"marines/stacker/chr_vcljmp6.ogg",
 				"marines/stacker/chr_vcljmp8.ogg",
 				},
-		['ordr_invsgt']	=	{
+		["ordr_invsgt"]	=	{
 				"marines/stacker/ordr_invsgt1.ogg",
 				"marines/stacker/ordr_invsgt2.ogg",
 				"marines/stacker/ordr_invsgt5.ogg",
 				"marines/stacker/ordr_invsgt6.ogg",
 				"marines/stacker/ordr_invsgt7.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/stacker/lift1.ogg",
 				"marines/stacker/lift10.ogg",
 				"marines/stacker/lift2.ogg",
@@ -13184,13 +13184,13 @@ ENT.Voices = {
 				"marines/stacker/lift8.ogg",
 				"marines/stacker/lift9.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/stacker/bump1.ogg",
 				"marines/stacker/bump2.ogg",
 				"marines/stacker/bump3.ogg",
 				"marines/stacker/bump4.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"marines/stacker/hrdfoe1.ogg",
 				"marines/stacker/hrdfoe12.ogg",
 				"marines/stacker/hrdfoe13.ogg",
@@ -13200,33 +13200,33 @@ ENT.Voices = {
 				"marines/stacker/hrdfoe5.ogg",
 				"marines/stacker/hrdfoe8.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/stacker/newordr_entervcl1.ogg",
 				"marines/stacker/newordr_entervcl3.ogg",
 				"marines/stacker/newordr_entervcl7.ogg",
 				"marines/stacker/newordr_entervcl9.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/stacker/look_plr_arb1.ogg",
 				"marines/stacker/look_plr_arb4.ogg",
 				"marines/stacker/look_plr_arb5.ogg",
 				"marines/stacker/look_plr_arb6.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/stacker/dth_hdsht1.ogg",
 				"marines/stacker/dth_hdsht2.ogg",
 				"marines/stacker/dth_hdsht3.ogg",
 				"marines/stacker/dth_hdsht4.ogg",
 				"marines/stacker/dth_hdsht6.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"marines/stacker/look_pstcmbt1.ogg",
 				"marines/stacker/look_pstcmbt4.ogg",
 				"marines/stacker/look_pstcmbt5.ogg",
 				"marines/stacker/look_pstcmbt7.ogg",
 				"marines/stacker/look_pstcmbt9.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/stacker/strk1.ogg",
 				"marines/stacker/strk10.ogg",
 				"marines/stacker/strk11.ogg",
@@ -13237,7 +13237,7 @@ ENT.Voices = {
 				"marines/stacker/strk4.ogg",
 				"marines/stacker/strk6.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/stacker/lmnt_deadplr_mc1.ogg",
 				"marines/stacker/lmnt_deadplr_mc10.ogg",
 				"marines/stacker/lmnt_deadplr_mc11.ogg",
@@ -13247,39 +13247,39 @@ ENT.Voices = {
 				"marines/stacker/lmnt_deadplr_mc7.ogg",
 				"marines/stacker/lmnt_deadplr_mc9.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/stacker/newordr_leaveplr1.ogg",
 				"marines/stacker/newordr_leaveplr2.ogg",
 				"marines/stacker/newordr_leaveplr3.ogg",
 				"marines/stacker/newordr_leaveplr6.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/stacker/foeordr_support1.ogg",
 				"marines/stacker/foeordr_support2.ogg",
 				"marines/stacker/foeordr_support3.ogg",
 				"marines/stacker/foeordr_support4.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/stacker/ok_plr_trdst_dvr1.ogg",
 				"marines/stacker/ok_plr_trdst_dvr2.ogg",
 				"marines/stacker/ok_plr_trdst_dvr3.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/stacker/stun1.ogg",
 				"marines/stacker/stun2.ogg",
 				"marines/stacker/stun3.ogg",
 				},
-		['ordr_stayback']	=	{
+		["ordr_stayback"]	=	{
 				"marines/stacker/ordr_stayback1.ogg",
 				"marines/stacker/ordr_stayback4.ogg",
 				"marines/stacker/ordr_stayback5.ogg",
 				"marines/stacker/ordr_stayback7.ogg",
 				},
-		['ok_plr_trdst_gnr']	=	{
+		["ok_plr_trdst_gnr"]	=	{
 				"marines/stacker/ok_plr_trdst_gnr1.ogg",
 				"marines/stacker/ok_plr_trdst_gnr2.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/stacker/foeordr_retreat1.ogg",
 				"marines/stacker/foeordr_retreat2.ogg",
 				"marines/stacker/foeordr_retreat3.ogg",
@@ -13288,7 +13288,7 @@ ENT.Voices = {
 				"marines/stacker/foeordr_retreat6.ogg",
 				"marines/stacker/foeordr_retreat7.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/stacker/lst_cntct1.ogg",
 				"marines/stacker/lst_cntct11.ogg",
 				"marines/stacker/lst_cntct13.ogg",
@@ -13300,17 +13300,17 @@ ENT.Voices = {
 				"marines/stacker/lst_cntct6.ogg",
 				"marines/stacker/lst_cntct9.ogg",
 				},
-		['dwn_vcl_chpr']	=	{
+		["dwn_vcl_chpr"]	=	{
 				"marines/stacker/dwn_vcl_chpr1.ogg",
 				"marines/stacker/dwn_vcl_chpr2.ogg",
 				"marines/stacker/dwn_vcl_chpr3.ogg",
 				},
-		['warn_stlth']	=	{
+		["warn_stlth"]	=	{
 				"marines/stacker/warn_stlth2.ogg",
 				"marines/stacker/warn_stlth3.ogg",
 				"marines/stacker/warn_stlth4.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/stacker/betray1.ogg",
 				"marines/stacker/betray2.ogg",
 				"marines/stacker/betray4.ogg",
@@ -13318,12 +13318,12 @@ ENT.Voices = {
 				"marines/stacker/betray6.ogg",
 				"marines/stacker/betray9.ogg",
 				},
-		['dwn_vcl_bnsh']	=	{
+		["dwn_vcl_bnsh"]	=	{
 				"marines/stacker/dwn_vcl_bnsh1.ogg",
 				"marines/stacker/dwn_vcl_bnsh3.ogg",
 				"marines/stacker/dwn_vcl_bnsh5.ogg",
 				},
-		['grt_intovcl']	=	{
+		["grt_intovcl"]	=	{
 				"marines/stacker/grt_intovcl1.ogg",
 				"marines/stacker/grt_intovcl3.ogg",
 				"marines/stacker/grt_intovcl6.ogg",
@@ -13331,23 +13331,23 @@ ENT.Voices = {
 				"marines/stacker/grt_intovcl8.ogg",
 				"marines/stacker/grt_intovcl9.ogg",
 				},
-		['entervcl_psngr']	=	{
+		["entervcl_psngr"]	=	{
 				"marines/stacker/entervcl_psngr1.ogg",
 				"marines/stacker/entervcl_psngr2.ogg",
 				},
-		['warn_trrt']	=	{
+		["warn_trrt"]	=	{
 				"marines/stacker/warn_trrt1.ogg",
 				"marines/stacker/warn_trrt2.ogg",
 				"marines/stacker/warn_trrt3.ogg",
 				}
 	},
 	["Cop1"] = {
-	['cvr_invsgt']	=	{
+	["cvr_invsgt"]	=	{
 				"cop1/cvr_invsgt_100.ogg",
 				"cop1/cvr_invsgt_101.ogg",
 				"cop1/cvr_invsgt_102.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"cop1/dodge_100.ogg",
 				"cop1/dodge_101.ogg",
 				"cop1/dodge_102.ogg",
@@ -13355,39 +13355,39 @@ ENT.Voices = {
 				"cop1/dodge_104.ogg",
 				"cop1/dodge_105.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"cop1/morefoe_100.ogg",
 				"cop1/morefoe_101.ogg",
 				"cop1/morefoe_102.ogg",
 				"cop1/morefoe_103.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"cop1/panic_onfire2.ogg",
 				"cop1/panic_onfire3.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"cop1/srch_pinned_100.ogg",
 				"cop1/srch_pinned_101.ogg",
 				"cop1/srch_pinned_102.ogg",
 				"cop1/srch_pinned_103.ogg",
 				"cop1/srch_pinned_104.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"cop1/foeordr_support_100.ogg",
 				"cop1/foeordr_support_101.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"cop1/hrdfoe_100.ogg",
 				"cop1/hrdfoe_101.ogg",
 				"cop1/hrdfoe_102.ogg",
 				"cop1/hrdfoe_103.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"cop1/hail_tim_102.ogg",
 				"cop1/hail_tim_103.ogg",
 				"cop1/hail_tim_105.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"cop1/lift_100.ogg",
 				"cop1/lift_101.ogg",
 				"cop1/lift_102.ogg",
@@ -13397,11 +13397,11 @@ ENT.Voices = {
 				"cop1/lift_106.ogg",
 				"cop1/lift_107.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"cop1/cvr_re_101.ogg",
 				"cop1/cvr_re_102.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"cop1/look_100.ogg",
 				"cop1/look_101.ogg",
 				"cop1/look_102.ogg",
@@ -13411,18 +13411,18 @@ ENT.Voices = {
 				"cop1/look_106.ogg",
 				"cop1/look_107.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"cop1/foundfoe_100.ogg",
 				"cop1/foundfoe_101.ogg",
 				"cop1/foundfoe_102.ogg",
 				"cop1/foundfoe_103.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"cop1/pstcmbt_100.ogg",
 				"cop1/pstcmbt_101.ogg",
 				"cop1/pstcmbt_102.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"cop1/dth_100.ogg",
 				"cop1/dth_101.ogg",
 				"cop1/dth_102.ogg",
@@ -13443,7 +13443,7 @@ ENT.Voices = {
 				"cop1/dth_118.ogg",
 				"cop1/dth_119.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"cop1/pain10.ogg",
 				"cop1/pain11.ogg",
 				"cop1/pain12.ogg",
@@ -13460,7 +13460,7 @@ ENT.Voices = {
 				"cop1/pain8.ogg",
 				"cop1/pain9.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"cop1/pain_fall2.ogg",
 				"cop1/pain_fall3.ogg",
 				"cop1/pain_fall4.ogg",
@@ -13468,7 +13468,7 @@ ENT.Voices = {
 				"cop1/pain_fall6.ogg",
 				"cop1/pain_fall7.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"cop1/pain_mdm_100.ogg",
 				"cop1/pain_mdm_101.ogg",
 				"cop1/pain_mdm_102.ogg",
@@ -13479,7 +13479,7 @@ ENT.Voices = {
 				"cop1/pain_mdm_107.ogg",
 				"cop1/pain_mdm_108.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"cop1/lift10.ogg",
 				"cop1/lift11.ogg",
 				"cop1/lift12.ogg",
@@ -13491,29 +13491,29 @@ ENT.Voices = {
 				"cop1/lift18.ogg",
 				"cop1/lift4.ogg",
 				},
-		['rtrt']	=	{
+		["rtrt"]	=	{
 				"cop1/rtrt_100.ogg",
 				"cop1/rtrt_101.ogg",
 				"cop1/rtrt_104.ogg",
 				"cop1/rtrt_105.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"cop1/warn_incmn_100.ogg",
 				"cop1/warn_incmn_101.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"cop1/grt_100.ogg",
 				"cop1/grt_101.ogg",
 				"cop1/grt_102.ogg",
 				"cop1/grt_103.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"cop1/scld_plr_hrt_blt_100.ogg",
 				"cop1/scld_plr_hrt_blt_101.ogg",
 				"cop1/scld_plr_hrt_blt_102.ogg",
 				"cop1/scld_plr_hrt_blt_103.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"cop1/bump_100.ogg",
 				"cop1/bump_101.ogg",
 				"cop1/bump_102.ogg",
@@ -13522,33 +13522,33 @@ ENT.Voices = {
 				"cop1/bump_105.ogg",
 				"cop1/bump_106.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"cop1/scld_plr_wldgrnd_100.ogg",
 				"cop1/scld_plr_wldgrnd_101.ogg",
 				"cop1/scld_plr_wldgrnd_103.ogg",
 				"cop1/scld_plr_wldgrnd_104.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"cop1/seefoe_agg_100.ogg",
 				"cop1/seefoe_agg_101.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"cop1/scld_plr_blocking_100.ogg",
 				"cop1/scld_plr_blocking_101.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"cop1/foeordr_advance_100.ogg",
 				"cop1/foeordr_advance_101.ogg",
 				"cop1/foeordr_advance_102.ogg",
 				"cop1/foeordr_advance_103.ogg",
 				},
-		['prst_fail']	=	{
+		["prst_fail"]	=	{
 				"cop1/prst_fail_100.ogg",
 				"cop1/prst_fail_101.ogg",
 				"cop1/prst_fail_102.ogg",
 				"cop1/prst_fail_104.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"cop1/thnk_100.ogg",
 				"cop1/thnk_101.ogg",
 				"cop1/thnk_102.ogg",
@@ -13556,7 +13556,7 @@ ENT.Voices = {
 				"cop1/thnk_104.ogg",
 				"cop1/thnk_105.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"cop1/thrwn_100.ogg",
 				"cop1/thrwn_101.ogg",
 				"cop1/thrwn_102.ogg",
@@ -13564,40 +13564,40 @@ ENT.Voices = {
 				"cop1/thrwn_104.ogg",
 				"cop1/thrwn_105.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"cop1/prs_plr_gdgrnd_100.ogg",
 				"cop1/prs_plr_gdgrnd_101.ogg",
 				"cop1/prs_plr_gdgrnd_102.ogg",
 				"cop1/prs_plr_gdgrnd_103.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"cop1/endcmbt_100.ogg",
 				"cop1/endcmbt_101.ogg",
 				"cop1/endcmbt_102.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"cop1/whn_100.ogg",
 				"cop1/whn_101.ogg",
 				"cop1/whn_102.ogg",
 				"cop1/whn_103.ogg",
 				"cop1/whn_104.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"cop1/warn_vcl_phntm_100.ogg",
 				"cop1/warn_vcl_phntm_101.ogg",
 				"cop1/warn_vcl_phntm_102.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"cop1/warn_incmn_grnd_100.ogg",
 				"cop1/warn_incmn_grnd_102.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"cop1/lookcmbt_100.ogg",
 				"cop1/lookcmbt_101.ogg",
 				"cop1/lookcmbt_102.ogg",
 				"cop1/lookcmbt_103.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"cop1/dth_slnt1.ogg",
 				"cop1/dth_slnt12.ogg",
 				"cop1/dth_slnt2.ogg",
@@ -13609,45 +13609,45 @@ ENT.Voices = {
 				"cop1/dth_slnt8.ogg",
 				"cop1/dth_slnt9.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"cop1/ok_plr_trdwpn_101.ogg",
 				"cop1/ok_plr_trdwpn_102.ogg",
 				"cop1/ok_plr_trdwpn_103.ogg",
 				"cop1/ok_plr_trdwpn_104.ogg",
 				"cop1/ok_plr_trdwpn_105.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"cop1/warn_chr_bggr_100.ogg",
 				"cop1/warn_chr_bggr_101.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"cop1/warn_100.ogg",
 				"cop1/warn_101.ogg",
 				"cop1/warn_102.ogg",
 				"cop1/warn_103.ogg",
 				"cop1/warn_104.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"cop1/tnt_100.ogg",
 				"cop1/tnt_102.ogg",
 				"cop1/tnt_103.ogg",
 				"cop1/tnt_104.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"cop1/chr_kllfoe_100.ogg",
 				"cop1/chr_kllfoe_101.ogg",
 				"cop1/chr_kllfoe_102.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"cop1/look_pstcmbt_100.ogg",
 				"cop1/look_pstcmbt_101.ogg",
 				"cop1/look_pstcmbt_102.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"cop1/whn_re_100.ogg",
 				"cop1/whn_re_101.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"cop1/pain_mjr1.ogg",
 				"cop1/pain_mjr2.ogg",
 				"cop1/pain_mjr3.ogg",
@@ -13658,7 +13658,7 @@ ENT.Voices = {
 				"cop1/pain_mjr8.ogg",
 				"cop1/pain_mjr9.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"cop1/pain_mjr_100.ogg",
 				"cop1/pain_mjr_101.ogg",
 				"cop1/pain_mjr_102.ogg",
@@ -13672,14 +13672,14 @@ ENT.Voices = {
 				"cop1/pain_mjr_110.ogg",
 				"cop1/pain_mjr_111.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"cop1/lmnt_deadplr_mc_100.ogg",
 				"cop1/lmnt_deadplr_mc_101.ogg",
 				"cop1/lmnt_deadplr_mc_103.ogg",
 				"cop1/lmnt_deadplr_mc_104.ogg",
 				"cop1/lmnt_deadplr_mc_105.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"cop1/dth_hdsht1.ogg",
 				"cop1/dth_hdsht2.ogg",
 				"cop1/dth_hdsht3.ogg",
@@ -13688,24 +13688,24 @@ ENT.Voices = {
 				"cop1/dth_hdsht6.ogg",
 				"cop1/dth_hdsht7.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"cop1/dwn_vcl_wrth_100.ogg",
 				"cop1/dwn_vcl_wrth_101.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"cop1/scld_plr_hrtme_100.ogg",
 				"cop1/scld_plr_hrtme_101.ogg",
 				"cop1/scld_plr_hrtme_102.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"cop1/rmd_100.ogg",
 				"cop1/rmd_101.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"cop1/seefoe_tim_100.ogg",
 				"cop1/seefoe_tim_101.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"cop1/prs_100.ogg",
 				"cop1/prs_101.ogg",
 				"cop1/prs_102.ogg",
@@ -13713,29 +13713,29 @@ ENT.Voices = {
 				"cop1/prs_104.ogg",
 				"cop1/prs_105.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"cop1/cvr_100.ogg",
 				"cop1/cvr_101.ogg",
 				"cop1/cvr_102.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"cop1/dth_drama1.ogg",
 				"cop1/dth_drama2.ogg",
 				"cop1/dth_drama3.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"cop1/forgive_100.ogg",
 				"cop1/forgive_101.ogg",
 				"cop1/forgive_102.ogg",
 				"cop1/forgive_103.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"cop1/seefoe_100.ogg",
 				"cop1/seefoe_101.ogg",
 				"cop1/seefoe_102.ogg",
 				"cop1/seefoe_103.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"cop1/dth_mjr1.ogg",
 				"cop1/dth_mjr3.ogg",
 				"cop1/dth_mjr4.ogg",
@@ -13744,7 +13744,7 @@ ENT.Voices = {
 				"cop1/dth_mjr7.ogg",
 				"cop1/dth_mjr8.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"cop1/srprs_100.ogg",
 				"cop1/srprs_101.ogg",
 				"cop1/srprs_103.ogg",
@@ -13753,23 +13753,23 @@ ENT.Voices = {
 				"cop1/srprs_106.ogg",
 				"cop1/srprs_107.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"cop1/rmd_vcl_wrth_100.ogg",
 				"cop1/rmd_vcl_wrth_101.ogg",
 				"cop1/rmd_vcl_wrth_102.ogg",
 				"cop1/rmd_vcl_wrth_103.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"cop1/rmd_vcl_phntm_100.ogg",
 				"cop1/rmd_vcl_phntm_101.ogg",
 				"cop1/rmd_vcl_phntm_102.ogg",
 				"cop1/rmd_vcl_phntm_103.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"cop1/seefoe_upthere_100.ogg",
 				"cop1/seefoe_upthere_101.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"cop1/pain_fall_100.ogg",
 				"cop1/pain_fall_101.ogg",
 				"cop1/pain_fall_102.ogg",
@@ -13779,24 +13779,24 @@ ENT.Voices = {
 				"cop1/pain_fall_106.ogg",
 				"cop1/pain_fall_107.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"cop1/pstcmbt_hrd_100.ogg",
 				"cop1/pstcmbt_hrd_101.ogg",
 				"cop1/pstcmbt_hrd_102.ogg",
 				"cop1/pstcmbt_hrd_103.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"cop1/dive_101.ogg",
 				"cop1/dive_102.ogg",
 				"cop1/dive_103.ogg",
 				"cop1/dive_104.ogg",
 				"cop1/dive_105.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"cop1/panic_plsmgrnd_100.ogg",
 				"cop1/panic_plsmgrnd_101.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"cop1/pain_mdm1.ogg",
 				"cop1/pain_mdm10.ogg",
 				"cop1/pain_mdm12.ogg",
@@ -13811,14 +13811,14 @@ ENT.Voices = {
 				"cop1/pain_mdm8.ogg",
 				"cop1/pain_mdm9.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"cop1/panic_infctnfrm1.ogg",
 				"cop1/panic_infctnfrm4.ogg",
 				"cop1/panic_infctnfrm5.ogg",
 				"cop1/panic_infctnfrm6.ogg",
 				"cop1/panic_infctnfrm7.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"cop1/pain_100.ogg",
 				"cop1/pain_101.ogg",
 				"cop1/pain_102.ogg",
@@ -13830,43 +13830,43 @@ ENT.Voices = {
 				"cop1/pain_108.ogg",
 				"cop1/pain_109.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"cop1/seefoe_downthere_100.ogg",
 				"cop1/seefoe_downthere_101.ogg",
 				"cop1/seefoe_downthere_102.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"cop1/invsgt_100.ogg",
 				"cop1/invsgt_102.ogg",
 				"cop1/invsgt_103.ogg",
 				"cop1/invsgt_104.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"cop1/betray_100.ogg",
 				"cop1/betray_101.ogg",
 				"cop1/betray_102.ogg",
 				"cop1/betray_103.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"cop1/prs_plr_kll_100.ogg",
 				"cop1/prs_plr_kll_101.ogg",
 				"cop1/prs_plr_kll_102.ogg",
 				"cop1/prs_plr_kll_103.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"cop1/approve_100.ogg",
 				"cop1/approve_101.ogg",
 				"cop1/approve_102.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"cop1/dwn_100.ogg",
 				"cop1/dwn_101.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"cop1/look_pstcmbt_hrd_100.ogg",
 				"cop1/look_pstcmbt_hrd_101.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"cop1/fall2.ogg",
 				"cop1/fall3.ogg",
 				"cop1/fall4.ogg",
@@ -13874,7 +13874,7 @@ ENT.Voices = {
 				"cop1/fall6.ogg",
 				"cop1/fall7.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"cop1/dth1.ogg",
 				"cop1/dth2.ogg",
 				"cop1/dth3.ogg",
@@ -13884,12 +13884,12 @@ ENT.Voices = {
 				"cop1/dth7.ogg",
 				"cop1/dth9.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"cop1/newordr_moveon_100.ogg",
 				"cop1/newordr_moveon_101.ogg",
 				"cop1/newordr_moveon_102.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"cop1/melee_100.ogg",
 				"cop1/melee_101.ogg",
 				"cop1/melee_102.ogg",
@@ -13904,13 +13904,13 @@ ENT.Voices = {
 				"cop1/melee_113.ogg",
 				"cop1/melee_114.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"cop1/newordr_retreat_100.ogg",
 				"cop1/newordr_retreat_101.ogg",
 				"cop1/newordr_retreat_102.ogg",
 				"cop1/newordr_retreat_103.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"cop1/dth_hdsht_100.ogg",
 				"cop1/dth_hdsht_101.ogg",
 				"cop1/dth_hdsht_102.ogg",
@@ -13920,18 +13920,18 @@ ENT.Voices = {
 				"cop1/dth_hdsht_106.ogg",
 				"cop1/dth_hdsht_107.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"cop1/dth_slw1.ogg",
 				"cop1/dth_slw2.ogg",
 				"cop1/dth_slw3.ogg",
 				"cop1/dth_slw4.ogg",
 				"cop1/dth_slw5.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"cop1/lmnt_deadally_100.ogg",
 				"cop1/lmnt_deadally_101.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"cop1/stun_100.ogg",
 				"cop1/stun_101.ogg",
 				"cop1/stun_102.ogg",
@@ -13939,7 +13939,7 @@ ENT.Voices = {
 				"cop1/stun_104.ogg",
 				"cop1/stun_105.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"cop1/chr_100.ogg",
 				"cop1/chr_101.ogg",
 				"cop1/chr_102.ogg",
@@ -13947,30 +13947,30 @@ ENT.Voices = {
 				"cop1/chr_104.ogg",
 				"cop1/chr_105.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"cop1/lookcmbt_tim_100.ogg",
 				"cop1/lookcmbt_tim_101.ogg",
 				"cop1/lookcmbt_tim_102.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"cop1/lst_cntct_100.ogg",
 				"cop1/lst_cntct_101.ogg",
 				"cop1/lst_cntct_102.ogg",
 				"cop1/lst_cntct_104.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"cop1/look_lngtme_100.ogg",
 				"cop1/look_lngtme_101.ogg",
 				"cop1/look_lngtme_102.ogg",
 				"cop1/look_lngtme_104.ogg",
 				"cop1/look_lngtme_105.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"cop1/prs_plr_kll_lots_100.ogg",
 				"cop1/prs_plr_kll_lots_102.ogg",
 				"cop1/prs_plr_kll_lots_103.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"cop1/dth_fall1.ogg",
 				"cop1/dth_fall10.ogg",
 				"cop1/dth_fall11.ogg",
@@ -13985,23 +13985,23 @@ ENT.Voices = {
 		}
 	},
 	["Cop2"] = {
-			['cvr_invsgt']	=	{
+			["cvr_invsgt"]	=	{
 				"cop2/cvr_invsgt_100.ogg",
 				"cop2/cvr_invsgt_101.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"cop2/dodge_100.ogg",
 				"cop2/dodge_101.ogg",
 				"cop2/dodge_102.ogg",
 				"cop2/dodge_103.ogg",
 				"cop2/dodge_104.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"cop2/morefoe_100.ogg",
 				"cop2/morefoe_102.ogg",
 				"cop2/morefoe_103.ogg",
 				},
-		['srch_pinned']	=	{
+		["srch_pinned"]	=	{
 				"cop2/srch_pinned_100.ogg",
 				"cop2/srch_pinned_101.ogg",
 				"cop2/srch_pinned_102.ogg",
@@ -14009,21 +14009,21 @@ ENT.Voices = {
 				"cop2/srch_pinned_104.ogg",
 				"cop2/srch_pinned_105.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"cop2/foeordr_support_100.ogg",
 				"cop2/foeordr_support_101.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"cop2/hrdfoe_100.ogg",
 				"cop2/hrdfoe_101.ogg",
 				"cop2/hrdfoe_102.ogg",
 				"cop2/hrdfoe_103.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"cop2/hail_tim_100.ogg",
 				"cop2/hail_tim_101.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"cop2/lift_100.ogg",
 				"cop2/lift_101.ogg",
 				"cop2/lift_102.ogg",
@@ -14031,29 +14031,29 @@ ENT.Voices = {
 				"cop2/lift_104.ogg",
 				"cop2/lift_105.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"cop2/cvr_re_100.ogg",
 				"cop2/cvr_re_101.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"cop2/lst_cntct_100.ogg",
 				"cop2/lst_cntct_101.ogg",
 				"cop2/lst_cntct_102.ogg",
 				"cop2/lst_cntct_103.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"cop2/forgive_100.ogg",
 				"cop2/forgive_101.ogg",
 				"cop2/forgive_103.ogg",
 				"cop2/forgive_104.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"cop2/pstcmbt_100.ogg",
 				"cop2/pstcmbt_101.ogg",
 				"cop2/pstcmbt_102.ogg",
 				"cop2/pstcmbt_103.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"cop2/look_lngtme_100.ogg",
 				"cop2/look_lngtme_101.ogg",
 				"cop2/look_lngtme_102.ogg",
@@ -14063,7 +14063,7 @@ ENT.Voices = {
 				"cop2/look_lngtme_107.ogg",
 				"cop2/look_lngtme_108.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"cop2/pain1.ogg",
 				"cop2/pain10.ogg",
 				"cop2/pain11.ogg",
@@ -14081,20 +14081,20 @@ ENT.Voices = {
 				"cop2/pain8.ogg",
 				"cop2/pain9.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"cop2/pstcmbt_hrd_100.ogg",
 				"cop2/pstcmbt_hrd_101.ogg",
 				"cop2/pstcmbt_hrd_102.ogg",
 				"cop2/pstcmbt_hrd_103.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"cop2/pain_mdm_100.ogg",
 				"cop2/pain_mdm_101.ogg",
 				"cop2/pain_mdm_102.ogg",
 				"cop2/pain_mdm_103.ogg",
 				"cop2/pain_mdm_104.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"cop2/lift1.ogg",
 				"cop2/lift2.ogg",
 				"cop2/lift3.ogg",
@@ -14102,27 +14102,27 @@ ENT.Voices = {
 				"cop2/lift5.ogg",
 				"cop2/lift6.ogg",
 				},
-		['rtrt']	=	{
+		["rtrt"]	=	{
 				"cop2/rtrt_100.ogg",
 				"cop2/rtrt_101.ogg",
 				"cop2/rtrt_102.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"cop2/warn_incmn_100.ogg",
 				"cop2/warn_incmn_101.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"cop2/grt_101.ogg",
 				"cop2/grt_102.ogg",
 				"cop2/grt_103.ogg",
 				"cop2/grt_104.ogg",
 				},
-		['scld_plr_hrt_blt']	=	{
+		["scld_plr_hrt_blt"]	=	{
 				"cop2/scld_plr_hrt_blt_100.ogg",
 				"cop2/scld_plr_hrt_blt_101.ogg",
 				"cop2/scld_plr_hrt_blt_102.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"cop2/bump_100.ogg",
 				"cop2/bump_101.ogg",
 				"cop2/bump_102.ogg",
@@ -14132,74 +14132,74 @@ ENT.Voices = {
 				"cop2/bump_106.ogg",
 				"cop2/bump_107.ogg",
 				},
-		['scld_plr_wldgrnd']	=	{
+		["scld_plr_wldgrnd"]	=	{
 				"cop2/scld_plr_wldgrnd_100.ogg",
 				"cop2/scld_plr_wldgrnd_101.ogg",
 				},
-		['seefoe_agg']	=	{
+		["seefoe_agg"]	=	{
 				"cop2/seefoe_agg_100.ogg",
 				"cop2/seefoe_agg_101.ogg",
 				"cop2/seefoe_agg_102.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"cop2/scld_plr_blocking_100.ogg",
 				"cop2/scld_plr_blocking_101.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"cop2/foeordr_advance_100.ogg",
 				"cop2/foeordr_advance_101.ogg",
 				},
-		['prst_fail']	=	{
+		["prst_fail"]	=	{
 				"cop2/prst_fail_100.ogg",
 				"cop2/prst_fail_101.ogg",
 				"cop2/prst_fail_102.ogg",
 				"cop2/prst_fail_103.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"cop2/thnk_100.ogg",
 				"cop2/thnk_101.ogg",
 				"cop2/thnk_102.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"cop2/thrwn_100.ogg",
 				"cop2/thrwn_101.ogg",
 				"cop2/thrwn_102.ogg",
 				"cop2/thrwn_103.ogg",
 				"cop2/thrwn_104.ogg",
 				},
-		['prs_plr_gdgrnd']	=	{
+		["prs_plr_gdgrnd"]	=	{
 				"cop2/prs_plr_gdgrnd_100.ogg",
 				"cop2/prs_plr_gdgrnd_101.ogg",
 				"cop2/prs_plr_gdgrnd_102.ogg",
 				"cop2/prs_plr_gdgrnd_103.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"cop2/endcmbt_100.ogg",
 				"cop2/endcmbt_101.ogg",
 				"cop2/endcmbt_102.ogg",
 				"cop2/endcmbt_103.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"cop2/whn_100.ogg",
 				"cop2/whn_101.ogg",
 				"cop2/whn_102.ogg",
 				"cop2/whn_103.ogg",
 				},
-		['warn_vcl_phntm']	=	{
+		["warn_vcl_phntm"]	=	{
 				"cop2/warn_vcl_phntm_100.ogg",
 				"cop2/warn_vcl_phntm_101.ogg",
 				},
-		['warn_incmn_grnd']	=	{
+		["warn_incmn_grnd"]	=	{
 				"cop2/warn_incmn_grnd_100.ogg",
 				"cop2/warn_incmn_grnd_101.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"cop2/lookcmbt_100.ogg",
 				"cop2/lookcmbt_101.ogg",
 				"cop2/lookcmbt_103.ogg",
 				"cop2/lookcmbt_104.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"cop2/dth_slnt1.ogg",
 				"cop2/dth_slnt2.ogg",
 				"cop2/dth_slnt3.ogg",
@@ -14209,44 +14209,44 @@ ENT.Voices = {
 				"cop2/dth_slnt7.ogg",
 				"cop2/dth_slnt8.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"cop2/ok_plr_trdwpn_100.ogg",
 				"cop2/ok_plr_trdwpn_101.ogg",
 				"cop2/ok_plr_trdwpn_102.ogg",
 				"cop2/ok_plr_trdwpn_103.ogg",
 				},
-		['warn_chr_bggr']	=	{
+		["warn_chr_bggr"]	=	{
 				"cop2/warn_chr_bggr_100.ogg",
 				"cop2/warn_chr_bggr_101.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"cop2/warn_100.ogg",
 				"cop2/warn_101.ogg",
 				"cop2/warn_102.ogg",
 				"cop2/warn_103.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"cop2/tnt_100.ogg",
 				"cop2/tnt_101.ogg",
 				"cop2/tnt_102.ogg",
 				"cop2/tnt_103.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"cop2/chr_kllfoe_100.ogg",
 				"cop2/chr_kllfoe_101.ogg",
 				"cop2/chr_kllfoe_102.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"cop2/look_pstcmbt_100.ogg",
 				"cop2/look_pstcmbt_101.ogg",
 				"cop2/look_pstcmbt_102.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"cop2/whn_re_100.ogg",
 				"cop2/whn_re_101.ogg",
 				"cop2/whn_re_102.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"cop2/pain_mjr1.ogg",
 				"cop2/pain_mjr10.ogg",
 				"cop2/pain_mjr11.ogg",
@@ -14259,7 +14259,7 @@ ENT.Voices = {
 				"cop2/pain_mjr8.ogg",
 				"cop2/pain_mjr9.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"cop2/pain_mjr_100.ogg",
 				"cop2/pain_mjr_101.ogg",
 				"cop2/pain_mjr_102.ogg",
@@ -14267,92 +14267,92 @@ ENT.Voices = {
 				"cop2/pain_mjr_104.ogg",
 				"cop2/pain_mjr_105.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"cop2/lmnt_deadplr_mc_100.ogg",
 				"cop2/lmnt_deadplr_mc_102.ogg",
 				"cop2/lmnt_deadplr_mc_103.ogg",
 				"cop2/lmnt_deadplr_mc_104.ogg",
 				"cop2/lmnt_deadplr_mc_105.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"cop2/pain_100.ogg",
 				"cop2/pain_101.ogg",
 				"cop2/pain_102.ogg",
 				"cop2/pain_103.ogg",
 				"cop2/pain_104.ogg",
 				},
-		['dwn_vcl_wrth']	=	{
+		["dwn_vcl_wrth"]	=	{
 				"cop2/dwn_vcl_wrth_100.ogg",
 				"cop2/dwn_vcl_wrth_101.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"cop2/scld_plr_hrtme_100.ogg",
 				"cop2/scld_plr_hrtme_101.ogg",
 				"cop2/scld_plr_hrtme_102.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"cop2/rmd_100.ogg",
 				"cop2/rmd_101.ogg",
 				"cop2/rmd_102.ogg",
 				"cop2/rmd_103.ogg",
 				},
-		['seefoe_tim']	=	{
+		["seefoe_tim"]	=	{
 				"cop2/seefoe_tim_100.ogg",
 				"cop2/seefoe_tim_101.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"cop2/prs_101.ogg",
 				"cop2/prs_102.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"cop2/cvr_100.ogg",
 				"cop2/cvr_101.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"cop2/dth_drama1.ogg",
 				"cop2/dth_drama2.ogg",
 				"cop2/dth_drama3.ogg",
 				"cop2/dth_drama4.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"cop2/betray_100.ogg",
 				"cop2/betray_101.ogg",
 				"cop2/betray_102.ogg",
 				"cop2/betray_103.ogg",
 				"cop2/betray_104.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"cop2/seefoe_100.ogg",
 				"cop2/seefoe_101.ogg",
 				"cop2/seefoe_102.ogg",
 				"cop2/seefoe_103.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"cop2/approve_100.ogg",
 				"cop2/approve_101.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"cop2/srprs_100.ogg",
 				"cop2/srprs_101.ogg",
 				"cop2/srprs_102.ogg",
 				"cop2/srprs_103.ogg",
 				},
-		['rmd_vcl_wrth']	=	{
+		["rmd_vcl_wrth"]	=	{
 				"cop2/rmd_vcl_wrth_100.ogg",
 				"cop2/rmd_vcl_wrth_101.ogg",
 				"cop2/rmd_vcl_wrth_102.ogg",
 				"cop2/rmd_vcl_wrth_103.ogg",
 				},
-		['rmd_vcl_phntm']	=	{
+		["rmd_vcl_phntm"]	=	{
 				"cop2/rmd_vcl_phntm_100.ogg",
 				"cop2/rmd_vcl_phntm_101.ogg",
 				},
-		['seefoe_upthere']	=	{
+		["seefoe_upthere"]	=	{
 				"cop2/seefoe_upthere_100.ogg",
 				"cop2/seefoe_upthere_101.ogg",
 				"cop2/seefoe_upthere_102.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"cop2/pain_fall_100.ogg",
 				"cop2/pain_fall_101.ogg",
 				"cop2/pain_fall_102.ogg",
@@ -14371,7 +14371,7 @@ ENT.Voices = {
 				"cop2/pain_fall_115.ogg",
 				"cop2/pain_fall_116.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"cop2/foundfoe_100.ogg",
 				"cop2/foundfoe_101.ogg",
 				"cop2/foundfoe_102.ogg",
@@ -14379,7 +14379,7 @@ ENT.Voices = {
 				"cop2/foundfoe_104.ogg",
 				"cop2/foundfoe_105.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"cop2/dive_100.ogg",
 				"cop2/dive_101.ogg",
 				"cop2/dive_102.ogg",
@@ -14387,14 +14387,14 @@ ENT.Voices = {
 				"cop2/dive_104.ogg",
 				"cop2/dive_105.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"cop2/panic_plsmgrnd_100.ogg",
 				"cop2/panic_plsmgrnd_101.ogg",
 				"cop2/panic_plsmgrnd_103.ogg",
 				"cop2/panic_plsmgrnd_104.ogg",
 				"cop2/panic_plsmgrnd_105.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"cop2/dth_100.ogg",
 				"cop2/dth_101.ogg",
 				"cop2/dth_102.ogg",
@@ -14414,7 +14414,7 @@ ENT.Voices = {
 				"cop2/dth_116.ogg",
 				"cop2/dth_117.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"cop2/panic_infctnfrm1.ogg",
 				"cop2/panic_infctnfrm2.ogg",
 				"cop2/panic_infctnfrm3.ogg",
@@ -14422,33 +14422,33 @@ ENT.Voices = {
 				"cop2/panic_infctnfrm5.ogg",
 				"cop2/panic_infctnfrm6.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"cop2/chr_100.ogg",
 				"cop2/chr_101.ogg",
 				"cop2/chr_102.ogg",
 				},
-		['seefoe_downthere']	=	{
+		["seefoe_downthere"]	=	{
 				"cop2/seefoe_downthere_100.ogg",
 				"cop2/seefoe_downthere_101.ogg",
 				"cop2/seefoe_downthere_102.ogg",
 				"cop2/seefoe_downthere_103.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"cop2/lookcmbt_tim_100.ogg",
 				"cop2/lookcmbt_tim_101.ogg",
 				"cop2/lookcmbt_tim_102.ogg",
 				},
-		['invsgt']	=	{
+		["invsgt"]	=	{
 				"cop2/invsgt1.ogg",
 				"cop2/invsgt2.ogg",
 				"cop2/invsgt3.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"cop2/prs_plr_kll_100.ogg",
 				"cop2/prs_plr_kll_101.ogg",
 				"cop2/prs_plr_kll_102.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"cop2/dth_hdsht1.ogg",
 				"cop2/dth_hdsht2.ogg",
 				"cop2/dth_hdsht3.ogg",
@@ -14458,18 +14458,18 @@ ENT.Voices = {
 				"cop2/dth_hdsht7.ogg",
 				"cop2/dth_hdsht8.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"cop2/dwn_100.ogg",
 				"cop2/dwn_101.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"cop2/look_100.ogg",
 				"cop2/look_101.ogg",
 				"cop2/look_102.ogg",
 				"cop2/look_104.ogg",
 				"cop2/look_105.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"cop2/fall1.ogg",
 				"cop2/fall2.ogg",
 				"cop2/fall3.ogg",
@@ -14477,7 +14477,7 @@ ENT.Voices = {
 				"cop2/fall5.ogg",
 				"cop2/fall6.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"cop2/dth1.ogg",
 				"cop2/dth2.ogg",
 				"cop2/dth3.ogg",
@@ -14487,11 +14487,11 @@ ENT.Voices = {
 				"cop2/dth7.ogg",
 				"cop2/dth8.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"cop2/newordr_moveon_100.ogg",
 				"cop2/newordr_moveon_101.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"cop2/melee_100.ogg",
 				"cop2/melee_101.ogg",
 				"cop2/melee_102.ogg",
@@ -14499,11 +14499,11 @@ ENT.Voices = {
 				"cop2/melee_104.ogg",
 				"cop2/melee_105.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"cop2/newordr_retreat_100.ogg",
 				"cop2/newordr_retreat_101.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"cop2/dth_hdsht_100.ogg",
 				"cop2/dth_hdsht_101.ogg",
 				"cop2/dth_hdsht_102.ogg",
@@ -14514,16 +14514,16 @@ ENT.Voices = {
 				"cop2/dth_hdsht_108.ogg",
 				"cop2/dth_hdsht_109.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"cop2/dth_slw1.ogg",
 				"cop2/dth_slw2.ogg",
 				"cop2/dth_slw3.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"cop2/lmnt_deadally_100.ogg",
 				"cop2/lmnt_deadally_101.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"cop2/stun_100.ogg",
 				"cop2/stun_101.ogg",
 				"cop2/stun_102.ogg",
@@ -14531,12 +14531,12 @@ ENT.Voices = {
 				"cop2/stun_104.ogg",
 				"cop2/stun_105.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"cop2/look_pstcmbt_hrd_100.ogg",
 				"cop2/look_pstcmbt_hrd_101.ogg",
 				"cop2/look_pstcmbt_hrd_102.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"cop2/pain_mdm1.ogg",
 				"cop2/pain_mdm10.ogg",
 				"cop2/pain_mdm11.ogg",
@@ -14556,14 +14556,14 @@ ENT.Voices = {
 				"cop2/pain_mdm8.ogg",
 				"cop2/pain_mdm9.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"cop2/dth_mjr1.ogg",
 				"cop2/dth_mjr2.ogg",
 				"cop2/dth_mjr3.ogg",
 				"cop2/dth_mjr4.ogg",
 				"cop2/dth_mjr5.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"cop2/pain_fall1.ogg",
 				"cop2/pain_fall2.ogg",
 				"cop2/pain_fall3.ogg",
@@ -14571,11 +14571,11 @@ ENT.Voices = {
 				"cop2/pain_fall5.ogg",
 				"cop2/pain_fall6.ogg",
 				},
-		['prs_plr_kll_lots']	=	{
+		["prs_plr_kll_lots"]	=	{
 				"cop2/prs_plr_kll_lots_100.ogg",
 				"cop2/prs_plr_kll_lots_101.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"cop2/dth_fall1.ogg",
 				"cop2/dth_fall10.ogg",
 				"cop2/dth_fall11.ogg",
@@ -14590,7 +14590,7 @@ ENT.Voices = {
 				}
 	},
 	["Civilian1"] = {
-	['look_lngtme']	=	{
+	["look_lngtme"]	=	{
 				"civilian1/look_lngtme1.ogg",
 				"civilian1/look_lngtme10.ogg",
 				"civilian1/look_lngtme11.ogg",
@@ -14603,26 +14603,26 @@ ENT.Voices = {
 				"civilian1/look_lngtme8.ogg",
 				"civilian1/look_lngtme9.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"civilian1/panic_onfire1.ogg",
 				"civilian1/panic_onfire2.ogg",
 				"civilian1/panic_onfire3.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"civilian1/look_pstcmbt1.ogg",
 				"civilian1/look_pstcmbt2.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"civilian1/rmd1.ogg",
 				"civilian1/rmd2.ogg",
 				"civilian1/rmd3.ogg",
 				"civilian1/rmd4.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"civilian1/warn_fldreanimate1.ogg",
 				"civilian1/warn_fldreanimate2.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"civilian1/pain10.ogg",
 				"civilian1/pain11.ogg",
 				"civilian1/pain12.ogg",
@@ -14639,7 +14639,7 @@ ENT.Voices = {
 				"civilian1/pain8.ogg",
 				"civilian1/pain9.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"civilian1/pain_fall2.ogg",
 				"civilian1/pain_fall3.ogg",
 				"civilian1/pain_fall4.ogg",
@@ -14647,7 +14647,7 @@ ENT.Voices = {
 				"civilian1/pain_fall6.ogg",
 				"civilian1/pain_fall7.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"civilian1/prs1.ogg",
 				"civilian1/prs10.ogg",
 				"civilian1/prs11.ogg",
@@ -14660,7 +14660,7 @@ ENT.Voices = {
 				"civilian1/prs8.ogg",
 				"civilian1/prs9.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"civilian1/lift1.ogg",
 				"civilian1/lift10.ogg",
 				"civilian1/lift11.ogg",
@@ -14674,7 +14674,7 @@ ENT.Voices = {
 				"civilian1/lift2.ogg",
 				"civilian1/lift4.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"civilian1/prs_plr_kll10.ogg",
 				"civilian1/prs_plr_kll11.ogg",
 				"civilian1/prs_plr_kll2.ogg",
@@ -14685,7 +14685,7 @@ ENT.Voices = {
 				"civilian1/prs_plr_kll8.ogg",
 				"civilian1/prs_plr_kll9.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"civilian1/prs_plr_arb10.ogg",
 				"civilian1/prs_plr_arb11.ogg",
 				"civilian1/prs_plr_arb12.ogg",
@@ -14693,7 +14693,7 @@ ENT.Voices = {
 				"civilian1/prs_plr_arb8.ogg",
 				"civilian1/prs_plr_arb9.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"civilian1/scld_plr_arb1.ogg",
 				"civilian1/scld_plr_arb2.ogg",
 				"civilian1/scld_plr_arb4.ogg",
@@ -14701,7 +14701,7 @@ ENT.Voices = {
 				"civilian1/scld_plr_arb7.ogg",
 				"civilian1/scld_plr_arb8.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"civilian1/pld1.ogg",
 				"civilian1/pld2.ogg",
 				"civilian1/pld3.ogg",
@@ -14711,11 +14711,11 @@ ENT.Voices = {
 				"civilian1/pld7.ogg",
 				"civilian1/pld8.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"civilian1/lookcmbt_tim1.ogg",
 				"civilian1/lookcmbt_tim2.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"civilian1/dodge1.ogg",
 				"civilian1/dodge2.ogg",
 				"civilian1/dodge3.ogg",
@@ -14726,35 +14726,35 @@ ENT.Voices = {
 				"civilian1/dodge8.ogg",
 				"civilian1/dodge9.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"civilian1/warn_incmn1.ogg",
 				"civilian1/warn_incmn2.ogg",
 				"civilian1/warn_incmn3.ogg",
 				"civilian1/warn_incmn4.ogg",
 				"civilian1/warn_incmn5.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"civilian1/cower1.ogg",
 				"civilian1/cower2.ogg",
 				"civilian1/cower4.ogg",
 				"civilian1/cower8.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"civilian1/warn_flood1.ogg",
 				"civilian1/warn_flood2.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"civilian1/panic_plsmgrnd1.ogg",
 				"civilian1/panic_plsmgrnd2.ogg",
 				"civilian1/panic_plsmgrnd3.ogg",
 				"civilian1/panic_plsmgrnd4.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"civilian1/lmnt_deadally1.ogg",
 				"civilian1/lmnt_deadally2.ogg",
 				"civilian1/lmnt_deadally3.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"civilian1/grt_plr_mc1.ogg",
 				"civilian1/grt_plr_mc3.ogg",
 				"civilian1/grt_plr_mc4.ogg",
@@ -14762,7 +14762,7 @@ ENT.Voices = {
 				"civilian1/grt_plr_mc7.ogg",
 				"civilian1/grt_plr_mc8.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"civilian1/hail_plr_mc1.ogg",
 				"civilian1/hail_plr_mc2.ogg",
 				"civilian1/hail_plr_mc3.ogg",
@@ -14772,7 +14772,7 @@ ENT.Voices = {
 				"civilian1/hail_plr_mc7.ogg",
 				"civilian1/hail_plr_mc8.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"civilian1/endcmbt1.ogg",
 				"civilian1/endcmbt2.ogg",
 				"civilian1/endcmbt3.ogg",
@@ -14780,24 +14780,24 @@ ENT.Voices = {
 				"civilian1/endcmbt5.ogg",
 				"civilian1/endcmbt6.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"civilian1/hail1.ogg",
 				"civilian1/hail2.ogg",
 				"civilian1/hail3.ogg",
 				"civilian1/hail4.ogg",
 				},
-		['injured']	=	{
+		["injured"]	=	{
 				"civilian1/injured4.ogg",
 				"civilian1/injured5.ogg",
 				"civilian1/injured6.ogg",
 				"civilian1/injured7.ogg",
 				"civilian1/injured9.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"civilian1/whn_re1.ogg",
 				"civilian1/whn_re2.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"civilian1/whn1.ogg",
 				"civilian1/whn2.ogg",
 				"civilian1/whn4.ogg",
@@ -14805,7 +14805,7 @@ ENT.Voices = {
 				"civilian1/whn6.ogg",
 				"civilian1/whn7.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"civilian1/dive1.ogg",
 				"civilian1/dive2.ogg",
 				"civilian1/dive3.ogg",
@@ -14814,13 +14814,13 @@ ENT.Voices = {
 				"civilian1/dive6.ogg",
 				"civilian1/dive7.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"civilian1/warn1.ogg",
 				"civilian1/warn2.ogg",
 				"civilian1/warn3.ogg",
 				"civilian1/warn4.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"civilian1/pain_mjr1.ogg",
 				"civilian1/pain_mjr2.ogg",
 				"civilian1/pain_mjr3.ogg",
@@ -14831,7 +14831,7 @@ ENT.Voices = {
 				"civilian1/pain_mjr8.ogg",
 				"civilian1/pain_mjr9.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"civilian1/thrwn1.ogg",
 				"civilian1/thrwn2.ogg",
 				"civilian1/thrwn3.ogg",
@@ -14841,7 +14841,7 @@ ENT.Voices = {
 				"civilian1/thrwn7.ogg",
 				"civilian1/thrwn8.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"civilian1/stun1.ogg",
 				"civilian1/stun2.ogg",
 				"civilian1/stun3.ogg",
@@ -14849,7 +14849,7 @@ ENT.Voices = {
 				"civilian1/stun5.ogg",
 				"civilian1/stun6.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"civilian1/seefoe1.ogg",
 				"civilian1/seefoe10.ogg",
 				"civilian1/seefoe2.ogg",
@@ -14861,7 +14861,7 @@ ENT.Voices = {
 				"civilian1/seefoe8.ogg",
 				"civilian1/seefoe9.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"civilian1/srprs1.ogg",
 				"civilian1/srprs2.ogg",
 				"civilian1/srprs3.ogg",
@@ -14871,7 +14871,7 @@ ENT.Voices = {
 				"civilian1/srprs8.ogg",
 				"civilian1/srprs9.ogg",
 				},
-		['flee']	=	{
+		["flee"]	=	{
 				"civilian1/flee3.ogg",
 				"civilian1/flee4.ogg",
 				"civilian1/flee5.ogg",
@@ -14880,7 +14880,7 @@ ENT.Voices = {
 				"civilian1/flee8.ogg",
 				"civilian1/flee9.ogg",
 				},
-		['reanimate']	=	{
+		["reanimate"]	=	{
 				"civilian1/reanimate1.ogg",
 				"civilian1/reanimate2.ogg",
 				"civilian1/reanimate3.ogg",
@@ -14888,23 +14888,23 @@ ENT.Voices = {
 				"civilian1/reanimate5.ogg",
 				"civilian1/reanimate6.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"civilian1/scld1.ogg",
 				"civilian1/scld2.ogg",
 				"civilian1/scld3.ogg",
 				"civilian1/scld4.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"civilian1/dth_drama1.ogg",
 				"civilian1/dth_drama2.ogg",
 				"civilian1/dth_drama3.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"civilian1/warn_swarm1.ogg",
 				"civilian1/warn_swarm2.ogg",
 				"civilian1/warn_swarm3.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"civilian1/panic1.ogg",
 				"civilian1/panic2.ogg",
 				"civilian1/panic3.ogg",
@@ -14913,7 +14913,7 @@ ENT.Voices = {
 				"civilian1/panic6.ogg",
 				"civilian1/panic7.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"civilian1/grt_plr_arb1.ogg",
 				"civilian1/grt_plr_arb2.ogg",
 				"civilian1/grt_plr_arb3.ogg",
@@ -14921,13 +14921,13 @@ ENT.Voices = {
 				"civilian1/grt_plr_arb5.ogg",
 				"civilian1/grt_plr_arb6.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"civilian1/morefoe1.ogg",
 				"civilian1/morefoe2.ogg",
 				"civilian1/morefoe3.ogg",
 				"civilian1/morefoe4.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"civilian1/dth_mjr1.ogg",
 				"civilian1/dth_mjr3.ogg",
 				"civilian1/dth_mjr4.ogg",
@@ -14936,7 +14936,7 @@ ENT.Voices = {
 				"civilian1/dth_mjr7.ogg",
 				"civilian1/dth_mjr8.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"civilian1/dth1.ogg",
 				"civilian1/dth2.ogg",
 				"civilian1/dth3.ogg",
@@ -14946,7 +14946,7 @@ ENT.Voices = {
 				"civilian1/dth7.ogg",
 				"civilian1/dth9.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"civilian1/lmnt_deadplr_arb1.ogg",
 				"civilian1/lmnt_deadplr_arb2.ogg",
 				"civilian1/lmnt_deadplr_arb3.ogg",
@@ -14955,7 +14955,7 @@ ENT.Voices = {
 				"civilian1/lmnt_deadplr_arb6.ogg",
 				"civilian1/lmnt_deadplr_arb7.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"civilian1/lmnt3.ogg",
 				"civilian1/lmnt4.ogg",
 				"civilian1/lmnt5.ogg",
@@ -14963,11 +14963,11 @@ ENT.Voices = {
 				"civilian1/lmnt7.ogg",
 				"civilian1/lmnt8.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"civilian1/look_plr_mc1.ogg",
 				"civilian1/look_plr_mc2.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"civilian1/pstcmbt1.ogg",
 				"civilian1/pstcmbt2.ogg",
 				"civilian1/pstcmbt3.ogg",
@@ -14975,19 +14975,19 @@ ENT.Voices = {
 				"civilian1/pstcmbt5.ogg",
 				"civilian1/pstcmbt6.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"civilian1/pstcmbt_hrd1.ogg",
 				"civilian1/pstcmbt_hrd4.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"civilian1/pstcmbt_tim1.ogg",
 				"civilian1/pstcmbt_tim3.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"civilian1/look_plr_arb1.ogg",
 				"civilian1/look_plr_arb2.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"civilian1/scld_plr_mc1.ogg",
 				"civilian1/scld_plr_mc2.ogg",
 				"civilian1/scld_plr_mc3.ogg",
@@ -14995,14 +14995,14 @@ ENT.Voices = {
 				"civilian1/scld_plr_mc5.ogg",
 				"civilian1/scld_plr_mc6.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"civilian1/panic_infctnfrm1.ogg",
 				"civilian1/panic_infctnfrm4.ogg",
 				"civilian1/panic_infctnfrm5.ogg",
 				"civilian1/panic_infctnfrm6.ogg",
 				"civilian1/panic_infctnfrm7.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"civilian1/bump1.ogg",
 				"civilian1/bump2.ogg",
 				"civilian1/bump3.ogg",
@@ -15010,7 +15010,7 @@ ENT.Voices = {
 				"civilian1/bump5.ogg",
 				"civilian1/bump6.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"civilian1/hrdfoe11.ogg",
 				"civilian1/hrdfoe12.ogg",
 				"civilian1/hrdfoe13.ogg",
@@ -15022,7 +15022,7 @@ ENT.Voices = {
 				"civilian1/hrdfoe19.ogg",
 				"civilian1/hrdfoe20.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"civilian1/crs1.ogg",
 				"civilian1/crs10.ogg",
 				"civilian1/crs11.ogg",
@@ -15038,11 +15038,11 @@ ENT.Voices = {
 				"civilian1/crs8.ogg",
 				"civilian1/crs9.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"civilian1/hail_tim1.ogg",
 				"civilian1/hail_tim2.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"civilian1/dth_hdsht1.ogg",
 				"civilian1/dth_hdsht2.ogg",
 				"civilian1/dth_hdsht3.ogg",
@@ -15051,7 +15051,7 @@ ENT.Voices = {
 				"civilian1/dth_hdsht6.ogg",
 				"civilian1/dth_hdsht7.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"civilian1/scld_plr_kllally1.ogg",
 				"civilian1/scld_plr_kllally2.ogg",
 				"civilian1/scld_plr_kllally3.ogg",
@@ -15061,13 +15061,13 @@ ENT.Voices = {
 				"civilian1/scld_plr_kllally7.ogg",
 				"civilian1/scld_plr_kllally8.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"civilian1/grt1.ogg",
 				"civilian1/grt2.ogg",
 				"civilian1/grt3.ogg",
 				"civilian1/grt4.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"civilian1/lmnt_deadplr_mc1.ogg",
 				"civilian1/lmnt_deadplr_mc10.ogg",
 				"civilian1/lmnt_deadplr_mc11.ogg",
@@ -15076,7 +15076,7 @@ ENT.Voices = {
 				"civilian1/lmnt_deadplr_mc5.ogg",
 				"civilian1/lmnt_deadplr_mc7.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"civilian1/fall2.ogg",
 				"civilian1/fall3.ogg",
 				"civilian1/fall4.ogg",
@@ -15084,20 +15084,20 @@ ENT.Voices = {
 				"civilian1/fall6.ogg",
 				"civilian1/fall7.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"civilian1/dth_reanimated1.ogg",
 				"civilian1/dth_reanimated2.ogg",
 				"civilian1/dth_reanimated3.ogg",
 				"civilian1/dth_reanimated4.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"civilian1/chr1.ogg",
 				"civilian1/chr2.ogg",
 				"civilian1/chr3.ogg",
 				"civilian1/chr4.ogg",
 				"civilian1/chr5.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"civilian1/pain_mdm1.ogg",
 				"civilian1/pain_mdm10.ogg",
 				"civilian1/pain_mdm12.ogg",
@@ -15112,7 +15112,7 @@ ENT.Voices = {
 				"civilian1/pain_mdm8.ogg",
 				"civilian1/pain_mdm9.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"civilian1/dth_slnt1.ogg",
 				"civilian1/dth_slnt12.ogg",
 				"civilian1/dth_slnt2.ogg",
@@ -15124,7 +15124,7 @@ ENT.Voices = {
 				"civilian1/dth_slnt8.ogg",
 				"civilian1/dth_slnt9.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"civilian1/look1.ogg",
 				"civilian1/look2.ogg",
 				"civilian1/look3.ogg",
@@ -15134,12 +15134,12 @@ ENT.Voices = {
 				"civilian1/look7.ogg",
 				"civilian1/look8.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"civilian1/dth_slw1.ogg",
 				"civilian1/dth_slw2.ogg",
 				"civilian1/dth_slw4.ogg",
 				},
-		['rtrt']	=	{
+		["rtrt"]	=	{
 				"civilian1/rtrt1.ogg",
 				"civilian1/rtrt10.ogg",
 				"civilian1/rtrt2.ogg",
@@ -15151,7 +15151,7 @@ ENT.Voices = {
 				"civilian1/rtrt8.ogg",
 				"civilian1/rtrt9.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"civilian1/hail_plr_arb3.ogg",
 				"civilian1/hail_plr_arb4.ogg",
 				"civilian1/hail_plr_arb5.ogg",
@@ -15159,20 +15159,20 @@ ENT.Voices = {
 				"civilian1/hail_plr_arb7.ogg",
 				"civilian1/hail_plr_arb8.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"civilian1/dwn1.ogg",
 				"civilian1/dwn2.ogg",
 				"civilian1/dwn3.ogg",
 				"civilian1/dwn4.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"civilian1/prs_plr_mc1.ogg",
 				"civilian1/prs_plr_mc2.ogg",
 				"civilian1/prs_plr_mc3.ogg",
 				"civilian1/prs_plr_mc4.ogg",
 				"civilian1/prs_plr_mc6.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"civilian1/lookcmbt1.ogg",
 				"civilian1/lookcmbt10.ogg",
 				"civilian1/lookcmbt2.ogg",
@@ -15184,7 +15184,7 @@ ENT.Voices = {
 				"civilian1/lookcmbt8.ogg",
 				"civilian1/lookcmbt9.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"civilian1/foundfoe1.ogg",
 				"civilian1/foundfoe10.ogg",
 				"civilian1/foundfoe11.ogg",
@@ -15206,11 +15206,11 @@ ENT.Voices = {
 				"civilian1/foundfoe8.ogg",
 				"civilian1/foundfoe9.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"civilian1/look_pstcmbt_hrd1.ogg",
 				"civilian1/look_pstcmbt_hrd2.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"civilian1/dth_fall1.ogg",
 				"civilian1/dth_fall10.ogg",
 				"civilian1/dth_fall11.ogg",
@@ -15225,7 +15225,7 @@ ENT.Voices = {
 				}
 	},
 	["Civilian2"] = {
-	['look_lngtme']	=	{
+	["look_lngtme"]	=	{
 				"civilian2/look_lngtme1.ogg",
 				"civilian2/look_lngtme10.ogg",
 				"civilian2/look_lngtme11.ogg",
@@ -15238,29 +15238,29 @@ ENT.Voices = {
 				"civilian2/look_lngtme7.ogg",
 				"civilian2/look_lngtme9.ogg",
 				},
-		['panic_onfire']	=	{
+		["panic_onfire"]	=	{
 				"civilian2/panic_onfire1.ogg",
 				"civilian2/panic_onfire2.ogg",
 				"civilian2/panic_onfire3.ogg",
 				"civilian2/panic_onfire4.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"civilian2/look_pstcmbt1.ogg",
 				"civilian2/look_pstcmbt3.ogg",
 				"civilian2/look_pstcmbt4.ogg",
 				"civilian2/look_pstcmbt5.ogg",
 				},
-		['rmd']	=	{
+		["rmd"]	=	{
 				"civilian2/rmd1.ogg",
 				"civilian2/rmd2.ogg",
 				"civilian2/rmd3.ogg",
 				"civilian2/rmd4.ogg",
 				},
-		['warn_fldreanimate']	=	{
+		["warn_fldreanimate"]	=	{
 				"civilian2/warn_fldreanimate1.ogg",
 				"civilian2/warn_fldreanimate3.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"civilian2/pain1.ogg",
 				"civilian2/pain10.ogg",
 				"civilian2/pain11.ogg",
@@ -15278,7 +15278,7 @@ ENT.Voices = {
 				"civilian2/pain8.ogg",
 				"civilian2/pain9.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"civilian2/pain_fall1.ogg",
 				"civilian2/pain_fall2.ogg",
 				"civilian2/pain_fall3.ogg",
@@ -15286,7 +15286,7 @@ ENT.Voices = {
 				"civilian2/pain_fall5.ogg",
 				"civilian2/pain_fall6.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"civilian2/prs1.ogg",
 				"civilian2/prs4.ogg",
 				"civilian2/prs5.ogg",
@@ -15295,7 +15295,7 @@ ENT.Voices = {
 				"civilian2/prs8.ogg",
 				"civilian2/prs9.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"civilian2/lift1.ogg",
 				"civilian2/lift2.ogg",
 				"civilian2/lift3.ogg",
@@ -15303,7 +15303,7 @@ ENT.Voices = {
 				"civilian2/lift5.ogg",
 				"civilian2/lift6.ogg",
 				},
-		['prs_plr_kll']	=	{
+		["prs_plr_kll"]	=	{
 				"civilian2/prs_plr_kll1.ogg",
 				"civilian2/prs_plr_kll13.ogg",
 				"civilian2/prs_plr_kll14.ogg",
@@ -15312,14 +15312,14 @@ ENT.Voices = {
 				"civilian2/prs_plr_kll17.ogg",
 				"civilian2/prs_plr_kll5.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"civilian2/prs_plr_arb12.ogg",
 				"civilian2/prs_plr_arb3.ogg",
 				"civilian2/prs_plr_arb4.ogg",
 				"civilian2/prs_plr_arb6.ogg",
 				"civilian2/prs_plr_arb9.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"civilian2/scld_plr_arb10.ogg",
 				"civilian2/scld_plr_arb13.ogg",
 				"civilian2/scld_plr_arb17.ogg",
@@ -15330,7 +15330,7 @@ ENT.Voices = {
 				"civilian2/scld_plr_arb4.ogg",
 				"civilian2/scld_plr_arb8.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"civilian2/pld1.ogg",
 				"civilian2/pld2.ogg",
 				"civilian2/pld3.ogg",
@@ -15339,13 +15339,13 @@ ENT.Voices = {
 				"civilian2/pld7.ogg",
 				"civilian2/pld8.ogg",
 				},
-		['lookcmbt_tim']	=	{
+		["lookcmbt_tim"]	=	{
 				"civilian2/lookcmbt_tim1.ogg",
 				"civilian2/lookcmbt_tim2.ogg",
 				"civilian2/lookcmbt_tim3.ogg",
 				"civilian2/lookcmbt_tim4.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"civilian2/dodge1.ogg",
 				"civilian2/dodge2.ogg",
 				"civilian2/dodge3.ogg",
@@ -15354,13 +15354,13 @@ ENT.Voices = {
 				"civilian2/dodge6.ogg",
 				"civilian2/dodge7.ogg",
 				},
-		['warn_incmn']	=	{
+		["warn_incmn"]	=	{
 				"civilian2/warn_incmn1.ogg",
 				"civilian2/warn_incmn3.ogg",
 				"civilian2/warn_incmn5.ogg",
 				"civilian2/warn_incmn6.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"civilian2/cower1.ogg",
 				"civilian2/cower13.ogg",
 				"civilian2/cower16.ogg",
@@ -15371,12 +15371,12 @@ ENT.Voices = {
 				"civilian2/cower8.ogg",
 				"civilian2/cower9.ogg",
 				},
-		['warn_flood']	=	{
+		["warn_flood"]	=	{
 				"civilian2/warn_flood1.ogg",
 				"civilian2/warn_flood2.ogg",
 				"civilian2/warn_flood3.ogg",
 				},
-		['panic_plsmgrnd']	=	{
+		["panic_plsmgrnd"]	=	{
 				"civilian2/panic_plsmgrnd1.ogg",
 				"civilian2/panic_plsmgrnd2.ogg",
 				"civilian2/panic_plsmgrnd3.ogg",
@@ -15386,12 +15386,12 @@ ENT.Voices = {
 				"civilian2/panic_plsmgrnd7.ogg",
 				"civilian2/panic_plsmgrnd8.ogg",
 				},
-		['lmnt_deadally']	=	{
+		["lmnt_deadally"]	=	{
 				"civilian2/lmnt_deadally1.ogg",
 				"civilian2/lmnt_deadally2.ogg",
 				"civilian2/lmnt_deadally4.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"civilian2/grt_plr_mc1.ogg",
 				"civilian2/grt_plr_mc12.ogg",
 				"civilian2/grt_plr_mc3.ogg",
@@ -15400,7 +15400,7 @@ ENT.Voices = {
 				"civilian2/grt_plr_mc7.ogg",
 				"civilian2/grt_plr_mc9.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"civilian2/hail_plr_mc1.ogg",
 				"civilian2/hail_plr_mc10.ogg",
 				"civilian2/hail_plr_mc12.ogg",
@@ -15411,7 +15411,7 @@ ENT.Voices = {
 				"civilian2/hail_plr_mc8.ogg",
 				"civilian2/hail_plr_mc9.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"civilian2/endcmbt1.ogg",
 				"civilian2/endcmbt10.ogg",
 				"civilian2/endcmbt3.ogg",
@@ -15420,13 +15420,13 @@ ENT.Voices = {
 				"civilian2/endcmbt6.ogg",
 				"civilian2/endcmbt8.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"civilian2/hail3.ogg",
 				"civilian2/hail5.ogg",
 				"civilian2/hail6.ogg",
 				"civilian2/hail8.ogg",
 				},
-		['whn_re']	=	{
+		["whn_re"]	=	{
 				"civilian2/whn_re1.ogg",
 				"civilian2/whn_re2.ogg",
 				"civilian2/whn_re3.ogg",
@@ -15434,7 +15434,7 @@ ENT.Voices = {
 				"civilian2/whn_re5.ogg",
 				"civilian2/whn_re6.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"civilian2/whn1.ogg",
 				"civilian2/whn2.ogg",
 				"civilian2/whn3.ogg",
@@ -15445,13 +15445,13 @@ ENT.Voices = {
 				"civilian2/whn8.ogg",
 				"civilian2/whn9.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"civilian2/dth_drama1.ogg",
 				"civilian2/dth_drama2.ogg",
 				"civilian2/dth_drama3.ogg",
 				"civilian2/dth_drama4.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"civilian2/pain_mjr1.ogg",
 				"civilian2/pain_mjr10.ogg",
 				"civilian2/pain_mjr11.ogg",
@@ -15464,7 +15464,7 @@ ENT.Voices = {
 				"civilian2/pain_mjr8.ogg",
 				"civilian2/pain_mjr9.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"civilian2/warn1.ogg",
 				"civilian2/warn2.ogg",
 				"civilian2/warn3.ogg",
@@ -15473,7 +15473,7 @@ ENT.Voices = {
 				"civilian2/warn7.ogg",
 				"civilian2/warn8.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"civilian2/thrwn1.ogg",
 				"civilian2/thrwn10.ogg",
 				"civilian2/thrwn11.ogg",
@@ -15492,7 +15492,7 @@ ENT.Voices = {
 				"civilian2/thrwn8.ogg",
 				"civilian2/thrwn9.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"civilian2/seefoe1.ogg",
 				"civilian2/seefoe10.ogg",
 				"civilian2/seefoe11.ogg",
@@ -15504,7 +15504,7 @@ ENT.Voices = {
 				"civilian2/seefoe7.ogg",
 				"civilian2/seefoe9.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"civilian2/stun1.ogg",
 				"civilian2/stun2.ogg",
 				"civilian2/stun3.ogg",
@@ -15513,14 +15513,14 @@ ENT.Voices = {
 				"civilian2/stun6.ogg",
 				"civilian2/stun7.ogg",
 				},
-		['srprs']	=	{
+		["srprs"]	=	{
 				"civilian2/srprs1.ogg",
 				"civilian2/srprs5.ogg",
 				"civilian2/srprs6.ogg",
 				"civilian2/srprs7.ogg",
 				"civilian2/srprs8.ogg",
 				},
-		['reanimate']	=	{
+		["reanimate"]	=	{
 				"civilian2/reanimate1.ogg",
 				"civilian2/reanimate2.ogg",
 				"civilian2/reanimate3.ogg",
@@ -15528,32 +15528,32 @@ ENT.Voices = {
 				"civilian2/reanimate5.ogg",
 				"civilian2/reanimate6.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"civilian2/scld3.ogg",
 				"civilian2/scld4.ogg",
 				"civilian2/scld6.ogg",
 				"civilian2/scld8.ogg",
 				},
-		['morefoe']	=	{
+		["morefoe"]	=	{
 				"civilian2/morefoe1.ogg",
 				"civilian2/morefoe2.ogg",
 				"civilian2/morefoe3.ogg",
 				"civilian2/morefoe4.ogg",
 				"civilian2/morefoe5.ogg",
 				},
-		['warn_swarm']	=	{
+		["warn_swarm"]	=	{
 				"civilian2/warn_swarm1.ogg",
 				"civilian2/warn_swarm2.ogg",
 				"civilian2/warn_swarm3.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"civilian2/panic1.ogg",
 				"civilian2/panic2.ogg",
 				"civilian2/panic3.ogg",
 				"civilian2/panic4.ogg",
 				"civilian2/panic5.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"civilian2/dive1.ogg",
 				"civilian2/dive2.ogg",
 				"civilian2/dive3.ogg",
@@ -15564,7 +15564,7 @@ ENT.Voices = {
 				"civilian2/dive8.ogg",
 				"civilian2/dive9.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"civilian2/grt_plr_arb1.ogg",
 				"civilian2/grt_plr_arb2.ogg",
 				"civilian2/grt_plr_arb3.ogg",
@@ -15572,14 +15572,14 @@ ENT.Voices = {
 				"civilian2/grt_plr_arb7.ogg",
 				"civilian2/grt_plr_arb8.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"civilian2/dth_mjr1.ogg",
 				"civilian2/dth_mjr2.ogg",
 				"civilian2/dth_mjr3.ogg",
 				"civilian2/dth_mjr4.ogg",
 				"civilian2/dth_mjr5.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"civilian2/dth1.ogg",
 				"civilian2/dth2.ogg",
 				"civilian2/dth3.ogg",
@@ -15589,7 +15589,7 @@ ENT.Voices = {
 				"civilian2/dth7.ogg",
 				"civilian2/dth8.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"civilian2/lmnt_deadplr_arb2.ogg",
 				"civilian2/lmnt_deadplr_arb3.ogg",
 				"civilian2/lmnt_deadplr_arb4.ogg",
@@ -15597,20 +15597,20 @@ ENT.Voices = {
 				"civilian2/lmnt_deadplr_arb6.ogg",
 				"civilian2/lmnt_deadplr_arb9.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"civilian2/lmnt10.ogg",
 				"civilian2/lmnt11.ogg",
 				"civilian2/lmnt2.ogg",
 				"civilian2/lmnt4.ogg",
 				"civilian2/lmnt9.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"civilian2/look_plr_mc1.ogg",
 				"civilian2/look_plr_mc2.ogg",
 				"civilian2/look_plr_mc3.ogg",
 				"civilian2/look_plr_mc4.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"civilian2/pstcmbt10.ogg",
 				"civilian2/pstcmbt11.ogg",
 				"civilian2/pstcmbt12.ogg",
@@ -15620,20 +15620,20 @@ ENT.Voices = {
 				"civilian2/pstcmbt6.ogg",
 				"civilian2/pstcmbt9.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"civilian2/pstcmbt_hrd1.ogg",
 				"civilian2/pstcmbt_hrd2.ogg",
 				"civilian2/pstcmbt_hrd3.ogg",
 				},
-		['pstcmbt_tim']	=	{
+		["pstcmbt_tim"]	=	{
 				"civilian2/pstcmbt_tim1.ogg",
 				"civilian2/pstcmbt_tim2.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"civilian2/look_plr_arb1.ogg",
 				"civilian2/look_plr_arb2.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"civilian2/scld_plr_mc1.ogg",
 				"civilian2/scld_plr_mc10.ogg",
 				"civilian2/scld_plr_mc13.ogg",
@@ -15642,7 +15642,7 @@ ENT.Voices = {
 				"civilian2/scld_plr_mc7.ogg",
 				"civilian2/scld_plr_mc9.ogg",
 				},
-		['panic_infctnfrm']	=	{
+		["panic_infctnfrm"]	=	{
 				"civilian2/panic_infctnfrm1.ogg",
 				"civilian2/panic_infctnfrm2.ogg",
 				"civilian2/panic_infctnfrm3.ogg",
@@ -15650,7 +15650,7 @@ ENT.Voices = {
 				"civilian2/panic_infctnfrm5.ogg",
 				"civilian2/panic_infctnfrm6.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"civilian2/bump1.ogg",
 				"civilian2/bump10.ogg",
 				"civilian2/bump11.ogg",
@@ -15666,7 +15666,7 @@ ENT.Voices = {
 				"civilian2/bump8.ogg",
 				"civilian2/bump9.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"civilian2/hrdfoe1.ogg",
 				"civilian2/hrdfoe10.ogg",
 				"civilian2/hrdfoe11.ogg",
@@ -15678,7 +15678,7 @@ ENT.Voices = {
 				"civilian2/hrdfoe8.ogg",
 				"civilian2/hrdfoe9.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"civilian2/dth_slnt1.ogg",
 				"civilian2/dth_slnt2.ogg",
 				"civilian2/dth_slnt3.ogg",
@@ -15688,7 +15688,7 @@ ENT.Voices = {
 				"civilian2/dth_slnt7.ogg",
 				"civilian2/dth_slnt8.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"civilian2/crs1.ogg",
 				"civilian2/crs10.ogg",
 				"civilian2/crs11.ogg",
@@ -15700,7 +15700,7 @@ ENT.Voices = {
 				"civilian2/crs7.ogg",
 				"civilian2/crs9.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"civilian2/dth_hdsht1.ogg",
 				"civilian2/dth_hdsht2.ogg",
 				"civilian2/dth_hdsht3.ogg",
@@ -15710,7 +15710,7 @@ ENT.Voices = {
 				"civilian2/dth_hdsht7.ogg",
 				"civilian2/dth_hdsht8.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"civilian2/scld_plr_kllally1.ogg",
 				"civilian2/scld_plr_kllally10.ogg",
 				"civilian2/scld_plr_kllally12.ogg",
@@ -15720,13 +15720,13 @@ ENT.Voices = {
 				"civilian2/scld_plr_kllally6.ogg",
 				"civilian2/scld_plr_kllally8.ogg",
 				},
-		['hail_tim']	=	{
+		["hail_tim"]	=	{
 				"civilian2/hail_tim1.ogg",
 				"civilian2/hail_tim2.ogg",
 				"civilian2/hail_tim3.ogg",
 				"civilian2/hail_tim4.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"civilian2/lmnt_deadplr_mc1.ogg",
 				"civilian2/lmnt_deadplr_mc10.ogg",
 				"civilian2/lmnt_deadplr_mc11.ogg",
@@ -15737,7 +15737,7 @@ ENT.Voices = {
 				"civilian2/lmnt_deadplr_mc6.ogg",
 				"civilian2/lmnt_deadplr_mc7.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"civilian2/fall1.ogg",
 				"civilian2/fall2.ogg",
 				"civilian2/fall3.ogg",
@@ -15745,13 +15745,13 @@ ENT.Voices = {
 				"civilian2/fall5.ogg",
 				"civilian2/fall6.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"civilian2/dth_reanimated1.ogg",
 				"civilian2/dth_reanimated2.ogg",
 				"civilian2/dth_reanimated3.ogg",
 				"civilian2/dth_reanimated4.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"civilian2/chr1.ogg",
 				"civilian2/chr10.ogg",
 				"civilian2/chr2.ogg",
@@ -15760,7 +15760,7 @@ ENT.Voices = {
 				"civilian2/chr7.ogg",
 				"civilian2/chr9.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"civilian2/pain_mdm1.ogg",
 				"civilian2/pain_mdm10.ogg",
 				"civilian2/pain_mdm11.ogg",
@@ -15780,13 +15780,13 @@ ENT.Voices = {
 				"civilian2/pain_mdm8.ogg",
 				"civilian2/pain_mdm9.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"civilian2/grt1.ogg",
 				"civilian2/grt4.ogg",
 				"civilian2/grt5.ogg",
 				"civilian2/grt6.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"civilian2/look1.ogg",
 				"civilian2/look11.ogg",
 				"civilian2/look12.ogg",
@@ -15797,12 +15797,12 @@ ENT.Voices = {
 				"civilian2/look6.ogg",
 				"civilian2/look7.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"civilian2/dth_slw1.ogg",
 				"civilian2/dth_slw2.ogg",
 				"civilian2/dth_slw3.ogg",
 				},
-		['rtrt']	=	{
+		["rtrt"]	=	{
 				"civilian2/rtrt1.ogg",
 				"civilian2/rtrt10.ogg",
 				"civilian2/rtrt11.ogg",
@@ -15814,7 +15814,7 @@ ENT.Voices = {
 				"civilian2/rtrt8.ogg",
 				"civilian2/rtrt9.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"civilian2/hail_plr_arb2.ogg",
 				"civilian2/hail_plr_arb3.ogg",
 				"civilian2/hail_plr_arb4.ogg",
@@ -15822,13 +15822,13 @@ ENT.Voices = {
 				"civilian2/hail_plr_arb7.ogg",
 				"civilian2/hail_plr_arb8.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"civilian2/dwn1.ogg",
 				"civilian2/dwn2.ogg",
 				"civilian2/dwn3.ogg",
 				"civilian2/dwn4.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"civilian2/prs_plr_mc1.ogg",
 				"civilian2/prs_plr_mc2.ogg",
 				"civilian2/prs_plr_mc3.ogg",
@@ -15838,7 +15838,7 @@ ENT.Voices = {
 				"civilian2/prs_plr_mc8.ogg",
 				"civilian2/prs_plr_mc9.ogg",
 				},
-		['lookcmbt']	=	{
+		["lookcmbt"]	=	{
 				"civilian2/lookcmbt1.ogg",
 				"civilian2/lookcmbt12.ogg",
 				"civilian2/lookcmbt14.ogg",
@@ -15849,7 +15849,7 @@ ENT.Voices = {
 				"civilian2/lookcmbt8.ogg",
 				"civilian2/lookcmbt9.ogg",
 				},
-		['foundfoe']	=	{
+		["foundfoe"]	=	{
 				"civilian2/foundfoe1.ogg",
 				"civilian2/foundfoe3.ogg",
 				"civilian2/foundfoe4.ogg",
@@ -15859,13 +15859,13 @@ ENT.Voices = {
 				"civilian2/foundfoe8.ogg",
 				"civilian2/foundfoe9.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"civilian2/look_pstcmbt_hrd1.ogg",
 				"civilian2/look_pstcmbt_hrd2.ogg",
 				"civilian2/look_pstcmbt_hrd3.ogg",
 				"civilian2/look_pstcmbt_hrd4.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"civilian2/dth_fall1.ogg",
 				"civilian2/dth_fall10.ogg",
 				"civilian2/dth_fall11.ogg",
@@ -15880,7 +15880,7 @@ ENT.Voices = {
 				}
 	},
 	["Johnson"] = {
-		['sigh']	=	{
+		["sigh"]	=	{
 				"marines/johnson/sigh1.ogg",
 				"marines/johnson/sigh2.ogg",
 				"marines/johnson/sigh3.ogg",
@@ -15888,7 +15888,7 @@ ENT.Voices = {
 				"marines/johnson/sigh5.ogg",
 				"marines/johnson/sigh6.ogg",
 				},
-		['look_lngtme']	=	{
+		["look_lngtme"]	=	{
 				"marines/johnson/look_lngtme10.ogg",
 				"marines/johnson/look_lngtme11.ogg",
 				"marines/johnson/look_lngtme12.ogg",
@@ -15902,25 +15902,25 @@ ENT.Voices = {
 				"marines/johnson/look_lngtme7.ogg",
 				"marines/johnson/look_lngtme8.ogg",
 				},
-		['newordr_advance']	=	{
+		["newordr_advance"]	=	{
 				"marines/johnson/newordr_advance1.ogg",
 				"marines/johnson/newordr_advance3.ogg",
 				"marines/johnson/newordr_advance4.ogg",
 				"marines/johnson/newordr_advance6.ogg",
 				},
-		['foeordr_flanking']	=	{
+		["foeordr_flanking"]	=	{
 				"marines/johnson/foeordr_flanking1.ogg",
 				"marines/johnson/foeordr_flanking2.ogg",
 				"marines/johnson/foeordr_flanking3.ogg",
 				"marines/johnson/foeordr_flanking4.ogg",
 				},
-		['cvr']	=	{
+		["cvr"]	=	{
 				"marines/johnson/cvr1.ogg",
 				"marines/johnson/cvr2.ogg",
 				"marines/johnson/cvr3.ogg",
 				"marines/johnson/cvr4.ogg",
 				},
-		['charge']	=	{
+		["charge"]	=	{
 				"marines/johnson/charge1.ogg",
 				"marines/johnson/charge2.ogg",
 				"marines/johnson/charge3.ogg",
@@ -15929,7 +15929,7 @@ ENT.Voices = {
 				"marines/johnson/charge6.ogg",
 				"marines/johnson/charge7.ogg",
 				},
-		['scld_plr_hrtme']	=	{
+		["scld_plr_hrtme"]	=	{
 				"marines/johnson/scld_plr_hrtme10.ogg",
 				"marines/johnson/scld_plr_hrtme11.ogg",
 				"marines/johnson/scld_plr_hrtme3.ogg",
@@ -15939,47 +15939,47 @@ ENT.Voices = {
 				"marines/johnson/scld_plr_hrtme7.ogg",
 				"marines/johnson/scld_plr_hrtme8.ogg",
 				},
-		['pain']	=	{
+		["pain"]	=	{
 				"marines/johnson/pain1.ogg",
 				"marines/johnson/pain2.ogg",
 				"marines/johnson/pain3.ogg",
 				"marines/johnson/pain4.ogg",
 				},
-		['prs']	=	{
+		["prs"]	=	{
 				"marines/johnson/prs1.ogg",
 				"marines/johnson/prs3.ogg",
 				"marines/johnson/prs5.ogg",
 				"marines/johnson/prs6.ogg",
 				"marines/johnson/prs7.ogg",
 				},
-		['cvr_re']	=	{
+		["cvr_re"]	=	{
 				"marines/johnson/cvr_re1.ogg",
 				"marines/johnson/cvr_re2.ogg",
 				"marines/johnson/cvr_re3.ogg",
 				"marines/johnson/cvr_re4.ogg",
 				},
-		['dwn']	=	{
+		["dwn"]	=	{
 				"marines/johnson/dwn2.ogg",
 				"marines/johnson/dwn3.ogg",
 				"marines/johnson/dwn4.ogg",
 				"marines/johnson/dwn5.ogg",
 				},
-		['kllmytrgt']	=	{
+		["kllmytrgt"]	=	{
 				"marines/johnson/kllmytrgt2.ogg",
 				"marines/johnson/kllmytrgt3.ogg",
 				"marines/johnson/kllmytrgt4.ogg",
 				"marines/johnson/kllmytrgt5.ogg",
 				},
-		['cower4_rocketmanlyric']	=	{
+		["cower4_rocketmanlyric"]	=	{
 				"marines/johnson/cower4_rocketmanlyrics.ogg",
 				},
-		['newordr_support']	=	{
+		["newordr_support"]	=	{
 				"marines/johnson/newordr_support1.ogg",
 				"marines/johnson/newordr_support2.ogg",
 				"marines/johnson/newordr_support3.ogg",
 				"marines/johnson/newordr_support6.ogg",
 				},
-		['thrwn']	=	{
+		["thrwn"]	=	{
 				"marines/johnson/thrwn1.ogg",
 				"marines/johnson/thrwn10.ogg",
 				"marines/johnson/thrwn11.ogg",
@@ -15993,7 +15993,7 @@ ENT.Voices = {
 				"marines/johnson/thrwn8.ogg",
 				"marines/johnson/thrwn9.ogg",
 				},
-		['dodge']	=	{
+		["dodge"]	=	{
 				"marines/johnson/dodge1.ogg",
 				"marines/johnson/dodge10.ogg",
 				"marines/johnson/dodge2.ogg",
@@ -16002,7 +16002,7 @@ ENT.Voices = {
 				"marines/johnson/dodge6.ogg",
 				"marines/johnson/dodge7.ogg",
 				},
-		['thrtn']	=	{
+		["thrtn"]	=	{
 				"marines/johnson/thrtn1.ogg",
 				"marines/johnson/thrtn10.ogg",
 				"marines/johnson/thrtn11.ogg",
@@ -16016,19 +16016,19 @@ ENT.Voices = {
 				"marines/johnson/thrtn7.ogg",
 				"marines/johnson/thrtn8.ogg",
 				},
-		['newordr_exitvcl']	=	{
+		["newordr_exitvcl"]	=	{
 				"marines/johnson/newordr_exitvcl1.ogg",
 				"marines/johnson/newordr_exitvcl2.ogg",
 				"marines/johnson/newordr_exitvcl3.ogg",
 				"marines/johnson/newordr_exitvcl4.ogg",
 				},
-		['cower']	=	{
+		["cower"]	=	{
 				"marines/johnson/cower1.ogg",
 				"marines/johnson/cower2.ogg",
 				"marines/johnson/cower3.ogg",
 				"marines/johnson/cower7.ogg",
 				},
-		['thnk']	=	{
+		["thnk"]	=	{
 				"marines/johnson/thnk1.ogg",
 				"marines/johnson/thnk10.ogg",
 				"marines/johnson/thnk2.ogg",
@@ -16038,14 +16038,14 @@ ENT.Voices = {
 				"marines/johnson/thnk7.ogg",
 				"marines/johnson/thnk8.ogg",
 				},
-		['shotfoebdy']	=	{
+		["shotfoebdy"]	=	{
 				"marines/johnson/shotfoebdy1.ogg",
 				"marines/johnson/shotfoebdy2.ogg",
 				"marines/johnson/shotfoebdy3.ogg",
 				"marines/johnson/shotfoebdy4.ogg",
 				"marines/johnson/shotfoebdy5.ogg",
 				},
-		['pain_shld']	=	{
+		["pain_shld"]	=	{
 				"marines/johnson/pain_shld1.ogg",
 				"marines/johnson/pain_shld2.ogg",
 				"marines/johnson/pain_shld3.ogg",
@@ -16054,11 +16054,11 @@ ENT.Voices = {
 				"marines/johnson/pain_shld8.ogg",
 				"marines/johnson/pain_shld9.ogg",
 				},
-		['pstcmbt_brt']	=	{
+		["pstcmbt_brt"]	=	{
 				"marines/johnson/pstcmbt_brt1.ogg",
 				"marines/johnson/pstcmbt_brt2.ogg",
 				},
-		['grt_plr_mc']	=	{
+		["grt_plr_mc"]	=	{
 				"marines/johnson/grt_plr_mc1.ogg",
 				"marines/johnson/grt_plr_mc2.ogg",
 				"marines/johnson/grt_plr_mc3.ogg",
@@ -16067,13 +16067,13 @@ ENT.Voices = {
 				"marines/johnson/grt_plr_mc6.ogg",
 				"marines/johnson/grt_plr_mc7.ogg",
 				},
-		['foeordr_fallback']	=	{
+		["foeordr_fallback"]	=	{
 				"marines/johnson/foeordr_fallback1.ogg",
 				"marines/johnson/foeordr_fallback2.ogg",
 				"marines/johnson/foeordr_fallback3.ogg",
 				"marines/johnson/foeordr_fallback4.ogg",
 				},
-		['hail_plr_mc']	=	{
+		["hail_plr_mc"]	=	{
 				"marines/johnson/hail_plr_mc1.ogg",
 				"marines/johnson/hail_plr_mc2.ogg",
 				"marines/johnson/hail_plr_mc3.ogg",
@@ -16082,13 +16082,13 @@ ENT.Voices = {
 				"marines/johnson/hail_plr_mc6.ogg",
 				"marines/johnson/hail_plr_mc7.ogg",
 				},
-		['foeordr_advance']	=	{
+		["foeordr_advance"]	=	{
 				"marines/johnson/foeordr_advance1.ogg",
 				"marines/johnson/foeordr_advance2.ogg",
 				"marines/johnson/foeordr_advance3.ogg",
 				"marines/johnson/foeordr_advance4.ogg",
 				},
-		['foundfoe_prst']	=	{
+		["foundfoe_prst"]	=	{
 				"marines/johnson/foundfoe_prst1.ogg",
 				"marines/johnson/foundfoe_prst10.ogg",
 				"marines/johnson/foundfoe_prst2.ogg",
@@ -16099,19 +16099,19 @@ ENT.Voices = {
 				"marines/johnson/foundfoe_prst8.ogg",
 				"marines/johnson/foundfoe_prst9.ogg",
 				},
-		['ordr_keepwatch']	=	{
+		["ordr_keepwatch"]	=	{
 				"marines/johnson/ordr_keepwatch1.ogg",
 				"marines/johnson/ordr_keepwatch2.ogg",
 				"marines/johnson/ordr_keepwatch3.ogg",
 				"marines/johnson/ordr_keepwatch4.ogg",
 				},
-		['pain_mjr']	=	{
+		["pain_mjr"]	=	{
 				"marines/johnson/pain_mjr1.ogg",
 				"marines/johnson/pain_mjr10.ogg",
 				"marines/johnson/pain_mjr11.ogg",
 				"marines/johnson/pain_mjr3.ogg",
 				},
-		['kamikaze']	=	{
+		["kamikaze"]	=	{
 				"marines/johnson/kamikaze1.ogg",
 				"marines/johnson/kamikaze2.ogg",
 				"marines/johnson/kamikaze4.ogg",
@@ -16121,7 +16121,7 @@ ENT.Voices = {
 				"marines/johnson/kamikaze8.ogg",
 				"marines/johnson/kamikaze9.ogg",
 				},
-		['seefoe']	=	{
+		["seefoe"]	=	{
 				"marines/johnson/seefoe10.ogg",
 				"marines/johnson/seefoe2.ogg",
 				"marines/johnson/seefoe3.ogg",
@@ -16132,17 +16132,17 @@ ENT.Voices = {
 				"marines/johnson/seefoe8.ogg",
 				"marines/johnson/seefoe9.ogg",
 				},
-		['reanimate']	=	{
+		["reanimate"]	=	{
 				"marines/johnson/reanimate2.ogg",
 				"marines/johnson/reanimate3.ogg",
 				"marines/johnson/reanimate4.ogg",
 				},
-		['scld']	=	{
+		["scld"]	=	{
 				"marines/johnson/scld1.ogg",
 				"marines/johnson/scld3.ogg",
 				"marines/johnson/scld4.ogg",
 				},
-		['thnk_plr_btrwpn']	=	{
+		["thnk_plr_btrwpn"]	=	{
 				"marines/johnson/thnk_plr_btrwpn1.ogg",
 				"marines/johnson/thnk_plr_btrwpn10.ogg",
 				"marines/johnson/thnk_plr_btrwpn11.ogg",
@@ -16155,17 +16155,17 @@ ENT.Voices = {
 				"marines/johnson/thnk_plr_btrwpn8.ogg",
 				"marines/johnson/thnk_plr_btrwpn9.ogg",
 				},
-		['scrn_plr_mc']	=	{
+		["scrn_plr_mc"]	=	{
 				"marines/johnson/scrn_plr_mc1.ogg",
 				"marines/johnson/scrn_plr_mc2.ogg",
 				},
-		['newordr_charge']	=	{
+		["newordr_charge"]	=	{
 				"marines/johnson/newordr_charge1.ogg",
 				"marines/johnson/newordr_charge2.ogg",
 				"marines/johnson/newordr_charge3.ogg",
 				"marines/johnson/newordr_charge4.ogg",
 				},
-		['contempt']	=	{
+		["contempt"]	=	{
 				"marines/johnson/contempt1.ogg",
 				"marines/johnson/contempt2.ogg",
 				"marines/johnson/contempt3.ogg",
@@ -16175,7 +16175,7 @@ ENT.Voices = {
 				"marines/johnson/contempt7.ogg",
 				"marines/johnson/contempt8.ogg",
 				},
-		['dth_mjr']	=	{
+		["dth_mjr"]	=	{
 				"marines/johnson/dth_mjr1.ogg",
 				"marines/johnson/dth_mjr2.ogg",
 				"marines/johnson/dth_mjr3.ogg",
@@ -16184,14 +16184,14 @@ ENT.Voices = {
 				"marines/johnson/dth_mjr6.ogg",
 				"marines/johnson/dth_mjr7.ogg",
 				},
-		['lmnt']	=	{
+		["lmnt"]	=	{
 				"marines/johnson/lmnt1.ogg",
 				"marines/johnson/lmnt2.ogg",
 				"marines/johnson/lmnt7.ogg",
 				"marines/johnson/lmnt8.ogg",
 				"marines/johnson/lmnt9.ogg",
 				},
-		['pstcmbt']	=	{
+		["pstcmbt"]	=	{
 				"marines/johnson/pstcmbt1.ogg",
 				"marines/johnson/pstcmbt2.ogg",
 				"marines/johnson/pstcmbt3.ogg",
@@ -16200,13 +16200,13 @@ ENT.Voices = {
 				"marines/johnson/pstcmbt7.ogg",
 				"marines/johnson/pstcmbt9.ogg",
 				},
-		['newordr_fallback']	=	{
+		["newordr_fallback"]	=	{
 				"marines/johnson/newordr_fallback1.ogg",
 				"marines/johnson/newordr_fallback2.ogg",
 				"marines/johnson/newordr_fallback3.ogg",
 				"marines/johnson/newordr_fallback4.ogg",
 				},
-		['scld_plr_mc']	=	{
+		["scld_plr_mc"]	=	{
 				"marines/johnson/scld_plr_mc1.ogg",
 				"marines/johnson/scld_plr_mc2.ogg",
 				"marines/johnson/scld_plr_mc3.ogg",
@@ -16214,7 +16214,7 @@ ENT.Voices = {
 				"marines/johnson/scld_plr_mc5.ogg",
 				"marines/johnson/scld_plr_mc6.ogg",
 				},
-		['lmnt_deadplr_arb']	=	{
+		["lmnt_deadplr_arb"]	=	{
 				"marines/johnson/lmnt_deadplr_arb1.ogg",
 				"marines/johnson/lmnt_deadplr_arb2.ogg",
 				"marines/johnson/lmnt_deadplr_arb3.ogg",
@@ -16223,11 +16223,11 @@ ENT.Voices = {
 				"marines/johnson/lmnt_deadplr_arb7.ogg",
 				"marines/johnson/lmnt_deadplr_arb8.ogg",
 				},
-		['pstcmbt_ez']	=	{
+		["pstcmbt_ez"]	=	{
 				"marines/johnson/pstcmbt_ez1.ogg",
 				"marines/johnson/pstcmbt_ez2.ogg",
 				},
-		['scld_plr_kllally']	=	{
+		["scld_plr_kllally"]	=	{
 				"marines/johnson/scld_plr_kllally1.ogg",
 				"marines/johnson/scld_plr_kllally2.ogg",
 				"marines/johnson/scld_plr_kllally3.ogg",
@@ -16237,23 +16237,23 @@ ENT.Voices = {
 				"marines/johnson/scld_plr_kllally7.ogg",
 				"marines/johnson/scld_plr_kllally9.ogg",
 				},
-		['dth']	=	{
+		["dth"]	=	{
 				"marines/johnson/dth1.ogg",
 				"marines/johnson/dth2.ogg",
 				"marines/johnson/dth3.ogg",
 				"marines/johnson/dth4.ogg",
 				"marines/johnson/dth5.ogg",
 				},
-		['ok_plr_arb']	=	{
+		["ok_plr_arb"]	=	{
 				"marines/johnson/ok_plr_arb1.ogg",
 				"marines/johnson/ok_plr_arb2.ogg",
 				"marines/johnson/ok_plr_arb3.ogg",
 				},
-		['pain_mdm']	=	{
+		["pain_mdm"]	=	{
 				"marines/johnson/pain_mdm1.ogg",
 				"marines/johnson/pain_mdm2.ogg",
 				},
-		['look']	=	{
+		["look"]	=	{
 				"marines/johnson/look1.ogg",
 				"marines/johnson/look10.ogg",
 				"marines/johnson/look12.ogg",
@@ -16265,12 +16265,12 @@ ENT.Voices = {
 				"marines/johnson/look8.ogg",
 				"marines/johnson/look9.ogg",
 				},
-		['thnk_plr_arb']	=	{
+		["thnk_plr_arb"]	=	{
 				"marines/johnson/thnk_plr_arb1.ogg",
 				"marines/johnson/thnk_plr_arb2.ogg",
 				"marines/johnson/thnk_plr_arb3.ogg",
 				},
-		['hail_plr_arb']	=	{
+		["hail_plr_arb"]	=	{
 				"marines/johnson/hail_plr_arb1.ogg",
 				"marines/johnson/hail_plr_arb2.ogg",
 				"marines/johnson/hail_plr_arb3.ogg",
@@ -16278,7 +16278,7 @@ ENT.Voices = {
 				"marines/johnson/hail_plr_arb5.ogg",
 				"marines/johnson/hail_plr_arb6.ogg",
 				},
-		['prs_plr_mc']	=	{
+		["prs_plr_mc"]	=	{
 				"marines/johnson/prs_plr_mc1.ogg",
 				"marines/johnson/prs_plr_mc2.ogg",
 				"marines/johnson/prs_plr_mc3.ogg",
@@ -16286,24 +16286,24 @@ ENT.Voices = {
 				"marines/johnson/prs_plr_mc5.ogg",
 				"marines/johnson/prs_plr_mc6.ogg",
 				},
-		['look_pstcmbt_hrd']	=	{
+		["look_pstcmbt_hrd"]	=	{
 				"marines/johnson/look_pstcmbt_hrd1.ogg",
 				"marines/johnson/look_pstcmbt_hrd3.ogg",
 				},
-		['dth_fall']	=	{
+		["dth_fall"]	=	{
 				"marines/johnson/dth_fall1.ogg",
 				"marines/johnson/dth_fall2.ogg",
 				"marines/johnson/dth_fall3.ogg",
 				"marines/johnson/dth_fall4.ogg",
 				"marines/johnson/dth_fall5.ogg",
 				},
-		['ordr_pinned']	=	{
+		["ordr_pinned"]	=	{
 				"marines/johnson/ordr_pinned12.ogg",
 				"marines/johnson/ordr_pinned13.ogg",
 				"marines/johnson/ordr_pinned14.ogg",
 				"marines/johnson/ordr_pinned15.ogg",
 				},
-		['tnt']	=	{
+		["tnt"]	=	{
 				"marines/johnson/tnt1.ogg",
 				"marines/johnson/tnt12.ogg",
 				"marines/johnson/tnt2.ogg",
@@ -16315,7 +16315,7 @@ ENT.Voices = {
 				"marines/johnson/tnt8.ogg",
 				"marines/johnson/tnt9.ogg",
 				},
-		['meleeleap']	=	{
+		["meleeleap"]	=	{
 				"marines/johnson/meleeleap1.ogg",
 				"marines/johnson/meleeleap2.ogg",
 				"marines/johnson/meleeleap3.ogg",
@@ -16323,7 +16323,7 @@ ENT.Voices = {
 				"marines/johnson/meleeleap5.ogg",
 				"marines/johnson/meleeleap6.ogg",
 				},
-		['scrn']	=	{
+		["scrn"]	=	{
 				"marines/johnson/scrn10.ogg",
 				"marines/johnson/scrn11.ogg",
 				"marines/johnson/scrn12.ogg",
@@ -16334,24 +16334,24 @@ ENT.Voices = {
 				"marines/johnson/scrn8.ogg",
 				"marines/johnson/scrn9.ogg",
 				},
-		['ordr_chkfoebdy']	=	{
+		["ordr_chkfoebdy"]	=	{
 				"marines/johnson/ordr_chkfoebdy1.ogg",
 				"marines/johnson/ordr_chkfoebdy2.ogg",
 				"marines/johnson/ordr_chkfoebdy3.ogg",
 				"marines/johnson/ordr_chkfoebdy4.ogg",
 				},
-		['look_pstcmbt_ez']	=	{
+		["look_pstcmbt_ez"]	=	{
 				"marines/johnson/look_pstcmbt_ez2.ogg",
 				"marines/johnson/look_pstcmbt_ez3.ogg",
 				},
-		['pain_fall']	=	{
+		["pain_fall"]	=	{
 				"marines/johnson/pain_fall1.ogg",
 				"marines/johnson/pain_fall2.ogg",
 				"marines/johnson/pain_fall3.ogg",
 				"marines/johnson/pain_fall4.ogg",
 				"marines/johnson/pain_fall5.ogg",
 				},
-		['grt_plr_arb']	=	{
+		["grt_plr_arb"]	=	{
 				"marines/johnson/grt_plr_arb1.ogg",
 				"marines/johnson/grt_plr_arb10.ogg",
 				"marines/johnson/grt_plr_arb2.ogg",
@@ -16363,12 +16363,12 @@ ENT.Voices = {
 				"marines/johnson/grt_plr_arb8.ogg",
 				"marines/johnson/grt_plr_arb9.ogg",
 				},
-		['scrn_plr_arb']	=	{
+		["scrn_plr_arb"]	=	{
 				"marines/johnson/scrn_plr_arb1.ogg",
 				"marines/johnson/scrn_plr_arb2.ogg",
 				"marines/johnson/scrn_plr_arb4.ogg",
 				},
-		['lift']	=	{
+		["lift"]	=	{
 				"marines/johnson/lift1.ogg",
 				"marines/johnson/lift15.ogg",
 				"marines/johnson/lift16.ogg",
@@ -16384,7 +16384,7 @@ ENT.Voices = {
 				"marines/johnson/lift8.ogg",
 				"marines/johnson/lift9.ogg",
 				},
-		['prs_plr_arb']	=	{
+		["prs_plr_arb"]	=	{
 				"marines/johnson/prs_plr_arb1.ogg",
 				"marines/johnson/prs_plr_arb2.ogg",
 				"marines/johnson/prs_plr_arb3.ogg",
@@ -16392,7 +16392,7 @@ ENT.Voices = {
 				"marines/johnson/prs_plr_arb5.ogg",
 				"marines/johnson/prs_plr_arb6.ogg",
 				},
-		['scld_plr_arb']	=	{
+		["scld_plr_arb"]	=	{
 				"marines/johnson/scld_plr_arb1.ogg",
 				"marines/johnson/scld_plr_arb2.ogg",
 				"marines/johnson/scld_plr_arb3.ogg",
@@ -16401,21 +16401,21 @@ ENT.Voices = {
 				"marines/johnson/scld_plr_arb7.ogg",
 				"marines/johnson/scld_plr_arb8.ogg",
 				},
-		['scld_plr_blocking']	=	{
+		["scld_plr_blocking"]	=	{
 				"marines/johnson/scld_plr_blocking1.ogg",
 				"marines/johnson/scld_plr_blocking2.ogg",
 				},
-		['ok_plr_mc']	=	{
+		["ok_plr_mc"]	=	{
 				"marines/johnson/ok_plr_mc1.ogg",
 				"marines/johnson/ok_plr_mc2.ogg",
 				},
-		['foeordr_retreat']	=	{
+		["foeordr_retreat"]	=	{
 				"marines/johnson/foeordr_retreat1.ogg",
 				"marines/johnson/foeordr_retreat2.ogg",
 				"marines/johnson/foeordr_retreat3.ogg",
 				"marines/johnson/foeordr_retreat4.ogg",
 				},
-		['crs']	=	{
+		["crs"]	=	{
 				"marines/johnson/crs1.ogg",
 				"marines/johnson/crs10.ogg",
 				"marines/johnson/crs11.ogg",
@@ -16432,13 +16432,13 @@ ENT.Voices = {
 				"marines/johnson/crs8.ogg",
 				"marines/johnson/crs9.ogg",
 				},
-		['newordr_retreat']	=	{
+		["newordr_retreat"]	=	{
 				"marines/johnson/newordr_retreat1.ogg",
 				"marines/johnson/newordr_retreat2.ogg",
 				"marines/johnson/newordr_retreat3.ogg",
 				"marines/johnson/newordr_retreat4.ogg",
 				},
-		['melee']	=	{
+		["melee"]	=	{
 				"marines/johnson/melee1.ogg",
 				"marines/johnson/melee10.ogg",
 				"marines/johnson/melee2.ogg",
@@ -16449,13 +16449,13 @@ ENT.Voices = {
 				"marines/johnson/melee8.ogg",
 				"marines/johnson/melee9.ogg",
 				},
-		['ordr_openfire']	=	{
+		["ordr_openfire"]	=	{
 				"marines/johnson/ordr_openfire1.ogg",
 				"marines/johnson/ordr_openfire2.ogg",
 				"marines/johnson/ordr_openfire4.ogg",
 				"marines/johnson/ordr_openfire7.ogg",
 				},
-		['captured']	=	{
+		["captured"]	=	{
 				"marines/johnson/captured1.ogg",
 				"marines/johnson/captured2.ogg",
 				"marines/johnson/captured3.ogg",
@@ -16466,7 +16466,7 @@ ENT.Voices = {
 				"marines/johnson/captured8.ogg",
 				"marines/johnson/captured9.ogg",
 				},
-		['ok_plr_trdwpn']	=	{
+		["ok_plr_trdwpn"]	=	{
 				"marines/johnson/ok_plr_trdwpn1.ogg",
 				"marines/johnson/ok_plr_trdwpn2.ogg",
 				"marines/johnson/ok_plr_trdwpn3.ogg",
@@ -16477,7 +16477,7 @@ ENT.Voices = {
 				"marines/johnson/ok_plr_trdwpn8.ogg",
 				"marines/johnson/ok_plr_trdwpn9.ogg",
 				},
-		['ok']	=	{
+		["ok"]	=	{
 				"marines/johnson/ok1.ogg",
 				"marines/johnson/ok10.ogg",
 				"marines/johnson/ok11.ogg",
@@ -16495,7 +16495,7 @@ ENT.Voices = {
 				"marines/johnson/ok8.ogg",
 				"marines/johnson/ok9.ogg",
 				},
-		['brsrk']	=	{
+		["brsrk"]	=	{
 				"marines/johnson/brsrk1.ogg",
 				"marines/johnson/brsrk3.ogg",
 				"marines/johnson/brsrk4.ogg",
@@ -16504,27 +16504,27 @@ ENT.Voices = {
 				"marines/johnson/brsrk7.ogg",
 				"marines/johnson/brsrk9.ogg",
 				},
-		['endcmbt']	=	{
+		["endcmbt"]	=	{
 				"marines/johnson/endcmbt2.ogg",
 				"marines/johnson/endcmbt3.ogg",
 				"marines/johnson/endcmbt4.ogg",
 				"marines/johnson/endcmbt5.ogg",
 				"marines/johnson/endcmbt6.ogg",
 				},
-		['hail']	=	{
+		["hail"]	=	{
 				"marines/johnson/hail1.ogg",
 				"marines/johnson/hail2.ogg",
 				"marines/johnson/hail3.ogg",
 				"marines/johnson/hail4.ogg",
 				"marines/johnson/hail5.ogg",
 				},
-		['forgive']	=	{
+		["forgive"]	=	{
 				"marines/johnson/forgive1.ogg",
 				"marines/johnson/forgive3.ogg",
 				"marines/johnson/forgive4.ogg",
 				"marines/johnson/forgive5.ogg",
 				},
-		['anger']	=	{
+		["anger"]	=	{
 				"marines/johnson/anger10.ogg",
 				"marines/johnson/anger2.ogg",
 				"marines/johnson/anger3.ogg",
@@ -16534,7 +16534,7 @@ ENT.Voices = {
 				"marines/johnson/anger8.ogg",
 				"marines/johnson/anger9.ogg",
 				},
-		['whn']	=	{
+		["whn"]	=	{
 				"marines/johnson/whn1.ogg",
 				"marines/johnson/whn2.ogg",
 				"marines/johnson/whn3.ogg",
@@ -16543,21 +16543,21 @@ ENT.Voices = {
 				"marines/johnson/whn6.ogg",
 				"marines/johnson/whn7.ogg",
 				},
-		['warn']	=	{
+		["warn"]	=	{
 				"marines/johnson/warn1.ogg",
 				"marines/johnson/warn2.ogg",
 				"marines/johnson/warn3.ogg",
 				"marines/johnson/warn4.ogg",
 				},
-		['crs_betrayingplr_mc']	=	{
+		["crs_betrayingplr_mc"]	=	{
 				"marines/johnson/crs_betrayingplr_mc1.ogg",
 				"marines/johnson/crs_betrayingplr_mc2.ogg",
 				},
-		['look_pstcmbt']	=	{
+		["look_pstcmbt"]	=	{
 				"marines/johnson/look_pstcmbt1.ogg",
 				"marines/johnson/look_pstcmbt2.ogg",
 				},
-		['lst_cntct']	=	{
+		["lst_cntct"]	=	{
 				"marines/johnson/lst_cntct1.ogg",
 				"marines/johnson/lst_cntct10.ogg",
 				"marines/johnson/lst_cntct11.ogg",
@@ -16568,19 +16568,19 @@ ENT.Voices = {
 				"marines/johnson/lst_cntct7.ogg",
 				"marines/johnson/lst_cntct9.ogg",
 				},
-		['neworder_flanking']	=	{
+		["neworder_flanking"]	=	{
 				"marines/johnson/neworder_flanking1.ogg",
 				"marines/johnson/neworder_flanking2.ogg",
 				"marines/johnson/neworder_flanking3.ogg",
 				"marines/johnson/neworder_flanking4.ogg",
 				},
-		['chr_kllfoe']	=	{
+		["chr_kllfoe"]	=	{
 				"marines/johnson/chr_kllfoe1.ogg",
 				"marines/johnson/chr_kllfoe2.ogg",
 				"marines/johnson/chr_kllfoe3.ogg",
 				"marines/johnson/chr_kllfoe4.ogg",
 				},
-		['stayback']	=	{
+		["stayback"]	=	{
 				"marines/johnson/stayback10.ogg",
 				"marines/johnson/stayback11.ogg",
 				"marines/johnson/stayback2.ogg",
@@ -16591,22 +16591,22 @@ ENT.Voices = {
 				"marines/johnson/stayback7.ogg",
 				"marines/johnson/stayback8.ogg",
 				},
-		['thnk_plr_mc']	=	{
+		["thnk_plr_mc"]	=	{
 				"marines/johnson/thnk_plr_mc1.ogg",
 				"marines/johnson/thnk_plr_mc2.ogg",
 				},
-		['chr']	=	{
+		["chr"]	=	{
 				"marines/johnson/chr1.ogg",
 				"marines/johnson/chr3.ogg",
 				"marines/johnson/chr4.ogg",
 				"marines/johnson/chr5.ogg",
 				},
-		['dth_reanimated']	=	{
+		["dth_reanimated"]	=	{
 				"marines/johnson/dth_reanimated1.ogg",
 				"marines/johnson/dth_reanimated2.ogg",
 				"marines/johnson/dth_reanimated3.ogg",
 				},
-		['grt']	=	{
+		["grt"]	=	{
 				"marines/johnson/grt1.ogg",
 				"marines/johnson/grt3.ogg",
 				"marines/johnson/grt4.ogg",
@@ -16615,17 +16615,17 @@ ENT.Voices = {
 				"marines/johnson/grt7.ogg",
 				"marines/johnson/grt8.ogg",
 				},
-		['newordr_leaveplr']	=	{
+		["newordr_leaveplr"]	=	{
 				"marines/johnson/newordr_leaveplr1.ogg",
 				"marines/johnson/newordr_leaveplr2.ogg",
 				"marines/johnson/newordr_leaveplr3.ogg",
 				"marines/johnson/newordr_leaveplr4.ogg",
 				},
-		['crs_betrayingplr_arb']	=	{
+		["crs_betrayingplr_arb"]	=	{
 				"marines/johnson/crs_betrayingplr_arb1.ogg",
 				"marines/johnson/crs_betrayingplr_arb2.ogg",
 				},
-		['betray']	=	{
+		["betray"]	=	{
 				"marines/johnson/betray1.ogg",
 				"marines/johnson/betray2.ogg",
 				"marines/johnson/betray3.ogg",
@@ -16635,7 +16635,7 @@ ENT.Voices = {
 				"marines/johnson/betray7.ogg",
 				"marines/johnson/betray8.ogg",
 				},
-		['fear']	=	{
+		["fear"]	=	{
 				"marines/johnson/fear1.ogg",
 				"marines/johnson/fear2.ogg",
 				"marines/johnson/fear3.ogg",
@@ -16643,7 +16643,7 @@ ENT.Voices = {
 				"marines/johnson/fear5.ogg",
 				"marines/johnson/fear8.ogg",
 				},
-		['dive']	=	{
+		["dive"]	=	{
 				"marines/johnson/dive1.ogg",
 				"marines/johnson/dive11.ogg",
 				"marines/johnson/dive2.ogg",
@@ -16653,50 +16653,50 @@ ENT.Voices = {
 				"marines/johnson/dive6.ogg",
 				"marines/johnson/dive7.ogg",
 				},
-		['newordr_entervcl']	=	{
+		["newordr_entervcl"]	=	{
 				"marines/johnson/newordr_entervcl1.ogg",
 				"marines/johnson/newordr_entervcl2.ogg",
 				"marines/johnson/newordr_entervcl3.ogg",
 				"marines/johnson/newordr_entervcl4.ogg",
 				},
-		['look_plr_mc']	=	{
+		["look_plr_mc"]	=	{
 				"marines/johnson/look_plr_mc1.ogg",
 				"marines/johnson/look_plr_mc2.ogg",
 				"marines/johnson/look_plr_mc3.ogg",
 				},
-		['newordr_moveon']	=	{
+		["newordr_moveon"]	=	{
 				"marines/johnson/newordr_moveon1.ogg",
 				"marines/johnson/newordr_moveon3.ogg",
 				"marines/johnson/newordr_moveon4.ogg",
 				"marines/johnson/newordr_moveon5.ogg",
 				},
-		['pstcmbt_hrd']	=	{
+		["pstcmbt_hrd"]	=	{
 				"marines/johnson/pstcmbt_hrd1.ogg",
 				"marines/johnson/pstcmbt_hrd3.ogg",
 				},
-		['neworder_arrival']	=	{
+		["neworder_arrival"]	=	{
 				"marines/johnson/neworder_arrival1.ogg",
 				"marines/johnson/neworder_arrival2.ogg",
 				"marines/johnson/neworder_arrival3.ogg",
 				"marines/johnson/neworder_arrival4.ogg",
 				},
-		['ordr_prst_keeplooking']	=	{
+		["ordr_prst_keeplooking"]	=	{
 				"marines/johnson/ordr_prst_keeplooking1.ogg",
 				"marines/johnson/ordr_prst_keeplooking3.ogg",
 				"marines/johnson/ordr_prst_keeplooking4.ogg",
 				"marines/johnson/ordr_prst_keeplooking5.ogg",
 				},
-		['ordr_invsgt']	=	{
+		["ordr_invsgt"]	=	{
 				"marines/johnson/ordr_invsgt16.ogg",
 				"marines/johnson/ordr_invsgt17.ogg",
 				"marines/johnson/ordr_invsgt18.ogg",
 				"marines/johnson/ordr_invsgt19.ogg",
 				},
-		['look_plr_arb']	=	{
+		["look_plr_arb"]	=	{
 				"marines/johnson/look_plr_arb1.ogg",
 				"marines/johnson/look_plr_arb2.ogg",
 				},
-		['bump']	=	{
+		["bump"]	=	{
 				"marines/johnson/bump1.ogg",
 				"marines/johnson/bump2.ogg",
 				"marines/johnson/bump3.ogg",
@@ -16705,7 +16705,7 @@ ENT.Voices = {
 				"marines/johnson/bump6.ogg",
 				"marines/johnson/bump7.ogg",
 				},
-		['hrdfoe']	=	{
+		["hrdfoe"]	=	{
 				"marines/johnson/hrdfoe1.ogg",
 				"marines/johnson/hrdfoe10.ogg",
 				"marines/johnson/hrdfoe11.ogg",
@@ -16720,7 +16720,7 @@ ENT.Voices = {
 				"marines/johnson/hrdfoe7.ogg",
 				"marines/johnson/hrdfoe8.ogg",
 				},
-		['scrn_plr_wrswpn']	=	{
+		["scrn_plr_wrswpn"]	=	{
 				"marines/johnson/scrn_plr_wrswpn1.ogg",
 				"marines/johnson/scrn_plr_wrswpn10.ogg",
 				"marines/johnson/scrn_plr_wrswpn11.ogg",
@@ -16733,7 +16733,7 @@ ENT.Voices = {
 				"marines/johnson/scrn_plr_wrswpn7.ogg",
 				"marines/johnson/scrn_plr_wrswpn8.ogg",
 				},
-		['dth_slnt']	=	{
+		["dth_slnt"]	=	{
 				"marines/johnson/dth_slnt1.ogg",
 				"marines/johnson/dth_slnt10.ogg",
 				"marines/johnson/dth_slnt2.ogg",
@@ -16744,7 +16744,7 @@ ENT.Voices = {
 				"marines/johnson/dth_slnt8.ogg",
 				"marines/johnson/dth_slnt9.ogg",
 				},
-		['dth_hdsht']	=	{
+		["dth_hdsht"]	=	{
 				"marines/johnson/dth_hdsht1.ogg",
 				"marines/johnson/dth_hdsht10.ogg",
 				"marines/johnson/dth_hdsht2.ogg",
@@ -16756,12 +16756,12 @@ ENT.Voices = {
 				"marines/johnson/dth_hdsht8.ogg",
 				"marines/johnson/dth_hdsht9.ogg",
 				},
-		['dth_drama']	=	{
+		["dth_drama"]	=	{
 				"marines/johnson/dth_drama1.ogg",
 				"marines/johnson/dth_drama2.ogg",
 				"marines/johnson/dth_drama3.ogg",
 				},
-		['strk']	=	{
+		["strk"]	=	{
 				"marines/johnson/strk1.ogg",
 				"marines/johnson/strk10.ogg",
 				"marines/johnson/strk2.ogg",
@@ -16772,7 +16772,7 @@ ENT.Voices = {
 				"marines/johnson/strk8.ogg",
 				"marines/johnson/strk9.ogg",
 				},
-		['lmnt_deadplr_mc']	=	{
+		["lmnt_deadplr_mc"]	=	{
 				"marines/johnson/lmnt_deadplr_mc1.ogg",
 				"marines/johnson/lmnt_deadplr_mc2.ogg",
 				"marines/johnson/lmnt_deadplr_mc3.ogg",
@@ -16781,24 +16781,24 @@ ENT.Voices = {
 				"marines/johnson/lmnt_deadplr_mc6.ogg",
 				"marines/johnson/lmnt_deadplr_mc7.ogg",
 				},
-		['fall']	=	{
+		["fall"]	=	{
 				"marines/johnson/fall1.ogg",
 				"marines/johnson/fall2.ogg",
 				"marines/johnson/fall3.ogg",
 				"marines/johnson/fall4.ogg",
 				},
-		['relief']	=	{
+		["relief"]	=	{
 				"marines/johnson/relief1.ogg",
 				"marines/johnson/relief3.ogg",
 				"marines/johnson/relief4.ogg",
 				"marines/johnson/relief5.ogg",
 				"marines/johnson/relief6.ogg",
 				},
-		['ok_plr_trdst_dvr']	=	{
+		["ok_plr_trdst_dvr"]	=	{
 				"marines/johnson/ok_plr_trdst_dvr1.ogg",
 				"marines/johnson/ok_plr_trdst_dvr2.ogg",
 				},
-		['stun']	=	{
+		["stun"]	=	{
 				"marines/johnson/stun1.ogg",
 				"marines/johnson/stun10.ogg",
 				"marines/johnson/stun11.ogg",
@@ -16809,65 +16809,7778 @@ ENT.Voices = {
 				"marines/johnson/stun7.ogg",
 				"marines/johnson/stun9.ogg",
 				},
-		['ordr_stayback']	=	{
+		["ordr_stayback"]	=	{
 				"marines/johnson/ordr_stayback1.ogg",
 				"marines/johnson/ordr_stayback3.ogg",
 				"marines/johnson/ordr_stayback4.ogg",
 				"marines/johnson/ordr_stayback5.ogg",
 				},
-		['ordr_grenade']	=	{
+		["ordr_grenade"]	=	{
 				"marines/johnson/ordr_grenade1.ogg",
 				"marines/johnson/ordr_grenade2.ogg",
 				"marines/johnson/ordr_grenade3.ogg",
 				},
-		['ok_plr_trdst_gnr']	=	{
+		["ok_plr_trdst_gnr"]	=	{
 				"marines/johnson/ok_plr_trdst_gnr1.ogg",
 				"marines/johnson/ok_plr_trdst_gnr2.ogg",
 				},
-		['neworder_fllwplr']	=	{
+		["neworder_fllwplr"]	=	{
 				"marines/johnson/neworder_fllwplr1.ogg",
 				"marines/johnson/neworder_fllwplr2.ogg",
 				"marines/johnson/neworder_fllwplr3.ogg",
 				"marines/johnson/neworder_fllwplr4.ogg",
 				},
-		['foeordr_support']	=	{
+		["foeordr_support"]	=	{
 				"marines/johnson/foeordr_support1.ogg",
 				"marines/johnson/foeordr_support2.ogg",
 				"marines/johnson/foeordr_support3.ogg",
 				},
-		['foeordr_charge']	=	{
+		["foeordr_charge"]	=	{
 				"marines/johnson/foeordr_charge1.ogg",
 				"marines/johnson/foeordr_charge2.ogg",
 				"marines/johnson/foeordr_charge3.ogg",
 				},
-		['panic']	=	{
+		["panic"]	=	{
 				"marines/johnson/panic2.ogg",
 				"marines/johnson/panic3.ogg",
 				},
-		['pld']	=	{
+		["pld"]	=	{
 				"marines/johnson/pld1.ogg",
 				"marines/johnson/pld2.ogg",
 				"marines/johnson/pld3.ogg",
 				"marines/johnson/pld4.ogg",
 				"marines/johnson/pld6.ogg",
 				},
-		['ordr_prst']	=	{
+		["ordr_prst"]	=	{
 				"marines/johnson/ordr_prst1.ogg",
 				"marines/johnson/ordr_prst2.ogg",
 				"marines/johnson/ordr_prst3.ogg",
 				"marines/johnson/ordr_prst4.ogg",
 				},
-		['dth_slw']	=	{
+		["dth_slw"]	=	{
 				"marines/johnson/dth_slw1.ogg",
 				"marines/johnson/dth_slw2.ogg",
 				"marines/johnson/dth_slw3.ogg",
 				"marines/johnson/dth_slw4.ogg",
 				},
-		['approve']	=	{
+		["approve"]	=	{
 				"marines/johnson/approve1.ogg",
 				"marines/johnson/approve2.ogg",
 				"marines/johnson/approve3.ogg",
 				"marines/johnson/approve4.ogg",
+				},
+	},
+	["Dare"] = {
+		["seefoe_upthere"]	=	{
+				"dare/seefoe_upthere_100.ogg",
+				"dare/seefoe_upthere_101.ogg",
+				"dare/seefoe_upthere_102.ogg",
+				"dare/seefoe_upthere_103.ogg",
+				},
+		["scld_plr_hrtme"]	=	{
+				"dare/scld_plr_hrtme_100.ogg",
+				"dare/scld_plr_hrtme_101.ogg",
+				"dare/scld_plr_hrtme_102.ogg",
+				"dare/scld_plr_hrtme_103.ogg",
+				"dare/scld_plr_hrtme_104.ogg",
+				},
+		["look_plr_fllw"]	=	{
+				"dare/look_plr_fllw_100.ogg",
+				"dare/look_plr_fllw_101.ogg",
+				"dare/look_plr_fllw_102.ogg",
+				"dare/look_plr_fllw_103.ogg",
+				},
+		["warn_eng_brsrk"]	=	{
+				"dare/warn_eng_brsrk_100.ogg",
+				"dare/warn_eng_brsrk_101.ogg",
+				"dare/warn_eng_brsrk_102.ogg",
+				"dare/warn_eng_brsrk_103.ogg",
+				"dare/warn_eng_brsrk_104.ogg",
+				"dare/warn_eng_brsrk_105.ogg",
+				},
+		["shld_crit_lp"]	=	{
+				"dare/shld_crit_lp1.ogg",
+				"dare/shld_crit_lp10.ogg",
+				"dare/shld_crit_lp11.ogg",
+				"dare/shld_crit_lp12.ogg",
+				"dare/shld_crit_lp13.ogg",
+				"dare/shld_crit_lp14.ogg",
+				"dare/shld_crit_lp15.ogg",
+				"dare/shld_crit_lp16.ogg",
+				"dare/shld_crit_lp17.ogg",
+				"dare/shld_crit_lp18.ogg",
+				"dare/shld_crit_lp19.ogg",
+				"dare/shld_crit_lp2.ogg",
+				"dare/shld_crit_lp20.ogg",
+				"dare/shld_crit_lp21.ogg",
+				"dare/shld_crit_lp22.ogg",
+				"dare/shld_crit_lp23.ogg",
+				"dare/shld_crit_lp24.ogg",
+				"dare/shld_crit_lp25.ogg",
+				"dare/shld_crit_lp26.ogg",
+				"dare/shld_crit_lp3.ogg",
+				"dare/shld_crit_lp4.ogg",
+				"dare/shld_crit_lp5.ogg",
+				"dare/shld_crit_lp6.ogg",
+				"dare/shld_crit_lp7.ogg",
+				"dare/shld_crit_lp8.ogg",
+				"dare/shld_crit_lp9.ogg",
+				},
+		["foeordr_support"]	=	{
+				"dare/foeordr_support_100.ogg",
+				"dare/foeordr_support_101.ogg",
+				"dare/foeordr_support_103.ogg",
+				"dare/foeordr_support_104.ogg",
+				"dare/foeordr_support_105.ogg",
+				},
+		["warn_vcl_phntm"]	=	{
+				"dare/warn_vcl_phntm_100.ogg",
+				"dare/warn_vcl_phntm_101.ogg",
+				},
+		["dodge"]	=	{
+				"dare/dodge_100.ogg",
+				"dare/dodge_101.ogg",
+				"dare/dodge_102.ogg",
+				"dare/dodge_103.ogg",
+				"dare/dodge_104.ogg",
+				"dare/dodge_105.ogg",
+				},
+		["scld_plr_kllally"]	=	{
+				"dare/scld_plr_kllally_100.ogg",
+				"dare/scld_plr_kllally_101.ogg",
+				"dare/scld_plr_kllally_102.ogg",
+				},
+		["shld_mjr_dmg"]	=	{
+				"dare/shld_mjr_dmg_100.ogg",
+				"dare/shld_mjr_dmg_101.ogg",
+				"dare/shld_mjr_dmg_102.ogg",
+				"dare/shld_mjr_dmg_103.ogg",
+				"dare/shld_mjr_dmg_104.ogg",
+				"dare/shld_mjr_dmg_105.ogg",
+				"dare/shld_mjr_dmg_106.ogg",
+				},
+		["reload"]	=	{
+				"dare/reload_100.ogg",
+				"dare/reload_101.ogg",
+				"dare/reload_102.ogg",
+				"dare/reload_103.ogg",
+				},
+		["chr_kllfoe"]	=	{
+				"dare/chr_kllfoe_100.ogg",
+				"dare/chr_kllfoe_101.ogg",
+				"dare/chr_kllfoe_102.ogg",
+				"dare/chr_kllfoe_103.ogg",
+				"dare/chr_kllfoe_105.ogg",
+				"dare/chr_kllfoe_106.ogg",
+				"dare/chr_kllfoe_107.ogg",
+				"dare/chr_kllfoe_108.ogg",
+				},
+		["jump"]	=	{
+				"dare/jump_100.ogg",
+				"dare/jump_101.ogg",
+				"dare/jump_102.ogg",
+				},
+		["look_lngtme"]	=	{
+				"dare/look_lngtme_100.ogg",
+				"dare/look_lngtme_102.ogg",
+				"dare/look_lngtme_104.ogg",
+				"dare/look_lngtme_105.ogg",
+				"dare/look_lngtme_106.ogg",
+				"dare/look_lngtme_107.ogg",
+				},
+		["prst_fail"]	=	{
+				"dare/prst_fail_100.ogg",
+				"dare/prst_fail_101.ogg",
+				"dare/prst_fail_102.ogg",
+				"dare/prst_fail_103.ogg",
+				},
+		["seefoe_downthere"]	=	{
+				"dare/seefoe_downthere_100.ogg",
+				"dare/seefoe_downthere_101.ogg",
+				},
+		["hlth_mjr_dmg"]	=	{
+				"dare/hlth_mjr_dmg_100.ogg",
+				"dare/hlth_mjr_dmg_101.ogg",
+				"dare/hlth_mjr_dmg_102.ogg",
+				"dare/hlth_mjr_dmg_103.ogg",
+				"dare/hlth_mjr_dmg_104.ogg",
+				"dare/hlth_mjr_dmg_105.ogg",
+				"dare/hlth_mjr_dmg_106.ogg",
+				"dare/hlth_mjr_dmg_107.ogg",
+				"dare/hlth_mjr_dmg_108.ogg",
+				"dare/hlth_mjr_dmg_109.ogg",
+				"dare/hlth_mjr_dmg_110.ogg",
+				"dare/hlth_mjr_dmg_111.ogg",
+				"dare/hlth_mjr_dmg_112.ogg",
+				"dare/hlth_mjr_dmg_113.ogg",
+				"dare/hlth_mjr_dmg_114.ogg",
+				"dare/hlth_mjr_dmg_115.ogg",
+				"dare/hlth_mjr_dmg_116.ogg",
+				"dare/hlth_mjr_dmg_117.ogg",
+				"dare/hlth_mjr_dmg_118.ogg",
+				"dare/hlth_mjr_dmg_119.ogg",
+				"dare/hlth_mjr_dmg_120.ogg",
+				"dare/hlth_mjr_dmg_121.ogg",
+				"dare/hlth_mjr_dmg_122.ogg",
+				},
+		["dwn"]	=	{
+				"dare/dwn_100.ogg",
+				"dare/dwn_101.ogg",
+				"dare/dwn_102.ogg",
+				"dare/dwn_103.ogg",
+				},
+		["cvr"]	=	{
+				"dare/cvr_100.ogg",
+				"dare/cvr_101.ogg",
+				},
+		["panic_plsmgrnd"]	=	{
+				"dare/panic_plsmgrnd_100.ogg",
+				"dare/panic_plsmgrnd_101.ogg",
+				"dare/panic_plsmgrnd_102.ogg",
+				"dare/panic_plsmgrnd_103.ogg",
+				"dare/panic_plsmgrnd_104.ogg",
+				"dare/panic_plsmgrnd_105.ogg",
+				"dare/panic_plsmgrnd_106.ogg",
+				},
+		["rmd_vcl_wrth"]	=	{
+				"dare/rmd_vcl_wrth_100.ogg",
+				"dare/rmd_vcl_wrth_101.ogg",
+				},
+		["shld_maj_lp"]	=	{
+				"dare/shld_maj_lp1.ogg",
+				"dare/shld_maj_lp2.ogg",
+				"dare/shld_maj_lp3.ogg",
+				"dare/shld_maj_lp4.ogg",
+				},
+		["whn"]	=	{
+				"dare/whn_100.ogg",
+				"dare/whn_101.ogg",
+				"dare/whn_102.ogg",
+				"dare/whn_103.ogg",
+				},
+		["rookie_look_dare"]	=	{
+				"dare/rookie_look_dare_100.ogg",
+				"dare/rookie_look_dare_103.ogg",
+				"dare/rookie_look_dare_104.ogg",
+				"dare/rookie_look_dare_105.ogg",
+				"dare/rookie_look_dare_106.ogg",
+				},
+		["newordr_moveon"]	=	{
+				"dare/newordr_moveon_100.ogg",
+				"dare/newordr_moveon_101.ogg",
+				"dare/newordr_moveon_102.ogg",
+				"dare/newordr_moveon_104.ogg",
+				},
+		["shld_recharge"]	=	{
+				"dare/shld_recharge_100.ogg",
+				"dare/shld_recharge_102.ogg",
+				"dare/shld_recharge_103.ogg",
+				"dare/shld_recharge_104.ogg",
+				},
+		["invsgt"]	=	{
+				"dare/invsgt_100.ogg",
+				"dare/invsgt_101.ogg",
+				"dare/invsgt_102.ogg",
+				"dare/invsgt_103.ogg",
+				"dare/invsgt_104.ogg",
+				"dare/invsgt_105.ogg",
+				"dare/invsgt_106.ogg",
+				},
+		["warn_chr_bggr"]	=	{
+				"dare/warn_chr_bggr_100.ogg",
+				"dare/warn_chr_bggr_101.ogg",
+				"dare/warn_chr_bggr_102.ogg",
+				"dare/warn_chr_bggr_104.ogg",
+				"dare/warn_chr_bggr_105.ogg",
+				"dare/warn_chr_bggr_106.ogg",
+				"dare/warn_chr_bggr_107.ogg",
+				},
+		["cvr_re"]	=	{
+				"dare/cvr_re_100.ogg",
+				"dare/cvr_re_101.ogg",
+				},
+		["grt_plr_srprs"]	=	{
+				"dare/grt_plr_srprs_101.ogg",
+				"dare/grt_plr_srprs_102.ogg",
+				},
+		["rmd"]	=	{
+				"dare/rmd_100.ogg",
+				"dare/rmd_101.ogg",
+				},
+		["warn_incmn_grnd"]	=	{
+				"dare/warn_incmn_grnd_100.ogg",
+				"dare/warn_incmn_grnd_101.ogg",
+				"dare/warn_incmn_grnd_102.ogg",
+				"dare/warn_incmn_grnd_103.ogg",
+				"dare/warn_incmn_grnd_104.ogg",
+				},
+		["foundfoe"]	=	{
+				"dare/foundfoe_100.ogg",
+				"dare/foundfoe_101.ogg",
+				"dare/foundfoe_103.ogg",
+				"dare/foundfoe_104.ogg",
+				"dare/foundfoe_105.ogg",
+				"dare/foundfoe_106.ogg",
+				"dare/foundfoe_107.ogg",
+				"dare/foundfoe_109.ogg",
+				"dare/foundfoe_110.ogg",
+				},
+		["stun"]	=	{
+				"dare/stun_100.ogg",
+				"dare/stun_101.ogg",
+				"dare/stun_102.ogg",
+				"dare/stun_103.ogg",
+				"dare/stun_104.ogg",
+				"dare/stun_105.ogg",
+				},
+		["ok_plr_trdwpn"]	=	{
+				"dare/ok_plr_trdwpn_104.ogg",
+				"dare/ok_plr_trdwpn_105.ogg",
+				"dare/ok_plr_trdwpn_106.ogg",
+				"dare/ok_plr_trdwpn_107.ogg",
+				},
+		["foeordr_advance"]	=	{
+				"dare/foeordr_advance_100.ogg",
+				"dare/foeordr_advance_101.ogg",
+				},
+		["prs_plr_kll"]	=	{
+				"dare/prs_plr_kll_101.ogg",
+				"dare/prs_plr_kll_102.ogg",
+				"dare/prs_plr_kll_103.ogg",
+				"dare/prs_plr_kll_104.ogg",
+				"dare/prs_plr_kll_105.ogg",
+				},
+		["scld_plr_hrt_blt"]	=	{
+				"dare/scld_plr_hrt_blt_100.ogg",
+				"dare/scld_plr_hrt_blt_101.ogg",
+				"dare/scld_plr_hrt_blt_102.ogg",
+				"dare/scld_plr_hrt_blt_103.ogg",
+				"dare/scld_plr_hrt_blt_104.ogg",
+				},
+		["forgive"]	=	{
+				"dare/forgive1.ogg",
+				"dare/forgive2.ogg",
+				"dare/forgive3.ogg",
+				},
+		["melee"]	=	{
+				"dare/melee_100.ogg",
+				"dare/melee_101.ogg",
+				"dare/melee_102.ogg",
+				"dare/melee_103.ogg",
+				"dare/melee_104.ogg",
+				"dare/melee_105.ogg",
+				"dare/melee_106.ogg",
+				"dare/melee_107.ogg",
+				"dare/melee_108.ogg",
+				},
+		["death_assasination"]	=	{
+				"dare/death_assasination_100.ogg",
+				"dare/death_assasination_101.ogg",
+				"dare/death_assasination_102.ogg",
+				"dare/death_assasination_103.ogg",
+				"dare/death_assasination_104.ogg",
+				"dare/death_assasination_105.ogg",
+				"dare/death_assasination_106.ogg",
+				},
+		["hlth_min_dmg"]	=	{
+				"dare/hlth_min_dmg_100.ogg",
+				"dare/hlth_min_dmg_101.ogg",
+				"dare/hlth_min_dmg_102.ogg",
+				"dare/hlth_min_dmg_103.ogg",
+				"dare/hlth_min_dmg_105.ogg",
+				"dare/hlth_min_dmg_106.ogg",
+				"dare/hlth_min_dmg_107.ogg",
+				},
+		["rmd_vcl_phntm"]	=	{
+				"dare/rmd_vcl_phntm_100.ogg",
+				"dare/rmd_vcl_phntm_101.ogg",
+				"dare/rmd_vcl_phntm_102.ogg",
+				},
+		["hlth_crit_dmg"]	=	{
+				"dare/hlth_crit_dmg_100.ogg",
+				"dare/hlth_crit_dmg_101.ogg",
+				"dare/hlth_crit_dmg_102.ogg",
+				"dare/hlth_crit_dmg_103.ogg",
+				"dare/hlth_crit_dmg_104.ogg",
+				"dare/hlth_crit_dmg_105.ogg",
+				"dare/hlth_crit_dmg_106.ogg",
+				"dare/hlth_crit_dmg_107.ogg",
+				"dare/hlth_crit_dmg_108.ogg",
+				"dare/hlth_crit_dmg_109.ogg",
+				"dare/hlth_crit_dmg_110.ogg",
+				"dare/hlth_crit_dmg_111.ogg",
+				"dare/hlth_crit_dmg_112.ogg",
+				},
+		["shld_min_lp"]	=	{
+				"dare/shld_min_lp1.ogg",
+				"dare/shld_min_lp2.ogg",
+				"dare/shld_min_lp3.ogg",
+				"dare/shld_min_lp4.ogg",
+				},
+		["strk"]	=	{
+				"dare/strk_100.ogg",
+				"dare/strk_101.ogg",
+				"dare/strk_102.ogg",
+				"dare/strk_103.ogg",
+				"dare/strk_104.ogg",
+				"dare/strk_105.ogg",
+				"dare/strk_106.ogg",
+				"dare/strk_107.ogg",
+				},
+		["warn_incmn"]	=	{
+				"dare/warn_incmn_100.ogg",
+				"dare/warn_incmn_101.ogg",
+				"dare/warn_incmn_102.ogg",
+				"dare/warn_incmn_103.ogg",
+				},
+		["dwn_vcl_wrth"]	=	{
+				"dare/dwn_vcl_wrth_100.ogg",
+				"dare/dwn_vcl_wrth_101.ogg",
+				"dare/dwn_vcl_wrth_102.ogg",
+				"dare/dwn_vcl_wrth_105.ogg",
+				},
+		["newordr_retreat"]	=	{
+				"dare/newordr_retreat_100.ogg",
+				"dare/newordr_retreat_101.ogg",
+				"dare/newordr_retreat_102.ogg",
+				},
+		["morefoe"]	=	{
+				"dare/morefoe_100.ogg",
+				"dare/morefoe_101.ogg",
+				"dare/morefoe_102.ogg",
+				"dare/morefoe_103.ogg",
+				},
+		["warn"]	=	{
+				"dare/warn_101.ogg",
+				"dare/warn_102.ogg",
+				"dare/warn_103.ogg",
+				},
+		["tnt"]	=	{
+				"dare/tnt_100.ogg",
+				"dare/tnt_101.ogg",
+				"dare/tnt_102.ogg",
+				"dare/tnt_103.ogg",
+				"dare/tnt_104.ogg",
+				"dare/tnt_106.ogg",
+				"dare/tnt_107.ogg",
+				"dare/tnt_108.ogg",
+				"dare/tnt_109.ogg",
+				},
+		["shld_min_dmg"]	=	{
+				"dare/shld_min_dmg_100.ogg",
+				"dare/shld_min_dmg_101.ogg",
+				"dare/shld_min_dmg_102.ogg",
+				"dare/shld_min_dmg_103.ogg",
+				"dare/shld_min_dmg_104.ogg",
+				"dare/shld_min_dmg_106.ogg",
+				"dare/shld_min_dmg_107.ogg",
+				"dare/shld_min_dmg_108.ogg",
+				"dare/shld_min_dmg_109.ogg",
+				"dare/shld_min_dmg_111.ogg",
+				"dare/shld_min_dmg_112.ogg",
+				"dare/shld_min_dmg_113.ogg",
+				},
+		["thrwn"]	=	{
+				"dare/thrwn_100.ogg",
+				"dare/thrwn_101.ogg",
+				"dare/thrwn_102.ogg",
+				"dare/thrwn_104.ogg",
+				"dare/thrwn_105.ogg",
+				"dare/thrwn_106.ogg",
+				"dare/thrwn_107.ogg",
+				},
+		["thnk_plr_btrwpn"]	=	{
+				"dare/thnk_plr_btrwpn_100.ogg",
+				"dare/thnk_plr_btrwpn_101.ogg",
+				"dare/thnk_plr_btrwpn_102.ogg",
+				"dare/thnk_plr_btrwpn_103.ogg",
+				"dare/thnk_plr_btrwpn_104.ogg",
+				},
+		["thnk"]	=	{
+				"dare/thnk_100.ogg",
+				"dare/thnk_101.ogg",
+				},
+		["strk_grnd"]	=	{
+				"dare/strk_grnd_100.ogg",
+				"dare/strk_grnd_101.ogg",
+				"dare/strk_grnd_102.ogg",
+				"dare/strk_grnd_103.ogg",
+				"dare/strk_grnd_104.ogg",
+				"dare/strk_grnd_105.ogg",
+				"dare/strk_grnd_106.ogg",
+				"dare/strk_grnd_107.ogg",
+				"dare/strk_grnd_108.ogg",
+				"dare/strk_grnd_109.ogg",
+				"dare/strk_grnd_111.ogg",
+				"dare/strk_grnd_112.ogg",
+				},
+		["warn_vcl_wrth"]	=	{
+				"dare/warn_vcl_wrth_100.ogg",
+				"dare/warn_vcl_wrth_101.ogg",
+				"dare/warn_vcl_wrth_102.ogg",
+				},
+		["dive"]	=	{
+				"dare/dive_100.ogg",
+				"dare/dive_101.ogg",
+				"dare/dive_102.ogg",
+				"dare/dive_103.ogg",
+				},
+		["scld_plr_wldgrnd"]	=	{
+				"dare/scld_plr_wldgrnd_100.ogg",
+				"dare/scld_plr_wldgrnd_101.ogg",
+				"dare/scld_plr_wldgrnd_103.ogg",
+				"dare/scld_plr_wldgrnd_104.ogg",
+				},
+		["srch_pinned"]	=	{
+				"dare/srch_pinned_100.ogg",
+				"dare/srch_pinned_101.ogg",
+				"dare/srch_pinned_102.ogg",
+				"dare/srch_pinned_103.ogg",
+				"dare/srch_pinned_104.ogg",
+				"dare/srch_pinned_105.ogg",
+				},
+		["cvr_invsgt"]	=	{
+				"dare/cvr_invsgt_100.ogg",
+				"dare/cvr_invsgt_101.ogg",
+				"dare/cvr_invsgt_102.ogg",
+				"dare/cvr_invsgt_103.ogg",
+				},
+		["prs_plr_gdgrnd"]	=	{
+				"dare/prs_plr_gdgrnd_100.ogg",
+				"dare/prs_plr_gdgrnd_102.ogg",
+				"dare/prs_plr_gdgrnd_103.ogg",
+				},
+		["betray"]	=	{
+				"dare/betray_100.ogg",
+				"dare/betray_101.ogg",
+				"dare/betray_102.ogg",
+				},
+		["seefoe"]	=	{
+				"dare/seefoe_100.ogg",
+				"dare/seefoe_101.ogg",
+				"dare/seefoe_102.ogg",
+				"dare/seefoe_103.ogg",
+				"dare/seefoe_106.ogg",
+				},
+		["grt"]	=	{
+				"dare/grt_100.ogg",
+				"dare/grt_101.ogg",
+				"dare/grt_102.ogg",
+				},
+		["approve"]	=	{
+				"dare/approve_100.ogg",
+				"dare/approve_101.ogg",
+				"dare/approve_102.ogg",
+				"dare/approve_103.ogg",
+				},
+		["seefoe_agg"]	=	{
+				"dare/seefoe_agg_100.ogg",
+				"dare/seefoe_agg_101.ogg",
+				"dare/seefoe_agg_102.ogg",
+				"dare/seefoe_agg_103.ogg",
+				},
+		["prs"]	=	{
+				"dare/prs_100.ogg",
+				"dare/prs_101.ogg",
+				"dare/prs_102.ogg",
+				"dare/prs_103.ogg",
+				"dare/prs_104.ogg",
+				"dare/prs_105.ogg",
+				"dare/prs_106.ogg",
+				},
+		["lst_cntct"]	=	{
+				"dare/lst_cntct_100.ogg",
+				"dare/lst_cntct_101.ogg",
+				"dare/lst_cntct_102.ogg",
+				"dare/lst_cntct_103.ogg",
+				"dare/lst_cntct_104.ogg",
+				"dare/lst_cntct_105.ogg",
+				"dare/lst_cntct_106.ogg",
+				},
+		["look"]	=	{
+				"dare/look_100.ogg",
+				"dare/look_101.ogg",
+				"dare/look_102.ogg",
+				"dare/look_103.ogg",
+				"dare/look_104.ogg",
+				"dare/look_105.ogg",
+				},
+		["lmnt_deadplr_mc"]	=	{
+				"dare/lmnt_deadplr_mc_100.ogg",
+				"dare/lmnt_deadplr_mc_101.ogg",
+				"dare/lmnt_deadplr_mc_102.ogg",
+				"dare/lmnt_deadplr_mc_103.ogg",
+				"dare/lmnt_deadplr_mc_104.ogg",
+				"dare/lmnt_deadplr_mc_105.ogg",
+				"dare/lmnt_deadplr_mc_106.ogg",
+				},
+		["scrn_plr_wrswpn"]	=	{
+				"dare/scrn_plr_wrswpn_100.ogg",
+				"dare/scrn_plr_wrswpn_101.ogg",
+				"dare/scrn_plr_wrswpn_102.ogg",
+				"dare/scrn_plr_wrswpn_103.ogg",
+				"dare/scrn_plr_wrswpn_104.ogg",
+				},
+		["reload_low_ammo"]	=	{
+				"dare/reload_low_ammo_100.ogg",
+				"dare/reload_low_ammo_101.ogg",
+				"dare/reload_low_ammo_102.ogg",
+				"dare/reload_low_ammo_103.ogg",
+				"dare/reload_low_ammo_104.ogg",
+				},
+		["death_headshot"]	=	{
+				"dare/death_headshot_100.ogg",
+				"dare/death_headshot_101.ogg",
+				"dare/death_headshot_102.ogg",
+				"dare/death_headshot_103.ogg",
+				"dare/death_headshot_104.ogg",
+				"dare/death_headshot_105.ogg",
+				"dare/death_headshot_106.ogg",
+				"dare/death_headshot_107.ogg",
+				},
+		["seefoe_tim"]	=	{
+				"dare/seefoe_tim_100.ogg",
+				"dare/seefoe_tim_101.ogg",
+				"dare/seefoe_tim_102.ogg",
+				"dare/seefoe_tim_103.ogg",
+				"dare/seefoe_tim_104.ogg",
+				},
+		["prs_plr_kll_lots"]	=	{
+				"dare/prs_plr_kll_lots_100.ogg",
+				"dare/prs_plr_kll_lots_101.ogg",
+				"dare/prs_plr_kll_lots_102.ogg",
+				},
+		["pstcmbt_agg"]	=	{
+				"dare/pstcmbt_agg_100.ogg",
+				"dare/pstcmbt_agg_102.ogg",
+				},
+		["pstcmbt_hrd"]	=	{
+				"dare/pstcmbt_hrd_100.ogg",
+				"dare/pstcmbt_hrd_101.ogg",
+				},
+		["ok"]	=	{
+				"dare/ok_100.ogg",
+				"dare/ok_101.ogg",
+				"dare/ok_102.ogg",
+				"dare/ok_103.ogg",
+				},
+		["lookcmbt"]	=	{
+				"dare/lookcmbt_100.ogg",
+				"dare/lookcmbt_101.ogg",
+				"dare/lookcmbt_102.ogg",
+				"dare/lookcmbt_103.ogg",
+				"dare/lookcmbt_104.ogg",
+				},
+		["chr"]	=	{
+				"dare/chr_100.ogg",
+				"dare/chr_101.ogg",
+				},
+		["scld_plr_blocking"]	=	{
+				"dare/scld_plr_blocking_100.ogg",
+				"dare/scld_plr_blocking_101.ogg",
+				"dare/scld_plr_blocking_102.ogg",
+				},
+		["srprs"]	=	{
+				"dare/srprs_100.ogg",
+				"dare/srprs_101.ogg",
+				"dare/srprs_102.ogg",
+				},
+	},
+	["Dutch"] = {
+		["crs_mjrfoe"]	=	{
+				"dutch/crs_mjrfoe1.ogg",
+				"dutch/crs_mjrfoe2.ogg",
+				},
+		["dutch_look_mickey_re"]	=	{
+				"dutch/dutch_look_mickey_re_100.ogg",
+				"dutch/dutch_look_mickey_re_101.ogg",
+				"dutch/dutch_look_mickey_re_102.ogg",
+				"dutch/dutch_look_mickey_re_103.ogg",
+				"dutch/dutch_look_mickey_re_104.ogg",
+				"dutch/dutch_look_mickey_re_105.ogg",
+				"dutch/dutch_look_mickey_re_106.ogg",
+				},
+		["invt_vcl_gnr"]	=	{
+				"dutch/invt_vcl_gnr1.ogg",
+				"dutch/invt_vcl_gnr2.ogg",
+				"dutch/invt_vcl_gnr3.ogg",
+				},
+		["shld_crit_lp"]	=	{
+				"dutch/shld_crit_lp1.ogg",
+				"dutch/shld_crit_lp2.ogg",
+				"dutch/shld_crit_lp3.ogg",
+				"dutch/shld_crit_lp4.ogg",
+				"dutch/shld_crit_lp5.ogg",
+				},
+		["tnt"]	=	{
+				"dutch/tnt1.ogg",
+				"dutch/tnt10.ogg",
+				"dutch/tnt11.ogg",
+				"dutch/tnt12.ogg",
+				"dutch/tnt13.ogg",
+				"dutch/tnt2.ogg",
+				"dutch/tnt3.ogg",
+				"dutch/tnt5.ogg",
+				"dutch/tnt6.ogg",
+				"dutch/tnt7.ogg",
+				"dutch/tnt8.ogg",
+				"dutch/tnt9.ogg",
+				},
+		["newordr_advance"]	=	{
+				"dutch/newordr_advance3.ogg",
+				"dutch/newordr_advance4.ogg",
+				"dutch/newordr_advance5.ogg",
+				"dutch/newordr_advance6.ogg",
+				},
+		["newordr_fllwplr"]	=	{
+				"dutch/newordr_fllwplr_100.ogg",
+				"dutch/newordr_fllwplr_101.ogg",
+				"dutch/newordr_fllwplr_102.ogg",
+				},
+		["foeordr_flanking"]	=	{
+				"dutch/foeordr_flanking1.ogg",
+				"dutch/foeordr_flanking3.ogg",
+				"dutch/foeordr_flanking5.ogg",
+				"dutch/foeordr_flanking6.ogg",
+				},
+		["cvr"]	=	{
+				"dutch/cvr1.ogg",
+				"dutch/cvr2.ogg",
+				"dutch/cvr3.ogg",
+				"dutch/cvr4.ogg",
+				},
+		["whn_re"]	=	{
+				"dutch/whn_re2.ogg",
+				"dutch/whn_re3.ogg",
+				"dutch/whn_re4.ogg",
+				},
+		["whn_hrtblt"]	=	{
+				"dutch/whn_hrtblt1.ogg",
+				"dutch/whn_hrtblt3.ogg",
+				"dutch/whn_hrtblt4.ogg",
+				},
+		["rmd"]	=	{
+				"dutch/rmd1.ogg",
+				"dutch/rmd2.ogg",
+				"dutch/rmd3.ogg",
+				"dutch/rmd4.ogg",
+				"dutch/rmd5.ogg",
+				},
+		["warn_chr_bggr"]	=	{
+				"dutch/warn_chr_bggr1.ogg",
+				"dutch/warn_chr_bggr2.ogg",
+				},
+		["lookcmbt"]	=	{
+				"dutch/lookcmbt1.ogg",
+				"dutch/lookcmbt10.ogg",
+				"dutch/lookcmbt11.ogg",
+				"dutch/lookcmbt3.ogg",
+				"dutch/lookcmbt4.ogg",
+				"dutch/lookcmbt7.ogg",
+				},
+		["shld_mjr_dmg"]	=	{
+				"dutch/shld_mjr_dmg_100.ogg",
+				"dutch/shld_mjr_dmg_101.ogg",
+				"dutch/shld_mjr_dmg_102.ogg",
+				"dutch/shld_mjr_dmg_103.ogg",
+				"dutch/shld_mjr_dmg_104.ogg",
+				"dutch/shld_mjr_dmg_105.ogg",
+				"dutch/shld_mjr_dmg_106.ogg",
+				"dutch/shld_mjr_dmg_107.ogg",
+				"dutch/shld_mjr_dmg_108.ogg",
+				"dutch/shld_mjr_dmg_109.ogg",
+				},
+		["scld_plr_vclcrash"]	=	{
+				"dutch/scld_plr_vclcrash1.ogg",
+				"dutch/scld_plr_vclcrash2.ogg",
+				"dutch/scld_plr_vclcrash4.ogg",
+				"dutch/scld_plr_vclcrash5.ogg",
+				"dutch/scld_plr_vclcrash6.ogg",
+				"dutch/scld_plr_vclcrash7.ogg",
+				"dutch/scld_plr_vclcrash8.ogg",
+				},
+		["chr_vcljmp"]	=	{
+				"dutch/chr_vcljmp1.ogg",
+				"dutch/chr_vcljmp2.ogg",
+				"dutch/chr_vcljmp3.ogg",
+				"dutch/chr_vcljmp4.ogg",
+				"dutch/chr_vcljmp5.ogg",
+				"dutch/chr_vcljmp6.ogg",
+				},
+		["warn_vcl_wrth"]	=	{
+				"dutch/warn_vcl_wrth1.ogg",
+				"dutch/warn_vcl_wrth2.ogg",
+				},
+		["charge"]	=	{
+				"dutch/charge1.ogg",
+				"dutch/charge2.ogg",
+				"dutch/charge3.ogg",
+				"dutch/charge4.ogg",
+				},
+		["warn_vcl_bnsh"]	=	{
+				"dutch/warn_vcl_bnsh1.ogg",
+				"dutch/warn_vcl_bnsh3.ogg",
+				},
+		["scld_plr_hrtme"]	=	{
+				"dutch/scld_plr_hrtme10.ogg",
+				"dutch/scld_plr_hrtme11.ogg",
+				"dutch/scld_plr_hrtme13.ogg",
+				"dutch/scld_plr_hrtme3.ogg",
+				"dutch/scld_plr_hrtme4.ogg",
+				"dutch/scld_plr_hrtme5.ogg",
+				"dutch/scld_plr_hrtme6.ogg",
+				"dutch/scld_plr_hrtme7.ogg",
+				"dutch/scld_plr_hrtme8.ogg",
+				"dutch/scld_plr_hrtme9.ogg",
+				},
+		["pain"]	=	{
+				"dutch/pain1.ogg",
+				"dutch/pain3.ogg",
+				"dutch/pain4.ogg",
+				"dutch/pain5.ogg",
+				},
+		["prst_fail"]	=	{
+				"dutch/prst_fail12.ogg",
+				"dutch/prst_fail13.ogg",
+				"dutch/prst_fail15.ogg",
+				"dutch/prst_fail2.ogg",
+				"dutch/prst_fail3.ogg",
+				"dutch/prst_fail4.ogg",
+				"dutch/prst_fail5.ogg",
+				"dutch/prst_fail7.ogg",
+				"dutch/prst_fail8.ogg",
+				"dutch/prst_fail9.ogg",
+				},
+		["strk_grnd"]	=	{
+				"dutch/strk_grnd_100.ogg",
+				"dutch/strk_grnd_101.ogg",
+				"dutch/strk_grnd_102.ogg",
+				"dutch/strk_grnd_103.ogg",
+				"dutch/strk_grnd_104.ogg",
+				"dutch/strk_grnd_105.ogg",
+				"dutch/strk_grnd_107.ogg",
+				"dutch/strk_grnd_109.ogg",
+				},
+		["lookcmbt_fllw"]	=	{
+				"dutch/lookcmbt_fllw1.ogg",
+				"dutch/lookcmbt_fllw2.ogg",
+				},
+		["foundfoe_re"]	=	{
+				"dutch/foundfoe_re1.ogg",
+				"dutch/foundfoe_re2.ogg",
+				"dutch/foundfoe_re3.ogg",
+				"dutch/foundfoe_re6.ogg",
+				},
+		["warn_vcl_phntm"]	=	{
+				"dutch/warn_vcl_phntm1.ogg",
+				"dutch/warn_vcl_phntm2.ogg",
+				},
+		["warn_vcl_ghst"]	=	{
+				"dutch/warn_vcl_ghst1.ogg",
+				"dutch/warn_vcl_ghst2.ogg",
+				"dutch/warn_vcl_ghst3.ogg",
+				},
+		["dodge"]	=	{
+				"dutch/dodge1.ogg",
+				"dutch/dodge2.ogg",
+				"dutch/dodge3.ogg",
+				},
+		["cvr_re"]	=	{
+				"dutch/cvr_re2.ogg",
+				"dutch/cvr_re3.ogg",
+				"dutch/cvr_re5.ogg",
+				"dutch/cvr_re7.ogg",
+				},
+		["prs_plr_kll"]	=	{
+				"dutch/prs_plr_kll1.ogg",
+				"dutch/prs_plr_kll2.ogg",
+				"dutch/prs_plr_kll3.ogg",
+				"dutch/prs_plr_kll4.ogg",
+				},
+		["dwn"]	=	{
+				"dutch/dwn1.ogg",
+				"dutch/dwn2.ogg",
+				"dutch/dwn4.ogg",
+				"dutch/dwn5.ogg",
+				"dutch/dwn6.ogg",
+				},
+		["hail_agg"]	=	{
+				"dutch/hail_agg1.ogg",
+				"dutch/hail_agg2.ogg",
+				},
+		["cvr_invsgt"]	=	{
+				"dutch/cvr_invsgt1.ogg",
+				"dutch/cvr_invsgt2.ogg",
+				"dutch/cvr_invsgt4.ogg",
+				"dutch/cvr_invsgt5.ogg",
+				},
+		["grt_intovcl_imgnr"]	=	{
+				"dutch/grt_intovcl_imgnr1.ogg",
+				"dutch/grt_intovcl_imgnr2.ogg",
+				"dutch/grt_intovcl_imgnr3.ogg",
+				},
+		["grt_intovcl_mine"]	=	{
+				"dutch/grt_intovcl_mine1.ogg",
+				"dutch/grt_intovcl_mine2.ogg",
+				"dutch/grt_intovcl_mine3.ogg",
+				"dutch/grt_intovcl_mine5.ogg",
+				},
+		["srprs"]	=	{
+				"dutch/srprs1.ogg",
+				"dutch/srprs2.ogg",
+				"dutch/srprs3.ogg",
+				"dutch/srprs4.ogg",
+				"dutch/srprs5.ogg",
+				},
+		["newordr_support"]	=	{
+				"dutch/newordr_support1.ogg",
+				"dutch/newordr_support2.ogg",
+				"dutch/newordr_support3.ogg",
+				"dutch/newordr_support4.ogg",
+				},
+		["dwn_vcl_chpr"]	=	{
+				"dutch/dwn_vcl_chpr1.ogg",
+				"dutch/dwn_vcl_chpr2.ogg",
+				},
+		["rmd_scrb"]	=	{
+				"dutch/rmd_scrb2.ogg",
+				"dutch/rmd_scrb3.ogg",
+				},
+		["pld"]	=	{
+				"dutch/pld1.ogg",
+				"dutch/pld12.ogg",
+				"dutch/pld13.ogg",
+				"dutch/pld14.ogg",
+				"dutch/pld2.ogg",
+				"dutch/pld3.ogg",
+				"dutch/pld4.ogg",
+				"dutch/pld9.ogg",
+				},
+		["warn_scrb"]	=	{
+				"dutch/warn_scrb1.ogg",
+				"dutch/warn_scrb2.ogg",
+				},
+		["chr_kllfoe_vclbmp"]	=	{
+				"dutch/chr_kllfoe_vclbmp1.ogg",
+				"dutch/chr_kllfoe_vclbmp2.ogg",
+				"dutch/chr_kllfoe_vclbmp3.ogg",
+				},
+		["ask_chkallybdy"]	=	{
+				"dutch/ask_chkallybdy1.ogg",
+				"dutch/ask_chkallybdy3.ogg",
+				},
+		["rmd_wpm_hmmr"]	=	{
+				"dutch/rmd_wpm_hmmr1.ogg",
+				"dutch/rmd_wpm_hmmr2.ogg",
+				},
+		["pani"]	=	{
+				"dutch/panic.ogg",
+				},
+		["shld_min_state_lp"]	=	{
+				"dutch/shld_min_state_lp1.ogg",
+				"dutch/shld_min_state_lp2.ogg",
+				"dutch/shld_min_state_lp3.ogg",
+				"dutch/shld_min_state_lp4.ogg",
+				},
+		["entervcl_drvr"]	=	{
+				"dutch/entervcl_drvr2.ogg",
+				"dutch/entervcl_drvr3.ogg",
+				"dutch/entervcl_drvr4.ogg",
+				"dutch/entervcl_drvr5.ogg",
+				},
+		["warn_chr_hntr"]	=	{
+				"dutch/warn_chr_hntr1.ogg",
+				"dutch/warn_chr_hntr3.ogg",
+				},
+		["thrtn"]	=	{
+				"dutch/thrtn1.ogg",
+				"dutch/thrtn10.ogg",
+				"dutch/thrtn11.ogg",
+				"dutch/thrtn12.ogg",
+				"dutch/thrtn13.ogg",
+				"dutch/thrtn15.ogg",
+				"dutch/thrtn19.ogg",
+				"dutch/thrtn2.ogg",
+				"dutch/thrtn3.ogg",
+				"dutch/thrtn4.ogg",
+				"dutch/thrtn6.ogg",
+				"dutch/thrtn9.ogg",
+				},
+		["seefoe_downthere"]	=	{
+				"dutch/seefoe_downthere1.ogg",
+				"dutch/seefoe_downthere2.ogg",
+				},
+		["warn_brsrk"]	=	{
+				"dutch/warn_brsrk1.ogg",
+				"dutch/warn_brsrk3.ogg",
+				},
+		["newordr_exitvcl"]	=	{
+				"dutch/newordr_exitvcl1.ogg",
+				"dutch/newordr_exitvcl2.ogg",
+				"dutch/newordr_exitvcl5.ogg",
+				"dutch/newordr_exitvcl7.ogg",
+				},
+		["join_stayback"]	=	{
+				"dutch/join_stayback1.ogg",
+				"dutch/join_stayback3.ogg",
+				"dutch/join_stayback5.ogg",
+				"dutch/join_stayback7.ogg",
+				},
+		["warn"]	=	{
+				"dutch/warn1.ogg",
+				"dutch/warn2.ogg",
+				"dutch/warn3.ogg",
+				"dutch/warn4.ogg",
+				},
+		["scld_plr_wldgrnd"]	=	{
+				"dutch/scld_plr_wldgrnd1.ogg",
+				"dutch/scld_plr_wldgrnd2.ogg",
+				"dutch/scld_plr_wldgrnd3.ogg",
+				},
+		["newordr_fllwplr"]	=	{
+				"dutch/newordr_fllwplr2.ogg",
+				"dutch/newordr_fllwplr3.ogg",
+				},
+		["chkallybdy"]	=	{
+				"dutch/chkallybdy3.ogg",
+				"dutch/chkallybdy5.ogg",
+				},
+		["scld_plr_hrt_blt"]	=	{
+				"dutch/scld_plr_hrt_blt1.ogg",
+				"dutch/scld_plr_hrt_blt10.ogg",
+				"dutch/scld_plr_hrt_blt3.ogg",
+				"dutch/scld_plr_hrt_blt4.ogg",
+				"dutch/scld_plr_hrt_blt5.ogg",
+				"dutch/scld_plr_hrt_blt6.ogg",
+				"dutch/scld_plr_hrt_blt7.ogg",
+				"dutch/scld_plr_hrt_blt8.ogg",
+				},
+		["ok_plr_trdst_gnr"]	=	{
+				"dutch/ok_plr_trdst_gnr1.ogg",
+				"dutch/ok_plr_trdst_gnr2.ogg",
+				},
+		["panic_plsmgrnd"]	=	{
+				"dutch/panic_plsmgrnd1.ogg",
+				"dutch/panic_plsmgrnd2.ogg",
+				},
+		["pstcmbt_brt"]	=	{
+				"dutch/pstcmbt_brt1.ogg",
+				"dutch/pstcmbt_brt3.ogg",
+				},
+		["tnt_mjrfoe"]	=	{
+				"dutch/tnt_mjrfoe1.ogg",
+				"dutch/tnt_mjrfoe2.ogg",
+				},
+		["zdth_drama"]	=	{
+				"dutch/zdth_drama1.ogg",
+				"dutch/zdth_drama3.ogg",
+				"dutch/zdth_drama5.ogg",
+				},
+		["thrwn"]	=	{
+				"dutch/thrwn1.ogg",
+				"dutch/thrwn2.ogg",
+				"dutch/thrwn3.ogg",
+				},
+		["foeordr_fallback"]	=	{
+				"dutch/foeordr_fallback1.ogg",
+				"dutch/foeordr_fallback2.ogg",
+				"dutch/foeordr_fallback3.ogg",
+				"dutch/foeordr_fallback4.ogg",
+				},
+		["thrtn_mjrfoe"]	=	{
+				"dutch/thrtn_mjrfoe1.ogg",
+				"dutch/thrtn_mjrfoe2.ogg",
+				},
+		["foeordr_advance"]	=	{
+				"dutch/foeordr_advance1.ogg",
+				"dutch/foeordr_advance2.ogg",
+				"dutch/foeordr_advance3.ogg",
+				"dutch/foeordr_advance4.ogg",
+				},
+		["foundfoe_prst"]	=	{
+				"dutch/foundfoe_prst1.ogg",
+				"dutch/foundfoe_prst10.ogg",
+				"dutch/foundfoe_prst11.ogg",
+				"dutch/foundfoe_prst13.ogg",
+				"dutch/foundfoe_prst16.ogg",
+				"dutch/foundfoe_prst17.ogg",
+				"dutch/foundfoe_prst2.ogg",
+				"dutch/foundfoe_prst20.ogg",
+				"dutch/foundfoe_prst21.ogg",
+				"dutch/foundfoe_prst22.ogg",
+				"dutch/foundfoe_prst24.ogg",
+				"dutch/foundfoe_prst3.ogg",
+				"dutch/foundfoe_prst5.ogg",
+				"dutch/foundfoe_prst6.ogg",
+				"dutch/foundfoe_prst8.ogg",
+				},
+		["injured"]	=	{
+				"dutch/injured1.ogg",
+				"dutch/injured10.ogg",
+				"dutch/injured2.ogg",
+				"dutch/injured3.ogg",
+				"dutch/injured4.ogg",
+				"dutch/injured5.ogg",
+				"dutch/injured6.ogg",
+				"dutch/injured7.ogg",
+				"dutch/injured8.ogg",
+				"dutch/injured9.ogg",
+				},
+		["thrtn_foe_re"]	=	{
+				"dutch/thrtn_foe_re1.ogg",
+				"dutch/thrtn_foe_re2.ogg",
+				"dutch/thrtn_foe_re3.ogg",
+				"dutch/thrtn_foe_re5.ogg",
+				"dutch/thrtn_foe_re6.ogg",
+				"dutch/thrtn_foe_re9.ogg",
+				},
+		["melee"]	=	{
+				"dutch/melee_100.ogg",
+				"dutch/melee_101.ogg",
+				"dutch/melee_102.ogg",
+				"dutch/melee_103.ogg",
+				"dutch/melee_104.ogg",
+				"dutch/melee_105.ogg",
+				"dutch/melee_106.ogg",
+				"dutch/melee_107.ogg",
+				"dutch/melee_108.ogg",
+				"dutch/melee_109.ogg",
+				"dutch/melee_110.ogg",
+				"dutch/melee_111.ogg",
+				},
+		["look_plr_fllw"]	=	{
+				"dutch/look_plr_fllw1.ogg",
+				"dutch/look_plr_fllw2.ogg",
+				},
+		["ordr_keepwatch"]	=	{
+				"dutch/ordr_keepwatch1.ogg",
+				"dutch/ordr_keepwatch2.ogg",
+				"dutch/ordr_keepwatch4.ogg",
+				"dutch/ordr_keepwatch6.ogg",
+				},
+		["thnk_plr_btrwpn"]	=	{
+				"dutch/thnk_plr_btrwpn1.ogg",
+				"dutch/thnk_plr_btrwpn10.ogg",
+				"dutch/thnk_plr_btrwpn11.ogg",
+				"dutch/thnk_plr_btrwpn2.ogg",
+				"dutch/thnk_plr_btrwpn3.ogg",
+				"dutch/thnk_plr_btrwpn5.ogg",
+				"dutch/thnk_plr_btrwpn6.ogg",
+				"dutch/thnk_plr_btrwpn7.ogg",
+				"dutch/thnk_plr_btrwpn8.ogg",
+				"dutch/thnk_plr_btrwpn9.ogg",
+				},
+		["hlth_min_dmg"]	=	{
+				"dutch/hlth_min_dmg_100.ogg",
+				"dutch/hlth_min_dmg_101.ogg",
+				"dutch/hlth_min_dmg_102.ogg",
+				"dutch/hlth_min_dmg_103.ogg",
+				"dutch/hlth_min_dmg_104.ogg",
+				"dutch/hlth_min_dmg_106.ogg",
+				"dutch/hlth_min_dmg_107.ogg",
+				"dutch/hlth_min_dmg_108.ogg",
+				"dutch/hlth_min_dmg_109.ogg",
+				"dutch/hlth_min_dmg_110.ogg",
+				"dutch/hlth_min_dmg_111.ogg",
+				"dutch/hlth_min_dmg_112.ogg",
+				},
+		["kamikaze"]	=	{
+				"dutch/kamikaze1.ogg",
+				"dutch/kamikaze2.ogg",
+				"dutch/kamikaze3.ogg",
+				},
+		["thnk"]	=	{
+				"dutch/thnk1.ogg",
+				"dutch/thnk2.ogg",
+				"dutch/thnk3.ogg",
+				"dutch/thnk4.ogg",
+				"dutch/thnk5.ogg",
+				"dutch/thnk6.ogg",
+				"dutch/thnk7.ogg",
+				"dutch/thnk8.ogg",
+				"dutch/thnk9.ogg",
+				},
+		["chr_kllfoe"]	=	{
+				"dutch/chr_kllfoe1.ogg",
+				"dutch/chr_kllfoe3.ogg",
+				"dutch/chr_kllfoe5.ogg",
+				"dutch/chr_kllfoe6.ogg",
+				"dutch/chr_kllfoe8.ogg",
+				},
+		["rmd_vcl_chpr"]	=	{
+				"dutch/rmd_vcl_chpr1.ogg",
+				"dutch/rmd_vcl_chpr2.ogg",
+				},
+		["dwn_vcl_wrth"]	=	{
+				"dutch/dwn_vcl_wrth1.ogg",
+				"dutch/dwn_vcl_wrth2.ogg",
+				"dutch/dwn_vcl_wrth3.ogg",
+				},
+		["chr_kllfoe_blt"]	=	{
+				"dutch/chr_kllfoe_blt1.ogg",
+				"dutch/chr_kllfoe_blt2.ogg",
+				"dutch/chr_kllfoe_blt3.ogg",
+				},
+		["scld"]	=	{
+				"dutch/scld1.ogg",
+				"dutch/scld3.ogg",
+				"dutch/scld4.ogg",
+				"dutch/scld8.ogg",
+				},
+		["dwn_wpm_snpr"]	=	{
+				"dutch/dwn_wpm_snpr1.ogg",
+				"dutch/dwn_wpm_snpr3.ogg",
+				},
+		["ordr_keepwatch_tim"]	=	{
+				"dutch/ordr_keepwatch_tim4.ogg",
+				"dutch/ordr_keepwatch_tim5.ogg",
+				},
+		["dth_drama"]	=	{
+				"dutch/dth_drama3.ogg",
+				"dutch/dth_drama4.ogg",
+				"dutch/dth_drama5.ogg",
+				},
+		["newordr_charge"]	=	{
+				"dutch/newordr_charge1.ogg",
+				"dutch/newordr_charge2.ogg",
+				"dutch/newordr_charge3.ogg",
+				"dutch/newordr_charge4.ogg",
+				},
+		["tchkallybdy"]	=	{
+				"dutch/tchkallybdy1.ogg",
+				"dutch/tchkallybdy3.ogg",
+				"dutch/tchkallybdy4.ogg",
+				"dutch/tchkallybdy5.ogg",
+				"dutch/tchkallybdy7.ogg",
+				},
+		["join_invsgt"]	=	{
+				"dutch/join_invsgt1.ogg",
+				"dutch/join_invsgt2.ogg",
+				"dutch/join_invsgt4.ogg",
+				"dutch/join_invsgt5.ogg",
+				},
+		["lift"]	=	{
+				"dutch/lift1.ogg",
+				"dutch/lift2.ogg",
+				"dutch/lift3.ogg",
+				"dutch/lift4.ogg",
+				"dutch/lift5.ogg",
+				"dutch/lift6.ogg",
+				},
+		["shld_min_dmg"]	=	{
+				"dutch/shld_min_dmg_100.ogg",
+				"dutch/shld_min_dmg_101.ogg",
+				"dutch/shld_min_dmg_102.ogg",
+				"dutch/shld_min_dmg_103.ogg",
+				"dutch/shld_min_dmg_104.ogg",
+				"dutch/shld_min_dmg_105.ogg",
+				"dutch/shld_min_dmg_106.ogg",
+				"dutch/shld_min_dmg_107.ogg",
+				"dutch/shld_min_dmg_108.ogg",
+				"dutch/shld_min_dmg_109.ogg",
+				"dutch/shld_min_dmg_110.ogg",
+				"dutch/shld_min_dmg_111.ogg",
+				},
+		["lmnt"]	=	{
+				"dutch/lmnt1.ogg",
+				"dutch/lmnt2.ogg",
+				"dutch/lmnt4.ogg",
+				"dutch/lmnt5.ogg",
+				"dutch/lmnt6.ogg",
+				"dutch/lmnt7.ogg",
+				},
+		["mickey_look_dutch"]	=	{
+				"dutch/mickey_look_dutch_100.ogg",
+				"dutch/mickey_look_dutch_101.ogg",
+				"dutch/mickey_look_dutch_102.ogg",
+				"dutch/mickey_look_dutch_103.ogg",
+				"dutch/mickey_look_dutch_104.ogg",
+				"dutch/mickey_look_dutch_106.ogg",
+				},
+		["dwn_vcl_ghst"]	=	{
+				"dutch/dwn_vcl_ghst1.ogg",
+				"dutch/dwn_vcl_ghst2.ogg",
+				"dutch/dwn_vcl_ghst3.ogg",
+				},
+		["strk_vcl_gnr"]	=	{
+				"dutch/strk_vcl_gnr1.ogg",
+				"dutch/strk_vcl_gnr10.ogg",
+				"dutch/strk_vcl_gnr2.ogg",
+				"dutch/strk_vcl_gnr4.ogg",
+				"dutch/strk_vcl_gnr5.ogg",
+				"dutch/strk_vcl_gnr7.ogg",
+				"dutch/strk_vcl_gnr9.ogg",
+				},
+		["newordr_fallback"]	=	{
+				"dutch/newordr_fallback1.ogg",
+				"dutch/newordr_fallback3.ogg",
+				"dutch/newordr_fallback4.ogg",
+				"dutch/newordr_fallback5.ogg",
+				},
+		["reload_low_ammo"]	=	{
+				"dutch/reload_low_ammo_100.ogg",
+				"dutch/reload_low_ammo_101.ogg",
+				"dutch/reload_low_ammo_102.ogg",
+				"dutch/reload_low_ammo_103.ogg",
+				"dutch/reload_low_ammo_104.ogg",
+				},
+		["warn_wpm_hmmr"]	=	{
+				"dutch/warn_wpm_hmmr1.ogg",
+				"dutch/warn_wpm_hmmr2.ogg",
+				},
+		["ordr_re"]	=	{
+				"dutch/ordr_re1.ogg",
+				"dutch/ordr_re2.ogg",
+				"dutch/ordr_re3.ogg",
+				"dutch/ordr_re4.ogg",
+				},
+		["strk_grnd"]	=	{
+				"dutch/strk_grnd1.ogg",
+				"dutch/strk_grnd2.ogg",
+				"dutch/strk_grnd3.ogg",
+				"dutch/strk_grnd4.ogg",
+				"dutch/strk_grnd5.ogg",
+				"dutch/strk_grnd7.ogg",
+				},
+		["rmd_vcl_phntm"]	=	{
+				"dutch/rmd_vcl_phntm1.ogg",
+				"dutch/rmd_vcl_phntm2.ogg",
+				"dutch/rmd_vcl_phntm3.ogg",
+				},
+		["pstcmbt_ez"]	=	{
+				"dutch/pstcmbt_ez1.ogg",
+				"dutch/pstcmbt_ez2.ogg",
+				"dutch/pstcmbt_ez3.ogg",
+				"dutch/pstcmbt_ez5.ogg",
+				},
+		["invsgt"]	=	{
+				"dutch/invsgt1.ogg",
+				"dutch/invsgt10.ogg",
+				"dutch/invsgt11.ogg",
+				"dutch/invsgt13.ogg",
+				"dutch/invsgt14.ogg",
+				"dutch/invsgt15.ogg",
+				"dutch/invsgt16.ogg",
+				"dutch/invsgt2.ogg",
+				"dutch/invsgt3.ogg",
+				"dutch/invsgt4.ogg",
+				"dutch/invsgt5.ogg",
+				"dutch/invsgt6.ogg",
+				"dutch/invsgt8.ogg",
+				},
+		["invt_vcl"]	=	{
+				"dutch/invt_vcl1.ogg",
+				"dutch/invt_vcl3.ogg",
+				"dutch/invt_vcl4.ogg",
+				"dutch/invt_vcl5.ogg",
+				},
+		["scld_plr_kllally"]	=	{
+				"dutch/scld_plr_kllally1.ogg",
+				"dutch/scld_plr_kllally10.ogg",
+				"dutch/scld_plr_kllally11.ogg",
+				"dutch/scld_plr_kllally12.ogg",
+				"dutch/scld_plr_kllally2.ogg",
+				"dutch/scld_plr_kllally3.ogg",
+				"dutch/scld_plr_kllally7.ogg",
+				"dutch/scld_plr_kllally8.ogg",
+				"dutch/scld_plr_kllally9.ogg",
+				},
+		["stayback_tim"]	=	{
+				"dutch/stayback_tim3.ogg",
+				"dutch/stayback_tim4.ogg",
+				"dutch/stayback_tim5.ogg",
+				},
+		["stayback_agg"]	=	{
+				"dutch/stayback_agg2.ogg",
+				"dutch/stayback_agg5.ogg",
+				},
+		["dth_mjr"]	=	{
+				"dutch/dth_mjr1.ogg",
+				"dutch/dth_mjr2.ogg",
+				"dutch/dth_mjr3.ogg",
+				"dutch/dth_mjr4.ogg",
+				"dutch/dth_mjr5.ogg",
+				},
+		["foeordr_charge"]	=	{
+				"dutch/foeordr_charge1.ogg",
+				"dutch/foeordr_charge3.ogg",
+				"dutch/foeordr_charge4.ogg",
+				"dutch/foeordr_charge5.ogg",
+				},
+		["lmnt_deadplr_mc"]	=	{
+				"dutch/lmnt_deadplr_mc_101.ogg",
+				"dutch/lmnt_deadplr_mc_102.ogg",
+				"dutch/lmnt_deadplr_mc_103.ogg",
+				"dutch/lmnt_deadplr_mc_105.ogg",
+				"dutch/lmnt_deadplr_mc_107.ogg",
+				"dutch/lmnt_deadplr_mc_108.ogg",
+				"dutch/lmnt_deadplr_mc_109.ogg",
+				"dutch/lmnt_deadplr_mc_110.ogg",
+				},
+		["hail_tim"]	=	{
+				"dutch/hail_tim2.ogg",
+				"dutch/hail_tim3.ogg",
+				},
+		["warn_stlth_again"]	=	{
+				"dutch/warn_stlth_again1.ogg",
+				"dutch/warn_stlth_again2.ogg",
+				},
+		["look"]	=	{
+				"dutch/look10.ogg",
+				"dutch/look2.ogg",
+				"dutch/look3.ogg",
+				"dutch/look5.ogg",
+				"dutch/look7.ogg",
+				"dutch/look8.ogg",
+				"dutch/look9.ogg",
+				},
+		["neworder_flanking"]	=	{
+				"dutch/neworder_flanking2.ogg",
+				"dutch/neworder_flanking4.ogg",
+				"dutch/neworder_flanking5.ogg",
+				"dutch/neworder_flanking6.ogg",
+				},
+		["pstcmbt_tim"]	=	{
+				"dutch/pstcmbt_tim1.ogg",
+				"dutch/pstcmbt_tim3.ogg",
+				},
+		["srchend"]	=	{
+				"dutch/srchend2.ogg",
+				"dutch/srchend3.ogg",
+				"dutch/srchend6.ogg",
+				"dutch/srchend7.ogg",
+				},
+		["srch_pinned"]	=	{
+				"dutch/srch_pinned10.ogg",
+				"dutch/srch_pinned11.ogg",
+				"dutch/srch_pinned18.ogg",
+				"dutch/srch_pinned2.ogg",
+				"dutch/srch_pinned20.ogg",
+				"dutch/srch_pinned6.ogg",
+				"dutch/srch_pinned7.ogg",
+				"dutch/srch_pinned8.ogg",
+				"dutch/srch_pinned9.ogg",
+				},
+		["newordr_leaveplr"]	=	{
+				"dutch/newordr_leaveplr_100.ogg",
+				"dutch/newordr_leaveplr_101.ogg",
+				"dutch/newordr_leaveplr_102.ogg",
+				"dutch/newordr_leaveplr_103.ogg",
+				},
+		["lookcmbt"]	=	{
+				"dutch/lookcmbt_100.ogg",
+				"dutch/lookcmbt_101.ogg",
+				"dutch/lookcmbt_102.ogg",
+				},
+		["foundfoe"]	=	{
+				"dutch/foundfoe1.ogg",
+				"dutch/foundfoe11.ogg",
+				"dutch/foundfoe13.ogg",
+				"dutch/foundfoe14.ogg",
+				"dutch/foundfoe2.ogg",
+				"dutch/foundfoe4.ogg",
+				"dutch/foundfoe6.ogg",
+				"dutch/foundfoe7.ogg",
+				"dutch/foundfoe8.ogg",
+				"dutch/foundfoe9.ogg",
+				},
+		["look_pstcmbt_hrd"]	=	{
+				"dutch/look_pstcmbt_hrd3.ogg",
+				"dutch/look_pstcmbt_hrd4.ogg",
+				},
+		["dth_fall"]	=	{
+				"dutch/dth_fall1.ogg",
+				"dutch/dth_fall2.ogg",
+				"dutch/dth_fall3.ogg",
+				},
+		["shotfoebdy"]	=	{
+				"dutch/shotfoebdy1.ogg",
+				"dutch/shotfoebdy2.ogg",
+				"dutch/shotfoebdy3.ogg",
+				"dutch/shotfoebdy4.ogg",
+				"dutch/shotfoebdy5.ogg",
+				},
+		["join_re"]	=	{
+				"dutch/join_re1.ogg",
+				"dutch/join_re2.ogg",
+				"dutch/join_re3.ogg",
+				"dutch/join_re4.ogg",
+				},
+		["shld_recharging"]	=	{
+				"dutch/shld_recharging_100.ogg",
+				"dutch/shld_recharging_101.ogg",
+				"dutch/shld_recharging_102.ogg",
+				"dutch/shld_recharging_103.ogg",
+				},
+		["entervcl"]	=	{
+				"dutch/entervcl2.ogg",
+				"dutch/entervcl4.ogg",
+				"dutch/entervcl5.ogg",
+				"dutch/entervcl6.ogg",
+				},
+		["join_prst"]	=	{
+				"dutch/join_prst1.ogg",
+				"dutch/join_prst2.ogg",
+				"dutch/join_prst3.ogg",
+				"dutch/join_prst4.ogg",
+				"dutch/join_prst6.ogg",
+				},
+		["approve"]	=	{
+				"dutch/approve1.ogg",
+				"dutch/approve2.ogg",
+				"dutch/approve3.ogg",
+				"dutch/approve4.ogg",
+				},
+		["ask_invsgt_fail"]	=	{
+				"dutch/ask_invsgt_fail1.ogg",
+				"dutch/ask_invsgt_fail2.ogg",
+				"dutch/ask_invsgt_fail3.ogg",
+				"dutch/ask_invsgt_fail4.ogg",
+				},
+		["warn_eng_brsrk"]	=	{
+				"dutch/warn_eng_brsrk_100.ogg",
+				"dutch/warn_eng_brsrk_101.ogg",
+				"dutch/warn_eng_brsrk_102.ogg",
+				"dutch/warn_eng_brsrk_103.ogg",
+				},
+		["seefoe_upthere"]	=	{
+				"dutch/seefoe_upthere1.ogg",
+				"dutch/seefoe_upthere2.ogg",
+				},
+		["chr_kllfoe_stkplsm"]	=	{
+				"dutch/chr_kllfoe_stkplsm1.ogg",
+				"dutch/chr_kllfoe_stkplsm2.ogg",
+				"dutch/chr_kllfoe_stkplsm3.ogg",
+				},
+		["strk_snpr"]	=	{
+				"dutch/strk_snpr1.ogg",
+				"dutch/strk_snpr2.ogg",
+				"dutch/strk_snpr3.ogg",
+				},
+		["meleeleap"]	=	{
+				"dutch/meleeleap2.ogg",
+				"dutch/meleeleap3.ogg",
+				"dutch/meleeleap4.ogg",
+				"dutch/meleeleap5.ogg",
+				"dutch/meleeleap6.ogg",
+				"dutch/meleeleap7.ogg",
+				},
+		["seefoe_agg"]	=	{
+				"dutch/seefoe_agg1.ogg",
+				"dutch/seefoe_agg2.ogg",
+				"dutch/seefoe_agg3.ogg",
+				},
+		["lookcmbt_agg"]	=	{
+				"dutch/lookcmbt_agg2.ogg",
+				"dutch/lookcmbt_agg4.ogg",
+				},
+		["seefoe"]	=	{
+				"dutch/seefoe1.ogg",
+				"dutch/seefoe10.ogg",
+				"dutch/seefoe2.ogg",
+				"dutch/seefoe3.ogg",
+				"dutch/seefoe4.ogg",
+				"dutch/seefoe5.ogg",
+				"dutch/seefoe6.ogg",
+				"dutch/seefoe7.ogg",
+				"dutch/seefoe8.ogg",
+				"dutch/seefoe9.ogg",
+				},
+		["scrn_plr_wrswpn"]	=	{
+				"dutch/scrn_plr_wrswpn1.ogg",
+				"dutch/scrn_plr_wrswpn10.ogg",
+				"dutch/scrn_plr_wrswpn2.ogg",
+				"dutch/scrn_plr_wrswpn3.ogg",
+				"dutch/scrn_plr_wrswpn4.ogg",
+				"dutch/scrn_plr_wrswpn5.ogg",
+				"dutch/scrn_plr_wrswpn6.ogg",
+				"dutch/scrn_plr_wrswpn7.ogg",
+				"dutch/scrn_plr_wrswpn8.ogg",
+				},
+		["scld_plr_wldvcl"]	=	{
+				"dutch/scld_plr_wldvcl1.ogg",
+				"dutch/scld_plr_wldvcl2.ogg",
+				},
+		["tnt_re"]	=	{
+				"dutch/tnt_re1.ogg",
+				"dutch/tnt_re3.ogg",
+				},
+		["rmd_vcl_wrth"]	=	{
+				"dutch/rmd_vcl_wrth1.ogg",
+				"dutch/rmd_vcl_wrth2.ogg",
+				},
+		["prs"]	=	{
+				"dutch/prs1.ogg",
+				"dutch/prs2.ogg",
+				"dutch/prs3.ogg",
+				"dutch/prs4.ogg",
+				"dutch/prs5.ogg",
+				"dutch/prs6.ogg",
+				"dutch/prs7.ogg",
+				"dutch/prs8.ogg",
+				"dutch/prs9.ogg",
+				},
+		["invsgt_fail"]	=	{
+				"dutch/invsgt_fail1.ogg",
+				"dutch/invsgt_fail10.ogg",
+				"dutch/invsgt_fail11.ogg",
+				"dutch/invsgt_fail13.ogg",
+				"dutch/invsgt_fail2.ogg",
+				"dutch/invsgt_fail4.ogg",
+				"dutch/invsgt_fail5.ogg",
+				"dutch/invsgt_fail7.ogg",
+				"dutch/invsgt_fail9.ogg",
+				},
+		["reload"]	=	{
+				"dutch/reload_100.ogg",
+				"dutch/reload_101.ogg",
+				"dutch/reload_102.ogg",
+				"dutch/reload_103.ogg",
+				"dutch/reload_104.ogg",
+				"dutch/reload_105.ogg",
+				},
+		["warn_wpm_snpr"]	=	{
+				"dutch/warn_wpm_snpr1.ogg",
+				"dutch/warn_wpm_snpr2.ogg",
+				"dutch/warn_wpm_snpr3.ogg",
+				},
+		["dwn_scrb"]	=	{
+				"dutch/dwn_scrb1.ogg",
+				"dutch/dwn_scrb2.ogg",
+				},
+		["prst"]	=	{
+				"dutch/prst3.ogg",
+				"dutch/prst4.ogg",
+				"dutch/prst5.ogg",
+				"dutch/prst6.ogg",
+				"dutch/prst8.ogg",
+				"dutch/prst9.ogg",
+				},
+		["ordr_chkfoebdy"]	=	{
+				"dutch/ordr_chkfoebdy10.ogg",
+				"dutch/ordr_chkfoebdy3.ogg",
+				"dutch/ordr_chkfoebdy5.ogg",
+				"dutch/ordr_chkfoebdy6.ogg",
+				"dutch/ordr_chkfoebdy7.ogg",
+				},
+		["jump"]	=	{
+				"dutch/jump_100.ogg",
+				"dutch/jump_101.ogg",
+				"dutch/jump_102.ogg",
+				"dutch/jump_103.ogg",
+				"dutch/jump_104.ogg",
+				"dutch/jump_105.ogg",
+				"dutch/jump_106.ogg",
+				"dutch/jump_107.ogg",
+				"dutch/jump_108.ogg",
+				},
+		["dwn_vcl_bnsh"]	=	{
+				"dutch/dwn_vcl_bnsh1.ogg",
+				"dutch/dwn_vcl_bnsh2.ogg",
+				},
+		["ask_chkallybdyf"]	=	{
+				"dutch/ask_chkallybdyf1.ogg",
+				"dutch/ask_chkallybdyf2.ogg",
+				"dutch/ask_chkallybdyf3.ogg",
+				},
+		["grt_intovcl"]	=	{
+				"dutch/grt_intovcl1.ogg",
+				"dutch/grt_intovcl2.ogg",
+				"dutch/grt_intovcl3.ogg",
+				"dutch/grt_intovcl7.ogg",
+				},
+		["warn_incmn_grnd"]	=	{
+				"dutch/warn_incmn_grnd1.ogg",
+				"dutch/warn_incmn_grnd10.ogg",
+				"dutch/warn_incmn_grnd11.ogg",
+				"dutch/warn_incmn_grnd2.ogg",
+				"dutch/warn_incmn_grnd3.ogg",
+				"dutch/warn_incmn_grnd4.ogg",
+				"dutch/warn_incmn_grnd5.ogg",
+				"dutch/warn_incmn_grnd6.ogg",
+				"dutch/warn_incmn_grnd7.ogg",
+				"dutch/warn_incmn_grnd8.ogg",
+				},
+		["rmd_vcl_ghst"]	=	{
+				"dutch/rmd_vcl_ghst1.ogg",
+				"dutch/rmd_vcl_ghst2.ogg",
+				},
+		["seefoe_tim"]	=	{
+				"dutch/seefoe_tim1.ogg",
+				"dutch/seefoe_tim2.ogg",
+				},
+		["rmd_trrt"]	=	{
+				"dutch/rmd_trrt1.ogg",
+				"dutch/rmd_trrt2.ogg",
+				},
+		["rmd_stlth"]	=	{
+				"dutch/rmd_stlth1.ogg",
+				"dutch/rmd_stlth2.ogg",
+				},
+		["betray"]	=	{
+				"dutch/betray12.ogg",
+				"dutch/betray13.ogg",
+				"dutch/betray15.ogg",
+				"dutch/betray16.ogg",
+				"dutch/betray2.ogg",
+				"dutch/betray5.ogg",
+				"dutch/betray6.ogg",
+				"dutch/betray8.ogg",
+				"dutch/betray9.ogg",
+				},
+		["rmd_vcl_bnsh"]	=	{
+				"dutch/rmd_vcl_bnsh1.ogg",
+				"dutch/rmd_vcl_bnsh2.ogg",
+				},
+		["regret"]	=	{
+				"dutch/regret1.ogg",
+				"dutch/regret2.ogg",
+				"dutch/regret4.ogg",
+				"dutch/regret6.ogg",
+				},
+		["whn"]	=	{
+				"dutch/whn1.ogg",
+				"dutch/whn10.ogg",
+				"dutch/whn11.ogg",
+				"dutch/whn13.ogg",
+				"dutch/whn2.ogg",
+				"dutch/whn3.ogg",
+				"dutch/whn4.ogg",
+				"dutch/whn6.ogg",
+				"dutch/whn8.ogg",
+				"dutch/whn9.ogg",
+				},
+		["ready_rocket_launcher"]	=	{
+				"dutch/ready_rocket_launcher_100.ogg",
+				"dutch/ready_rocket_launcher_101.ogg",
+				"dutch/ready_rocket_launcher_102.ogg",
+				"dutch/ready_rocket_launcher_103.ogg",
+				},
+		["dive"]	=	{
+				"dutch/dive1.ogg",
+				"dutch/dive2.ogg",
+				"dutch/dive3.ogg",
+				"dutch/dive4.ogg",
+				},
+		["pstcmbt_agg"]	=	{
+				"dutch/pstcmbt_agg1.ogg",
+				"dutch/pstcmbt_agg2.ogg",
+				"dutch/pstcmbt_agg4.ogg",
+				},
+		["pstcmbt"]	=	{
+				"dutch/pstcmbt1.ogg",
+				"dutch/pstcmbt2.ogg",
+				"dutch/pstcmbt3.ogg",
+				"dutch/pstcmbt4.ogg",
+				"dutch/pstcmbt5.ogg",
+				"dutch/pstcmbt6.ogg",
+				"dutch/pstcmbt7.ogg",
+				"dutch/pstcmbt9.ogg",
+				},
+		["scld_plr_blocking"]	=	{
+				"dutch/scld_plr_blocking1.ogg",
+				"dutch/scld_plr_blocking2.ogg",
+				"dutch/scld_plr_blocking3.ogg",
+				"dutch/scld_plr_blocking6.ogg",
+				"dutch/scld_plr_blocking7.ogg",
+				},
+		["join_emrg"]	=	{
+				"dutch/join_emrg1.ogg",
+				"dutch/join_emrg2.ogg",
+				},
+		["prs_plr_kll_wmelee"]	=	{
+				"dutch/prs_plr_kll_wmelee1.ogg",
+				"dutch/prs_plr_kll_wmelee3.ogg",
+				},
+		["prs_plr_kll_vclbmp"]	=	{
+				"dutch/prs_plr_kll_vclbmp1.ogg",
+				"dutch/prs_plr_kll_vclbmp2.ogg",
+				},
+		["buck_look_dutch"]	=	{
+				"dutch/buck_look_dutch_100.ogg",
+				"dutch/buck_look_dutch_101.ogg",
+				"dutch/buck_look_dutch_102.ogg",
+				},
+		["grt_plr_srprs"]	=	{
+				"dutch/grt_plr_srprs1.ogg",
+				"dutch/grt_plr_srprs2.ogg",
+				},
+		["pain_mjr"]	=	{
+				"dutch/pain_mjr1.ogg",
+				"dutch/pain_mjr10.ogg",
+				"dutch/pain_mjr11.ogg",
+				"dutch/pain_mjr12.ogg",
+				"dutch/pain_mjr2.ogg",
+				"dutch/pain_mjr3.ogg",
+				"dutch/pain_mjr4.ogg",
+				"dutch/pain_mjr5.ogg",
+				"dutch/pain_mjr6.ogg",
+				"dutch/pain_mjr7.ogg",
+				"dutch/pain_mjr8.ogg",
+				"dutch/pain_mjr9.ogg",
+				},
+		["warn_vcl_chpr"]	=	{
+				"dutch/warn_vcl_chpr1.ogg",
+				"dutch/warn_vcl_chpr2.ogg",
+				},
+		["ordr_keepwatch_agg"]	=	{
+				"dutch/ordr_keepwatch_agg2.ogg",
+				"dutch/ordr_keepwatch_agg4.ogg",
+				},
+		["lookcmbt_tim"]	=	{
+				"dutch/lookcmbt_tim1.ogg",
+				"dutch/lookcmbt_tim2.ogg",
+				"dutch/lookcmbt_tim3.ogg",
+				},
+		["crs"]	=	{
+				"dutch/crs1.ogg",
+				"dutch/crs11.ogg",
+				"dutch/crs3.ogg",
+				"dutch/crs4.ogg",
+				"dutch/crs5.ogg",
+				"dutch/crs7.ogg",
+				"dutch/crs9.ogg",
+				},
+		["newordr_retreat"]	=	{
+				"dutch/newordr_retreat1.ogg",
+				"dutch/newordr_retreat2.ogg",
+				"dutch/newordr_retreat3.ogg",
+				"dutch/newordr_retreat4.ogg",
+				},
+		["melee"]	=	{
+				"dutch/melee1.ogg",
+				"dutch/melee3.ogg",
+				"dutch/melee4.ogg",
+				},
+		["scld_plr_vclcrazy"]	=	{
+				"dutch/scld_plr_vclcrazy3.ogg",
+				"dutch/scld_plr_vclcrazy4.ogg",
+				},
+		["pld_mjrfoe"]	=	{
+				"dutch/pld_mjrfoe1.ogg",
+				"dutch/pld_mjrfoe3.ogg",
+				"dutch/pld_mjrfoe4.ogg",
+				"dutch/pld_mjrfoe6.ogg",
+				},
+		["warn_incmn"]	=	{
+				"dutch/warn_incmn1.ogg",
+				"dutch/warn_incmn2.ogg",
+				"dutch/warn_incmn3.ogg",
+				"dutch/warn_incmn4.ogg",
+				"dutch/warn_incmn5.ogg",
+				"dutch/warn_incmn6.ogg",
+				},
+		["pain_shld"]	=	{
+				"dutch/pain_shld1.ogg",
+				"dutch/pain_shld10.ogg",
+				"dutch/pain_shld11.ogg",
+				"dutch/pain_shld13.ogg",
+				"dutch/pain_shld6.ogg",
+				"dutch/pain_shld9.ogg",
+				},
+		["join_emrg_re"]	=	{
+				"dutch/join_emrg_re1.ogg",
+				"dutch/join_emrg_re2.ogg",
+				"dutch/join_emrg_re3.ogg",
+				},
+		["prs_plr_kll_lots"]	=	{
+				"dutch/prs_plr_kll_lots1.ogg",
+				"dutch/prs_plr_kll_lots2.ogg",
+				"dutch/prs_plr_kll_lots3.ogg",
+				},
+		["pain_mdm"]	=	{
+				"dutch/pain_mdm1.ogg",
+				"dutch/pain_mdm2.ogg",
+				"dutch/pain_mdm4.ogg",
+				"dutch/pain_mdm5.ogg",
+				"dutch/pain_mdm6.ogg",
+				"dutch/pain_mdm7.ogg",
+				"dutch/pain_mdm8.ogg",
+				"dutch/pain_mdm9.ogg",
+				},
+		["entervcl_gnr"]	=	{
+				"dutch/entervcl_gnr1.ogg",
+				"dutch/entervcl_gnr4.ogg",
+				},
+		["ok_plr_trdwpn"]	=	{
+				"dutch/ok_plr_trdwpn1.ogg",
+				"dutch/ok_plr_trdwpn10.ogg",
+				"dutch/ok_plr_trdwpn2.ogg",
+				"dutch/ok_plr_trdwpn3.ogg",
+				"dutch/ok_plr_trdwpn5.ogg",
+				"dutch/ok_plr_trdwpn6.ogg",
+				"dutch/ok_plr_trdwpn7.ogg",
+				"dutch/ok_plr_trdwpn8.ogg",
+				"dutch/ok_plr_trdwpn9.ogg",
+				},
+		["pain_fall"]	=	{
+				"dutch/pain_fall1.ogg",
+				"dutch/pain_fall2.ogg",
+				"dutch/pain_fall3.ogg",
+				"dutch/pain_fall5.ogg",
+				"dutch/pain_fall6.ogg",
+				"dutch/pain_fall7.ogg",
+				"dutch/pain_fall8.ogg",
+				"dutch/pain_fall9.ogg",
+				},
+		["ok"]	=	{
+				"dutch/ok1.ogg",
+				"dutch/ok10.ogg",
+				"dutch/ok2.ogg",
+				"dutch/ok3.ogg",
+				"dutch/ok4.ogg",
+				"dutch/ok5.ogg",
+				"dutch/ok6.ogg",
+				"dutch/ok8.ogg",
+				},
+		["lmnt_deadally"]	=	{
+				"dutch/lmnt_deadally1.ogg",
+				"dutch/lmnt_deadally2.ogg",
+				},
+		["brsrk"]	=	{
+				"dutch/brsrk1.ogg",
+				},
+		["kllmytrgt"]	=	{
+				"dutch/kllmytrgt1.ogg",
+				"dutch/kllmytrgt2.ogg",
+				"dutch/kllmytrgt4.ogg",
+				"dutch/kllmytrgt7.ogg",
+				"dutch/kllmytrgt8.ogg",
+				},
+		["strk"]	=	{
+				"dutch/strk_100.ogg",
+				"dutch/strk_101.ogg",
+				"dutch/strk_102.ogg",
+				"dutch/strk_103.ogg",
+				"dutch/strk_104.ogg",
+				"dutch/strk_105.ogg",
+				"dutch/strk_106.ogg",
+				"dutch/strk_107.ogg",
+				"dutch/strk_108.ogg",
+				"dutch/strk_109.ogg",
+				"dutch/strk_110.ogg",
+				"dutch/strk_111.ogg",
+				"dutch/strk_112.ogg",
+				"dutch/strk_113.ogg",
+				},
+		["strk_grnd_uncvr"]	=	{
+				"dutch/strk_grnd_uncvr1.ogg",
+				"dutch/strk_grnd_uncvr2.ogg",
+				},
+		["ask_prst_fail"]	=	{
+				"dutch/ask_prst_fail1.ogg",
+				"dutch/ask_prst_fail3.ogg",
+				"dutch/ask_prst_fail5.ogg",
+				"dutch/ask_prst_fail7.ogg",
+				"dutch/ask_prst_fail9.ogg",
+				},
+		["endcmbt"]	=	{
+				"dutch/endcmbt1.ogg",
+				"dutch/endcmbt10.ogg",
+				"dutch/endcmbt15.ogg",
+				"dutch/endcmbt17.ogg",
+				"dutch/endcmbt6.ogg",
+				"dutch/endcmbt9.ogg",
+				},
+		["hail"]	=	{
+				"dutch/hail1.ogg",
+				"dutch/hail2.ogg",
+				"dutch/hail3.ogg",
+				"dutch/hail4.ogg",
+				},
+		["ordr_prst"]	=	{
+				"dutch/ordr_prst2.ogg",
+				"dutch/ordr_prst4.ogg",
+				"dutch/ordr_prst7.ogg",
+				"dutch/ordr_prst8.ogg",
+				"dutch/ordr_prst9.ogg",
+				},
+		["forgive"]	=	{
+				"dutch/forgive2.ogg",
+				"dutch/forgive3.ogg",
+				"dutch/forgive4.ogg",
+				"dutch/forgive5.ogg",
+				"dutch/forgive7.ogg",
+				"dutch/forgive8.ogg",
+				"dutch/forgive9.ogg",
+				},
+		["prs_plr_gdgrnd"]	=	{
+				"dutch/prs_plr_gdgrnd1.ogg",
+				"dutch/prs_plr_gdgrnd2.ogg",
+				"dutch/prs_plr_gdgrnd3.ogg",
+				},
+		["death_assasination"]	=	{
+				"dutch/death_assasination_100.ogg",
+				"dutch/death_assasination_101.ogg",
+				"dutch/death_assasination_102.ogg",
+				"dutch/death_assasination_103.ogg",
+				"dutch/death_assasination_106.ogg",
+				"dutch/death_assasination_107.ogg",
+				},
+		["shld_mjr_state_lp"]	=	{
+				"dutch/shld_mjr_state_lp1.ogg",
+				"dutch/shld_mjr_state_lp2.ogg",
+				"dutch/shld_mjr_state_lp3.ogg",
+				"dutch/shld_mjr_state_lp4.ogg",
+				"dutch/shld_mjr_state_lp5.ogg",
+				},
+		["newordr_arrival"]	=	{
+				"dutch/newordr_arrival1.ogg",
+				"dutch/newordr_arrival2.ogg",
+				"dutch/newordr_arrival4.ogg",
+				"dutch/newordr_arrival5.ogg",
+				},
+		["entervcl_trrt"]	=	{
+				"dutch/entervcl_trrt1.ogg",
+				"dutch/entervcl_trrt2.ogg",
+				},
+		["rmd_wpm_snpr"]	=	{
+				"dutch/rmd_wpm_snpr2.ogg",
+				"dutch/rmd_wpm_snpr3.ogg",
+				},
+		["grt_plr_vcl"]	=	{
+				"dutch/grt_plr_vcl3.ogg",
+				"dutch/grt_plr_vcl4.ogg",
+				"dutch/grt_plr_vcl5.ogg",
+				"dutch/grt_plr_vcl6.ogg",
+				},
+		["dth_slnt"]	=	{
+				"dutch/dth_slnt1.ogg",
+				"dutch/dth_slnt4.ogg",
+				"dutch/dth_slnt5.ogg",
+				},
+		["grt_plr_vcl_empty"]	=	{
+				"dutch/grt_plr_vcl_empty1.ogg",
+				"dutch/grt_plr_vcl_empty2.ogg",
+				"dutch/grt_plr_vcl_empty3.ogg",
+				},
+		["hlth_crit_dmg"]	=	{
+				"dutch/hlth_crit_dmg_100.ogg",
+				"dutch/hlth_crit_dmg_101.ogg",
+				"dutch/hlth_crit_dmg_102.ogg",
+				"dutch/hlth_crit_dmg_103.ogg",
+				"dutch/hlth_crit_dmg_104.ogg",
+				"dutch/hlth_crit_dmg_105.ogg",
+				"dutch/hlth_crit_dmg_106.ogg",
+				"dutch/hlth_crit_dmg_107.ogg",
+				"dutch/hlth_crit_dmg_108.ogg",
+				"dutch/hlth_crit_dmg_109.ogg",
+				"dutch/hlth_crit_dmg_110.ogg",
+				"dutch/hlth_crit_dmg_111.ogg",
+				"dutch/hlth_crit_dmg_112.ogg",
+				"dutch/hlth_crit_dmg_113.ogg",
+				"dutch/hlth_crit_dmg_114.ogg",
+				"dutch/hlth_crit_dmg_115.ogg",
+				"dutch/hlth_crit_dmg_116.ogg",
+				},
+		["stayback"]	=	{
+				"dutch/stayback1.ogg",
+				"dutch/stayback10.ogg",
+				"dutch/stayback13.ogg",
+				"dutch/stayback15.ogg",
+				"dutch/stayback4.ogg",
+				"dutch/stayback5.ogg",
+				"dutch/stayback6.ogg",
+				"dutch/stayback8.ogg",
+				"dutch/stayback9.ogg",
+				},
+		["look_pstcmbt"]	=	{
+				"dutch/look_pstcmbt1.ogg",
+				"dutch/look_pstcmbt2.ogg",
+				"dutch/look_pstcmbt4.ogg",
+				},
+		["dth_slw"]	=	{
+				"dutch/dth_slw1.ogg",
+				"dutch/dth_slw3.ogg",
+				"dutch/dth_slw4.ogg",
+				"dutch/dth_slw6.ogg",
+				},
+		["look_lngtime"]	=	{
+				"dutch/look_lngtime10.ogg",
+				"dutch/look_lngtime12.ogg",
+				},
+		["dth"]	=	{
+				"dutch/dth1.ogg",
+				"dutch/dth2.ogg",
+				"dutch/dth3.ogg",
+				},
+		["chr"]	=	{
+				"dutch/chr1.ogg",
+				"dutch/chr2.ogg",
+				"dutch/chr3.ogg",
+				"dutch/chr4.ogg",
+				},
+		["grt"]	=	{
+				"dutch/grt1.ogg",
+				"dutch/grt2.ogg",
+				"dutch/grt3.ogg",
+				"dutch/grt5.ogg",
+				},
+		["chkallybdyf"]	=	{
+				"dutch/chkallybdyf1.ogg",
+				"dutch/chkallybdyf3.ogg",
+				"dutch/chkallybdyf4.ogg",
+				},
+		["captured"]	=	{
+				"dutch/captured1.ogg",
+				"dutch/captured10.ogg",
+				"dutch/captured11.ogg",
+				"dutch/captured13.ogg",
+				"dutch/captured14.ogg",
+				"dutch/captured2.ogg",
+				"dutch/captured3.ogg",
+				"dutch/captured4.ogg",
+				"dutch/captured5.ogg",
+				"dutch/captured6.ogg",
+				"dutch/captured8.ogg",
+				"dutch/captured9.ogg",
+				},
+		["warn_incmn_vclbm"]	=	{
+				"dutch/warn_incmn_vclbm2.ogg",
+				"dutch/warn_incmn_vclbm3.ogg",
+				},
+		["prs_plr_kll_mjr"]	=	{
+				"dutch/prs_plr_kll_mjr1.ogg",
+				"dutch/prs_plr_kll_mjr3.ogg",
+				},
+		["warn_trrt_dply"]	=	{
+				"dutch/warn_trrt_dply1.ogg",
+				"dutch/warn_trrt_dply3.ogg",
+				},
+		["newordr_moveon"]	=	{
+				"dutch/newordr_moveon1.ogg",
+				"dutch/newordr_moveon2.ogg",
+				"dutch/newordr_moveon3.ogg",
+				"dutch/newordr_moveon4.ogg",
+				},
+		["pstcmbt_hrd"]	=	{
+				"dutch/pstcmbt_hrd1.ogg",
+				"dutch/pstcmbt_hrd3.ogg",
+				},
+		["prs_plr_kll_blt"]	=	{
+				"dutch/prs_plr_kll_blt1.ogg",
+				"dutch/prs_plr_kll_blt2.ogg",
+				"dutch/prs_plr_kll_blt3.ogg",
+				"dutch/prs_plr_kll_blt4.ogg",
+				"dutch/prs_plr_kll_blt5.ogg",
+				"dutch/prs_plr_kll_blt6.ogg",
+				},
+		["ordr_prst_keeplooking"]	=	{
+				"dutch/ordr_prst_keeplooking1.ogg",
+				"dutch/ordr_prst_keeplooking2.ogg",
+				"dutch/ordr_prst_keeplooking3.ogg",
+				"dutch/ordr_prst_keeplooking4.ogg",
+				},
+		["ordr_invsgt"]	=	{
+				"dutch/ordr_invsgt1.ogg",
+				"dutch/ordr_invsgt2.ogg",
+				"dutch/ordr_invsgt3.ogg",
+				"dutch/ordr_invsgt4.ogg",
+				"dutch/ordr_invsgt6.ogg",
+				"dutch/ordr_invsgt7.ogg",
+				},
+		["grt_intovcl_imdvr"]	=	{
+				"dutch/grt_intovcl_imdvr1.ogg",
+				"dutch/grt_intovcl_imdvr2.ogg",
+				},
+		["bump"]	=	{
+				"dutch/bump10.ogg",
+				"dutch/bump11.ogg",
+				"dutch/bump12.ogg",
+				"dutch/bump13.ogg",
+				"dutch/bump14.ogg",
+				"dutch/bump15.ogg",
+				"dutch/bump16.ogg",
+				"dutch/bump9.ogg",
+				},
+		["hrdfoe"]	=	{
+				"dutch/hrdfoe1.ogg",
+				"dutch/hrdfoe2.ogg",
+				"dutch/hrdfoe3.ogg",
+				"dutch/hrdfoe4.ogg",
+				"dutch/hrdfoe5.ogg",
+				"dutch/hrdfoe6.ogg",
+				"dutch/hrdfoe7.ogg",
+				},
+		["newordr_entervcl"]	=	{
+				"dutch/newordr_entervcl2.ogg",
+				"dutch/newordr_entervcl4.ogg",
+				"dutch/newordr_entervcl5.ogg",
+				"dutch/newordr_entervcl7.ogg",
+				},
+		["hlth_mjr_dmg"]	=	{
+				"dutch/hlth_mjr_dmg_100.ogg",
+				"dutch/hlth_mjr_dmg_101.ogg",
+				"dutch/hlth_mjr_dmg_102.ogg",
+				"dutch/hlth_mjr_dmg_103.ogg",
+				"dutch/hlth_mjr_dmg_104.ogg",
+				"dutch/hlth_mjr_dmg_105.ogg",
+				"dutch/hlth_mjr_dmg_106.ogg",
+				"dutch/hlth_mjr_dmg_107.ogg",
+				"dutch/hlth_mjr_dmg_108.ogg",
+				"dutch/hlth_mjr_dmg_109.ogg",
+				"dutch/hlth_mjr_dmg_110.ogg",
+				"dutch/hlth_mjr_dmg_111.ogg",
+				"dutch/hlth_mjr_dmg_112.ogg",
+				"dutch/hlth_mjr_dmg_113.ogg",
+				"dutch/hlth_mjr_dmg_114.ogg",
+				"dutch/hlth_mjr_dmg_115.ogg",
+				"dutch/hlth_mjr_dmg_116.ogg",
+				"dutch/hlth_mjr_dmg_117.ogg",
+				"dutch/hlth_mjr_dmg_118.ogg",
+				},
+		["dth_hdsht"]	=	{
+				"dutch/dth_hdsht1.ogg",
+				"dutch/dth_hdsht3.ogg",
+				"dutch/dth_hdsht4.ogg",
+				"dutch/dth_hdsht5.ogg",
+				"dutch/dth_hdsht6.ogg",
+				"dutch/dth_hdsht7.ogg",
+				},
+		["ready_spartan_laser"]	=	{
+				"dutch/ready_spartan_laser_100.ogg",
+				"dutch/ready_spartan_laser_101.ogg",
+				"dutch/ready_spartan_laser_102.ogg",
+				"dutch/ready_spartan_laser_103.ogg",
+				"dutch/ready_spartan_laser_105.ogg",
+				},
+		["strk"]	=	{
+				"dutch/strk1.ogg",
+				"dutch/strk10.ogg",
+				"dutch/strk11.ogg",
+				"dutch/strk2.ogg",
+				"dutch/strk3.ogg",
+				"dutch/strk4.ogg",
+				"dutch/strk5.ogg",
+				"dutch/strk7.ogg",
+				"dutch/strk8.ogg",
+				"dutch/strk9.ogg",
+				},
+		["prs_plr_sniping"]	=	{
+				"dutch/prs_plr_sniping1.ogg",
+				"dutch/prs_plr_sniping2.ogg",
+				},
+		["fall"]	=	{
+				"dutch/fall1.ogg",
+				"dutch/fall2.ogg",
+				},
+		["foeordr_support"]	=	{
+				"dutch/foeordr_support2.ogg",
+				"dutch/foeordr_support3.ogg",
+				"dutch/foeordr_support4.ogg",
+				"dutch/foeordr_support5.ogg",
+				},
+		["ok_plr_trdst_dvr"]	=	{
+				"dutch/ok_plr_trdst_dvr2.ogg",
+				"dutch/ok_plr_trdst_dvr3.ogg",
+				},
+		["stun"]	=	{
+				"dutch/stun1.ogg",
+				"dutch/stun2.ogg",
+				"dutch/stun3.ogg",
+				},
+		["ordr_stayback"]	=	{
+				"dutch/ordr_stayback11.ogg",
+				"dutch/ordr_stayback7.ogg",
+				"dutch/ordr_stayback8.ogg",
+				"dutch/ordr_stayback9.ogg",
+				},
+		["death_headshot"]	=	{
+				"dutch/death_headshot_100.ogg",
+				"dutch/death_headshot_101.ogg",
+				"dutch/death_headshot_102.ogg",
+				"dutch/death_headshot_103.ogg",
+				"dutch/death_headshot_104.ogg",
+				"dutch/death_headshot_105.ogg",
+				"dutch/death_headshot_106.ogg",
+				"dutch/death_headshot_107.ogg",
+				"dutch/death_headshot_108.ogg",
+				},
+		["foeordr_retreat"]	=	{
+				"dutch/foeordr_retreat2.ogg",
+				"dutch/foeordr_retreat4.ogg",
+				"dutch/foeordr_retreat7.ogg",
+				"dutch/foeordr_retreat8.ogg",
+				},
+		["lst_cntct"]	=	{
+				"dutch/lst_cntct1.ogg",
+				"dutch/lst_cntct10.ogg",
+				"dutch/lst_cntct11.ogg",
+				"dutch/lst_cntct3.ogg",
+				"dutch/lst_cntct4.ogg",
+				"dutch/lst_cntct5.ogg",
+				"dutch/lst_cntct6.ogg",
+				"dutch/lst_cntct7.ogg",
+				"dutch/lst_cntct9.ogg",
+				},
+		["look_pstcmbt_ez"]	=	{
+				"dutch/look_pstcmbt_ez2.ogg",
+				"dutch/look_pstcmbt_ez4.ogg",
+				},
+		["warn_stlth"]	=	{
+				"dutch/warn_stlth1.ogg",
+				"dutch/warn_stlth2.ogg",
+				},
+		["look_longtime"]	=	{
+				"dutch/look_longtime1.ogg",
+				"dutch/look_longtime14.ogg",
+				"dutch/look_longtime15.ogg",
+				"dutch/look_longtime2.ogg",
+				"dutch/look_longtime3.ogg",
+				"dutch/look_longtime5.ogg",
+				"dutch/look_longtime7.ogg",
+				"dutch/look_longtime8.ogg",
+				"dutch/look_longtime9.ogg",
+				},
+		["chkfoebdy"]	=	{
+				"dutch/chkfoebdy1.ogg",
+				"dutch/chkfoebdy3.ogg",
+				"dutch/chkfoebdy5.ogg",
+				"dutch/chkfoebdy7.ogg",
+				},
+		["morefoe"]	=	{
+				"dutch/morefoe1.ogg",
+				"dutch/morefoe2.ogg",
+				"dutch/morefoe3.ogg",
+				"dutch/morefoe4.ogg",
+				"dutch/morefoe5.ogg",
+				},
+		["entervcl_psngr"]	=	{
+				"dutch/entervcl_psngr1.ogg",
+				"dutch/entervcl_psngr2.ogg",
+				},
+		["warn_trrt"]	=	{
+				"dutch/warn_trrt1.ogg",
+				"dutch/warn_trrt3.ogg",
+			},
+	},
+	["Buck"] = {
+		["crs_mjrfoe"]	=	{
+				"buck/crs_mjrfoe1.ogg",
+				"buck/crs_mjrfoe2.ogg",
+				"buck/crs_mjrfoe3.ogg",
+				"buck/crs_mjrfoe5.ogg",
+				"buck/crs_mjrfoe6.ogg",
+				"buck/crs_mjrfoe7.ogg",
+				"buck/crs_mjrfoe8.ogg",
+				"buck/crs_mjrfoe9.ogg",
+				},
+		["look_lngtme"]	=	{
+				"buck/look_lngtme1.ogg",
+				"buck/look_lngtme2.ogg",
+				"buck/look_lngtme4.ogg",
+				"buck/look_lngtme5.ogg",
+				"buck/look_lngtme6.ogg",
+				"buck/look_lngtme7.ogg",
+				"buck/look_lngtme8.ogg",
+				},
+		["invt_vcl_gnr"]	=	{
+				"buck/invt_vcl_gnr1.ogg",
+				"buck/invt_vcl_gnr2.ogg",
+				"buck/invt_vcl_gnr3.ogg",
+				},
+		["new_ordr_advance"]	=	{
+				"buck/new_ordr_advance1.ogg",
+				"buck/new_ordr_advance2.ogg",
+				"buck/new_ordr_advance3.ogg",
+				"buck/new_ordr_advance4.ogg",
+				"buck/new_ordr_advance5.ogg",
+				},
+		["rmd_vcl_ghst"]	=	{
+				"buck/rmd_vcl_ghst1.ogg",
+				"buck/rmd_vcl_ghst2.ogg",
+				},
+		["foeordr_flanking"]	=	{
+				"buck/foeordr_flanking1.ogg",
+				"buck/foeordr_flanking2.ogg",
+				"buck/foeordr_flanking3.ogg",
+				"buck/foeordr_flanking4.ogg",
+				"buck/foeordr_flanking5.ogg",
+				},
+		["cvr"]	=	{
+				"buck/cvr1.ogg",
+				"buck/cvr2.ogg",
+				"buck/cvr3.ogg",
+				"buck/cvr4.ogg",
+				},
+		["rmd"]	=	{
+				"buck/rmd1.ogg",
+				"buck/rmd2.ogg",
+				"buck/rmd3.ogg",
+				"buck/rmd4.ogg",
+				"buck/rmd5.ogg",
+				"buck/rmd6.ogg",
+				},
+		["warn_chr_bggr"]	=	{
+				"buck/warn_chr_bggr1.ogg",
+				"buck/warn_chr_bggr2.ogg",
+				},
+		["shld_mjr_dmg"]	=	{
+				"buck/shld_mjr_dmg_100.ogg",
+				"buck/shld_mjr_dmg_101.ogg",
+				"buck/shld_mjr_dmg_102.ogg",
+				"buck/shld_mjr_dmg_103.ogg",
+				"buck/shld_mjr_dmg_104.ogg",
+				"buck/shld_mjr_dmg_105.ogg",
+				"buck/shld_mjr_dmg_106.ogg",
+				"buck/shld_mjr_dmg_107.ogg",
+				},
+		["charge"]	=	{
+				"buck/charge1.ogg",
+				"buck/charge2.ogg",
+				"buck/charge3.ogg",
+				"buck/charge4.ogg",
+				"buck/charge5.ogg",
+				"buck/charge6.ogg",
+				},
+		["warn_vcl_bnsh"]	=	{
+				"buck/warn_vcl_bnsh1.ogg",
+				"buck/warn_vcl_bnsh2.ogg",
+				},
+		["scld_plr_hrtme"]	=	{
+				"buck/scld_plr_hrtme1.ogg",
+				"buck/scld_plr_hrtme10.ogg",
+				"buck/scld_plr_hrtme11.ogg",
+				"buck/scld_plr_hrtme2.ogg",
+				"buck/scld_plr_hrtme3.ogg",
+				"buck/scld_plr_hrtme4.ogg",
+				"buck/scld_plr_hrtme5.ogg",
+				"buck/scld_plr_hrtme6.ogg",
+				"buck/scld_plr_hrtme7.ogg",
+				"buck/scld_plr_hrtme8.ogg",
+				"buck/scld_plr_hrtme9.ogg",
+				},
+		["pain"]	=	{
+				"buck/pain1.ogg",
+				"buck/pain4.ogg",
+				"buck/pain5.ogg",
+				},
+		["whn_re"]	=	{
+				"buck/whn_re1.ogg",
+				"buck/whn_re2.ogg",
+				},
+		["look_lngtme"]	=	{
+				"buck/look_lngtme_100.ogg",
+				"buck/look_lngtme_101.ogg",
+				"buck/look_lngtme_102.ogg",
+				"buck/look_lngtme_103.ogg",
+				"buck/look_lngtme_104.ogg",
+				"buck/look_lngtme_105.ogg",
+				"buck/look_lngtme_106.ogg",
+				},
+		["lookcmbt_fllw"]	=	{
+				"buck/lookcmbt_fllw1.ogg",
+				"buck/lookcmbt_fllw2.ogg",
+				"buck/lookcmbt_fllw3.ogg",
+				"buck/lookcmbt_fllw4.ogg",
+				},
+		["foundfoe_re"]	=	{
+				"buck/foundfoe_re1.ogg",
+				"buck/foundfoe_re2.ogg",
+				"buck/foundfoe_re3.ogg",
+				"buck/foundfoe_re5.ogg",
+				},
+		["whn_hrtblt"]	=	{
+				"buck/whn_hrtblt1.ogg",
+				"buck/whn_hrtblt2.ogg",
+				},
+		["scld_plr_wldgrnd"]	=	{
+				"buck/scld_plr_wldgrnd1.ogg",
+				"buck/scld_plr_wldgrnd2.ogg",
+				"buck/scld_plr_wldgrnd3.ogg",
+				"buck/scld_plr_wldgrnd4.ogg",
+				},
+		["warn_wpn_snpr"]	=	{
+				"buck/warn_wpn_snpr1.ogg",
+				"buck/warn_wpn_snpr2.ogg",
+				"buck/warn_wpn_snpr3.ogg",
+				},
+		["cvr_re"]	=	{
+				"buck/cvr_re1.ogg",
+				"buck/cvr_re2.ogg",
+				"buck/cvr_re3.ogg",
+				"buck/cvr_re4.ogg",
+				},
+		["prs_plr_kll"]	=	{
+				"buck/prs_plr_kll1.ogg",
+				"buck/prs_plr_kll2.ogg",
+				"buck/prs_plr_kll3.ogg",
+				"buck/prs_plr_kll4.ogg",
+				},
+		["dwn"]	=	{
+				"buck/dwn1.ogg",
+				"buck/dwn2.ogg",
+				"buck/dwn3.ogg",
+				"buck/dwn4.ogg",
+				"buck/dwn5.ogg",
+				"buck/dwn6.ogg",
+				"buck/dwn7.ogg",
+				},
+		["kllmytrgt"]	=	{
+				"buck/kllmytrgt1.ogg",
+				"buck/kllmytrgt2.ogg",
+				"buck/kllmytrgt3.ogg",
+				"buck/kllmytrgt4.ogg",
+				"buck/kllmytrgt5.ogg",
+				"buck/kllmytrgt6.ogg",
+				},
+		["warn_brsrk"]	=	{
+				"buck/warn_brsrk1.ogg",
+				"buck/warn_brsrk2.ogg",
+				},
+		["warn_vcl_wrth"]	=	{
+				"buck/warn_vcl_wrth1.ogg",
+				"buck/warn_vcl_wrth2.ogg",
+				},
+		["grt_intovcl_mine"]	=	{
+				"buck/grt_intovcl_mine1.ogg",
+				"buck/grt_intovcl_mine2.ogg",
+				},
+		["chckallybdyf"]	=	{
+				"buck/chckallybdyf1.ogg",
+				"buck/chckallybdyf2.ogg",
+				"buck/chckallybdyf3.ogg",
+				},
+		["newordr_support"]	=	{
+				"buck/newordr_support2.ogg",
+				"buck/newordr_support3.ogg",
+				"buck/newordr_support4.ogg",
+				"buck/newordr_support5.ogg",
+				"buck/newordr_support6.ogg",
+				},
+		["warn_vcl_phntm"]	=	{
+				"buck/warn_vcl_phntm1.ogg",
+				"buck/warn_vcl_phntm2.ogg",
+				},
+		["rmd_scrb"]	=	{
+				"buck/rmd_scrb1.ogg",
+				"buck/rmd_scrb2.ogg",
+				"buck/rmd_scrb3.ogg",
+				},
+		["pld"]	=	{
+				"buck/pld1.ogg",
+				"buck/pld2.ogg",
+				"buck/pld5.ogg",
+				"buck/pld6.ogg",
+				"buck/pld7.ogg",
+				"buck/pld9.ogg",
+				},
+		["lift"]	=	{
+				"buck/lift1.ogg",
+				"buck/lift2.ogg",
+				"buck/lift3.ogg",
+				"buck/lift4.ogg",
+				"buck/lift5.ogg",
+				},
+		["region"]	=	{
+				"buck/region_1.ogg",
+				},
+		["dwn_vcl_chpr"]	=	{
+				"buck/dwn_vcl_chpr1.ogg",
+				"buck/dwn_vcl_chpr2.ogg",
+				},
+		["dodge"]	=	{
+				"buck/dodge1.ogg",
+				"buck/dodge2.ogg",
+				},
+		["betray"]	=	{
+				"buck/betray1.ogg",
+				"buck/betray2.ogg",
+				"buck/betray3.ogg",
+				"buck/betray4.ogg",
+				"buck/betray5.ogg",
+				"buck/betray6.ogg",
+				"buck/betray7.ogg",
+				"buck/betray8.ogg",
+				},
+		["thnk"]	=	{
+				"buck/thnk1.ogg",
+				"buck/thnk10.ogg",
+				"buck/thnk11.ogg",
+				"buck/thnk2.ogg",
+				"buck/thnk3.ogg",
+				"buck/thnk4.ogg",
+				"buck/thnk5.ogg",
+				"buck/thnk7.ogg",
+				"buck/thnk8.ogg",
+				"buck/thnk9.ogg",
+				},
+		["entervcl_drvr"]	=	{
+				"buck/entervcl_drvr1.ogg",
+				"buck/entervcl_drvr2.ogg",
+				},
+		["foe_ordr_charge"]	=	{
+				"buck/foe_ordr_charge1.ogg",
+				"buck/foe_ordr_charge2.ogg",
+				"buck/foe_ordr_charge3.ogg",
+				"buck/foe_ordr_charge4.ogg",
+				},
+		["thrtn"]	=	{
+				"buck/thrtn1.ogg",
+				"buck/thrtn10.ogg",
+				"buck/thrtn11.ogg",
+				"buck/thrtn2.ogg",
+				"buck/thrtn3.ogg",
+				"buck/thrtn4.ogg",
+				"buck/thrtn5.ogg",
+				"buck/thrtn6.ogg",
+				"buck/thrtn7.ogg",
+				"buck/thrtn8.ogg",
+				"buck/thrtn9.ogg",
+				},
+		["panic_infctfrm"]	=	{
+				"buck/panic_infctfrm1.ogg",
+				"buck/panic_infctfrm4.ogg",
+				},
+		["warn_scrb"]	=	{
+				"buck/warn_scrb1.ogg",
+				"buck/warn_scrb2.ogg",
+				"buck/warn_scrb3.ogg",
+				},
+		["newordr_exitvcl"]	=	{
+				"buck/newordr_exitvcl1.ogg",
+				"buck/newordr_exitvcl2.ogg",
+				"buck/newordr_exitvcl3.ogg",
+				"buck/newordr_exitvcl4.ogg",
+				"buck/newordr_exitvcl5.ogg",
+				},
+		["join_stayback"]	=	{
+				"buck/join_stayback1.ogg",
+				"buck/join_stayback2.ogg",
+				"buck/join_stayback3.ogg",
+				"buck/join_stayback4.ogg",
+				},
+		["cower"]	=	{
+				"buck/cower1.ogg",
+				"buck/cower2.ogg",
+				"buck/cower5.ogg",
+				"buck/cower8.ogg",
+				"buck/cower9.ogg",
+				},
+		["warn_incmn_vclbm"]	=	{
+				"buck/warn_incmn_vclbm1.ogg",
+				"buck/warn_incmn_vclbm2.ogg",
+				},
+		["newordr_fllwplr"]	=	{
+				"buck/newordr_fllwplr1.ogg",
+				"buck/newordr_fllwplr2.ogg",
+				"buck/newordr_fllwplr3.ogg",
+				"buck/newordr_fllwplr4.ogg",
+				},
+		["pld_mjrfoe"]	=	{
+				"buck/pld_mjrfoe2.ogg",
+				"buck/pld_mjrfoe3.ogg",
+				"buck/pld_mjrfoe4.ogg",
+				},
+		["romeo_look_buck"]	=	{
+				"buck/romeo_look_buck_101.ogg",
+				"buck/romeo_look_buck_102.ogg",
+				"buck/romeo_look_buck_103.ogg",
+				"buck/romeo_look_buck_104.ogg",
+				"buck/romeo_look_buck_105.ogg",
+				"buck/romeo_look_buck_106.ogg",
+				"buck/romeo_look_buck_107.ogg",
+				"buck/romeo_look_buck_108.ogg",
+				},
+		["ok_plr_trdst_gnr"]	=	{
+				"buck/ok_plr_trdst_gnr1.ogg",
+				"buck/ok_plr_trdst_gnr2.ogg",
+				},
+		["panic_plsmgrnd"]	=	{
+				"buck/panic_plsmgrnd1.ogg",
+				"buck/panic_plsmgrnd2.ogg",
+				"buck/panic_plsmgrnd4.ogg",
+				"buck/panic_plsmgrnd5.ogg",
+				},
+		["warn_incmn_grnd"]	=	{
+				"buck/warn_incmn_grnd10.ogg",
+				"buck/warn_incmn_grnd11.ogg",
+				"buck/warn_incmn_grnd2.ogg",
+				"buck/warn_incmn_grnd3.ogg",
+				"buck/warn_incmn_grnd4.ogg",
+				"buck/warn_incmn_grnd5.ogg",
+				"buck/warn_incmn_grnd6.ogg",
+				"buck/warn_incmn_grnd7.ogg",
+				"buck/warn_incmn_grnd8.ogg",
+				"buck/warn_incmn_grnd9.ogg",
+				},
+		["chr"]	=	{
+				"buck/chr1.ogg",
+				"buck/chr2.ogg",
+				"buck/chr3.ogg",
+				"buck/chr4.ogg",
+				},
+		["warn_incmn"]	=	{
+				"buck/warn_incmn1.ogg",
+				"buck/warn_incmn2.ogg",
+				"buck/warn_incmn3.ogg",
+				"buck/warn_incmn4.ogg",
+				"buck/warn_incmn5.ogg",
+				"buck/warn_incmn6.ogg",
+				},
+		["rmd_wpn_hmmr"]	=	{
+				"buck/rmd_wpn_hmmr1.ogg",
+				"buck/rmd_wpn_hmmr2.ogg",
+				"buck/rmd_wpn_hmmr3.ogg",
+				},
+		["foeordr_fallback"]	=	{
+				"buck/foeordr_fallback1.ogg",
+				"buck/foeordr_fallback2.ogg",
+				"buck/foeordr_fallback3.ogg",
+				"buck/foeordr_fallback4.ogg",
+				},
+		["tchallybdy"]	=	{
+				"buck/tchallybdy10.ogg",
+				"buck/tchallybdy3.ogg",
+				"buck/tchallybdy4.ogg",
+				"buck/tchallybdy5.ogg",
+				"buck/tchallybdy8.ogg",
+				"buck/tchallybdy9.ogg",
+				},
+		["foeordr_advance"]	=	{
+				"buck/foeordr_advance1.ogg",
+				"buck/foeordr_advance2.ogg",
+				"buck/foeordr_advance3.ogg",
+				"buck/foeordr_advance4.ogg",
+				},
+		["foundfoe_prst"]	=	{
+				"buck/foundfoe_prst1.ogg",
+				"buck/foundfoe_prst10.ogg",
+				"buck/foundfoe_prst11.ogg",
+				"buck/foundfoe_prst12.ogg",
+				"buck/foundfoe_prst2.ogg",
+				"buck/foundfoe_prst3.ogg",
+				"buck/foundfoe_prst4.ogg",
+				"buck/foundfoe_prst5.ogg",
+				"buck/foundfoe_prst6.ogg",
+				"buck/foundfoe_prst7.ogg",
+				"buck/foundfoe_prst8.ogg",
+				"buck/foundfoe_prst9.ogg",
+				},
+		["brsr"]	=	{
+				"buck/brsrk.ogg",
+				},
+		["pstcmbt_br"]	=	{
+				"buck/pstcmbt_brt.ogg",
+				},
+		["melee"]	=	{
+				"buck/melee_100.ogg",
+				"buck/melee_101.ogg",
+				"buck/melee_102.ogg",
+				"buck/melee_103.ogg",
+				"buck/melee_104.ogg",
+				"buck/melee_105.ogg",
+				"buck/melee_106.ogg",
+				"buck/melee_107.ogg",
+				"buck/melee_108.ogg",
+				"buck/melee_109.ogg",
+				"buck/melee_111.ogg",
+				"buck/melee_112.ogg",
+				},
+		["look_plr_fllw"]	=	{
+				"buck/look_plr_fllw1.ogg",
+				"buck/look_plr_fllw2.ogg",
+				},
+		["ordr_keepwatch"]	=	{
+				"buck/ordr_keepwatch1.ogg",
+				"buck/ordr_keepwatch2.ogg",
+				"buck/ordr_keepwatch3.ogg",
+				"buck/ordr_keepwatch4.ogg",
+				"buck/ordr_keepwatch6.ogg",
+				},
+		["warn_chr_hntr"]	=	{
+				"buck/warn_chr_hntr1.ogg",
+				"buck/warn_chr_hntr2.ogg",
+				},
+		["pain_mjr"]	=	{
+				"buck/pain_mjr1.ogg",
+				"buck/pain_mjr2.ogg",
+				"buck/pain_mjr3.ogg",
+				"buck/pain_mjr4.ogg",
+				},
+		["kamikaze"]	=	{
+				"buck/kamikaze12.ogg",
+				"buck/kamikaze13.ogg",
+				},
+		["warn_wpn_hmmr"]	=	{
+				"buck/warn_wpn_hmmr1.ogg",
+				"buck/warn_wpn_hmmr2.ogg",
+				},
+		["ordr_prst"]	=	{
+				"buck/ordr_prst1.ogg",
+				"buck/ordr_prst2.ogg",
+				"buck/ordr_prst3.ogg",
+				"buck/ordr_prst4.ogg",
+				},
+		["rmd_vcl_chpr"]	=	{
+				"buck/rmd_vcl_chpr1.ogg",
+				"buck/rmd_vcl_chpr2.ogg",
+				},
+		["dwn_vcl_wrth"]	=	{
+				"buck/dwn_vcl_wrth1.ogg",
+				"buck/dwn_vcl_wrth2.ogg",
+				},
+		["chr_kllfoe_blt"]	=	{
+				"buck/chr_kllfoe_blt1.ogg",
+				"buck/chr_kllfoe_blt2.ogg",
+				},
+		["scld"]	=	{
+				"buck/scld1.ogg",
+				"buck/scld2.ogg",
+				"buck/scld3.ogg",
+				"buck/scld4.ogg",
+				"buck/scld5.ogg",
+				"buck/scld6.ogg",
+				},
+		["shld_min_state_lp"]	=	{
+				"buck/shld_min_state_lp1.ogg",
+				"buck/shld_min_state_lp2.ogg",
+				"buck/shld_min_state_lp3.ogg",
+				"buck/shld_min_state_lp4.ogg",
+				"buck/shld_min_state_lp5.ogg",
+				},
+		["ordr_keepwatch_tim"]	=	{
+				"buck/ordr_keepwatch_tim1.ogg",
+				"buck/ordr_keepwatch_tim2.ogg",
+				"buck/ordr_keepwatch_tim3.ogg",
+				},
+		["ordr_grenade"]	=	{
+				"buck/ordr_grenade1.ogg",
+				"buck/ordr_grenade3.ogg",
+				"buck/ordr_grenade5.ogg",
+				},
+		["newordr_charge"]	=	{
+				"buck/newordr_charge1.ogg",
+				"buck/newordr_charge3.ogg",
+				"buck/newordr_charge4.ogg",
+				"buck/newordr_charge5.ogg",
+				},
+		["warn"]	=	{
+				"buck/warn1.ogg",
+				"buck/warn2.ogg",
+				"buck/warn3.ogg",
+				"buck/warn4.ogg",
+				"buck/warn5.ogg",
+				"buck/warn6.ogg",
+				"buck/warn7.ogg",
+				},
+		["dive"]	=	{
+				"buck/dive1.ogg",
+				"buck/dive2.ogg",
+				"buck/dive3.ogg",
+				},
+		["tnt"]	=	{
+				"buck/tnt_100.ogg",
+				"buck/tnt_102.ogg",
+				"buck/tnt_103.ogg",
+				"buck/tnt_104.ogg",
+				"buck/tnt_105.ogg",
+				"buck/tnt_106.ogg",
+				"buck/tnt_107.ogg",
+				"buck/tnt_108.ogg",
+				"buck/tnt_109.ogg",
+				"buck/tnt_110.ogg",
+				"buck/tnt_111.ogg",
+				"buck/tnt_112.ogg",
+				"buck/tnt_113.ogg",
+				"buck/tnt_114.ogg",
+				"buck/tnt_115.ogg",
+				"buck/tnt_116.ogg",
+				"buck/tnt_117.ogg",
+				},
+		["shld_min_dmg"]	=	{
+				"buck/shld_min_dmg_100.ogg",
+				"buck/shld_min_dmg_101.ogg",
+				"buck/shld_min_dmg_102.ogg",
+				"buck/shld_min_dmg_103.ogg",
+				"buck/shld_min_dmg_104.ogg",
+				"buck/shld_min_dmg_105.ogg",
+				"buck/shld_min_dmg_106.ogg",
+				"buck/shld_min_dmg_107.ogg",
+				"buck/shld_min_dmg_108.ogg",
+				"buck/shld_min_dmg_109.ogg",
+				},
+		["lmnt"]	=	{
+				"buck/lmnt1.ogg",
+				"buck/lmnt2.ogg",
+				"buck/lmnt3.ogg",
+				"buck/lmnt4.ogg",
+				},
+		["grt_intovcl_imdvr"]	=	{
+				"buck/grt_intovcl_imdvr1.ogg",
+				"buck/grt_intovcl_imdvr2.ogg",
+				},
+		["dwn_vcl_ghst"]	=	{
+				"buck/dwn_vcl_ghst1.ogg",
+				"buck/dwn_vcl_ghst2.ogg",
+				},
+		["look_plr_pstcmbt_ez"]	=	{
+				"buck/look_plr_pstcmbt_ez1.ogg",
+				"buck/look_plr_pstcmbt_ez3.ogg",
+				},
+		["newordr_fallback"]	=	{
+				"buck/newordr_fallback1.ogg",
+				"buck/newordr_fallback2.ogg",
+				"buck/newordr_fallback3.ogg",
+				"buck/newordr_fallback4.ogg",
+				"buck/newordr_fallback5.ogg",
+				},
+		["tnt_re"]	=	{
+				"buck/tnt_re1.ogg",
+				"buck/tnt_re2.ogg",
+				"buck/tnt_re3.ogg",
+				"buck/tnt_re4.ogg",
+				},
+		["hdfoe"]	=	{
+				"buck/hdfoe10.ogg",
+				"buck/hdfoe2.ogg",
+				"buck/hdfoe3.ogg",
+				"buck/hdfoe4.ogg",
+				"buck/hdfoe5.ogg",
+				"buck/hdfoe6.ogg",
+				"buck/hdfoe7.ogg",
+				"buck/hdfoe8.ogg",
+				"buck/hdfoe9.ogg",
+				},
+		["tnt_mjrfoe"]	=	{
+				"buck/tnt_mjrfoe1.ogg",
+				"buck/tnt_mjrfoe2.ogg",
+				},
+		["strk_grnd"]	=	{
+				"buck/strk_grnd1.ogg",
+				"buck/strk_grnd2.ogg",
+				"buck/strk_grnd3.ogg",
+				"buck/strk_grnd4.ogg",
+				"buck/strk_grnd5.ogg",
+				"buck/strk_grnd6.ogg",
+				"buck/strk_grnd7.ogg",
+				"buck/strk_grnd9.ogg",
+				},
+		["rmd_vcl_phntm"]	=	{
+				"buck/rmd_vcl_phntm1.ogg",
+				"buck/rmd_vcl_phntm2.ogg",
+				"buck/rmd_vcl_phntm3.ogg",
+				},
+		["buck_look_romeo_re"]	=	{
+				"buck/buck_look_romeo_re_100.ogg",
+				"buck/buck_look_romeo_re_101.ogg",
+				"buck/buck_look_romeo_re_102.ogg",
+				"buck/buck_look_romeo_re_103.ogg",
+				},
+		["invsgt"]	=	{
+				"buck/invsgt1.ogg",
+				"buck/invsgt10.ogg",
+				"buck/invsgt2.ogg",
+				"buck/invsgt3.ogg",
+				"buck/invsgt4.ogg",
+				"buck/invsgt5.ogg",
+				"buck/invsgt7.ogg",
+				"buck/invsgt8.ogg",
+				"buck/invsgt9.ogg",
+				},
+		["tnt"]	=	{
+				"buck/tnt1.ogg",
+				"buck/tnt10.ogg",
+				"buck/tnt11.ogg",
+				"buck/tnt12.ogg",
+				"buck/tnt13.ogg",
+				"buck/tnt2.ogg",
+				"buck/tnt3.ogg",
+				"buck/tnt4.ogg",
+				"buck/tnt5.ogg",
+				"buck/tnt6.ogg",
+				"buck/tnt7.ogg",
+				"buck/tnt8.ogg",
+				"buck/tnt9.ogg",
+				},
+		["thrwn"]	=	{
+				"buck/thrwn1.ogg",
+				"buck/thrwn2.ogg",
+				"buck/thrwn3.ogg",
+				"buck/thrwn4.ogg",
+				},
+		["thrtn_mjrfoe"]	=	{
+				"buck/thrtn_mjrfoe1.ogg",
+				"buck/thrtn_mjrfoe2.ogg",
+				"buck/thrtn_mjrfoe3.ogg",
+				},
+		["thrtn_foe_re"]	=	{
+				"buck/thrtn_foe_re1.ogg",
+				"buck/thrtn_foe_re2.ogg",
+				"buck/thrtn_foe_re3.ogg",
+				"buck/thrtn_foe_re4.ogg",
+				"buck/thrtn_foe_re5.ogg",
+				"buck/thrtn_foe_re6.ogg",
+				},
+		["thnk_plr_btrwpn"]	=	{
+				"buck/thnk_plr_btrwpn1.ogg",
+				"buck/thnk_plr_btrwpn10.ogg",
+				"buck/thnk_plr_btrwpn4.ogg",
+				"buck/thnk_plr_btrwpn5.ogg",
+				"buck/thnk_plr_btrwpn6.ogg",
+				"buck/thnk_plr_btrwpn7.ogg",
+				"buck/thnk_plr_btrwpn8.ogg",
+				"buck/thnk_plr_btrwpn9.ogg",
+				},
+		["dth"]	=	{
+				"buck/dth1.ogg",
+				"buck/dth2.ogg",
+				"buck/dth4.ogg",
+				"buck/dth5.ogg",
+				"buck/dth6.ogg",
+				"buck/dth7.ogg",
+				"buck/dth8.ogg",
+				"buck/dth9.ogg",
+				},
+		["lmnt_deadplr_mc"]	=	{
+				"buck/lmnt_deadplr_mc_100.ogg",
+				"buck/lmnt_deadplr_mc_101.ogg",
+				"buck/lmnt_deadplr_mc_102.ogg",
+				"buck/lmnt_deadplr_mc_103.ogg",
+				"buck/lmnt_deadplr_mc_104.ogg",
+				"buck/lmnt_deadplr_mc_106.ogg",
+				"buck/lmnt_deadplr_mc_107.ogg",
+				"buck/lmnt_deadplr_mc_108.ogg",
+				"buck/lmnt_deadplr_mc_109.ogg",
+				"buck/lmnt_deadplr_mc_110.ogg",
+				"buck/lmnt_deadplr_mc_111.ogg",
+				"buck/lmnt_deadplr_mc_112.ogg",
+				"buck/lmnt_deadplr_mc_113.ogg",
+				"buck/lmnt_deadplr_mc_114.ogg",
+				"buck/lmnt_deadplr_mc_115.ogg",
+				},
+		["hail_tim"]	=	{
+				"buck/hail_tim1.ogg",
+				"buck/hail_tim2.ogg",
+				},
+		["warn_stlth_again"]	=	{
+				"buck/warn_stlth_again1.ogg",
+				"buck/warn_stlth_again2.ogg",
+				"buck/warn_stlth_again3.ogg",
+				},
+		["look"]	=	{
+				"buck/look1.ogg",
+				"buck/look10.ogg",
+				"buck/look11.ogg",
+				"buck/look12.ogg",
+				"buck/look13.ogg",
+				"buck/look14.ogg",
+				"buck/look2.ogg",
+				"buck/look3.ogg",
+				"buck/look4.ogg",
+				"buck/look5.ogg",
+				"buck/look6.ogg",
+				"buck/look7.ogg",
+				"buck/look8.ogg",
+				"buck/look9.ogg",
+				},
+		["neworder_flanking"]	=	{
+				"buck/neworder_flanking1.ogg",
+				"buck/neworder_flanking2.ogg",
+				"buck/neworder_flanking3.ogg",
+				"buck/neworder_flanking4.ogg",
+				"buck/neworder_flanking5.ogg",
+				},
+		["pstcmbt_tim"]	=	{
+				"buck/pstcmbt_tim1.ogg",
+				"buck/pstcmbt_tim2.ogg",
+				},
+		["chr_kllfoe"]	=	{
+				"buck/chr_kllfoe1.ogg",
+				"buck/chr_kllfoe2.ogg",
+				"buck/chr_kllfoe3.ogg",
+				"buck/chr_kllfoe4.ogg",
+				"buck/chr_kllfoe5.ogg",
+				},
+		["look_plr_pstcmbt"]	=	{
+				"buck/look_plr_pstcmbt1.ogg",
+				"buck/look_plr_pstcmbt2.ogg",
+				},
+		["newordr_leaveplr"]	=	{
+				"buck/newordr_leaveplr_100.ogg",
+				"buck/newordr_leaveplr_101.ogg",
+				"buck/newordr_leaveplr_102.ogg",
+				"buck/newordr_leaveplr_103.ogg",
+				},
+		["lookcmbt"]	=	{
+				"buck/lookcmbt10.ogg",
+				"buck/lookcmbt11.ogg",
+				"buck/lookcmbt12.ogg",
+				"buck/lookcmbt13.ogg",
+				"buck/lookcmbt14.ogg",
+				"buck/lookcmbt15.ogg",
+				"buck/lookcmbt6.ogg",
+				"buck/lookcmbt7.ogg",
+				"buck/lookcmbt8.ogg",
+				"buck/lookcmbt9.ogg",
+				},
+		["strk_vcl_gnr"]	=	{
+				"buck/strk_vcl_gnr1.ogg",
+				"buck/strk_vcl_gnr10.ogg",
+				"buck/strk_vcl_gnr2.ogg",
+				"buck/strk_vcl_gnr3.ogg",
+				"buck/strk_vcl_gnr4.ogg",
+				"buck/strk_vcl_gnr5.ogg",
+				"buck/strk_vcl_gnr7.ogg",
+				},
+		["chr_vcljmp"]	=	{
+				"buck/chr_vcljmp1.ogg",
+				"buck/chr_vcljmp2.ogg",
+				"buck/chr_vcljmp3.ogg",
+				"buck/chr_vcljmp4.ogg",
+				"buck/chr_vcljmp5.ogg",
+				"buck/chr_vcljmp6.ogg",
+				},
+		["dth_fall"]	=	{
+				"buck/dth_fall1.ogg",
+				"buck/dth_fall2.ogg",
+				"buck/dth_fall3.ogg",
+				"buck/dth_fall4.ogg",
+				"buck/dth_fall5.ogg",
+				"buck/dth_fall8.ogg",
+				},
+		["stayback_agg"]	=	{
+				"buck/stayback_agg1.ogg",
+				"buck/stayback_agg2.ogg",
+				},
+		["prs_plr_kll_vclbmp"]	=	{
+				"buck/prs_plr_kll_vclbmp1.ogg",
+				"buck/prs_plr_kll_vclbmp2.ogg",
+				"buck/prs_plr_kll_vclbmp3.ogg",
+				"buck/prs_plr_kll_vclbmp4.ogg",
+				},
+		["ordr_pinned"]	=	{
+				"buck/ordr_pinned1.ogg",
+				"buck/ordr_pinned2.ogg",
+				"buck/ordr_pinned3.ogg",
+				"buck/ordr_pinned4.ogg",
+				},
+		["entervcl"]	=	{
+				"buck/entervcl1.ogg",
+				"buck/entervcl2.ogg",
+				"buck/entervcl3.ogg",
+				"buck/entervcl4.ogg",
+				"buck/entervcl5.ogg",
+				"buck/entervcl6.ogg",
+				},
+		["strk_grnd"]	=	{
+				"buck/strk_grnd_100.ogg",
+				"buck/strk_grnd_101.ogg",
+				"buck/strk_grnd_102.ogg",
+				"buck/strk_grnd_103.ogg",
+				"buck/strk_grnd_104.ogg",
+				"buck/strk_grnd_106.ogg",
+				"buck/strk_grnd_107.ogg",
+				},
+		["approve"]	=	{
+				"buck/approve1.ogg",
+				"buck/approve2.ogg",
+				"buck/approve3.ogg",
+				"buck/approve4.ogg",
+				},
+		["prs_plr_kll_wmelee"]	=	{
+				"buck/prs_plr_kll_wmelee1.ogg",
+				"buck/prs_plr_kll_wmelee2.ogg",
+				"buck/prs_plr_kll_wmelee3.ogg",
+				"buck/prs_plr_kll_wmelee4.ogg",
+				"buck/prs_plr_kll_wmelee5.ogg",
+				},
+		["warn_vcl_ghst"]	=	{
+				"buck/warn_vcl_ghst1.ogg",
+				"buck/warn_vcl_ghst2.ogg",
+				},
+		["panic"]	=	{
+				"buck/panic1.ogg",
+				"buck/panic2.ogg",
+				},
+		["chr_kllfoe_stkplsm"]	=	{
+				"buck/chr_kllfoe_stkplsm1.ogg",
+				"buck/chr_kllfoe_stkplsm2.ogg",
+				},
+		["strk_snpr"]	=	{
+				"buck/strk_snpr1.ogg",
+				"buck/strk_snpr2.ogg",
+				},
+		["meleeleap"]	=	{
+				"buck/meleeleap1.ogg",
+				"buck/meleeleap2.ogg",
+				"buck/meleeleap3.ogg",
+				},
+		["hail_agg"]	=	{
+				"buck/hail_agg1.ogg",
+				"buck/hail_agg3.ogg",
+				},
+		["lookcmbt_agg"]	=	{
+				"buck/lookcmbt_agg1.ogg",
+				"buck/lookcmbt_agg2.ogg",
+				},
+		["srprs"]	=	{
+				"buck/srprs1.ogg",
+				"buck/srprs2.ogg",
+				"buck/srprs3.ogg",
+				"buck/srprs4.ogg",
+				"buck/srprs5.ogg",
+				"buck/srprs6.ogg",
+				"buck/srprs7.ogg",
+				"buck/srprs8.ogg",
+				},
+		["srch_pinned"]	=	{
+				"buck/srch_pinned1.ogg",
+				"buck/srch_pinned10.ogg",
+				"buck/srch_pinned11.ogg",
+				"buck/srch_pinned3.ogg",
+				"buck/srch_pinned4.ogg",
+				"buck/srch_pinned5.ogg",
+				"buck/srch_pinned6.ogg",
+				"buck/srch_pinned7.ogg",
+				"buck/srch_pinned9.ogg",
+				},
+		["shotfoebdy"]	=	{
+				"buck/shotfoebdy10.ogg",
+				"buck/shotfoebdy11.ogg",
+				"buck/shotfoebdy12.ogg",
+				"buck/shotfoebdy13.ogg",
+				"buck/shotfoebdy14.ogg",
+				},
+		["rookie_look_buck"]	=	{
+				"buck/rookie_look_buck_100.ogg",
+				"buck/rookie_look_buck_102.ogg",
+				"buck/rookie_look_buck_103.ogg",
+				"buck/rookie_look_buck_104.ogg",
+				"buck/rookie_look_buck_105.ogg",
+				"buck/rookie_look_buck_106.ogg",
+				"buck/rookie_look_buck_107.ogg",
+				"buck/rookie_look_buck_108.ogg",
+				"buck/rookie_look_buck_109.ogg",
+				},
+		["rmd_vcl_wrth"]	=	{
+				"buck/rmd_vcl_wrth3.ogg",
+				"buck/rmd_vcl_wrth4.ogg",
+				},
+		["shld_recharging"]	=	{
+				"buck/shld_recharging_100.ogg",
+				"buck/shld_recharging_101.ogg",
+				"buck/shld_recharging_102.ogg",
+				"buck/shld_recharging_103.ogg",
+				},
+		["stayback_tim"]	=	{
+				"buck/stayback_tim1.ogg",
+				"buck/stayback_tim2.ogg",
+				"buck/stayback_tim3.ogg",
+				"buck/stayback_tim4.ogg",
+				},
+		["reload"]	=	{
+				"buck/reload_100.ogg",
+				"buck/reload_101.ogg",
+				"buck/reload_102.ogg",
+				"buck/reload_103.ogg",
+				"buck/reload_104.ogg",
+				"buck/reload_105.ogg",
+				"buck/reload_106.ogg",
+				"buck/reload_108.ogg",
+				"buck/reload_109.ogg",
+				},
+		["shld_crit_state_lp"]	=	{
+				"buck/shld_crit_state_lp1.ogg",
+				"buck/shld_crit_state_lp2.ogg",
+				"buck/shld_crit_state_lp4.ogg",
+				"buck/shld_crit_state_lp5.ogg",
+				"buck/shld_crit_state_lp6.ogg",
+				"buck/shld_crit_state_lp7.ogg",
+				"buck/shld_crit_state_lp8.ogg",
+				},
+		["dwn_scrb"]	=	{
+				"buck/dwn_scrb1.ogg",
+				"buck/dwn_scrb2.ogg",
+				},
+		["seefoe_upthere"]	=	{
+				"buck/seefoe_upthere1.ogg",
+				"buck/seefoe_upthere2.ogg",
+				},
+		["ordr_chkfoebdy"]	=	{
+				"buck/ordr_chkfoebdy1.ogg",
+				"buck/ordr_chkfoebdy2.ogg",
+				"buck/ordr_chkfoebdy3.ogg",
+				"buck/ordr_chkfoebdy6.ogg",
+				"buck/ordr_chkfoebdy7.ogg",
+				},
+		["jump"]	=	{
+				"buck/jump_100.ogg",
+				"buck/jump_101.ogg",
+				"buck/jump_102.ogg",
+				"buck/jump_103.ogg",
+				"buck/jump_104.ogg",
+				"buck/jump_106.ogg",
+				"buck/jump_107.ogg",
+				"buck/jump_108.ogg",
+				"buck/jump_109.ogg",
+				"buck/jump_110.ogg",
+				},
+		["seefoe_agg"]	=	{
+				"buck/seefoe_agg1.ogg",
+				"buck/seefoe_agg2.ogg",
+				},
+		["ask_chkallybdyf"]	=	{
+				"buck/ask_chkallybdyf1.ogg",
+				"buck/ask_chkallybdyf2.ogg",
+				},
+		["grt_intovcl"]	=	{
+				"buck/grt_intovcl1.ogg",
+				"buck/grt_intovcl2.ogg",
+				"buck/grt_intovcl3.ogg",
+				"buck/grt_intovcl4.ogg",
+				"buck/grt_intovcl5.ogg",
+				"buck/grt_intovcl6.ogg",
+				"buck/grt_intovcl7.ogg",
+				},
+		["look_plr_pstcmbt_hrd"]	=	{
+				"buck/look_plr_pstcmbt_hrd1.ogg",
+				"buck/look_plr_pstcmbt_hrd3.ogg",
+				},
+		["seefoe_downthere"]	=	{
+				"buck/seefoe_downthere1.ogg",
+				"buck/seefoe_downthere2.ogg",
+				},
+		["seefoe_tim"]	=	{
+				"buck/seefoe_tim3.ogg",
+				"buck/seefoe_tim4.ogg",
+				},
+		["seefoe"]	=	{
+				"buck/seefoe1.ogg",
+				"buck/seefoe10.ogg",
+				"buck/seefoe11.ogg",
+				"buck/seefoe12.ogg",
+				"buck/seefoe13.ogg",
+				"buck/seefoe14.ogg",
+				"buck/seefoe2.ogg",
+				"buck/seefoe3.ogg",
+				"buck/seefoe4.ogg",
+				"buck/seefoe5.ogg",
+				"buck/seefoe6.ogg",
+				"buck/seefoe7.ogg",
+				"buck/seefoe8.ogg",
+				},
+		["scrn_plr_wrswpn"]	=	{
+				"buck/scrn_plr_wrswpn1.ogg",
+				"buck/scrn_plr_wrswpn10.ogg",
+				"buck/scrn_plr_wrswpn2.ogg",
+				"buck/scrn_plr_wrswpn3.ogg",
+				"buck/scrn_plr_wrswpn4.ogg",
+				"buck/scrn_plr_wrswpn5.ogg",
+				"buck/scrn_plr_wrswpn6.ogg",
+				"buck/scrn_plr_wrswpn7.ogg",
+				"buck/scrn_plr_wrswpn9.ogg",
+				},
+		["ordr_grenade_all"]	=	{
+				"buck/ordr_grenade_all1.ogg",
+				"buck/ordr_grenade_all2.ogg",
+				"buck/ordr_grenade_all3.ogg",
+				"buck/ordr_grenade_all5.ogg",
+				"buck/ordr_grenade_all6.ogg",
+				},
+		["rmd_vcl_bnsh"]	=	{
+				"buck/rmd_vcl_bnsh3.ogg",
+				"buck/rmd_vcl_bnsh4.ogg",
+				"buck/rmd_vcl_bnsh5.ogg",
+				},
+		["scld_plr_wldvcl"]	=	{
+				"buck/scld_plr_wldvcl1.ogg",
+				"buck/scld_plr_wldvcl2.ogg",
+				"buck/scld_plr_wldvcl3.ogg",
+				"buck/scld_plr_wldvcl4.ogg",
+				},
+		["whn"]	=	{
+				"buck/whn1.ogg",
+				"buck/whn2.ogg",
+				"buck/whn3.ogg",
+				"buck/whn4.ogg",
+				"buck/whn5.ogg",
+				"buck/whn6.ogg",
+				},
+		["injured"]	=	{
+				"buck/injured1.ogg",
+				"buck/injured11.ogg",
+				"buck/injured13.ogg",
+				"buck/injured16.ogg",
+				"buck/injured2.ogg",
+				"buck/injured3.ogg",
+				"buck/injured4.ogg",
+				"buck/injured5.ogg",
+				"buck/injured6.ogg",
+				"buck/injured7.ogg",
+				"buck/injured9.ogg",
+				},
+		["scld_plr_vclcrash"]	=	{
+				"buck/scld_plr_vclcrash1.ogg",
+				"buck/scld_plr_vclcrash2.ogg",
+				"buck/scld_plr_vclcrash3.ogg",
+				"buck/scld_plr_vclcrash5.ogg",
+				"buck/scld_plr_vclcrash6.ogg",
+				"buck/scld_plr_vclcrash7.ogg",
+				"buck/scld_plr_vclcrash8.ogg",
+				},
+		["scld_plr_kllallyl"]	=	{
+				"buck/scld_plr_kllallyl1.ogg",
+				"buck/scld_plr_kllallyl2.ogg",
+				"buck/scld_plr_kllallyl4.ogg",
+				"buck/scld_plr_kllallyl5.ogg",
+				"buck/scld_plr_kllallyl6.ogg",
+				"buck/scld_plr_kllallyl7.ogg",
+				"buck/scld_plr_kllallyl8.ogg",
+				"buck/scld_plr_kllallyl9.ogg",
+				},
+		["scld_plr_hrt_blt"]	=	{
+				"buck/scld_plr_hrt_blt1.ogg",
+				"buck/scld_plr_hrt_blt2.ogg",
+				"buck/scld_plr_hrt_blt3.ogg",
+				"buck/scld_plr_hrt_blt4.ogg",
+				"buck/scld_plr_hrt_blt5.ogg",
+				"buck/scld_plr_hrt_blt6.ogg",
+				"buck/scld_plr_hrt_blt7.ogg",
+				"buck/scld_plr_hrt_blt8.ogg",
+				"buck/scld_plr_hrt_blt9.ogg",
+				},
+		["scld_plr_blocking"]	=	{
+				"buck/scld_plr_blocking1.ogg",
+				"buck/scld_plr_blocking2.ogg",
+				"buck/scld_plr_blocking3.ogg",
+				"buck/scld_plr_blocking4.ogg",
+				"buck/scld_plr_blocking5.ogg",
+				"buck/scld_plr_blocking6.ogg",
+				"buck/scld_plr_blocking7.ogg",
+				},
+		["dwn_wpn_snpr"]	=	{
+				"buck/dwn_wpn_snpr1.ogg",
+				"buck/dwn_wpn_snpr2.ogg",
+				},
+		["rmd_trrt"]	=	{
+				"buck/rmd_trrt1.ogg",
+				"buck/rmd_trrt2.ogg",
+				},
+		["rmd_stlth"]	=	{
+				"buck/rmd_stlth1.ogg",
+				"buck/rmd_stlth2.ogg",
+				},
+		["invt_vcl"]	=	{
+				"buck/invt_vcl1.ogg",
+				"buck/invt_vcl2.ogg",
+				"buck/invt_vcl3.ogg",
+				"buck/invt_vcl4.ogg",
+				"buck/invt_vcl5.ogg",
+				"buck/invt_vcl6.ogg",
+				},
+		["reload_low_ammo"]	=	{
+				"buck/reload_low_ammo_100.ogg",
+				"buck/reload_low_ammo_101.ogg",
+				"buck/reload_low_ammo_102.ogg",
+				"buck/reload_low_ammo_103.ogg",
+				"buck/reload_low_ammo_104.ogg",
+				"buck/reload_low_ammo_105.ogg",
+				"buck/reload_low_ammo_106.ogg",
+				},
+		["regret"]	=	{
+				"buck/regret1.ogg",
+				"buck/regret2.ogg",
+				"buck/regret3.ogg",
+				"buck/regret4.ogg",
+				"buck/regret5.ogg",
+				},
+		["warn_vcl_chpr"]	=	{
+				"buck/warn_vcl_chpr1.ogg",
+				"buck/warn_vcl_chpr2.ogg",
+				},
+		["dth_drama"]	=	{
+				"buck/dth_drama1.ogg",
+				"buck/dth_drama2.ogg",
+				"buck/dth_drama3.ogg",
+				"buck/dth_drama4.ogg",
+				},
+		["foeordr_retreat"]	=	{
+				"buck/foeordr_retreat1.ogg",
+				"buck/foeordr_retreat2.ogg",
+				"buck/foeordr_retreat3.ogg",
+				"buck/foeordr_retreat4.ogg",
+				"buck/foeordr_retreat5.ogg",
+				},
+		["crs"]	=	{
+				"buck/crs1.ogg",
+				"buck/crs10.ogg",
+				"buck/crs11.ogg",
+				"buck/crs12.ogg",
+				"buck/crs2.ogg",
+				"buck/crs3.ogg",
+				"buck/crs4.ogg",
+				"buck/crs6.ogg",
+				"buck/crs7.ogg",
+				"buck/crs9.ogg",
+				},
+		["newordr_retreat"]	=	{
+				"buck/newordr_retreat1.ogg",
+				"buck/newordr_retreat2.ogg",
+				"buck/newordr_retreat3.ogg",
+				"buck/newordr_retreat4.ogg",
+				"buck/newordr_retreat5.ogg",
+				"buck/newordr_retreat6.ogg",
+				},
+		["melee"]	=	{
+				"buck/melee1.ogg",
+				"buck/melee2.ogg",
+				"buck/melee3.ogg",
+				},
+		["scld_plr_vclcrazy"]	=	{
+				"buck/scld_plr_vclcrazy1.ogg",
+				"buck/scld_plr_vclcrazy2.ogg",
+				},
+		["buck_look_mickey_re"]	=	{
+				"buck/buck_look_mickey_re_100.ogg",
+				"buck/buck_look_mickey_re_101.ogg",
+				"buck/buck_look_mickey_re_102.ogg",
+				"buck/buck_look_mickey_re_103.ogg",
+				"buck/buck_look_mickey_re_104.ogg",
+				"buck/buck_look_mickey_re_105.ogg",
+				},
+		["ordr_openfire"]	=	{
+				"buck/ordr_openfire1.ogg",
+				"buck/ordr_openfire2.ogg",
+				"buck/ordr_openfire3.ogg",
+				"buck/ordr_openfire4.ogg",
+				"buck/ordr_openfire5.ogg",
+				},
+		["captured"]	=	{
+				"buck/captured1.ogg",
+				"buck/captured2.ogg",
+				"buck/captured3.ogg",
+				"buck/captured4.ogg",
+				"buck/captured5.ogg",
+				"buck/captured6.ogg",
+				"buck/captured7.ogg",
+				},
+		["pstcmbt_ez"]	=	{
+				"buck/pstcmbt_ez1.ogg",
+				"buck/pstcmbt_ez2.ogg",
+				"buck/pstcmbt_ez3.ogg",
+				},
+		["prs_plr_kll_lots"]	=	{
+				"buck/prs_plr_kll_lots1.ogg",
+				"buck/prs_plr_kll_lots2.ogg",
+				},
+		["pstcmbt_agg"]	=	{
+				"buck/pstcmbt_agg1.ogg",
+				"buck/pstcmbt_agg2.ogg",
+				"buck/pstcmbt_agg3.ogg",
+				},
+		["entervcl_gnr"]	=	{
+				"buck/entervcl_gnr1.ogg",
+				"buck/entervcl_gnr2.ogg",
+				},
+		["ok_plr_trdwpn"]	=	{
+				"buck/ok_plr_trdwpn1.ogg",
+				"buck/ok_plr_trdwpn10.ogg",
+				"buck/ok_plr_trdwpn2.ogg",
+				"buck/ok_plr_trdwpn3.ogg",
+				"buck/ok_plr_trdwpn4.ogg",
+				"buck/ok_plr_trdwpn5.ogg",
+				"buck/ok_plr_trdwpn6.ogg",
+				"buck/ok_plr_trdwpn7.ogg",
+				"buck/ok_plr_trdwpn8.ogg",
+				"buck/ok_plr_trdwpn9.ogg",
+				},
+		["pstcmbt"]	=	{
+				"buck/pstcmbt1.ogg",
+				"buck/pstcmbt10.ogg",
+				"buck/pstcmbt11.ogg",
+				"buck/pstcmbt2.ogg",
+				"buck/pstcmbt5.ogg",
+				"buck/pstcmbt6.ogg",
+				"buck/pstcmbt7.ogg",
+				"buck/pstcmbt8.ogg",
+				"buck/pstcmbt9.ogg",
+				},
+		["ok"]	=	{
+				"buck/ok1.ogg",
+				"buck/ok2.ogg",
+				"buck/ok3.ogg",
+				"buck/ok4.ogg",
+				"buck/ok5.ogg",
+				"buck/ok6.ogg",
+				"buck/ok7.ogg",
+				"buck/ok8.ogg",
+				},
+		["lmnt_deadally"]	=	{
+				"buck/lmnt_deadally1.ogg",
+				"buck/lmnt_deadally2.ogg",
+				"buck/lmnt_deadally3.ogg",
+				},
+		["prst"]	=	{
+				"buck/prst2.ogg",
+				"buck/prst3.ogg",
+				"buck/prst4.ogg",
+				"buck/prst5.ogg",
+				"buck/prst6.ogg",
+				},
+		["prs_prl_sniping"]	=	{
+				"buck/prs_prl_sniping1.ogg",
+				"buck/prs_prl_sniping2.ogg",
+				"buck/prs_prl_sniping3.ogg",
+				},
+		["strk"]	=	{
+				"buck/strk_100.ogg",
+				"buck/strk_101.ogg",
+				"buck/strk_102.ogg",
+				"buck/strk_103.ogg",
+				"buck/strk_104.ogg",
+				"buck/strk_105.ogg",
+				"buck/strk_106.ogg",
+				"buck/strk_107.ogg",
+				"buck/strk_108.ogg",
+				"buck/strk_109.ogg",
+				},
+		["strk_grnd_uncvr"]	=	{
+				"buck/strk_grnd_uncvr1.ogg",
+				"buck/strk_grnd_uncvr2.ogg",
+				"buck/strk_grnd_uncvr3.ogg",
+				},
+		["grt"]	=	{
+				"buck/grt1.ogg",
+				"buck/grt2.ogg",
+				"buck/grt3.ogg",
+				"buck/grt4.ogg",
+				},
+		["dth_slnt"]	=	{
+				"buck/dth_slnt1.ogg",
+				"buck/dth_slnt10.ogg",
+				"buck/dth_slnt14.ogg",
+				"buck/dth_slnt2.ogg",
+				"buck/dth_slnt3.ogg",
+				"buck/dth_slnt4.ogg",
+				"buck/dth_slnt5.ogg",
+				"buck/dth_slnt6.ogg",
+				"buck/dth_slnt7.ogg",
+				"buck/dth_slnt8.ogg",
+				"buck/dth_slnt9.ogg",
+				},
+		["hail"]	=	{
+				"buck/hail1.ogg",
+				"buck/hail2.ogg",
+				"buck/hail3.ogg",
+				"buck/hail5.ogg",
+				},
+		["dth_mjr"]	=	{
+				"buck/dth_mjr1.ogg",
+				"buck/dth_mjr10.ogg",
+				"buck/dth_mjr2.ogg",
+				"buck/dth_mjr3.ogg",
+				"buck/dth_mjr4.ogg",
+				"buck/dth_mjr5.ogg",
+				"buck/dth_mjr6.ogg",
+				"buck/dth_mjr7.ogg",
+				"buck/dth_mjr9.ogg",
+				},
+		["forgive"]	=	{
+				"buck/forgive1.ogg",
+				"buck/forgive2.ogg",
+				"buck/forgive3.ogg",
+				"buck/forgive4.ogg",
+				"buck/forgive5.ogg",
+				"buck/forgive6.ogg",
+				"buck/forgive7.ogg",
+				},
+		["prs_plr_gdgrnd"]	=	{
+				"buck/prs_plr_gdgrnd1.ogg",
+				"buck/prs_plr_gdgrnd2.ogg",
+				},
+		["death_assasination"]	=	{
+				"buck/death_assasination_100.ogg",
+				"buck/death_assasination_101.ogg",
+				"buck/death_assasination_102.ogg",
+				"buck/death_assasination_103.ogg",
+				"buck/death_assasination_104.ogg",
+				"buck/death_assasination_105.ogg",
+				"buck/death_assasination_106.ogg",
+				"buck/death_assasination_107.ogg",
+				"buck/death_assasination_108.ogg",
+				"buck/death_assasination_109.ogg",
+				"buck/death_assasination_110.ogg",
+				},
+		["prs"]	=	{
+				"buck/prs1.ogg",
+				"buck/prs2.ogg",
+				"buck/prs3.ogg",
+				"buck/prs4.ogg",
+				},
+		["panic_onfire"]	=	{
+				"buck/panic_onfire1.ogg",
+				},
+		["entervcl_trrt"]	=	{
+				"buck/entervcl_trrt1.ogg",
+				"buck/entervcl_trrt2.ogg",
+				"buck/entervcl_trrt3.ogg",
+				"buck/entervcl_trrt4.ogg",
+				},
+		["shld_maj_state_lp"]	=	{
+				"buck/shld_maj_state_lp1.ogg",
+				"buck/shld_maj_state_lp3.ogg",
+				"buck/shld_maj_state_lp4.ogg",
+				"buck/shld_maj_state_lp5.ogg",
+				"buck/shld_maj_state_lp6.ogg",
+				"buck/shld_maj_state_lp7.ogg",
+				"buck/shld_maj_state_lp8.ogg",
+				},
+		["pain_mdm"]	=	{
+				"buck/pain_mdm2.ogg",
+				"buck/pain_mdm4.ogg",
+				"buck/pain_mdm5.ogg",
+				},
+		["pain_fall"]	=	{
+				"buck/pain_fall1.ogg",
+				"buck/pain_fall2.ogg",
+				"buck/pain_fall3.ogg",
+				"buck/pain_fall4.ogg",
+				"buck/pain_fall5.ogg",
+				},
+		["grt_plr_vcl_empty"]	=	{
+				"buck/grt_plr_vcl_empty1.ogg",
+				"buck/grt_plr_vcl_empty2.ogg",
+				},
+		["ordr_keepwatch_agg"]	=	{
+				"buck/ordr_keepwatch_agg1.ogg",
+				"buck/ordr_keepwatch_agg2.ogg",
+				},
+		["stayback"]	=	{
+				"buck/stayback1.ogg",
+				"buck/stayback10.ogg",
+				"buck/stayback11.ogg",
+				"buck/stayback12.ogg",
+				"buck/stayback2.ogg",
+				"buck/stayback3.ogg",
+				"buck/stayback4.ogg",
+				"buck/stayback5.ogg",
+				"buck/stayback6.ogg",
+				"buck/stayback7.ogg",
+				"buck/stayback8.ogg",
+				"buck/stayback9.ogg",
+				},
+		["fall"]	=	{
+				"buck/fall1.ogg",
+				"buck/fall2.ogg",
+				"buck/fall3.ogg",
+				"buck/fall4.ogg",
+				},
+		["dwn_vcl_bnsh"]	=	{
+				"buck/dwn_vcl_bnsh1.ogg",
+				"buck/dwn_vcl_bnsh2.ogg",
+				},
+		["grt_plr_vcl"]	=	{
+				"buck/grt_plr_vcl1.ogg",
+				"buck/grt_plr_vcl2.ogg",
+				},
+		["buck_look_dutch_re"]	=	{
+				"buck/buck_look_dutch_re_100.ogg",
+				"buck/buck_look_dutch_re_101.ogg",
+				"buck/buck_look_dutch_re_102.ogg",
+				"buck/buck_look_dutch_re_103.ogg",
+				},
+		["rmd_wpn_snpr"]	=	{
+				"buck/rmd_wpn_snpr1.ogg",
+				"buck/rmd_wpn_snpr2.ogg",
+				},
+		["dth_slw"]	=	{
+				"buck/dth_slw1.ogg",
+				"buck/dth_slw3.ogg",
+				"buck/dth_slw4.ogg",
+				},
+		["grt_intovcl_imgnr"]	=	{
+				"buck/grt_intovcl_imgnr1.ogg",
+				"buck/grt_intovcl_imgnr2.ogg",
+				},
+		["newordr_arrival"]	=	{
+				"buck/newordr_arrival1.ogg",
+				"buck/newordr_arrival2.ogg",
+				"buck/newordr_arrival3.ogg",
+				"buck/newordr_arrival4.ogg",
+				},
+		["warn_incmn_fldbm"]	=	{
+				"buck/warn_incmn_fldbm1.ogg",
+				"buck/warn_incmn_fldbm2.ogg",
+				"buck/warn_incmn_fldbm3.ogg",
+				},
+		["prs_plr_kll_mjr"]	=	{
+				"buck/prs_plr_kll_mjr1.ogg",
+				"buck/prs_plr_kll_mjr2.ogg",
+				},
+		["warn_trrt_dply"]	=	{
+				"buck/warn_trrt_dply1.ogg",
+				"buck/warn_trrt_dply2.ogg",
+				},
+		["newordr_moveon"]	=	{
+				"buck/newordr_moveon1.ogg",
+				"buck/newordr_moveon2.ogg",
+				"buck/newordr_moveon3.ogg",
+				"buck/newordr_moveon5.ogg",
+				},
+		["pstcmbt_hrd"]	=	{
+				"buck/pstcmbt_hrd1.ogg",
+				"buck/pstcmbt_hrd3.ogg",
+				"buck/pstcmbt_hrd4.ogg",
+				},
+		["prs_plr_kll_blt"]	=	{
+				"buck/prs_plr_kll_blt1.ogg",
+				"buck/prs_plr_kll_blt2.ogg",
+				"buck/prs_plr_kll_blt3.ogg",
+				"buck/prs_plr_kll_blt4.ogg",
+				"buck/prs_plr_kll_blt5.ogg",
+				"buck/prs_plr_kll_blt6.ogg",
+				},
+		["ready_rocket_launcher"]	=	{
+				"buck/ready_rocket_launcher_100.ogg",
+				"buck/ready_rocket_launcher_101.ogg",
+				"buck/ready_rocket_launcher_102.ogg",
+				"buck/ready_rocket_launcher_103.ogg",
+				"buck/ready_rocket_launcher_104.ogg",
+				"buck/ready_rocket_launcher_106.ogg",
+				},
+		["ordr_invsgt"]	=	{
+				"buck/ordr_invsgt1.ogg",
+				"buck/ordr_invsgt2.ogg",
+				"buck/ordr_invsgt3.ogg",
+				"buck/ordr_invsgt4.ogg",
+				},
+		["endcmbt"]	=	{
+				"buck/endcmbt1.ogg",
+				"buck/endcmbt2.ogg",
+				"buck/endcmbt3.ogg",
+				"buck/endcmbt4.ogg",
+				"buck/endcmbt5.ogg",
+				"buck/endcmbt7.ogg",
+				},
+		["bump"]	=	{
+				"buck/bump1.ogg",
+				"buck/bump10.ogg",
+				"buck/bump2.ogg",
+				"buck/bump3.ogg",
+				"buck/bump5.ogg",
+				"buck/bump6.ogg",
+				"buck/bump7.ogg",
+				"buck/bump8.ogg",
+				"buck/bump9.ogg",
+				},
+		["chr_kllfoe_vclbmp"]	=	{
+				"buck/chr_kllfoe_vclbmp1.ogg",
+				"buck/chr_kllfoe_vclbmp3.ogg",
+				"buck/chr_kllfoe_vclbmp4.ogg",
+				},
+		["newordr_entervcl"]	=	{
+				"buck/newordr_entervcl1.ogg",
+				"buck/newordr_entervcl2.ogg",
+				"buck/newordr_entervcl3.ogg",
+				"buck/newordr_entervcl4.ogg",
+				"buck/newordr_entervcl5.ogg",
+				"buck/newordr_entervcl6.ogg",
+				},
+		["hlth_crit_dmg"]	=	{
+				"buck/hlth_crit_dmg_100.ogg",
+				"buck/hlth_crit_dmg_101.ogg",
+				"buck/hlth_crit_dmg_102.ogg",
+				"buck/hlth_crit_dmg_103.ogg",
+				"buck/hlth_crit_dmg_104.ogg",
+				"buck/hlth_crit_dmg_105.ogg",
+				"buck/hlth_crit_dmg_106.ogg",
+				"buck/hlth_crit_dmg_107.ogg",
+				"buck/hlth_crit_dmg_108.ogg",
+				"buck/hlth_crit_dmg_109.ogg",
+				},
+		["dth_hdsht"]	=	{
+				"buck/dth_hdsht1.ogg",
+				"buck/dth_hdsht10.ogg",
+				"buck/dth_hdsht11.ogg",
+				"buck/dth_hdsht12.ogg",
+				"buck/dth_hdsht13.ogg",
+				"buck/dth_hdsht2.ogg",
+				"buck/dth_hdsht3.ogg",
+				"buck/dth_hdsht4.ogg",
+				"buck/dth_hdsht5.ogg",
+				"buck/dth_hdsht6.ogg",
+				"buck/dth_hdsht7.ogg",
+				"buck/dth_hdsht8.ogg",
+				"buck/dth_hdsht9.ogg",
+				},
+		["ready_spartan_laser"]	=	{
+				"buck/ready_spartan_laser_100.ogg",
+				"buck/ready_spartan_laser_101.ogg",
+				"buck/ready_spartan_laser_102.ogg",
+				"buck/ready_spartan_laser_103.ogg",
+				"buck/ready_spartan_laser_104.ogg",
+				"buck/ready_spartan_laser_105.ogg",
+				"buck/ready_spartan_laser_106.ogg",
+				},
+		["strk"]	=	{
+				"buck/strk1.ogg",
+				"buck/strk10.ogg",
+				"buck/strk11.ogg",
+				"buck/strk12.ogg",
+				"buck/strk13.ogg",
+				"buck/strk2.ogg",
+				"buck/strk3.ogg",
+				"buck/strk4.ogg",
+				"buck/strk5.ogg",
+				"buck/strk6.ogg",
+				"buck/strk7.ogg",
+				"buck/strk8.ogg",
+				},
+		["ask_chkallybdy"]	=	{
+				"buck/ask_chkallybdy1.ogg",
+				"buck/ask_chkallybdy2.ogg",
+				},
+		["newordr_leaveplr"]	=	{
+				"buck/newordr_leaveplr1.ogg",
+				"buck/newordr_leaveplr2.ogg",
+				"buck/newordr_leaveplr3.ogg",
+				"buck/newordr_leaveplr4.ogg",
+				},
+		["grt_plr_srprs"]	=	{
+				"buck/grt_plr_srprs1.ogg",
+				"buck/grt_plr_srprs2.ogg",
+				"buck/grt_plr_srprs3.ogg",
+				},
+		["ok_plr_trdst_dvr"]	=	{
+				"buck/ok_plr_trdst_dvr1.ogg",
+				"buck/ok_plr_trdst_dvr2.ogg",
+				},
+		["stun"]	=	{
+				"buck/stun1.ogg",
+				"buck/stun2.ogg",
+				"buck/stun3.ogg",
+				"buck/stun4.ogg",
+				},
+		["ordr_stayback"]	=	{
+				"buck/ordr_stayback1.ogg",
+				"buck/ordr_stayback2.ogg",
+				"buck/ordr_stayback3.ogg",
+				"buck/ordr_stayback4.ogg",
+				},
+		["death_headshot"]	=	{
+				"buck/death_headshot_100.ogg",
+				"buck/death_headshot_101.ogg",
+				"buck/death_headshot_102.ogg",
+				"buck/death_headshot_103.ogg",
+				"buck/death_headshot_104.ogg",
+				"buck/death_headshot_106.ogg",
+				"buck/death_headshot_107.ogg",
+				"buck/death_headshot_108.ogg",
+				"buck/death_headshot_109.ogg",
+				"buck/death_headshot_110.ogg",
+				"buck/death_headshot_111.ogg",
+				"buck/death_headshot_112.ogg",
+				"buck/death_headshot_113.ogg",
+				"buck/death_headshot_114.ogg",
+				"buck/death_headshot_115.ogg",
+				"buck/death_headshot_116.ogg",
+				"buck/death_headshot_117.ogg",
+				"buck/death_headshot_118.ogg",
+				"buck/death_headshot_119.ogg",
+				"buck/death_headshot_120.ogg",
+				},
+		["foeordr_support"]	=	{
+				"buck/foeordr_support1.ogg",
+				"buck/foeordr_support2.ogg",
+				"buck/foeordr_support3.ogg",
+				"buck/foeordr_support4.ogg",
+				"buck/foeordr_support5.ogg",
+				"buck/foeordr_support6.ogg",
+				},
+		["lst_cntct"]	=	{
+				"buck/lst_cntct1.ogg",
+				"buck/lst_cntct10.ogg",
+				"buck/lst_cntct2.ogg",
+				"buck/lst_cntct3.ogg",
+				"buck/lst_cntct4.ogg",
+				"buck/lst_cntct5.ogg",
+				"buck/lst_cntct6.ogg",
+				"buck/lst_cntct7.ogg",
+				"buck/lst_cntct8.ogg",
+				"buck/lst_cntct9.ogg",
+				},
+		["lookcmbt_tim"]	=	{
+				"buck/lookcmbt_tim1.ogg",
+				"buck/lookcmbt_tim2.ogg",
+				"buck/lookcmbt_tim3.ogg",
+				"buck/lookcmbt_tim6.ogg",
+				},
+		["warn_stlth"]	=	{
+				"buck/warn_stlth1.ogg",
+				"buck/warn_stlth2.ogg",
+				},
+		["morefoe"]	=	{
+				"buck/morefoe1.ogg",
+				"buck/morefoe2.ogg",
+				"buck/morefoe3.ogg",
+				"buck/morefoe4.ogg",
+				},
+		["chkfoebdy"]	=	{
+				"buck/chkfoebdy1.ogg",
+				"buck/chkfoebdy2.ogg",
+				"buck/chkfoebdy3.ogg",
+				"buck/chkfoebdy5.ogg",
+				"buck/chkfoebdy6.ogg",
+				"buck/chkfoebdy7.ogg",
+				},
+		["chckallybdy"]	=	{
+				"buck/chckallybdy1.ogg",
+				"buck/chckallybdy3.ogg",
+				},
+		["entervcl_psngr"]	=	{
+				"buck/entervcl_psngr1.ogg",
+				"buck/entervcl_psngr2.ogg",
+				"buck/entervcl_psngr3.ogg",
+				"buck/entervcl_psngr4.ogg",
+				},
+		["warn_trrt"]	=	{
+				"buck/warn_trrt1.ogg",
+				"buck/warn_trrt2.ogg",
+				},
+	},
+	["Mickey"] = {
+		["crs_mjrfoe"]	=	{
+				"mickey/crs_mjrfoe1.ogg",
+				"mickey/crs_mjrfoe2.ogg",
+				"mickey/crs_mjrfoe3.ogg",
+				},
+		["look_lngtme"]	=	{
+				"mickey/look_lngtme1.ogg",
+				"mickey/look_lngtme10.ogg",
+				"mickey/look_lngtme13.ogg",
+				"mickey/look_lngtme4.ogg",
+				"mickey/look_lngtme6.ogg",
+				"mickey/look_lngtme8.ogg",
+				"mickey/look_lngtme9.ogg",
+				},
+		["invt_vcl_gnr"]	=	{
+				"mickey/invt_vcl_gnr1.ogg",
+				"mickey/invt_vcl_gnr3.ogg",
+				},
+		["newordr_advance"]	=	{
+				"mickey/newordr_advance1.ogg",
+				"mickey/newordr_advance2.ogg",
+				"mickey/newordr_advance4.ogg",
+				},
+		["newordr_fllwplr"]	=	{
+				"mickey/newordr_fllwplr_100.ogg",
+				"mickey/newordr_fllwplr_101.ogg",
+				"mickey/newordr_fllwplr_102.ogg",
+				"mickey/newordr_fllwplr_104.ogg",
+				"mickey/newordr_fllwplr_105.ogg",
+				},
+		["foeordr_flanking"]	=	{
+				"mickey/foeordr_flanking1.ogg",
+				"mickey/foeordr_flanking2.ogg",
+				"mickey/foeordr_flanking4.ogg",
+				"mickey/foeordr_flanking5.ogg",
+				},
+		["cvr"]	=	{
+				"mickey/cvr2.ogg",
+				"mickey/cvr3.ogg",
+				"mickey/cvr4.ogg",
+				"mickey/cvr5.ogg",
+				"mickey/cvr6.ogg",
+				"mickey/cvr7.ogg",
+				},
+		["rmd"]	=	{
+				"mickey/rmd1.ogg",
+				"mickey/rmd2.ogg",
+				"mickey/rmd3.ogg",
+				},
+		["warn_chr_bggr"]	=	{
+				"mickey/warn_chr_bggr1.ogg",
+				"mickey/warn_chr_bggr2.ogg",
+				"mickey/warn_chr_bggr3.ogg",
+				"mickey/warn_chr_bggr4.ogg",
+				"mickey/warn_chr_bggr5.ogg",
+				},
+		["whn_re"]	=	{
+				"mickey/whn_re1.ogg",
+				"mickey/whn_re2.ogg",
+				"mickey/whn_re3.ogg",
+				"mickey/whn_re4.ogg",
+				},
+		["shld_mjr_dmg"]	=	{
+				"mickey/shld_mjr_dmg_100.ogg",
+				"mickey/shld_mjr_dmg_101.ogg",
+				"mickey/shld_mjr_dmg_102.ogg",
+				"mickey/shld_mjr_dmg_103.ogg",
+				"mickey/shld_mjr_dmg_104.ogg",
+				"mickey/shld_mjr_dmg_105.ogg",
+				"mickey/shld_mjr_dmg_106.ogg",
+				"mickey/shld_mjr_dmg_107.ogg",
+				},
+		["chr_vcljmp"]	=	{
+				"mickey/chr_vcljmp1.ogg",
+				"mickey/chr_vcljmp2.ogg",
+				"mickey/chr_vcljmp3.ogg",
+				"mickey/chr_vcljmp4.ogg",
+				},
+		["rmd_stlth"]	=	{
+				"mickey/rmd_stlth1.ogg",
+				"mickey/rmd_stlth2.ogg",
+				},
+		["warn_wpn_snpr"]	=	{
+				"mickey/warn_wpn_snpr1.ogg",
+				"mickey/warn_wpn_snpr2.ogg",
+				},
+		["charge"]	=	{
+				"mickey/charge1.ogg",
+				"mickey/charge2.ogg",
+				"mickey/charge3.ogg",
+				"mickey/charge4.ogg",
+				},
+		["warn_vcl_bnsh"]	=	{
+				"mickey/warn_vcl_bnsh1.ogg",
+				"mickey/warn_vcl_bnsh4.ogg",
+				},
+		["scld_plr_hrtme"]	=	{
+				"mickey/scld_plr_hrtme1.ogg",
+				"mickey/scld_plr_hrtme11.ogg",
+				"mickey/scld_plr_hrtme12.ogg",
+				"mickey/scld_plr_hrtme13.ogg",
+				"mickey/scld_plr_hrtme14.ogg",
+				"mickey/scld_plr_hrtme15.ogg",
+				"mickey/scld_plr_hrtme16.ogg",
+				"mickey/scld_plr_hrtme3.ogg",
+				"mickey/scld_plr_hrtme5.ogg",
+				"mickey/scld_plr_hrtme7.ogg",
+				"mickey/scld_plr_hrtme8.ogg",
+				"mickey/scld_plr_hrtme9.ogg",
+				},
+		["pain"]	=	{
+				"mickey/pain1.ogg",
+				"mickey/pain3.ogg",
+				"mickey/pain4.ogg",
+				"mickey/pain5.ogg",
+				"mickey/pain6.ogg",
+				},
+		["prst_fail"]	=	{
+				"mickey/prst_fail10.ogg",
+				"mickey/prst_fail2.ogg",
+				"mickey/prst_fail3.ogg",
+				"mickey/prst_fail4.ogg",
+				"mickey/prst_fail5.ogg",
+				"mickey/prst_fail6.ogg",
+				"mickey/prst_fail7.ogg",
+				"mickey/prst_fail9.ogg",
+				},
+		["strk_grnd"]	=	{
+				"mickey/strk_grnd_100.ogg",
+				"mickey/strk_grnd_101.ogg",
+				"mickey/strk_grnd_102.ogg",
+				"mickey/strk_grnd_103.ogg",
+				"mickey/strk_grnd_104.ogg",
+				"mickey/strk_grnd_105.ogg",
+				},
+		["lookcmbt_fllw"]	=	{
+				"mickey/lookcmbt_fllw1.ogg",
+				"mickey/lookcmbt_fllw2.ogg",
+				"mickey/lookcmbt_fllw4.ogg",
+				},
+		["foundfoe_re"]	=	{
+				"mickey/foundfoe_re1.ogg",
+				"mickey/foundfoe_re2.ogg",
+				"mickey/foundfoe_re3.ogg",
+				"mickey/foundfoe_re4.ogg",
+				},
+		["tnt_mjrfoe"]	=	{
+				"mickey/tnt_mjrfoe1.ogg",
+				"mickey/tnt_mjrfoe2.ogg",
+				"mickey/tnt_mjrfoe4.ogg",
+				},
+		["warn_vcl_wrth"]	=	{
+				"mickey/warn_vcl_wrth1.ogg",
+				"mickey/warn_vcl_wrth2.ogg",
+				},
+		["warn_vcl_phntm"]	=	{
+				"mickey/warn_vcl_phntm1.ogg",
+				"mickey/warn_vcl_phntm2.ogg",
+				},
+		["cvr_re"]	=	{
+				"mickey/cvr_re1.ogg",
+				"mickey/cvr_re2.ogg",
+				"mickey/cvr_re3.ogg",
+				},
+		["prs_plr_kll"]	=	{
+				"mickey/prs_plr_kll1.ogg",
+				"mickey/prs_plr_kll2.ogg",
+				"mickey/prs_plr_kll3.ogg",
+				},
+		["dwn"]	=	{
+				"mickey/dwn1.ogg",
+				"mickey/dwn2.ogg",
+				"mickey/dwn3.ogg",
+				"mickey/dwn4.ogg",
+				},
+		["hail_agg"]	=	{
+				"mickey/hail_agg1.ogg",
+				"mickey/hail_agg2.ogg",
+				},
+		["srch_pinned"]	=	{
+				"mickey/srch_pinned1.ogg",
+				"mickey/srch_pinned2.ogg",
+				"mickey/srch_pinned3.ogg",
+				"mickey/srch_pinned4.ogg",
+				"mickey/srch_pinned5.ogg",
+				"mickey/srch_pinned6.ogg",
+				"mickey/srch_pinned7.ogg",
+				"mickey/srch_pinned8.ogg",
+				"mickey/srch_pinned9.ogg",
+				},
+		["dth_mjr"]	=	{
+				"mickey/dth_mjr1.ogg",
+				"mickey/dth_mjr2.ogg",
+				"mickey/dth_mjr3.ogg",
+				},
+		["grt_intovcl_mine"]	=	{
+				"mickey/grt_intovcl_mine1.ogg",
+				"mickey/grt_intovcl_mine3.ogg",
+				"mickey/grt_intovcl_mine4.ogg",
+				},
+		["chckallybdyf"]	=	{
+				"mickey/chckallybdyf1.ogg",
+				"mickey/chckallybdyf2.ogg",
+				"mickey/chckallybdyf3.ogg",
+				},
+		["newordr_support"]	=	{
+				"mickey/newordr_support1.ogg",
+				"mickey/newordr_support2.ogg",
+				"mickey/newordr_support3.ogg",
+				},
+		["ask_chkallybdy"]	=	{
+				"mickey/ask_chkallybdy1.ogg",
+				"mickey/ask_chkallybdy2.ogg",
+				},
+		["rmd_scrb"]	=	{
+				"mickey/rmd_scrb1.ogg",
+				"mickey/rmd_scrb2.ogg",
+				},
+		["pld"]	=	{
+				"mickey/pld1.ogg",
+				"mickey/pld2.ogg",
+				"mickey/pld3.ogg",
+				"mickey/pld4.ogg",
+				"mickey/pld5.ogg",
+				"mickey/pld6.ogg",
+				"mickey/pld9.ogg",
+				},
+		["betray"]	=	{
+				"mickey/betray1.ogg",
+				"mickey/betray2.ogg",
+				"mickey/betray3.ogg",
+				"mickey/betray4.ogg",
+				"mickey/betray5.ogg",
+				"mickey/betray6.ogg",
+				"mickey/betray7.ogg",
+				},
+		["firefly_chines"]	=	{
+				"mickey/firefly_chinese.ogg",
+				},
+		["dwn_vcl_chpr"]	=	{
+				"mickey/dwn_vcl_chpr1.ogg",
+				"mickey/dwn_vcl_chpr2.ogg",
+				},
+		["dive"]	=	{
+				"mickey/dive1.ogg",
+				"mickey/dive2.ogg",
+				"mickey/dive3.ogg",
+				"mickey/dive4.ogg",
+				"mickey/dive5.ogg",
+				"mickey/dive6.ogg",
+				"mickey/dive7.ogg",
+				"mickey/dive8.ogg",
+				},
+		["chckallybdy"]	=	{
+				"mickey/chckallybdy1.ogg",
+				"mickey/chckallybdy2.ogg",
+				},
+		["warn_scrb"]	=	{
+				"mickey/warn_scrb1.ogg",
+				"mickey/warn_scrb3.ogg",
+				},
+		["entervcl_drvr"]	=	{
+				"mickey/entervcl_drvr1.ogg",
+				"mickey/entervcl_drvr2.ogg",
+				"mickey/entervcl_drvr3.ogg",
+				},
+		["warn_incmn_vclbm"]	=	{
+				"mickey/warn_incmn_vclbm1.ogg",
+				"mickey/warn_incmn_vclbm2.ogg",
+				},
+		["thrtn"]	=	{
+				"mickey/thrtn1.ogg",
+				"mickey/thrtn10.ogg",
+				"mickey/thrtn2.ogg",
+				"mickey/thrtn3.ogg",
+				"mickey/thrtn4.ogg",
+				"mickey/thrtn5.ogg",
+				"mickey/thrtn7.ogg",
+				"mickey/thrtn8.ogg",
+				"mickey/thrtn9.ogg",
+				},
+		["seefoe_downthere"]	=	{
+				"mickey/seefoe_downthere1.ogg",
+				"mickey/seefoe_downthere2.ogg",
+				},
+		["scrn_plr_wrswpn"]	=	{
+				"mickey/scrn_plr_wrswpn1.ogg",
+				"mickey/scrn_plr_wrswpn10.ogg",
+				"mickey/scrn_plr_wrswpn11.ogg",
+				"mickey/scrn_plr_wrswpn12.ogg",
+				"mickey/scrn_plr_wrswpn13.ogg",
+				"mickey/scrn_plr_wrswpn15.ogg",
+				"mickey/scrn_plr_wrswpn16.ogg",
+				"mickey/scrn_plr_wrswpn2.ogg",
+				"mickey/scrn_plr_wrswpn3.ogg",
+				"mickey/scrn_plr_wrswpn5.ogg",
+				"mickey/scrn_plr_wrswpn6.ogg",
+				"mickey/scrn_plr_wrswpn7.ogg",
+				"mickey/scrn_plr_wrswpn8.ogg",
+				"mickey/scrn_plr_wrswpn9.ogg",
+				},
+		["newordr_exitvcl"]	=	{
+				"mickey/newordr_exitvcl1.ogg",
+				"mickey/newordr_exitvcl2.ogg",
+				"mickey/newordr_exitvcl3.ogg",
+				},
+		["join_stayback"]	=	{
+				"mickey/join_stayback1.ogg",
+				"mickey/join_stayback2.ogg",
+				"mickey/join_stayback3.ogg",
+				"mickey/join_stayback4.ogg",
+				},
+		["cower"]	=	{
+				"mickey/cower1.ogg",
+				"mickey/cower5.ogg",
+				"mickey/cower6.ogg",
+				"mickey/cower7.ogg",
+				"mickey/cower8.ogg",
+				},
+		["chr"]	=	{
+				"mickey/chr1.ogg",
+				"mickey/chr2.ogg",
+				"mickey/chr3.ogg",
+				},
+		["newordr_fllwplr"]	=	{
+				"mickey/newordr_fllwplr2.ogg",
+				},
+		["pld_mjrfoe"]	=	{
+				"mickey/pld_mjrfoe1.ogg",
+				"mickey/pld_mjrfoe2.ogg",
+				"mickey/pld_mjrfoe3.ogg",
+				},
+		["scld_plr_hrt_blt"]	=	{
+				"mickey/scld_plr_hrt_blt1.ogg",
+				"mickey/scld_plr_hrt_blt2.ogg",
+				"mickey/scld_plr_hrt_blt3.ogg",
+				"mickey/scld_plr_hrt_blt4.ogg",
+				"mickey/scld_plr_hrt_blt5.ogg",
+				"mickey/scld_plr_hrt_blt6.ogg",
+				"mickey/scld_plr_hrt_blt7.ogg",
+				},
+		["foeordr_support"]	=	{
+				"mickey/foeordr_support1.ogg",
+				"mickey/foeordr_support2.ogg",
+				"mickey/foeordr_support3.ogg",
+				},
+		["panic_plsmgrnd"]	=	{
+				"mickey/panic_plsmgrnd1.ogg",
+				"mickey/panic_plsmgrnd3.ogg",
+				"mickey/panic_plsmgrnd4.ogg",
+				"mickey/panic_plsmgrnd5.ogg",
+				},
+		["pstcmbt_brt"]	=	{
+				"mickey/pstcmbt_brt1.ogg",
+				"mickey/pstcmbt_brt2.ogg",
+				},
+		["dodge"]	=	{
+				"mickey/dodge1.ogg",
+				"mickey/dodge2.ogg",
+				"mickey/dodge3.ogg",
+				"mickey/dodge4.ogg",
+				"mickey/dodge5.ogg",
+				},
+		["warn_chr_hntr"]	=	{
+				"mickey/warn_chr_hntr1.ogg",
+				"mickey/warn_chr_hntr2.ogg",
+				},
+		["warn_brsrk"]	=	{
+				"mickey/warn_brsrk1.ogg",
+				"mickey/warn_brsrk2.ogg",
+				"mickey/warn_brsrk3.ogg",
+				"mickey/warn_brsrk4.ogg",
+				"mickey/warn_brsrk5.ogg",
+				"mickey/warn_brsrk6.ogg",
+				"mickey/warn_brsrk7.ogg",
+				},
+		["foeordr_fallback"]	=	{
+				"mickey/foeordr_fallback1.ogg",
+				"mickey/foeordr_fallback2.ogg",
+				"mickey/foeordr_fallback3.ogg",
+				},
+		["tchallybdy"]	=	{
+				"mickey/tchallybdy1.ogg",
+				"mickey/tchallybdy2.ogg",
+				"mickey/tchallybdy3.ogg",
+				"mickey/tchallybdy4.ogg",
+				"mickey/tchallybdy5.ogg",
+				},
+		["join_emrg"]	=	{
+				"mickey/join_emrg1.ogg",
+				"mickey/join_emrg2.ogg",
+				},
+		["foundfoe_prst"]	=	{
+				"mickey/foundfoe_prst1.ogg",
+				"mickey/foundfoe_prst10.ogg",
+				"mickey/foundfoe_prst2.ogg",
+				"mickey/foundfoe_prst3.ogg",
+				"mickey/foundfoe_prst4.ogg",
+				"mickey/foundfoe_prst5.ogg",
+				"mickey/foundfoe_prst6.ogg",
+				"mickey/foundfoe_prst7.ogg",
+				},
+		["injured"]	=	{
+				"mickey/injured1.ogg",
+				"mickey/injured2.ogg",
+				"mickey/injured3.ogg",
+				"mickey/injured4.ogg",
+				"mickey/injured5.ogg",
+				"mickey/injured6.ogg",
+				"mickey/injured7.ogg",
+				"mickey/injured8.ogg",
+				},
+		["dutch_look_mickey"]	=	{
+				"mickey/dutch_look_mickey_101.ogg",
+				"mickey/dutch_look_mickey_102.ogg",
+				"mickey/dutch_look_mickey_103.ogg",
+				"mickey/dutch_look_mickey_104.ogg",
+				"mickey/dutch_look_mickey_105.ogg",
+				},
+		["melee"]	=	{
+				"mickey/melee_100.ogg",
+				"mickey/melee_102.ogg",
+				"mickey/melee_103.ogg",
+				"mickey/melee_104.ogg",
+				"mickey/melee_105.ogg",
+				"mickey/melee_106.ogg",
+				"mickey/melee_107.ogg",
+				"mickey/melee_108.ogg",
+				},
+		["look_plr_fllw"]	=	{
+				"mickey/look_plr_fllw1.ogg",
+				"mickey/look_plr_fllw2.ogg",
+				"mickey/look_plr_fllw3.ogg",
+				},
+		["warn"]	=	{
+				"mickey/warn1.ogg",
+				"mickey/warn2.ogg",
+				"mickey/warn3.ogg",
+				"mickey/warn4.ogg",
+				"mickey/warn5.ogg",
+				},
+		["shld_crit_dmg"]	=	{
+				"mickey/shld_crit_dmg_100.ogg",
+				"mickey/shld_crit_dmg_101.ogg",
+				"mickey/shld_crit_dmg_102.ogg",
+				"mickey/shld_crit_dmg_103.ogg",
+				"mickey/shld_crit_dmg_104.ogg",
+				"mickey/shld_crit_dmg_105.ogg",
+				"mickey/shld_crit_dmg_106.ogg",
+				},
+		["hlth_min_dmg"]	=	{
+				"mickey/hlth_min_dmg_100.ogg",
+				"mickey/hlth_min_dmg_101.ogg",
+				"mickey/hlth_min_dmg_102.ogg",
+				"mickey/hlth_min_dmg_103.ogg",
+				"mickey/hlth_min_dmg_104.ogg",
+				"mickey/hlth_min_dmg_105.ogg",
+				"mickey/hlth_min_dmg_106.ogg",
+				"mickey/hlth_min_dmg_107.ogg",
+				},
+		["kamikaze"]	=	{
+				"mickey/kamikaze1.ogg",
+				"mickey/kamikaze2.ogg",
+				"mickey/kamikaze3.ogg",
+				"mickey/kamikaze4.ogg",
+				"mickey/kamikaze5.ogg",
+				},
+		["warn_wpn_hmmr"]	=	{
+				"mickey/warn_wpn_hmmr1.ogg",
+				"mickey/warn_wpn_hmmr2.ogg",
+				"mickey/warn_wpn_hmmr3.ogg",
+				},
+		["chr_kllfoe"]	=	{
+				"mickey/chr_kllfoe1.ogg",
+				"mickey/chr_kllfoe2.ogg",
+				"mickey/chr_kllfoe3.ogg",
+				"mickey/chr_kllfoe4.ogg",
+				},
+		["rmd_vcl_chpr"]	=	{
+				"mickey/rmd_vcl_chpr1.ogg",
+				"mickey/rmd_vcl_chpr2.ogg",
+				"mickey/rmd_vcl_chpr3.ogg",
+				},
+		["dwn_vcl_wrth"]	=	{
+				"mickey/dwn_vcl_wrth1.ogg",
+				"mickey/dwn_vcl_wrth2.ogg",
+				},
+		["chr_kllfoe_blt"]	=	{
+				"mickey/chr_kllfoe_blt2.ogg",
+				"mickey/chr_kllfoe_blt3.ogg",
+				"mickey/chr_kllfoe_blt4.ogg",
+				},
+		["scld"]	=	{
+				"mickey/scld1.ogg",
+				"mickey/scld2.ogg",
+				"mickey/scld4.ogg",
+				"mickey/scld6.ogg",
+				},
+		["shld_min_state_lp"]	=	{
+				"mickey/shld_min_state_lp1.ogg",
+				},
+		["thnk_plr_btrwpn"]	=	{
+				"mickey/thnk_plr_btrwpn1.ogg",
+				"mickey/thnk_plr_btrwpn10.ogg",
+				"mickey/thnk_plr_btrwpn11.ogg",
+				"mickey/thnk_plr_btrwpn12.ogg",
+				"mickey/thnk_plr_btrwpn2.ogg",
+				"mickey/thnk_plr_btrwpn3.ogg",
+				"mickey/thnk_plr_btrwpn4.ogg",
+				"mickey/thnk_plr_btrwpn5.ogg",
+				"mickey/thnk_plr_btrwpn6.ogg",
+				"mickey/thnk_plr_btrwpn7.ogg",
+				"mickey/thnk_plr_btrwpn9.ogg",
+				},
+		["dth_drama"]	=	{
+				"mickey/dth_drama1.ogg",
+				"mickey/dth_drama2.ogg",
+				"mickey/dth_drama3.ogg",
+				"mickey/dth_drama4.ogg",
+				},
+		["newordr_charge"]	=	{
+				"mickey/newordr_charge1.ogg",
+				"mickey/newordr_charge2.ogg",
+				"mickey/newordr_charge3.ogg",
+				},
+		["tnt"]	=	{
+				"mickey/tnt1.ogg",
+				"mickey/tnt10.ogg",
+				"mickey/tnt11.ogg",
+				"mickey/tnt2.ogg",
+				"mickey/tnt3.ogg",
+				"mickey/tnt4.ogg",
+				"mickey/tnt5.ogg",
+				"mickey/tnt6.ogg",
+				"mickey/tnt7.ogg",
+				"mickey/tnt8.ogg",
+				"mickey/tnt9.ogg",
+				},
+		["join_invsgt"]	=	{
+				"mickey/join_invsgt1.ogg",
+				"mickey/join_invsgt2.ogg",
+				"mickey/join_invsgt3.ogg",
+				},
+		["thrwn"]	=	{
+				"mickey/thrwn1.ogg",
+				"mickey/thrwn2.ogg",
+				"mickey/thrwn3.ogg",
+				"mickey/thrwn6.ogg",
+				},
+		["shld_min_dmg"]	=	{
+				"mickey/shld_min_dmg_100.ogg",
+				"mickey/shld_min_dmg_101.ogg",
+				"mickey/shld_min_dmg_102.ogg",
+				"mickey/shld_min_dmg_103.ogg",
+				},
+		["lmnt"]	=	{
+				"mickey/lmnt1.ogg",
+				"mickey/lmnt2.ogg",
+				"mickey/lmnt4.ogg",
+				"mickey/lmnt5.ogg",
+				"mickey/lmnt6.ogg",
+				"mickey/lmnt7.ogg",
+				"mickey/lmnt8.ogg",
+				},
+		["grt_intovcl_imdvr"]	=	{
+				"mickey/grt_intovcl_imdvr1.ogg",
+				"mickey/grt_intovcl_imdvr2.ogg",
+				"mickey/grt_intovcl_imdvr3.ogg",
+				"mickey/grt_intovcl_imdvr4.ogg",
+				"mickey/grt_intovcl_imdvr6.ogg",
+				},
+		["_prs_plr_kll_vclbmp"]	=	{
+				"mickey/_prs_plr_kll_vclbmp1.ogg",
+				"mickey/_prs_plr_kll_vclbmp2.ogg",
+				"mickey/_prs_plr_kll_vclbmp3.ogg",
+				},
+		["thrtn_mjrfoe"]	=	{
+				"mickey/thrtn_mjrfoe1.ogg",
+				"mickey/thrtn_mjrfoe2.ogg",
+				"mickey/thrtn_mjrfoe3.ogg",
+				},
+		["newordr_fallback"]	=	{
+				"mickey/newordr_fallback1.ogg",
+				"mickey/newordr_fallback2.ogg",
+				"mickey/newordr_fallback3.ogg",
+				"mickey/newordr_fallback6.ogg",
+				},
+		["thrtn_foe_re"]	=	{
+				"mickey/thrtn_foe_re1.ogg",
+				"mickey/thrtn_foe_re2.ogg",
+				"mickey/thrtn_foe_re4.ogg",
+				},
+		["thnk"]	=	{
+				"mickey/thnk1.ogg",
+				"mickey/thnk16.ogg",
+				"mickey/thnk2.ogg",
+				"mickey/thnk3.ogg",
+				"mickey/thnk4.ogg",
+				"mickey/thnk7.ogg",
+				"mickey/thnk8.ogg",
+				},
+		["hlth_mjr_dmg"]	=	{
+				"mickey/hlth_mjr_dmg_100.ogg",
+				"mickey/hlth_mjr_dmg_101.ogg",
+				"mickey/hlth_mjr_dmg_102.ogg",
+				"mickey/hlth_mjr_dmg_103.ogg",
+				"mickey/hlth_mjr_dmg_104.ogg",
+				"mickey/hlth_mjr_dmg_105.ogg",
+				"mickey/hlth_mjr_dmg_106.ogg",
+				"mickey/hlth_mjr_dmg_107.ogg",
+				},
+		["strk_grnd"]	=	{
+				"mickey/strk_grnd1.ogg",
+				"mickey/strk_grnd2.ogg",
+				"mickey/strk_grnd3.ogg",
+				"mickey/strk_grnd4.ogg",
+				"mickey/strk_grnd5.ogg",
+				"mickey/strk_grnd6.ogg",
+				},
+		["rmd_vcl_phntm"]	=	{
+				"mickey/rmd_vcl_phntm1.ogg",
+				"mickey/rmd_vcl_phntm2.ogg",
+				},
+		["pstcmbt_ez"]	=	{
+				"mickey/pstcmbt_ez1.ogg",
+				"mickey/pstcmbt_ez2.ogg",
+				"mickey/pstcmbt_ez3.ogg",
+				},
+		["invsgt"]	=	{
+				"mickey/invsgt1.ogg",
+				"mickey/invsgt2.ogg",
+				"mickey/invsgt3.ogg",
+				"mickey/invsgt4.ogg",
+				"mickey/invsgt5.ogg",
+				"mickey/invsgt6.ogg",
+				"mickey/invsgt7.ogg",
+				"mickey/invsgt8.ogg",
+				},
+		["strk_vcl_gnr"]	=	{
+				"mickey/strk_vcl_gnr1.ogg",
+				"mickey/strk_vcl_gnr2.ogg",
+				"mickey/strk_vcl_gnr4.ogg",
+				"mickey/strk_vcl_gnr5.ogg",
+				"mickey/strk_vcl_gnr6.ogg",
+				"mickey/strk_vcl_gnr8.ogg",
+				"mickey/strk_vcl_gnr9.ogg",
+				},
+		["scld_plr_kllally"]	=	{
+				"mickey/scld_plr_kllally1.ogg",
+				"mickey/scld_plr_kllally10.ogg",
+				"mickey/scld_plr_kllally2.ogg",
+				"mickey/scld_plr_kllally3.ogg",
+				"mickey/scld_plr_kllally4.ogg",
+				"mickey/scld_plr_kllally5.ogg",
+				"mickey/scld_plr_kllally6.ogg",
+				"mickey/scld_plr_kllally7.ogg",
+				"mickey/scld_plr_kllally8.ogg",
+				"mickey/scld_plr_kllally9.ogg",
+				},
+		["strk_snpr"]	=	{
+				"mickey/strk_snpr1.ogg",
+				"mickey/strk_snpr2.ogg",
+				},
+		["panic_onfire"]	=	{
+				"mickey/panic_onfire1.ogg",
+				"mickey/panic_onfire3.ogg",
+				"mickey/panic_onfire4.ogg",
+				},
+		["prs"]	=	{
+				"mickey/prs1.ogg",
+				"mickey/prs2.ogg",
+				"mickey/prs3.ogg",
+				"mickey/prs4.ogg",
+				"mickey/prs5.ogg",
+				},
+		["foeordr_charge"]	=	{
+				"mickey/foeordr_charge1.ogg",
+				"mickey/foeordr_charge2.ogg",
+				"mickey/foeordr_charge3.ogg",
+				"mickey/foeordr_charge4.ogg",
+				},
+		["lmnt_deadplr_mc"]	=	{
+				"mickey/lmnt_deadplr_mc_100.ogg",
+				"mickey/lmnt_deadplr_mc_102.ogg",
+				"mickey/lmnt_deadplr_mc_103.ogg",
+				"mickey/lmnt_deadplr_mc_104.ogg",
+				"mickey/lmnt_deadplr_mc_106.ogg",
+				"mickey/lmnt_deadplr_mc_107.ogg",
+				"mickey/lmnt_deadplr_mc_108.ogg",
+				},
+		["hail_tim"]	=	{
+				"mickey/hail_tim1.ogg",
+				"mickey/hail_tim2.ogg",
+				},
+		["warn_stlth_again"]	=	{
+				"mickey/warn_stlth_again1.ogg",
+				"mickey/warn_stlth_again2.ogg",
+				},
+		["look"]	=	{
+				"mickey/look1.ogg",
+				"mickey/look10.ogg",
+				"mickey/look11.ogg",
+				"mickey/look2.ogg",
+				"mickey/look4.ogg",
+				"mickey/look5.ogg",
+				"mickey/look6.ogg",
+				"mickey/look7.ogg",
+				"mickey/look8.ogg",
+				"mickey/look9.ogg",
+				},
+		["neworder_flanking"]	=	{
+				"mickey/neworder_flanking1.ogg",
+				"mickey/neworder_flanking2.ogg",
+				"mickey/neworder_flanking3.ogg",
+				"mickey/neworder_flanking4.ogg",
+				},
+		["pstcmbt_tim"]	=	{
+				"mickey/pstcmbt_tim1.ogg",
+				"mickey/pstcmbt_tim2.ogg",
+				},
+		["stayback_tim"]	=	{
+				"mickey/stayback_tim1.ogg",
+				"mickey/stayback_tim3.ogg",
+				"mickey/stayback_tim5.ogg",
+				"mickey/stayback_tim6.ogg",
+				},
+		["stayback_agg"]	=	{
+				"mickey/stayback_agg1.ogg",
+				"mickey/stayback_agg2.ogg",
+				},
+		["newordr_leaveplr"]	=	{
+				"mickey/newordr_leaveplr_100.ogg",
+				"mickey/newordr_leaveplr_102.ogg",
+				"mickey/newordr_leaveplr_103.ogg",
+				"mickey/newordr_leaveplr_104.ogg",
+				"mickey/newordr_leaveplr_105.ogg",
+				"mickey/newordr_leaveplr_106.ogg",
+				"mickey/newordr_leaveplr_107.ogg",
+				},
+		["lookcmbt"]	=	{
+				"mickey/lookcmbt1.ogg",
+				"mickey/lookcmbt10.ogg",
+				"mickey/lookcmbt11.ogg",
+				"mickey/lookcmbt12.ogg",
+				"mickey/lookcmbt3.ogg",
+				"mickey/lookcmbt4.ogg",
+				"mickey/lookcmbt5.ogg",
+				"mickey/lookcmbt7.ogg",
+				"mickey/lookcmbt8.ogg",
+				"mickey/lookcmbt9.ogg",
+				},
+		["foundfoe"]	=	{
+				"mickey/foundfoe1.ogg",
+				"mickey/foundfoe10.ogg",
+				"mickey/foundfoe11.ogg",
+				"mickey/foundfoe2.ogg",
+				"mickey/foundfoe3.ogg",
+				"mickey/foundfoe4.ogg",
+				"mickey/foundfoe5.ogg",
+				"mickey/foundfoe6.ogg",
+				"mickey/foundfoe7.ogg",
+				"mickey/foundfoe8.ogg",
+				"mickey/foundfoe9.ogg",
+				},
+		["look_pstcmbt_hrd"]	=	{
+				"mickey/look_pstcmbt_hrd1.ogg",
+				"mickey/look_pstcmbt_hrd2.ogg",
+				"mickey/look_pstcmbt_hrd3.ogg",
+				"mickey/look_pstcmbt_hrd5.ogg",
+				},
+		["dth_fall"]	=	{
+				"mickey/dth_fall1.ogg",
+				"mickey/dth_fall2.ogg",
+				"mickey/dth_fall3.ogg",
+				"mickey/dth_fall4.ogg",
+				"mickey/dth_fall5.ogg",
+				"mickey/dth_fall6.ogg",
+				"mickey/dth_fall7.ogg",
+				},
+		["newordr_arrival"]	=	{
+				"mickey/newordr_arrival1.ogg",
+				"mickey/newordr_arrival2.ogg",
+				"mickey/newordr_arrival3.ogg",
+				},
+		["join_re"]	=	{
+				"mickey/join_re1.ogg",
+				"mickey/join_re2.ogg",
+				"mickey/join_re3.ogg",
+				"mickey/join_re4.ogg",
+				},
+		["srprs"]	=	{
+				"mickey/srprs1.ogg",
+				"mickey/srprs10.ogg",
+				"mickey/srprs11.ogg",
+				"mickey/srprs2.ogg",
+				"mickey/srprs3.ogg",
+				"mickey/srprs4.ogg",
+				"mickey/srprs5.ogg",
+				"mickey/srprs7.ogg",
+				"mickey/srprs8.ogg",
+				"mickey/srprs9.ogg",
+				},
+		["entervcl"]	=	{
+				"mickey/entervcl1.ogg",
+				"mickey/entervcl2.ogg",
+				"mickey/entervcl3.ogg",
+				},
+		["join_prst"]	=	{
+				"mickey/join_prst1.ogg",
+				"mickey/join_prst2.ogg",
+				"mickey/join_prst3.ogg",
+				},
+		["approve"]	=	{
+				"mickey/approve1.ogg",
+				"mickey/approve2.ogg",
+				"mickey/approve3.ogg",
+				"mickey/approve4.ogg",
+				"mickey/approve5.ogg",
+				"mickey/approve6.ogg",
+				},
+		["srchend"]	=	{
+				"mickey/srchend1.ogg",
+				"mickey/srchend2.ogg",
+				"mickey/srchend3.ogg",
+				},
+		["warn_vcl_ghst"]	=	{
+				"mickey/warn_vcl_ghst1.ogg",
+				"mickey/warn_vcl_ghst2.ogg",
+				},
+		["shotfoebdy"]	=	{
+				"mickey/shotfoebdy2.ogg",
+				"mickey/shotfoebdy3.ogg",
+				"mickey/shotfoebdy4.ogg",
+				"mickey/shotfoebdy5.ogg",
+				"mickey/shotfoebdy6.ogg",
+				"mickey/shotfoebdy8.ogg",
+				},
+		["chr_kllfoe_stkplsm"]	=	{
+				"mickey/chr_kllfoe_stkplsm1.ogg",
+				"mickey/chr_kllfoe_stkplsm2.ogg",
+				"mickey/chr_kllfoe_stkplsm3.ogg",
+				"mickey/chr_kllfoe_stkplsm4.ogg",
+				},
+		["mickey_look_dutch_re"]	=	{
+				"mickey/mickey_look_dutch_re_100.ogg",
+				"mickey/mickey_look_dutch_re_101.ogg",
+				"mickey/mickey_look_dutch_re_102.ogg",
+				"mickey/mickey_look_dutch_re_104.ogg",
+				"mickey/mickey_look_dutch_re_105.ogg",
+				},
+		["meleeleap"]	=	{
+				"mickey/meleeleap1.ogg",
+				"mickey/meleeleap2.ogg",
+				},
+		["shld_recharging"]	=	{
+				"mickey/shld_recharging_100.ogg",
+				"mickey/shld_recharging_101.ogg",
+				"mickey/shld_recharging_102.ogg",
+				},
+		["lookcmbt_agg"]	=	{
+				"mickey/lookcmbt_agg1.ogg",
+				"mickey/lookcmbt_agg2.ogg",
+				"mickey/lookcmbt_agg3.ogg",
+				"mickey/lookcmbt_agg5.ogg",
+				"mickey/lookcmbt_agg6.ogg",
+				},
+		["pain_mjr"]	=	{
+				"mickey/pain_mjr1.ogg",
+				"mickey/pain_mjr2.ogg",
+				"mickey/pain_mjr3.ogg",
+				"mickey/pain_mjr4.ogg",
+				"mickey/pain_mjr5.ogg",
+				"mickey/pain_mjr6.ogg",
+				},
+		["shld_min_lp"]	=	{
+				"mickey/shld_min_lp2.ogg",
+				"mickey/shld_min_lp3.ogg",
+				},
+		["shld_crit_state_lp"]	=	{
+				"mickey/shld_crit_state_lp1.ogg",
+				"mickey/shld_crit_state_lp2.ogg",
+				"mickey/shld_crit_state_lp3.ogg",
+				"mickey/shld_crit_state_lp4.ogg",
+				"mickey/shld_crit_state_lp5.ogg",
+				},
+		["tnt_re"]	=	{
+				"mickey/tnt_re1.ogg",
+				"mickey/tnt_re2.ogg",
+				"mickey/tnt_re3.ogg",
+				"mickey/tnt_re4.ogg",
+				},
+		["rmd_vcl_wrth"]	=	{
+				"mickey/rmd_vcl_wrth1.ogg",
+				"mickey/rmd_vcl_wrth2.ogg",
+				},
+		["seefoe_upthere"]	=	{
+				"mickey/seefoe_upthere1.ogg",
+				"mickey/seefoe_upthere2.ogg",
+				},
+		["invsgt_fail"]	=	{
+				"mickey/invsgt_fail1.ogg",
+				"mickey/invsgt_fail2.ogg",
+				"mickey/invsgt_fail3.ogg",
+				"mickey/invsgt_fail4.ogg",
+				"mickey/invsgt_fail5.ogg",
+				"mickey/invsgt_fail6.ogg",
+				"mickey/invsgt_fail7.ogg",
+				},
+		["reload"]	=	{
+				"mickey/reload_100.ogg",
+				"mickey/reload_101.ogg",
+				"mickey/reload_102.ogg",
+				"mickey/reload_103.ogg",
+				"mickey/reload_104.ogg",
+				"mickey/reload_105.ogg",
+				"mickey/reload_106.ogg",
+				"mickey/reload_107.ogg",
+				},
+		["scld_plr_wldvc"]	=	{
+				"mickey/scld_plr_wldvc2.ogg",
+				"mickey/scld_plr_wldvc3.ogg",
+				"mickey/scld_plr_wldvc4.ogg",
+				},
+		["dwn_scrb"]	=	{
+				"mickey/dwn_scrb1.ogg",
+				"mickey/dwn_scrb2.ogg",
+				},
+		["seefoe_agg"]	=	{
+				"mickey/seefoe_agg1.ogg",
+				"mickey/seefoe_agg2.ogg",
+				},
+		["ordr_chkfoebdy"]	=	{
+				"mickey/ordr_chkfoebdy1.ogg",
+				"mickey/ordr_chkfoebdy2.ogg",
+				"mickey/ordr_chkfoebdy3.ogg",
+				"mickey/ordr_chkfoebdy4.ogg",
+				"mickey/ordr_chkfoebdy5.ogg",
+				},
+		["jump"]	=	{
+				"mickey/jump_100.ogg",
+				"mickey/jump_101.ogg",
+				"mickey/jump_102.ogg",
+				"mickey/jump_103.ogg",
+				"mickey/jump_104.ogg",
+				"mickey/jump_105.ogg",
+				"mickey/jump_106.ogg",
+				"mickey/jump_109.ogg",
+				},
+		["seefoe"]	=	{
+				"mickey/seefoe1.ogg",
+				"mickey/seefoe10.ogg",
+				"mickey/seefoe11.ogg",
+				"mickey/seefoe2.ogg",
+				"mickey/seefoe3.ogg",
+				"mickey/seefoe5.ogg",
+				"mickey/seefoe6.ogg",
+				"mickey/seefoe7.ogg",
+				"mickey/seefoe8.ogg",
+				"mickey/seefoe9.ogg",
+				},
+		["look_pstcmbt_ez"]	=	{
+				"mickey/look_pstcmbt_ez1.ogg",
+				"mickey/look_pstcmbt_ez2.ogg",
+				"mickey/look_pstcmbt_ez3.ogg",
+				},
+		["grt_intovcl"]	=	{
+				"mickey/grt_intovcl1.ogg",
+				"mickey/grt_intovcl2.ogg",
+				"mickey/grt_intovcl3.ogg",
+				},
+		["warn_incmn_grnd"]	=	{
+				"mickey/warn_incmn_grnd1.ogg",
+				"mickey/warn_incmn_grnd10.ogg",
+				"mickey/warn_incmn_grnd2.ogg",
+				"mickey/warn_incmn_grnd4.ogg",
+				"mickey/warn_incmn_grnd5.ogg",
+				"mickey/warn_incmn_grnd6.ogg",
+				"mickey/warn_incmn_grnd7.ogg",
+				"mickey/warn_incmn_grnd8.ogg",
+				"mickey/warn_incmn_grnd9.ogg",
+				},
+		["scld_plr_wldvcl"]	=	{
+				"mickey/scld_plr_wldvcl1.ogg",
+				},
+		["seefoe_tim"]	=	{
+				"mickey/seefoe_tim1.ogg",
+				"mickey/seefoe_tim2.ogg",
+				},
+		["scld_plr_wldgrnd"]	=	{
+				"mickey/scld_plr_wldgrnd1.ogg",
+				"mickey/scld_plr_wldgrnd3.ogg",
+				"mickey/scld_plr_wldgrnd4.ogg",
+				"mickey/scld_plr_wldgrnd5.ogg",
+				"mickey/scld_plr_wldgrnd6.ogg",
+				"mickey/scld_plr_wldgrnd7.ogg",
+				},
+		["pstcmbt"]	=	{
+				"mickey/pstcmbt1.ogg",
+				"mickey/pstcmbt2.ogg",
+				"mickey/pstcmbt4.ogg",
+				"mickey/pstcmbt5.ogg",
+				"mickey/pstcmbt6.ogg",
+				"mickey/pstcmbt9.ogg",
+				},
+		["lift"]	=	{
+				"mickey/lift1.ogg",
+				"mickey/lift3.ogg",
+				"mickey/lift4.ogg",
+				"mickey/lift5.ogg",
+				"mickey/lift6.ogg",
+				},
+		["rmd_vcl_bnsh"]	=	{
+				"mickey/rmd_vcl_bnsh1.ogg",
+				"mickey/rmd_vcl_bnsh2.ogg",
+				},
+		["scld_plr_vclcrash"]	=	{
+				"mickey/scld_plr_vclcrash1.ogg",
+				"mickey/scld_plr_vclcrash10.ogg",
+				"mickey/scld_plr_vclcrash11.ogg",
+				"mickey/scld_plr_vclcrash3.ogg",
+				"mickey/scld_plr_vclcrash4.ogg",
+				"mickey/scld_plr_vclcrash5.ogg",
+				"mickey/scld_plr_vclcrash6.ogg",
+				"mickey/scld_plr_vclcrash7.ogg",
+				"mickey/scld_plr_vclcrash8.ogg",
+				"mickey/scld_plr_vclcrash9.ogg",
+				},
+		["whn"]	=	{
+				"mickey/whn1.ogg",
+				"mickey/whn2.ogg",
+				"mickey/whn3.ogg",
+				"mickey/whn4.ogg",
+				"mickey/whn5.ogg",
+				"mickey/whn6.ogg",
+				"mickey/whn7.ogg",
+				},
+		["dwn_wpn_snpr"]	=	{
+				"mickey/dwn_wpn_snpr1.ogg",
+				"mickey/dwn_wpn_snpr2.ogg",
+				},
+		["rmd_wpn_hmm"]	=	{
+				"mickey/rmd_wpn_hmmr.ogg",
+				},
+		["rmd_vcl_ghst"]	=	{
+				"mickey/rmd_vcl_ghst1.ogg",
+				"mickey/rmd_vcl_ghst2.ogg",
+				"mickey/rmd_vcl_ghst3.ogg",
+				},
+		["rmd_trrt"]	=	{
+				"mickey/rmd_trrt1.ogg",
+				"mickey/rmd_trrt2.ogg",
+				},
+		["scld_plr_blocking"]	=	{
+				"mickey/scld_plr_blocking1.ogg",
+				"mickey/scld_plr_blocking2.ogg",
+				"mickey/scld_plr_blocking3.ogg",
+				"mickey/scld_plr_blocking4.ogg",
+				},
+		["reload_low_ammo"]	=	{
+				"mickey/reload_low_ammo_100.ogg",
+				"mickey/reload_low_ammo_101.ogg",
+				"mickey/reload_low_ammo_102.ogg",
+				"mickey/reload_low_ammo_103.ogg",
+				"mickey/reload_low_ammo_104.ogg",
+				"mickey/reload_low_ammo_105.ogg",
+				"mickey/reload_low_ammo_106.ogg",
+				"mickey/reload_low_ammo_107.ogg",
+				},
+		["buck_look_mickey"]	=	{
+				"mickey/buck_look_mickey_101.ogg",
+				"mickey/buck_look_mickey_102.ogg",
+				"mickey/buck_look_mickey_103.ogg",
+				},
+		["regret"]	=	{
+				"mickey/regret1.ogg",
+				"mickey/regret2.ogg",
+				"mickey/regret3.ogg",
+				},
+		["invt_vcl"]	=	{
+				"mickey/invt_vcl1.ogg",
+				"mickey/invt_vcl2.ogg",
+				"mickey/invt_vcl3.ogg",
+				"mickey/invt_vcl4.ogg",
+				"mickey/invt_vcl5.ogg",
+				},
+		["grt_plr_vcl_empty"]	=	{
+				"mickey/grt_plr_vcl_empty1.ogg",
+				"mickey/grt_plr_vcl_empty2.ogg",
+				"mickey/grt_plr_vcl_empty3.ogg",
+				"mickey/grt_plr_vcl_empty4.ogg",
+				},
+		["captured"]	=	{
+				"mickey/captured1.ogg",
+				"mickey/captured10.ogg",
+				"mickey/captured11.ogg",
+				"mickey/captured12.ogg",
+				"mickey/captured13.ogg",
+				"mickey/captured14.ogg",
+				"mickey/captured15.ogg",
+				"mickey/captured16.ogg",
+				"mickey/captured17.ogg",
+				"mickey/captured18.ogg",
+				"mickey/captured2.ogg",
+				"mickey/captured3.ogg",
+				"mickey/captured4.ogg",
+				"mickey/captured5.ogg",
+				"mickey/captured6.ogg",
+				"mickey/captured7.ogg",
+				},
+		["warn_vcl_chpr"]	=	{
+				"mickey/warn_vcl_chpr1.ogg",
+				"mickey/warn_vcl_chpr2.ogg",
+				},
+		["pstcmbt_agg"]	=	{
+				"mickey/pstcmbt_agg1.ogg",
+				"mickey/pstcmbt_agg2.ogg",
+				"mickey/pstcmbt_agg4.ogg",
+				},
+		["lookcmbt_tim"]	=	{
+				"mickey/lookcmbt_tim1.ogg",
+				"mickey/lookcmbt_tim2.ogg",
+				"mickey/lookcmbt_tim3.ogg",
+				"mickey/lookcmbt_tim4.ogg",
+				"mickey/lookcmbt_tim5.ogg",
+				},
+		["crs"]	=	{
+				"mickey/crs1.ogg",
+				"mickey/crs10.ogg",
+				"mickey/crs11.ogg",
+				"mickey/crs12.ogg",
+				"mickey/crs2.ogg",
+				"mickey/crs3.ogg",
+				"mickey/crs4.ogg",
+				"mickey/crs6.ogg",
+				"mickey/crs7.ogg",
+				"mickey/crs8.ogg",
+				},
+		["newordr_retreat"]	=	{
+				"mickey/newordr_retreat1.ogg",
+				"mickey/newordr_retreat2.ogg",
+				"mickey/newordr_retreat3.ogg",
+				"mickey/newordr_retreat4.ogg",
+				"mickey/newordr_retreat5.ogg",
+				"mickey/newordr_retreat6.ogg",
+				"mickey/newordr_retreat7.ogg",
+				"mickey/newordr_retreat8.ogg",
+				"mickey/newordr_retreat9.ogg",
+				},
+		["melee"]	=	{
+				"mickey/melee1.ogg",
+				"mickey/melee2.ogg",
+				"mickey/melee3.ogg",
+				"mickey/melee4.ogg",
+				},
+		["scld_plr_vclcrazy"]	=	{
+				"mickey/scld_plr_vclcrazy1.ogg",
+				"mickey/scld_plr_vclcrazy2.ogg",
+				"mickey/scld_plr_vclcrazy3.ogg",
+				"mickey/scld_plr_vclcrazy4.ogg",
+				"mickey/scld_plr_vclcrazy5.ogg",
+				},
+		["prst"]	=	{
+				"mickey/prst1.ogg",
+				"mickey/prst2.ogg",
+				"mickey/prst3.ogg",
+				"mickey/prst4.ogg",
+				"mickey/prst5.ogg",
+				},
+		["warn_incmn"]	=	{
+				"mickey/warn_incmn1.ogg",
+				"mickey/warn_incmn2.ogg",
+				"mickey/warn_incmn3.ogg",
+				"mickey/warn_incmn4.ogg",
+				"mickey/warn_incmn5.ogg",
+				"mickey/warn_incmn6.ogg",
+				"mickey/warn_incmn7.ogg",
+				"mickey/warn_incmn9.ogg",
+				},
+		["prs_plr_kll_wmelee"]	=	{
+				"mickey/prs_plr_kll_wmelee1.ogg",
+				"mickey/prs_plr_kll_wmelee2.ogg",
+				"mickey/prs_plr_kll_wmelee3.ogg",
+				},
+		["join_emrg_re"]	=	{
+				"mickey/join_emrg_re1.ogg",
+				"mickey/join_emrg_re2.ogg",
+				"mickey/join_emrg_re3.ogg",
+				},
+		["prs_plr_kll_lots"]	=	{
+				"mickey/prs_plr_kll_lots1.ogg",
+				"mickey/prs_plr_kll_lots2.ogg",
+				"mickey/prs_plr_kll_lots4.ogg",
+				"mickey/prs_plr_kll_lots5.ogg",
+				"mickey/prs_plr_kll_lots6.ogg",
+				},
+		["fall"]	=	{
+				"mickey/fall1.ogg",
+				"mickey/fall2.ogg",
+				},
+		["entervcl_gnr"]	=	{
+				"mickey/entervcl_gnr1.ogg",
+				"mickey/entervcl_gnr2.ogg",
+				"mickey/entervcl_gnr3.ogg",
+				},
+		["ok_plr_trdwpn"]	=	{
+				"mickey/ok_plr_trdwpn1.ogg",
+				"mickey/ok_plr_trdwpn2.ogg",
+				"mickey/ok_plr_trdwpn3.ogg",
+				"mickey/ok_plr_trdwpn4.ogg",
+				"mickey/ok_plr_trdwpn5.ogg",
+				"mickey/ok_plr_trdwpn6.ogg",
+				},
+		["dwn_vcl_ghst"]	=	{
+				"mickey/dwn_vcl_ghst1.ogg",
+				"mickey/dwn_vcl_ghst2.ogg",
+				},
+		["ok"]	=	{
+				"mickey/ok1.ogg",
+				"mickey/ok2.ogg",
+				"mickey/ok3.ogg",
+				"mickey/ok4.ogg",
+				"mickey/ok5.ogg",
+				"mickey/ok6.ogg",
+				},
+		["lmnt_deadally"]	=	{
+				"mickey/lmnt_deadally1.ogg",
+				"mickey/lmnt_deadally2.ogg",
+				},
+		["brsrk"]	=	{
+				"mickey/brsrk1.ogg",
+				},
+		["pain_shld"]	=	{
+				"mickey/pain_shld1.ogg",
+				"mickey/pain_shld2.ogg",
+				"mickey/pain_shld3.ogg",
+				"mickey/pain_shld4.ogg",
+				"mickey/pain_shld5.ogg",
+				"mickey/pain_shld7.ogg",
+				"mickey/pain_shld8.ogg",
+				"mickey/pain_shld9.ogg",
+				},
+		["strk"]	=	{
+				"mickey/strk_100.ogg",
+				"mickey/strk_101.ogg",
+				"mickey/strk_102.ogg",
+				"mickey/strk_103.ogg",
+				"mickey/strk_104.ogg",
+				"mickey/strk_105.ogg",
+				"mickey/strk_106.ogg",
+				"mickey/strk_107.ogg",
+				},
+		["strk_grnd_uncvr"]	=	{
+				"mickey/strk_grnd_uncvr1.ogg",
+				"mickey/strk_grnd_uncvr2.ogg",
+				},
+		["ask_prst_fail"]	=	{
+				"mickey/ask_prst_fail1.ogg",
+				"mickey/ask_prst_fail3.ogg",
+				"mickey/ask_prst_fail4.ogg",
+				},
+		["endcmbt"]	=	{
+				"mickey/endcmbt1.ogg",
+				"mickey/endcmbt2.ogg",
+				"mickey/endcmbt3.ogg",
+				"mickey/endcmbt4.ogg",
+				"mickey/endcmbt5.ogg",
+				},
+		["hail"]	=	{
+				"mickey/hail1.ogg",
+				"mickey/hail2.ogg",
+				"mickey/hail4.ogg",
+				"mickey/hail7.ogg",
+				"mickey/hail8.ogg",
+				"mickey/hail9.ogg",
+				},
+		["panic"]	=	{
+				"mickey/panic1.ogg",
+				"mickey/panic2.ogg",
+				"mickey/panic6.ogg",
+				"mickey/panic7.ogg",
+				"mickey/panic8.ogg",
+				},
+		["forgive"]	=	{
+				"mickey/forgive1.ogg",
+				"mickey/forgive2.ogg",
+				"mickey/forgive3.ogg",
+				"mickey/forgive4.ogg",
+				},
+		["prs_plr_gdgrnd"]	=	{
+				"mickey/prs_plr_gdgrnd1.ogg",
+				"mickey/prs_plr_gdgrnd2.ogg",
+				},
+		["death_assasination"]	=	{
+				"mickey/death_assasination_100.ogg",
+				"mickey/death_assasination_101.ogg",
+				"mickey/death_assasination_102.ogg",
+				"mickey/death_assasination_103.ogg",
+				"mickey/death_assasination_104.ogg",
+				"mickey/death_assasination_105.ogg",
+				"mickey/death_assasination_106.ogg",
+				"mickey/death_assasination_107.ogg",
+				"mickey/death_assasination_108.ogg",
+				"mickey/death_assasination_109.ogg",
+				},
+		["shld_mjr_state_lp"]	=	{
+				"mickey/shld_mjr_state_lp1.ogg",
+				"mickey/shld_mjr_state_lp2.ogg",
+				"mickey/shld_mjr_state_lp3.ogg",
+				"mickey/shld_mjr_state_lp4.ogg",
+				"mickey/shld_mjr_state_lp5.ogg",
+				"mickey/shld_mjr_state_lp6.ogg",
+				"mickey/shld_mjr_state_lp7.ogg",
+				},
+		["pain_mdm"]	=	{
+				"mickey/pain_mdm1.ogg",
+				"mickey/pain_mdm2.ogg",
+				"mickey/pain_mdm3.ogg",
+				"mickey/pain_mdm4.ogg",
+				"mickey/pain_mdm5.ogg",
+				"mickey/pain_mdm6.ogg",
+				"mickey/pain_mdm7.ogg",
+				},
+		["entervcl_trrt"]	=	{
+				"mickey/entervcl_trrt1.ogg",
+				"mickey/entervcl_trrt2.ogg",
+				"mickey/entervcl_trrt3.ogg",
+				},
+		["pain_fall"]	=	{
+				"mickey/pain_fall1.ogg",
+				"mickey/pain_fall2.ogg",
+				"mickey/pain_fall3.ogg",
+				"mickey/pain_fall4.ogg",
+				"mickey/pain_fall5.ogg",
+				},
+		["ordr_re"]	=	{
+				"mickey/ordr_re1.ogg",
+				"mickey/ordr_re2.ogg",
+				"mickey/ordr_re3.ogg",
+				},
+		["ok_plr_trdst_gnr"]	=	{
+				"mickey/ok_plr_trdst_gnr1.ogg",
+				"mickey/ok_plr_trdst_gnr2.ogg",
+				"mickey/ok_plr_trdst_gnr3.ogg",
+				"mickey/ok_plr_trdst_gnr6.ogg",
+				"mickey/ok_plr_trdst_gnr7.ogg",
+				},
+		["grt_plr_srprs"]	=	{
+				"mickey/grt_plr_srprs1.ogg",
+				"mickey/grt_plr_srprs2.ogg",
+				"mickey/grt_plr_srprs3.ogg",
+				"mickey/grt_plr_srprs4.ogg",
+				"mickey/grt_plr_srprs5.ogg",
+				},
+		["hlth_crit_dmg"]	=	{
+				"mickey/hlth_crit_dmg_100.ogg",
+				"mickey/hlth_crit_dmg_101.ogg",
+				"mickey/hlth_crit_dmg_102.ogg",
+				"mickey/hlth_crit_dmg_103.ogg",
+				"mickey/hlth_crit_dmg_104.ogg",
+				"mickey/hlth_crit_dmg_105.ogg",
+				"mickey/hlth_crit_dmg_106.ogg",
+				"mickey/hlth_crit_dmg_107.ogg",
+				"mickey/hlth_crit_dmg_108.ogg",
+				},
+		["stayback"]	=	{
+				"mickey/stayback1.ogg",
+				"mickey/stayback10.ogg",
+				"mickey/stayback11.ogg",
+				"mickey/stayback2.ogg",
+				"mickey/stayback3.ogg",
+				"mickey/stayback4.ogg",
+				"mickey/stayback5.ogg",
+				"mickey/stayback6.ogg",
+				"mickey/stayback7.ogg",
+				"mickey/stayback8.ogg",
+				"mickey/stayback9.ogg",
+				},
+		["chkfoebdy"]	=	{
+				"mickey/chkfoebdy1.ogg",
+				"mickey/chkfoebdy2.ogg",
+				"mickey/chkfoebdy4.ogg",
+				"mickey/chkfoebdy5.ogg",
+				},
+		["grt_plr_vcl"]	=	{
+				"mickey/grt_plr_vcl1.ogg",
+				"mickey/grt_plr_vcl2.ogg",
+				"mickey/grt_plr_vcl3.ogg",
+				"mickey/grt_plr_vcl4.ogg",
+				"mickey/grt_plr_vcl5.ogg",
+				"mickey/grt_plr_vcl7.ogg",
+				},
+		["morefoe"]	=	{
+				"mickey/morefoe1.ogg",
+				"mickey/morefoe2.ogg",
+				"mickey/morefoe3.ogg",
+				"mickey/morefoe4.ogg",
+				"mickey/morefoe5.ogg",
+				"mickey/morefoe6.ogg",
+				"mickey/morefoe8.ogg",
+				},
+		["dth_slnt"]	=	{
+				"mickey/dth_slnt1.ogg",
+				"mickey/dth_slnt2.ogg",
+				"mickey/dth_slnt3.ogg",
+				"mickey/dth_slnt4.ogg",
+				"mickey/dth_slnt5.ogg",
+				"mickey/dth_slnt6.ogg",
+				"mickey/dth_slnt7.ogg",
+				"mickey/dth_slnt8.ogg",
+				"mickey/dth_slnt9.ogg",
+				},
+		["rmd_wpn_snpr"]	=	{
+				"mickey/rmd_wpn_snpr1.ogg",
+				"mickey/rmd_wpn_snpr2.ogg",
+				},
+		["dth_slw"]	=	{
+				"mickey/dth_slw1.ogg",
+				"mickey/dth_slw2.ogg",
+				},
+		["kllmytrgt"]	=	{
+				"mickey/kllmytrgt1.ogg",
+				"mickey/kllmytrgt2.ogg",
+				"mickey/kllmytrgt3.ogg",
+				"mickey/kllmytrgt4.ogg",
+				"mickey/kllmytrgt5.ogg",
+				},
+		["dth"]	=	{
+				"mickey/dth1.ogg",
+				"mickey/dth2.ogg",
+				"mickey/dth4.ogg",
+				"mickey/dth6.ogg",
+				"mickey/dth7.ogg",
+				"mickey/dth8.ogg",
+				},
+		["warn_incmn_fldbm"]	=	{
+				"mickey/warn_incmn_fldbm1.ogg",
+				"mickey/warn_incmn_fldbm2.ogg",
+				},
+		["prs_plr_kll_mjr"]	=	{
+				"mickey/prs_plr_kll_mjr1.ogg",
+				"mickey/prs_plr_kll_mjr2.ogg",
+				"mickey/prs_plr_kll_mjr3.ogg",
+				"mickey/prs_plr_kll_mjr4.ogg",
+				},
+		["warn_trrt_dply"]	=	{
+				"mickey/warn_trrt_dply1.ogg",
+				"mickey/warn_trrt_dply3.ogg",
+				},
+		["newordr_moveon"]	=	{
+				"mickey/newordr_moveon1.ogg",
+				"mickey/newordr_moveon2.ogg",
+				"mickey/newordr_moveon3.ogg",
+				},
+		["pstcmbt_hrd"]	=	{
+				"mickey/pstcmbt_hrd1.ogg",
+				"mickey/pstcmbt_hrd2.ogg",
+				},
+		["prs_plr_kll_blt"]	=	{
+				"mickey/prs_plr_kll_blt1.ogg",
+				"mickey/prs_plr_kll_blt2.ogg",
+				"mickey/prs_plr_kll_blt3.ogg",
+				"mickey/prs_plr_kll_blt4.ogg",
+				},
+		["ready_rocket_launcher"]	=	{
+				"mickey/ready_rocket_launcher_100.ogg",
+				"mickey/ready_rocket_launcher_101.ogg",
+				"mickey/ready_rocket_launcher_102.ogg",
+				"mickey/ready_rocket_launcher_103.ogg",
+				},
+		["whn_hrtblt"]	=	{
+				"mickey/whn_hrtblt1.ogg",
+				"mickey/whn_hrtblt2.ogg",
+				"mickey/whn_hrtblt3.ogg",
+				},
+		["foeordr_advance"]	=	{
+				"mickey/foeordr_advance1.ogg",
+				"mickey/foeordr_advance2.ogg",
+				"mickey/foeordr_advance3.ogg",
+				},
+		["bump"]	=	{
+				"mickey/bump10.ogg",
+				"mickey/bump3.ogg",
+				"mickey/bump6.ogg",
+				"mickey/bump7.ogg",
+				"mickey/bump8.ogg",
+				"mickey/bump9.ogg",
+				},
+		["hrdfoe"]	=	{
+				"mickey/hrdfoe2.ogg",
+				"mickey/hrdfoe3.ogg",
+				"mickey/hrdfoe5.ogg",
+				"mickey/hrdfoe6.ogg",
+				"mickey/hrdfoe8.ogg",
+				"mickey/hrdfoe9.ogg",
+				},
+		["newordr_entervcl"]	=	{
+				"mickey/newordr_entervcl1.ogg",
+				"mickey/newordr_entervcl2.ogg",
+				"mickey/newordr_entervcl3.ogg",
+				"mickey/newordr_entervcl4.ogg",
+				},
+		["grt_intovcl_imgnr"]	=	{
+				"mickey/grt_intovcl_imgnr1.ogg",
+				"mickey/grt_intovcl_imgnr2.ogg",
+				"mickey/grt_intovcl_imgnr5.ogg",
+				"mickey/grt_intovcl_imgnr6.ogg",
+				},
+		["dth_hdsht"]	=	{
+				"mickey/dth_hdsht1.ogg",
+				"mickey/dth_hdsht3.ogg",
+				"mickey/dth_hdsht4.ogg",
+				"mickey/dth_hdsht5.ogg",
+				"mickey/dth_hdsht6.ogg",
+				"mickey/dth_hdsht7.ogg",
+				"mickey/dth_hdsht8.ogg",
+				"mickey/dth_hdsht9.ogg",
+				},
+		["ready_spartan_laser"]	=	{
+				"mickey/ready_spartan_laser_100.ogg",
+				"mickey/ready_spartan_laser_101.ogg",
+				"mickey/ready_spartan_laser_102.ogg",
+				"mickey/ready_spartan_laser_103.ogg",
+				"mickey/ready_spartan_laser_104.ogg",
+				},
+		["strk"]	=	{
+				"mickey/strk1.ogg",
+				"mickey/strk10.ogg",
+				"mickey/strk11.ogg",
+				"mickey/strk12.ogg",
+				"mickey/strk13.ogg",
+				"mickey/strk2.ogg",
+				"mickey/strk3.ogg",
+				"mickey/strk4.ogg",
+				"mickey/strk5.ogg",
+				"mickey/strk6.ogg",
+				"mickey/strk7.ogg",
+				"mickey/strk8.ogg",
+				"mickey/strk9.ogg",
+				},
+		["prs_plr_sniping"]	=	{
+				"mickey/prs_plr_sniping1.ogg",
+				"mickey/prs_plr_sniping2.ogg",
+				},
+		["grt"]	=	{
+				"mickey/grt1.ogg",
+				"mickey/grt3.ogg",
+				"mickey/grt5.ogg",
+				"mickey/grt7.ogg",
+				},
+		["cvr_invsgt"]	=	{
+				"mickey/cvr_invsgt1.ogg",
+				"mickey/cvr_invsgt2.ogg",
+				"mickey/cvr_invsgt3.ogg",
+				},
+		["ok_plr_trdst_dvr"]	=	{
+				"mickey/ok_plr_trdst_dvr1.ogg",
+				"mickey/ok_plr_trdst_dvr2.ogg",
+				"mickey/ok_plr_trdst_dvr5.ogg",
+				"mickey/ok_plr_trdst_dvr6.ogg",
+				"mickey/ok_plr_trdst_dvr8.ogg",
+				},
+		["stun"]	=	{
+				"mickey/stun1.ogg",
+				"mickey/stun2.ogg",
+				"mickey/stun3.ogg",
+				"mickey/stun4.ogg",
+				"mickey/stun5.ogg",
+				},
+		["chr_kllfoe_vclbmp"]	=	{
+				"mickey/chr_kllfoe_vclbmp1.ogg",
+				"mickey/chr_kllfoe_vclbmp2.ogg",
+				"mickey/chr_kllfoe_vclbmp3.ogg",
+				"mickey/chr_kllfoe_vclbmp4.ogg",
+				},
+		["death_headshot"]	=	{
+				"mickey/death_headshot_101.ogg",
+				"mickey/death_headshot_102.ogg",
+				"mickey/death_headshot_103.ogg",
+				"mickey/death_headshot_104.ogg",
+				"mickey/death_headshot_105.ogg",
+				"mickey/death_headshot_106.ogg",
+				"mickey/death_headshot_107.ogg",
+				"mickey/death_headshot_108.ogg",
+				"mickey/death_headshot_109.ogg",
+				"mickey/death_headshot_110.ogg",
+				"mickey/death_headshot_111.ogg",
+				"mickey/death_headshot_112.ogg",
+				},
+		["ask_invsgt_fail"]	=	{
+				"mickey/ask_invsgt_fail1.ogg",
+				"mickey/ask_invsgt_fail2.ogg",
+				"mickey/ask_invsgt_fail3.ogg",
+				},
+		["lst_cntct"]	=	{
+				"mickey/lst_cntct1.ogg",
+				"mickey/lst_cntct2.ogg",
+				"mickey/lst_cntct3.ogg",
+				"mickey/lst_cntct4.ogg",
+				"mickey/lst_cntct5.ogg",
+				"mickey/lst_cntct6.ogg",
+				"mickey/lst_cntct7.ogg",
+				"mickey/lst_cntct8.ogg",
+				},
+		["foeordr_retreat"]	=	{
+				"mickey/foeordr_retreat1.ogg",
+				"mickey/foeordr_retreat2.ogg",
+				"mickey/foeordr_retreat3.ogg",
+				"mickey/foeordr_retreat4.ogg",
+				},
+		["warn_stlth"]	=	{
+				"mickey/warn_stlth1.ogg",
+				"mickey/warn_stlth2.ogg",
+				"mickey/warn_stlth3.ogg",
+				"mickey/warn_stlth4.ogg",
+				},
+		["look_pstcmbt"]	=	{
+				"mickey/look_pstcmbt1.ogg",
+				"mickey/look_pstcmbt2.ogg",
+				"mickey/look_pstcmbt4.ogg",
+				"mickey/look_pstcmbt5.ogg",
+				},
+		["dwn_vcl_bnsh"]	=	{
+				"mickey/dwn_vcl_bnsh1.ogg",
+				"mickey/dwn_vcl_bnsh2.ogg",
+				},
+		["ask_chkallybdyf"]	=	{
+				"mickey/ask_chkallybdyf1.ogg",
+				"mickey/ask_chkallybdyf2.ogg",
+				},
+		["entervcl_psngr"]	=	{
+				"mickey/entervcl_psngr1.ogg",
+				"mickey/entervcl_psngr2.ogg",
+				"mickey/entervcl_psngr3.ogg",
+				"mickey/entervcl_psngr4.ogg",
+				},
+		["warn_trrt"]	=	{
+				"mickey/warn_trrt1.ogg",
+				"mickey/warn_trrt2.ogg",
+				},
+	},
+	["Romeo"] = {
+		["crs_mjrfoe"]	=	{
+				"romeo/crs_mjrfoe1.ogg",
+				"romeo/crs_mjrfoe2.ogg",
+				"romeo/crs_mjrfoe3.ogg",
+				"romeo/crs_mjrfoe4.ogg",
+				},
+		["look_lngtme"]	=	{
+				"romeo/look_lngtme1.ogg",
+				"romeo/look_lngtme10.ogg",
+				"romeo/look_lngtme11.ogg",
+				"romeo/look_lngtme13.ogg",
+				"romeo/look_lngtme14.ogg",
+				"romeo/look_lngtme15.ogg",
+				"romeo/look_lngtme17.ogg",
+				"romeo/look_lngtme18.ogg",
+				"romeo/look_lngtme19.ogg",
+				"romeo/look_lngtme2.ogg",
+				"romeo/look_lngtme20.ogg",
+				"romeo/look_lngtme21.ogg",
+				"romeo/look_lngtme22.ogg",
+				"romeo/look_lngtme26.ogg",
+				"romeo/look_lngtme3.ogg",
+				"romeo/look_lngtme4.ogg",
+				"romeo/look_lngtme5.ogg",
+				"romeo/look_lngtme7.ogg",
+				"romeo/look_lngtme8.ogg",
+				"romeo/look_lngtme9.ogg",
+				},
+		["invt_vcl_gnr"]	=	{
+				"romeo/invt_vcl_gnr1.ogg",
+				"romeo/invt_vcl_gnr2.ogg",
+				"romeo/invt_vcl_gnr3.ogg",
+				},
+		["whn_re"]	=	{
+				"romeo/whn_re1.ogg",
+				"romeo/whn_re3.ogg",
+				},
+		["chr_vcljmp"]	=	{
+				"romeo/chr_vcljmp1.ogg",
+				"romeo/chr_vcljmp10.ogg",
+				"romeo/chr_vcljmp11.ogg",
+				"romeo/chr_vcljmp12.ogg",
+				"romeo/chr_vcljmp2.ogg",
+				"romeo/chr_vcljmp3.ogg",
+				"romeo/chr_vcljmp9.ogg",
+				},
+		["cvr_invsgt"]	=	{
+				"romeo/cvr_invsgt1.ogg",
+				"romeo/cvr_invsgt2.ogg",
+				"romeo/cvr_invsgt3.ogg",
+				"romeo/cvr_invsgt5.ogg",
+				},
+		["warn_wpn_snpr"]	=	{
+				"romeo/warn_wpn_snpr1.ogg",
+				"romeo/warn_wpn_snpr2.ogg",
+				},
+		["newordr_advance"]	=	{
+				"romeo/newordr_advance1.ogg",
+				"romeo/newordr_advance2.ogg",
+				"romeo/newordr_advance3.ogg",
+				"romeo/newordr_advance4.ogg",
+				},
+		["newordr_fllwplr"]	=	{
+				"romeo/newordr_fllwplr_100.ogg",
+				"romeo/newordr_fllwplr_101.ogg",
+				"romeo/newordr_fllwplr_102.ogg",
+				"romeo/newordr_fllwplr_103.ogg",
+				"romeo/newordr_fllwplr_104.ogg",
+				"romeo/newordr_fllwplr_105.ogg",
+				},
+		["foeordr_flanking"]	=	{
+				"romeo/foeordr_flanking1.ogg",
+				"romeo/foeordr_flanking2.ogg",
+				"romeo/foeordr_flanking3.ogg",
+				"romeo/foeordr_flanking4.ogg",
+				},
+		["cvr"]	=	{
+				"romeo/cvr1.ogg",
+				"romeo/cvr2.ogg",
+				"romeo/cvr3.ogg",
+				"romeo/cvr4.ogg",
+				},
+		["seefoe"]	=	{
+				"romeo/seefoe1.ogg",
+				"romeo/seefoe10.ogg",
+				"romeo/seefoe11.ogg",
+				"romeo/seefoe2.ogg",
+				"romeo/seefoe3.ogg",
+				"romeo/seefoe4.ogg",
+				"romeo/seefoe5.ogg",
+				"romeo/seefoe6.ogg",
+				"romeo/seefoe7.ogg",
+				"romeo/seefoe8.ogg",
+				"romeo/seefoe9.ogg",
+				},
+		["warn_vcl_wrth"]	=	{
+				"romeo/warn_vcl_wrth1.ogg",
+				"romeo/warn_vcl_wrth2.ogg",
+				},
+		["rmd"]	=	{
+				"romeo/rmd1.ogg",
+				"romeo/rmd2.ogg",
+				"romeo/rmd3.ogg",
+				"romeo/rmd4.ogg",
+				"romeo/rmd5.ogg",
+				"romeo/rmd6.ogg",
+				"romeo/rmd7.ogg",
+				},
+		["warn_chr_bggr"]	=	{
+				"romeo/warn_chr_bggr1.ogg",
+				"romeo/warn_chr_bggr2.ogg",
+				},
+		["warn_vcl_phntm"]	=	{
+				"romeo/warn_vcl_phntm1.ogg",
+				"romeo/warn_vcl_phntm2.ogg",
+				},
+		["warn_vcl_ghst"]	=	{
+				"romeo/warn_vcl_ghst1.ogg",
+				"romeo/warn_vcl_ghst2.ogg",
+				"romeo/warn_vcl_ghst3.ogg",
+				},
+		["warn_vcl_chpr"]	=	{
+				"romeo/warn_vcl_chpr1.ogg",
+				"romeo/warn_vcl_chpr2.ogg",
+				},
+		["look_pstcmbt"]	=	{
+				"romeo/look_pstcmbt1.ogg",
+				"romeo/look_pstcmbt2.ogg",
+				"romeo/look_pstcmbt3.ogg",
+				"romeo/look_pstcmbt4.ogg",
+				},
+		["charge"]	=	{
+				"romeo/charge1.ogg",
+				"romeo/charge2.ogg",
+				"romeo/charge3.ogg",
+				},
+		["chr_kllfoe_vclbmp"]	=	{
+				"romeo/chr_kllfoe_vclbmp1.ogg",
+				"romeo/chr_kllfoe_vclbmp2.ogg",
+				},
+		["warn_vcl_bnsh"]	=	{
+				"romeo/warn_vcl_bnsh1.ogg",
+				"romeo/warn_vcl_bnsh2.ogg",
+				"romeo/warn_vcl_bnsh3.ogg",
+				},
+		["scld_plr_hrtme"]	=	{
+				"romeo/scld_plr_hrtme1.ogg",
+				"romeo/scld_plr_hrtme2.ogg",
+				"romeo/scld_plr_hrtme3.ogg",
+				"romeo/scld_plr_hrtme4.ogg",
+				"romeo/scld_plr_hrtme5.ogg",
+				"romeo/scld_plr_hrtme6.ogg",
+				"romeo/scld_plr_hrtme7.ogg",
+				"romeo/scld_plr_hrtme8.ogg",
+				},
+		["pain"]	=	{
+				"romeo/pain1.ogg",
+				"romeo/pain2.ogg",
+				"romeo/pain3.ogg",
+				"romeo/pain4.ogg",
+				"romeo/pain5.ogg",
+				"romeo/pain6.ogg",
+				"romeo/pain7.ogg",
+				"romeo/pain8.ogg",
+				},
+		["prst_fail"]	=	{
+				"romeo/prst_fail1.ogg",
+				"romeo/prst_fail10.ogg",
+				"romeo/prst_fail11.ogg",
+				"romeo/prst_fail12.ogg",
+				"romeo/prst_fail3.ogg",
+				"romeo/prst_fail4.ogg",
+				"romeo/prst_fail5.ogg",
+				"romeo/prst_fail6.ogg",
+				"romeo/prst_fail7.ogg",
+				"romeo/prst_fail8.ogg",
+				"romeo/prst_fail9.ogg",
+				},
+		["strk_grnd"]	=	{
+				"romeo/strk_grnd_100.ogg",
+				"romeo/strk_grnd_101.ogg",
+				"romeo/strk_grnd_102.ogg",
+				"romeo/strk_grnd_103.ogg",
+				"romeo/strk_grnd_104.ogg",
+				"romeo/strk_grnd_105.ogg",
+				"romeo/strk_grnd_106.ogg",
+				"romeo/strk_grnd_107.ogg",
+				"romeo/strk_grnd_108.ogg",
+				"romeo/strk_grnd_109.ogg",
+				"romeo/strk_grnd_110.ogg",
+				},
+		["lookcmbt_fllw"]	=	{
+				"romeo/lookcmbt_fllw1.ogg",
+				"romeo/lookcmbt_fllw2.ogg",
+				},
+		["foundfoe_re"]	=	{
+				"romeo/foundfoe_re1.ogg",
+				"romeo/foundfoe_re2.ogg",
+				"romeo/foundfoe_re3.ogg",
+				"romeo/foundfoe_re4.ogg",
+				"romeo/foundfoe_re5.ogg",
+				"romeo/foundfoe_re6.ogg",
+				},
+		["shld_mid_dmg"]	=	{
+				"romeo/shld_mid_dmg_100.ogg",
+				"romeo/shld_mid_dmg_101.ogg",
+				"romeo/shld_mid_dmg_102.ogg",
+				"romeo/shld_mid_dmg_103.ogg",
+				"romeo/shld_mid_dmg_104.ogg",
+				"romeo/shld_mid_dmg_105.ogg",
+				"romeo/shld_mid_dmg_106.ogg",
+				"romeo/shld_mid_dmg_107.ogg",
+				"romeo/shld_mid_dmg_108.ogg",
+				"romeo/shld_mid_dmg_109.ogg",
+				"romeo/shld_mid_dmg_110.ogg",
+				"romeo/shld_mid_dmg_111.ogg",
+				},
+		["foeordr_retreat"]	=	{
+				"romeo/foeordr_retreat1.ogg",
+				"romeo/foeordr_retreat2.ogg",
+				"romeo/foeordr_retreat3.ogg",
+				"romeo/foeordr_retreat4.ogg",
+				},
+		["warn_scrb"]	=	{
+				"romeo/warn_scrb1.ogg",
+				"romeo/warn_scrb2.ogg",
+				"romeo/warn_scrb3.ogg",
+				"romeo/warn_scrb4.ogg",
+				},
+		["cvr_re"]	=	{
+				"romeo/cvr_re1.ogg",
+				"romeo/cvr_re2.ogg",
+				"romeo/cvr_re3.ogg",
+				"romeo/cvr_re4.ogg",
+				},
+		["prs_plr_kll"]	=	{
+				"romeo/prs_plr_kll1.ogg",
+				"romeo/prs_plr_kll2.ogg",
+				},
+		["dwn"]	=	{
+				"romeo/dwn1.ogg",
+				"romeo/dwn2.ogg",
+				"romeo/dwn3.ogg",
+				"romeo/dwn4.ogg",
+				"romeo/dwn5.ogg",
+				"romeo/dwn6.ogg",
+				},
+		["hail_agg"]	=	{
+				"romeo/hail_agg1.ogg",
+				"romeo/hail_agg2.ogg",
+				"romeo/hail_agg3.ogg",
+				},
+		["grt"]	=	{
+				"romeo/grt10.ogg",
+				"romeo/grt11.ogg",
+				"romeo/grt5.ogg",
+				"romeo/grt6.ogg",
+				"romeo/grt7.ogg",
+				"romeo/grt8.ogg",
+				"romeo/grt9.ogg",
+				},
+		["rmd_vcl_ghst"]	=	{
+				"romeo/rmd_vcl_ghst1.ogg",
+				"romeo/rmd_vcl_ghst2.ogg",
+				},
+		["grt_intovcl_mine"]	=	{
+				"romeo/grt_intovcl_mine1.ogg",
+				"romeo/grt_intovcl_mine2.ogg",
+				},
+		["warn_incmn"]	=	{
+				"romeo/warn_incmn1.ogg",
+				"romeo/warn_incmn2.ogg",
+				"romeo/warn_incmn3.ogg",
+				"romeo/warn_incmn4.ogg",
+				"romeo/warn_incmn5.ogg",
+				"romeo/warn_incmn6.ogg",
+				"romeo/warn_incmn7.ogg",
+				},
+		["newordr_support"]	=	{
+				"romeo/newordr_support1.ogg",
+				"romeo/newordr_support2.ogg",
+				"romeo/newordr_support3.ogg",
+				"romeo/newordr_support4.ogg",
+				},
+		["warn_eng_brsrk"]	=	{
+				"romeo/warn_eng_brsrk_100.ogg",
+				"romeo/warn_eng_brsrk_101.ogg",
+				"romeo/warn_eng_brsrk_102.ogg",
+				"romeo/warn_eng_brsrk_103.ogg",
+				"romeo/warn_eng_brsrk_104.ogg",
+				"romeo/warn_eng_brsrk_105.ogg",
+				},
+		["rmd_scrb"]	=	{
+				"romeo/rmd_scrb3.ogg",
+				"romeo/rmd_scrb4.ogg",
+				},
+		["pld"]	=	{
+				"romeo/pld1.ogg",
+				"romeo/pld3.ogg",
+				"romeo/pld4.ogg",
+				"romeo/pld5.ogg",
+				"romeo/pld6.ogg",
+				"romeo/pld7.ogg",
+				},
+		["warn_chr_hntr"]	=	{
+				"romeo/warn_chr_hntr1.ogg",
+				"romeo/warn_chr_hntr2.ogg",
+				},
+		["warn_brsrk"]	=	{
+				"romeo/warn_brsrk1.ogg",
+				"romeo/warn_brsrk2.ogg",
+				},
+		["dwn_vcl_chpr"]	=	{
+				"romeo/dwn_vcl_chpr1.ogg",
+				"romeo/dwn_vcl_chpr2.ogg",
+				"romeo/dwn_vcl_chpr3.ogg",
+				"romeo/dwn_vcl_chpr4.ogg",
+				},
+		["warn"]	=	{
+				"romeo/warn1.ogg",
+				"romeo/warn3.ogg",
+				"romeo/warn4.ogg",
+				"romeo/warn5.ogg",
+				"romeo/warn6.ogg",
+				},
+		["scld_plr_vclcrash"]	=	{
+				"romeo/scld_plr_vclcrash1.ogg",
+				"romeo/scld_plr_vclcrash2.ogg",
+				"romeo/scld_plr_vclcrash4.ogg",
+				"romeo/scld_plr_vclcrash5.ogg",
+				"romeo/scld_plr_vclcrash6.ogg",
+				"romeo/scld_plr_vclcrash7.ogg",
+				},
+		["tnt_mjrfoe"]	=	{
+				"romeo/tnt_mjrfoe1.ogg",
+				"romeo/tnt_mjrfoe2.ogg",
+				"romeo/tnt_mjrfoe3.ogg",
+				},
+		["entervcl_drvr"]	=	{
+				"romeo/entervcl_drvr1.ogg",
+				"romeo/entervcl_drvr2.ogg",
+				},
+		["tnt"]	=	{
+				"romeo/tnt1.ogg",
+				"romeo/tnt10.ogg",
+				"romeo/tnt11.ogg",
+				"romeo/tnt12.ogg",
+				"romeo/tnt13.ogg",
+				"romeo/tnt16.ogg",
+				"romeo/tnt18.ogg",
+				"romeo/tnt19.ogg",
+				"romeo/tnt2.ogg",
+				"romeo/tnt3.ogg",
+				"romeo/tnt4.ogg",
+				"romeo/tnt5.ogg",
+				"romeo/tnt7.ogg",
+				"romeo/tnt8.ogg",
+				"romeo/tnt9.ogg",
+				},
+		["thrtn"]	=	{
+				"romeo/thrtn1.ogg",
+				"romeo/thrtn10.ogg",
+				"romeo/thrtn11.ogg",
+				"romeo/thrtn12.ogg",
+				"romeo/thrtn2.ogg",
+				"romeo/thrtn3.ogg",
+				"romeo/thrtn4.ogg",
+				"romeo/thrtn5.ogg",
+				"romeo/thrtn6.ogg",
+				"romeo/thrtn7.ogg",
+				"romeo/thrtn8.ogg",
+				"romeo/thrtn9.ogg",
+				},
+		["seefoe_downthere"]	=	{
+				"romeo/seefoe_downthere1.ogg",
+				"romeo/seefoe_downthere2.ogg",
+				},
+		["thrwn"]	=	{
+				"romeo/thrwn1.ogg",
+				"romeo/thrwn2.ogg",
+				"romeo/thrwn3.ogg",
+				"romeo/thrwn4.ogg",
+				"romeo/thrwn5.ogg",
+				},
+		["newordr_exitvcl"]	=	{
+				"romeo/newordr_exitvcl1.ogg",
+				"romeo/newordr_exitvcl2.ogg",
+				"romeo/newordr_exitvcl3.ogg",
+				"romeo/newordr_exitvcl4.ogg",
+				"romeo/newordr_exitvcl5.ogg",
+				},
+		["join_stayback"]	=	{
+				"romeo/join_stayback1.ogg",
+				"romeo/join_stayback2.ogg",
+				"romeo/join_stayback3.ogg",
+				"romeo/join_stayback4.ogg",
+				},
+		["cower"]	=	{
+				"romeo/cower1.ogg",
+				"romeo/cower2.ogg",
+				"romeo/cower3.ogg",
+				},
+		["thrtn_mjrfoe"]	=	{
+				"romeo/thrtn_mjrfoe1.ogg",
+				"romeo/thrtn_mjrfoe3.ogg",
+				},
+		["newordr_fllwplr"]	=	{
+				"romeo/newordr_fllwplr3.ogg",
+				},
+		["chkallybdy"]	=	{
+				"romeo/chkallybdy1.ogg",
+				"romeo/chkallybdy2.ogg",
+				"romeo/chkallybdy3.ogg",
+				},
+		["scld_plr_hrt_blt"]	=	{
+				"romeo/scld_plr_hrt_blt1.ogg",
+				"romeo/scld_plr_hrt_blt10.ogg",
+				"romeo/scld_plr_hrt_blt11.ogg",
+				"romeo/scld_plr_hrt_blt12.ogg",
+				"romeo/scld_plr_hrt_blt2.ogg",
+				"romeo/scld_plr_hrt_blt3.ogg",
+				"romeo/scld_plr_hrt_blt4.ogg",
+				"romeo/scld_plr_hrt_blt6.ogg",
+				"romeo/scld_plr_hrt_blt7.ogg",
+				"romeo/scld_plr_hrt_blt8.ogg",
+				"romeo/scld_plr_hrt_blt9.ogg",
+				},
+		["ok_plr_trdst_gnr"]	=	{
+				"romeo/ok_plr_trdst_gnr1.ogg",
+				"romeo/ok_plr_trdst_gnr2.ogg",
+				"romeo/ok_plr_trdst_gnr3.ogg",
+				},
+		["panic_plsmgrnd"]	=	{
+				"romeo/panic_plsmgrnd2.ogg",
+				"romeo/panic_plsmgrnd4.ogg",
+				},
+		["pstcmbt_brt"]	=	{
+				"romeo/pstcmbt_brt1.ogg",
+				"romeo/pstcmbt_brt2.ogg",
+				},
+		["thrtn_foe_re"]	=	{
+				"romeo/thrtn_foe_re1.ogg",
+				"romeo/thrtn_foe_re2.ogg",
+				"romeo/thrtn_foe_re3.ogg",
+				"romeo/thrtn_foe_re4.ogg",
+				"romeo/thrtn_foe_re5.ogg",
+				},
+		["pain_mdm"]	=	{
+				"romeo/pain_mdm1.ogg",
+				"romeo/pain_mdm2.ogg",
+				"romeo/pain_mdm3.ogg",
+				"romeo/pain_mdm4.ogg",
+				"romeo/pain_mdm5.ogg",
+				},
+		["rmd_wpn_hmmr"]	=	{
+				"romeo/rmd_wpn_hmmr1.ogg",
+				"romeo/rmd_wpn_hmmr2.ogg",
+				},
+		["foeordr_fallback"]	=	{
+				"romeo/foeordr_fallback1.ogg",
+				"romeo/foeordr_fallback2.ogg",
+				"romeo/foeordr_fallback3.ogg",
+				"romeo/foeordr_fallback4.ogg",
+				"romeo/foeordr_fallback5.ogg",
+				},
+		["thnk"]	=	{
+				"romeo/thnk1.ogg",
+				"romeo/thnk10.ogg",
+				"romeo/thnk11.ogg",
+				"romeo/thnk2.ogg",
+				"romeo/thnk3.ogg",
+				"romeo/thnk4.ogg",
+				"romeo/thnk5.ogg",
+				"romeo/thnk6.ogg",
+				"romeo/thnk7.ogg",
+				"romeo/thnk8.ogg",
+				"romeo/thnk9.ogg",
+				},
+		["foeordr_advance"]	=	{
+				"romeo/foeordr_advance1.ogg",
+				"romeo/foeordr_advance2.ogg",
+				"romeo/foeordr_advance3.ogg",
+				"romeo/foeordr_advance4.ogg",
+				},
+		["foundfoe_prst"]	=	{
+				"romeo/foundfoe_prst1.ogg",
+				"romeo/foundfoe_prst10.ogg",
+				"romeo/foundfoe_prst11.ogg",
+				"romeo/foundfoe_prst2.ogg",
+				"romeo/foundfoe_prst3.ogg",
+				"romeo/foundfoe_prst4.ogg",
+				"romeo/foundfoe_prst5.ogg",
+				"romeo/foundfoe_prst6.ogg",
+				"romeo/foundfoe_prst7.ogg",
+				"romeo/foundfoe_prst8.ogg",
+				"romeo/foundfoe_prst9.ogg",
+				},
+		["injured"]	=	{
+				"romeo/injured2.ogg",
+				"romeo/injured3.ogg",
+				"romeo/injured4.ogg",
+				"romeo/injured5.ogg",
+				"romeo/injured6.ogg",
+				"romeo/injured7.ogg",
+				"romeo/injured9.ogg",
+				},
+		["tchkallybdy"]	=	{
+				"romeo/tchkallybdy1.ogg",
+				"romeo/tchkallybdy2.ogg",
+				"romeo/tchkallybdy3.ogg",
+				"romeo/tchkallybdy4.ogg",
+				"romeo/tchkallybdy5.ogg",
+				"romeo/tchkallybdy6.ogg",
+				},
+		["melee"]	=	{
+				"romeo/melee_100.ogg",
+				"romeo/melee_101.ogg",
+				"romeo/melee_102.ogg",
+				"romeo/melee_103.ogg",
+				"romeo/melee_104.ogg",
+				"romeo/melee_105.ogg",
+				"romeo/melee_106.ogg",
+				"romeo/melee_107.ogg",
+				"romeo/melee_108.ogg",
+				"romeo/melee_109.ogg",
+				"romeo/melee_110.ogg",
+				"romeo/melee_111.ogg",
+				},
+		["look_plr_fllw"]	=	{
+				"romeo/look_plr_fllw3.ogg",
+				"romeo/look_plr_fllw4.ogg",
+				},
+		["stun"]	=	{
+				"romeo/stun1.ogg",
+				"romeo/stun2.ogg",
+				"romeo/stun3.ogg",
+				"romeo/stun4.ogg",
+				},
+		["strk_vcl_gnr"]	=	{
+				"romeo/strk_vcl_gnr1.ogg",
+				"romeo/strk_vcl_gnr10.ogg",
+				"romeo/strk_vcl_gnr11.ogg",
+				"romeo/strk_vcl_gnr2.ogg",
+				"romeo/strk_vcl_gnr3.ogg",
+				"romeo/strk_vcl_gnr4.ogg",
+				"romeo/strk_vcl_gnr5.ogg",
+				"romeo/strk_vcl_gnr6.ogg",
+				"romeo/strk_vcl_gnr8.ogg",
+				"romeo/strk_vcl_gnr9.ogg",
+				},
+		["hlth_min_dmg"]	=	{
+				"romeo/hlth_min_dmg_100.ogg",
+				"romeo/hlth_min_dmg_101.ogg",
+				"romeo/hlth_min_dmg_102.ogg",
+				"romeo/hlth_min_dmg_103.ogg",
+				"romeo/hlth_min_dmg_104.ogg",
+				"romeo/hlth_min_dmg_105.ogg",
+				"romeo/hlth_min_dmg_106.ogg",
+				"romeo/hlth_min_dmg_107.ogg",
+				"romeo/hlth_min_dmg_108.ogg",
+				"romeo/hlth_min_dmg_109.ogg",
+				"romeo/hlth_min_dmg_110.ogg",
+				"romeo/hlth_min_dmg_111.ogg",
+				"romeo/hlth_min_dmg_112.ogg",
+				"romeo/hlth_min_dmg_113.ogg",
+				},
+		["kamikaze"]	=	{
+				"romeo/kamikaze1.ogg",
+				"romeo/kamikaze2.ogg",
+				"romeo/kamikaze3.ogg",
+				},
+		["warn_wpn_hmmr"]	=	{
+				"romeo/warn_wpn_hmmr1.ogg",
+				"romeo/warn_wpn_hmmr2.ogg",
+				"romeo/warn_wpn_hmmr3.ogg",
+				"romeo/warn_wpn_hmmr4.ogg",
+				"romeo/warn_wpn_hmmr5.ogg",
+				},
+		["chr_kllfoe"]	=	{
+				"romeo/chr_kllfoe1.ogg",
+				"romeo/chr_kllfoe2.ogg",
+				"romeo/chr_kllfoe3.ogg",
+				"romeo/chr_kllfoe4.ogg",
+				"romeo/chr_kllfoe5.ogg",
+				},
+		["rmd_vcl_chpr"]	=	{
+				"romeo/rmd_vcl_chpr1.ogg",
+				"romeo/rmd_vcl_chpr2.ogg",
+				},
+		["dwn_vcl_wrth"]	=	{
+				"romeo/dwn_vcl_wrth1.ogg",
+				"romeo/dwn_vcl_wrth2.ogg",
+				"romeo/dwn_vcl_wrth3.ogg",
+				"romeo/dwn_vcl_wrth4.ogg",
+				"romeo/dwn_vcl_wrth5.ogg",
+				},
+		["chr_kllfoe_blt"]	=	{
+				"romeo/chr_kllfoe_blt1.ogg",
+				"romeo/chr_kllfoe_blt2.ogg",
+				"romeo/chr_kllfoe_blt3.ogg",
+				},
+		["scld"]	=	{
+				"romeo/scld1.ogg",
+				"romeo/scld2.ogg",
+				"romeo/scld3.ogg",
+				"romeo/scld4.ogg",
+				"romeo/scld5.ogg",
+				},
+		["shld_min_state_lp"]	=	{
+				"romeo/shld_min_state_lp1.ogg",
+				"romeo/shld_min_state_lp2.ogg",
+				"romeo/shld_min_state_lp3.ogg",
+				"romeo/shld_min_state_lp4.ogg",
+				},
+		["thnk_plr_btrwpn"]	=	{
+				"romeo/thnk_plr_btrwpn1.ogg",
+				"romeo/thnk_plr_btrwpn2.ogg",
+				"romeo/thnk_plr_btrwpn3.ogg",
+				"romeo/thnk_plr_btrwpn4.ogg",
+				"romeo/thnk_plr_btrwpn5.ogg",
+				"romeo/thnk_plr_btrwpn6.ogg",
+				"romeo/thnk_plr_btrwpn7.ogg",
+				"romeo/thnk_plr_btrwpn8.ogg",
+				"romeo/thnk_plr_btrwpn9.ogg",
+				},
+		["dth_drama"]	=	{
+				"romeo/dth_drama1.ogg",
+				"romeo/dth_drama2.ogg",
+				"romeo/dth_drama3.ogg",
+				"romeo/dth_drama4.ogg",
+				"romeo/dth_drama5.ogg",
+				"romeo/dth_drama6.ogg",
+				"romeo/dth_drama8.ogg",
+				},
+		["newordr_charge"]	=	{
+				"romeo/newordr_charge1.ogg",
+				"romeo/newordr_charge2.ogg",
+				"romeo/newordr_charge3.ogg",
+				"romeo/newordr_charge4.ogg",
+				"romeo/newordr_charge5.ogg",
+				},
+		["srprs"]	=	{
+				"romeo/srprs1.ogg",
+				"romeo/srprs11.ogg",
+				"romeo/srprs2.ogg",
+				"romeo/srprs3.ogg",
+				"romeo/srprs4.ogg",
+				"romeo/srprs6.ogg",
+				"romeo/srprs7.ogg",
+				"romeo/srprs8.ogg",
+				"romeo/srprs9.ogg",
+				},
+		["join_invsgt"]	=	{
+				"romeo/join_invsgt1.ogg",
+				"romeo/join_invsgt2.ogg",
+				"romeo/join_invsgt3.ogg",
+				"romeo/join_invsgt4.ogg",
+				},
+		["pain_mjr"]	=	{
+				"romeo/pain_mjr1.ogg",
+				"romeo/pain_mjr2.ogg",
+				"romeo/pain_mjr3.ogg",
+				},
+		["hlth_mjr_dmg"]	=	{
+				"romeo/hlth_mjr_dmg_100.ogg",
+				"romeo/hlth_mjr_dmg_101.ogg",
+				"romeo/hlth_mjr_dmg_102.ogg",
+				"romeo/hlth_mjr_dmg_103.ogg",
+				"romeo/hlth_mjr_dmg_104.ogg",
+				"romeo/hlth_mjr_dmg_105.ogg",
+				"romeo/hlth_mjr_dmg_106.ogg",
+				"romeo/hlth_mjr_dmg_107.ogg",
+				"romeo/hlth_mjr_dmg_108.ogg",
+				"romeo/hlth_mjr_dmg_110.ogg",
+				},
+		["lmnt"]	=	{
+				"romeo/lmnt1.ogg",
+				"romeo/lmnt2.ogg",
+				"romeo/lmnt3.ogg",
+				"romeo/lmnt4.ogg",
+				"romeo/lmnt5.ogg",
+				},
+		["grt_intovcl_imdvr"]	=	{
+				"romeo/grt_intovcl_imdvr1.ogg",
+				"romeo/grt_intovcl_imdvr2.ogg",
+				},
+		["dwn_vcl_ghst"]	=	{
+				"romeo/dwn_vcl_ghst1.ogg",
+				"romeo/dwn_vcl_ghst2.ogg",
+				},
+		["stayback_tim"]	=	{
+				"romeo/stayback_tim1.ogg",
+				"romeo/stayback_tim2.ogg",
+				"romeo/stayback_tim3.ogg",
+				},
+		["newordr_fallback"]	=	{
+				"romeo/newordr_fallback1.ogg",
+				"romeo/newordr_fallback2.ogg",
+				"romeo/newordr_fallback3.ogg",
+				"romeo/newordr_fallback4.ogg",
+				},
+		["stayback_agg"]	=	{
+				"romeo/stayback_agg1.ogg",
+				"romeo/stayback_agg2.ogg",
+				"romeo/stayback_agg3.ogg",
+				},
+		["grt_plr_vcl"]	=	{
+				"romeo/grt_plr_vcl1.ogg",
+				},
+		["panic_infctnfrm"]	=	{
+				"romeo/panic_infctnfrm1.ogg",
+				"romeo/panic_infctnfrm2.ogg",
+				"romeo/panic_infctnfrm3.ogg",
+				},
+		["strk_grnd"]	=	{
+				"romeo/strk_grnd1.ogg",
+				"romeo/strk_grnd2.ogg",
+				"romeo/strk_grnd3.ogg",
+				"romeo/strk_grnd4.ogg",
+				"romeo/strk_grnd5.ogg",
+				"romeo/strk_grnd6.ogg",
+				},
+		["rmd_vcl_phntm"]	=	{
+				"romeo/rmd_vcl_phntm1.ogg",
+				"romeo/rmd_vcl_phntm2.ogg",
+				"romeo/rmd_vcl_phntm3.ogg",
+				"romeo/rmd_vcl_phntm4.ogg",
+				},
+		["pstcmbt_ez"]	=	{
+				"romeo/pstcmbt_ez1.ogg",
+				"romeo/pstcmbt_ez2.ogg",
+				"romeo/pstcmbt_ez3.ogg",
+				},
+		["invsgt"]	=	{
+				"romeo/invsgt1.ogg",
+				"romeo/invsgt10.ogg",
+				"romeo/invsgt11.ogg",
+				"romeo/invsgt13.ogg",
+				"romeo/invsgt2.ogg",
+				"romeo/invsgt3.ogg",
+				"romeo/invsgt5.ogg",
+				"romeo/invsgt6.ogg",
+				"romeo/invsgt7.ogg",
+				"romeo/invsgt8.ogg",
+				"romeo/invsgt9.ogg",
+				},
+		["srchend"]	=	{
+				"romeo/srchend1.ogg",
+				"romeo/srchend2.ogg",
+				"romeo/srchend3.ogg",
+				"romeo/srchend4.ogg",
+				},
+		["romeo_hurt"]	=	{
+				"romeo/romeo_hurt_1.ogg",
+				"romeo/romeo_hurt_11.ogg",
+				"romeo/romeo_hurt_12.ogg",
+				"romeo/romeo_hurt_13.ogg",
+				"romeo/romeo_hurt_15.ogg",
+				"romeo/romeo_hurt_2.ogg",
+				"romeo/romeo_hurt_4.ogg",
+				"romeo/romeo_hurt_7.ogg",
+				"romeo/romeo_hurt_8.ogg",
+				"romeo/romeo_hurt_9.ogg",
+				},
+		["srch_pinned"]	=	{
+				"romeo/srch_pinned_1.ogg",
+				"romeo/srch_pinned_10.ogg",
+				"romeo/srch_pinned_2.ogg",
+				"romeo/srch_pinned_3.ogg",
+				"romeo/srch_pinned_4.ogg",
+				"romeo/srch_pinned_5.ogg",
+				"romeo/srch_pinned_6.ogg",
+				"romeo/srch_pinned_7.ogg",
+				"romeo/srch_pinned_8.ogg",
+				"romeo/srch_pinned_9.ogg",
+				},
+		["shotfoebdy"]	=	{
+				"romeo/shotfoebdy1.ogg",
+				"romeo/shotfoebdy2.ogg",
+				"romeo/shotfoebdy3.ogg",
+				"romeo/shotfoebdy4.ogg",
+				"romeo/shotfoebdy5.ogg",
+				},
+		["rmd_trrt"]	=	{
+				"romeo/rmd_trrt1.ogg",
+				"romeo/rmd_trrt2.ogg",
+				"romeo/rmd_trrt3.ogg",
+				},
+		["dth"]	=	{
+				"romeo/dth1.ogg",
+				"romeo/dth2.ogg",
+				"romeo/dth3.ogg",
+				"romeo/dth4.ogg",
+				"romeo/dth5.ogg",
+				},
+		["lmnt_deadplr_mc"]	=	{
+				"romeo/lmnt_deadplr_mc_100.ogg",
+				"romeo/lmnt_deadplr_mc_101.ogg",
+				"romeo/lmnt_deadplr_mc_102.ogg",
+				"romeo/lmnt_deadplr_mc_103.ogg",
+				"romeo/lmnt_deadplr_mc_104.ogg",
+				"romeo/lmnt_deadplr_mc_105.ogg",
+				"romeo/lmnt_deadplr_mc_106.ogg",
+				"romeo/lmnt_deadplr_mc_107.ogg",
+				"romeo/lmnt_deadplr_mc_109.ogg",
+				},
+		["hail_tim"]	=	{
+				"romeo/hail_tim1.ogg",
+				"romeo/hail_tim3.ogg",
+				},
+		["warn_stlth_again"]	=	{
+				"romeo/warn_stlth_again1.ogg",
+				"romeo/warn_stlth_again2.ogg",
+				},
+		["look"]	=	{
+				"romeo/look1.ogg",
+				"romeo/look10.ogg",
+				"romeo/look12.ogg",
+				"romeo/look2.ogg",
+				"romeo/look3.ogg",
+				"romeo/look4.ogg",
+				"romeo/look5.ogg",
+				"romeo/look6.ogg",
+				"romeo/look7.ogg",
+				"romeo/look8.ogg",
+				"romeo/look9.ogg",
+				},
+		["neworder_flanking"]	=	{
+				"romeo/neworder_flanking1.ogg",
+				"romeo/neworder_flanking2.ogg",
+				"romeo/neworder_flanking3.ogg",
+				"romeo/neworder_flanking4.ogg",
+				},
+		["pstcmbt_tim"]	=	{
+				"romeo/pstcmbt_tim1.ogg",
+				"romeo/pstcmbt_tim2.ogg",
+				},
+		["ordr_grenade"]	=	{
+				"romeo/ordr_grenade1.ogg",
+				"romeo/ordr_grenade2.ogg",
+				"romeo/ordr_grenade3.ogg",
+				"romeo/ordr_grenade4.ogg",
+				"romeo/ordr_grenade5.ogg",
+				},
+		["shld_maj_dmg"]	=	{
+				"romeo/shld_maj_dmg_100.ogg",
+				"romeo/shld_maj_dmg_101.ogg",
+				"romeo/shld_maj_dmg_102.ogg",
+				"romeo/shld_maj_dmg_103.ogg",
+				"romeo/shld_maj_dmg_104.ogg",
+				"romeo/shld_maj_dmg_105.ogg",
+				"romeo/shld_maj_dmg_106.ogg",
+				"romeo/shld_maj_dmg_107.ogg",
+				"romeo/shld_maj_dmg_108.ogg",
+				"romeo/shld_maj_dmg_109.ogg",
+				"romeo/shld_maj_dmg_110.ogg",
+				},
+		["newordr_leaveplr"]	=	{
+				"romeo/newordr_leaveplr_100.ogg",
+				"romeo/newordr_leaveplr_101.ogg",
+				"romeo/newordr_leaveplr_102.ogg",
+				"romeo/newordr_leaveplr_103.ogg",
+				"romeo/newordr_leaveplr_104.ogg",
+				},
+		["lookcmbt"]	=	{
+				"romeo/lookcmbt_100.ogg",
+				"romeo/lookcmbt_101.ogg",
+				"romeo/lookcmbt_102.ogg",
+				"romeo/lookcmbt_103.ogg",
+				"romeo/lookcmbt_104.ogg",
+				"romeo/lookcmbt_105.ogg",
+				"romeo/lookcmbt_106.ogg",
+				"romeo/lookcmbt_107.ogg",
+				"romeo/lookcmbt_109.ogg",
+				},
+		["foundfoe"]	=	{
+				"romeo/foundfoe1.ogg",
+				"romeo/foundfoe10.ogg",
+				"romeo/foundfoe11.ogg",
+				"romeo/foundfoe12.ogg",
+				"romeo/foundfoe13.ogg",
+				"romeo/foundfoe14.ogg",
+				"romeo/foundfoe2.ogg",
+				"romeo/foundfoe3.ogg",
+				"romeo/foundfoe4.ogg",
+				"romeo/foundfoe5.ogg",
+				"romeo/foundfoe6.ogg",
+				"romeo/foundfoe7.ogg",
+				"romeo/foundfoe8.ogg",
+				"romeo/foundfoe9.ogg",
+				},
+		["look_pstcmbt_hrd"]	=	{
+				"romeo/look_pstcmbt_hrd1.ogg",
+				"romeo/look_pstcmbt_hrd3.ogg",
+				},
+		["dth_fall"]	=	{
+				"romeo/dth_fall1.ogg",
+				"romeo/dth_fall2.ogg",
+				"romeo/dth_fall3.ogg",
+				},
+		["shld_crit_state_lp"]	=	{
+				"romeo/shld_crit_state_lp1.ogg",
+				"romeo/shld_crit_state_lp2.ogg",
+				"romeo/shld_crit_state_lp3.ogg",
+				"romeo/shld_crit_state_lp4.ogg",
+				"romeo/shld_crit_state_lp5.ogg",
+				"romeo/shld_crit_state_lp6.ogg",
+				"romeo/shld_crit_state_lp7.ogg",
+				},
+		["join_re"]	=	{
+				"romeo/join_re1.ogg",
+				"romeo/join_re2.ogg",
+				"romeo/join_re3.ogg",
+				"romeo/join_re4.ogg",
+				},
+		["ordr_pinned"]	=	{
+				"romeo/ordr_pinned1.ogg",
+				"romeo/ordr_pinned2.ogg",
+				"romeo/ordr_pinned3.ogg",
+				"romeo/ordr_pinned4.ogg",
+				"romeo/ordr_pinned5.ogg",
+				},
+		["entervcl"]	=	{
+				"romeo/entervcl1.ogg",
+				"romeo/entervcl2.ogg",
+				"romeo/entervcl3.ogg",
+				"romeo/entervcl4.ogg",
+				},
+		["join_prst"]	=	{
+				"romeo/join_prst1.ogg",
+				"romeo/join_prst2.ogg",
+				"romeo/join_prst3.ogg",
+				"romeo/join_prst4.ogg",
+				},
+		["approve"]	=	{
+				"romeo/approve1.ogg",
+				"romeo/approve2.ogg",
+				"romeo/approve3.ogg",
+				"romeo/approve4.ogg",
+				"romeo/approve5.ogg",
+				"romeo/approve6.ogg",
+				},
+		["seefoe_upthere"]	=	{
+				"romeo/seefoe_upthere1.ogg",
+				"romeo/seefoe_upthere2.ogg",
+				},
+		["shld_recharge"]	=	{
+				"romeo/shld_recharge1.ogg",
+				"romeo/shld_recharge2.ogg",
+				"romeo/shld_recharge3.ogg",
+				"romeo/shld_recharge4.ogg",
+				},
+		["seefoe_agg"]	=	{
+				"romeo/seefoe_agg1.ogg",
+				"romeo/seefoe_agg3.ogg",
+				"romeo/seefoe_agg4.ogg",
+				"romeo/seefoe_agg5.ogg",
+				"romeo/seefoe_agg6.ogg",
+				},
+		["chr_kllfoe_stkplsm"]	=	{
+				"romeo/chr_kllfoe_stkplsm1.ogg",
+				"romeo/chr_kllfoe_stkplsm2.ogg",
+				},
+		["strk_snpr"]	=	{
+				"romeo/strk_snpr1.ogg",
+				"romeo/strk_snpr2.ogg",
+				"romeo/strk_snpr3.ogg",
+				"romeo/strk_snpr4.ogg",
+				},
+		["meleeleap"]	=	{
+				"romeo/meleeleap1.ogg",
+				"romeo/meleeleap2.ogg",
+				"romeo/meleeleap3.ogg",
+				"romeo/meleeleap4.ogg",
+				"romeo/meleeleap5.ogg",
+				"romeo/meleeleap6.ogg",
+				"romeo/meleeleap7.ogg",
+				},
+		["scrn_plr_wrswpn"]	=	{
+				"romeo/scrn_plr_wrswpn1.ogg",
+				"romeo/scrn_plr_wrswpn10.ogg",
+				"romeo/scrn_plr_wrswpn11.ogg",
+				"romeo/scrn_plr_wrswpn13.ogg",
+				"romeo/scrn_plr_wrswpn2.ogg",
+				"romeo/scrn_plr_wrswpn3.ogg",
+				"romeo/scrn_plr_wrswpn5.ogg",
+				"romeo/scrn_plr_wrswpn7.ogg",
+				"romeo/scrn_plr_wrswpn9.ogg",
+				},
+		["lookcmbt_agg"]	=	{
+				"romeo/lookcmbt_agg1.ogg",
+				"romeo/lookcmbt_agg2.ogg",
+				},
+		["scld_plr_wldvcl"]	=	{
+				"romeo/scld_plr_wldvcl1.ogg",
+				"romeo/scld_plr_wldvcl2.ogg",
+				},
+		["scld_plr_wldgrnd"]	=	{
+				"romeo/scld_plr_wldgrnd1.ogg",
+				"romeo/scld_plr_wldgrnd2.ogg",
+				"romeo/scld_plr_wldgrnd3.ogg",
+				},
+		["prs_plr_kll"]	=	{
+				"romeo/prs_plr_kll_100.ogg",
+				"romeo/prs_plr_kll_101.ogg",
+				"romeo/prs_plr_kll_102.ogg",
+				"romeo/prs_plr_kll_103.ogg",
+				"romeo/prs_plr_kll_104.ogg",
+				},
+		["tnt_re"]	=	{
+				"romeo/tnt_re1.ogg",
+				"romeo/tnt_re2.ogg",
+				},
+		["rmd_vcl_wrth"]	=	{
+				"romeo/rmd_vcl_wrth1.ogg",
+				"romeo/rmd_vcl_wrth3.ogg",
+				},
+		["scld_plr_kllally"]	=	{
+				"romeo/scld_plr_kllally1.ogg",
+				"romeo/scld_plr_kllally10.ogg",
+				"romeo/scld_plr_kllally3.ogg",
+				"romeo/scld_plr_kllally5.ogg",
+				"romeo/scld_plr_kllally7.ogg",
+				"romeo/scld_plr_kllally8.ogg",
+				"romeo/scld_plr_kllally9.ogg",
+				},
+		["invsgt_fail"]	=	{
+				"romeo/invsgt_fail1.ogg",
+				"romeo/invsgt_fail10.ogg",
+				"romeo/invsgt_fail11.ogg",
+				"romeo/invsgt_fail12.ogg",
+				"romeo/invsgt_fail3.ogg",
+				"romeo/invsgt_fail4.ogg",
+				"romeo/invsgt_fail5.ogg",
+				"romeo/invsgt_fail7.ogg",
+				"romeo/invsgt_fail8.ogg",
+				"romeo/invsgt_fail9.ogg",
+				},
+		["reload"]	=	{
+				"romeo/reload_100.ogg",
+				"romeo/reload_101.ogg",
+				"romeo/reload_102.ogg",
+				"romeo/reload_103.ogg",
+				"romeo/reload_104.ogg",
+				"romeo/reload_105.ogg",
+				},
+		["prst"]	=	{
+				"romeo/prst1.ogg",
+				"romeo/prst2.ogg",
+				"romeo/prst3.ogg",
+				"romeo/prst4.ogg",
+				"romeo/prst5.ogg",
+				"romeo/prst6.ogg",
+				},
+		["dwn_scrb"]	=	{
+				"romeo/dwn_scrb1.ogg",
+				"romeo/dwn_scrb2.ogg",
+				},
+		["romeo_look_buck_re"]	=	{
+				"romeo/romeo_look_buck_re_100.ogg",
+				"romeo/romeo_look_buck_re_101.ogg",
+				"romeo/romeo_look_buck_re_102.ogg",
+				"romeo/romeo_look_buck_re_103.ogg",
+				"romeo/romeo_look_buck_re_104.ogg",
+				"romeo/romeo_look_buck_re_106.ogg",
+				},
+		["ordr_chkfoebdy"]	=	{
+				"romeo/ordr_chkfoebdy3.ogg",
+				"romeo/ordr_chkfoebdy4.ogg",
+				"romeo/ordr_chkfoebdy5.ogg",
+				"romeo/ordr_chkfoebdy6.ogg",
+				},
+		["jump"]	=	{
+				"romeo/jump_100.ogg",
+				"romeo/jump_101.ogg",
+				"romeo/jump_102.ogg",
+				"romeo/jump_103.ogg",
+				"romeo/jump_104.ogg",
+				},
+		["ask_invsgt_fail"]	=	{
+				"romeo/ask_invsgt_fail1.ogg",
+				"romeo/ask_invsgt_fail2.ogg",
+				"romeo/ask_invsgt_fail3.ogg",
+				"romeo/ask_invsgt_fail4.ogg",
+				"romeo/ask_invsgt_fail5.ogg",
+				"romeo/ask_invsgt_fail6.ogg",
+				},
+		["ask_chkallybdyf"]	=	{
+				"romeo/ask_chkallybdyf1.ogg",
+				"romeo/ask_chkallybdyf2.ogg",
+				"romeo/ask_chkallybdyf3.ogg",
+				},
+		["grt_intovcl"]	=	{
+				"romeo/grt_intovcl1.ogg",
+				"romeo/grt_intovcl2.ogg",
+				"romeo/grt_intovcl3.ogg",
+				"romeo/grt_intovcl4.ogg",
+				},
+		["warn_incmn_grnd"]	=	{
+				"romeo/warn_incmn_grnd1.ogg",
+				"romeo/warn_incmn_grnd2.ogg",
+				"romeo/warn_incmn_grnd3.ogg",
+				"romeo/warn_incmn_grnd4.ogg",
+				"romeo/warn_incmn_grnd5.ogg",
+				"romeo/warn_incmn_grnd6.ogg",
+				"romeo/warn_incmn_grnd7.ogg",
+				"romeo/warn_incmn_grnd8.ogg",
+				},
+		["reload_low_ammo"]	=	{
+				"romeo/reload_low_ammo_100.ogg",
+				"romeo/reload_low_ammo_101.ogg",
+				"romeo/reload_low_ammo_102.ogg",
+				"romeo/reload_low_ammo_103.ogg",
+				"romeo/reload_low_ammo_104.ogg",
+				"romeo/reload_low_ammo_105.ogg",
+				},
+		["seefoe_tim"]	=	{
+				"romeo/seefoe_tim1.ogg",
+				"romeo/seefoe_tim2.ogg",
+				"romeo/seefoe_tim3.ogg",
+				},
+		["buck_look_romeo"]	=	{
+				"romeo/buck_look_romeo_100.ogg",
+				"romeo/buck_look_romeo_101.ogg",
+				"romeo/buck_look_romeo_102.ogg",
+				"romeo/buck_look_romeo_103.ogg",
+				},
+		["rmd_stlth"]	=	{
+				"romeo/rmd_stlth1.ogg",
+				"romeo/rmd_stlth2.ogg",
+				},
+		["betray"]	=	{
+				"romeo/betray1.ogg",
+				"romeo/betray2.ogg",
+				"romeo/betray3.ogg",
+				"romeo/betray4.ogg",
+				"romeo/betray5.ogg",
+				"romeo/betray6.ogg",
+				"romeo/betray7.ogg",
+				"romeo/betray9.ogg",
+				},
+		["rmd_vcl_bnsh"]	=	{
+				"romeo/rmd_vcl_bnsh1.ogg",
+				"romeo/rmd_vcl_bnsh2.ogg",
+				},
+		["regret"]	=	{
+				"romeo/regret1.ogg",
+				"romeo/regret2.ogg",
+				"romeo/regret3.ogg",
+				"romeo/regret4.ogg",
+				},
+		["whn"]	=	{
+				"romeo/whn1.ogg",
+				"romeo/whn2.ogg",
+				"romeo/whn3.ogg",
+				"romeo/whn4.ogg",
+				"romeo/whn5.ogg",
+				"romeo/whn6.ogg",
+				"romeo/whn7.ogg",
+				},
+		["grt_intovcl_imgnr"]	=	{
+				"romeo/grt_intovcl_imgnr1.ogg",
+				"romeo/grt_intovcl_imgnr2.ogg",
+				"romeo/grt_intovcl_imgnr3.ogg",
+				},
+		["dive"]	=	{
+				"romeo/dive1.ogg",
+				"romeo/dive2.ogg",
+				"romeo/dive3.ogg",
+				"romeo/dive4.ogg",
+				"romeo/dive5.ogg",
+				"romeo/dive6.ogg",
+				},
+		["pstcmbt_agg"]	=	{
+				"romeo/pstcmbt_agg1.ogg",
+				"romeo/pstcmbt_agg2.ogg",
+				},
+		["pstcmbt"]	=	{
+				"romeo/pstcmbt1.ogg",
+				"romeo/pstcmbt2.ogg",
+				"romeo/pstcmbt4.ogg",
+				"romeo/pstcmbt5.ogg",
+				"romeo/pstcmbt7.ogg",
+				},
+		["scld_plr_blocking"]	=	{
+				"romeo/scld_plr_blocking5.ogg",
+				"romeo/scld_plr_blocking6.ogg",
+				"romeo/scld_plr_blocking7.ogg",
+				"romeo/scld_plr_blocking8.ogg",
+				"romeo/scld_plr_blocking9.ogg",
+				},
+		["ask_chkallybdy"]	=	{
+				"romeo/ask_chkallybdy1.ogg",
+				"romeo/ask_chkallybdy2.ogg",
+				},
+		["prs_plr_kll_wmelee"]	=	{
+				"romeo/prs_plr_kll_wmelee1.ogg",
+				"romeo/prs_plr_kll_wmelee3.ogg",
+				"romeo/prs_plr_kll_wmelee4.ogg",
+				},
+		["prs_plr_kll_vclbmp"]	=	{
+				"romeo/prs_plr_kll_vclbmp1.ogg",
+				"romeo/prs_plr_kll_vclbmp2.ogg",
+				"romeo/prs_plr_kll_vclbmp3.ogg",
+				},
+		["invt_vcl"]	=	{
+				"romeo/invt_vcl1.ogg",
+				"romeo/invt_vcl2.ogg",
+				"romeo/invt_vcl4.ogg",
+				"romeo/invt_vcl5.ogg",
+				"romeo/invt_vcl6.ogg",
+				},
+		["dodge"]	=	{
+				"romeo/dodge1.ogg",
+				"romeo/dodge2.ogg",
+				"romeo/dodge3.ogg",
+				"romeo/dodge4.ogg",
+				"romeo/dodge6.ogg",
+				},
+		["pld_mjrfoe"]	=	{
+				"romeo/pld_mjrfoe1.ogg",
+				"romeo/pld_mjrfoe3.ogg",
+				"romeo/pld_mjrfoe5.ogg",
+				},
+		["grt_plr_vcl"]	=	{
+				"romeo/grt_plr_vcl_100.ogg",
+				"romeo/grt_plr_vcl_101.ogg",
+				},
+		["prs_plr_kll_blt"]	=	{
+				"romeo/prs_plr_kll_blt1.ogg",
+				"romeo/prs_plr_kll_blt2.ogg",
+				"romeo/prs_plr_kll_blt3.ogg",
+				"romeo/prs_plr_kll_blt5.ogg",
+				"romeo/prs_plr_kll_blt6.ogg",
+				"romeo/prs_plr_kll_blt7.ogg",
+				"romeo/prs_plr_kll_blt8.ogg",
+				},
+		["lookcmbt_tim"]	=	{
+				"romeo/lookcmbt_tim1.ogg",
+				"romeo/lookcmbt_tim2.ogg",
+				"romeo/lookcmbt_tim3.ogg",
+				},
+		["crs"]	=	{
+				"romeo/crs1.ogg",
+				"romeo/crs10.ogg",
+				"romeo/crs12.ogg",
+				"romeo/crs2.ogg",
+				"romeo/crs3.ogg",
+				"romeo/crs4.ogg",
+				"romeo/crs6.ogg",
+				"romeo/crs8.ogg",
+				"romeo/crs9.ogg",
+				},
+		["newordr_retreat"]	=	{
+				"romeo/newordr_retreat1.ogg",
+				"romeo/newordr_retreat2.ogg",
+				"romeo/newordr_retreat3.ogg",
+				"romeo/newordr_retreat4.ogg",
+				},
+		["melee"]	=	{
+				"romeo/melee1.ogg",
+				"romeo/melee2.ogg",
+				"romeo/melee3.ogg",
+				},
+		["scld_plr_vclcrazy"]	=	{
+				"romeo/scld_plr_vclcrazy1.ogg",
+				"romeo/scld_plr_vclcrazy2.ogg",
+				},
+		["kllmytrgt"]	=	{
+				"romeo/kllmytrgt1.ogg",
+				"romeo/kllmytrgt2.ogg",
+				"romeo/kllmytrgt3.ogg",
+				"romeo/kllmytrgt4.ogg",
+				},
+		["ordr_openfire"]	=	{
+				"romeo/ordr_openfire1.ogg",
+				"romeo/ordr_openfire2.ogg",
+				"romeo/ordr_openfire3.ogg",
+				"romeo/ordr_openfire4.ogg",
+				"romeo/ordr_openfire5.ogg",
+				"romeo/ordr_openfire6.ogg",
+				"romeo/ordr_openfire7.ogg",
+				},
+		["prs"]	=	{
+				"romeo/prs1.ogg",
+				"romeo/prs2.ogg",
+				"romeo/prs4.ogg",
+				"romeo/prs5.ogg",
+				"romeo/prs6.ogg",
+				"romeo/prs7.ogg",
+				},
+		["join_emrg_re"]	=	{
+				"romeo/join_emrg_re1.ogg",
+				"romeo/join_emrg_re2.ogg",
+				},
+		["prs_plr_kll_lots"]	=	{
+				"romeo/prs_plr_kll_lots1.ogg",
+				"romeo/prs_plr_kll_lots2.ogg",
+				"romeo/prs_plr_kll_lots3.ogg",
+				"romeo/prs_plr_kll_lots4.ogg",
+				},
+		["panic_onfire"]	=	{
+				"romeo/panic_onfire1.ogg",
+				"romeo/panic_onfire2.ogg",
+				"romeo/panic_onfire3.ogg",
+				},
+		["captured"]	=	{
+				"romeo/captured1.ogg",
+				"romeo/captured2.ogg",
+				"romeo/captured3.ogg",
+				"romeo/captured4.ogg",
+				"romeo/captured5.ogg",
+				"romeo/captured6.ogg",
+				"romeo/captured7.ogg",
+				},
+		["ok_plr_trdwpn"]	=	{
+				"romeo/ok_plr_trdwpn1.ogg",
+				"romeo/ok_plr_trdwpn2.ogg",
+				"romeo/ok_plr_trdwpn3.ogg",
+				"romeo/ok_plr_trdwpn4.ogg",
+				"romeo/ok_plr_trdwpn5.ogg",
+				"romeo/ok_plr_trdwpn6.ogg",
+				"romeo/ok_plr_trdwpn7.ogg",
+				"romeo/ok_plr_trdwpn8.ogg",
+				},
+		["panic"]	=	{
+				"romeo/panic1.ogg",
+				"romeo/panic2.ogg",
+				"romeo/panic3.ogg",
+				},
+		["ok"]	=	{
+				"romeo/ok1.ogg",
+				"romeo/ok2.ogg",
+				"romeo/ok3.ogg",
+				"romeo/ok4.ogg",
+				"romeo/ok5.ogg",
+				"romeo/ok6.ogg",
+				"romeo/ok7.ogg",
+				"romeo/ok8.ogg",
+				"romeo/ok9.ogg",
+				},
+		["lmnt_deadally"]	=	{
+				"romeo/lmnt_deadally1.ogg",
+				},
+		["brsrk"]	=	{
+				"romeo/brsrk1.ogg",
+				},
+		["pain_shld"]	=	{
+				"romeo/pain_shld3.ogg",
+				"romeo/pain_shld7.ogg",
+				},
+		["strk"]	=	{
+				"romeo/strk_100.ogg",
+				"romeo/strk_101.ogg",
+				"romeo/strk_102.ogg",
+				"romeo/strk_103.ogg",
+				"romeo/strk_104.ogg",
+				"romeo/strk_105.ogg",
+				"romeo/strk_106.ogg",
+				},
+		["strk_grnd_uncvr"]	=	{
+				"romeo/strk_grnd_uncvr1.ogg",
+				"romeo/strk_grnd_uncvr2.ogg",
+				},
+		["ask_prst_fail"]	=	{
+				"romeo/ask_prst_fail1.ogg",
+				"romeo/ask_prst_fail3.ogg",
+				"romeo/ask_prst_fail4.ogg",
+				"romeo/ask_prst_fail5.ogg",
+				},
+		["endcmbt"]	=	{
+				"romeo/endcmbt1.ogg",
+				"romeo/endcmbt2.ogg",
+				"romeo/endcmbt3.ogg",
+				"romeo/endcmbt4.ogg",
+				"romeo/endcmbt5.ogg",
+				"romeo/endcmbt6.ogg",
+				},
+		["hail"]	=	{
+				"romeo/hail1.ogg",
+				"romeo/hail2.ogg",
+				"romeo/hail3.ogg",
+				"romeo/hail4.ogg",
+				"romeo/hail5.ogg",
+				},
+		["pain_fall"]	=	{
+				"romeo/pain_fall1.ogg",
+				"romeo/pain_fall3.ogg",
+				"romeo/pain_fall4.ogg",
+				"romeo/pain_fall5.ogg",
+				},
+		["forgive"]	=	{
+				"romeo/forgive1.ogg",
+				"romeo/forgive2.ogg",
+				"romeo/forgive3.ogg",
+				"romeo/forgive4.ogg",
+				},
+		["prs_plr_gdgrnd"]	=	{
+				"romeo/prs_plr_gdgrnd1.ogg",
+				"romeo/prs_plr_gdgrnd2.ogg",
+				"romeo/prs_plr_gdgrnd3.ogg",
+				"romeo/prs_plr_gdgrnd4.ogg",
+				"romeo/prs_plr_gdgrnd5.ogg",
+				"romeo/prs_plr_gdgrnd6.ogg",
+				"romeo/prs_plr_gdgrnd8.ogg",
+				},
+		["death_assasination"]	=	{
+				"romeo/death_assasination_100.ogg",
+				"romeo/death_assasination_102.ogg",
+				"romeo/death_assasination_103.ogg",
+				"romeo/death_assasination_104.ogg",
+				"romeo/death_assasination_105.ogg",
+				"romeo/death_assasination_106.ogg",
+				"romeo/death_assasination_107.ogg",
+				"romeo/death_assasination_108.ogg",
+				"romeo/death_assasination_109.ogg",
+				"romeo/death_assasination_110.ogg",
+				"romeo/death_assasination_111.ogg",
+				"romeo/death_assasination_112.ogg",
+				"romeo/death_assasination_113.ogg",
+				"romeo/death_assasination_114.ogg",
+				},
+		["ordr_re"]	=	{
+				"romeo/ordr_re1.ogg",
+				"romeo/ordr_re2.ogg",
+				"romeo/ordr_re3.ogg",
+				"romeo/ordr_re5.ogg",
+				"romeo/ordr_re6.ogg",
+				},
+		["ordr_grenade_all"]	=	{
+				"romeo/ordr_grenade_all1.ogg",
+				"romeo/ordr_grenade_all2.ogg",
+				"romeo/ordr_grenade_all4.ogg",
+				"romeo/ordr_grenade_all5.ogg",
+				},
+		["entervcl_trrt"]	=	{
+				"romeo/entervcl_trrt1.ogg",
+				"romeo/entervcl_trrt2.ogg",
+				"romeo/entervcl_trrt3.ogg",
+				},
+		["shld_maj_state_lp"]	=	{
+				"romeo/shld_maj_state_lp1.ogg",
+				"romeo/shld_maj_state_lp2.ogg",
+				"romeo/shld_maj_state_lp3.ogg",
+				"romeo/shld_maj_state_lp4.ogg",
+				"romeo/shld_maj_state_lp6.ogg",
+				},
+		["newordr_arrival"]	=	{
+				"romeo/newordr_arrival1.ogg",
+				"romeo/newordr_arrival2.ogg",
+				"romeo/newordr_arrival3.ogg",
+				"romeo/newordr_arrival4.ogg",
+				},
+		["dwn_vcl_bnsh"]	=	{
+				"romeo/dwn_vcl_bnsh1.ogg",
+				"romeo/dwn_vcl_bnsh2.ogg",
+				},
+		["grt_plr_srprs"]	=	{
+				"romeo/grt_plr_srprs1.ogg",
+				"romeo/grt_plr_srprs2.ogg",
+				"romeo/grt_plr_srprs3.ogg",
+				"romeo/grt_plr_srprs6.ogg",
+				},
+		["hlth_crit_dmg"]	=	{
+				"romeo/hlth_crit_dmg_100.ogg",
+				"romeo/hlth_crit_dmg_101.ogg",
+				"romeo/hlth_crit_dmg_102.ogg",
+				"romeo/hlth_crit_dmg_103.ogg",
+				"romeo/hlth_crit_dmg_104.ogg",
+				"romeo/hlth_crit_dmg_105.ogg",
+				"romeo/hlth_crit_dmg_106.ogg",
+				"romeo/hlth_crit_dmg_107.ogg",
+				"romeo/hlth_crit_dmg_108.ogg",
+				"romeo/hlth_crit_dmg_109.ogg",
+				"romeo/hlth_crit_dmg_110.ogg",
+				"romeo/hlth_crit_dmg_111.ogg",
+				"romeo/hlth_crit_dmg_112.ogg",
+				},
+		["stayback"]	=	{
+				"romeo/stayback1.ogg",
+				"romeo/stayback11.ogg",
+				"romeo/stayback12.ogg",
+				"romeo/stayback2.ogg",
+				"romeo/stayback3.ogg",
+				"romeo/stayback4.ogg",
+				"romeo/stayback5.ogg",
+				"romeo/stayback6.ogg",
+				"romeo/stayback7.ogg",
+				"romeo/stayback8.ogg",
+				"romeo/stayback9.ogg",
+				},
+		["lookcmbt"]	=	{
+				"romeo/lookcmbt1.ogg",
+				"romeo/lookcmbt10.ogg",
+				"romeo/lookcmbt2.ogg",
+				"romeo/lookcmbt5.ogg",
+				},
+		["dth_slnt"]	=	{
+				"romeo/dth_slnt1.ogg",
+				"romeo/dth_slnt2.ogg",
+				"romeo/dth_slnt3.ogg",
+				"romeo/dth_slnt6.ogg",
+				"romeo/dth_slnt7.ogg",
+				"romeo/dth_slnt8.ogg",
+				},
+		["dwn_wpn_snpr"]	=	{
+				"romeo/dwn_wpn_snpr1.ogg",
+				"romeo/dwn_wpn_snpr2.ogg",
+				},
+		["dth_slw"]	=	{
+				"romeo/dth_slw1.ogg",
+				"romeo/dth_slw2.ogg",
+				},
+		["rmd_wpn_snpr"]	=	{
+				"romeo/rmd_wpn_snpr1.ogg",
+				"romeo/rmd_wpn_snpr2.ogg",
+				},
+		["chkallybdyf"]	=	{
+				"romeo/chkallybdyf1.ogg",
+				"romeo/chkallybdyf3.ogg",
+				"romeo/chkallybdyf4.ogg",
+				},
+		["chr"]	=	{
+				"romeo/chr1.ogg",
+				"romeo/chr2.ogg",
+				"romeo/chr4.ogg",
+				},
+		["foeordr_charge"]	=	{
+				"romeo/foeordr_charge1.ogg",
+				"romeo/foeordr_charge2.ogg",
+				"romeo/foeordr_charge3.ogg",
+				"romeo/foeordr_charge4.ogg",
+				},
+		["warn_incmn_vclbm"]	=	{
+				"romeo/warn_incmn_vclbm1.ogg",
+				"romeo/warn_incmn_vclbm2.ogg",
+				},
+		["prs_plr_kll_mjr"]	=	{
+				"romeo/prs_plr_kll_mjr1.ogg",
+				"romeo/prs_plr_kll_mjr2.ogg",
+				},
+		["warn_trrt_dply"]	=	{
+				"romeo/warn_trrt_dply1.ogg",
+				"romeo/warn_trrt_dply2.ogg",
+				},
+		["newordr_moveon"]	=	{
+				"romeo/newordr_moveon1.ogg",
+				"romeo/newordr_moveon2.ogg",
+				"romeo/newordr_moveon3.ogg",
+				"romeo/newordr_moveon4.ogg",
+				},
+		["pstcmbt_hrd"]	=	{
+				"romeo/pstcmbt_hrd1.ogg",
+				"romeo/pstcmbt_hrd2.ogg",
+				},
+		["entervlc_gnr"]	=	{
+				"romeo/entervlc_gnr1.ogg",
+				"romeo/entervlc_gnr2.ogg",
+				},
+		["ready_rocket_launcher"]	=	{
+				"romeo/ready_rocket_launcher_100.ogg",
+				"romeo/ready_rocket_launcher_101.ogg",
+				"romeo/ready_rocket_launcher_102.ogg",
+				"romeo/ready_rocket_launcher_103.ogg",
+				},
+		["whn_hrtblt"]	=	{
+				"romeo/whn_hrtblt1.ogg",
+				"romeo/whn_hrtblt2.ogg",
+				},
+		["join_emrg"]	=	{
+				"romeo/join_emrg3.ogg",
+				"romeo/join_emrg4.ogg",
+				},
+		["bump"]	=	{
+				"romeo/bump1.ogg",
+				"romeo/bump2.ogg",
+				"romeo/bump8.ogg",
+				},
+		["hrdfoe"]	=	{
+				"romeo/hrdfoe1.ogg",
+				"romeo/hrdfoe10.ogg",
+				"romeo/hrdfoe2.ogg",
+				"romeo/hrdfoe3.ogg",
+				"romeo/hrdfoe4.ogg",
+				"romeo/hrdfoe5.ogg",
+				"romeo/hrdfoe6.ogg",
+				"romeo/hrdfoe7.ogg",
+				"romeo/hrdfoe8.ogg",
+				"romeo/hrdfoe9.ogg",
+				},
+		["newordr_entervcl"]	=	{
+				"romeo/newordr_entervcl1.ogg",
+				"romeo/newordr_entervcl2.ogg",
+				"romeo/newordr_entervcl4.ogg",
+				"romeo/newordr_entervcl5.ogg",
+				},
+		["grt_plr_vcl_empty"]	=	{
+				"romeo/grt_plr_vcl_empty1.ogg",
+				"romeo/grt_plr_vcl_empty4.ogg",
+				},
+		["dth_hdsht"]	=	{
+				"romeo/dth_hdsht1.ogg",
+				"romeo/dth_hdsht2.ogg",
+				"romeo/dth_hdsht3.ogg",
+				"romeo/dth_hdsht4.ogg",
+				"romeo/dth_hdsht5.ogg",
+				"romeo/dth_hdsht6.ogg",
+				},
+		["ready_spartan_laser"]	=	{
+				"romeo/ready_spartan_laser_100.ogg",
+				"romeo/ready_spartan_laser_101.ogg",
+				"romeo/ready_spartan_laser_102.ogg",
+				"romeo/ready_spartan_laser_103.ogg",
+				"romeo/ready_spartan_laser_104.ogg",
+				},
+		["strk"]	=	{
+				"romeo/strk1.ogg",
+				"romeo/strk10.ogg",
+				"romeo/strk11.ogg",
+				"romeo/strk2.ogg",
+				"romeo/strk3.ogg",
+				"romeo/strk4.ogg",
+				"romeo/strk5.ogg",
+				"romeo/strk6.ogg",
+				"romeo/strk7.ogg",
+				"romeo/strk8.ogg",
+				"romeo/strk9.ogg",
+				},
+		["prs_plr_sniping"]	=	{
+				"romeo/prs_plr_sniping1.ogg",
+				"romeo/prs_plr_sniping2.ogg",
+				},
+		["fall"]	=	{
+				"romeo/fall1.ogg",
+				"romeo/fall2.ogg",
+				"romeo/fall3.ogg",
+				},
+		["dth_mjr"]	=	{
+				"romeo/dth_mjr1.ogg",
+				"romeo/dth_mjr2.ogg",
+				"romeo/dth_mjr3.ogg",
+				"romeo/dth_mjr4.ogg",
+				},
+		["ok_plr_trdst_dvr"]	=	{
+				"romeo/ok_plr_trdst_dvr1.ogg",
+				"romeo/ok_plr_trdst_dvr2.ogg",
+				"romeo/ok_plr_trdst_dvr3.ogg",
+				},
+		["lmnt_deadall"]	=	{
+				"romeo/lmnt_deadall2.ogg",
+				"romeo/lmnt_deadall3.ogg",
+				"romeo/lmnt_deadall5.ogg",
+				},
+		["ordr_stayback"]	=	{
+				"romeo/ordr_stayback1.ogg",
+				"romeo/ordr_stayback2.ogg",
+				"romeo/ordr_stayback3.ogg",
+				"romeo/ordr_stayback4.ogg",
+				},
+		["death_headshot"]	=	{
+				"romeo/death_headshot_100.ogg",
+				"romeo/death_headshot_101.ogg",
+				"romeo/death_headshot_102.ogg",
+				"romeo/death_headshot_103.ogg",
+				"romeo/death_headshot_104.ogg",
+				"romeo/death_headshot_105.ogg",
+				"romeo/death_headshot_106.ogg",
+				"romeo/death_headshot_107.ogg",
+				"romeo/death_headshot_108.ogg",
+				"romeo/death_headshot_109.ogg",
+				},
+		["foeordr_support"]	=	{
+				"romeo/foeordr_support1.ogg",
+				"romeo/foeordr_support2.ogg",
+				"romeo/foeordr_support3.ogg",
+				"romeo/foeordr_support4.ogg",
+				},
+		["lst_cntct"]	=	{
+				"romeo/lst_cntct1.ogg",
+				"romeo/lst_cntct10.ogg",
+				"romeo/lst_cntct2.ogg",
+				"romeo/lst_cntct3.ogg",
+				"romeo/lst_cntct4.ogg",
+				"romeo/lst_cntct5.ogg",
+				"romeo/lst_cntct6.ogg",
+				"romeo/lst_cntct7.ogg",
+				"romeo/lst_cntct8.ogg",
+				"romeo/lst_cntct9.ogg",
+				},
+		["lift"]	=	{
+				"romeo/lift1.ogg",
+				"romeo/lift2.ogg",
+				"romeo/lift3.ogg",
+				"romeo/lift4.ogg",
+				},
+		["warn_stlth"]	=	{
+				"romeo/warn_stlth1.ogg",
+				"romeo/warn_stlth2.ogg",
+				},
+		["look_pstcmbt_ez"]	=	{
+				"romeo/look_pstcmbt_ez1.ogg",
+				"romeo/look_pstcmbt_ez2.ogg",
+				"romeo/look_pstcmbt_ez3.ogg",
+				},
+		["chkfoebdy"]	=	{
+				"romeo/chkfoebdy1.ogg",
+				"romeo/chkfoebdy2.ogg",
+				"romeo/chkfoebdy3.ogg",
+				"romeo/chkfoebdy4.ogg",
+				},
+		["morefoe"]	=	{
+				"romeo/morefoe1.ogg",
+				"romeo/morefoe2.ogg",
+				"romeo/morefoe3.ogg",
+				"romeo/morefoe4.ogg",
+				"romeo/morefoe5.ogg",
+				"romeo/morefoe6.ogg",
+				},
+		["entervcl_psngr"]	=	{
+				"romeo/entervcl_psngr1.ogg",
+				"romeo/entervcl_psngr2.ogg",
+				},
+		["warn_trrt"]	=	{
+				"romeo/warn_trrt1.ogg",
+				"romeo/warn_trrt2.ogg",
+				},
+	},
+	["Rookie"] = {
+		["shld_min_dmg"]	=	{
+				"rookie/shld_min_dmg_100.ogg",
+				"rookie/shld_min_dmg_101.ogg",
+				"rookie/shld_min_dmg_102.ogg",
+				"rookie/shld_min_dmg_103.ogg",
+				"rookie/shld_min_dmg_104.ogg",
+				"rookie/shld_min_dmg_105.ogg",
+				"rookie/shld_min_dmg_106.ogg",
+				"rookie/shld_min_dmg_107.ogg",
+				"rookie/shld_min_dmg_108.ogg",
+				"rookie/shld_min_dmg_109.ogg",
+				"rookie/shld_min_dmg_110.ogg",
+				"rookie/shld_min_dmg_111.ogg",
+				"rookie/shld_min_dmg_112.ogg",
+				"rookie/shld_min_dmg_113.ogg",
+				"rookie/shld_min_dmg_114.ogg",
+				"rookie/shld_min_dmg_115.ogg",
+				"rookie/shld_min_dmg_116.ogg",
+				"rookie/shld_min_dmg_117.ogg",
+				"rookie/shld_min_dmg_118.ogg",
+				"rookie/shld_min_dmg_119.ogg",
+				"rookie/shld_min_dmg_120.ogg",
+				"rookie/shld_min_dmg_121.ogg",
+				},
+		["dth"]	=	{
+				"rookie/dth_100.ogg",
+				"rookie/dth_101.ogg",
+				"rookie/dth_102.ogg",
+				"rookie/dth_103.ogg",
+				"rookie/dth_104.ogg",
+				"rookie/dth_105.ogg",
+				"rookie/dth_106.ogg",
+				"rookie/dth_107.ogg",
+				"rookie/dth_108.ogg",
+				},
+		["dth_drama"]	=	{
+				"rookie/dth_drama_100.ogg",
+				"rookie/dth_drama_101.ogg",
+				"rookie/dth_drama_102.ogg",
+				"rookie/dth_drama_103.ogg",
+				"rookie/dth_drama_104.ogg",
+				"rookie/dth_drama_105.ogg",
+				"rookie/dth_drama_106.ogg",
+				"rookie/dth_drama_107.ogg",
+				"rookie/dth_drama_108.ogg",
+				"rookie/dth_drama_109.ogg",
+				"rookie/dth_drama_110.ogg",
+				"rookie/dth_drama_111.ogg",
+				"rookie/dth_drama_112.ogg",
+				"rookie/dth_drama_113.ogg",
+				"rookie/dth_drama_114.ogg",
+				"rookie/dth_drama_115.ogg",
+				"rookie/dth_drama_116.ogg",
+				"rookie/dth_drama_117.ogg",
+				"rookie/dth_drama_118.ogg",
+				"rookie/dth_drama_119.ogg",
+				"rookie/dth_drama_120.ogg",
+				"rookie/dth_drama_121.ogg",
+				"rookie/dth_drama_122.ogg",
+				"rookie/dth_drama_123.ogg",
+				},
+		["dth_fall"]	=	{
+				"rookie/dth_fall_100.ogg",
+				"rookie/dth_fall_101.ogg",
+				"rookie/dth_fall_102.ogg",
+				"rookie/dth_fall_103.ogg",
+				"rookie/dth_fall_104.ogg",
+				"rookie/dth_fall_105.ogg",
+				},
+		["hlth_mjr_dmg"]	=	{
+				"rookie/hlth_mjr_dmg_100.ogg",
+				"rookie/hlth_mjr_dmg_101.ogg",
+				"rookie/hlth_mjr_dmg_102.ogg",
+				"rookie/hlth_mjr_dmg_103.ogg",
+				"rookie/hlth_mjr_dmg_104.ogg",
+				"rookie/hlth_mjr_dmg_105.ogg",
+				"rookie/hlth_mjr_dmg_106.ogg",
+				"rookie/hlth_mjr_dmg_107.ogg",
+				"rookie/hlth_mjr_dmg_108.ogg",
+				"rookie/hlth_mjr_dmg_109.ogg",
+				"rookie/hlth_mjr_dmg_110.ogg",
+				"rookie/hlth_mjr_dmg_111.ogg",
+				"rookie/hlth_mjr_dmg_112.ogg",
+				"rookie/hlth_mjr_dmg_113.ogg",
+				},
+		["dth_mjr"]	=	{
+				"rookie/dth_mjr_100.ogg",
+				"rookie/dth_mjr_101.ogg",
+				"rookie/dth_mjr_102.ogg",
+				"rookie/dth_mjr_103.ogg",
+				"rookie/dth_mjr_104.ogg",
+				"rookie/dth_mjr_105.ogg",
+				"rookie/dth_mjr_106.ogg",
+				"rookie/dth_mjr_107.ogg",
+				},
+		["shld_crit_lp"]	=	{
+				"rookie/shld_crit_lp1.ogg",
+				"rookie/shld_crit_lp10.ogg",
+				"rookie/shld_crit_lp11.ogg",
+				"rookie/shld_crit_lp12.ogg",
+				"rookie/shld_crit_lp13.ogg",
+				"rookie/shld_crit_lp14.ogg",
+				"rookie/shld_crit_lp15.ogg",
+				"rookie/shld_crit_lp16.ogg",
+				"rookie/shld_crit_lp17.ogg",
+				"rookie/shld_crit_lp18.ogg",
+				"rookie/shld_crit_lp19.ogg",
+				"rookie/shld_crit_lp2.ogg",
+				"rookie/shld_crit_lp20.ogg",
+				"rookie/shld_crit_lp21.ogg",
+				"rookie/shld_crit_lp22.ogg",
+				"rookie/shld_crit_lp23.ogg",
+				"rookie/shld_crit_lp3.ogg",
+				"rookie/shld_crit_lp4.ogg",
+				"rookie/shld_crit_lp5.ogg",
+				"rookie/shld_crit_lp6.ogg",
+				"rookie/shld_crit_lp7.ogg",
+				"rookie/shld_crit_lp8.ogg",
+				"rookie/shld_crit_lp9.ogg",
+				},
+		["dth_hdsht"]	=	{
+				"rookie/dth_hdsht_100.ogg",
+				"rookie/dth_hdsht_101.ogg",
+				"rookie/dth_hdsht_102.ogg",
+				"rookie/dth_hdsht_103.ogg",
+				"rookie/dth_hdsht_104.ogg",
+				"rookie/dth_hdsht_105.ogg",
+				"rookie/dth_hdsht_106.ogg",
+				"rookie/dth_hdsht_107.ogg",
+				"rookie/dth_hdsht_108.ogg",
+				"rookie/dth_hdsht_109.ogg",
+				"rookie/dth_hdsht_110.ogg",
+				"rookie/dth_hdsht_111.ogg",
+				"rookie/dth_hdsht_112.ogg",
+				"rookie/dth_hdsht_113.ogg",
+				},
+		["melee"]	=	{
+				"rookie/melee_100.ogg",
+				"rookie/melee_101.ogg",
+				"rookie/melee_102.ogg",
+				"rookie/melee_103.ogg",
+				"rookie/melee_104.ogg",
+				"rookie/melee_105.ogg",
+				"rookie/melee_106.ogg",
+				"rookie/melee_107.ogg",
+				"rookie/melee_108.ogg",
+				"rookie/melee_109.ogg",
+				"rookie/melee_110.ogg",
+				"rookie/melee_111.ogg",
+				"rookie/melee_112.ogg",
+				"rookie/melee_113.ogg",
+				"rookie/melee_114.ogg",
+				"rookie/melee_115.ogg",
+				},
+		["dth_headshot_fodder"]	=	{
+				"rookie/dth_headshot_fodder_100.ogg",
+				"rookie/dth_headshot_fodder_101.ogg",
+				"rookie/dth_headshot_fodder_102.ogg",
+				"rookie/dth_headshot_fodder_103.ogg",
+				"rookie/dth_headshot_fodder_104.ogg",
+				"rookie/dth_headshot_fodder_105.ogg",
+				"rookie/dth_headshot_fodder_106.ogg",
+				},
+		["xtra_from_jump"]	=	{
+				"rookie/xtra_from_jump1.ogg",
+				"rookie/xtra_from_jump10.ogg",
+				"rookie/xtra_from_jump2.ogg",
+				"rookie/xtra_from_jump5.ogg",
+				"rookie/xtra_from_jump6.ogg",
+				"rookie/xtra_from_jump8.ogg",
+				"rookie/xtra_from_jump9.ogg",
+				},
+		["hlth_min_dmg"]	=	{
+				"rookie/hlth_min_dmg_100.ogg",
+				"rookie/hlth_min_dmg_101.ogg",
+				"rookie/hlth_min_dmg_102.ogg",
+				"rookie/hlth_min_dmg_103.ogg",
+				"rookie/hlth_min_dmg_104.ogg",
+				"rookie/hlth_min_dmg_105.ogg",
+				"rookie/hlth_min_dmg_106.ogg",
+				"rookie/hlth_min_dmg_107.ogg",
+				"rookie/hlth_min_dmg_108.ogg",
+				"rookie/hlth_min_dmg_109.ogg",
+				"rookie/hlth_min_dmg_110.ogg",
+				"rookie/hlth_min_dmg_111.ogg",
+				"rookie/hlth_min_dmg_112.ogg",
+				"rookie/hlth_min_dmg_113.ogg",
+				"rookie/hlth_min_dmg_114.ogg",
+				"rookie/hlth_min_dmg_115.ogg",
+				"rookie/hlth_min_dmg_116.ogg",
+				"rookie/hlth_min_dmg_117.ogg",
+				"rookie/hlth_min_dmg_118.ogg",
+				},
+		["dth_fodder"]	=	{
+				"rookie/dth_fodder_100.ogg",
+				"rookie/dth_fodder_101.ogg",
+				"rookie/dth_fodder_102.ogg",
+				"rookie/dth_fodder_103.ogg",
+				"rookie/dth_fodder_104.ogg",
+				"rookie/dth_fodder_105.ogg",
+				"rookie/dth_fodder_106.ogg",
+				"rookie/dth_fodder_107.ogg",
+				},
+		["strk"]	=	{
+				"rookie/strk_101.ogg",
+				"rookie/strk_102.ogg",
+				"rookie/strk_103.ogg",
+				"rookie/strk_104.ogg",
+				"rookie/strk_105.ogg",
+				"rookie/strk_106.ogg",
+				"rookie/strk_107.ogg",
+				"rookie/strk_108.ogg",
+				"rookie/strk_109.ogg",
+				"rookie/strk_110.ogg",
+				"rookie/strk_111.ogg",
+				"rookie/strk_112.ogg",
+				"rookie/strk_113.ogg",
+				"rookie/strk_114.ogg",
+				"rookie/strk_115.ogg",
+				"rookie/strk_116.ogg",
+				"rookie/strk_117.ogg",
+				"rookie/strk_118.ogg",
+				"rookie/strk_119.ogg",
+				"rookie/strk_120.ogg",
+				"rookie/strk_121.ogg",
+				"rookie/strk_122.ogg",
+				},
+		["shld_mjr_dmg"]	=	{
+				"rookie/shld_mjr_dmg_100.ogg",
+				"rookie/shld_mjr_dmg_101.ogg",
+				"rookie/shld_mjr_dmg_102.ogg",
+				"rookie/shld_mjr_dmg_103.ogg",
+				"rookie/shld_mjr_dmg_104.ogg",
+				"rookie/shld_mjr_dmg_105.ogg",
+				"rookie/shld_mjr_dmg_107.ogg",
+				"rookie/shld_mjr_dmg_108.ogg",
+				"rookie/shld_mjr_dmg_109.ogg",
+				"rookie/shld_mjr_dmg_110.ogg",
+				"rookie/shld_mjr_dmg_111.ogg",
+				"rookie/shld_mjr_dmg_112.ogg",
+				"rookie/shld_mjr_dmg_113.ogg",
+				"rookie/shld_mjr_dmg_114.ogg",
+				"rookie/shld_mjr_dmg_115.ogg",
+				"rookie/shld_mjr_dmg_116.ogg",
+				"rookie/shld_mjr_dmg_117.ogg",
+				"rookie/shld_mjr_dmg_118.ogg",
+				"rookie/shld_mjr_dmg_119.ogg",
+				},
+		["shld_mjr_lp"]	=	{
+				"rookie/shld_mjr_lp1.ogg",
+				"rookie/shld_mjr_lp2.ogg",
+				"rookie/shld_mjr_lp3.ogg",
+				"rookie/shld_mjr_lp4.ogg",
+				},
+		["hlth_crit_dmg"]	=	{
+				"rookie/hlth_crit_dmg_100.ogg",
+				"rookie/hlth_crit_dmg_101.ogg",
+				"rookie/hlth_crit_dmg_102.ogg",
+				"rookie/hlth_crit_dmg_103.ogg",
+				"rookie/hlth_crit_dmg_104.ogg",
+				"rookie/hlth_crit_dmg_106.ogg",
+				"rookie/hlth_crit_dmg_107.ogg",
+				"rookie/hlth_crit_dmg_108.ogg",
+				"rookie/hlth_crit_dmg_109.ogg",
+				"rookie/hlth_crit_dmg_110.ogg",
+				"rookie/hlth_crit_dmg_111.ogg",
+				"rookie/hlth_crit_dmg_112.ogg",
+				"rookie/hlth_crit_dmg_113.ogg",
+				},
+		["shld_min_lp"]	=	{
+				"rookie/shld_min_lp1.ogg",
+				"rookie/shld_min_lp2.ogg",
+				"rookie/shld_min_lp3.ogg",
+				},
+		["dth_mjr_fodder"]	=	{
+				"rookie/dth_mjr_fodder_102.ogg",
+				},
+		["pain_fall"]	=	{
+				"rookie/pain_fall_100.ogg",
+				"rookie/pain_fall_101.ogg",
+				"rookie/pain_fall_102.ogg",
+				"rookie/pain_fall_103.ogg",
+				"rookie/pain_fall_104.ogg",
+				"rookie/pain_fall_105.ogg",
+				"rookie/pain_fall_106.ogg",
+				"rookie/pain_fall_107.ogg",
+				"rookie/pain_fall_108.ogg",
+				"rookie/pain_fall_109.ogg",
+				"rookie/pain_fall_110.ogg",
+				"rookie/pain_fall_111.ogg",
+				"rookie/pain_fall_112.ogg",
+				"rookie/pain_fall_113.ogg",
+				"rookie/pain_fall_114.ogg",
+				"rookie/pain_fall_115.ogg",
+				"rookie/pain_fall_116.ogg",
+				"rookie/pain_fall_117.ogg",
+				"rookie/pain_fall_118.ogg",
+				},
+		["jump"]	=	{
+				"rookie/jump_100.ogg",
+				"rookie/jump_101.ogg",
+				"rookie/jump_102.ogg",
+				"rookie/jump_103.ogg",
+				"rookie/jump_104.ogg",
+				"rookie/jump_105.ogg",
+				"rookie/jump_106.ogg",
+				"rookie/jump_107.ogg",
+				"rookie/jump_108.ogg",
+				"rookie/jump_109.ogg",
+				},
+		["dth_fall_fodder"]	=	{
+				"rookie/dth_fall_fodder_100.ogg",
+				"rookie/dth_fall_fodder_101.ogg",
+				"rookie/dth_fall_fodder_102.ogg",
+				"rookie/dth_fall_fodder_103.ogg",
+				"rookie/dth_fall_fodder_104.ogg",
+				"rookie/dth_fall_fodder_105.ogg",
+				"rookie/dth_fall_fodder_106.ogg",
+				"rookie/dth_fall_fodder_107.ogg",
+				"rookie/dth_fall_fodder_108.ogg",
+				"rookie/dth_fall_fodder_109.ogg",
+				"rookie/dth_fall_fodder_110.ogg",
+				},
+		["shield_recharge"]	=	{
+				"rookie/shield_recharge_100.ogg",
+				"rookie/shield_recharge_101.ogg",
+				"rookie/shield_recharge_102.ogg",
+				"rookie/shield_recharge_103.ogg",
+				"rookie/shield_recharge_104.ogg",
+				"rookie/shield_recharge_105.ogg",
+				"rookie/shield_recharge_106.ogg",
+				},
+		["strk_grnd"]	=	{
+				"rookie/strk_grnd_100.ogg",
+				"rookie/strk_grnd_101.ogg",
+				"rookie/strk_grnd_102.ogg",
+				"rookie/strk_grnd_103.ogg",
+				"rookie/strk_grnd_104.ogg",
+				"rookie/strk_grnd_105.ogg",
+				"rookie/strk_grnd_106.ogg",
+				"rookie/strk_grnd_107.ogg",
+				"rookie/strk_grnd_108.ogg",
+				"rookie/strk_grnd_109.ogg",
+				"rookie/strk_grnd_111.ogg",
+				"rookie/strk_grnd_112.ogg",
+				"rookie/strk_grnd_113.ogg",
+				},
+		["dth_slnt"]	=	{
+				"rookie/dth_slnt_100.ogg",
+				"rookie/dth_slnt_101.ogg",
+				"rookie/dth_slnt_102.ogg",
+				"rookie/dth_slnt_103.ogg",
+				"rookie/dth_slnt_104.ogg",
+				"rookie/dth_slnt_105.ogg",
+				"rookie/dth_slnt_106.ogg",
+				"rookie/dth_slnt_107.ogg",
+				"rookie/dth_slnt_108.ogg",
+				"rookie/dth_slnt_109.ogg",
+				"rookie/dth_slnt_110.ogg",
+				},
+		["extra_from_strk_grnd"]	=	{
+				"rookie/extra_from_strk_grnd_100.ogg",
+				"rookie/extra_from_strk_grnd_101.ogg",
+				"rookie/extra_from_strk_grnd_102.ogg",
+				"rookie/extra_from_strk_grnd_103.ogg",
+				"rookie/extra_from_strk_grnd_104.ogg",
+				"rookie/extra_from_strk_grnd_105.ogg",
+				"rookie/extra_from_strk_grnd_106.ogg",
+				"rookie/extra_from_strk_grnd_107.ogg",
+				"rookie/extra_from_strk_grnd_108.ogg",
+				"rookie/extra_from_strk_grnd_109.ogg",
+				"rookie/extra_from_strk_grnd_110.ogg",
 				},
 	}
 }

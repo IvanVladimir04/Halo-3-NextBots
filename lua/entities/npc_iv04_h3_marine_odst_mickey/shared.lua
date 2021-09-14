@@ -14,6 +14,18 @@ ENT.FriendlyToPlayers = true
 
 ENT.HeadShotImmune = true
 
+ENT.GreetQuote = "grt"
+
+ENT.CanInteractWithOthers = true
+
+ENT.InteractableAllies = {
+	["npc_iv04_h3_marine_odst_dutch"] = "mickey_look_dutch"
+}
+
+ENT.InteractableAlliesResponses = {
+	["npc_iv04_h3_marine_odst_dutch"] = "mickey_look_dutch_re"
+}
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_smg_odst",
 	"astw2_halo3_smg_odst",
@@ -22,6 +34,7 @@ ENT.PossibleWeapons = {
 }
 
 function ENT:DoInit()
+	self.VoiceType = "Mickey"
 	self.ColR = 125--math.random(255)
 	self.ColG = 30--math.random(255)
 	self.ColB = 30--math.random(255)

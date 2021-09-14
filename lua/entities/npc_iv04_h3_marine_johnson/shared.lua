@@ -33,7 +33,7 @@ function ENT:DoInit()
 	self:SetBodygroup(3,math.random(-4,1))
 	self:SetBodygroup(5,math.random(-1,1))
 	self:SetBodygroup(6,8)
-	self:SetSkin(2)
+	self:SetSkin(3)
 	--print(head)
 	self.VoiceType = "Johnson"
 	self:SetBodygroup(8,math.random(-4,3))
