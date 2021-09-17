@@ -2,6 +2,6 @@
 {
 	"$basetexture" "models/Ivan04/sarge_stripe_cc"
 	"$translucent" "1"
-	"$color2"		"{255 0 0}"
+	"$color2"		"{191 0 0}"
 	"$normalmapalphaenvmapmask" "1"
 }
