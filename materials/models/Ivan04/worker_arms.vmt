@@ -1,13 +1,9 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models/Ivan04/marine_arm_pack_perm_diffuse"
-     	"$bumpmap" "models/Ivan04/marine_arm_pack_perm_zbump"
-	"$phongexponenttexture" "models/Ivan04/marine_arm_pack_perm_spec"
+	"$basetexture" "models/Ivan04/worker_dif"
+     "$bumpmap" "models/Ivan04/worker_bump"
 	"$halflambert" 1
 
-	"$phong" "1"
-	"$phongexponent" 5
-	"$phongboost"	"1"
-	"$phongfresnelranges"	"[0.01 0.5 1]"
-	"$color2"		"{250 190 146}"
+
+	"$color2"		"{255 180 180}"
 }

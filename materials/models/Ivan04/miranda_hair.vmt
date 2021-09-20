@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/Ivan04/miranda_hair"
+	"$bumpmap" "models/Ivan04/miranda_hair_bump"
+	"$phongexponenttexture" "models/Ivan04/miranda_hair_spec"
+}
