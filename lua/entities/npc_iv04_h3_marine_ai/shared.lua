@@ -3,6 +3,8 @@ include("voices.lua")
 
 ENT.Base 			= "npc_iv04_weaponuserbase"
 
+ENT.IsHalo3Marine = true
+
 ENT.MoveSpeed = 75
 
 ENT.MoveSpeedMultiplier = 2
@@ -90,6 +92,18 @@ ENT.InteractableAllies = {}
 ENT.PPP = 0
 
 ENT.YPP = 0
+
+ENT.PostCombatQuotes = {
+	[1] = "pstcmbt",
+	[2] = "status",
+	[3] = "pstcmbt_ez",
+	[4] = "pstcmbt_tim",
+	[5] = "pstcmbt_agg"
+}
+
+ENT.PostCombatResponses = {
+	["status"] = "status_re"
+}
 
 ENT.FlinchHitgroups = {
 	[7] = ACT_FLINCH_RIGHTLEG,
@@ -227,7 +241,11 @@ end
 
 function ENT:OnStared(weirdo)
 	if weirdo:IsPlayer() then
-		self:Speak("looklngtme")
+		if self.HasSeenEnemies then
+			self:Speak("look_pstcmbt")
+		else
+			self:Speak("look")
+		end
 	else
 		if weirdo.InteractableAllies[self:GetClass()] then
 			self:Speak(weirdo.InteractableAllies[self:GetClass()])
@@ -261,7 +279,7 @@ function ENT:OnSeenFriendly(ent)
 			end
 			return
 		end
-		if !self.BeingStaredAt and ( ent:IsPlayer() or ( ent.CanInteractWithOthers and !ent.BeingStaredAt ) ) then
+		if !self.BeingStaredAt and !self.CommentedStare and ( ent:IsPlayer() or ( ent.CanInteractWithOthers and !ent.BeingStaredAt ) ) then
 			local st1 = false
 			local st2 = false
 			local st3 = false
@@ -673,6 +691,30 @@ function ENT:DoCustomIdle()
 		self:EnterVehicle(veh)
 		return self:VehicleIdle()
 	end
+	if self.HasSeenEnemies then
+		if !self.CommentedPostCombat then
+			if !PostCombatComment then
+				PostCombatComment = true
+				timer.Simple( 30, function()
+					PostCombatComment = false
+					if IsValid(self) then
+						self.CommentedPostCombat = false
+					end
+				end )
+				self.CommentedPostCombat = true
+				if self.SawFlood then
+					self.SawFlood = false
+					self:Speak("pstcmbt_fld")
+				else
+					local r = self.PostCombatQuotes[math.random(#self.PostCombatQuotes)]
+					self:Speak(r)
+					if self.PostCombatResponses[r] then
+						self:NearbyReply(self.PostCombatResponses[r])
+					end
+				end
+			end
+		end
+	end
 	if self.IsFollowingPlayer then
 		if self.FollowingPlayer:InVehicle() then
 			local ent = self.FollowingPlayer:GetVehicle():GetParent()
@@ -719,6 +761,7 @@ function ENT:OnHaveEnemy(ent)
 		self.HasSeenEnemies = true
 		if ( ent:IsNPC() and ent.IsVJBaseSNPC and string.StartWith(ent:GetClass(), "npc_vj_flood") ) or ent.Faction == "FACTION_FLOOD" then
 			--self:Speak("warn_pureforms") -- Save this for when we make our own
+			self.SawFlood = true
 			self:Speak("warn_flood")
 		elseif ent.IsScarab then
 			self:Speak("warn_scrb")
@@ -903,6 +946,30 @@ function ENT:OnInjured(dmg)
 			self:ResetAI()
 		end
 		if (self:Health() < self.StartHealth/2 or #self:PossibleTargets() > 4 )and !self.Covered then
+			if self:Health() < self.StartHealth/2 then
+				if CombatHurtComment and !CombatHurtCommenter then
+					CombatHurtCommenter = self
+					timer.Simple( math.random(3,4), function()
+						if IsValid(self) then
+							self:Speak("whn_re")
+						end
+					end )
+				end
+				if self:Health() < self.StartHealth/2 then
+					if !CombatHurtComment then
+						CombatHurtComment = true
+						timer.Simple( 30, function()
+							CombatHurtComment = false
+							CombatHurtCommenter = nil
+							if IsValid(self) then
+								self.CommentedCombatHurt = false
+							end
+						end )
+						self.CommentedCombatHurt = true
+						self:Speak("whn")
+					end
+				end
+			end
 			self.Covered = true
 			self.NeedsToCover = true
 			timer.Simple( math.random(10,20), function()
@@ -1548,6 +1615,21 @@ function ENT:OnLostSeenEnemy(ent)
 	self:Speak("lst_cntct")
 end
 
+function ENT:NearbyReply( quote, dist, tim )
+	tim = tim or math.random(2,4)
+	dist = dist or 500
+	for k, v in pairs(ents.FindInSphere(self:GetPos(),dist)) do
+		if v.IsHalo3Marine and v != self and self:CheckRelationships(v) == "friend" and v.Speak then
+			timer.Simple( tim, function()
+				if IsValid(v) then
+					v:Speak(quote)
+				end
+			end )
+			break
+		end
+	end
+end
+
 function ENT:CustomBehaviour(ent,range)
 	ent = ent or self.Enemy
 	if !IsValid(ent) then self:GetATarget() end
@@ -1590,6 +1672,7 @@ function ENT:CustomBehaviour(ent,range)
 				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
 				if math.random(1,2) == 1 then
 					self:Speak("cvr")
+					self:NearbyReply("cvr_re")
 				else
 					self:Speak("newordr_support")
 				end
@@ -1615,6 +1698,7 @@ function ENT:CustomBehaviour(ent,range)
 				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
 				if math.random(1,2) == 1 then
 					self:Speak("cvr")
+					self:NearbyReply("cvr_re")
 				else
 					self:Speak("newordr_support")
 				end
@@ -1963,6 +2047,8 @@ function ENT:OnOtherKilled( victim, info )
 		local new = self:GetATarget()
 		if attacker:IsPlayer() and math.random(1,2) == 1 then
 			self:Speak("kllmytrgt")
+		elseif attacker == self and math.random(1,2) == 1 then
+			self:Speak("chr_kllfoe")
 		end
 		if !IsValid(new) then
 			self:ResetAI()
@@ -2057,7 +2143,7 @@ ENT.UpdateDelay = 0.5
 ENT.TraceMask = MASK_ALL
 
 function ENT:OnLoseEnemy()
-	self:Speak("OnInvestigateFail")
+	self:Speak("endcmbt")
 end
 
 function ENT:ChaseEnt(ent,los)
@@ -2240,9 +2326,7 @@ if SERVER then
 				if self.HasLOSToTarget and !self.DoingMelee then
 					local should, dif = self:ShouldFace(ent)
 					if should then
-						if !self.loco:GetVelocity():IsZero() then
-							self:AngleTo(dif,target)
-						end
+						self:AngleTo(dif,target)
 						return "Gotta turn"
 					end
 					if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
