@@ -1,0 +1,36 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/minor_major_armorwork"
+	"$selfillum"	"1"
+	"$selfillummask" "models/Ivan04/minor_major_armorwork"
+	"$selfillumtint"	"[2 2 2]"
+	"$model" 1
+	"$nocull"	1
+	"$translucent"	1
+	"$blendtintbybasealpha" "1"
+	"$detail" "models/Ivan04/minor_major_armorwork"
+	"$detailblendfactor" 1
+	"$detailblendmode" 5
+	"$detailscale" 1
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 5
+			max 5
+			srcVar1 "$color"
+			resultVar "$phongtint"
+		}
+	}
+}
+
+
+

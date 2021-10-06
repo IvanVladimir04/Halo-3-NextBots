@@ -33,7 +33,7 @@ ENT.GrenadeChances = 30
 
 ENT.MeleeDamage = 0
 
-ENT.MeleeRange = 70
+ENT.MeleeRange = 100
 
 ENT.FlinchChance = 30
 
@@ -547,6 +547,10 @@ function ENT:SetupHoldtypes()
 			self.TransitionAnims["Idle_2_Walk_Passive"] = "pistol_idle_2_walk_passive"
 			self.TransitionAnims["Idle_2_Guard"] = "pistol_idle_2_guard_idle"
 			self.TransitionAnims["Idle_2_Crouch"] = "pistol_idle_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle"] = "pistol_crouch_move_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle_Passive"] = "pistol_crouch_move_2_crouch_idle_passive"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "pistol_crouch_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "pistol_crouch_walk_2_crouch_idle_passive"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "pistol_crouch_idle_2_crouch_move"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "pistol_crouch_idle_2_crouch_move_passive"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "pistol_crouch_idle_2_crouch_walk"
@@ -619,6 +623,10 @@ function ENT:SetupHoldtypes()
 			self.TransitionAnims["Idle_2_Walk_Passive"] = "rifle_idle_2_walk_passive"
 			self.TransitionAnims["Idle_2_Guard"] = "rifle_idle_2_guard_idle"
 			self.TransitionAnims["Idle_2_Crouch"] = "rifle_idle_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle"] = "rifle_crouch_move_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle_Passive"] = "rifle_crouch_move_2_crouch_idle_passive"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "rifle_crouch_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "rifle_crouch_walk_2_crouch_idle_passive"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "rifle_crouch_idle_2_crouch_move"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "rifle_crouch_idle_2_crouch_move_passive"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "rifle_crouch_idle_2_crouch_walk"
@@ -666,6 +674,10 @@ function ENT:SetupHoldtypes()
 			self.TransitionAnims["Idle_2_Walk_Passive"] = "missile_idle_2_walk_passive"
 			self.TransitionAnims["Idle_2_Guard"] = "missile_idle_2_guard_idle"
 			self.TransitionAnims["Idle_2_Crouch"] = "missile_idle_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle"] = "missile_crouch_move_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle_Passive"] = "missile_crouch_move_2_crouch_idle_passive"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "missile_crouch_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "missile_crouch_walk_2_crouch_idle_passive"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "missile_crouch_idle_2_crouch_move"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "missile_crouch_idle_2_crouch_move_passive"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "missile_crouch_idle_2_crouch_walk"
@@ -832,6 +844,9 @@ function ENT:OnHaveEnemy(ent)
 	end
 	self.HasLOSToTarget = true
 	self.RegisteredTargetPositions[ent] = ent:GetPos()
+	if !self.DoneStealth and self:IsUndetected() then
+		self.HaltShoot = true
+	end
 end
 
 function ENT:AlertAllies(ent) -- We find allies in sphere and we alert them
@@ -1084,16 +1099,10 @@ end
 
 function ENT:DoMeleeDamage()
 	-- lol
-	--[[local damage = self.MeleeDamage
-	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter(), self:GetForward(), self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
+	local damage = self.MeleeDamage
+	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter()+self:GetUp()*20, self:GetForward(), self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
 		if v != self and self:CheckRelationships(v) != "friend" then
-			local d = DamageInfo()
-			d:SetDamage( damage )
-			d:SetAttacker( self )
-			d:SetInflictor( self )
-			d:SetDamageType( DMG_SLASH )
-			d:SetDamagePosition( v:NearestPoint( self:WorldSpaceCenter() ) )
-			v:TakeDamageInfo(d)
+			--print(v)
 			--v:EmitSound( self.OnMeleeSoundTbl[math.random(1,#self.OnMeleeSoundTbl)] )
 			if v:IsPlayer() then
 				v:ViewPunch( self.ViewPunchPlayers )
@@ -1101,8 +1110,22 @@ function ENT:DoMeleeDamage()
 			if IsValid(v:GetPhysicsObject()) then
 				v:GetPhysicsObject():ApplyForceCenter( v:GetPhysicsObject():GetPos() +((v:GetPhysicsObject():GetPos()-self:GetPos()):GetNormalized())*self.MeleeForce )
 			end
+			local ang = (self:WorldSpaceCenter()-v:WorldSpaceCenter()):Angle()
+			local dif = math.AngleDifference(ang.y,v:GetAngles().y)
+			if dif < 0 then dif = dif + 360 end
+			--print(dif)
+			if dif > 120 and dif < 240 then
+				damage = v:Health()
+			end
+			local d = DamageInfo()
+			d:SetDamage( damage )
+			d:SetAttacker( self )
+			d:SetInflictor( self )
+			d:SetDamageType( DMG_SLASH )
+			d:SetDamagePosition( v:NearestPoint( self:WorldSpaceCenter() ) )
+			v:TakeDamageInfo(d)
 		end
-	end]]
+	end
 end
 
 function ENT:ThrowGrenade()
@@ -1618,8 +1641,8 @@ end
 function ENT:NearbyReply( quote, dist, tim )
 	tim = tim or math.random(2,4)
 	dist = dist or 500
-	for k, v in pairs(ents.FindInSphere(self:GetPos(),dist)) do
-		if v.IsHalo3Marine and v != self and self:CheckRelationships(v) == "friend" and v.Speak then
+	for k, v in ipairs(self:NearbyAllies( self:GetPos(), dist ) ) do
+		if v.IsHalo3Marine and v.Speak then
 			timer.Simple( tim, function()
 				if IsValid(v) then
 					v:Speak(quote)
@@ -1630,19 +1653,53 @@ function ENT:NearbyReply( quote, dist, tim )
 	end
 end
 
+function ENT:NearbyAllies( pos, dist )
+	local tbl = {}
+	for k, v in pairs(ents.FindInSphere(pos,dist)) do
+		if v != self and self:CheckRelationships(v) == "friend" then
+			tbl[#tbl+1] = v
+		end
+	end
+	return tbl
+end
+
+function ENT:StandBy()
+	self:DoTransitionAnim("Idle_2_Crouch")
+	self:ResetSequence(self.CrouchIdleAnim[math.random(#self.CrouchIdleAnim)])
+	while self:IsUndetected() do
+		coroutine.wait(1)
+	end
+	self.HaltShoot = false
+end
+
+function ENT:SneakKill(ent)
+	ent = ent or self.Enemy
+	self.GoingForSneakKill = true
+	self:DoTransitionAnim("Idle_2_Crouch")
+	self:StartMovingAnimations(self.CrouchMoveAnim[math.random(#self.CrouchMoveAnim)],self.MoveSpeed)
+	self:MoveToPos(ent:GetPos()+ent:GetForward()*-20,{callback = function()
+		if !self:IsUndetected() then
+			self.HaltShoot = false
+			self:ResetAI()
+		end
+	end})
+	self:ResetAI()
+end
+
 function ENT:CustomBehaviour(ent,range)
 	ent = ent or self.Enemy
 	if !IsValid(ent) then self:GetATarget() end
 	if !IsValid(self.Enemy) then return else ent = self.Enemy end
 	if self.IsInVehicle then return self:VehicleBehavior(ent,range) end
 	local los = self.HasLOSToTarget
-	local range = range or self.DistToTarget
+	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
 	if !self.DistToTarget then self.DistToTarget = range end
 	local can, veh = self:CanEnterAVehicle()
 	if can then
 		self:EnterVehicle(veh)
 		return self:VehicleBehavior(ent,range)
 	end
+	--print(los, !self.DoneMelee, range < self.MeleeRange^2, range, self.MeleeRange^2, math.sqrt(range), self.MeleeRange )
 	if los and !self.DoneMelee and range < self.MeleeRange^2 then
 		self:DoMelee()
 	end
@@ -1650,6 +1707,26 @@ function ENT:CustomBehaviour(ent,range)
 		self.CanThrowGrenade = true
 	else
 		self.CanThrowGrenade = false
+	end
+	if ( !self.DoneStealth or self.GoingForSneakKill ) and self:IsUndetected() then
+		self.DoneStealth = true
+		for k, v in ipairs(self:NearbyAllies(self:GetPos(),512)) do
+			if v:IsPlayer() and v:Alive() and self.FriendlyToPlayers then
+				self.SawPlayer = true
+			end
+		end
+		timer.Simple( 60, function()
+			if IsValid(self) then
+				self.DoneStealth = false
+				self.SawPlayer = false
+				self.GoingForSneakKill = false
+			end
+		end )
+		if self.SawPlayer then
+			self:StandBy()
+		else
+			self:SneakKill(ent)
+		end
 	end
 	if !IsValid(ent) then return end
 	if self.AIType == "Static" then
@@ -1783,13 +1860,27 @@ end
 function ENT:TransitionChecks( anim, speed )
 	local str
 	local kind
+	-- TO DO: Re-port crouch move start animations
+--	if speed == self.MoveSpeed*0.5 then
+		--str = "Crouch_Idle_2_Crouch_Walk"
+		--kind = "Crouch_Walk"
 	if speed == self.MoveSpeed then
-		if IsValid(self.Enemy) then
-			str = "Idle_2_Walk"
+		if self.GoingForSneakKill then
+			--if IsValid(self.Enemy) then
+			--str = "Crouch_Idle_2_Crouch_Move"
+			--else
+				--str = "Crouch_Idle_2_Crouch_Move_Passive"
+			--end
+			--kind = "Crouch_Move"
+			return false
 		else
-			str = "Idle_2_Walk_Passive"
+			if IsValid(self.Enemy) then
+				str = "Idle_2_Walk"
+			else
+				str = "Idle_2_Walk_Passive"
+			end
+			kind = "Walk"
 		end
-		kind = "Walk"
 	elseif speed == (self.MoveSpeed*self.MoveSpeedMultiplier) then
 		if IsValid(self.Enemy) then
 			str = "Idle_2_Move"
@@ -1816,6 +1907,18 @@ function ENT:TransitionArrival( typ, enemy )
 		else
 			str = "Move_2_Idle_Passive"
 		end
+	elseif typ == "Crouch_Walk" then
+		if enemy then
+			str = "Crouch_Walk_2_Crouch_Idle"
+		else
+			str = "Crouch_Walk_2_Crouch_Idle_Passive"
+		end
+	elseif typ == "Crouch_Move" then
+		--if enemy then
+		str = "Crouch_Move_2_Crouch_Idle"
+		--else
+		--	str = "Crouch_Move_2_Crouch_Idle_Passive"
+		--end
 	end
 	self:DoTransitionAnim(str)
 	return str
@@ -2285,7 +2388,7 @@ if SERVER then
 			end
 		end
 		if self.LastThinkTime < CurTime() then -- We can think	
-			if GetConVar("ai_disabled"):GetInt() == 1 or self.Flying or self.AnimBusy then return end
+			if GetConVar("ai_disabled"):GetInt() == 1 or self.Flying or self.HaltShoot or self.AnimBusy then return end
 			self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 			if IsValid(self.Enemy) then
 				local ent = self.Enemy
@@ -2401,6 +2504,9 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
 				-- We are stuck, don't bother
 				return "Give up"
+			end
+			if options.callback then
+				options.callback()
 			end
 			self.UpdateTime = CurTime()+self.MoveUpdateTime
 		end
@@ -2522,7 +2628,7 @@ end
 
 function ENT:BodyUpdate()
 	local act = self:GetActivity()
-	if !self.loco:GetVelocity():IsZero() and self.loco:IsOnGround() then
+	if !self.loco:GetVelocity():IsZero() and self.loco:IsOnGround() and self.loco:IsAttemptingToMove() then
 		if !self.LMove then
 			self.LMove = CurTime()+0.3
 		else

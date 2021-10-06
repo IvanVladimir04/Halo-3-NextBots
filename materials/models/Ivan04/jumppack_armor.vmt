@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/jumppack_stalker_armor_diffusework"
+	"$bumpmap" "models/Ivan04/jumppack_stalker_armor_bump"
+	"$model" 1
+	$phong				1
+	$phongboost		2.35
+	$phongexponent		15
+	"$phongtint"          "[1 3 6]"
+	$phongfresnelranges	"[.3 4 8]"
+	"$rimlight" 1
+	"$rimlightexponent"       11
+	"$color2" "[3 3 3]"
+}
+
+
+

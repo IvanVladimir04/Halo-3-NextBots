@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/Ivan04/jumppack_stalker_armor_diffusework"
+	"$additive" 1
+	"$nocull"		1
+}
+
+
+

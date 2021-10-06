@@ -18,4 +18,5 @@
 	$rimlight                         "1"
 	$rimlightexponent                 "5"
 	$rimlightboost                     "0.05"
+	"$color2" "[6 6 6]"
 }

@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/brute_hair"
+	"$model" 1
+	"$translucent"	"1"
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 0
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 0
+			max 0
+			srcVar1 "$color"
+			resultVar "$phongtint"
+		}
+	}
+}
+
+
+

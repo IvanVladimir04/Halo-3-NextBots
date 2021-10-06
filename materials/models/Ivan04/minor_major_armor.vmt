@@ -1,0 +1,37 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Ivan04/minor_major_armorwork"
+	"$bumpmap" "models/Ivan04/minor_major_armor_bump"
+	"$model" 1
+	$phong				1
+	$phongboost		1.65
+	$phongexponent		20
+	$phongtint		"[.85 .85 .85]"
+	$phongfresnelranges	"[.3 4 8]"
+	"$rimlight" 1
+	"$rimlightexponent"       11
+	"$color2"		"[3 3 3]"
+	"$blendtintbybasealpha" "1"
+
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 0.1
+			max 1
+			srcVar1 "$color"
+			resultVar "$phongtint"
+		}
+	}
+}
+
+
+
