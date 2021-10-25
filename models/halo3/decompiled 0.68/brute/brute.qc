@@ -1150,7 +1150,7 @@ $sequence "rifle_move_2_idle" {
 	"rifle_move_left_2_idle"
 	"rifle_move_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1165,7 +1165,7 @@ $sequence "rifle_move_2_idle_passive" {
 	"rifle_move_left_2_idle"
 	"rifle_move_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1180,7 +1180,7 @@ $sequence "rifle_walk_2_idle" {
 	"rifle_walk_left_2_idle"
 	"rifle_walk_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1195,7 +1195,7 @@ $sequence "rifle_walk_2_idle_passive" {
 	"rifle_walk_left_2_idle"
 	"rifle_walk_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1210,7 +1210,7 @@ $sequence "rifle_idle_2_move" {
 	"rifle_idle_2_move_left"
 	"rifle_idle_2_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1225,7 +1225,7 @@ $sequence "rifle_idle_2_move_passive" {
 	"rifle_idle_2_move_left"
 	"rifle_idle_2_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1240,7 +1240,7 @@ $sequence "rifle_idle_2_walk" {
 	"rifle_idle_2_walk_left"
 	"rifle_idle_2_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1255,7 +1255,7 @@ $sequence "rifle_idle_2_walk_passive" {
 	"rifle_idle_2_walk_left"
 	"rifle_idle_2_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1270,7 +1270,7 @@ $sequence "rifle_move" {
 	"rifle_move_left"
 	"rifle_move_back"
 	activity "ACT_RUN_AIM_RIFLE" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1285,7 +1285,7 @@ $sequence "rifle_move_passive" {
 	"rifle_move_left"
 	"rifle_move_back"
 	activity "ACT_RUN_PASSIVE_RIFLE" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1300,7 +1300,7 @@ $sequence "rifle_walk" {
 	"brute_anims\rifle_walk_4.smd"
 	"brute_anims\rifle_walk_5.smd"
 	activity "ACT_WALK" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -1318,7 +1318,7 @@ $sequence "rifle_walk_passive" {
 	"brute_anims\rifle_walk_passive_4.smd"
 	"brute_anims\rifle_walk_passive_5.smd"
 	activity "ACT_WALK" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2

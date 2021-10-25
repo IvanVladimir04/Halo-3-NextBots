@@ -4258,7 +4258,7 @@ $sequence "rifle_move_2_idle" {
 	"rifle_move_left_2_idle"
 	"rifle_move_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4275,7 +4275,7 @@ $sequence "rifle_move_2_idle_passive" {
 	"rifle_move_left_2_idle"
 	"rifle_move_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4318,7 +4318,7 @@ $sequence "rifle_walk_2_idle" {
 	"rifle_walk_left_2_idle"
 	"rifle_walk_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4335,7 +4335,7 @@ $sequence "rifle_walk_2_idle_passive" {
 	"rifle_walk_left_2_idle"
 	"rifle_walk_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4378,7 +4378,7 @@ $sequence "rifle_crouch_move_2_crouch_idle" {
 	"rifle_crouch_move_left_2_crouch_idle"
 	"rifle_crouch_move_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4395,7 +4395,7 @@ $sequence "rifle_crouch_move_2_crouch_idle_passive" {
 	"rifle_crouch_move_left_2_crouch_idle"
 	"rifle_crouch_move_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4436,7 +4436,7 @@ $sequence "rifle_crouch_walk_2_crouch_idle" {
 	"rifle_crouch_walk_left_2_crouch_idle"
 	"rifle_crouch_walk_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4453,7 +4453,7 @@ $sequence "rifle_crouch_walk_2_idle_passive" {
 	"rifle_crouch_walk_left_2_crouch_idle"
 	"rifle_crouch_walk_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4496,7 +4496,7 @@ $sequence "rifle_idle_2_move" {
 	"rifle_idle_2_move_left"
 	"rifle_idle_2_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4513,7 +4513,7 @@ $sequence "rifle_idle_2_move_passive" {
 	"rifle_idle_2_move_left"
 	"rifle_idle_2_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4554,7 +4554,7 @@ $sequence "rifle_idle_2_walk" {
 	"rifle_idle_2_walk_left"
 	"rifle_idle_2_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4571,7 +4571,7 @@ $sequence "rifle_idle_2_walk_passive" {
 	"rifle_idle_2_walk_left"
 	"rifle_idle_2_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4640,7 +4640,7 @@ $sequence "rifle_crouch_idle_2_crouch_move" {
 	"rifle_crouch_idle_2_crouch_move_left"
 	"rifle_crouch_idle_2_crouch_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4657,7 +4657,7 @@ $sequence "rifle_crouch_idle_2_crouch_move_passive" {
 	"rifle_crouch_idle_2_crouch_move_left"
 	"rifle_crouch_idle_2_crouch_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4698,7 +4698,7 @@ $sequence "rifle_crouch_idle_2_crouch_walk" {
 	"rifle_crouch_idle_2_crouch_walk_left"
 	"rifle_crouch_idle_2_crouch_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4761,7 +4761,7 @@ $sequence "pistol_move_2_idle" {
 	"pistol_move_left_2_idle"
 	"pistol_move_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4778,7 +4778,7 @@ $sequence "pistol_move_2_idle_passive" {
 	"pistol_move_left_2_idle"
 	"pistol_move_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4821,7 +4821,7 @@ $sequence "pistol_walk_2_idle" {
 	"pistol_walk_left_2_idle"
 	"pistol_walk_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4838,7 +4838,7 @@ $sequence "pistol_walk_2_idle_passive" {
 	"pistol_walk_left_2_idle"
 	"pistol_walk_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4881,7 +4881,7 @@ $sequence "pistol_crouch_move_2_crouch_idle" {
 	"pistol_crouch_move_left_2_crouch_idle"
 	"pistol_crouch_move_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4898,7 +4898,7 @@ $sequence "pistol_crouch_move_2_crouch_idle_passive" {
 	"pistol_crouch_move_left_2_crouch_idle"
 	"pistol_crouch_move_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4939,7 +4939,7 @@ $sequence "pistol_crouch_walk_2_crouch_idle" {
 	"pistol_crouch_walk_left_2_crouch_idle"
 	"pistol_crouch_walk_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4956,7 +4956,7 @@ $sequence "pistol_crouch_walk_2_idle_passive" {
 	"pistol_crouch_walk_left_2_crouch_idle"
 	"pistol_crouch_walk_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -4999,7 +4999,7 @@ $sequence "pistol_idle_2_move" {
 	"pistol_idle_2_move_left"
 	"pistol_idle_2_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5016,7 +5016,7 @@ $sequence "pistol_idle_2_move_passive" {
 	"pistol_idle_2_move_left"
 	"pistol_idle_2_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5057,7 +5057,7 @@ $sequence "pistol_idle_2_walk" {
 	"pistol_idle_2_walk_left"
 	"pistol_idle_2_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5074,7 +5074,7 @@ $sequence "pistol_idle_2_walk_passive" {
 	"pistol_idle_2_walk_left"
 	"pistol_idle_2_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5131,7 +5131,7 @@ $sequence "pistol_crouch_idle_2_crouch_move" {
 	"pistol_crouch_idle_2_crouch_move_left"
 	"pistol_crouch_idle_2_crouch_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5148,7 +5148,7 @@ $sequence "pistol_crouch_idle_2_crouch_move_passive" {
 	"pistol_crouch_idle_2_crouch_move_left"
 	"pistol_crouch_idle_2_crouch_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5189,7 +5189,7 @@ $sequence "pistol_crouch_idle_2_crouch_walk" {
 	"pistol_crouch_idle_2_crouch_walk_left"
 	"pistol_crouch_idle_2_crouch_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5252,7 +5252,7 @@ $sequence "missile_move_2_idle" {
 	"missile_move_left_2_idle"
 	"missile_move_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5269,7 +5269,7 @@ $sequence "missile_move_2_idle_passive" {
 	"missile_move_left_2_idle"
 	"missile_move_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5312,7 +5312,7 @@ $sequence "missile_walk_2_idle" {
 	"missile_walk_left_2_idle"
 	"missile_walk_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5329,7 +5329,7 @@ $sequence "missile_walk_2_idle_passive" {
 	"missile_walk_left_2_idle"
 	"missile_walk_back_2_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5372,7 +5372,7 @@ $sequence "missile_crouch_move_2_crouch_idle" {
 	"missile_crouch_move_left_2_crouch_idle"
 	"missile_crouch_move_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5389,7 +5389,7 @@ $sequence "missile_crouch_move_2_crouch_idle_passive" {
 	"missile_crouch_move_left_2_crouch_idle"
 	"missile_crouch_move_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5430,7 +5430,7 @@ $sequence "missile_crouch_walk_2_crouch_idle" {
 	"missile_crouch_walk_left_2_crouch_idle"
 	"missile_crouch_walk_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5447,7 +5447,7 @@ $sequence "missile_crouch_walk_2_idle_passive" {
 	"missile_crouch_walk_left_2_crouch_idle"
 	"missile_crouch_walk_back_2_crouch_idle"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5490,7 +5490,7 @@ $sequence "missile_idle_2_move" {
 	"missile_idle_2_move_left"
 	"missile_idle_2_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5507,7 +5507,7 @@ $sequence "missile_idle_2_move_passive" {
 	"missile_idle_2_move_left"
 	"missile_idle_2_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5548,7 +5548,7 @@ $sequence "missile_idle_2_walk" {
 	"missile_idle_2_walk_left"
 	"missile_idle_2_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5565,7 +5565,7 @@ $sequence "missile_idle_2_walk_passive" {
 	"missile_idle_2_walk_left"
 	"missile_idle_2_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5622,7 +5622,7 @@ $sequence "missile_crouch_idle_2_crouch_move" {
 	"missile_crouch_idle_2_crouch_move_left"
 	"missile_crouch_idle_2_crouch_move_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5663,7 +5663,7 @@ $sequence "missile_crouch_idle_2_crouch_walk" {
 	"missile_crouch_idle_2_crouch_walk_left"
 	"missile_crouch_idle_2_crouch_walk_back"
 	activity "ACT_TRANSITION" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5716,7 +5716,7 @@ $sequence "rifle_move" {
 	"rifle_move_left"
 	"rifle_move_back"
 	activity "ACT_RUN_AIM_RIFLE" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5734,7 +5734,7 @@ $sequence "rifle_move_passive" {
 	"rifle_move_left"
 	"rifle_move_back"
 	activity "ACT_RUN_PASSIVE_RIFLE" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5752,7 +5752,7 @@ $sequence "rifle_crouch_move" {
 	"marine_anims\rifle_crouch_move_left.smd"
 	"marine_anims\rifle_crouch_move_back.smd"
 	activity "ACT_WALK_AIM_AGITATED" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5771,7 +5771,7 @@ $sequence "rifle_crouch_move_passive" {
 	"marine_anims\rifle_crouch_move_left.smd"
 	"marine_anims\rifle_crouch_move_back.smd"
 	activity "ACT_WALK_AIM_PASSIVE" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5790,7 +5790,7 @@ $sequence "rifle_crouch_walk" {
 	"marine_anims\rifle_crouch_walk_left.smd"
 	"marine_anims\rifle_crouch_walk_back.smd"
 	activity "ACT_WALK_CROUCH_AIM_RIFLE" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5809,7 +5809,7 @@ $sequence "rifle_walk" {
 	"marine_anims\rifle_walk_left.smd"
 	"marine_anims\rifle_walk_back.smd"
 	activity "ACT_WALK" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5828,7 +5828,7 @@ $sequence "rifle_walk_passive" {
 	"marine_anims\rifle_walk_left.smd"
 	"marine_anims\rifle_walk_back.smd"
 	activity "ACT_WALK" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5871,7 +5871,7 @@ $sequence "pistol_move" {
 	"pistol_move_left"
 	"pistol_move_back"
 	activity "ACT_RUN_AIM_PISTOL" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5889,7 +5889,7 @@ $sequence "pistol_move_passive" {
 	"pistol_move_left"
 	"pistol_move_back"
 	activity "ACT_RUN_PASSIVE_PISTOL" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5931,7 +5931,7 @@ $sequence "pistol_walk" {
 	"pistol_walk_left"
 	"pistol_walk_back"
 	activity "ACT_WALK_AIM_PISTOL" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -5973,7 +5973,7 @@ $sequence "pistol_crouch_walk" {
 	"pistol_crouch_walk_left"
 	"pistol_crouch_walk_back"
 	activity "ACT_WALK_AIM_PISTOL" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -6015,7 +6015,7 @@ $sequence "pistol_crouch_move" {
 	"pistol_crouch_move_left"
 	"pistol_crouch_move_back"
 	activity "ACT_WALK_AIM_PISTOL" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -6033,7 +6033,7 @@ $sequence "pistol_crouch_move_passive" {
 	"pistol_crouch_move_left"
 	"pistol_crouch_move_back"
 	activity "ACT_WALK_PASSIVE_PISTOL" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -6075,7 +6075,7 @@ $sequence "missile_move" {
 	"missile_move_left"
 	"missile_move_back"
 	activity "ACT_RUN_AIM_RPG" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -6093,7 +6093,7 @@ $sequence "missile_move_passive" {
 	"missile_move_left"
 	"missile_move_back"
 	activity "ACT_RUN_PASSIVE_RPG" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -6135,7 +6135,7 @@ $sequence "missile_walk" {
 	"missile_walk_left"
 	"missile_walk_back"
 	activity "ACT_WALK_AIM_RPG" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -6177,7 +6177,7 @@ $sequence "missile_crouch_walk" {
 	"missile_crouch_walk_left"
 	"missile_crouch_walk_back"
 	activity "ACT_WALK_AIM_RPG" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -6219,7 +6219,7 @@ $sequence "missile_crouch_move" {
 	"missile_crouch_move_left"
 	"missile_crouch_move_back"
 	activity "ACT_WALK_AIM_RPG" 1
-	blend "move_yaw" -180 180
+	blend "move_yaw" 180 -180
 	blendwidth 5
 	fadein 0.2
 	fadeout 0.2
@@ -6266,6 +6266,28 @@ $sequence "taunt" {
 	fps 30
 	weightlist "weights_melee1"
 	frame 1 49
+	rotate -90
+}
+
+$sequence "any_resurrect_front" {
+	"marine_anims\any_resurrect_front.smd"
+	activity "ACT_GETUP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "weights_melee1"
+	frame 1 61
+	rotate -90
+}
+
+$sequence "any_resurrect_back" {
+	"marine_anims\any_resurrect_back.smd"
+	activity "ACT_GETUP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	weightlist "weights_melee1"
+	frame 1 79
 	rotate -90
 }
 
