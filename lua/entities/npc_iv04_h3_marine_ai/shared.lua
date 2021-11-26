@@ -225,6 +225,7 @@ function ENT:DoInit()
 end
 
 function ENT:Speak(voice,character)
+	if self.Infected then return end
 	local character = character or self.Voices[self.VoiceType]
 	if self.CurrentSound then self.CurrentSound:Stop() end
 	if character and character[voice] and istable(character[voice]) then
@@ -822,33 +823,41 @@ function ENT:OnHaveEnemy(ent)
 	end
 	self:AlertAllies(ent)
 	if !self.IsInVehicle then
-		if !self.BeenSurprised and math.random(1,3) == 1 then
-			self.BeenSurprised = true
-			local xy = ent:GetPos().x+ent:GetPos().y
-			local xy2 = self:GetPos().x+self:GetPos().y
-			local dif = math.abs(xy-xy2)
-			if dif < 700 then
+		if !self.DidAlertAnim then
+			if !self.BeenSurprised and math.random(1,3) == 1 then
+				self.BeenSurprised = true
+				local xy = ent:GetPos().x+ent:GetPos().y
+				local xy2 = self:GetPos().x+self:GetPos().y
+				local dif = math.abs(xy-xy2)
+				if dif < 700 then
+					local func = function()
+						local should, dif = self:ShouldFace(ent,10)
+						if should then
+							self:TurnTo(dif)
+							coroutine.wait(0.2)
+						end
+						self:PlaySequenceAndWait(self.SurpriseAnim)
+					end
+					table.insert(self.StuffToRunInCoroutine,func)
+				end
+			else
 				local func = function()
 					local should, dif = self:ShouldFace(ent,10)
 					if should then
 						self:TurnTo(dif)
 						coroutine.wait(0.2)
 					end
-					self:PlaySequenceAndWait(self.SurpriseAnim)
+					self:PlaySequenceAndWait(self.WarnAnim[math.random(#self.WarnAnim)])
 				end
 				table.insert(self.StuffToRunInCoroutine,func)
-			end
-		else
-			local func = function()
-				local should, dif = self:ShouldFace(ent,10)
-				if should then
-					self:TurnTo(dif)
-					coroutine.wait(0.2)
-				end
-				self:PlaySequenceAndWait(self.WarnAnim[math.random(#self.WarnAnim)])
-			end
-			table.insert(self.StuffToRunInCoroutine,func)
+			end	
+			self.DidAlertAnim = true
 		end
+		timer.Simple( math.random(15,20), function()
+			if IsValid(self) then
+				self.DidAlertAnim = false
+			end
+		end ) 
 		self.HasLOSToTarget = true
 		self.RegisteredTargetPositions[ent] = ent:GetPos()
 		if !self.DoneStealth and self:IsUndetected() then
@@ -885,6 +894,7 @@ function ENT:OnTraceAttack( info, dir, trace )
 		info:ScaleDamage(3)
 	end
 	if self:Health() - info:GetDamage() < 1 then self.DeathHitGroup = trace.HitGroup return end
+	if self.AnimBusy then return end
 	local hg = trace.HitGroup
 	if !self.IsInVehicle and self.FlinchAnims[hg] and !self.DoneFlinch and math.random(100) < self.FlinchChance and info:GetDamage() > self.FlinchDamage then
 		self.DoneFlinch = true
@@ -959,6 +969,7 @@ function ENT:OnInjured(dmg)
 		end
 	end
 	if math.abs(self:Health()) - math.abs(dmg:GetDamage()) <= 0 then return end
+	if self.AnimBusy then return end
 	if IsValid(self.Enemy) then
 		--print(#self:PossibleTargets())
 		if rel == "foe" and ( !self.Switched ) then 
@@ -1256,12 +1267,49 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 		end
 	end
 	if (ent.IsVJBaseSNPC == true or ent.CPTBase_NPC == true or ent.IsSLVBaseNPC == true or ent:GetNWBool( "bZelusSNPC" ) == true) or (ent:IsNPC() && ent:GetClass() != "npc_bullseye" && ent:Health() > 0 ) or (ent:IsPlayer() and ent:Alive()) or ((ent:IsNextBot()) and ent != self ) and ent != self.Owner then
-		local d = self:GetPos()-ent:GetPos()
-		self.loco:SetVelocity(d*1)
+		if ent.IsInfectionForm then
+			if !self.MidInfection then
+				self.HaltShoot = true
+				self:Speak('panic_infctnfrm')
+				self.MidInfection = true
+				local func = function()
+					self:PlaySequenceAndWait("Flood_Infect")
+					if IsValid(ent) and ent:Health() > 0 then
+						self:Speak("dth_reanimated")
+						self.Infected = true
+						self.Faction = ent.Faction
+						self.FriendlyToPlayers = ent.FriendlyToPlayers
+						timer.Simple( 0.01, function()
+							if IsValid(ent) then
+								ent:Remove()
+							end
+						end )
+						self.Weapon:SetNoDraw(true)
+						self:PlaySequenceAndWait("infected_"..math.random(1,2).."")
+						local new = ents.Create("npc_iv04_hr_flood_combat_human")
+						new.RecentlyInfected = true
+						new:SetPos(self:GetPos())
+						new:SetAngles(self:GetAngles())
+						new:Spawn()
+						undo.ReplaceEntity(self,new)
+						self:Remove()
+					else
+						self.HaltShoot = false
+						self.MidInfection = false
+					end
+				end
+				table.insert(self.StuffToRunInCoroutine,func)
+				self:ResetAI()
+			end
+		else
+			local d = self:GetPos()-ent:GetPos()
+			self.loco:SetVelocity(d*1)
+		end
 	end
 	if (ent:GetClass() == "prop_door_rotating" or ent:GetClass() == "func_door" or ent:GetClass() == "func_door_rotating" ) then
 		local func = function()
 			local seq = self:GetSequence()
+			timer.Simple( 1.2, function() if IsValid(self) then self:DoMeleeDamage() end end )
 			self:PlaySequenceAndWait(self.PushAnim[math.random(#self.PushAnim)])
 		end
 		table.insert(self.StuffToRunInCoroutine,func)
@@ -1718,6 +1766,7 @@ function ENT:SneakKill(ent)
 	if !IsValid(ent) then return end
 	self.GoingForSneakKill = true
 	self:DoTransitionAnim("Idle_2_Crouch")
+	if !IsValid(ent) then return end
 	self:StartMovingAnimations(self.CrouchMoveAnim[math.random(#self.CrouchMoveAnim)],self.MoveSpeed)
 	self:MoveToPos(ent:GetPos()+ent:GetForward()*-20,{callback = function()
 		if !self:IsUndetected() or !IsValid(ent) then
@@ -1756,8 +1805,8 @@ function ENT:CustomBehaviour(ent,range)
 	if los and !self.DoneMelee and range < self.MeleeRange^2 then
 		self:DoMelee()
 	end
-	if ( ( ent.GetEnemy and ent:GetEnemy() == self ) or ( BeingStaredAt(self,ent,60) ) )and los then
-		if math.random(1,100) <= self.DodgeChance and !self.Dodged then
+	if math.random(1,100) <= self.DodgeChance and !self.Dodged then
+		if ( IsValid(ent) and ( ( ent.GetEnemy and ent:GetEnemy() == self ) or ( BeingStaredAt(self,ent,60) ) ) ) and los then
 			return self:Dodge()
 		end
 	end
@@ -1856,8 +1905,9 @@ function ENT:CustomBehaviour(ent,range)
 			local pos = self:FindStrafePos(p)
 			local wait = math.Rand(0.5,1)
 			local r = math.random(1,3)
-			local anim = r == 1 and self.WalkAnim[math.random(#self.WalkAnim)] or self.RunAnim[math.random(#self.RunAnim)]
-			local speed = r == 1 and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
+			local walk = (r == 1 and range < 600^2)
+			local anim = walk and self.WalkAnim[math.random(#self.WalkAnim)] or self.RunAnim[math.random(#self.RunAnim)]
+			local speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
 			--print(anim,speed)
 			self:MoveToPosition( pos, anim, speed )
 			coroutine.wait(wait)
@@ -2042,6 +2092,7 @@ end
 
 function ENT:OnOtherKilled( victim, info )
 	if victim == self then return end
+	if self.AnimBusy then return end
 	if self:Health() <= 0 then return end
 	local rel = self:CheckRelationships(victim)
 	local attacker = info:GetAttacker()
