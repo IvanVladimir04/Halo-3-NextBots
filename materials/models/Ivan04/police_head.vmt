@@ -10,4 +10,5 @@
 	"$phongboost"	"1"
 	"$phongfresnelranges"	"[0.01 0.5 1]"
 	"$phongtint"	"{105 135 155}"
+	"$color2"		"[2 2 2]"
 }

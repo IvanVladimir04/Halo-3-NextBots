@@ -5,9 +5,32 @@
 	"$halflambert" 1
 
 	"$phong" "1"
-	"$phongexponent" 5
-//	"$phongexponenttexture" "models/Ivan04/odst_body_em"
+	"$phongexponent" 	8
+//	"$phongexponenttexture" "models\halo\halo_3_odst\rookie\odst_body_em"
 	"$phongtint"	"{135 145 155}"
-	"$phongboost"	"8"
+	"$phongboost"	"80"
 	"$phongfresnelranges"	"[0.01 0.5 1]"
+	"$blendtintbybasealpha"	"1"
+	Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2 // pass the player color value to Gmod
+			default		0.23 0.35 0.41 // unused for now.
+		}
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 5
+			max 5
+			srcVar1 "$color"
+			resultVar "$selfillumtint"
+		}
+	}
 }
