@@ -1,0 +1,39 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/forerunner/sentinel/sentinel_shield_plasma_a"
+	"$basetexturetransform"	"center .5 .5 scale 40 40  rotate 0  translate 0 0"
+	"$translucent" "1"
+	"$detail" "models/halo_3/characters/forerunner/sentinel/sentinel_shield_plasma_a"
+	"$detailscale" "40"
+	"$detailblendfactor" "1"
+	"$detailblendmode" "5"
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/forerunner/sentinel/sentinel_shield_plasma_a"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/forerunner/sentinel/sentinel_shield_plasma_a"
+	"$emissiveBlendFlowTexture"     "vgui/white"
+	"$emissiveBlendTint"	 "[0.02 0.05 3]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[2 .25]"	
+	"$color2" "[0.2 0.6 1]"
+
+
+
+    "Proxies"
+    {
+                "TextureScroll"
+                {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.1
+                        "texturescrollangle" 0
+                }
+	"TextureScroll"
+                {
+                        "texturescrollvar" "$detailTextureTransform"
+                        "texturescrollrate" 0.1
+                        "texturescrollangle" 0
+                }
+ 
+
+    }
+
+}

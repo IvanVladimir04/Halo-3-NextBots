@@ -1,0 +1,30 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/grunt/grunt"
+	"$bumpmap" "models/halo_3/characters/covenant/grunt/grunt_zbump"	
+	"$blendtintbybasealpha" "1"
+	"$color2"		"[0.8 0.5 0.1]"
+	"$phong" 1
+	"$phongboost" "3"
+	"$phongexponent" "6"
+	"$phongfresnelranges" "[.5 .85 6]"
+	"$phongtint"	"[1 0.8 0.2]"
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[0.05 0.02 0.01]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$normalmapalphaenvmapmask"	1
+	"$model" 1
+	"$phongalbedotint" "1"
+	$ambientocclusion 1
+	"$rimlight"	"1"
+	"$rimlightexponent"	"15"
+	"$rimlightboost"	"5"
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/covenant/grunt/grunt"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/covenant/grunt/grunt_illum"
+	"$emissiveBlendFlowTexture"     "vgui/white"
+	"$emissiveBlendTint"	 "[5 5 5]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[0 0]"	
+
+}

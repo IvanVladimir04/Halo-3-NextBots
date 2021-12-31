@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/brute/brute"
+	"$bumpmap" "models/halo_3/characters/covenant/brute/brute_bump"
+	"$detail"  "models/halo_3/characters/covenant/brute/brute_detail"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"1.00"
+	"$detailscale"			"15.00"
+	"$blendtintbybasealpha" "1"
+	"$ambientocclusion" "1"
+	"$phong" 1
+	"$phongboost" "4"
+	"$phongexponent" "15"
+	"$phongtint" "[1 0.3 0.15]"
+	"$phongfresnelranges" "[.7 .82 31]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	"$color2" "[0.7 0.35 0.3]"
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[0.04 0.02 0.01]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$normalmapalphaenvmapmask"	1
+}

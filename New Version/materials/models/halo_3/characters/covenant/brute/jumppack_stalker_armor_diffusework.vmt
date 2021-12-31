@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/brute/jumppack_stalker_armor_diffusework"
+	"$detail"  "models/halo_3/characters/covenant/brute/stalker_beam_illum_detail"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"1.00"
+	"$detailscale"			"2.00"
+	"$additive"	"1"
+	"$ambientocclusion" "1"
+	"$phong" 1
+	"$phongboost" "2"
+	"$phongexponent" "15"
+	"$phongtint" "[1.05 .83 .83]"
+	"$phongfresnelranges" "[.7 .82 31]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	"$color2" "[5 0 0]"
+}
