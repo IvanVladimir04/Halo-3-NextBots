@@ -9,7 +9,7 @@
 	$emissiveBlendTint "[1 0 0]"
 	$emissiveBlendStrength 15
 	$emissiveBlendScrollVector "[1 1]"
-
+	"$color2"		"[1 .3 .3]"
 	"$detail"  "models/halo_3/characters/flood/infection_form/flood_fronds_illum"
 	"$detailblendmode"			"5.00"
 	"$detailblendfactor"			"0.25"
