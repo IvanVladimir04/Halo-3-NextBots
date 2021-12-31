@@ -1,0 +1,41 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
+	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"	
+	"$blendtintbybasealpha" "1"
+	"$color2"		"[1 0.6 0.25]"
+	
+	"$ambientocclusion" 	"1"
+	"$model" 1
+
+	"$phong" 1
+	"$phongboost" "2.5"
+	"$phongexponent" "8"
+	"$phongfresnelranges" "[1 .85 .15]"
+	"$phongtint"	"[1 .85 .2]"
+	"$phongalbedotint" "1"
+
+	"$rimlight"	"1"
+	"$rimlightexponent"	"15"
+	"$rimlightboost"	"5"
+
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[0.1 0.05 0.01]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$normalmapalphaenvmapmask"	1
+
+	"$detail"  "models/halo_3/characters/covenant/drone/carapace_detail_diff"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"0.50"
+	"$detailscale"			"15.00"
+
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/covenant/drone/bugger_pupa_illum"
+	"$emissiveBlendFlowTexture"     "vgui/white"
+	"$emissiveBlendTint"	 "[5 5 5]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[0 0]"	
+}
+
+

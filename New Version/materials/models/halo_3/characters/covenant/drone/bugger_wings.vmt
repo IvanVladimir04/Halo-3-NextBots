@@ -1,0 +1,24 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_wings"
+	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_wings_zbump"	
+	"$translucent"	1
+	"$nocull"		1
+	"$phong" 1
+	"$phongboost" "2"
+	"$phongexponent" "12"
+	"$phongfresnelranges"   "[.3 .7 1]"
+	"$phongwarptexture"  "models/halo_3/shared/wings_iridescence"
+	"$phongtint"	"[.4 .7 1]"
+	"$model" 1
+//	"$phongalbedotint" "1"
+//	"$ambientocclusion"	 1
+	"$rimlight"	"1"
+	"$rimlightexponent"	"15"
+	"$rimlightboost"	"5"
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[0.01 0.03 0.02]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$normalmapalphaenvmapmask"	1
+
+}

@@ -1,0 +1,62 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
+	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"	
+	"$blendtintbybasealpha" "1"
+	"$phong" 1
+	"$phongboost" "0.15"
+	"$phongexponent" "8"
+	"$phongtint" "[1.05 .83 .83]"
+	"$phongfresnelranges" "[.7 .82 31]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	$ambientocclusion 1
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[0.03 0.02 0.01]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$normalmapalphaenvmapmask"	1
+	"$detail"  "models/halo_3/characters/covenant/drone/carapace_detail_diff"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"0.50"
+	"$detailscale"			"15.00"
+
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/covenant/drone/bugger_pupa_illum"
+	"$emissiveBlendFlowTexture"     "vgui/white"
+	"$emissiveBlendTint"	 "[5 5 5]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[0 0]"	
+
+	Proxies
+	{
+		Clamp
+		{
+			min 5
+			max 5
+			srcVar1 "$color2"
+			resultVar "$emissiveBlendTint"
+		}
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$phongtint"
+		}
+		Clamp
+		{
+			min 0
+			max 0.05
+			srcVar1 "$color"
+			resultVar "$envmaptint"
+		}
+	}
+}
