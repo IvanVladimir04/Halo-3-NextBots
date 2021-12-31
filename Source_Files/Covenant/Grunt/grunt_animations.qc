@@ -2105,7 +2105,7 @@ $sequence "aim_pistol_still_up" {
 }
 
 $sequence "aim_pistol_still_down" {
-	"aim_pistol_still_down_down_right" "aim_pistol_still_down_down_center"  "aim_pistol_still_down_down_left"
+	"aim_pistol_still_down_up_right" "aim_pistol_still_down_up_center"  "aim_pistol_still_down_up_left"
 	"aim_pistol_still_down_mid_right" "aim_pistol_still_down_mid_center"  "aim_pistol_still_down_mid_left"
 	"aim_pistol_still_down_down_right" "aim_pistol_still_down_down_center" "aim_pistol_still_down_down_left"
 	blend "aim_yaw" -45 45
@@ -2131,7 +2131,7 @@ $sequence "aim_missile_still_up" {
 }
 
 $sequence "aim_missile_still_down" {
-	"aim_missile_still_down_down_right" "aim_missile_still_down_down_center"  "aim_missile_still_down_down_left"
+	"aim_missile_still_down_up_right" "aim_missile_still_down_up_center"  "aim_missile_still_down_up_left"
 	"aim_missile_still_down_mid_right" "aim_missile_still_down_mid_center"  "aim_missile_still_down_mid_left"
 	"aim_missile_still_down_down_right" "aim_missile_still_down_down_center" "aim_missile_still_down_down_left"
 	blend "aim_yaw" -45 45
@@ -2157,7 +2157,7 @@ $sequence "aim_missile_fc_still_up" {
 }
 
 $sequence "aim_missile_fc_still_down" {
-	"aim_missile_fc_still_down_down_right" "aim_missile_fc_still_down_down_center"  "aim_missile_fc_still_down_down_left"
+	"aim_missile_fc_still_down_up_right" "aim_missile_fc_still_down_up_center"  "aim_missile_fc_still_down_up_left"
 	"aim_missile_fc_still_down_mid_right" "aim_missile_fc_still_down_mid_center"  "aim_missile_fc_still_down_mid_left"
 	"aim_missile_fc_still_down_down_right" "aim_missile_fc_still_down_down_center" "aim_missile_fc_still_down_down_left"
 	blend "aim_yaw" -45 45
@@ -2183,7 +2183,7 @@ $sequence "aim_pistol_move_up" {
 }
 
 $sequence "aim_pistol_move_down" {
-	"aim_pistol_move_down_down_right" "aim_pistol_move_down_down_center"  "aim_pistol_move_down_down_left"
+	"aim_pistol_move_down_up_right" "aim_pistol_move_down_up_center"  "aim_pistol_move_down_up_left"
 	"aim_pistol_move_down_mid_right" "aim_pistol_move_down_mid_center"  "aim_pistol_move_down_mid_left"
 	"aim_pistol_move_down_down_right" "aim_pistol_move_down_down_center" "aim_pistol_move_down_down_left"
 	blend "aim_yaw" -45 45
@@ -2209,7 +2209,7 @@ $sequence "aim_missile_move_up" {
 }
 
 $sequence "aim_missile_move_down" {
-	"aim_missile_move_down_down_right" "aim_missile_move_down_down_center"  "aim_missile_move_down_down_left"
+	"aim_missile_move_down_up_right" "aim_missile_move_down_up_center"  "aim_missile_move_down_up_left"
 	"aim_missile_move_down_mid_right" "aim_missile_move_down_mid_center"  "aim_missile_move_down_mid_left"
 	"aim_missile_move_down_down_right" "aim_missile_move_down_down_center" "aim_missile_move_down_down_left"
 	blend "aim_yaw" -45 45
@@ -2235,7 +2235,7 @@ $sequence "aim_missile_fc_move_up" {
 }
 
 $sequence "aim_missile_fc_move_down" {
-	"aim_missile_fc_move_down_down_right" "aim_missile_fc_move_down_down_center"  "aim_missile_fc_move_down_down_left"
+	"aim_missile_fc_move_down_up_right" "aim_missile_fc_move_down_up_center"  "aim_missile_fc_move_down_up_left"
 	"aim_missile_fc_move_down_mid_right" "aim_missile_fc_move_down_mid_center"  "aim_missile_fc_move_down_mid_left"
 	"aim_missile_fc_move_down_down_right" "aim_missile_fc_move_down_down_center" "aim_missile_fc_move_down_down_left"
 	blend "aim_yaw" -45 45
@@ -4222,7 +4222,7 @@ $collisiontext
 		"rootname"		"b_pelvis"
 		"totalmass"		"90.000000"
 //		"jointmerge"		"b_pelvis,b_spine2"
-		"jointmerge"		"b_pelvis,b_spine1"
+//		"jointmerge"		"b_pelvis,b_spine1"
 	}
 }
 $upaxis -y
