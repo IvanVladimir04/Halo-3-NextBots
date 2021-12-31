@@ -1,0 +1,616 @@
+//COMMON ANIMATIONS
+////////////////////
+//$origin 0 0 0 -90
+
+//FLINCH ANIMATIONS
+
+$animation "flinch_any_any_left_arm" "drone_animations\any_any_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_any_any_left_leg" "drone_animations\any_any_h_ping_front_l_leg.smd" {
+	fps 30
+}
+$animation "flinch_any_any_right_leg" "drone_animations\any_any_h_ping_front_r_leg.smd" {
+	fps 30
+}
+$animation "flinch_any_any_right_arm" "drone_animations\any_any_h_ping_right_gut.smd" {
+	fps 30
+}
+$animation "flinch_any_any_gut" "drone_animations\any_any_h_ping_front_gut.smd" {
+	fps 30
+}
+$animation "flinch_any_any_head" "drone_animations\any_any_h_ping_front_head.smd" {
+	fps 30
+}
+//PING ANIMATIONS
+
+$animation "ping_any_any_left_arm_pose" "drone_animations\any_any_s_ping_left_gut_var0.smd" {
+	fps 30
+	frame 15 15
+	loop
+}
+$animation "ping_any_any_left_arm" "drone_animations\any_any_s_ping_left_gut_var0.smd" {
+	fps 30
+	subtract	"ping_any_any_left_arm_pose"	0
+}
+$animation "ping_any_any_right_arm_pose" "drone_animations\any_any_s_ping_right_gut_var0.smd" {
+	fps 30
+	frame 16 16
+	loop
+}
+$animation "ping_any_any_right_arm" "drone_animations\any_any_s_ping_right_gut_var0.smd" {
+	fps 30
+	subtract	"ping_any_any_right_arm_pose"	0
+}
+$animation "ping_any_any_gut_pose" "drone_animations\any_any_s_ping_front_gut.smd" {
+	fps 30
+	frame 15 15
+	loop
+}
+$animation "ping_any_any_gut" "drone_animations\any_any_s_ping_front_gut.smd" {
+	fps 30
+	subtract	"ping_any_any_gut_pose"	0
+}
+$animation "ping_any_any_head_pose" "drone_animations\any_any_s_ping_front_head.smd" {
+	fps 30
+	frame 19 19
+	loop
+}
+$animation "ping_any_any_head" "drone_animations\any_any_s_ping_front_head.smd" {
+	fps 30
+	subtract	"ping_any_any_head_pose"	0
+}
+
+//MISC SEQUENCES
+
+$sequence "airborne_combat" {
+	"drone_animations\combat_airborne.smd"
+	activity "ACT_HOVER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	{ event 1100 15 "event_halo_3_drones_toggle_wings_on" }
+	{ event 1100 24 "event_halo_3_drones_toggle_wings_off" }
+}
+
+$sequence "dead_airborne" {
+	"drone_animations\combat_airborne_dead.smd"
+	activity "ACT_GLIDE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+
+}
+
+
+$sequence "dead_land" {
+	"drone_animations\combat_landing_dead.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+$sequence "land_soft_combat" {
+	"drone_animations\combat_landing_soft.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event 1100 11 "event_halo_3_drones_toggle_wings_off" }
+}
+
+
+//DEATH SEQUENCES
+
+$sequence "die_front_gut_1" {
+	"drone_animations\any_any_h_kill_front_gut_var0.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_gut_2" {
+	"drone_animations\any_any_h_kill_front_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_gut_3" {
+	"drone_animations\any_any_h_kill_front_gut_var2.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_head" {
+	"drone_animations\any_any_h_kill_front_head_var0.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_gut_1" {
+	"drone_animations\any_any_h_kill_back_gut_var0.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_gut_2" {
+	"drone_animations\any_any_h_kill_back_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_left_gut" {
+	"drone_animations\any_any_h_kill_left_gut_var0.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+
+$sequence "die_right_gut_1" {
+	"drone_animations\any_any_h_kill_right_gut_var0.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_gut_2" {
+	"drone_animations\any_any_h_kill_right_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+
+
+
+
+//BOARDING SEQUENCES
+
+$sequence "warthog_back_board_enter" {
+	"drone_animations\warthog_b_b_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_back_board_idle" {
+	"drone_animations\warthog_b_b_idle_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_back_board_melee" {
+	"drone_animations\warthog_b_b_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_back_board_exit" {
+	"drone_animations\warthog_b_b_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+$sequence "warthog_driver_board_enter" {
+	"drone_animations\warthog_b_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_board_idle" {
+	"drone_animations\warthog_b_d_idle_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_board_melee" {
+	"drone_animations\warthog_b_d_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_board_exit" {
+	"drone_animations\warthog_b_d_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+$sequence "warthog_passenger_board_enter" {
+	"drone_animations\warthog_b_p_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_passenger_board_idle" {
+	"drone_animations\warthog_b_p_idle_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_passenger_board_melee" {
+	"drone_animations\warthog_b_p_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_passenger_board_exit" {
+	"drone_animations\warthog_b_p_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+$sequence "warthog_gunner_board_enter" {
+	"drone_animations\warthog_b_h_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_gunner_board_idle" {
+	"drone_animations\warthog_b_h_idle_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_gunner_board_melee" {
+	"drone_animations\warthog_b_h_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_gunner_board_exit" {
+	"drone_animations\warthog_b_h_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+$sequence "scorpion_board_back_enter" {
+	"drone_animations\scorpion_b_b_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_board_back_idle" {
+	"drone_animations\scorpion_b_b_idle_var0.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "scorpion_board_back_melee_1" {
+	"drone_animations\scorpion_b_b_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_back_melee_2" {
+	"drone_animations\scorpion_b_b_melee_var1.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_back_exit" {
+	"drone_animations\scorpion_b_b_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+
+$sequence "scorpion_board_front_left_enter" {
+	"drone_animations\scorpion_b_d_l_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_board_front_left_idle" {
+	"drone_animations\scorpion_b_d_l_idle_var0.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "scorpion_board_front_left_melee_1" {
+	"drone_animations\scorpion_b_d_l_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_front_left_melee_2" {
+	"drone_animations\scorpion_b_d_l_melee_var1.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_front_left_exit" {
+	"drone_animations\scorpion_b_d_l_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+
+$sequence "scorpion_board_front_right_enter" {
+	"drone_animations\scorpion_b_d_r_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_board_front_right_idle" {
+	"drone_animations\scorpion_b_d_r_idle_var0.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "scorpion_board_front_right_melee_1" {
+	"drone_animations\scorpion_b_d_r_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_front_right_melee_2" {
+	"drone_animations\scorpion_b_d_r_melee_var1.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_front_right_exit" {
+	"drone_animations\scorpion_b_d_r_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+
+$sequence "scorpion_board_top_enter" {
+	"drone_animations\scorpion_b_t_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_board_top_idle" {
+	"drone_animations\scorpion_b_t_idle_var0.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "scorpion_board_top_melee" {
+	"drone_animations\scorpion_b_t_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+
+$sequence "scorpion_board_top_exit" {
+	"drone_animations\scorpion_b_t_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+$sequence "wraith_board_back_enter" {
+	"drone_animations\wraith_b_b_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_board_back_idle" {
+	"drone_animations\wraith_b_b_idle_var0.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_back_melee" {
+	"drone_animations\wraith_b_b_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_back_exit" {
+	"drone_animations\wraith_b_b_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+
+$sequence "wraith_board_front_left_enter" {
+	"drone_animations\wraith_b_l_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_board_front_left__idle" {
+	"drone_animations\wraith_b_l_idle_var0.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_front_left__melee" {
+	"drone_animations\wraith_b_l_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_front_left__exit" {
+	"drone_animations\wraith_b_l_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+$sequence "wraith_board_front_right_enter" {
+	"drone_animations\wraith_b_r_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_board_front_right__idle" {
+	"drone_animations\wraith_b_r_idle_var0.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_front_right__melee" {
+	"drone_animations\wraith_b_r_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_front_right__exit" {
+	"drone_animations\wraith_b_r_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+//PHANTOM SEQUENCES
+$origin 0 0 0 90
+$sequence "phantom_idle" {
+	"drone_animations\phantom_pc_any_any_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_exit" {
+	"drone_animations\phantom_pc_any_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
