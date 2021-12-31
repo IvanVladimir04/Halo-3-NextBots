@@ -1369,7 +1369,7 @@ $sequence "ragdoll" {
 
 $collisionjoints "hunter_h3_physics.smd"
 {
-	$mass 90.0
+	$mass 2000.0
 	$inertia 10.00
 	$damping 0.01
 	$rotdamping 1.50
