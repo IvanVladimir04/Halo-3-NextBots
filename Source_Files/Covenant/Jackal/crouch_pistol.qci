@@ -1,0 +1,380 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM CROUCH PISTOL STILL UP
+
+$animation "aim_crouch_pistol_still_up_neutral" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_crouch_pistol_still_up_down_left" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_still_up_down_center" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_still_up_down_right" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_still_up_mid_left" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_still_up_mid_center" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_still_up_mid_right" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_still_up_up_left" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_still_up_up_center" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_still_up_up_right" "jackal_animations\crouch_pistol_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_crouch_pistol_still_up_neutral" 0
+}
+
+//AIM CROUCH PISTOL MOVE UP
+
+$animation "aim_crouch_pistol_move_up_neutral" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_crouch_pistol_move_up_down_left" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_move_up_down_center" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_move_up_down_right" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_move_up_mid_left" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_move_up_mid_center" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_move_up_mid_right" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_move_up_up_left" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_move_up_up_center" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+$animation "aim_crouch_pistol_move_up_up_right" "jackal_animations\crouch_pistol_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_crouch_pistol_move_up_neutral" 0
+}
+
+//IDLE 2 MOVE ANIMATIONS
+
+$animation "crouch_pistol_idle_2_crouch_move_S" "jackal_animations\crouch_pistol_idle_2_crouch_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_idle_2_crouch_move_W" "jackal_animations\crouch_pistol_idle_2_crouch_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_idle_2_crouch_move_E" "jackal_animations\crouch_pistol_idle_2_crouch_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_idle_2_crouch_move_N" "jackal_animations\crouch_pistol_idle_2_crouch_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE 2 IDLE ANIMATIONS
+
+$animation "crouch_pistol_move_2_crouch_idle_move_S" "jackal_animations\crouch_pistol_move_back_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_move_2_crouch_idle_move_W" "jackal_animations\crouch_pistol_move_front_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_move_2_crouch_idle_move_E" "jackal_animations\crouch_pistol_move_front_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_move_2_crouch_idle_move_N" "jackal_animations\crouch_pistol_move_front_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE ANIMATIONS
+
+$animation "crouch_pistol_move_S" "jackal_animations\crouch_pistol_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_move_W" "jackal_animations\crouch_pistol_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_move_E" "jackal_animations\crouch_pistol_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_move_N" "jackal_animations\crouch_pistol_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//WALK ANIMATIONS
+
+$animation "crouch_pistol_walk_S" "jackal_animations\crouch_pistol_walk_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_walk_W" "jackal_animations\crouch_pistol_walk_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_walk_E" "jackal_animations\crouch_pistol_walk_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_pistol_walk_N" "jackal_animations\crouch_pistol_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//WEIGHTLIST
+
+
+
+$weightlist weights_ranged {
+
+"spine" 1
+
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_crouch_pistol_still_up" {
+	"aim_crouch_pistol_still_up_up_right" "aim_crouch_pistol_still_up_up_center"  "aim_crouch_pistol_still_up_up_left"
+	"aim_crouch_pistol_still_up_mid_right" "aim_crouch_pistol_still_up_mid_center"  "aim_crouch_pistol_still_up_mid_left"
+	"aim_crouch_pistol_still_up_down_right" "aim_crouch_pistol_still_up_down_center" "aim_crouch_pistol_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_crouch_pistol_move_up" {
+	"aim_crouch_pistol_move_up_up_right" "aim_crouch_pistol_move_up_up_center"  "aim_crouch_pistol_move_up_up_left"
+	"aim_crouch_pistol_move_up_mid_right" "aim_crouch_pistol_move_up_mid_center"  "aim_crouch_pistol_move_up_mid_left"
+	"aim_crouch_pistol_move_up_down_right" "aim_crouch_pistol_move_up_down_center" "aim_crouch_pistol_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+	weightlist	"weights_ranged"
+}
+
+
+//IDLE SEQUENCES
+
+
+$sequence "crouch_pistol_idle_up" {
+	"jackal_animations\crouch_pistol_idle.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_crouch_pistol_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_crouch_pistol_up" {
+	"crouch_pistol_move_S"
+	"crouch_pistol_move_W"
+	"crouch_pistol_move_N"
+	"crouch_pistol_move_E"
+	"crouch_pistol_move_S"
+	activity "ACT_RUN_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_crouch_pistol_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Jackal.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Jackal.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_crouch_pistol_up" {
+	"crouch_pistol_walk_S"
+	"crouch_pistol_walk_W"
+	"crouch_pistol_walk_N"
+	"crouch_pistol_walk_E"
+	"crouch_pistol_walk_S"
+	activity "ACT_WALK_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_crouch_pistol_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Jackal.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Jackal.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_crouch_pistol_down" {
+	"crouch_pistol_walk_S"
+	"crouch_pistol_walk_W"
+	"crouch_pistol_walk_N"
+	"crouch_pistol_walk_E"
+	"crouch_pistol_walk_S"
+	activity "ACT_WALK_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_crouch_pistol_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Jackal.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Jackal.Step" }
+	walkframe 145 LX LY
+}
+
+//MOVEMENT-TRANSITORY SEQUENCES
+
+$sequence "crouch_pistol_move_2_crouch_idle" {
+	"crouch_pistol_move_2_crouch_idle_move_S"
+	"crouch_pistol_move_2_crouch_idle_move_W"
+	"crouch_pistol_move_2_crouch_idle_move_N"
+	"crouch_pistol_move_2_crouch_idle_move_E"
+	"crouch_pistol_move_2_crouch_idle_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_crouch_pistol_move_up"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "crouch_pistol_idle_2_crouch_move" {
+	"crouch_pistol_idle_2_crouch_move_S"
+	"crouch_pistol_idle_2_crouch_move_W"
+	"crouch_pistol_idle_2_crouch_move_N"
+	"crouch_pistol_idle_2_crouch_move_E"
+	"crouch_pistol_idle_2_crouch_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_crouch_pistol_move_up"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+
+
+//OTHER
+
+$sequence "crouch_pistol_2_combat_idle" {
+	"jackal_animations\crouch_pistol_idle_2_combat_idle.smd"
+	activity "ACT_STAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}

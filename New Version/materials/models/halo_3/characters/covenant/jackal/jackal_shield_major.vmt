@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/jackal/jackal_shield_mask"
+//	"$basetexturetransform"	"center .5 .5 scale 40 40  rotate 0  translate 0 0"
+	"$translucent" "1"
+	"$detail" "models/halo_3/characters/covenant/jackal/jackal_shield_mask"
+	"$detailscale" "1"
+	"$detailblendfactor" "8"
+	"$detailblendmode" "5"
+	"$detailtint"	"[1 0.5 2]"
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "vgui/white"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/covenant/jackal/jackal_shield_overlay_detail"
+	"$emissiveBlendFlowTexture"     "vgui/white"
+	"$emissiveBlendTint"	 "[3 1.2 6]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[0.5 1]"	
+	"$color2" "[5 1.5 4.5]"
+
+
+
+}
+

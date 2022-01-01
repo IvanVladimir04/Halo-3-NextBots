@@ -1,0 +1,714 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM PATROL UNARMED STILL UP
+$animation "aim_patrol_unarmed_still_up_neutral" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_patrol_unarmed_still_up_down_left" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_up_down_center" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_up_down_right" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_up_mid_left" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_up_mid_center" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_up_mid_right" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_up_up_left" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_up_up_center" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_up_up_right" "jackal_animations\patrol_unarmed_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_patrol_unarmed_still_up_neutral" 0
+}
+
+//AIM PATROL UNARMED STILL DOWN
+
+$animation "aim_patrol_unarmed_still_down_neutral" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_patrol_unarmed_still_down_down_left" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_down_center" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_down_right" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_mid_left" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_mid_center" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_mid_right" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_up_left" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_up_center" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_up_right" "jackal_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+//AIM PATROL UNARMED MOVE UP
+
+$animation "aim_patrol_unarmed_move_up_neutral" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_patrol_unarmed_move_up_down_left" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_up_down_center" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_up_down_right" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_up_mid_left" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_up_mid_center" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_up_mid_right" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_up_up_left" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_up_up_center" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_up_up_right" "jackal_animations\patrol_unarmed_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_patrol_unarmed_move_up_neutral" 0
+}
+
+//AIM PATROL UNARMED MOVE DOWN
+
+$animation "aim_patrol_unarmed_move_down_neutral" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_patrol_unarmed_move_down_down_left" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_down_center" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_down_right" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_mid_left" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_mid_center" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_mid_right" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_up_left" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_up_center" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_up_right" "jackal_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+//IDLE 2 MOVE ANIMATIONS
+
+$animation "patrol_unarmed_idle_2_combat_move_S" "jackal_animations\patrol_unarmed_idle_2_combat_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_combat_move_W" "jackal_animations\patrol_unarmed_idle_2_combat_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_combat_move_E" "jackal_animations\patrol_unarmed_idle_2_combat_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_combat_move_N" "jackal_animations\patrol_unarmed_idle_2_combat_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_combat_walk_S" "jackal_animations\patrol_unarmed_idle_2_combat_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_combat_walk_W" "jackal_animations\patrol_unarmed_idle_2_combat_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_combat_walk_E" "jackal_animations\patrol_unarmed_idle_2_combat_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_combat_walk_N" "jackal_animations\patrol_unarmed_idle_2_combat_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE 2 IDLE ANIMATIONS
+
+$animation "patrol_unarmed_move_2_combat_idle_move_S" "jackal_animations\patrol_unarmed_move_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_2_combat_idle_move_W" "jackal_animations\patrol_unarmed_move_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_2_combat_idle_move_E" "jackal_animations\patrol_unarmed_move_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_2_combat_idle_move_N" "jackal_animations\patrol_unarmed_move_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+//MOVE ANIMATIONS
+
+$animation "patrol_unarmed_move_S" "jackal_animations\patrol_unarmed_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_W" "jackal_animations\patrol_unarmed_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_E" "jackal_animations\patrol_unarmed_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_N" "jackal_animations\patrol_unarmed_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//WALK ANIMATIONS
+
+$animation "patrol_unarmed_walk_S" "jackal_animations\patrol_unarmed_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_walk_W" "jackal_animations\patrol_unarmed_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_walk_E" "jackal_animations\patrol_unarmed_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_walk_N" "jackal_animations\patrol_unarmed_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_patrol_unarmed_still_up" {
+	"aim_patrol_unarmed_still_up_up_right" "aim_patrol_unarmed_still_up_up_center"  "aim_patrol_unarmed_still_up_up_left"
+	"aim_patrol_unarmed_still_up_mid_right" "aim_patrol_unarmed_still_up_mid_center"  "aim_patrol_unarmed_still_up_mid_left"
+	"aim_patrol_unarmed_still_up_down_right" "aim_patrol_unarmed_still_up_down_center" "aim_patrol_unarmed_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_patrol_unarmed_still_down" {
+	"aim_patrol_unarmed_still_down_up_right" "aim_patrol_unarmed_still_down_up_center"  "aim_patrol_unarmed_still_down_up_left"
+	"aim_patrol_unarmed_still_down_mid_right" "aim_patrol_unarmed_still_down_mid_center"  "aim_patrol_unarmed_still_down_mid_left"
+	"aim_patrol_unarmed_still_down_down_right" "aim_patrol_unarmed_still_down_down_center" "aim_patrol_unarmed_still_down_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_patrol_unarmed_move_up" {
+	"aim_patrol_unarmed_move_up_up_right" "aim_patrol_unarmed_move_up_up_center"  "aim_patrol_unarmed_move_up_up_left"
+	"aim_patrol_unarmed_move_up_mid_right" "aim_patrol_unarmed_move_up_mid_center"  "aim_patrol_unarmed_move_up_mid_left"
+	"aim_patrol_unarmed_move_up_down_right" "aim_patrol_unarmed_move_up_down_center" "aim_patrol_unarmed_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_patrol_unarmed_move_down" {
+	"aim_patrol_unarmed_move_down_up_right" "aim_patrol_unarmed_move_down_up_center"  "aim_patrol_unarmed_move_down_up_left"
+	"aim_patrol_unarmed_move_down_mid_right" "aim_patrol_unarmed_move_down_mid_center"  "aim_patrol_unarmed_move_down_mid_left"
+	"aim_patrol_unarmed_move_down_down_right" "aim_patrol_unarmed_move_down_down_center" "aim_patrol_unarmed_move_down_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+//IDLE SEQUENCES
+
+$sequence "patrol_unarmed_idle_down" {
+	"jackal_animations\patrol_unarmed_idle.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_up" {
+	"jackal_animations\patrol_unarmed_idle.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+$sequence "patrol_unarmed_idle_posing_1" {
+	"jackal_animations\patrol_unarmed_posing_var1.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_posing_2" {
+	"jackal_animations\patrol_unarmed_posing_var2.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_posing_3" {
+	"jackal_animations\patrol_unarmed_posing_var3.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_posing_4" {
+	"jackal_animations\patrol_unarmed_posing_var4.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_posing_5" {
+	"jackal_animations\patrol_unarmed_posing_var5.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_posing_6" {
+	"jackal_animations\patrol_unarmed_posing_var6.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_patrol_unarmed_up" {
+	"patrol_unarmed_move_S"
+	"patrol_unarmed_move_W"
+	"patrol_unarmed_move_N"
+	"patrol_unarmed_move_E"
+	"patrol_unarmed_move_S"
+	activity "ACT_RUN_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_patrol_unarmed_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Jackal.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Jackal.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "move_patrol_unarmed_down" {
+	"patrol_unarmed_move_S"
+	"patrol_unarmed_move_W"
+	"patrol_unarmed_move_N"
+	"patrol_unarmed_move_E"
+	"patrol_unarmed_move_S"
+	activity "ACT_RUN_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_patrol_unarmed_move_down"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Jackal.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Jackal.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_patrol_unarmed_up" {
+	"patrol_unarmed_walk_S"
+	"patrol_unarmed_walk_W"
+	"patrol_unarmed_walk_N"
+	"patrol_unarmed_walk_E"
+	"patrol_unarmed_walk_S"
+	activity "ACT_WALK_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_patrol_unarmed_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Jackal.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Jackal.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_patrol_unarmed_down" {
+	"patrol_unarmed_walk_S"
+	"patrol_unarmed_walk_W"
+	"patrol_unarmed_walk_N"
+	"patrol_unarmed_walk_E"
+	"patrol_unarmed_walk_S"
+	activity "ACT_WALK_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_patrol_unarmed_move_down"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Jackal.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Jackal.Step" }
+	walkframe 145 LX LY
+}
+
+//MOVEMENT-TRANSITORY SEQUENCES
+
+$sequence "patrol_unarmed_move_2_combat_idle" {
+	"patrol_unarmed_move_2_combat_idle_move_S"
+	"patrol_unarmed_move_2_combat_idle_move_W"
+	"patrol_unarmed_move_2_combat_idle_move_N"
+	"patrol_unarmed_move_2_combat_idle_move_E"
+	"patrol_unarmed_move_2_combat_idle_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_patrol_unarmed_move_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+
+$sequence "patrol_unarmed_idle_2_combat_move" {
+	"patrol_unarmed_idle_2_combat_move_S"
+	"patrol_unarmed_idle_2_combat_move_W"
+	"patrol_unarmed_idle_2_combat_move_N"
+	"patrol_unarmed_idle_2_combat_move_E"
+	"patrol_unarmed_idle_2_combat_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_patrol_unarmed_move_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "patrol_unarmed_idle_2_combat_walk" {
+	"patrol_unarmed_idle_2_combat_walk_S"
+	"patrol_unarmed_idle_2_combat_walk_W"
+	"patrol_unarmed_idle_2_combat_walk_N"
+	"patrol_unarmed_idle_2_combat_walk_E"
+	"patrol_unarmed_idle_2_combat_walk_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_patrol_unarmed_move_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+
+//AIRBORNE SEQUENCES
+
+$sequence "airborne_patrol_unarmed" {
+	"jackal_animations\patrol_unarmed_airborne.smd"
+	activity "ACT_HOVER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "land_hard_patrol_unarmed" {
+	"jackal_animations\patrol_unarmed_land_hard.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+$sequence "land_soft_patrol_unarmed" {
+	"jackal_animations\patrol_unarmed_land_soft.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+//ORDER SEQUENCES
+
+$sequence "surprised_patrol_unarmed_1" {
+	"jackal_animations\patrol_unarmed_surprise_front_var0.smd"
+	activity "ACT_SIGNAL_FORWARD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 20 LX LY
+}
+
+$sequence "surprised_patrol_unarmed_2" {
+	"jackal_animations\patrol_unarmed_surprise_front_var1.smd"
+	activity "ACT_SIGNAL_FORWARD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 20 LX LY
+}
+
+$sequence "point_patrol_unarmed" {
+	"jackal_animations\patrol_unarmed_point.smd"
+	activity "ACT_GMOD_GESTURE_POINT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+//TURN SEQUENCES
+
+$sequence "turn_left_patrol_unarmed" {
+	"jackal_animations\patrol_unarmed_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 25 LXR LYR
+}
+
+$sequence "turn_right_patrol_unarmed" {
+	"jackal_animations\patrol_unarmed_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 25 LXR LYR
+}
