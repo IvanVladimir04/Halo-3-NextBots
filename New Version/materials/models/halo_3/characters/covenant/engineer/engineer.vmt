@@ -1,0 +1,49 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/engineer/engineer_body_diffuse"
+	"$bumpmap" "models/halo_3/characters/covenant/engineer/engineer_body_zbump"	
+	"$detail"  "models/halo_3/characters/covenant/engineer/engineer_body_illum"
+	"$detailblendmode"			"5.00"
+	"$detailblendfactor"			"1.00"
+	"$detailscale"			"1.00"
+	"$blendtintbybasealpha" "1"
+
+	"$ambientocclusion" "1"
+	"$phong" 1
+	"$phongboost" "0.3"
+	"$phongexponent" "25"
+	"$phongtint" "[1.05 .83 .83]"
+	"$phongfresnelranges" "[.7 .82 31]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	"$color2" "[1 1 1]"
+
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/covenant/engineer/engineer_body"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/covenant/engineer/engineer_body_illum"
+	"$emissiveBlendFlowTexture"     "Particle/Particle_Glow_03"
+	"$emissiveBlendTint"	 "[0 0 2]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[0 0.1]"	
+
+Proxies
+{
+	Sine
+		{
+			sineperiod 1.7
+			sinemin	1 
+			sinemax 	3
+			timeoffset .25
+			resultvar $emissiveBlendTint
+		}
+	Sine
+		{
+			sineperiod 1.7
+			sinemin	3 
+			sinemax 	6
+			timeoffset .25
+			resultvar $detailblendfactor
+		}
+
+}
+}
