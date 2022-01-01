@@ -448,7 +448,6 @@ $sequence "Flee_idle" {
 	fadeout 0.2
 	fps 30
 	loop
-	hidden
 }
 
 $sequence "flight_idle" {
