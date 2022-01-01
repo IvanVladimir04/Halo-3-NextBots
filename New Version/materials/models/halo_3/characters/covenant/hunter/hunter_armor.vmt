@@ -1,0 +1,49 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/hunter/hunter_diffuse"
+	"$bumpmap" "models/halo_3/characters/covenant/hunter/hunter_zbump"	
+	"$blendtintbybasealpha" "1"
+	"$detail"  "models/halo_3/characters/covenant/hunter/hunter_skin_detail"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"1.00"
+	"$detailscale"			"1.00"
+	"$phong" 1
+	"$phongboost" "6"
+	"$phongexponent" "12"
+	"$phongfresnelranges" "[.5 .85 6]"
+	"$phongtint"	"[.25 .25 .25]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	$ambientocclusion 1
+	"$rimlight"	"1"
+	"$rimlightexponent"	"15"
+	"$rimlightboost"	"5"
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[0.02 0.02 0.02]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_distortreflect"
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 0
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 0
+			max 0
+			srcVar1 "$color"
+			resultVar "$phongtint"
+		}
+		Clamp
+		{
+			min 0
+			max 0
+			srcVar1 "$color"
+			resultVar "$envmaptint"
+		}
+	}
+}

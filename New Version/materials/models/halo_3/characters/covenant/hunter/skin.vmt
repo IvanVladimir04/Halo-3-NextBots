@@ -1,0 +1,37 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/hunter/hunter_skin"
+	"$bumpmap" "models/halo_3/characters/covenant/hunter/hunter_skin_bump"
+	"$detail"  "models/halo_3/characters/covenant/hunter/hunter_skin_detail"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"0.40"
+	"$detailscale"			"1.00"
+	"$blendtintbybasealpha" "1"
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/covenant/hunter/hunter_skin"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/covenant/hunter/hunter_skin"
+	"$emissiveBlendFlowTexture"     "models/halo_3/characters/covenant/hunter/hunter_skin_detail"
+	"$emissiveBlendTint"	 "[0.5 0.5 0.5]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[0.25 0.5]"	
+
+	"$ambientocclusion" "1"
+	"$phong" 1
+	"$phongboost" "0.3"
+	"$phongexponent" "25"
+	"$phongtint" "[1.05 .83 .83]"
+	"$phongfresnelranges" "[.7 .82 31]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	"$color2" "[1 1 1]"
+
+    "Proxies"
+    {
+                "TextureScroll"
+                {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.1
+                        "texturescrollangle" 90
+                }
+    }
+}

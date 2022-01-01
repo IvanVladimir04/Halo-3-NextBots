@@ -1,0 +1,50 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "particle/Particle_Glow_04"
+	"$translucent" "1"
+	"$selfillum" "1"
+	"$detail" "models/halo_3/characters/covenant/hunter/hunter_gun_plasma_diffuse"
+	"$detailscale" "1"
+	"$detailblendfactor" "9"
+	"$detailblendmode" "11"
+	"$color2" "[0.6 1 0.2]"
+	"$blendtintbybasealpha"	0
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture     	"models/halo_3/characters/covenant/hunter/hunter_gun_plasma_bubbles_diffuse"
+	$emissiveBlendBaseTexture		"models/halo_3/characters/covenant/hunter/hunter_gun_plasma_bubbles_diffuse"
+	$emissiveBlendFlowTexture     "models/halo_3/characters/covenant/hunter/hunter_gun_plasma_diffuse"
+	$emissiveBlendTint "[2 5 0.4 ]"
+	$emissiveBlendStrength 15
+	$emissiveBlendScrollVector "[.25 .25]"
+    "Proxies"
+    {
+
+	Clamp
+		{
+			min 1
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 1
+			max 1
+			srcVar1 "$color2"
+			resultVar "$phongtint"
+		}
+		Clamp
+		{
+			min 1
+			max 1
+			srcVar1 "$color2"
+			resultVar "$emissiveBlendTint"
+		}
+	                "TextureScroll"
+                	{
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.25
+                        "texturescrollangle" 90
+                	}
+    }
+}

@@ -1,0 +1,67 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/forerunner/monitor/monitordestroyed_diffuse"
+	"$bumpmap" "models/halo_3/characters/forerunner/monitor/monitordestroyed_zbump"	
+	"$blendtintbybasealpha" "1"
+	"$detail"  "models/halo_3/characters/forerunner/monitor/monitor_detail02"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"1.00"
+	"$detailscale"			"1.00"
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/forerunner/monitor/monitordestroyed_diffuse"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/forerunner/monitor/monitordestroyed_illum"
+	"$emissiveBlendFlowTexture"     "vgui/white"
+	"$emissiveBlendTint"	 "[1 1 1]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[0 0]"	
+	"$phong" 1
+	"$phongboost" "2.5"
+	"$phongexponent" "12"
+	"$phongfresnelranges" "[.5 .85 6]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	$ambientocclusion 1
+	"$rimlight"	"1"
+	"$rimlightexponent"	"15"
+	"$rimlightboost"	"5"
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$normalmapalphaenvmapmask"	"1"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+
+
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$emissiveBlendTint"
+		}
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 1
+			max 1
+			srcVar1 "$color"
+			resultVar "$phongtint"
+		}
+		Clamp
+		{
+			min 0.05
+			max 0.05
+			srcVar1 "$color"
+			resultVar "$envmaptint"
+		}
+	}
+
+
+}
+

@@ -1,0 +1,20 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
+	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"
+	"$detail"  "models/halo_3/characters/covenant/grunt/skin_detail"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"1.00"
+	"$detailscale"			"15.00"
+	"$blendtintbybasealpha" "1"
+	"$normalmapalphaenvmapmask"	1
+	"$ambientocclusion" "1"
+	"$phong" 1
+	"$phongboost" "0.15"
+	"$phongexponent" "8"
+	"$phongtint" "[1.05 .83 .83]"
+	"$phongfresnelranges" "[.7 .82 31]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	"$color2" "[1 .85 .35]"
+}

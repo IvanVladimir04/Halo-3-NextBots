@@ -1,0 +1,9 @@
+"Unlitgeneric"
+{
+	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_illum_pupa"
+	"$additive"	"1"
+	"$color2"		"[0.2 0.8 1]"
+}
+
+
+
