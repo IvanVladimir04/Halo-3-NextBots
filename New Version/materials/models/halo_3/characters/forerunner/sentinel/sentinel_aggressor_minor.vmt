@@ -25,7 +25,7 @@
 	"$rimlightexponent"	"15"
 	"$rimlightboost"	"5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
-	"$envmaptint"	"[.25 .25 .25]"
+	"$envmaptint"	"[.03 .03 .03]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 
 

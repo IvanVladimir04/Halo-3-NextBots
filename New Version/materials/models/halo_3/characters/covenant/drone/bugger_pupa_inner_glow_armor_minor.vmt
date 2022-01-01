@@ -3,7 +3,7 @@
 	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
 	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"	
 	"$blendtintbybasealpha" "1"
-	"$color2"		"[.78 .85 .4]"
+	"$color2"		"[.48 .55 .3]"
 	
 	"$ambientocclusion" 	"1"
 	"$model" 1

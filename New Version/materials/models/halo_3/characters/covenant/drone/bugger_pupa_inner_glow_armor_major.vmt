@@ -3,14 +3,14 @@
 	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
 	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"	
 	"$blendtintbybasealpha" "1"
-	"$color2"		"[.8 0.15 0.1]"
+	"$color2"		"[.45 0.2 0.15]"
 	
 	"$ambientocclusion" 	"1"
 	"$model" 1
 
 	"$phong" 1
-	"$phongboost" "4"
-	"$phongexponent" "20"
+	"$phongboost" "5"
+	"$phongexponent" "10"
 	"$phongfresnelranges" "[1 .5 .3]"
 	"$phongtint"	"[1 .15 .1]"
 	"$phongalbedotint" "1"
