@@ -30,7 +30,8 @@
 	"$emissiveBlendTint"	 "[5 5 5]"
 	"$emissiveBlendStrength" 50
 	"$emissiveBlendScrollVector"	 "[0 0]"	
-
+	"$nodecal"				1
+	
 	Proxies
 	{
 		Clamp

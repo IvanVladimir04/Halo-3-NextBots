@@ -21,6 +21,7 @@
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint"	"[0.02 0.02 0.02]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_distortreflect"
+	"$nodecal"				1
 
 	Proxies
 	{

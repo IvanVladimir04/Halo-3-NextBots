@@ -20,4 +20,5 @@
 	"$envmaptint"	"[0.02 0.01 0.03]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask"	1
+	"$nodecal"				1
 }

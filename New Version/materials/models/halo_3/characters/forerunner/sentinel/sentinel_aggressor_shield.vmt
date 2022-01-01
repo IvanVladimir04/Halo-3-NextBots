@@ -15,6 +15,7 @@
 	"$emissiveBlendStrength" 50
 	"$emissiveBlendScrollVector"	 "[2 .25]"	
 	"$color2" "[0.2 0.6 1]"
+	"$nodecal"			"1"
 
 
 

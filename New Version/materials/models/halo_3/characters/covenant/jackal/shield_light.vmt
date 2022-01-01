@@ -15,4 +15,5 @@
 	"$model" 1
 	"$phongalbedotint" "1"
 	"$color2" "[1 10 15]"
+	"$nodecal"				1
 }

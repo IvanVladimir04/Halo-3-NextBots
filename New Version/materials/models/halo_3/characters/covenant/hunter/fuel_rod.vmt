@@ -8,6 +8,7 @@
 	"$detailblendfactor" "9"
 	"$detailblendmode" "11"
 	"$color2" "[0.6 1 0.2]"
+	"$nodecal"				1
 
     "Proxies"
     {

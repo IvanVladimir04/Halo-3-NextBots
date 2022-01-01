@@ -24,4 +24,5 @@
 	"$model" 1
 	"$phongalbedotint" "1"
 	"$alphatest"	1
+	"$nodecal"				1
 }

@@ -16,6 +16,8 @@
 	$emissiveBlendTint "[2 5 0.4 ]"
 	$emissiveBlendStrength 15
 	$emissiveBlendScrollVector "[.25 .25]"
+	"$nodecal"				1
+	
     "Proxies"
     {
 

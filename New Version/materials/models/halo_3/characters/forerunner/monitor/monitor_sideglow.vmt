@@ -15,6 +15,7 @@
 	"$detailblendmode"			"5.00"
 	"$detailblendfactor"			"1.00"
 	"$detailscale"			"1.00"
+	"$nodecal"			"1"
 
 	Proxies
 	{

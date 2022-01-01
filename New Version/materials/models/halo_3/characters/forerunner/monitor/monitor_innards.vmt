@@ -26,7 +26,7 @@
 	"$rimlightboost"	"5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
-
+	"$nodecal"			"1"
 
 
 	Proxies

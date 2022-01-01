@@ -22,9 +22,10 @@
 	"$emissiveBlendTexture"    "models/halo_3/characters/covenant/engineer/engineer_body"
 	"$emissiveBlendBaseTexture"		"models/halo_3/characters/covenant/engineer/engineer_body_illum"
 	"$emissiveBlendFlowTexture"     "Particle/Particle_Glow_03"
-	"$emissiveBlendTint"	 "[0 0 2]"
+	"$emissiveBlendTint"	  "[0 0 2]"
 	"$emissiveBlendStrength" 50
-	"$emissiveBlendScrollVector"	 "[0 0.1]"	
+	"$emissiveBlendScrollVector"	 "[0 0.1]"
+	"$nodecal"				1
 
 Proxies
 {

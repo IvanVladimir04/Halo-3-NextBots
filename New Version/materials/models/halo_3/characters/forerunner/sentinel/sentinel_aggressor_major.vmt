@@ -29,6 +29,7 @@
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint"	"[.15 .12 .06]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$nodecal"			"1"
 
 
 }

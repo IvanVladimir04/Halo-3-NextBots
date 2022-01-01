@@ -22,4 +22,5 @@
 	"$detailblendmode"			"0.00"
 	"$detailblendfactor"			"0.50"
 	"$detailscale"			"15.00"
+	"$nodecal"				1
 }
