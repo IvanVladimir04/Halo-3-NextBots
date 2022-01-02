@@ -6,7 +6,7 @@
 	"$detailblendmode"			"0.00"
 	"$detailblendfactor"			"1.00"
 	"$detailscale"			"15.00"
-	"$blendtintbybasealpha" "0"
+	"$blendtintbybasealpha" "1"
 
 	"$ambientocclusion" "1"
 	"$phong" 1

@@ -4,8 +4,8 @@
 	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"	
 	"$blendtintbybasealpha" "1"
 	"$phong" 1
-	"$phongboost" "2"
-	"$phongexponent" "20"
+	"$phongboost" "4"
+	"$phongexponent" "15"
 	"$phongfresnelranges" "[.5 .85 6]"
 //	"$phongtint"	"[1 .8 .4]"
 	"$model" 1
@@ -58,7 +58,7 @@
 		Clamp
 		{
 			min 0
-			max 0.05
+			max 0.15
 			srcVar1 "$color"
 			resultVar "$envmaptint"
 		}
