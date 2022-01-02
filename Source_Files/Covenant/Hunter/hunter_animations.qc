@@ -1,8 +1,22 @@
 // Created by Crowbar 0.68
 
 $modelname "halo_3/characters/covenant/hunter.mdl"
-
 $scale	1.065
+$BodyGroup "Main"
+{
+	studio "hunter_base.smd"
+}
+$BodyGroup "Arms"
+{
+	studio "limbs_base.smd"
+}
+$BodyGroup "Back"
+{
+	studio "torso_base.smd"
+	studio "torso_destroy.smd"
+}
+
+
 $origin 	0 0 0 -90
 $surfaceprop "flesh"
 
@@ -13,10 +27,7 @@ $texturegroup "skinfamilies"
 	{ "hunter_minor" }
 	{ "hunter_major" }
 }
-$BodyGroup "Main"
-{
-	studio "hunter.smd"
-}
+
 
 //$upaxis -y
 

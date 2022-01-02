@@ -1,0 +1,968 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM COMBAT ANY STILL UP
+
+$animation "aim_combat_any_still_up_neutral" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_any_still_up_down_left" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+$animation "aim_combat_any_still_up_down_center" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+$animation "aim_combat_any_still_up_down_right" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+$animation "aim_combat_any_still_up_mid_left" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+$animation "aim_combat_any_still_up_mid_center" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+$animation "aim_combat_any_still_up_mid_right" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+$animation "aim_combat_any_still_up_up_left" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+$animation "aim_combat_any_still_up_up_center" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+$animation "aim_combat_any_still_up_up_right" "flood_tank_animations\combat_any_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_any_still_up_neutral" 0
+}
+
+
+//AIM COMBAT ANY MOVE UP
+
+$animation "aim_combat_any_move_up_neutral" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_any_move_up_down_left" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+$animation "aim_combat_any_move_up_down_center" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+$animation "aim_combat_any_move_up_down_right" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+$animation "aim_combat_any_move_up_mid_left" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+$animation "aim_combat_any_move_up_mid_center" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+$animation "aim_combat_any_move_up_mid_right" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+$animation "aim_combat_any_move_up_up_left" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+$animation "aim_combat_any_move_up_up_center" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+$animation "aim_combat_any_move_up_up_right" "flood_tank_animations\combat_any_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_any_move_up_neutral" 0
+}
+
+
+
+//AIM COMBAT UNARMED STILL UP
+
+$animation "protected_any_aim_still_up_neutral" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "protected_any_aim_still_up_down_left" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+$animation "protected_any_aim_still_up_down_center" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+$animation "protected_any_aim_still_up_down_right" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+$animation "protected_any_aim_still_up_mid_left" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+$animation "protected_any_aim_still_up_mid_center" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+$animation "protected_any_aim_still_up_mid_right" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+$animation "protected_any_aim_still_up_up_left" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+$animation "protected_any_aim_still_up_up_center" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+$animation "protected_any_aim_still_up_up_right" "flood_tank_animations\protected_any_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "protected_any_aim_still_up_neutral" 0
+}
+
+
+//IDLE 2 MOVE ANIMATIONS
+
+$animation "combat_any_idle_2_combat_move_S" "flood_tank_animations\combat_any_idle_2_combat_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_idle_2_combat_move_W" "flood_tank_animations\combat_any_idle_2_combat_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_idle_2_combat_move_E" "flood_tank_animations\combat_any_idle_2_combat_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_idle_2_combat_move_N" "flood_tank_animations\combat_any_idle_2_combat_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+//MOVE 2 IDLE ANIMATIONS
+
+$animation "combat_any_move_2_combat_idle_move_S" "flood_tank_animations\combat_any_move_back_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_move_2_combat_idle_move_W" "flood_tank_animations\combat_any_move_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_move_2_combat_idle_move_E" "flood_tank_animations\combat_any_move_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_move_2_combat_idle_move_N" "flood_tank_animations\combat_any_move_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+//IDLE 2 MOVE ANIMATIONS
+
+$animation "combat_any_walk_2_combat_move_S" "flood_tank_animations\combat_any_walk_back_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_walk_2_combat_move_W" "flood_tank_animations\combat_any_walk_left_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_walk_2_combat_move_E" "flood_tank_animations\combat_any_walk_right_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_walk_2_combat_move_N" "flood_tank_animations\combat_any_walk_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE ANIMATIONS
+
+$animation "combat_any_move_S" "flood_tank_animations\combat_any_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_move_W" "flood_tank_animations\combat_any_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_move_E" "flood_tank_animations\combat_any_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_move_N" "flood_tank_animations\combat_any_move_front_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+//WALK ANIMATIONS
+
+$animation "combat_any_walk_S" "flood_tank_animations\combat_any_walk_back_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_walk_W" "flood_tank_animations\combat_any_walk_left_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_walk_E" "flood_tank_animations\combat_any_walk_right_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_any_walk_N" "flood_tank_animations\combat_any_walk_front_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+$animation "protected_any_walk_S" "flood_tank_animations\protected_any_walk_back_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "protected_any_walk_W" "flood_tank_animations\protected_any_walk_left_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "protected_any_walk_E" "flood_tank_animations\protected_any_walk_right_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "protected_any_walk_N" "flood_tank_animations\protected_any_walk_front_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//FLINCH ANIMATIONS
+
+$animation "flinch_combat_any_left_arm" "flood_tank_animations\any_any_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_combat_any_left_leg" "flood_tank_animations\any_any_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_combat_any_right_leg" "flood_tank_animations\any_any_h_ping_right_gut.smd" {
+	fps 30
+}
+$animation "flinch_combat_any_right_arm" "flood_tank_animations\any_any_h_ping_right_gut.smd" {
+	fps 30
+}
+$animation "flinch_combat_any_gut_1" "flood_tank_animations\any_any_h_ping_front_gut_var1.smd" {
+	fps 30
+}
+$animation "flinch_combat_any_gut_2" "flood_tank_animations\any_any_h_ping_front_gut_var2.smd" {
+	fps 30
+}
+$animation "flinch_combat_any_head_1" "flood_tank_animations\any_any_h_ping_front_head_var1.smd" {
+	fps 30
+}
+$animation "flinch_combat_any_head_2" "flood_tank_animations\any_any_h_ping_front_head_var2.smd" {
+	fps 30
+}
+$animation "flinch_combat_any_head_3" "flood_tank_animations\any_any_h_ping_front_head_var3.smd" {
+	fps 30
+}
+$animation "flinch_combat_protected_gut_1" "flood_tank_animations\protected_any_h_ping_front_gut_var1.smd" {
+	fps 30
+}
+$animation "flinch_combat_protected_gut_2" "flood_tank_animations\protected_any_h_ping_front_gut_var2.smd" {
+	fps 30
+}
+$animation "flinch_combat_protected_head_1" "flood_tank_animations\protected_any_h_ping_front_head_var1.smd" {
+	fps 30
+}
+$animation "flinch_combat_protected_head_2" "flood_tank_animations\protected_any_h_ping_front_head_var2.smd" {
+	fps 30
+}
+$animation "flinch_combat_protected_head_3" "flood_tank_animations\protected_any_h_ping_front_head_var3.smd" {
+	fps 30
+}
+$animation "flinch_combat_protected_left_gut" "flood_tank_animations\protected_any_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_combat_protected_right_gut" "flood_tank_animations\protected_any_h_ping_right_gut.smd" {
+	fps 30
+}
+
+//PING ANIMATIONS
+
+$animation "ping_combat_any_left_arm_pose" "flood_tank_animations\any_any_s_ping_front_l_arm.smd" {
+	fps 30
+	frame 13 13
+	loop
+}
+$animation "ping_combat_any_left_arm" "flood_tank_animations\any_any_s_ping_front_l_arm.smd" {
+	fps 30
+	subtract	"ping_combat_any_left_arm_pose"	0
+}
+$animation "ping_combat_any_right_arm_pose" "flood_tank_animations\any_any_s_ping_right_gut.smd" {
+	fps 30
+	frame 11 11
+	loop
+}
+$animation "ping_combat_any_right_arm" "flood_tank_animations\any_any_s_ping_right_gut.smd" {
+	fps 30
+	subtract	"ping_combat_any_right_arm_pose"	0
+}
+$animation "ping_combat_any_gut_pose" "flood_tank_animations\any_any_s_ping_front_gut.smd" {
+	fps 30
+	frame 13 13
+	loop
+}
+$animation "ping_combat_any_gut" "flood_tank_animations\any_any_s_ping_front_gut.smd" {
+	fps 30
+	subtract	"ping_combat_any_gut_pose"	0
+}
+$animation "ping_combat_any_head_pose" "flood_tank_animations\any_any_s_ping_front_head.smd" {
+	fps 30
+	frame 13 13
+	loop
+}
+$animation "ping_combat_any_head" "flood_tank_animations\any_any_s_ping_front_head.smd" {
+	fps 30
+	subtract	"ping_combat_any_head_pose"	0
+}
+
+//MISC ANIMATIONS
+
+$animation "combat_overlay_pose" "flood_tank_animations\combat_constant_overlay.smd" {
+	fps 30
+	frame 47 47
+	loop
+}
+$animation "combat_overlay" "flood_tank_animations\combat_constant_overlay.smd" {
+	fps 30
+	subtract	"combat_overlay_pose"	0
+}
+//COMBAT OVERLAY
+
+$sequence "Combat_Fidget_Layer" {
+	"combat_overlay"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	delta
+	hidden
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_combat_any_still_up" {
+	"aim_combat_any_still_up_up_right" "aim_combat_any_still_up_up_center"  "aim_combat_any_still_up_up_left"
+	"aim_combat_any_still_up_mid_right" "aim_combat_any_still_up_mid_center"  "aim_combat_any_still_up_mid_left"
+	"aim_combat_any_still_up_down_right" "aim_combat_any_still_up_down_center" "aim_combat_any_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+$sequence "aim_combat_any_move_up" {
+	"aim_combat_any_move_up_up_right" "aim_combat_any_move_up_up_center"  "aim_combat_any_move_up_up_left"
+	"aim_combat_any_move_up_mid_right" "aim_combat_any_move_up_mid_center"  "aim_combat_any_move_up_mid_left"
+	"aim_combat_any_move_up_down_right" "aim_combat_any_move_up_down_center" "aim_combat_any_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "protected_any_aim_still_up" {
+	"protected_any_aim_still_up_up_right" "protected_any_aim_still_up_up_center"  "protected_any_aim_still_up_up_left"
+	"protected_any_aim_still_up_mid_right" "protected_any_aim_still_up_mid_center"  "protected_any_aim_still_up_mid_left"
+	"protected_any_aim_still_up_down_right" "protected_any_aim_still_up_down_center" "protected_any_aim_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+//IDLE SEQUENCES
+
+$sequence "combat_any_idle_up_1" {
+	"flood_tank_animations\combat_any_idle_var1.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_combat_any_still_up"
+	addlayer	"Combat_Fidget_Layer"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "combat_any_idle_up_2" {
+	"flood_tank_animations\combat_any_idle_var2.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_combat_any_still_up"
+	addlayer	"Combat_Fidget_Layer"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "protected_any_idle_up" {
+	"flood_tank_animations\protected_any_idle_var1.smd"
+	activity "ACT_IDLE" 1
+	addlayer	"protected_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+//MOVEMENT SEQUENCES
+
+
+$sequence "move_combat_any_up" {
+	"combat_any_move_S"
+	"combat_any_move_W"
+	"combat_any_move_N"
+	"combat_any_move_E"
+	"combat_any_move_S"
+	activity "ACT_RUN_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_any_move_up"
+	addlayer	"Combat_Fidget_Layer"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_FloodCombatElite.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_FloodCombatElite.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_protected_any_up" {
+	"protected_any_walk_S"
+	"protected_any_walk_W"
+	"protected_any_walk_N"
+	"protected_any_walk_E"
+	"protected_any_walk_S"
+	activity "ACT_WALK_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"protected_any_aim_still_up"
+	addlayer	"Combat_Fidget_Layer"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_FloodCombatElite.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_FloodCombatElite.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_combat_any_up" {
+	"combat_any_walk_S"
+	"combat_any_walk_W"
+	"combat_any_walk_N"
+	"combat_any_walk_E"
+	"combat_any_walk_S"
+	activity "ACT_WALK_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_any_move_up"
+	addlayer	"Combat_Fidget_Layer"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_FloodCombatElite.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_FloodCombatElite.Step" }
+	walkframe 145 LX LY
+}
+
+//MELEE SEQUENCES
+
+$sequence "melee_smash_combat_any_right" {
+	"flood_tank_animations\combat_any_smash_left.smd"
+	activity "ACT_MELEE_ATTACK_SWING" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "melee_smash_combat_any_left" {
+	"flood_tank_animations\combat_any_smash_right.smd"
+	activity "ACT_MELEE_ATTACK_SWING" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "melee_combat_any_1" {
+	"flood_tank_animations\combat_any_melee_var1.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 61 LX LY LZR
+	{ event 1100 18 "event_halo_3_floodcombatelite_melee" }
+}
+
+$sequence "melee_combat_any_2" {
+	"flood_tank_animations\combat_any_melee_var2.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 61 LX LY LZR
+	{ event 1100 19 "event_halo_3_floodcombatelite_melee" }
+}
+
+$sequence "melee_combat_any_tackle" {
+	"flood_tank_animations\combat_any_melee_tackle.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 61 LX LY LZR
+	{ event 1100 18 "event_halo_3_floodcombatelite_melee" }
+}
+
+
+$sequence "melee_back_combat_any_any" {
+	"flood_tank_animations\combat_any_melee_back.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 100 LX LY LZR
+	{ event 1100 23 "event_halo_3_floodcombatelite_melee" }
+}
+
+//FLINCH AND PING SEQUENCES
+
+$sequence "flinch_combat_any_front_head_1" {
+	"flinch_combat_any_head_1"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "flinch_combat_any_front_head_2" {
+	"flinch_combat_any_head_2"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "flinch_combat_any_front_head_3" {
+	"flinch_combat_any_head_3"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+$sequence "flinch_combat_any_back_chest" {
+	"flinch_combat_any_gut_1"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "flinch_armored_back_gut" {
+	"flinch_combat_any_gut_2"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 41 LX LY
+}
+
+$sequence "flinch_armored_front_chest" {
+	"flinch_combat_any_gut_2"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 22 LX LY
+}
+
+$sequence "flinch_armored_front_gut_1" {
+	"flinch_combat_any_gut_1"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 19 LX LY
+}
+
+
+$sequence "flinch_armored_front_gut_2" {
+	"flinch_combat_any_gut_2"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 19 LX LY
+}
+
+$sequence "flinch_armored_front_right_arm" {
+	"flinch_combat_any_right_arm"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 35 LX LY
+}
+
+$sequence "flinch_armored_front_right_leg" {
+	"flinch_combat_any_right_leg"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 39 LX LY
+}
+
+$sequence "flinch_armored_front_left_leg" {
+	"flinch_combat_any_left_leg"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 49 LX LY
+}
+
+$sequence "flinch_armored_front_left_arm" {
+	"flinch_combat_any_left_arm"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_combat_any_back_chest" {
+	"ping_combat_any_gut"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_combat_any_back_gut" {
+	"ping_combat_any_gut"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 41 LX LY
+}
+
+$sequence "pinged_combat_any_front_chest" {
+	"ping_combat_any_gut"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 22 LX LY
+}
+
+$sequence "pinged_combat_any_front_head" {
+	"ping_combat_any_head"
+	activity "ACT_FLINCH_HEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_combat_any_front_gut" {
+	"ping_combat_any_gut"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 19 LX LY
+}
+
+$sequence "pinged_combat_any_front_right_arm" {
+	"ping_combat_any_right_arm"
+	activity "ACT_FLINCH_RIGHTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 35 LX LY
+}
+
+$sequence "pinged_combat_any_front_left_arm" {
+	"ping_combat_any_left_arm"
+	activity "ACT_FLINCH_LEFTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+//DEATH SEQUENCES
+
+$sequence "die_back_gut" {
+	"flood_tank_animations\any_any_s_kill_back_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_gut_1" {
+	"flood_tank_animations\any_any_s_kill_front_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_gut_2" {
+	"flood_tank_animations\any_any_h_ping_front_gut_var2.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "die_left_gut" {
+	"flood_tank_animations\any_any_h_kill_left_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "die_right_gut" {
+	"flood_tank_animations\any_any_h_kill_right_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+
+//TURN SEQUENCES
+
+$sequence "turn_left_combat_any" {
+	"flood_tank_animations\combat_any_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_combat_any" {
+	"flood_tank_animations\combat_any_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_left_protected_any" {
+	"flood_tank_animations\protected_any_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_protected_any" {
+	"flood_tank_animations\protected_any_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+//INFECTION SEQUENCES
+
+$sequence "infection_form_spew" {
+	"flood_tank_animations\combat_any_infection_spew.smd"
+	activity "ACT_HL2MP_ZOMBIE_SLUMP_RISE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "combat_from_ranged" {
+	"flood_tank_animations\combat_from_ranged.smd"
+	activity "ACT_DISARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "combat_from_stalker" {
+	"flood_tank_animations\combat_from_stalker.smd"
+	activity "ACT_DISARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "combat_to_ranged" {
+	"flood_tank_animations\combat_to_ranged.smd"
+	activity "ACT_ARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "combat_to_stalker" {
+	"flood_tank_animations\combat_to_stalker.smd"
+	activity "ACT_ARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
