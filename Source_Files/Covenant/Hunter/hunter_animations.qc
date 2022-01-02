@@ -1104,7 +1104,7 @@ $sequence "any_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 14 LXR LYR
+	walkframe 25 LXR LYR LZR
 }
 
 $sequence "any_turn_right_idle" {
@@ -1113,7 +1113,7 @@ $sequence "any_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 25 LXR LYR LZR
 }
 
 $sequence "crouch_any_turn_left_idle" {
@@ -1122,7 +1122,7 @@ $sequence "crouch_any_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 14 LXR LYR
+	walkframe 25 LXR LYR LZR
 }
 
 $sequence "crouch_any_turn_right_idle" {
@@ -1131,7 +1131,7 @@ $sequence "crouch_any_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 25 LXR LYR LZR
 }
 
 $sequence "patrol_any_turn_left_idle" {
@@ -1140,7 +1140,7 @@ $sequence "patrol_any_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 25 LXR LYR LZR
 }
 
 $sequence "patrol_any_turn_right_idle" {
@@ -1149,7 +1149,7 @@ $sequence "patrol_any_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 25 LXR LYR LZR
 }
 
 $sequence "stunned_unarmed_turn_left_idle" {
@@ -1158,7 +1158,7 @@ $sequence "stunned_unarmed_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 25 LXR LYR LZR
 }
 
 $sequence "stunned_unarmed_turn_right_idle" {
@@ -1167,7 +1167,7 @@ $sequence "stunned_unarmed_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 25 LXR LYR LZR
 }
 
 $sequence "move_any" {

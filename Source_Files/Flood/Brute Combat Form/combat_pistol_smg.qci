@@ -1,0 +1,270 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM COMBAT ANY STILL UP
+
+$animation "aim_combat_pistol_smg_still_up_neutral" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_pistol_smg_still_up_down_left" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_still_up_down_center" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_still_up_down_right" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_still_up_mid_left" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_still_up_mid_center" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_still_up_mid_right" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_still_up_up_left" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_still_up_up_center" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_still_up_up_right" "flood_human_combat_animations\combat_pistol_smg_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_pistol_smg_still_up_neutral" 0
+}
+
+
+//AIM COMBAT ANY MOVE UP
+
+$animation "aim_combat_pistol_smg_move_up_neutral" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_pistol_smg_move_up_down_left" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_move_up_down_center" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_move_up_down_right" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_move_up_mid_left" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_move_up_mid_center" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_move_up_mid_right" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_move_up_up_left" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_move_up_up_center" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+$animation "aim_combat_pistol_smg_move_up_up_right" "flood_human_combat_animations\combat_pistol_smg_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_pistol_smg_move_up_neutral" 0
+}
+
+//MOVE ANIMATIONS
+
+$animation "combat_pistol_smg_move_S" "flood_human_combat_animations\combat_pistol_smg_move_back_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_pistol_smg_move_W" "flood_human_combat_animations\combat_pistol_smg_move_left_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_pistol_smg_move_E" "flood_human_combat_animations\combat_pistol_smg_move_right_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_pistol_smg_move_1_N" "flood_human_combat_animations\combat_pistol_smg_move_front_var1.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_pistol_smg_move_2_N" "flood_human_combat_animations\combat_pistol_smg_move_front_var2.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_combat_pistol_smg_still_up" {
+	"aim_combat_pistol_smg_still_up_up_right" "aim_combat_pistol_smg_still_up_up_center"  "aim_combat_pistol_smg_still_up_up_left"
+	"aim_combat_pistol_smg_still_up_mid_right" "aim_combat_pistol_smg_still_up_mid_center"  "aim_combat_pistol_smg_still_up_mid_left"
+	"aim_combat_pistol_smg_still_up_down_right" "aim_combat_pistol_smg_still_up_down_center" "aim_combat_pistol_smg_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+$sequence "aim_combat_pistol_smg_move_up" {
+	"aim_combat_pistol_smg_move_up_up_right" "aim_combat_pistol_smg_move_up_up_center"  "aim_combat_pistol_smg_move_up_up_left"
+	"aim_combat_pistol_smg_move_up_mid_right" "aim_combat_pistol_smg_move_up_mid_center"  "aim_combat_pistol_smg_move_up_mid_left"
+	"aim_combat_pistol_smg_move_up_down_right" "aim_combat_pistol_smg_move_up_down_center" "aim_combat_pistol_smg_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+//IDLE SEQUENCES
+
+$sequence "combat_pistol_smg_idle_down" {
+	"flood_human_combat_animations\combat_pistol_smg_idle_var1.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_combat_pistol_smg_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "combat_pistol_smg_idle_up" {
+	"flood_human_combat_animations\combat_pistol_smg_idle_var2.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_combat_pistol_smg_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_combat_pistol_smg_1_up" {
+	"combat_pistol_smg_move_S"
+	"combat_pistol_smg_move_W"
+	"combat_pistol_smg_move_1_N"
+	"combat_pistol_smg_move_E"
+	"combat_pistol_smg_move_S"
+	activity "ACT_RUN_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_pistol_smg_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_FloodCombatHuman.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_FloodCombatHuman.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "move_combat_pistol_smg_2_up" {
+	"combat_pistol_smg_move_S"
+	"combat_pistol_smg_move_W"
+	"combat_pistol_smg_move_2_N"
+	"combat_pistol_smg_move_E"
+	"combat_pistol_smg_move_S"
+	activity "ACT_RUN_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_pistol_smg_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_FloodCombatHuman.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_FloodCombatHuman.Step" }
+	walkframe 145 LX LY
+}
+
+
+
+//TURN SEQUENCES
+
+$sequence "turn_left_combat_pistol_smg" {
+	"flood_human_combat_animations\combat_pistol_smg_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 25 LXR LYR
+}
+
+$sequence "turn_right_combat_pistol_smg" {
+	"flood_human_combat_animations\combat_pistol_smg_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 25 LXR LYR
+}

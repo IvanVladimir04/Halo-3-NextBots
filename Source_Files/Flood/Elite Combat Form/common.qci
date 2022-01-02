@@ -1,0 +1,138 @@
+//COMMON ANIMATIONS
+////////////////////
+//$origin 0 0 0 -90
+
+
+//AIM WARTHOG-TURRET
+
+$animation "warthog_b_g_aim_still_up_neutral" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "warthog_b_g_aim_still_up_down_left" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+$animation "warthog_b_g_aim_still_up_down_center" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+$animation "warthog_b_g_aim_still_up_down_right" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+$animation "warthog_b_g_aim_still_up_mid_left" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+$animation "warthog_b_g_aim_still_up_mid_center" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+$animation "warthog_b_g_aim_still_up_mid_right" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+$animation "warthog_b_g_aim_still_up_up_left" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+$animation "warthog_b_g_aim_still_up_up_center" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+$animation "warthog_b_g_aim_still_up_up_right" "flood_elite_combat_animations\warthog_b_g_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "warthog_b_g_aim_still_up_neutral" 0
+}
+
+//AIMLAYER SEQUENCES
+
+
+$sequence "warthog_b_g_aim_still_up" {
+	"warthog_b_g_aim_still_up_up_right" "warthog_b_g_aim_still_up_up_center"  "warthog_b_g_aim_still_up_up_left"
+	"warthog_b_g_aim_still_up_mid_right" "warthog_b_g_aim_still_up_mid_center"  "warthog_b_g_aim_still_up_mid_left"
+	"warthog_b_g_aim_still_up_down_right" "warthog_b_g_aim_still_up_down_center" "warthog_b_g_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+//BOARDING SEQUENCES
+
+$sequence "warthog_gunner_board_enter" {
+	"flood_elite_combat_animations\warthog_b_g_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_gunner_board_idle" {
+	"flood_elite_combat_animations\warthog_b_g_idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+	addlayer	"warthog_b_g_aim_still_up"
+	loop
+}
+
+$sequence "warthog_gunner_board_melee_1" {
+	"flood_elite_combat_animations\warthog_b_g_melee_var1.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_gunner_board_exit" {
+	"flood_elite_combat_animations\warthog_b_g_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_board_enter" {
+	"flood_elite_combat_animations\warthog_b_h_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_board_idle" {
+	"flood_elite_combat_animations\warthog_b_h_idle_var1.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+	loop
+}

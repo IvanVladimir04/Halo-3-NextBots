@@ -589,7 +589,7 @@ $sequence "turn_left_crouch_rifle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 25 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "turn_right_crouch_rifle" {
@@ -598,7 +598,7 @@ $sequence "turn_right_crouch_rifle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 25 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 //OTHER

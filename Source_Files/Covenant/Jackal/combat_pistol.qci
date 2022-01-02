@@ -780,7 +780,7 @@ $sequence "turn_left_combat_pistol" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 25 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "turn_right_combat_pistol" {
@@ -789,7 +789,7 @@ $sequence "turn_right_combat_pistol" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 25 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 //OTHER

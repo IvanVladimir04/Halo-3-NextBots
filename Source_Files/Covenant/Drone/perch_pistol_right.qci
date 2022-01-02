@@ -228,7 +228,7 @@ $sequence "perch_wall_right_2_left" {
 	fadeout 0.2
 	fps 30
 	{ event 1100 0 "event_halo_3_drones_toggle_wings_on" }
-	walkframe 60 LXR LYR LZR
+	walkframe 60 LXR LYR LZR LZR
 }
 
 

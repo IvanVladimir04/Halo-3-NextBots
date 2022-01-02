@@ -3269,7 +3269,7 @@ $sequence "missile_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 14 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "missile_turn_right_idle" {
@@ -3278,7 +3278,7 @@ $sequence "missile_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "missile_fc_turn_left_idle" {
@@ -3287,7 +3287,7 @@ $sequence "missile_fc_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 14 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "missile_fc_turn_right_idle" {
@@ -3296,7 +3296,7 @@ $sequence "missile_fc_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "pistol_turn_left_idle" {
@@ -3305,7 +3305,7 @@ $sequence "pistol_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "pistol_turn_right_idle" {
@@ -3314,7 +3314,7 @@ $sequence "pistol_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "patrol_unarmed_turn_left_idle" {
@@ -3323,7 +3323,7 @@ $sequence "patrol_unarmed_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "patrol_unarmed_turn_right_idle" {
@@ -3332,7 +3332,7 @@ $sequence "patrol_unarmed_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "patrol_pistol_turn_left_idle" {
@@ -3341,7 +3341,7 @@ $sequence "patrol_pistol_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "patrol_pistol_turn_right_idle" {
@@ -3350,7 +3350,7 @@ $sequence "patrol_pistol_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "patrol_missile_turn_left_idle" {
@@ -3359,7 +3359,7 @@ $sequence "patrol_missile_turn_left_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "patrol_missile_turn_right_idle" {
@@ -3368,7 +3368,7 @@ $sequence "patrol_missile_turn_right_idle" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 13 LXR LYR
+	walkframe 55 LXR LYR LZR
 }
 
 $sequence "flee_turn_left" {
@@ -3377,7 +3377,7 @@ $sequence "flee_turn_left" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 36 LXR LYR
+	walkframe 36 LXR LYR LZR
 }
 
 $sequence "flee_turn_right" {
@@ -3386,7 +3386,7 @@ $sequence "flee_turn_right" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 36 LXR LYR
+	walkframe 36 LXR LYR LZR
 }
 
 $sequence "move_missile_1" {

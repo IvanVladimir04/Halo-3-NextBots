@@ -261,7 +261,7 @@ $sequence "flee_turn_left" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 36 LXR LYR
+	walkframe 36 LXR LYR LZR
 }
 
 $sequence "flee_turn_right" {
@@ -270,7 +270,7 @@ $sequence "flee_turn_right" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 36 LXR LYR
+	walkframe 36 LXR LYR LZR
 }
 
 
