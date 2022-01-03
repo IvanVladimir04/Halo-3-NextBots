@@ -562,6 +562,384 @@ $animation "scorpion_p_lf_pistol_aim_still_up_up_right" "marine_animations\scorp
 }
 
 
+//AIM HORNET PASSENGER MISSILE
+
+$animation "hornet_p_l_missile_aim_still_up_neutral" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "hornet_p_l_missile_aim_still_up_down_left" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_missile_aim_still_up_down_center" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_missile_aim_still_up_down_right" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_missile_aim_still_up_mid_left" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_missile_aim_still_up_mid_center" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_missile_aim_still_up_mid_right" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_missile_aim_still_up_up_left" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_missile_aim_still_up_up_center" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_missile_aim_still_up_up_right" "marine_animations\hornet_p_l_missile_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "hornet_p_l_missile_aim_still_up_neutral" 0
+}
+
+
+//AIM HORNET PASSENGER PISTOL
+
+$animation "hornet_p_l_pistol_aim_still_up_neutral" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_down_left" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_down_center" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_down_right" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_mid_left" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_mid_center" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_mid_right" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_up_left" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_up_center" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_pistol_aim_still_up_up_right" "marine_animations\hornet_p_l_pistol_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "hornet_p_l_pistol_aim_still_up_neutral" 0
+}
+
+
+//AIM HORNET PASSENGER RIFLE
+
+$animation "hornet_p_l_rifle_aim_still_up_neutral" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_down_left" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_down_center" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_down_right" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_mid_left" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_mid_center" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_mid_right" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_up_left" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_up_center" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_l_rifle_aim_still_up_up_right" "marine_animations\hornet_p_l_rifle_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "hornet_p_l_rifle_aim_still_up_neutral" 0
+}
+
+
+//AIM HORNET PASSENGER MISSILE
+
+$animation "hornet_p_r_missile_aim_still_up_neutral" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "hornet_p_r_missile_aim_still_up_down_left" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_missile_aim_still_up_down_center" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_missile_aim_still_up_down_right" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_missile_aim_still_up_mid_left" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_missile_aim_still_up_mid_center" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_missile_aim_still_up_mid_right" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_missile_aim_still_up_up_left" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_missile_aim_still_up_up_center" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_missile_aim_still_up_up_right" "marine_animations\hornet_p_r_missile_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "hornet_p_r_missile_aim_still_up_neutral" 0
+}
+
+
+//AIM HORNET PASSENGER PISTOL
+
+$animation "hornet_p_r_pistol_aim_still_up_neutral" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_down_left" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_down_center" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_down_right" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_mid_left" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_mid_center" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_mid_right" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_up_left" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_up_center" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_pistol_aim_still_up_up_right" "marine_animations\hornet_p_r_pistol_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "hornet_p_r_pistol_aim_still_up_neutral" 0
+}
+
+
+//AIM HORNET PASSENGER RIFLE
+
+$animation "hornet_p_r_rifle_aim_still_up_neutral" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_down_left" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_down_center" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_down_right" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_mid_left" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_mid_center" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_mid_right" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_up_left" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_up_center" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+$animation "hornet_p_r_rifle_aim_still_up_up_right" "marine_animations\hornet_p_r_rifle_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "hornet_p_r_rifle_aim_still_up_neutral" 0
+}
+
+
 //AIM PROWLER-TURRET
 
 $animation "mauler_g_aim_still_up_neutral" "marine_animations\mauler_g_aim_still_up.smd" {
@@ -648,6 +1026,131 @@ $animation "mauler_p_l_any_aim_still_up_up_right" "marine_animations\mauler_p_l_
 	fps 30
 	frame 20 20
 	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+//MONGOOSE PASSENGER RIFLE AIM
+
+$animation "mongoose_p_any_aim_still_up_neutral" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "mongoose_p_any_aim_still_up_down_left" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_any_aim_still_up_down_center" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+
+	frame 5 5
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_any_aim_still_up_down_right" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+	frame 3 3
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_any_aim_still_up_mid_left" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+	frame 15 15
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_any_aim_still_up_mid_center" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+	frame 12 12
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_any_aim_still_up_mid_right" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_any_aim_still_up_up_left" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+	frame 22 22
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_any_aim_still_up_up_center" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+	frame 19 19
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_any_aim_still_up_up_right" "marine_animations\mongoose_p_any_aim_still_up.smd" {
+	fps 30
+	frame 17 17
+	subtract "mongoose_p_any_aim_still_up_neutral" 0
+}
+
+
+//MONGOOSE PASSENGER MISSILE AIM
+
+$animation "mongoose_p_missile_aim_still_up_neutral" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "mongoose_p_missile_aim_still_up_down_left" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_missile_aim_still_up_down_center" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+
+	frame 5 5
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_missile_aim_still_up_down_right" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 3 3
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_missile_aim_still_up_mid_left" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 15 15
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_missile_aim_still_up_mid_center" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 12 12
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_missile_aim_still_up_mid_right" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_missile_aim_still_up_up_left" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 21 21
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_missile_aim_still_up_up_center" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 19 19
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "mongoose_p_missile_aim_still_up_up_right" "marine_animations\mongoose_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 17 17
+	subtract "mongoose_p_missile_aim_still_up_neutral" 0
 }
 
 //AIM PROWLER RIGHT PASSENGER
@@ -877,6 +1380,32 @@ $sequence "aim_turret_up" {
 	hidden
 }
 
+$sequence "mongoose_p_any_aim_still_up" {
+	"mongoose_p_any_aim_still_up_up_right" "mongoose_p_any_aim_still_up_up_center"  "mongoose_p_any_aim_still_up_up_left"
+	"mongoose_p_any_aim_still_up_mid_right" "mongoose_p_any_aim_still_up_mid_center"  "mongoose_p_any_aim_still_up_mid_left"
+	"mongoose_p_any_aim_still_up_down_right" "mongoose_p_any_aim_still_up_down_center" "mongoose_p_any_aim_still_up_down_left"
+	blend "aim_yaw" -180 180
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "mongoose_p_missile_aim_still_up" {
+	"mongoose_p_missile_aim_still_up_up_right" "mongoose_p_missile_aim_still_up_up_center"  "mongoose_p_missile_aim_still_up_up_left"
+	"mongoose_p_missile_aim_still_up_mid_right" "mongoose_p_missile_aim_still_up_mid_center"  "mongoose_p_missile_aim_still_up_mid_left"
+	"mongoose_p_missile_aim_still_up_down_right" "mongoose_p_missile_aim_still_up_down_center" "mongoose_p_missile_aim_still_up_down_left"
+	blend "aim_yaw" -180 180
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
 $sequence "scorpion_g_any_aim_still_up" {
 	"scorpion_g_any_aim_still_up_up_right" "scorpion_g_any_aim_still_up_up_center"  "scorpion_g_any_aim_still_up_up_left"
 	"scorpion_g_any_aim_still_up_mid_right" "scorpion_g_any_aim_still_up_mid_center"  "scorpion_g_any_aim_still_up_mid_left"
@@ -929,6 +1458,85 @@ $sequence "scorpion_p_lf_pistol_aim_still_up" {
 	fadeout 0.3
 	hidden
 }
+
+$sequence "hornet_p_l_missile_aim_still_up" {
+	"hornet_p_l_missile_aim_still_up_up_right" "hornet_p_l_missile_aim_still_up_up_center"  "hornet_p_l_missile_aim_still_up_up_left"
+	"hornet_p_l_missile_aim_still_up_mid_right" "hornet_p_l_missile_aim_still_up_mid_center"  "hornet_p_l_missile_aim_still_up_mid_left"
+	"hornet_p_l_missile_aim_still_up_down_right" "hornet_p_l_missile_aim_still_up_down_center" "hornet_p_l_missile_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "hornet_p_l_pistol_aim_still_up" {
+	"hornet_p_l_pistol_aim_still_up_up_right" "hornet_p_l_pistol_aim_still_up_up_center"  "hornet_p_l_pistol_aim_still_up_up_left"
+	"hornet_p_l_pistol_aim_still_up_mid_right" "hornet_p_l_pistol_aim_still_up_mid_center"  "hornet_p_l_pistol_aim_still_up_mid_left"
+	"hornet_p_l_pistol_aim_still_up_down_right" "hornet_p_l_pistol_aim_still_up_down_center" "hornet_p_l_pistol_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "hornet_p_l_rifle_aim_still_up" {
+	"hornet_p_l_rifle_aim_still_up_up_right" "hornet_p_l_rifle_aim_still_up_up_center"  "hornet_p_l_rifle_aim_still_up_up_left"
+	"hornet_p_l_rifle_aim_still_up_mid_right" "hornet_p_l_rifle_aim_still_up_mid_center"  "hornet_p_l_rifle_aim_still_up_mid_left"
+	"hornet_p_l_rifle_aim_still_up_down_right" "hornet_p_l_rifle_aim_still_up_down_center" "hornet_p_l_rifle_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "hornet_p_r_missile_aim_still_up" {
+	"hornet_p_r_missile_aim_still_up_up_right" "hornet_p_r_missile_aim_still_up_up_center"  "hornet_p_r_missile_aim_still_up_up_left"
+	"hornet_p_r_missile_aim_still_up_mid_right" "hornet_p_r_missile_aim_still_up_mid_center"  "hornet_p_r_missile_aim_still_up_mid_left"
+	"hornet_p_r_missile_aim_still_up_down_right" "hornet_p_r_missile_aim_still_up_down_center" "hornet_p_r_missile_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "hornet_p_r_pistol_aim_still_up" {
+	"hornet_p_r_pistol_aim_still_up_up_right" "hornet_p_r_pistol_aim_still_up_up_center"  "hornet_p_r_pistol_aim_still_up_up_left"
+	"hornet_p_r_pistol_aim_still_up_mid_right" "hornet_p_r_pistol_aim_still_up_mid_center"  "hornet_p_r_pistol_aim_still_up_mid_left"
+	"hornet_p_r_pistol_aim_still_up_down_right" "hornet_p_r_pistol_aim_still_up_down_center" "hornet_p_r_pistol_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "hornet_p_r_rifle_aim_still_up" {
+	"hornet_p_r_rifle_aim_still_up_up_right" "hornet_p_r_rifle_aim_still_up_up_center"  "hornet_p_r_rifle_aim_still_up_up_left"
+	"hornet_p_r_rifle_aim_still_up_mid_right" "hornet_p_r_rifle_aim_still_up_mid_center"  "hornet_p_r_rifle_aim_still_up_mid_left"
+	"hornet_p_r_rifle_aim_still_up_down_right" "hornet_p_r_rifle_aim_still_up_down_center" "hornet_p_r_rifle_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
 
 $sequence "warthog_p_rifle_aim_still_up" {
 	"warthog_p_rifle_aim_still_up_up_right" "warthog_p_rifle_aim_still_up_up_center"  "warthog_p_rifle_aim_still_up_up_left"
@@ -1264,8 +1872,214 @@ $origin 0 0 0 -90
 
 
 
-//BOARDING SEQUENCES
+//VEHICLE SEQUENCES
 
+$sequence "hornet_pilot_enter" {
+	"marine_animations\hornet_d_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "hornet_pilot_idle" {
+	"marine_animations\hornet_d_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+//	walkframe 44 LX LY
+}
+
+$sequence "hornet_pilot_exit" {
+	"marine_animations\hornet_d_any_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 125 LX LY
+}
+
+$sequence "hornet_passenger_left_idle_rifle" {
+	"marine_animations\hornet_p_l_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"hornet_p_l_rifle_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "hornet_passenger_left_idle_missile" {
+	"marine_animations\hornet_p_l_missile_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"hornet_p_l_missile_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "hornet_passenger_left_idle_pistol" {
+	"marine_animations\hornet_p_l_pistol_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"hornet_p_l_pistol_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "hornet_passenger_left_enter" {
+	"marine_animations\hornet_p_l_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "hornet_passenger_left_enter_missile" {
+	"marine_animations\hornet_p_l_missile_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "hornet_passenger_left_exit" {
+	"marine_animations\hornet_p_l_any_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+$sequence "hornet_passenger_right_idle_rifle" {
+	"marine_animations\hornet_p_r_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"hornet_p_r_rifle_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "hornet_passenger_right_idle_missile" {
+	"marine_animations\hornet_p_r_missile_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"hornet_p_r_missile_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "hornet_passenger_right_idle_pistol" {
+	"marine_animations\hornet_p_r_pistol_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"hornet_p_r_pistol_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "hornet_passenger_right_enter" {
+	"marine_animations\hornet_p_r_rifle_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "hornet_passenger_right_enter_missile" {
+	"marine_animations\hornet_p_r_missile_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "hornet_passenger_right_exit" {
+	"marine_animations\hornet_p_r_rifle_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY LZ
+}
+
+
+$sequence "mongoose_driver_enter" {
+	"marine_animations\mongoose_d_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "mongoose_driver_idle" {
+	"marine_animations\mongoose_d_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+//	walkframe 44 LX LY
+}
+
+$sequence "mongoose_driver_exit" {
+	"marine_animations\mongoose_d_any_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 90 LX LY LZ
+}
+
+
+
+$sequence "mongoose_passenger_idle" {
+	"marine_animations\mongoose_p_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"mongoose_p_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "mongoose_passenger_idle_missile" {
+	"marine_animations\mongoose_p_missile_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"mongoose_p_missile_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "mongoose_passenger_enter" {
+	"marine_animations\mongoose_p_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "mongoose_passenger_exit" {
+	"marine_animations\mongoose_p_any_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 90 LX LY LZ
+}
+$origin 0 0 -35 -90
 $sequence "warthog_gunner_enter" {
 	"marine_animations\warthog_g_enter.smd"
 	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
@@ -1306,9 +2120,9 @@ $sequence "warthog_gunner_exit" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 44 LXR LYR LZR
+	walkframe 44 LX LY LZ
 }
-
+$origin 0 0 0 -90
 $sequence "warthog_driver_enter" {
 	"marine_animations\warthog_d_enter.smd"
 	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
@@ -1335,6 +2149,8 @@ $sequence "warthog_driver_exit" {
 	fps 30
 	walkframe 44 LX LY
 }
+
+
 
 $sequence "warthog_passenger_idle_rifle" {
 	"marine_animations\warthog_p_rifle_idle.smd"
@@ -1380,7 +2196,7 @@ $sequence "warthog_passenger_exit" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 44 LXR LYR LZR
+	walkframe 44 LX LY LZ
 }
 
 $sequence "scorpion_driver_enter" {
