@@ -6,7 +6,7 @@
 	"$detailblendmode"			"0.00"
 	"$detailblendfactor"			"0.5"
 	"$detailscale"			"18.00"
-
+	"$color2"		"[2 2 2]"
 	"$ambientocclusion" "1"
 	"$phong" 1
 	"$phongboost" "0.8"

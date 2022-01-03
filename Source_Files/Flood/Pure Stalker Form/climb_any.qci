@@ -1,0 +1,592 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM COMBAT ANY STILL UP
+
+$animation "aim_climb_any_still_up_neutral" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_climb_any_still_up_down_left" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+$animation "aim_climb_any_still_up_down_center" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+$animation "aim_climb_any_still_up_down_right" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+$animation "aim_climb_any_still_up_mid_left" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+$animation "aim_climb_any_still_up_mid_center" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+$animation "aim_climb_any_still_up_mid_right" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+$animation "aim_climb_any_still_up_up_left" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+$animation "aim_climb_any_still_up_up_center" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+$animation "aim_climb_any_still_up_up_right" "flood_stalker_animations\climb_any_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_climb_any_still_up_neutral" 0
+}
+
+
+//AIM COMBAT ANY MOVE UP
+
+$animation "aim_climb_any_move_up_neutral" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_climb_any_move_up_down_left" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+$animation "aim_climb_any_move_up_down_center" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+$animation "aim_climb_any_move_up_down_right" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+$animation "aim_climb_any_move_up_mid_left" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+$animation "aim_climb_any_move_up_mid_center" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+$animation "aim_climb_any_move_up_mid_right" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+$animation "aim_climb_any_move_up_up_left" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+$animation "aim_climb_any_move_up_up_center" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+$animation "aim_climb_any_move_up_up_right" "flood_stalker_animations\climb_any_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_climb_any_move_up_neutral" 0
+}
+
+
+//MOVE ANIMATIONS
+
+$animation "climb_any_move_S" "flood_stalker_animations\climb_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "climb_any_move_W" "flood_stalker_animations\climb_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "climb_any_move_E" "flood_stalker_animations\climb_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "climb_any_move_N" "flood_stalker_animations\climb_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+
+//FLINCH ANIMATIONS
+
+$animation "flinch_climb_any_left_arm" "flood_stalker_animations\climb_any_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_climb_any_left_leg" "flood_stalker_animations\climb_any_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_climb_any_right_leg" "flood_stalker_animations\climb_any_h_ping_right_gut.smd" {
+	fps 30
+}
+$animation "flinch_climb_any_right_arm" "flood_stalker_animations\climb_any_h_ping_right_gut.smd" {
+	fps 30
+}
+$animation "flinch_climb_any_gut" "flood_stalker_animations\climb_any_h_ping_front_gut.smd" {
+	fps 30
+}
+
+
+//PING ANIMATIONS
+
+$animation "ping_climb_any_left_arm_pose" "flood_stalker_animations\climb_any_s_ping_left_gut.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "ping_climb_any_left_arm" "flood_stalker_animations\climb_any_s_ping_left_gut.smd" {
+	fps 30
+	subtract	"ping_climb_any_left_arm_pose"	0
+}
+$animation "ping_climb_any_right_arm_pose" "flood_stalker_animations\climb_any_s_ping_right_gut.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "ping_climb_any_right_arm" "flood_stalker_animations\climb_any_s_ping_right_gut.smd" {
+	fps 30
+	subtract	"ping_climb_any_right_arm_pose"	0
+}
+$animation "ping_climb_any_gut_pose" "flood_stalker_animations\climb_any_s_ping_front_gut.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "ping_climb_any_gut" "flood_stalker_animations\climb_any_s_ping_front_gut.smd" {
+	fps 30
+	subtract	"ping_climb_any_gut_pose"	0
+}
+$animation "ping_climb_any_head_pose" "flood_stalker_animations\climb_any_s_ping_front_head.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "ping_climb_any_head" "flood_stalker_animations\climb_any_s_ping_front_head.smd" {
+	fps 30
+	subtract	"ping_climb_any_head_pose"	0
+}
+
+//MISC ANIMATIONS
+
+$animation "climb_overlay_pose" "flood_stalker_animations\climb_airborne_overlay.smd" {
+	fps 30
+	frame 16 16
+	loop
+}
+$animation "climb_overlay" "flood_stalker_animations\climb_airborne_overlay.smd" {
+	fps 30
+	subtract	"climb_overlay_pose"	0
+}
+
+//CLIMB OVERLAY
+
+$sequence "Climb_Fidget_Layer" {
+	"climb_overlay"
+	fadein 0.2
+	fadeout 0.2
+	fps 10
+	loop
+	delta
+	hidden
+}
+
+
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_climb_any_still_up" {
+	"aim_climb_any_still_up_up_right" "aim_climb_any_still_up_up_center"  "aim_climb_any_still_up_up_left"
+	"aim_climb_any_still_up_mid_right" "aim_climb_any_still_up_mid_center"  "aim_climb_any_still_up_mid_left"
+	"aim_climb_any_still_up_down_right" "aim_climb_any_still_up_down_center" "aim_climb_any_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+$sequence "aim_climb_any_move_up" {
+	"aim_climb_any_move_up_up_right" "aim_climb_any_move_up_up_center"  "aim_climb_any_move_up_up_left"
+	"aim_climb_any_move_up_mid_right" "aim_climb_any_move_up_mid_center"  "aim_climb_any_move_up_mid_left"
+	"aim_climb_any_move_up_down_right" "aim_climb_any_move_up_down_center" "aim_climb_any_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+//IDLE SEQUENCES
+
+$sequence "climb_any_idle_up_1" {
+	"flood_stalker_animations\climb_idle.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_climb_any_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+//EVADE SEQUENCES
+
+$sequence "evade_right_climb_any_any" {
+	"flood_stalker_animations\climb_evade_right.smd"
+	activity "ACT_STRAFE_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event AE_CL_PLAYSOUND 14 "HALO3_floodpurestalker.Step" }
+	{ event AE_CL_PLAYSOUND 16 "HALO3_floodpurestalker.Step" }
+	walkframe 28 LX LY
+}
+
+$sequence "evade_left_climb_any_any" {
+	"flood_stalker_animations\climb_evade_left.smd"
+	activity "ACT_STRAFE_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event AE_CL_PLAYSOUND 14 "HALO3_floodpurestalker.Step" }
+	{ event AE_CL_PLAYSOUND 16 "HALO3_floodpurestalker.Step" }
+	walkframe 28 LX LY
+}
+
+$sequence "evade_front_climb_any_any" {
+	"flood_stalker_animations\climb_evade_front.smd"
+	activity "ACT_STRAFE_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event AE_CL_PLAYSOUND 14 "HALO3_floodpurestalker.Step" }
+	{ event AE_CL_PLAYSOUND 16 "HALO3_floodpurestalker.Step" }
+	walkframe 28 LX LY
+}
+
+$sequence "evade_back_climb_any_any" {
+	"flood_stalker_animations\climb_evade_back.smd"
+	activity "ACT_STRAFE_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event AE_CL_PLAYSOUND 14 "HALO3_floodpurestalker.Step" }
+	{ event AE_CL_PLAYSOUND 16 "HALO3_floodpurestalker.Step" }
+	walkframe 28 LX LY
+}
+
+
+
+//MOVEMENT SEQUENCES
+
+
+$sequence "move_climb_any_up" {
+	"climb_any_move_S"
+	"climb_any_move_W"
+	"climb_any_move_N"
+	"climb_any_move_E"
+	"climb_any_move_S"
+	activity "ACT_RUN_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_climb_any_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_floodpurestalker.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_floodpurestalker.Step" }
+	walkframe 145 LX LY
+}
+
+//FLINCH AND PING SEQUENCES
+
+$sequence "flinch_climb_any_back_chest" {
+	"flinch_climb_any_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "flinch_climb_back_gut" {
+	"flinch_climb_any_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 41 LX LY
+}
+
+$sequence "flinch_climb_front_chest" {
+	"flinch_climb_any_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 22 LX LY
+}
+
+$sequence "flinch_climb_front_gut_1" {
+	"flinch_climb_any_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 19 LX LY
+}
+
+
+$sequence "flinch_climb_front_gut_2" {
+	"flinch_climb_any_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 19 LX LY
+}
+
+$sequence "flinch_climb_front_right_arm" {
+	"flinch_climb_any_right_arm"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 35 LX LY
+}
+
+$sequence "flinch_climb_front_right_leg" {
+	"flinch_climb_any_right_leg"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 39 LX LY
+}
+
+$sequence "flinch_climb_front_left_leg" {
+	"flinch_climb_any_left_leg"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 49 LX LY
+}
+
+$sequence "flinch_climb_front_left_arm" {
+	"flinch_climb_any_left_arm"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_climb_any_back_chest" {
+	"ping_climb_any_gut"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_climb_any_back_gut" {
+	"ping_climb_any_gut"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 41 LX LY
+}
+
+$sequence "pinged_climb_any_front_chest" {
+	"ping_climb_any_gut"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 22 LX LY
+}
+
+$sequence "pinged_climb_any_front_head" {
+	"ping_climb_any_head"
+	activity "ACT_FLINCH_HEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_climb_any_front_gut" {
+	"ping_climb_any_gut"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 19 LX LY
+}
+
+$sequence "pinged_climb_any_front_right_arm" {
+	"ping_climb_any_right_arm"
+	activity "ACT_FLINCH_RIGHTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 35 LX LY
+}
+
+$sequence "pinged_climb_any_front_left_arm" {
+	"ping_climb_any_left_arm"
+	activity "ACT_FLINCH_LEFTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+
+//TURN SEQUENCES
+
+$sequence "turn_left_climb_any" {
+	"flood_stalker_animations\climb_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_climb_any" {
+	"flood_stalker_animations\climb_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+//AIRBORNE
+
+
+$sequence "climb_airborne_open" {
+	"flood_stalker_animations\climb_airborne_open.smd"
+	activity "ACT_GLIDE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+
+}
+
+$sequence "climb_airborne_closed" {
+	"flood_stalker_animations\climb_airborne_open.smd"
+	activity "ACT_GLIDE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+
+}
+
+//INFECTION SEQUENCES
+
+
+$sequence "climb_attach" {
+	"flood_stalker_animations\climb_attach_up.smd"
+	activity "ACT_DEPLOY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "climb_deattach" {
+	"flood_stalker_animations\climb_detach_up.smd"
+	activity "ACT_UNDEPLOY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "climb_recover" {
+	"flood_stalker_animations\climb_recover.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "climb_anticipate" {
+	"flood_stalker_animations\climb_anticipate.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}

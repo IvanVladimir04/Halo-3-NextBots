@@ -9,11 +9,11 @@
 	"$detailtint"			"[1 0.8 0.6]"
 	"$nodecal"				1
 
-//	"$emissiveBlendEnabled"	 1
-	"$emissiveBlendTexture"    "models/halo_3/characters/flood/carrier/floodcarrier"
-	"$emissiveBlendBaseTexture"		"models/halo_3/characters/flood/carrier/floodcarrier_illum"
-	"$emissiveBlendFlowTexture"     "Particle/Particle_Glow_03"
-	"$emissiveBlendTint"	 "[0 1 0]"
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/flood/carrier_form/floodcarrier"
+	"$emissiveBlendBaseTexture"		"models/halo_3/characters/flood/carrier_form/floodcarrier_illum"
+	"$emissiveBlendFlowTexture"     "Particle/Particle_Glow_05"
+	"$emissiveBlendTint"	 "[2 3 1]"
 	"$emissiveBlendStrength" 50
 	"$emissiveBlendScrollVector"	 "[0 0.1]"	
 

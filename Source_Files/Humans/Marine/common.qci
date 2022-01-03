@@ -1,0 +1,2201 @@
+//COMMON ANIMATIONS
+////////////////////
+//$origin 0 0 0 -90
+//AIM GUN TURRET
+
+$animation "aim_turret_up_neutral" "marine_animations\turret_g_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_turret_up_down_left" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_down_center" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+
+	frame 4 4
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_down_right" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_mid_left" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 11 11
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_mid_center" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_mid_right" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_up_left" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 16 16
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_up_center" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 14 14
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_up_right" "marine_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 12 12
+	subtract "aim_turret_up_neutral" 0
+}
+
+//AIM WARTHOG TURRET
+
+$animation "aim_warthog_gunner_up_neutral" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_warthog_gunner_up_down_left" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+$animation "aim_warthog_gunner_up_down_center" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+
+	frame 4 4
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+$animation "aim_warthog_gunner_up_down_right" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+$animation "aim_warthog_gunner_up_mid_left" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+	frame 11 11
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+$animation "aim_warthog_gunner_up_mid_center" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+$animation "aim_warthog_gunner_up_mid_right" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+$animation "aim_warthog_gunner_up_up_left" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+	frame 16 16
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+$animation "aim_warthog_gunner_up_up_center" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+	frame 14 14
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+$animation "aim_warthog_gunner_up_up_right" "marine_animations\warthog_g_fixed_aim_still_up.smd" {
+	fps 30
+	frame 12 12
+	subtract "aim_warthog_gunner_up_neutral" 0
+}
+
+//AIM WARTHOG MISSILE PASSENGER
+
+$animation "warthog_p_rifle_aim_still_up_neutral" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "warthog_p_rifle_aim_still_up_down_left" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_rifle_aim_still_up_down_center" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_rifle_aim_still_up_down_right" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_rifle_aim_still_up_mid_left" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_rifle_aim_still_up_mid_center" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_rifle_aim_still_up_mid_right" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_rifle_aim_still_up_up_left" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_rifle_aim_still_up_up_center" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_rifle_aim_still_up_up_right" "marine_animations\warthog_p_rifle_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "warthog_p_rifle_aim_still_up_neutral" 0
+}
+
+
+//AIM WARTHOG MISSILE PASSENGER
+
+$animation "warthog_p_missile_aim_still_up_neutral" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "warthog_p_missile_aim_still_up_down_left" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_missile_aim_still_up_down_center" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_missile_aim_still_up_down_right" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_missile_aim_still_up_mid_left" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_missile_aim_still_up_mid_center" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_missile_aim_still_up_mid_right" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_missile_aim_still_up_up_left" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_missile_aim_still_up_up_center" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_missile_aim_still_up_up_right" "marine_animations\warthog_p_missile_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "warthog_p_missile_aim_still_up_neutral" 0
+}
+
+
+//AIM WARTHOG PISTOL PASSENGER
+
+$animation "warthog_p_pistol_aim_still_up_neutral" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "warthog_p_pistol_aim_still_up_down_left" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_pistol_aim_still_up_down_center" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_pistol_aim_still_up_down_right" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_pistol_aim_still_up_mid_left" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_pistol_aim_still_up_mid_center" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_pistol_aim_still_up_mid_right" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_pistol_aim_still_up_up_left" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_pistol_aim_still_up_up_center" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+$animation "warthog_p_pistol_aim_still_up_up_right" "marine_animations\warthog_p_pistol_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "warthog_p_pistol_aim_still_up_neutral" 0
+}
+
+//AIM SCORPION TURRET
+
+$animation "scorpion_g_any_aim_still_up_neutral" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "scorpion_g_any_aim_still_up_down_left" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_g_any_aim_still_up_down_center" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_g_any_aim_still_up_down_right" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_g_any_aim_still_up_mid_left" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_g_any_aim_still_up_mid_center" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_g_any_aim_still_up_mid_right" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_g_any_aim_still_up_up_left" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_g_any_aim_still_up_up_center" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_g_any_aim_still_up_up_right" "marine_animations\scorpion_g_any_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "scorpion_g_any_aim_still_up_neutral" 0
+}
+
+//AIM SCORPION PASSENGER RIFLE
+
+$animation "scorpion_p_lf_rifle_aim_still_up_neutral" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_down_left" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_down_center" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_down_right" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_mid_left" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_mid_center" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_mid_right" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_up_left" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_up_center" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_rifle_aim_still_up_up_right" "marine_animations\scorpion_p_lf_rifle_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "scorpion_p_lf_rifle_aim_still_up_neutral" 0
+}
+
+//AIM SCORPION PASSENGER MISSILE
+
+$animation "scorpion_p_lf_missile_aim_still_up_neutral" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_down_left" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_down_center" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_down_right" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_mid_left" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_mid_center" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_mid_right" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_up_left" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_up_center" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_missile_aim_still_up_up_right" "marine_animations\scorpion_p_lf_missile_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "scorpion_p_lf_missile_aim_still_up_neutral" 0
+}
+
+//AIM SCORPION PASSENGER PISTOL
+
+$animation "scorpion_p_lf_pistol_aim_still_up_neutral" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_down_left" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_down_center" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_down_right" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_mid_left" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_mid_center" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_mid_right" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_up_left" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_up_center" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+$animation "scorpion_p_lf_pistol_aim_still_up_up_right" "marine_animations\scorpion_p_lf_pistol_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "scorpion_p_lf_pistol_aim_still_up_neutral" 0
+}
+
+
+//AIM PROWLER-TURRET
+
+$animation "mauler_g_aim_still_up_neutral" "marine_animations\mauler_g_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "mauler_g_aim_still_up_down_center" "marine_animations\mauler_g_aim_still_up.smd" {
+	fps 30
+
+	frame 2 2
+	subtract "mauler_g_aim_still_up_neutral" 0
+}
+
+$animation "mauler_g_aim_still_up_mid_center" "marine_animations\mauler_g_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "mauler_g_aim_still_up_neutral" 0
+}
+
+$animation "mauler_g_aim_still_up_up_center" "marine_animations\mauler_g_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "mauler_g_aim_still_up_neutral" 0
+}
+
+//AIM PROWLER LEFT PASSENGER
+
+$animation "mauler_p_l_any_aim_still_up_neutral" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "mauler_p_l_any_aim_still_up_down_left" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_down_center" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+
+	frame 5 5
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_down_right" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_mid_left" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 19 19
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_mid_center" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 14 14
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_mid_right" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 11 11
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_up_left" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 28 28
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_up_center" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 24 24
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_up_right" "marine_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 20 20
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+//AIM PROWLER RIGHT PASSENGER
+
+$animation "mauler_p_r_any_aim_still_up_neutral" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "mauler_p_r_any_aim_still_up_down_left" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_down_center" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+
+	frame 5 5
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_down_right" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_mid_left" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 19 19
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_mid_center" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 14 14
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_mid_right" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 11 11
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_up_left" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 28 28
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_up_center" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 24 24
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_up_right" "marine_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 20 20
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+//AIM WRAITH-TURRET
+
+$animation "wraith_g_any_aim_still_up_neutral" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "wraith_g_any_aim_still_up_down_left" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_aim_still_up_down_center" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_aim_still_up_down_right" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_aim_still_up_mid_left" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_aim_still_up_mid_center" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_aim_still_up_mid_right" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_aim_still_up_up_left" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_aim_still_up_up_center" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_aim_still_up_up_right" "marine_animations\wraith_g_any_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "wraith_g_any_aim_still_up_neutral" 0
+}
+
+//ATTACK ANIMATIONS
+
+$animation "fire_turret_pose" "marine_animations\turret_g_any_fire_1.smd" {
+	fps 30
+	loop
+	frame 6 6
+}
+
+$animation "fire_turret" "marine_animations\turret_g_any_fire_1.smd" {
+	fps 30
+	subtract	"fire_turret_pose"	0
+}
+
+
+//FLINCH ANIMATIONS
+
+$animation "flinch_armored_rifle_left_arm" "marine_animations\combat_any_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_armored_rifle_left_leg" "marine_animations\combat_any_h_ping_front_l_leg.smd" {
+	fps 30
+}
+$animation "flinch_armored_rifle_right_leg" "marine_animations\combat_any_h_ping_front_r_leg.smd" {
+	fps 30
+}
+$animation "flinch_armored_rifle_right_arm" "marine_animations\combat_any_h_ping_right_gut.smd" {
+	fps 30
+}
+$animation "flinch_armored_rifle_gut" "marine_animations\combat_any_h_ping_front_gut.smd" {
+	fps 30
+}
+$animation "flinch_armored_rifle_head" "marine_animations\combat_any_h_ping_front_head.smd" {
+	fps 30
+}
+
+
+//PING ANIMATIONS
+
+$animation "ping_armored_rifle_left_arm_pose" "marine_animations\combat_rifle_s_ping_left_gut.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_armored_rifle_left_arm" "marine_animations\combat_rifle_s_ping_left_gut.smd" {
+	fps 30
+	subtract	"ping_armored_rifle_left_arm_pose"	0
+}
+$animation "ping_armored_rifle_right_arm_pose" "marine_animations\combat_rifle_s_ping_right_gut.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_armored_rifle_right_arm" "marine_animations\combat_rifle_s_ping_right_gut.smd" {
+	fps 30
+	subtract	"ping_armored_rifle_right_arm_pose"	0
+}
+$animation "ping_armored_rifle_gut1_pose" "marine_animations\combat_rifle_s_ping_front_gut.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_armored_rifle_gut1" "marine_animations\combat_rifle_s_ping_front_gut.smd" {
+	fps 30
+	subtract	"ping_armored_rifle_gut1_pose"	0
+}
+$animation "ping_armored_rifle_head_pose" "marine_animations\combat_rifle_s_ping_front_head.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_armored_rifle_head" "marine_animations\combat_rifle_s_ping_front_head.smd" {
+	fps 30
+	subtract	"ping_armored_rifle_head_pose"	0
+}
+
+//MISC ANIMATIONS
+
+
+$animation "talk_mouth_overlay_pose" "marine_animations\combat_talk.smd" {
+	fps 30
+	frame 20 20
+	loop
+}
+$animation "talk_mouth_overlay" "marine_animations\combat_talk.smd" {
+	fps 30
+	subtract	"talk_mouth_overlay_pose"	0
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_turret_up" {
+	"aim_turret_up_up_right" "aim_turret_up_up_center"  "aim_turret_up_up_left"
+	"aim_turret_up_mid_right" "aim_turret_up_mid_center"  "aim_turret_up_mid_left"
+	"aim_turret_up_down_right" "aim_turret_up_down_center" "aim_turret_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "scorpion_g_any_aim_still_up" {
+	"scorpion_g_any_aim_still_up_up_right" "scorpion_g_any_aim_still_up_up_center"  "scorpion_g_any_aim_still_up_up_left"
+	"scorpion_g_any_aim_still_up_mid_right" "scorpion_g_any_aim_still_up_mid_center"  "scorpion_g_any_aim_still_up_mid_left"
+	"scorpion_g_any_aim_still_up_down_right" "scorpion_g_any_aim_still_up_down_center" "scorpion_g_any_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+$sequence "scorpion_p_lf_rifle_aim_still_up" {
+	"scorpion_p_lf_rifle_aim_still_up_up_right" "scorpion_p_lf_rifle_aim_still_up_up_center"  "scorpion_p_lf_rifle_aim_still_up_up_left"
+	"scorpion_p_lf_rifle_aim_still_up_mid_right" "scorpion_p_lf_rifle_aim_still_up_mid_center"  "scorpion_p_lf_rifle_aim_still_up_mid_left"
+	"scorpion_p_lf_rifle_aim_still_up_down_right" "scorpion_p_lf_rifle_aim_still_up_down_center" "scorpion_p_lf_rifle_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "scorpion_p_lf_missile_aim_still_up" {
+	"scorpion_p_lf_missile_aim_still_up_up_right" "scorpion_p_lf_missile_aim_still_up_up_center"  "scorpion_p_lf_missile_aim_still_up_up_left"
+	"scorpion_p_lf_missile_aim_still_up_mid_right" "scorpion_p_lf_missile_aim_still_up_mid_center"  "scorpion_p_lf_missile_aim_still_up_mid_left"
+	"scorpion_p_lf_missile_aim_still_up_down_right" "scorpion_p_lf_missile_aim_still_up_down_center" "scorpion_p_lf_missile_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "scorpion_p_lf_pistol_aim_still_up" {
+	"scorpion_p_lf_pistol_aim_still_up_up_right" "scorpion_p_lf_pistol_aim_still_up_up_center"  "scorpion_p_lf_pistol_aim_still_up_up_left"
+	"scorpion_p_lf_pistol_aim_still_up_mid_right" "scorpion_p_lf_pistol_aim_still_up_mid_center"  "scorpion_p_lf_pistol_aim_still_up_mid_left"
+	"scorpion_p_lf_pistol_aim_still_up_down_right" "scorpion_p_lf_pistol_aim_still_up_down_center" "scorpion_p_lf_pistol_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "warthog_p_rifle_aim_still_up" {
+	"warthog_p_rifle_aim_still_up_up_right" "warthog_p_rifle_aim_still_up_up_center"  "warthog_p_rifle_aim_still_up_up_left"
+	"warthog_p_rifle_aim_still_up_mid_right" "warthog_p_rifle_aim_still_up_mid_center"  "warthog_p_rifle_aim_still_up_mid_left"
+	"warthog_p_rifle_aim_still_up_down_right" "warthog_p_rifle_aim_still_up_down_center" "warthog_p_rifle_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "warthog_p_missile_aim_still_up" {
+	"warthog_p_missile_aim_still_up_up_right" "warthog_p_missile_aim_still_up_up_center"  "warthog_p_missile_aim_still_up_up_left"
+	"warthog_p_missile_aim_still_up_mid_right" "warthog_p_missile_aim_still_up_mid_center"  "warthog_p_missile_aim_still_up_mid_left"
+	"warthog_p_missile_aim_still_up_down_right" "warthog_p_missile_aim_still_up_down_center" "warthog_p_missile_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "warthog_p_pistol_aim_still_up" {
+	"warthog_p_pistol_aim_still_up_up_right" "warthog_p_pistol_aim_still_up_up_center"  "warthog_p_pistol_aim_still_up_up_left"
+	"warthog_p_pistol_aim_still_up_mid_right" "warthog_p_pistol_aim_still_up_mid_center"  "warthog_p_pistol_aim_still_up_mid_left"
+	"warthog_p_pistol_aim_still_up_down_right" "warthog_p_pistol_aim_still_up_down_center" "warthog_p_pistol_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_warthog_gunner_up" {
+	"aim_warthog_gunner_up_up_right" "aim_warthog_gunner_up_up_center"  "aim_warthog_gunner_up_up_left"
+	"aim_warthog_gunner_up_mid_right" "aim_warthog_gunner_up_mid_center"  "aim_warthog_gunner_up_mid_left"
+	"aim_warthog_gunner_up_down_right" "aim_warthog_gunner_up_down_center" "aim_warthog_gunner_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "mauler_g_aim_still_up" {
+	"mauler_g_aim_still_up_up_center"
+	"mauler_g_aim_still_up_mid_center"
+	"mauler_g_aim_still_up_down_center"
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "wraith_g_any_aim_still_up" {
+	"wraith_g_any_aim_still_up_up_right" "wraith_g_any_aim_still_up_up_center"  "wraith_g_any_aim_still_up_up_left"
+	"wraith_g_any_aim_still_up_mid_right" "wraith_g_any_aim_still_up_mid_center"  "wraith_g_any_aim_still_up_mid_left"
+	"wraith_g_any_aim_still_up_down_right" "wraith_g_any_aim_still_up_down_center" "wraith_g_any_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "mauler_p_r_any_aim_still_up" {
+	"mauler_p_r_any_aim_still_up_up_right" "mauler_p_r_any_aim_still_up_up_center"  "mauler_p_r_any_aim_still_up_up_left"
+	"mauler_p_r_any_aim_still_up_mid_right" "mauler_p_r_any_aim_still_up_mid_center"  "mauler_p_r_any_aim_still_up_mid_left"
+	"mauler_p_r_any_aim_still_up_down_right" "mauler_p_r_any_aim_still_up_down_center" "mauler_p_r_any_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "mauler_p_l_any_aim_still_up" {
+	"mauler_p_l_any_aim_still_up_up_right" "mauler_p_l_any_aim_still_up_up_center"  "mauler_p_l_any_aim_still_up_up_left"
+	"mauler_p_l_any_aim_still_up_mid_right" "mauler_p_l_any_aim_still_up_mid_center"  "mauler_p_l_any_aim_still_up_mid_left"
+	"mauler_p_l_any_aim_still_up_down_right" "mauler_p_l_any_aim_still_up_down_center" "mauler_p_l_any_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+//MISC SEQUENCES
+
+$sequence "dead_airborne" {
+	"marine_animations\combat_airborne_dead.smd"
+	activity "ACT_GLIDE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+
+}
+
+$sequence "dead_land_1" {
+	"marine_animations\combat_landing_dead_var1.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+$sequence "dead_land_2" {
+	"marine_animations\combat_landing_dead_var2.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+//DEATH SEQUENCES
+
+$sequence "die_front_gut" {
+	"marine_animations\h_kill_front_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_head_1" {
+	"marine_animations\h_kill_front_head_var0.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_head_2" {
+	"marine_animations\h_kill_front_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_head_1" {
+	"marine_animations\h_kill_back_head.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_gut_1" {
+	"marine_animations\h_kill_back_gut_var0.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_gut_2" {
+	"marine_animations\h_kill_back_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_left_gut" {
+	"marine_animations\h_kill_left_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_gut" {
+	"marine_animations\h_kill_right_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_left_head_1" {
+	"marine_animations\h_kill_left_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_left_head_2" {
+	"marine_animations\h_kill_left_head_var2.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_head" {
+	"marine_animations\h_kill_right_head_var0.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+//CLIMB SEQUENCES
+$origin -20 0 -105 -90
+$sequence "Climb_Stand" {
+	"marine_animations\hoist_stand_any_any_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY LZ
+}
+$origin -20 0 -40 -90
+$sequence "Climb_Crouch" {
+	"marine_animations\hoist_crouch_any_any_enter_var1.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$sequence "Climb_Rifle" {
+	"marine_animations\hoist_rifle_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$sequence "Climb_Missile" {
+	"marine_animations\hoist_missile_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$sequence "Climb_Pistol" {
+	"marine_animations\hoist_pistol_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$sequence "Climb_Crouch_1" {
+	"marine_animations\hoist_crouch_any_any_enter_var1.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$sequence "Climb_Crouch_2" {
+	"marine_animations\hoist_crouch_any_any_enter_var2.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$origin -25 0 0 -90
+$sequence "Vault" {
+	"marine_animations\vault_rifle_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$sequence "Vault_Missile" {
+	"marine_animations\vault_missile_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$sequence "Vault_Pistol" {
+	"marine_animations\vault_pistol_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+
+$origin 0 0 0 -90
+
+
+
+//BOARDING SEQUENCES
+
+$sequence "warthog_gunner_enter" {
+	"marine_animations\warthog_g_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_gunner_idle" {
+	"marine_animations\warthog_g_fixed_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"aim_warthog_gunner_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "warthog_gunner_celebrate" {
+	"marine_animations\warthog_g_fixed_celebrate.smd"
+	activity "ACT_MP_GESTURE_VC_FISTPUMP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "warthog_gunner_panic" {
+	"marine_animations\warthog_g_fixed_panic.smd"
+	activity "ACT_MP_GESTURE_VC_NODNO" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "warthog_gunner_exit" {
+	"marine_animations\warthog_g_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LXR LYR LZR
+}
+
+$sequence "warthog_driver_enter" {
+	"marine_animations\warthog_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_idle" {
+	"marine_animations\warthog_d_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_exit" {
+	"marine_animations\warthog_d_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_passenger_idle_rifle" {
+	"marine_animations\warthog_p_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"warthog_p_rifle_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "warthog_passenger_idle_missile" {
+	"marine_animations\warthog_p_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"warthog_p_missile_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "warthog_passenger_idle_pistol" {
+	"marine_animations\warthog_p_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	addlayer	"warthog_p_pistol_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "warthog_passenger_enter" {
+	"marine_animations\warthog_p_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_passenger_exit" {
+	"marine_animations\warthog_p_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LXR LYR LZR
+}
+
+$sequence "scorpion_driver_enter" {
+	"marine_animations\scorpion_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_driver_idle" {
+	"marine_animations\scorpion_d_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_driver_exit" {
+	"marine_animations\scorpion_d_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "scorpion_gunner_enter" {
+	"marine_animations\scorpion_g_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_gunner_idle" {
+	"marine_animations\scorpion_g_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"scorpion_g_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_gunner_exit" {
+	"marine_animations\scorpion_g_any_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+
+$sequence "scorpion_passenger_enter" {
+	"marine_animations\scorpion_p_lf_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_passenger_idle" {
+	"marine_animations\scorpion_p_lf_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_passenger_idle_rifle" {
+	"marine_animations\scorpion_p_lf_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"scorpion_p_lf_rifle_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_passenger_idle_missile" {
+	"marine_animations\scorpion_p_lf_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"scorpion_p_lf_missile_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_passenger_idle_pistol" {
+	"marine_animations\scorpion_p_lf_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"scorpion_p_lf_pistol_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_passenger_exit" {
+	"marine_animations\scorpion_p_lf_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+
+//VEHICLE SEQUENCES
+
+$sequence "ghost_enter" {
+	"marine_animations\ghost_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "ghost_idle" {
+	"marine_animations\ghost_d_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "ghost_exit" {
+	"marine_animations\ghost_d_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "prowler_enter" {
+	"marine_animations\mauler_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "prowler_idle" {
+	"marine_animations\mauler_d_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "prowler_exit" {
+	"marine_animations\mauler_d_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "prowler_gunner_enter" {
+	"marine_animations\mauler_g_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "prowler_gunner_idle" {
+	"marine_animations\mauler_g_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"mauler_g_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "prowler_gunner_exit" {
+	"marine_animations\mauler_g_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "prowler_passenger_left_enter" {
+	"marine_animations\mauler_p_l_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "prowler_passenger_left_idle" {
+	"marine_animations\mauler_p_l_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"mauler_p_l_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "prowler_passenger_left_exit" {
+	"marine_animations\mauler_p_l_any_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "prowler_passenger_right_enter" {
+	"marine_animations\mauler_p_r_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "prowler_passenger_right_idle" {
+	"marine_animations\mauler_p_r_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"mauler_p_r_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "prowler_passenger_right_exit" {
+	"marine_animations\mauler_p_r_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "wraith_enter" {
+	"marine_animations\wraith_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_idle" {
+	"marine_animations\wraith_d_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_exit" {
+	"marine_animations\wraith_d_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "wraith_gunner_enter" {
+	"marine_animations\wraith_g_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_gunner_idle" {
+	"marine_animations\wraith_g_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"wraith_g_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_gunner_exit" {
+	"marine_animations\wraith_g_any_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$origin 0 0 -27 -90
+$sequence "plasma_turret_enter" {
+	"marine_animations\turret_g_any_enter.smd"
+	activity "ACT_VM_SPRINT_ENTER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+$origin 0 0 -27 -90
+$sequence "plasma_turret_idle" {
+	"marine_animations\turret_g_any_idle.smd"
+	activity "ACT_IDLE_MANNEDGUN" 1
+	addlayer	"aim_turret_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "plasma_turret_exit" {
+	"marine_animations\turret_g_any_exit.smd"
+	activity "ACT_VM_SPRINT_LEAVE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+$origin 0 0 0 -90
+$sequence "plasma_turret_fire" {
+	"fire_turret"
+	activity "ACT_GESTURE_RANGE_ATTACK_HMG1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+//PELICAN SEQUENCES
+
+$sequence "pelican_e_any_any_enter" {
+	"marine_animations\pelican_e_any_any_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "pelican_e_any_any_idle" {
+	"marine_animations\pelican_e_any_any_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_l01_missile_idle" {
+	"marine_animations\pelican_p_l01_missile_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_l01_pistol_idle" {
+	"marine_animations\pelican_p_l01_pistol_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_l01_rifle_idle" {
+	"marine_animations\pelican_p_l01_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_l01_enter" {
+	"marine_animations\pelican_p_l01_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "pelican_p_l02_enter" {
+	"marine_animations\pelican_p_l02_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_l02_rifle_idle" {
+	"marine_animations\pelican_p_l02_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+$sequence "pelican_p_l02_exit" {
+	"marine_animations\pelican_p_l02_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "pelican_p_l03_enter" {
+	"marine_animations\pelican_p_l03_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_l03_rifle_idle" {
+	"marine_animations\pelican_p_l03_rifle_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+$sequence "pelican_p_l03_exit" {
+	"marine_animations\pelican_p_l03_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "pelican_p_l04_enter" {
+	"marine_animations\pelican_p_l04_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_l04_exit" {
+	"marine_animations\pelican_p_l04_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "pelican_p_l05_enter" {
+	"marine_animations\pelican_p_l05_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_l05_exit" {
+	"marine_animations\pelican_p_l05_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "pelican_p_r01_enter" {
+	"marine_animations\pelican_p_r01_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "pelican_p_r01_exit" {
+	"marine_animations\pelican_p_r01_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+
+$sequence "pelican_p_r02_enter" {
+	"marine_animations\pelican_p_r02_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_r02_exit" {
+	"marine_animations\pelican_p_r02_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "pelican_p_r03_enter" {
+	"marine_animations\pelican_p_r03_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_r03_exit" {
+	"marine_animations\pelican_p_r03_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "pelican_p_r04_enter" {
+	"marine_animations\pelican_p_r04_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_r04_exit" {
+	"marine_animations\pelican_p_r04_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "pelican_p_r05_enter" {
+	"marine_animations\pelican_p_r05_enter.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "pelican_p_r05_exit" {
+	"marine_animations\pelican_p_r05_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+
+//FLOOD INFECTION SEQUENCES
+
+$sequence "flood_morph_1" {
+	"marine_animations\any_any_any_morph.smd"
+	activity "ACT_DIE_BARNACLE_SWALLOW" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}
+
+$sequence "flood_morph_2" {
+	"marine_animations\any_any_any_morph_var2.smd"
+	activity "ACT_DIE_BARNACLE_SWALLOW" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}
+
+
+$sequence "flood_wrestle" {
+	"marine_animations\any_any_any_infection_wrestle.smd"
+	activity "ACT_GESTURE_BARNACLE_STRANGLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}
+
+$sequence "flood_infected_thrash_back" {
+	"marine_animations\any_any_thrash_back.smd"
+	activity "ACT_DYINGTODEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}
+
+$sequence "flood_infected_thrash_front" {
+	"marine_animations\any_any_thrash_front.smd"
+	activity "ACT_DYINGTODEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}
+
+$sequence "resurrect_back" {
+	"marine_animations\any_any_resurrect_back.smd"
+	activity "ACT_HL2MP_ZOMBIE_SLUMP_RISE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "resurrect_front" {
+	"marine_animations\any_any_resurrect_front.smd"
+	activity "ACT_HL2MP_ZOMBIE_SLUMP_RISE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+
+
+//FLINCH AND PING SEQUENCES
+
+$sequence "flinch_armored_rifle_back_chest" {
+	"flinch_armored_rifle_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "flinch_armored_rifle_back_gut" {
+	"flinch_armored_rifle_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 41 LX LY
+}
+
+$sequence "flinch_armored_rifle_front_chest" {
+	"flinch_armored_rifle_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 22 LX LY
+}
+
+$sequence "flinch_armored_rifle_front_head" {
+	"flinch_armored_rifle_head"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 22 LX LY
+}
+
+
+$sequence "flinch_armored_rifle_front_gut" {
+	"flinch_armored_rifle_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 19 LX LY
+}
+
+
+$sequence "flinch_armored_rifle_front_right_arm" {
+	"flinch_armored_rifle_right_arm"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 35 LX LY
+}
+
+$sequence "flinch_armored_rifle_front_right_leg" {
+	"flinch_armored_rifle_right_leg"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 39 LX LY
+}
+
+$sequence "flinch_armored_rifle_front_left_leg" {
+	"flinch_armored_rifle_left_leg"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 49 LX LY
+}
+
+$sequence "flinch_armored_rifle_front_left_arm" {
+	"flinch_armored_rifle_left_arm"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_armored_rifle_back_chest" {
+	"ping_armored_rifle_gut1"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_armored_rifle_front_head" {
+	"ping_armored_rifle_head"
+	activity "ACT_FLINCH_HEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_armored_rifle_back_gut" {
+	"ping_armored_rifle_gut1"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 41 LX LY
+}
+
+$sequence "pinged_armored_rifle_front_chest" {
+	"ping_armored_rifle_gut1"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 22 LX LY
+}
+
+$sequence "pinged_armored_rifle_front_gut" {
+	"ping_armored_rifle_gut1"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 19 LX LY
+}
+
+$sequence "pinged_armored_rifle_front_right_arm" {
+	"ping_armored_rifle_right_arm"
+	activity "ACT_FLINCH_RIGHTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 35 LX LY
+}
+
+$sequence "pinged_armored_rifle_front_left_arm" {
+	"ping_armored_rifle_left_arm"
+	activity "ACT_FLINCH_LEFTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "talk_overlay" {
+	"talk_mouth_overlay"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 45
+	delta
+}

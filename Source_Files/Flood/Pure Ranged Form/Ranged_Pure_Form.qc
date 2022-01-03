@@ -12,6 +12,10 @@ $bodygroup "Head"
 {
     studio "head_base.smd"
 }
+$bodygroup "Sacks"
+{
+    studio "sacks_base.smd"
+}
 
 
 $surfaceprop "alienflesh"
@@ -41,12 +45,12 @@ $include "combat_any.qci"
 
 //REFERENCE
 
-$animation "ref" "flood_tank_animations\REFERENCE.smd" {
+$animation "ref" "flood_ranged_animations\REFERENCE.smd" {
 	fps 30
 }
 
 $sequence "ragdoll" {
-	"flood_tank_animations\reference.smd"
+	"flood_ranged_animations\reference.smd"
 	activity "ACT_DIERAGDOLL" 1
 	fadein 1
 	fadeout 1
@@ -54,54 +58,46 @@ $sequence "ragdoll" {
 }
 
 
-$collisionjoints "flood_tank_h3_physics.smd"
+$collisionjoints "flood_ranged_h3_physics.smd"
 {
 	$mass 2000.0
 	$inertia 10.00
 	$damping 0.01
 	$rotdamping 1.50
-	$rootbone "pelvis"
+	$rootbone "hips"
 
-	$jointconstrain "spine2" x limit -48.00 48.00 0.00
-	$jointconstrain "spine2" y limit -25.00 25.00 0.00
-	$jointconstrain "spine2" z limit -25.00 50.00 0.00
+	$jointrotdamping "r_leg01" 0.00
+	$jointconstrain "r_leg01" x limit -12.00 12.00 0.00
+	$jointconstrain "r_leg01" y limit -12.00 28.00 0.00
+	$jointconstrain "r_leg01" z limit -32.00 32.00 0.00
 
-	$jointconstrain "r_upperarm" x limit -39.00 39.00 0.00
-	$jointconstrain "r_upperarm" y limit -20.00 20.00 0.00
-	$jointconstrain "r_upperarm" z limit -36.00 36.00 0.00
-
-	$jointconstrain "l_upperarm" x limit -30.00 30.00 0.00
-	$jointconstrain "l_upperarm" y limit -20.00 20.00 0.00
-	$jointconstrain "l_upperarm" z limit -36.00 36.00 0.00
-
-	$jointconstrain "l_forearm" x limit -20.00 20.00 0.00
-	$jointconstrain "l_forearm" y limit -5.00 5.00 0.00
-	$jointconstrain "l_forearm" z limit 0.00 50.00 0.00
+	$jointconstrain "r_leg02" x limit -5.00 5.00 0.00
+	$jointconstrain "r_leg02" y limit 0.00 0.00 0.00
+	$jointconstrain "r_leg02" z limit -50.00 0.00 0.00
 
 	$jointconstrain "head" x limit -30.00 30.00 0.00
 	$jointconstrain "head" y limit -25.00 25.00 0.00
 	$jointconstrain "head" z limit -15.00 35.00 0.00
 
-	$jointconstrain "r_forearm" x limit -20.00 20.00 0.00
-	$jointconstrain "r_forearm" y limit -5.00 5.00 0.00
-	$jointconstrain "r_forearm" z limit -50.00 30.00 0.00
+	$jointconstrain "l_leg01" x limit -12.00 12.00 0.00
+	$jointconstrain "l_leg01" y limit -12.00 28.00 0.00
+	$jointconstrain "l_leg01" z limit -32.00 32.00 0.00
 
-	$jointrotdamping "r_thigh" 0.00
-	$jointconstrain "r_thigh" x limit -12.00 12.00 0.00
-	$jointconstrain "r_thigh" y limit -12.00 28.00 0.00
-	$jointconstrain "r_thigh" z limit -32.00 32.00 0.00
+	$jointconstrain "l_leg02" x limit 0.00 0.00 0.00
+	$jointconstrain "l_leg02" y limit 0.00 65.00 0.00
+	$jointconstrain "l_leg02" z limit -50.00 0.00 0.00
 
-	$jointconstrain "l_thigh" x limit -12.00 12.00 0.00
-	$jointconstrain "l_thigh" y limit -12.00 28.00 0.00
-	$jointconstrain "l_thigh" z limit -32.00 32.00 0.00
+	$jointconstrain "forearm" x limit -39.00 39.00 0.00
+	$jointconstrain "forearm" y limit -20.00 20.00 0.00
+	$jointconstrain "forearm" z limit -36.00 36.00 0.00
 
-	$jointconstrain "l_calf" x limit 0.00 0.00 0.00
-	$jointconstrain "l_calf" y limit 0.00 65.00 0.00
-	$jointconstrain "l_calf" z limit 0.00 50.00 0.00
+	$jointconstrain "hand" x limit -20.00 20.00 0.00
+	$jointconstrain "hand" y limit -5.00 5.00 0.00
+	$jointconstrain "hand" z limit -50.00 30.00 0.00
 
-	$jointconstrain "r_calf" x limit -5.00 5.00 0.00
-	$jointconstrain "r_calf" y limit 0.00 0.00 0.00
-	$jointconstrain "r_calf" z limit 0.00 50.00 0.00
+	$jointconstrain "tail01" x limit -48.00 48.00 0.00
+	$jointconstrain "tail01" y limit -25.00 25.00 0.00
+	$jointconstrain "tail01" z limit -25.00 50.00 0.00
 }
 
 $collisiontext
@@ -116,10 +112,10 @@ $collisiontext
 	}
 	editparams 
 	{
-		"rootname"		"pelvis"
+		"rootname"		"hips"
 		"totalmass"		"90.000000"
-		"jointmerge"		"pelvis,spine2"
-		"jointmerge"		"pelvis,spine"
+		"jointmerge"		"hips,tail01"
+//		"jointmerge"		"hips,spine"
 	}
 }
 
@@ -132,36 +128,41 @@ $surfaceprop "alienflesh"
 
 $hboxset "default"
 
-$hbox 3 "pelvis"	    -5.52  -10.39  -16.10     9.08    9.77   18.96
-$hbox 6 "l_thigh"	    -8.00  -11.70   -9.79    25.16    9.40    8.46
-$hbox 6 "l_calf"	    -1.84   -8.72   -9.70    20.92    8.41    6.76
-$hbox 7 "r_thigh"	    -9.60   -8.97   -8.85    20.62   11.88    9.34
-$hbox 7 "r_calf"	    -6.77   -9.06  -10.34    21.01    9.81   11.50
-$hbox 7 "r_foot"	   -10.16  -12.86  -11.96    11.09   10.26   12.79
-$hbox 3 "spine"	   -13.23   -5.73  -11.79     1.43    9.60   14.03
-$hbox 2 "spine1"	   -10.20   -8.16  -11.91     5.90    8.26   11.85
-$hbox 2 "spine2"	   -26.57  -28.57  -15.10     8.12   12.48   18.65
-$hbox 4 "l_klavicle"	     0.00  -13.86  -11.09    23.29   16.02   18.02
-$hbox 4 "l_klavicle02"	    -4.81  -10.34   -9.52    18.83    8.52   12.40
-$hbox 4 "l_upperarm"	    -5.64   -9.55   -8.90    28.14    6.83    7.25
-$hbox 4 "l_forearm"	    -5.18  -10.29   -7.22    31.90    4.26    5.68
-$hbox 9 "neck"	   -13.67  -12.75  -10.80    11.92    3.29    9.92
-$hbox 1 "head"	    -6.62  -11.47   -8.28     8.44    1.86    8.62
-$hbox 1 "l_head_claw01"	     0.00   -1.58   -1.83     9.52    2.15    1.15
-$hbox 1 "l_head_claw02"	    -0.28   -2.64   -3.42    15.61    1.27    1.02
-$hbox 1 "r_head_claw01"	     0.00   -4.21   -1.50    10.39    0.64    1.44
-$hbox 1 "r_head_claw02"	    -0.25   -0.22   -1.47    15.63    4.11    1.52
-$hbox 5 "r_klavicle"	    -0.06  -12.14  -16.14    27.99   15.55   16.49
-$hbox 5 "r_klavicle02"	    -1.97  -12.61  -14.09    23.24   12.51   18.17
-$hbox 5 "r_upperarm"	    -4.53  -12.26  -10.06    35.13    9.92   12.55
-$hbox 5 "r_forearm"	    -9.46  -12.22  -15.71    63.13   20.79   11.21
-$hbox 1 "c_tendril"	     0.00  -16.19   -3.23    12.23    0.00    4.39
-$hbox 1 "l_mouth01"	    -2.13   -2.91   -2.86    21.32    3.07    3.99
-$hbox 1 "l_mouth02"	    -9.32   -1.70   -2.20    19.23    1.87    2.08
-$hbox 1 "l_tendril"	     0.00  -14.91   -1.37    14.94    0.00    6.66
-$hbox 1 "r_mouth01"	    -1.42   -2.62   -3.40    21.29    3.53    3.69
-$hbox 1 "r_mouth02"	   -11.68   -2.31   -2.22    19.20    1.49    2.25
-$hbox 1 "r_tendril"	     0.00  -14.65   -5.45    15.35    0.00    2.44
-
-
+$hbox 3 "hips"	   -11.71  -10.97  -18.82    10.76   12.56   18.79
+$hbox 2 "arm_nub01"	     0.00   -2.76   -2.24    13.06    2.07    2.98
+$hbox 2 "arm_nub02"	    -1.59   -1.94   -3.53    21.67    6.34    3.59
+$hbox 6 "l_leg01"	    -0.07  -10.38   -6.31    22.06    5.82    3.69
+$hbox 6 "l_leg02"	    -2.87  -10.30   -4.99    29.29    5.97    5.04
+$hbox 2 "l_shield"	    -1.93   -4.19  -11.48    21.51    7.45    6.03
+$hbox 2 "mid_shield"	    -1.09   -5.08   -7.13    22.03    4.49    6.76
+$hbox 1 "head"	    -6.02   -7.10   -9.06    16.24   11.85    9.03
+$hbox 7 "r_leg01"	    -0.08  -10.44   -3.65    22.05    5.68    6.15
+$hbox 7 "r_leg02"	    -2.88  -10.07   -3.79    29.28    5.49    4.73
+$hbox 2 "r_shield"	    -0.82   -3.99   -6.31    21.92    7.93    9.81
+$hbox 3 "tail_base"	    -8.16  -13.06  -20.79    23.95   14.28   20.76
+$hbox 2 "l_butt_scale"	    -0.31  -12.54  -15.36     9.72   11.20    7.62
+$hbox 3 "tail01"	   -13.68   -0.00  -14.46    12.87   14.24   16.37
+$hbox 2 "tail02"	    -5.78  -13.69  -15.36    14.12    8.33   15.33
+$hbox 2 "l_spikes_bottom"	    -6.97  -10.77   -4.04    17.34    2.23    5.26
+$hbox 2 "r_spikes_bottom"	    -5.11  -10.77   -5.39    17.34    1.38    4.20
+$hbox 2 "tail03"	    -8.16  -11.06  -12.48    13.12    8.24   12.45
+$hbox 2 "l_spikes_mid"	    -6.44  -10.33   -4.12    18.63    3.73    5.90
+$hbox 2 "r_spikes_mid"	    -6.88  -11.96   -5.32    19.16    3.68    4.20
+$hbox 2 "tail04"	   -13.88   -9.16  -11.79     9.62    7.34   11.76
+$hbox 2 "l_spikes_top"	    -4.60   -7.15   -4.94    18.21    7.83    5.28
+$hbox 2 "r_spikes_top"	    -9.85   -7.13   -5.65    18.18    7.82    3.01
+$hbox 2 "tail05"	    -8.15   -5.93   -7.28    12.93    9.88    9.56
+$hbox 3 "arm"	     0.00   -4.14   -3.05    15.50    3.98    3.05
+$hbox 3 "forearm"	    -1.76   -2.21   -2.60    12.64    3.17    2.60
+$hbox 3 "hand"	    -1.54   -7.14   -3.88    15.45    4.35    3.89
+$hbox 3 "claw01"	    -1.68   -1.11   -2.21    30.22    5.95    1.59
+$hbox 3 "claw02"	    -1.69   -1.11   -1.68    30.22    5.95    2.09
+$hbox 1 "frond01"	     0.00   -4.79   -3.76    18.04    2.72    3.82
+$hbox 1 "frond02"	     0.00   -3.50   -3.76    18.23    4.19    3.94
+$hbox 1 "frond03"	     0.00   -3.51   -3.94    18.20    4.18    3.75
+$hbox 2 "l_mouth01"	    -1.91   -3.18   -2.29    25.75    3.69    2.24
+$hbox 2 "l_mouth02"	   -11.12   -2.33   -1.92    17.43    2.03    1.54
+$hbox 2 "r_mouth01"	    -1.55   -3.18   -2.27    25.74    3.15    2.01
+$hbox 2 "r_mouth02"	   -11.13   -2.33   -1.55    17.42    2.05    1.92
+$hbox 3 "r_butt_scale"	    -0.33  -11.98   -4.13     9.70   10.39   15.27
 

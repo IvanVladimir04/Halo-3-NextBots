@@ -1,0 +1,1295 @@
+//COMMON ANIMATIONS
+////////////////////
+//$origin 0 0 0 -90
+//AIM GUN TURRET
+
+$animation "aim_turret_up_neutral" "brute_animations\turret_g_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_turret_up_down_left" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_down_center" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+
+	frame 4 4
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_down_right" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_mid_left" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 11 11
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_mid_center" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_mid_right" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_up_left" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 16 16
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_up_center" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 14 14
+	subtract "aim_turret_up_neutral" 0
+}
+
+$animation "aim_turret_up_up_right" "brute_animations\turret_g_any_aim_still_up.smd" {
+	fps 30
+	frame 12 12
+	subtract "aim_turret_up_neutral" 0
+}
+
+
+
+//AIM PROWLER-TURRET
+
+$animation "mauler_g_aim_still_up_neutral" "brute_animations\mauler_g_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "mauler_g_aim_still_up_down_center" "brute_animations\mauler_g_aim_still_up.smd" {
+	fps 30
+
+	frame 2 2
+	subtract "mauler_g_aim_still_up_neutral" 0
+}
+
+$animation "mauler_g_aim_still_up_mid_center" "brute_animations\mauler_g_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "mauler_g_aim_still_up_neutral" 0
+}
+
+$animation "mauler_g_aim_still_up_up_center" "brute_animations\mauler_g_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "mauler_g_aim_still_up_neutral" 0
+}
+
+//AIM PROWLER LEFT PASSENGER
+
+$animation "mauler_p_l_any_aim_still_up_neutral" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "mauler_p_l_any_aim_still_up_down_left" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_down_center" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+
+	frame 5 5
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_down_right" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_mid_left" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 19 19
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_mid_center" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 14 14
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_mid_right" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 11 11
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_up_left" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 28 28
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_up_center" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 24 24
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_l_any_aim_still_up_up_right" "brute_animations\mauler_p_l_any_aim_still_up.smd" {
+	fps 30
+	frame 20 20
+	subtract "mauler_p_l_any_aim_still_up_neutral" 0
+}
+
+//AIM PROWLER RIGHT PASSENGER
+
+$animation "mauler_p_r_any_aim_still_up_neutral" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "mauler_p_r_any_aim_still_up_down_left" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_down_center" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+
+	frame 5 5
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_down_right" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_mid_left" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 19 19
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_mid_center" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 14 14
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_mid_right" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 11 11
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_up_left" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 28 28
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_up_center" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 24 24
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+$animation "mauler_p_r_any_aim_still_up_up_right" "brute_animations\mauler_p_r_any_aim_still_up.smd" {
+	fps 30
+	frame 20 20
+	subtract "mauler_p_r_any_aim_still_up_neutral" 0
+}
+
+//AIM WRAITH-TURRET
+
+$animation "wraith_g_any_any_aim_still_up_neutral" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "wraith_g_any_any_aim_still_up_down_left" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_any_aim_still_up_down_center" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_any_aim_still_up_down_right" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_any_aim_still_up_mid_left" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_any_aim_still_up_mid_center" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_any_aim_still_up_mid_right" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_any_aim_still_up_up_left" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_any_aim_still_up_up_center" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+$animation "wraith_g_any_any_aim_still_up_up_right" "brute_animations\wraith_g_any_any_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "wraith_g_any_any_aim_still_up_neutral" 0
+}
+
+//ATTACK ANIMATIONS
+
+$animation "fire_turret_pose" "brute_animations\turret_g_any_fire_1.smd" {
+	fps 30
+	loop
+	frame 6 6
+}
+
+$animation "fire_turret" "brute_animations\turret_g_any_fire_1.smd" {
+	fps 30
+	subtract	"fire_turret_pose"	0
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_turret_up" {
+	"aim_turret_up_up_right" "aim_turret_up_up_center"  "aim_turret_up_up_left"
+	"aim_turret_up_mid_right" "aim_turret_up_mid_center"  "aim_turret_up_mid_left"
+	"aim_turret_up_down_right" "aim_turret_up_down_center" "aim_turret_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "mauler_g_aim_still_up" {
+	"mauler_g_aim_still_up_up_center"
+	"mauler_g_aim_still_up_mid_center"
+	"mauler_g_aim_still_up_down_center"
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "wraith_g_any_any_aim_still_up" {
+	"wraith_g_any_any_aim_still_up_up_right" "wraith_g_any_any_aim_still_up_up_center"  "wraith_g_any_any_aim_still_up_up_left"
+	"wraith_g_any_any_aim_still_up_mid_right" "wraith_g_any_any_aim_still_up_mid_center"  "wraith_g_any_any_aim_still_up_mid_left"
+	"wraith_g_any_any_aim_still_up_down_right" "wraith_g_any_any_aim_still_up_down_center" "wraith_g_any_any_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "mauler_p_r_any_aim_still_up" {
+	"mauler_p_r_any_aim_still_up_up_right" "mauler_p_r_any_aim_still_up_up_center"  "mauler_p_r_any_aim_still_up_up_left"
+	"mauler_p_r_any_aim_still_up_mid_right" "mauler_p_r_any_aim_still_up_mid_center"  "mauler_p_r_any_aim_still_up_mid_left"
+	"mauler_p_r_any_aim_still_up_down_right" "mauler_p_r_any_aim_still_up_down_center" "mauler_p_r_any_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "mauler_p_l_any_aim_still_up" {
+	"mauler_p_l_any_aim_still_up_up_right" "mauler_p_l_any_aim_still_up_up_center"  "mauler_p_l_any_aim_still_up_up_left"
+	"mauler_p_l_any_aim_still_up_mid_right" "mauler_p_l_any_aim_still_up_mid_center"  "mauler_p_l_any_aim_still_up_mid_left"
+	"mauler_p_l_any_aim_still_up_down_right" "mauler_p_l_any_aim_still_up_down_center" "mauler_p_l_any_aim_still_up_down_left"
+	blend "aim_yaw" -90 90
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+//MISC SEQUENCES
+
+$sequence "dead_airborne" {
+	"brute_animations\any_any_airborne_dead.smd"
+	activity "ACT_GLIDE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+
+}
+
+$sequence "dead_airborne_combat" {
+	"brute_animations\combat_airborne_dead.smd"
+	activity "ACT_GLIDE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+
+}
+
+$sequence "dead_land" {
+	"brute_animations\any_any_landing_dead.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+$sequence "dead_land_combat" {
+	"brute_animations\combat_landing_dead.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+//DEATH SEQUENCES
+
+$sequence "die_front_gut" {
+	"brute_animations\h_kill_front_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_head" {
+	"brute_animations\combat_pistol_h_kill_front_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_gut" {
+	"brute_animations\h_kill_back_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_gut_combat_pistol" {
+	"brute_animations\combat_pistol_s_kill_back_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+
+$sequence "die_left_gut_1" {
+	"brute_animations\combat_pistol_h_kill_left_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_left_gut_2" {
+	"brute_animations\combat_pistol_h_kill_front_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_gut_1" {
+	"brute_animations\combat_pistol_h_kill_right_gut.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_gut_2" {
+	"brute_animations\combat_pistol_h_kill_front_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_left_head" {
+	"brute_animations\combat_pistol_h_kill_left_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_head" {
+	"brute_animations\combat_pistol_h_kill_right_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+//CLIMB SEQUENCES
+$origin 0 0 -90 -90
+$sequence "Climb_Stand" {
+	"brute_animations\hoist_stand_any_any_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$origin 0 0 -42 -90
+$sequence "Climb_Crouch" {
+	"brute_animations\hoist_crouch_any_any_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$origin 0 0 -90 -90
+$sequence "Climb_Hammer" {
+	"brute_animations\hoist_hammer_enter.smd"
+	activity "ACT_ZOMBIE_CLIMB_UP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+
+$origin -50 0 0 -90
+$sequence "Vault" {
+	"brute_animations\vault_any_enter_var1.smd"
+	activity "ACT_ZOMBIE_CLIMB_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$origin -50 0 0 -90
+$sequence "Vault_Pistol" {
+	"brute_animations\vault_pistol_enter_var1.smd"
+	activity "ACT_ZOMBIE_CLIMB_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$origin -50 0 0 -90
+$sequence "Vault_Rifle_1" {
+	"brute_animations\vault_rifle_enter_var1.smd"
+	activity "ACT_ZOMBIE_CLIMB_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$origin -50 0 0 -90
+$sequence "Vault_Rifle_2" {
+	"brute_animations\vault_rifle_enter_var2.smd"
+	activity "ACT_ZOMBIE_CLIMB_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$origin -50 0 0 -90
+$sequence "Vault_Hammer" {
+	"brute_animations\vault_hammer_enter_var1.smd"
+	activity "ACT_ZOMBIE_CLIMB_END" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY LZ
+}
+$origin 0 0 0 -90
+
+
+
+//BOARDING SEQUENCES
+
+$sequence "warthog_gunner_board_enter" {
+	"brute_animations\warthog_b_g_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_gunner_board" {
+	"brute_animations\warthog_b_g_any_board.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_board_enter" {
+	"brute_animations\warthog_b_d_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_driver_board" {
+	"brute_animations\warthog_b_d_any_board.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "warthog_passenger_board_enter" {
+	"brute_animations\warthog_b_p_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "warthog_passenger_board" {
+	"brute_animations\warthog_b_p_any_board.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+
+$sequence "scorpion_board_back_enter" {
+	"brute_animations\scorpion_b_b_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_board_back_idle" {
+	"brute_animations\scorpion_b_b_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_back_melee" {
+	"brute_animations\scorpion_b_b_any_melee.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_back_exit" {
+	"brute_animations\scorpion_b_b_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+
+$sequence "scorpion_board_front_enter" {
+	"brute_animations\scorpion_b_d_l_any_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "scorpion_board_front_idle" {
+	"brute_animations\scorpion_b_d_l_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_front_melee" {
+	"brute_animations\scorpion_b_d_l_any_melee_var0.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "scorpion_board_front_exit" {
+	"brute_animations\scorpion_b_d_l_any_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "wraith_board_back_enter" {
+	"brute_animations\wraith_b_b_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_board_back_idle" {
+	"brute_animations\wraith_b_b_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_back_melee" {
+	"brute_animations\wraith_b_b_any_melee.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_back_exit" {
+	"brute_animations\wraith_b_b_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+
+$sequence "wraith_board_front_enter" {
+	"brute_animations\wraith_b_l_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_board_front_idle" {
+	"brute_animations\wraith_b_l_any_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_front_melee" {
+	"brute_animations\wraith_b_l_any_melee.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_board_front_exit" {
+	"brute_animations\wraith_b_l_exit.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+//VEHICLE SEQUENCES
+
+$sequence "ghost_enter" {
+	"brute_animations\ghost_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "ghost_idle" {
+	"brute_animations\ghost_d_unarmed_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "ghost_exit" {
+	"brute_animations\ghost_d_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "prowler_enter" {
+	"brute_animations\mauler_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "prowler_idle" {
+	"brute_animations\mauler_d_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "prowler_exit" {
+	"brute_animations\mauler_d_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "prowler_gunner_enter" {
+	"brute_animations\mauler_g_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "prowler_gunner_idle" {
+	"brute_animations\mauler_g_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"mauler_g_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "prowler_gunner_exit" {
+	"brute_animations\mauler_g_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "prowler_passenger_left_enter" {
+	"brute_animations\mauler_p_l_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "prowler_passenger_left_idle" {
+	"brute_animations\mauler_p_l_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"mauler_p_l_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "prowler_passenger_left_exit" {
+	"brute_animations\mauler_p_l_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "prowler_passenger_right_enter" {
+	"brute_animations\mauler_p_r_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "prowler_passenger_right_idle" {
+	"brute_animations\mauler_p_r_idle.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"mauler_p_r_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "prowler_passenger_right_exit" {
+	"brute_animations\mauler_p_r_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "wraith_enter" {
+	"brute_animations\wraith_d_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_idle" {
+	"brute_animations\wraith_d_idle_var1.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_exit" {
+	"brute_animations\wraith_d_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "wraith_gunner_enter" {
+	"brute_animations\wraith_g_enter.smd"
+	activity "ACT_BUSY_SIT_GROUND_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 44 LX LY
+}
+
+$sequence "wraith_gunner_idle" {
+	"brute_animations\wraith_g_idle_var1.smd"
+	activity "ACT_BUSY_SIT_GROUND" 1
+	addlayer	"wraith_g_any_any_aim_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "wraith_gunner_exit" {
+	"brute_animations\wraith_g_exit.smd"
+	activity "ACT_BUSY_SIT_GROUND_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "shade_turret_enter" {
+	"brute_animations\shade_d_any_enter.smd"
+	activity "ACT_RIDE_MANNED_GUN" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+//	walkframe 120 LX LY LZ
+}
+
+$sequence "shade_turret_idle" {
+	"brute_animations\shade_d_any_idle.smd"
+	activity "ACT_IDLE_MANNEDGUN" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "shade_turret_exit" {
+	"brute_animations\shade_d_any_exit.smd"
+	activity "ACT_RIDE_MANNED_GUN" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY LZ
+}
+$origin 0 0 -27 -90
+$sequence "plasma_turret_enter" {
+	"brute_animations\turret_g_any_enter.smd"
+	activity "ACT_VM_SPRINT_ENTER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+$origin 0 0 -27 -90
+$sequence "plasma_turret_idle" {
+	"brute_animations\turret_g_any_idle.smd"
+	activity "ACT_IDLE_MANNEDGUN" 1
+	addlayer	"aim_turret_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "plasma_turret_exit" {
+	"brute_animations\turret_g_any_exit.smd"
+	activity "ACT_VM_SPRINT_LEAVE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 44 LX LY
+}
+
+$sequence "plasma_turret_fire" {
+	"fire_turret"
+	activity "ACT_GESTURE_RANGE_ATTACK_HMG1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+//PHANTOM SEQUENCES
+
+$sequence "phantom_passenger_main_idle_1" {
+	"brute_animations\phantom_p_ml_b_small_1_any_idle_var1.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_main_exit_1" {
+	"brute_animations\phantom_p_ml_b_small_1_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_main_idle_2" {
+	"brute_animations\phantom_p_ml_b_small_2_any_idle_var1.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_main_exit_2" {
+	"brute_animations\phantom_p_ml_b_small_2_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_main_idle_3" {
+	"brute_animations\phantom_p_ml_b_small_3_any_idle_var1.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_main_exit_3" {
+	"brute_animations\phantom_p_ml_b_small_3_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_main_idle" {
+	"brute_animations\phantom_p_ml_b_main_any_idle_var1.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 29 LX LY LZ
+}
+
+$sequence "phantom_passenger_main_exit" {
+	"brute_animations\phantom_p_ml_b_main_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 29 LX LY LZ
+}
+
+$sequence "phantom_passenger_idle_1" {
+	"brute_animations\phantom_p_small1_any_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_exit_1" {
+	"brute_animations\phantom_p_small1_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_idle_2" {
+	"brute_animations\phantom_p_small2_any_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_exit_2" {
+	"brute_animations\phantom_p_small2_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_idle_3" {
+	"brute_animations\phantom_p_small3_any_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_exit_3" {
+	"brute_animations\phantom_p_small3_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_passenger_idle" {
+	"brute_animations\phantom_pc_any_any_idle.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_chute_exit_1" {
+	"brute_animations\phantom_pc_1_any_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_chute_exit_2" {
+	"brute_animations\phantom_pc_2_any_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_chute_exit_3" {
+	"brute_animations\phantom_pc_3_any_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+
+
+$sequence "phantom_chute_exit_4" {
+	"brute_animations\phantom_pc_4_any_any_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_ramp_idle_4_A" {
+	"brute_animations\phantom_p_ramp_any_idle_var1.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_ramp_idle_4_B" {
+	"brute_animations\phantom_p_ramp_any_idle_var2.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_ramp_idle_4_C" {
+	"brute_animations\phantom_p_ramp_any_idle_var3.smd"
+	activity "ACT_BUSY_SIT_CHAIR_ENTRY" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_ramp_exit_rifle" {
+	"brute_animations\phantom_p_ramp_rifle_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+$sequence "phantom_ramp_exit_pistol" {
+	"brute_animations\phantom_p_ramp_pistol_exit.smd"
+	activity "ACT_BUSY_SIT_CHAIR_EXIT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe 120 LX LY LZ
+}
+
+//FLOOD INFECTION SEQUENCES
+
+$sequence "flood_morph" {
+	"brute_animations\any_any_any_morph.smd"
+	activity "ACT_DIE_BARNACLE_SWALLOW" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}
+
+$sequence "flood_wrestle" {
+	"brute_animations\any_any_any_infection_wrestle.smd"
+	activity "ACT_GESTURE_BARNACLE_STRANGLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}
+
+$sequence "flood_infected_thrash_back" {
+	"brute_animations\any_any_thrash_back.smd"
+	activity "ACT_DYINGTODEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}
+
+$sequence "flood_infected_thrash_front" {
+	"brute_animations\any_any_thrash_front.smd"
+	activity "ACT_DYINGTODEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 120 LX LY
+}

@@ -1,0 +1,448 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM crouch RIFLE STILL UP
+
+$animation "aim_crouch_missile_still_up_neutral" "marine_animations\crouch_missile_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_crouch_missile_still_up_down_left" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_still_up_down_center" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_still_up_down_right" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_still_up_mid_left" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_still_up_mid_center" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_still_up_mid_right" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_still_up_up_left" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_still_up_up_center" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_still_up_up_right" "marine_animations\crouch_missile_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_crouch_missile_still_up_neutral" 0
+}
+
+//AIM crouch RIFLE MOVE UP
+
+$animation "aim_crouch_missile_move_up_neutral" "marine_animations\crouch_missile_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_crouch_missile_move_up_down_left" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_move_up_down_center" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_move_up_down_right" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_move_up_mid_left" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_move_up_mid_center" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_move_up_mid_right" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_move_up_up_left" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_move_up_up_center" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+$animation "aim_crouch_missile_move_up_up_right" "marine_animations\crouch_missile_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_crouch_missile_move_up_neutral" 0
+}
+
+
+//IDLE 2 MOVE ANIMATIONS
+
+$animation "crouch_missile_idle_2_crouch_move_S" "marine_animations\crouch_missile_idle_2_crouch_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_idle_2_crouch_move_W" "marine_animations\crouch_missile_idle_2_crouch_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_idle_2_crouch_move_E" "marine_animations\crouch_missile_idle_2_crouch_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_idle_2_crouch_move_N" "marine_animations\crouch_missile_idle_2_crouch_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_idle_2_crouch_walk_S" "marine_animations\crouch_missile_idle_2_crouch_walk_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_idle_2_crouch_walk_W" "marine_animations\crouch_missile_idle_2_crouch_walk_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_idle_2_crouch_walk_E" "marine_animations\crouch_missile_idle_2_crouch_walk_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_idle_2_crouch_walk_N" "marine_animations\crouch_missile_idle_2_crouch_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE 2 IDLE ANIMATIONS
+
+$animation "crouch_missile_move_2_crouch_idle_move_S" "marine_animations\crouch_missile_move_back_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_move_2_crouch_idle_move_W" "marine_animations\crouch_missile_move_left_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_move_2_crouch_idle_move_E" "marine_animations\crouch_missile_move_right_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_move_2_crouch_idle_move_N" "marine_animations\crouch_missile_move_front_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_walk_2_crouch_idle_walk_S" "marine_animations\crouch_missile_walk_back_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_walk_2_crouch_idle_walk_W" "marine_animations\crouch_missile_walk_left_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_walk_2_crouch_idle_walk_E" "marine_animations\crouch_missile_walk_right_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_walk_2_crouch_idle_walk_N" "marine_animations\crouch_missile_walk_front_2_crouch_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE ANIMATIONS
+
+$animation "crouch_missile_move_S" "marine_animations\crouch_missile_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_move_W" "marine_animations\crouch_missile_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_move_E" "marine_animations\crouch_missile_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_move_N" "marine_animations\crouch_missile_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//WALK ANIMATIONS
+
+$animation "crouch_missile_walk_S" "marine_animations\crouch_missile_walk_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_walk_W" "marine_animations\crouch_missile_walk_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_walk_E" "marine_animations\crouch_missile_walk_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_missile_walk_N" "marine_animations\crouch_missile_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_crouch_missile_still_up" {
+	"aim_crouch_missile_still_up_up_right" "aim_crouch_missile_still_up_up_center"  "aim_crouch_missile_still_up_up_left"
+	"aim_crouch_missile_still_up_mid_right" "aim_crouch_missile_still_up_mid_center"  "aim_crouch_missile_still_up_mid_left"
+	"aim_crouch_missile_still_up_down_right" "aim_crouch_missile_still_up_down_center" "aim_crouch_missile_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_crouch_missile_move_up" {
+	"aim_crouch_missile_move_up_up_right" "aim_crouch_missile_move_up_up_center"  "aim_crouch_missile_move_up_up_left"
+	"aim_crouch_missile_move_up_mid_right" "aim_crouch_missile_move_up_mid_center"  "aim_crouch_missile_move_up_mid_left"
+	"aim_crouch_missile_move_up_down_right" "aim_crouch_missile_move_up_down_center" "aim_crouch_missile_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+//IDLE SEQUENCES
+
+
+$sequence "crouch_missile_idle_up" {
+	"marine_animations\crouch_missile_idle.smd"
+	activity "ACT_IDLE_RPG" 1
+	addlayer	"aim_crouch_missile_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_crouch_missile_up" {
+	"crouch_missile_move_S"
+	"crouch_missile_move_W"
+	"crouch_missile_move_N"
+	"crouch_missile_move_E"
+	"crouch_missile_move_S"
+	activity "ACT_RUN_RPG" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_crouch_missile_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_human.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_crouch_missile_up" {
+	"crouch_missile_walk_S"
+	"crouch_missile_walk_W"
+	"crouch_missile_walk_N"
+	"crouch_missile_walk_E"
+	"crouch_missile_walk_S"
+	activity "ACT_WALK_RPG" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_crouch_missile_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_human.Step" }
+	walkframe 145 LX LY
+}
+
+//MOVEMENT-TRANSITORY SEQUENCES
+
+$sequence "crouch_missile_move_2_crouch_idle" {
+	"crouch_missile_move_2_crouch_idle_move_S"
+	"crouch_missile_move_2_crouch_idle_move_W"
+	"crouch_missile_move_2_crouch_idle_move_N"
+	"crouch_missile_move_2_crouch_idle_move_E"
+	"crouch_missile_move_2_crouch_idle_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_crouch_missile_move_up"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "crouch_missile_walk_2_crouch_idle" {
+	"crouch_missile_walk_2_crouch_idle_walk_S"
+	"crouch_missile_walk_2_crouch_idle_walk_W"
+	"crouch_missile_walk_2_crouch_idle_walk_N"
+	"crouch_missile_walk_2_crouch_idle_walk_E"
+	"crouch_missile_walk_2_crouch_idle_walk_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_crouch_missile_move_up"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "crouch_missile_idle_2_crouch_move" {
+	"crouch_missile_idle_2_crouch_move_S"
+	"crouch_missile_idle_2_crouch_move_W"
+	"crouch_missile_idle_2_crouch_move_N"
+	"crouch_missile_idle_2_crouch_move_E"
+	"crouch_missile_idle_2_crouch_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_crouch_missile_move_up"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "crouch_missile_idle_2_crouch_walk" {
+	"crouch_missile_idle_2_crouch_walk_S"
+	"crouch_missile_idle_2_crouch_walk_W"
+	"crouch_missile_idle_2_crouch_walk_N"
+	"crouch_missile_idle_2_crouch_walk_E"
+	"crouch_missile_idle_2_crouch_walk_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_crouch_missile_move_up"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+
+//TURN SEQUENCES
+
+$sequence "turn_left_crouch_missile" {
+	"marine_animations\crouch_missile_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_crouch_missile" {
+	"marine_animations\crouch_missile_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+//MISC SEQUENCES
+
+$sequence "crouch_missile_idle_2_combat_idle" {
+	"marine_animations\crouch_missile_idle_2_combat_idle.smd"
+	activity "ACT_STAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY
+}
+
+

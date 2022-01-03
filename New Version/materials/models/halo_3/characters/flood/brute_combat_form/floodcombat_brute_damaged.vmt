@@ -16,7 +16,7 @@
 	"$phongfresnelranges" "[.7 .82 31]"
 	"$model" 1
 	"$phongalbedotint" "1"
-	"$color2"		"[2 2 2]"
+	"$color2"		"[1.5 1.5 1.5]"
 	"$nodecal"				1
 
 }
