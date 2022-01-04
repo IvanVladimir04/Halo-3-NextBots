@@ -1,6 +1,0 @@
-"VertexLitGeneric"
-{
-	"$basetexture" "models/Ivan04/miranda_body"
-	"$bumpmap" "models/Ivan04/miranda_body_nm"
-	"$phongexponenttexture" "models/Ivan04/miranda_body_spec"
-}

@@ -1,9 +1,0 @@
-"VertexLitGeneric"
-{
-	"$basetexture" "models/Ivan04/worker_dif"
-     "$bumpmap" "models/Ivan04/worker_bump"
-	"$halflambert" 1
-
-
-	"$color2"		"{255 180 180}"
-}

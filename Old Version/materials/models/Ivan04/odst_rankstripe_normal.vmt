@@ -1,7 +1,0 @@
-"VertexLitGeneric"
-{
-	"$basetexture" "models/Ivan04/sarge_stripe_cc"
-	"$translucent" "1"
-	"$color2"		"{191 191 191}"
-	"$normalmapalphaenvmapmask" "1"
-}
