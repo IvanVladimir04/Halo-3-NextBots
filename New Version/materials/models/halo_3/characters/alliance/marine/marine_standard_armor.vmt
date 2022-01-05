@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\marine_standard_game_diffuse"
+ 	"$bumpmap" "models\halo_3\characters\alliance\marine\marine_standard_zbump"
+	"$halflambert" 1
+
+	"$phong" "1"
+	"$phongexponent" 7
+	"$phongboost"	"0.6"
+	"$phongfresnelranges"	"[0.45 0.5 0.35]"
+	"$phongtint"	"{165 185 135}"
+}

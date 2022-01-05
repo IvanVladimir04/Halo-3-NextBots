@@ -1,0 +1,241 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM crouch rifle STILL UP
+$animation "aim_patrol_rifle_still_up_neutral" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_patrol_rifle_still_up_down_left" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_still_up_down_center" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_still_up_down_right" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_still_up_mid_left" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_still_up_mid_center" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_still_up_mid_right" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_still_up_up_left" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_still_up_up_center" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_still_up_up_right" "elite_animations\patrol_pistol_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_patrol_rifle_still_up_neutral" 0
+}
+
+//AIM crouch rifle move UP
+$animation "aim_patrol_rifle_move_up_neutral" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_patrol_rifle_move_up_down_left" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_move_up_down_center" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_move_up_down_right" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_move_up_mid_left" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_move_up_mid_center" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_move_up_mid_right" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_move_up_up_left" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_move_up_up_center" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+$animation "aim_patrol_rifle_move_up_up_right" "elite_animations\patrol_pistol_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_patrol_rifle_move_up_neutral" 0
+}
+
+
+//MOVE ANIMATIONS
+
+$animation "patrol_rifle_move_N" "elite_animations\patrol_rifle_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_patrol_rifle_still_up" {
+	"aim_patrol_rifle_still_up_up_right" "aim_patrol_rifle_still_up_up_center"  "aim_patrol_rifle_still_up_up_left"
+	"aim_patrol_rifle_still_up_mid_right" "aim_patrol_rifle_still_up_mid_center"  "aim_patrol_rifle_still_up_mid_left"
+	"aim_patrol_rifle_still_up_down_right" "aim_patrol_rifle_still_up_down_center" "aim_patrol_rifle_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_patrol_rifle_move_up" {
+	"aim_patrol_rifle_move_up_up_right" "aim_patrol_rifle_move_up_up_center"  "aim_patrol_rifle_move_up_up_left"
+	"aim_patrol_rifle_move_up_mid_right" "aim_patrol_rifle_move_up_mid_center"  "aim_patrol_rifle_move_up_mid_left"
+	"aim_patrol_rifle_move_up_down_right" "aim_patrol_rifle_move_up_down_center" "aim_patrol_rifle_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+//IDLE SEQUENCES
+
+$sequence "patrol_rifle_idle_up" {
+	"elite_animations\patrol_rifle_idle.smd"
+	activity "ACT_HL2MP_IDLE_STIMULATED" 1
+	addlayer	"aim_patrol_rifle_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+$sequence "patrol_rifle_idle_posing_1" {
+	"elite_animations\patrol_rifle_posing_var1.smd"
+	activity "ACT_HL2MP_IDLE_STIMULATED" 1
+	addlayer	"aim_patrol_rifle_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_rifle_idle_posing_2" {
+	"elite_animations\patrol_rifle_posing_var2.smd"
+	activity "ACT_HL2MP_IDLE_STIMULATED" 1
+	addlayer	"aim_patrol_rifle_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_patrol_rifle_up" {
+	"patrol_rifle_move_N"
+	activity "ACT_WALK_STIMULATED" 1
+	addlayer	"aim_patrol_rifle_move_up"
+	fadein 0.2
+	fadeout 0.2
+	node "move_rifle"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Elite.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Elite.Step" }
+	walkframe 145 LX LY
+}
+
+//AIRBORNE SEQUENCES
+
+$sequence "airborne_patrol_rifle" {
+	"elite_animations\patrol_rifle_airborne.smd"
+	activity "ACT_HOVER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+//TURN SEQUENCES
+
+$sequence "turn_left_patrol_rifle" {
+	"elite_animations\patrol_rifle_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_patrol_rifle" {
+	"elite_animations\patrol_rifle_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+

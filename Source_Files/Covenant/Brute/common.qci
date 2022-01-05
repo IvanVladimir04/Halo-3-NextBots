@@ -385,7 +385,7 @@ $sequence "dead_land" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-
+	walkframe 55 LX LY LZ
 }
 
 $sequence "dead_land_combat" {
@@ -394,7 +394,7 @@ $sequence "dead_land_combat" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-
+	walkframe 55 LX LY LZ
 }
 
 //DEATH SEQUENCES
@@ -1011,7 +1011,7 @@ $sequence "plasma_turret_fire" {
 	fps 30
 	delta
 }
-
+$origin 0 0 0 -90
 //PHANTOM SEQUENCES
 
 $sequence "phantom_passenger_main_idle_1" {

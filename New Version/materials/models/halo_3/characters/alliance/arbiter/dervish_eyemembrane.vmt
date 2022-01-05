@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/alliance/arbiter/eye_membrane"
+//	"$alphatest" 1
+//	"$alphatestreference" 	0.5
+//	"$allowAlphaToCoverage" 1
+	"$translucent"	"1"
+	"$additive"	"1"
+	"$model" 1
+	"$phongalbedotint" "1"
+	"$color2" "[0.25 0.25 0.25]"
+
+
+}

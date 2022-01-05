@@ -84,8 +84,7 @@ $attachment "shotgun" "r_hand" 0 0 0 rotate 0 15 0
 $attachment "smg" "r_hand" 3 0 0 rotate 0 15 0
 $attachment "magnum" "r_hand" 3 0 -0.5 rotate 0 15 0
 $attachment "anim_attachment_LH" "l_hand" 1 0 0 rotate 90 0 0
-$attachment "eyes" "eye_left" 1 -1 0 rotate -90 -90 0
-
+$attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861

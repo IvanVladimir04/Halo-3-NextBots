@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	$baseTexture 					"models/halo_3/characters/alliance/elite/light_sp"
+	$nocull							"1"
+	$emissiveBlendEnabled	 1
+	$emissiveBlendTexture    "models/halo_3/characters/alliance/elite/light_sp"
+	$emissiveBlendBaseTexture		"models/halo_3/characters/alliance/elite/light"
+	$emissiveBlendFlowTexture		     "vgui/white"
+	$emissiveBlendTint		 "[0 30 0]"
+	$emissiveBlendStrength	 50
+	$emissiveBlendScrollVector	 "[0 5]"	
+	$color2		"[0 5 0]"
+	$detail				"models/halo_3/characters/alliance/elite/light"
+	$detailblendmode			"5"
+	$detailblendfactor			"0.2"
+	$detailscale			"1.00"
+
+}
+

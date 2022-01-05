@@ -39,6 +39,8 @@ $ikchain r_foot "r_foot" Z 0 height 36
 $poseparameter "move_yaw" -180 180 loop 360
 $PoseParameter "aim_yaw" -45 45 0
 $PoseParameter "aim_pitch" -90 90 0
+$attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
+$attachment "back" "spine1" 5.00 4.00 0.00 rotate 0 90 90
 $attachment "fuel_rod" "r_hand" 22.00 -3.70 -1.00 rotate -0 0 0
 //$attachment "1" "right hand" 4.50 1.50 1.50 rotate -10.00 -890.00 0.00
 
@@ -934,7 +936,7 @@ $sequence "dead_land" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-
+	walkframe 55 LX LY LZ
 }
 
 $sequence "land_hard_patrol" {

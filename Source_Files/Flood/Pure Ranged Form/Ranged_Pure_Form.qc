@@ -26,7 +26,15 @@ $illumposition 5.065 3.683 2.265
 
 $cdmaterials "\models\halo_3\characters\flood\ranged_pure_form\"
 
+$attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
+$attachment "l_spikes_bottom" "l_spikes_bottom" 0 0 0 rotate 0 0 0
+$attachment "l_spikes_mid" "l_spikes_mid" 0 0 0 rotate 0 0 0
+$attachment "l_spikes_top" "l_spikes_top" 0 0 0 rotate 0 0 0
+$attachment "r_spikes_bottom" "r_spikes_bottom" 0 0 0 rotate 0 0 0
+$attachment "r_spikes_mid" "r_spikes_mid" 0 0 0 rotate 0 0 0
+$attachment "r_spikes_top" "r_spikes_top" 0 0 0 rotate 0 0 0
 $attachment "head" "head" 0 0 0 rotate 0 0 0
+$attachment "tail" "head" 0 0 0 rotate 0 0 0
 
 
 $cbox 0 0 0 0 0 0

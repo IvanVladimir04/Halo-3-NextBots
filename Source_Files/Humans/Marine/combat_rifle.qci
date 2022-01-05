@@ -1271,3 +1271,12 @@ $sequence "combat_rifle_idle_2_patrol_idle" {
 	fps 30
 	walkframe 55 LX LY
 }
+
+
+$sequence "combat_rifle_berserk" {
+	"marine_animations\combat_rifle_berserk_var3.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY
+}

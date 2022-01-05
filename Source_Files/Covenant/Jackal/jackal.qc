@@ -49,6 +49,7 @@ $include "combat_unarmed.qci"
 $include "patrol_unarmed.qci"
 $include "common.qci"
 
+$attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
 $attachment "sniper_flare" "head" 3.95 17.50 2.00 rotate 0 90 90
 
 //REFERENCE

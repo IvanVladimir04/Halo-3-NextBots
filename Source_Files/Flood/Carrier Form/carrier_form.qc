@@ -415,6 +415,7 @@ $sequence "land_hard" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	walkframe 55 LX LY LZ
 }
 
 $sequence "land_soft" {
@@ -423,6 +424,7 @@ $sequence "land_soft" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	walkframe 55 LX LY LZ
 }
 
 $sequence "combat_unarmed_idle_2_combat_move_front" {

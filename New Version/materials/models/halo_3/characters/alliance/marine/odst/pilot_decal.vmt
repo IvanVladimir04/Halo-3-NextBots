@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\odst\pilot_decal"
+	"$translucent" 1
+}

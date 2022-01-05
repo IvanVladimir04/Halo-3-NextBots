@@ -1,0 +1,51 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\odst\odst_body_diffuse"
+	"$bumpmap" "models\halo_3\characters\alliance\marine\odst\odst_body_zbump"
+	$normalmapalphaenvmapmask         "1"
+    	
+	$envmaptint                     "[1 1.2 1.3]"
+	$envmapfresnel                     "1"
+
+	$halflambert					"1"
+	$nocull                            "1"
+
+	$phong					"1"
+	$phongalbedotint 				"1"
+	$phongexponent 					"4"
+	$phongboost 					"2"
+	$phongtint 						"{115 120 170}"
+	$phongfresnelranges 			"[0.2 0.2 0]"
+
+	$rimlight                         "1"
+	$rimlightexponent                 "50"
+	$rimlightboost                     "0.05"
+
+	$blendtintbybasealpha	 "1"
+
+	Proxies
+	{
+
+		Clamp
+		{
+			min 0.1
+			max 0.65
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 0.25
+			max 1
+			srcVar1 "$color2"
+			resultVar "$phongtint"
+		}
+		Clamp
+		{
+			min 0.25
+			max 1
+			srcVar1 "$color"
+			resultVar "$envmaptint"
+		}
+	}
+}

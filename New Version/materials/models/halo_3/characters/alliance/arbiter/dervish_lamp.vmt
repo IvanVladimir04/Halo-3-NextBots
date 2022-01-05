@@ -1,0 +1,26 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/alliance/arbiter/dervish_lamp_diffuse"
+	"$bumpmap" "models/halo_3/characters/alliance/arbiter/dervish_lamp_zbump"
+	"$halflambert" "1"
+	"$nodecal" "1"
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[.15 .15 .15]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$normalmapalphaenvmapmask" "1"
+	"$detail"  "models/halo_3/characters/alliance/arbiter/dervish_lamp_illum"
+	"$detailblendmode"			"5.00"
+	"$detailblendfactor"			"2.00"
+	"$detailscale"			"1.00"
+	$phong				1
+	$phongboost		13.5
+	$phongexponent		12
+	$phongtint			"{255 210 85}"
+	$phongfresnelranges	"[.3 4 8]"
+	"$rimlight" 1
+	"$rimlightexponent"       1
+	"$rimlightboost"	0.95
+	"$rimmask"	1
+//	"$color2"		"{190 165 140}"
+
+}

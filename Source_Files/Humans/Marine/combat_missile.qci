@@ -875,7 +875,7 @@ $sequence "wave_combat_missile_nav_2" {
 
 $sequence "attack_combat_missile" {
 	"combat_missile_fire"
-	activity "ACT_GESTURE_RANGE_ATTACK_PISTOL" 1
+	activity "ACT_GESTURE_RANGE_ATTACK_RPG" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -894,7 +894,7 @@ $sequence "throw_grenade_combat_missile" {
 
 $sequence "reload_combat_missile" {
 	"combat_missile_reload"
-	activity "ACT_RELOAD" 1
+	activity "ACT_RELOAD_RPG" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -1020,3 +1020,5 @@ $sequence "combat_missile_idle_2_crouch_idle" {
 	fps 30
 	walkframe 55 LX LY
 }
+
+

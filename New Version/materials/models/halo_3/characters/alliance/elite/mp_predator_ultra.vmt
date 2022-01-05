@@ -1,0 +1,29 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/alliance/elite/mp_predator_diffuse"
+	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_predator_zbump"
+	"$selfillum"	"1"
+	"$selfillummask"	"models/halo_3/characters/alliance/elite/mp_predator_illumination"
+	"$blendtintbybasealpha" "1"
+	"$detail"  "models/halo_3/characters/alliance/elite/elite_newarmor_detail"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"2.00"
+	"$detailscale"			"15.00"
+	"$phong" 1
+	"$phongboost" "3"
+	"$phongexponent" "9"
+	"$phongtint" "{165 175 185}"
+	"$phongfresnelranges" "[.5 .85 30]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	$ambientocclusion 1
+	"$rimlight"	"1"
+	"$rimlightexponent"	"15"
+	"$rimlightboost"	"5"
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[0.1 0.11 0.12]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$color2"		"[1 1 1]"
+	"$nodecal"				1
+
+}

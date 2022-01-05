@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/alliance/elite/newelitehead_diffuse"
+	"$bumpmap" "models/halo_3/characters/alliance/elite/newelitehead_zbump"
+
+	"$blendtintbybasealpha" "1"
+	"$ambientocclusion" "1"
+	"$phong" 1
+	"$phongboost" "0.15"
+	"$phongexponent" "10"
+	"$phongtint" "[1.05 .83 .83]"
+	"$phongfresnelranges" "[.7 .82 31]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	"$color2" "[1 1 1]"
+}

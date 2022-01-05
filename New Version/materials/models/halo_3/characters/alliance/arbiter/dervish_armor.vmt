@@ -1,0 +1,22 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/alliance/arbiter/dervish_body_diffuse"
+	"$bumpmap" "models/halo_3/characters/alliance/arbiter/dervish_body_zbump"
+	"$halflambert" "1"
+	"$nodecal" "1"
+	"$detail"  "models/halo_3/characters/alliance/arbiter/dervish_metal_detail"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"1.00"
+	"$detailscale"			"15.00"
+	$phong				1
+	$phongboost		2.5
+	$phongexponent		6
+	$phongtint			"{205 220 255}"
+	$phongfresnelranges	"[.3 4 8]"
+	"$rimlight" 1
+	"$rimlightexponent"       25
+	"$rimlightboost"	0.2
+	"$rimmask"	1
+//	"$color2"		"{190 165 140}"
+
+}

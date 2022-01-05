@@ -1,0 +1,26 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/alliance/elite/mp_raptor"
+	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_raptor_zbump"
+	"$blendtintbybasealpha" "1"
+	"$detail"  "models/halo_3/characters/alliance/elite/elite_newarmor_detail"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"2.00"
+	"$detailscale"			"15.00"
+	"$nodecal"		"1"
+	"$phong" 1
+	"$phongboost" "2.5"
+	"$phongexponent" "6"
+	"$phongtint"	"[0.3 0.45 0.5]"
+	"$phongfresnelranges" "[.5 .85 6]"
+	"$model" 1
+	"$phongalbedotint" "1"
+	$ambientocclusion 1
+	"$rimlight"	"1"
+	"$rimlightexponent"	"15"
+	"$rimlightboost"	"5"
+	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint"	"[0.07 0.1 0.15]"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
+	"$color2"		"[0.2 0.35 0.7]"
+}
