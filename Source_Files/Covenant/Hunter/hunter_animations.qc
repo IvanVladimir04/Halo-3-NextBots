@@ -936,7 +936,7 @@ $sequence "dead_land" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 55 LX LY LZ
+	walkframe 55 LX LY
 }
 
 $sequence "land_hard_patrol" {

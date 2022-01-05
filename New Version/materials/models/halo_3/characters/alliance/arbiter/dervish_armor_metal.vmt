@@ -3,7 +3,7 @@
 	"$basetexture" "models/halo_3/characters/alliance/arbiter/dervish_body_diffuse"
 	"$bumpmap" "models/halo_3/characters/alliance/arbiter/dervish_body_zbump"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
-	"$envmaptint"	"[.2 .2 .2]"
+	"$envmaptint"	"[.25 .22 .2]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask" "1"
 	"$halflambert" "1"
@@ -13,9 +13,9 @@
 	"$detailblendfactor"			"1.00"
 	"$detailscale"			"15.00"
 	$phong				1
-	$phongboost		11.5
-	$phongexponent		6
-	$phongtint			"{255 210 145}"
+	$phongboost		14
+	$phongexponent		8
+	$phongtint			"{255 145 50}"
 	$phongfresnelranges	"[.3 4 8]"
 	"$rimlight" 1
 	"$rimlightexponent"       1

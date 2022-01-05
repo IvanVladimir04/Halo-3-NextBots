@@ -385,7 +385,7 @@ $sequence "dead_land" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 55 LX LY LZ
+	walkframe 55 LX LY
 }
 
 $sequence "dead_land_combat" {
@@ -394,7 +394,7 @@ $sequence "dead_land_combat" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	walkframe 55 LX LY LZ
+	walkframe 55 LX LY
 }
 
 //DEATH SEQUENCES
