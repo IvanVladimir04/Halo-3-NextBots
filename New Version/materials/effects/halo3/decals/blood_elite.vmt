@@ -1,0 +1,11 @@
+"DecalModulate"
+{
+	"$basetexture"	"effects/halo3/decals/blood_elite"
+	"$decal" 1
+	"$decalscale" 	0.35
+	"$translucent" 1
+	"$decalfadeduration" 60.00
+	"$decalfadetime" 0.00
+	"$decalsecondpass" 1
+}
+

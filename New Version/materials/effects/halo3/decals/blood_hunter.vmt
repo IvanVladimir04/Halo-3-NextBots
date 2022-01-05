@@ -1,0 +1,11 @@
+"DecalModulate"
+{
+	"$basetexture"	"effects/halo3/decals/blood_hunter"
+	"$decal" 1
+	"$decalscale" 	0.4
+	"$translucent" 1
+	"$decalfadeduration" 60.00
+	"$decalfadetime" 0.00
+	"$decalsecondpass" 1
+}
+

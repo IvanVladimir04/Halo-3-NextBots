@@ -1,0 +1,10 @@
+"DecalModulate"
+{
+	"$basetexture"	"effects/halo3/decals/blood_brute"
+	"$decal" 1
+	"$decalscale" 	0.39
+	"$translucent" 1
+	"$decalfadeduration" 60.00
+	"$decalfadetime" 0.00
+}
+

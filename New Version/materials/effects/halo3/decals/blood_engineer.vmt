@@ -1,0 +1,12 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"effects/halo3/decals/blood_engineer"
+	"$decal" 1
+	"$decalscale" 	0.45
+	"$translucent" 1
+	"$decalfadeduration" 60.00
+	"$decalfadetime" 0.00
+	"$additive"	1
+	"$color2"		"[1.2 1.8 2.2]"
+}
+
