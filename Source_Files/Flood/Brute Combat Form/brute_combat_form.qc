@@ -37,6 +37,8 @@ $illumposition 5.065 3.683 2.265
 
 $cdmaterials "\models\halo_3\characters\flood\brute_combat_form\"
 
+$attachment "anim_attachment_RH" "r_hand" 8.50 2.06 1.06 rotate 0 15 0
+$attachment "anim_attachment_LH" "l_hand" 4.59 2.66 -1.06 rotate -0 0 -180
 $attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
 $attachment "head" "head" 0 0 0 rotate 0 0 0
 $attachment "r_upperarm" "r_upperarm" 0 0 0 rotate 0 0 0

@@ -93,11 +93,10 @@ $texturegroup "skinfamilies"
 	{ "mp_elite_armor_specops" 		"sp_raptor_specops"		"mp_predator_specops"	"mp_raptor_specops"		"mp_blades_specops"		"mp_scythe_specops"		 }
 }
 
-$attachment "anim_attachment_RH" "r_hand" 3.5 1 -1 rotate 0 15 0
-$attachment "shotgun" "r_hand" 0 0 0 rotate 0 15 0
-$attachment "smg" "r_hand" 3 0 0 rotate 0 15 0
-$attachment "magnum" "r_hand" 3 0 -0.5 rotate 0 15 0
-$attachment "anim_attachment_LH" "l_hand" 1 0 0 rotate 90 0 0
+$attachment "anim_attachment_RH" "r_hand" 8.50 2.06 1.06 rotate 0 15 0
+$attachment "anim_attachment_LH" "l_hand" 9.00 2.50 -1.00 rotate -0 0 -180
+$attachment "backpack" "spine1" 11.07 -14.00 0.00 rotate 45 -180 -90
+$attachment "sidearm" "r_thigh" 9.45 0.00 6.00 rotate 0 0 -90
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
 $cbox 0 0 0 0 0 0
 
@@ -133,7 +132,7 @@ $include "vehicle_shared.qci"
 
 
 //REFERENCE
-$origin 0 0 0 90
+$origin 0 0 0 -90
 $animation "ref" "elite_animations\REFERENCE.smd" {
 	fps 30
 }

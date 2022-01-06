@@ -25,11 +25,10 @@ $illumposition 5.065 3.683 2.265
 
 $cdmaterials "\models\halo_3\characters\alliance\arbiter\"
 
-$attachment "anim_attachment_RH" "r_hand" 3.5 1 -1 rotate 0 15 0
-$attachment "shotgun" "r_hand" 0 0 0 rotate 0 15 0
-$attachment "smg" "r_hand" 3 0 0 rotate 0 15 0
-$attachment "magnum" "r_hand" 3 0 -0.5 rotate 0 15 0
-$attachment "anim_attachment_LH" "l_hand" 1 0 0 rotate 90 0 0
+$attachment "anim_attachment_RH" "r_hand" 8.50 2.06 1.06 rotate 0 15 0
+$attachment "anim_attachment_LH" "l_hand" 9.00 2.50 -1.00 rotate -0 0 -180
+$attachment "backpack" "spine1" 8.52 -11.91 0.00 rotate 45 -180 -90
+$attachment "sidearm" "r_thigh" 9.45 0.00 6.00 rotate 0 0 -90
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
 $cbox 0 0 0 0 0 0
 
@@ -37,35 +36,11 @@ $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861
 
 //QCI includes for different holdtypes, etc.
 
-$include "combat_unarmed.qci"
-$include "combat_turret.qci"
-$include "combat_sword.qci"
-$include "combat_ball.qci"
-$include "combat_dual.qci"
-$include "combat_hammer.qci"
-$include "combat_missile.qci"
-$include "combat_pistol.qci"
-$include "combat_rifle.qci"
-$include "combat_support.qci"
-$include "crouch_sword.qci"
-$include "crouch_support.qci"
-$include "crouch_rifle.qci"
-$include "crouch_pistol.qci"
-$include "crouch_missile.qci"
-$include "crouch_ball.qci"
-$include "crouch_dual.qci"
-$include "crouch_hammer.qci"
-$include "patrol_unarmed.qci"
-$include "patrol_sword.qci"
-$include "patrol_rifle.qci"
-$include "patrol_pistol.qci"
-$include "patrol_missile.qci"
-$include "common.qci"
-$include "vehicle_shared.qci"
+$includemodel "halo_3/characters/alliance/elite.mdl"
 
 
 //REFERENCE
-$origin 0 0 0 90
+$origin 0 0 0 -90
 $animation "ref" "elite_animations\REFERENCE.smd" {
 	fps 30
 }

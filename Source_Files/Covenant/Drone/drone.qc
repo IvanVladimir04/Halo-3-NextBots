@@ -43,12 +43,16 @@ $texturegroup "skinfamilies"
 
 }
 
+$attachment "anim_attachment_RH" "l_hand" 6.25 -0.25 -0.06 rotate -0 15 -0
+$attachment "sidearm" "l_thigh" 3.00 3.00 -6.00 rotate -5 0 -90
+$attachment "eyes" "head" 5.32 4.26 0.00 rotate -0 30 -90
+
+
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861
 
 //QCI includes for different holdtypes, etc.
-$attachment "eyes" "head" 5.32 4.26 0.00 rotate -0 30 -90
 $include "combat_pistol.qci"
 $include "crouch_pistol.qci"
 $include "flight_pistol.qci"

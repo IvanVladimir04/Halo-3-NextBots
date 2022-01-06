@@ -44,10 +44,13 @@ $ikchain r_foot "r_foot" Z 0 height 36
 $poseparameter "move_yaw" -180 180 loop 360
 $PoseParameter "aim_yaw" -45 45 0
 $PoseParameter "aim_pitch" -90 90 0
-$attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
-$attachment "methane_fx" "spine1" 9.00 -12.00 2.00 rotate -0 -120 0
-//$attachment "1" "right hand" 4.50 1.50 1.50 rotate -10.00 -890.00 0.00
 
+$scale 1
+$attachment "anim_attachment_RH" "r_forearm" 19.00 -3.00 4.00 rotate 0 0 90
+$attachment "anim_attachment_LH" "l_forearm" 19.00 -3.00 -3.00 rotate 0 -0 -180
+$attachment "methane_fx" "spine1" 9.00 -10.50 0.00 rotate 0 -120 -90
+$attachment "eyes" "head" 5.00 8.00 0.00 rotate -0 90 90
+$scale 1.065
 
 // 1 gut, 2 chest, 3 left arm, 4 right hand, 5 left leg, 6 right leg, 7 head
 
@@ -2460,7 +2463,7 @@ $sequence "missile_fc_idle_down" {
 }
 
 
-$sequence "pistol_idle_up" {
+$sequence "combat_pistol_idle_up" {
 	"grunt_animations\combat_pistol_idle_var0.smd"
 	activity "ACT_IDLE_PISTOL" 1
 	addlayer	"aim_pistol_still_up"
@@ -2470,7 +2473,7 @@ $sequence "pistol_idle_up" {
 	loop
 }
 
-$sequence "pistol_idle_down" {
+$sequence "combat_pistol_idle_down" {
 	"grunt_animations\combat_pistol_idle_var0.smd"
 	activity "ACT_IDLE_PISTOL" 1
 	addlayer	"aim_pistol_still_down"
@@ -2480,7 +2483,7 @@ $sequence "pistol_idle_down" {
 	loop
 }
 
-$sequence "flee_idle" {
+$sequence "flee_pistol_idle" {
 	"grunt_animations\flee_pistol_idle.smd"
 	activity "ACT_HL2MP_IDLE_SCARED" 1
 	fadein 0.2
@@ -2489,7 +2492,7 @@ $sequence "flee_idle" {
 	loop
 }
 
-$sequence "idle_1" {
+$sequence "combat_idle_posing_1" {
 	"grunt_animations\combat_pistol_posing_var1.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2499,7 +2502,7 @@ $sequence "idle_1" {
 	loop
 }
 
-$sequence "idle_2" {
+$sequence "combat_idle_posing_2" {
 	"grunt_animations\combat_pistol_posing_var2.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2510,7 +2513,7 @@ $sequence "idle_2" {
 
 }
 
-$sequence "idle_3" {
+$sequence "combat_idle_posing_3" {
 	"grunt_animations\combat_pistol_posing_var3.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2521,7 +2524,7 @@ $sequence "idle_3" {
 }
 
 
-$sequence "idle_4" {
+$sequence "combat_idle_posing_4" {
 	"grunt_animations\combat_pistol_posing_var4.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2532,7 +2535,7 @@ $sequence "idle_4" {
 }
 
 
-$sequence "idle_5" {
+$sequence "combat_idle_posing_5" {
 	"grunt_animations\combat_pistol_posing_var5.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2543,7 +2546,7 @@ $sequence "idle_5" {
 }
 
 
-$sequence "idle_6" {
+$sequence "combat_idle_posing_6" {
 	"grunt_animations\combat_pistol_posing_var6.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"

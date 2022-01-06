@@ -50,6 +50,9 @@ $texturegroup "skinfamilies"
 	{ "floodcombat_elite_armour_ultra" }
 	{ "floodcombat_elite_armour_specops" }
 }
+
+$attachment "anim_attachment_RH" "r_hand" 8.50 2.06 1.06 rotate 0 15 0
+$attachment "anim_attachment_LH" "l_forearm" 21.59 -1.66 -4.07 rotate -0 0 -180
 $attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
 $attachment "corpse_head" "corpse_head" 0 0 0 rotate 0 0 0
 $attachment "r_upperarm" "r_upperarm" 0 0 0 rotate 0 0 0

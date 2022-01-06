@@ -25,7 +25,8 @@ $attachment "glow" "monitor" 0 0 0 rotate 0 0 0
 $attachment "glow_rear" "monitor" -5.00 0.00 0.00 rotate -0 -180 0
 $attachment "monitor_tendril" "monitor" -5.00 0.00 2.00 rotate -0 -180 0
 $attachment "monitor_tendril" "monitor" -5.00 0.00 -2.00 rotate -0 -180 0
-
+$attachment "glow_emitter_left" "monitor" 0.00 7.00 0.00 rotate 0 90 0
+$attachment "glow_emitter_right" "monitor" 0.00 -7.00 0.00 rotate 0 -90 0
 
 $poseparameter "move_yaw" -180 180 loop 360
 $PoseParameter "aim_yaw" -45 45 0

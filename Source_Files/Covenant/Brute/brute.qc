@@ -83,6 +83,11 @@ $texturegroup "skinfamilies"
 	{ "brute_metal_bodyguard" 		"minor_major_armor_bodyguard"			"jumppack_armor"		"chieftain_armor" }
 	{ "brute_metal_jumppack_major" 	"minor_major_armor_jumppack_major"		"jumppack_armor_major"		"chieftain_armor" }
 }
+
+$attachment "anim_attachment_RH" "r_hand" 8.50 2.06 1.06 rotate 0 15 0
+$attachment "anim_attachment_LH" "l_hand" 9.00 2.50 -1.00 rotate -0 0 -180
+$attachment "backpack" "spine1" 8.00 -14.00 0.00 rotate 45 -180 -90
+$attachment "sidearm" "r_thigh" 7.00 0.00 10.00 rotate -10 0 -90
 $attachment "eyes" "head" 8.32 12.26 -0.00 rotate 0 70 90
 $attachment "jetpack_R" "spine1" -7 -16 -10.5 rotate 0 -170 180
 $attachment "jetpack_L" "spine1" -7 -16 10 rotate 0 -170 180

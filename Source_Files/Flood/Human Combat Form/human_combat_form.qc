@@ -42,6 +42,11 @@ $illumposition 5.065 3.683 2.265
 
 $cdmaterials "\models\halo_3\characters\flood\human_combat_form\"
 
+$attachment "anim_attachment_RH" "r_hand" 3.5 1 -1 rotate 0 15 0
+$attachment "shotgun" "r_hand" 0 0 0 rotate 0 15 0
+$attachment "smg" "r_hand" 3 0 0 rotate 0 15 0
+$attachment "magnum" "r_hand" 3 0 -0.5 rotate 0 15 0
+$attachment "anim_attachment_LH" "l_hand" 4.14 2.20 0.00 rotate -0 0 -180
 $attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
 $attachment "head" "head" 0 0 0 rotate 0 0 0
 $attachment "r_upperarm" "r_upperarm" 0 0 0 rotate 0 0 0

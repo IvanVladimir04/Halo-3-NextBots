@@ -49,7 +49,11 @@ $include "combat_unarmed.qci"
 $include "patrol_unarmed.qci"
 $include "common.qci"
 
-$attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
+$attachment "anim_attachment_RH" "l_hand" 4.00 3.00 0.00 rotate 0 0 90
+$attachment "anim_attachment_LH" "r_hand" 4.00 3.00 1.00 rotate 0 0 0
+$attachment "backpack" "spine1" 8.79 -11.00 -0.00 rotate 45 180 -90
+$attachment "sidearm" "l_thigh" 5.00 2.00 -5.50 rotate 0 -0 -90
+$attachment "eyes" "head" 5.33 9.26 0.00 rotate -0 90 90
 $attachment "sniper_flare" "head" 3.95 17.50 2.00 rotate 0 90 90
 
 //REFERENCE
