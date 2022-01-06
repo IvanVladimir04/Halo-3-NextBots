@@ -2556,7 +2556,7 @@ $sequence "combat_idle_posing_6" {
 	loop
 }
 
-$sequence "idle_unarmed_1" {
+$sequence "unarmed_idle_1" {
 	"grunt_animations\combat_unarmed_idle_var0.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2566,7 +2566,7 @@ $sequence "idle_unarmed_1" {
 	loop
 }
 
-$sequence "idle_unarmed_2" {
+$sequence "unarmed_idle_2" {
 	"grunt_animations\combat_unarmed_idle_var1.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2576,7 +2576,7 @@ $sequence "idle_unarmed_2" {
 	loop
 }
 
-$sequence "idle_unarmed_3" {
+$sequence "unarmed_idle_3" {
 	"grunt_animations\combat_unarmed_idle_var2.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2587,7 +2587,7 @@ $sequence "idle_unarmed_3" {
 }
 
 
-$sequence "idle_unarmed_4" {
+$sequence "unarmed_idle_4" {
 	"grunt_animations\combat_unarmed_idle_var3.smd"
 	activity "ACT_IDLE_RELAXED" 1
 	addlayer	"aim_pistol_still_down"
@@ -2599,7 +2599,7 @@ $sequence "idle_unarmed_4" {
 }
 
 
-$sequence "idle_unarmed_5" {
+$sequence "unarmed_idle_5" {
 	"grunt_animations\combat_unarmed_idle_var4.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2611,7 +2611,7 @@ $sequence "idle_unarmed_5" {
 }
 
 
-$sequence "idle_unarmed_6" {
+$sequence "unarmed_idle_6" {
 	"grunt_animations\combat_unarmed_idle_var5.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2622,7 +2622,7 @@ $sequence "idle_unarmed_6" {
 
 }
 
-$sequence "idle_unarmed_7" {
+$sequence "unarmed_idle_7" {
 	"grunt_animations\combat_unarmed_idle_var6.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"

@@ -35,11 +35,12 @@ $illumposition 5.065 3.683 2.265
 $cdmaterials "\models\halo_3\characters\covenant\drone\"
 $texturegroup "skinfamilies"
 {
-	{ "bugger_pupa_inner_glow_armor"			"bugger_pupa_flesh"			 }
-	{ "bugger_pupa_inner_glow_armor_minor"		"bugger_pupa_flesh_minor"	 }
-	{ "bugger_pupa_inner_glow_armor_major"		"bugger_pupa_flesh_major" 	 }
-	{ "bugger_pupa_inner_glow_armor_captain"	"bugger_pupa_flesh_captain"	 }
-	{ "bugger_pupa_inner_glow_armor_ultra"		"bugger_pupa_flesh_ultra" 	 }
+	{ "bugger_pupa_inner_glow_armor"			"bugger_pupa_flesh"				"bugger_pupa_inner_glow_new" }
+	{ "bugger_pupa_inner_glow_armor_minor"		"bugger_pupa_flesh_minor"		"bugger_pupa_inner_glow_new" }
+	{ "bugger_pupa_inner_glow_armor_major"		"bugger_pupa_flesh_major" 		"bugger_pupa_inner_glow_new" }
+	{ "bugger_pupa_inner_glow_armor_captain"	"bugger_pupa_flesh_captain"		"bugger_pupa_inner_glow_new" }
+	{ "bugger_pupa_inner_glow_armor_ultra"		"bugger_pupa_flesh_ultra"		"bugger_pupa_inner_glow_new" }
+	{ "bugger_pupa_inner_glow_armor_pupa"		"bugger_pupa_flesh_pupa" 	 	"bugger_pupa_inner_glow_new_pupa" }
 
 }
 
