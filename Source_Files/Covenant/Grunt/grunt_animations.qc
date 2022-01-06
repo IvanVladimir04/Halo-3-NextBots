@@ -4047,6 +4047,7 @@ $sequence "kamikaze_start" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 12 "event_halo_3_grunt_kamikaze_start" }
 }
 
 $sequence "attack_fuel_rod" {

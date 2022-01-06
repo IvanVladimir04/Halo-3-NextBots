@@ -544,7 +544,7 @@ $sequence "melee_combat_hammer_lunge" {
 	fadeout 0.2
 	fps 30
 	delta
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 5 "event_halo_3_elite_melee" }
 }
 
 $sequence "melee_combat_hammer_strike_1" {
@@ -554,7 +554,7 @@ $sequence "melee_combat_hammer_strike_1" {
 	fadeout 0.2
 	fps 30
 	delta
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 7 "event_halo_3_elite_melee" }
 }
 
 $sequence "melee_combat_hammer_strike_2" {
@@ -564,7 +564,7 @@ $sequence "melee_combat_hammer_strike_2" {
 	fadeout 0.2
 	fps 30
 	delta
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 8 "event_halo_3_elite_melee" }
 }
 
 //WEAPON EQUIP AND UNEQUIP

@@ -920,7 +920,7 @@ $sequence "melee_combat_any_1" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 18 "event_halo_3_floodcombathuman_melee" }
+	{ event 1100 22 "event_halo_3_floodcombatbrute_melee" }
 }
 
 $sequence "melee_combat_any_2" {
@@ -930,7 +930,7 @@ $sequence "melee_combat_any_2" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 19 "event_halo_3_floodcombathuman_melee" }
+	{ event 1100 21 "event_halo_3_floodcombatbrute_melee" }
 }
 
 $sequence "melee_combat_any_tackle" {
@@ -940,7 +940,7 @@ $sequence "melee_combat_any_tackle" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 18 "event_halo_3_floodcombathuman_melee" }
+	{ event 1100 32 "event_halo_3_floodcombatbrute_melee" }
 }
 
 
@@ -951,7 +951,7 @@ $sequence "melee_back_combat_any" {
 	fadeout 0.2
 	fps 30
 	walkframe 100 LX LY LZR
-	{ event 1100 23 "event_halo_3_floodcombathuman_melee" }
+	{ event 1100 29 "event_halo_3_floodcombatbrute_melee" }
 }
 
 //DEATH SEQUENCES

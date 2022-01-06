@@ -1012,7 +1012,7 @@ $sequence "throw_grenade_combat_pistol" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	{ event 1100 31 "event_halo_3_elite_throw_grenade" }
+	{ event 1100 36 "event_halo_3_elite_throw_grenade" }
 	walkframe 145 LX LY
 }
 
@@ -1090,7 +1090,7 @@ $sequence "melee_back_combat_pistol" {
 	fadeout 0.2
 	fps 30
 	walkframe 100 LX LY LZR
-	{ event 1100 34 "event_halo_3_elite_melee" }
+	{ event 1100 20 "event_halo_3_elite_melee" }
 }
 
 $sequence "melee_combat_pistol" {
@@ -1100,7 +1100,7 @@ $sequence "melee_combat_pistol" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 21 "event_halo_3_elite_melee" }
 }
 
 //WEAPON EQUIP AND UNEQUIP
@@ -1113,6 +1113,7 @@ $sequence "draw_fast_combat_pistol" {
 	fadeout 0.2
 	fps 30
 	walkframe 150 LX LY
+	{ event 1100 10 "event_halo_3_elite_draw_weapon" }
 }
 
 $sequence "draw_slow_combat_pistol" {
@@ -1122,6 +1123,7 @@ $sequence "draw_slow_combat_pistol" {
 	fadeout 0.2
 	fps 30
 	walkframe 150 LX LY
+	{ event 1100 18 "event_halo_3_elite_draw_weapon" }
 }
 
 

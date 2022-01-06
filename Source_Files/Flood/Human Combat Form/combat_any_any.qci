@@ -991,6 +991,7 @@ $sequence "airborne_any_leap_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 7 "event_halo_3_floodcombathuman_melee" }
 }
 
 $sequence "leap_any_any" {
@@ -1143,7 +1144,7 @@ $sequence "melee_combat_any_any_1" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 18 "event_halo_3_floodcombathuman_melee" }
+	{ event 1100 19 "event_halo_3_floodcombathuman_melee" }
 }
 
 $sequence "melee_combat_any_any_2" {

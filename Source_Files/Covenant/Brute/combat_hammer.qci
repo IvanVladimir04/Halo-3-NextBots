@@ -548,8 +548,8 @@ $sequence "leap_combat_hammer_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	loop
 	walkframe 140 LX LY LZ
+	{ event 1100 8 "event_halo_3_brute_melee" }
 }
 
 $sequence "land_hard_combat_hammer" {
@@ -666,7 +666,7 @@ $sequence "throw_grenade_combat_hammer" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	{ event 1100 31 "event_halo_3_brute_throw_grenade" }
+	{ event 1100 23 "event_halo_3_brute_throw_grenade" }
 	walkframe 145 LX LY
 }
 
@@ -676,7 +676,7 @@ $sequence "throw_equipment_combat_hammer" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	{ event 1100 31 "event_halo_3_brute_throw_equipment" }
+	{ event 1100 26 "event_halo_3_brute_throw_equipment" }
 	walkframe 145 LX LY
 }
 
@@ -707,7 +707,7 @@ $sequence "melee_combat_hammer_1" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 27 "event_halo_3_brute_melee" }
+	{ event 1100 21 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_combat_hammer_2" {
@@ -717,7 +717,7 @@ $sequence "melee_combat_hammer_2" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 31 "event_halo_3_brute_melee" }
+	{ event 1100 23 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_combat_hammer_tackle" {
@@ -727,7 +727,7 @@ $sequence "melee_combat_hammer_tackle" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 31 "event_halo_3_brute_melee" }
+	{ event 1100 43 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_combat_hammer_airborne" {
@@ -737,7 +737,7 @@ $sequence "melee_combat_hammer_airborne" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 5 "event_halo_3_brute_melee" }
+	{ event 1100 11 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_back_combat_hammer" {
@@ -747,7 +747,7 @@ $sequence "melee_back_combat_hammer" {
 	fadeout 0.2
 	fps 30
 	walkframe 100 LX LY LZR
-	{ event 1100 34 "event_halo_3_brute_melee" }
+	{ event 1100 22 "event_halo_3_brute_melee" }
 }
 
 //WEAPON EQUIP AND UNEQUIP
@@ -758,6 +758,7 @@ $sequence "draw_fast_combat_hammer" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 5 "event_halo_3_brute_draw_weapon" }
 }
 
 //FLINCH AND PING SEQUENCES

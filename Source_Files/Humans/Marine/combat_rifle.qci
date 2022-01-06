@@ -1171,6 +1171,25 @@ $sequence "reload_combat_shotgun" {
 	delta
 }
 
+$sequence "throw_grenade_combat_rifle_1" {
+	"marine_animations\combat_rifle_throw_grenade.smd"
+	activity "ACT_GRENADE_TOSS" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event 1100 27 "event_halo_3_human_throw_grenade" }
+	walkframe 145 LX LY
+}
+
+$sequence "throw_grenade_combat_rifle_2" {
+	"marine_animations\combat_rifle_throw_grenade_var2.smd"
+	activity "ACT_GRENADE_TOSS" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event 1100 28 "event_halo_3_human_throw_grenade" }
+	walkframe 145 LX LY
+}
 
 //MELEE SEQUENCES
 
@@ -1199,7 +1218,7 @@ $sequence "melee_combat_rifle_1" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 5 "event_halo_3_human_melee" }
+	{ event 1100 20 "event_halo_3_human_melee" }
 }
 
 $sequence "melee_combat_rifle_2" {
@@ -1209,7 +1228,7 @@ $sequence "melee_combat_rifle_2" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 8 "event_halo_3_human_melee" }
+	{ event 1100 15 "event_halo_3_human_melee" }
 }
 
 //WEAPON EQUIP AND UNEQUIP
