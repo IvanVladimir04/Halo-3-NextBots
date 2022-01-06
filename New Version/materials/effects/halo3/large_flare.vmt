@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"effects/halo3/large_flare"
+	"$additive"	1
+	"$vertexcolor"	1
+	"$vertexalpha"	1
+
+}
