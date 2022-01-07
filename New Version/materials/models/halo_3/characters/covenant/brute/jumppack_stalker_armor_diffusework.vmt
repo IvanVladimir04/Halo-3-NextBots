@@ -16,4 +16,17 @@
 	"$phongalbedotint" "1"
 	"$color2" "[5 0 0]"
 	"$nodecal"				1
+	"$blendtintbybasealpha"			1
+
+
+	Proxies
+	{
+		Clamp
+		{
+			min 2
+			max 2
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+	}
 }

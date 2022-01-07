@@ -23,7 +23,7 @@
 	$ambientocclusion 1
 	"$rimlight"	"1"
 	"$rimlightexponent"	"15"
-	"$rimlightboost"	"15"
+	"$rimlightboost"	".5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask"	1

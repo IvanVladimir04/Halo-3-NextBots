@@ -27,8 +27,8 @@ $cdmaterials "\models\halo_3\characters\alliance\arbiter\"
 
 $attachment "anim_attachment_RH" "r_hand" 8.50 2.06 1.06 rotate 0 15 0
 $attachment "anim_attachment_LH" "l_hand" 9.00 2.50 -1.00 rotate -0 0 -180
-$attachment "backpack" "spine1" 8.52 -11.91 0.00 rotate 45 -180 -90
-$attachment "sidearm" "r_thigh" 9.45 0.00 6.00 rotate 0 0 -90
+$attachment "backpack" "spine1" 6.94 -6.55 0.00 rotate -45 0 180
+$attachment "sidearm" "r_thigh" 7.93 -0.00 5.17 rotate 10 180 90
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
 $cbox 0 0 0 0 0 0
 

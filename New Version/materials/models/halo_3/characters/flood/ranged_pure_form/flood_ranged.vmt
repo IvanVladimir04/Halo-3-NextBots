@@ -9,11 +9,11 @@
 	"$detailtint"			"[1 0.8 0.6]"
 	"$nodecal"	"1"
 
-	"$emissiveBlendEnabled"	 1
-	"$emissiveBlendTexture"    "models/halo_3/characters/flood/ranged_pure_form/flood_ranged"
+//	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "models/halo_3/characters/flood/ranged_pure_form/flood_ranged_illum"
 	"$emissiveBlendBaseTexture"		"models/halo_3/characters/flood/ranged_pure_form/flood_ranged_illum"
 	"$emissiveBlendFlowTexture"     "vgui/white"
-	"$emissiveBlendTint"	 "[7 7 7]"
+	"$emissiveBlendTint"	 "[1 1 1]"
 	"$emissiveBlendStrength" 50
 	"$emissiveBlendScrollVector"	 "[0 0]"	
 

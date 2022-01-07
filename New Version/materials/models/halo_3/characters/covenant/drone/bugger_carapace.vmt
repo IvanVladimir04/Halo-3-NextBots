@@ -4,16 +4,16 @@
 	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"	
 	"$blendtintbybasealpha" "1"
 	"$phong" 1
-	"$phongboost" "3"
-	"$phongexponent" "6"
+	"$phongboost" "7.5"
+	"$phongexponent" "4"
 	"$phongfresnelranges" "[.5 .85 6]"
 	"$phongtint"	"[1 .8 .4]"
 	"$model" 1
 	"$phongalbedotint" "1"
 	$ambientocclusion 1
 	"$rimlight"	"1"
-	"$rimlightexponent"	"15"
-	"$rimlightboost"	"5"
+	"$rimlightexponent"	"35"
+	"$rimlightboost"	"0.5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint"	"[0.03 0.02 0.01]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"

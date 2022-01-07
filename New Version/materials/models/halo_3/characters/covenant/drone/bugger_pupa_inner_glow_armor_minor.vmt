@@ -9,15 +9,15 @@
 	"$model" 1
 
 	"$phong" 1
-	"$phongboost" "4"
-	"$phongexponent" "20"
+	"$phongboost" "7"
+	"$phongexponent" "7"
 	"$phongfresnelranges" "[.5 .85 6]"
 	"$phongtint"	"[.85 1 .25]"
 	"$phongalbedotint" "1"
 
 	"$rimlight"	"1"
 	"$rimlightexponent"	"15"
-	"$rimlightboost"	"5"
+	"$rimlightboost"	"0.5"
 
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint"	"[0.03 0.05 0.01]"

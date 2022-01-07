@@ -6,7 +6,7 @@
 	"$color2"		"[0.07 0.35 0.1]"
 	"$phong" 1
 	"$phongboost" "3"
-	"$phongexponent" "6"
+	"$phongexponent" "4"
 	"$phongfresnelranges" "[.5 .85 6]"
 	"$phongtint"	"[0.25 0.55 0.1]"
 	"$model" 1

@@ -11,8 +11,7 @@
 	"$model" 1
 	"$phongalbedotint" "1"
 	$ambientocclusion 1
-	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
-	"$envmaptint"	"[0.03 0.02 0.01]"
+	"$envmap"	"env_cubemap"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask"	1
 	"$detail"  "models/halo_3/characters/covenant/drone/carapace_detail_diff"
@@ -24,7 +23,7 @@
 	"$emissiveBlendTexture"    "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
 	"$emissiveBlendBaseTexture"		"models/halo_3/characters/covenant/drone/bugger_pupa_illum"
 	"$emissiveBlendFlowTexture"     "vgui/white"
-	"$emissiveBlendTint"	 "[5 5 5]"
+	"$emissiveBlendTint"	 "[1 1 1]"
 	"$emissiveBlendStrength" 50
 	"$emissiveBlendScrollVector"	 "[0 0]"	
 	"$nodecal"				1
@@ -33,9 +32,9 @@
 	{
 		Clamp
 		{
-			min 5
-			max 5
-			srcVar1 "$color2"
+			min 1
+			max 1
+			srcVar1 "$color"
 			resultVar "$emissiveBlendTint"
 		}
 		Clamp
@@ -54,8 +53,8 @@
 		}
 		Clamp
 		{
-			min 0
-			max 0.05
+			min 0.02
+			max 0.03
 			srcVar1 "$color"
 			resultVar "$envmaptint"
 		}

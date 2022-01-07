@@ -11,7 +11,7 @@
 	"$emissiveBlendTexture"    "models/halo_3/characters/forerunner/sentinel/sentinelaggressor_diffuse"
 	"$emissiveBlendBaseTexture"		"models/halo_3/characters/forerunner/sentinel/sentinelaggressor_illum"
 	"$emissiveBlendFlowTexture"     "vgui/white"
-	"$emissiveBlendTint"	 "[5 5 5]"
+	"$emissiveBlendTint"	 "[15 15 15]"
 	"$emissiveBlendStrength" 50
 	"$emissiveBlendScrollVector"	 "[0 0]"	
 	"$phong" 1
@@ -23,7 +23,7 @@
 	$ambientocclusion 1
 	"$rimlight"	"1"
 	"$rimlightexponent"	"15"
-	"$rimlightboost"	"5"
+	"$rimlightboost"	".5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint"	"[.03 .03 .03]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"

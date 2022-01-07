@@ -19,6 +19,16 @@
 	"$nodecal"				1
 
 
-
+	Proxies
+	{
+		Sine
+		{
+			sineperiod	1.76
+			sinemin		0.75
+			sinemax		1.4
+			timeoffset	0
+			resultvar	"$detailtint"
+		}
+	}
 }
 

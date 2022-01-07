@@ -5,8 +5,8 @@
 	"$blendtintbybasealpha" "1"
 	"$color2"		"[0.8 0.5 0.1]"
 	"$phong" 1
-	"$phongboost" "3"
-	"$phongexponent" "6"
+	"$phongboost" "7"
+	"$phongexponent" "3"
 	"$phongfresnelranges" "[.5 .85 6]"
 	"$phongtint"	"[1 0.8 0.2]"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
