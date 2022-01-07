@@ -64,6 +64,7 @@ $sequence "warthog_gunner_board_melee_1" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 14 "event_halo_3_floodcombatbrute_melee" }
 	walkframe 44 LX LY
 }
 
@@ -72,6 +73,7 @@ $sequence "warthog_gunner_board_melee_2" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 30 "event_halo_3_floodcombatbrute_melee" }
 	walkframe 44 LX LY
 }
 

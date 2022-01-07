@@ -639,7 +639,7 @@ $sequence "melee_back_combat_sword" {
 	fadeout 0.2
 	fps 30
 	walkframe 100 LX LY LZR
-	{ event 1100 34 "event_halo_3_elite_melee" }
+	{ event 1100 26 "event_halo_3_elite_melee" }
 }
 
 $sequence "melee_combat_sword_lunge" {
@@ -649,7 +649,7 @@ $sequence "melee_combat_sword_lunge" {
 	fadeout 0.2
 	fps 30
 	delta
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 5 "event_halo_3_elite_melee" }
 }
 
 $sequence "melee_combat_sword_1" {
@@ -659,7 +659,7 @@ $sequence "melee_combat_sword_1" {
 	fadeout 0.2
 	fps 30
 	walkframe 140 LX LY
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 16 "event_halo_3_elite_melee" }
 }
 
 $sequence "melee_combat_sword_2" {
@@ -669,7 +669,7 @@ $sequence "melee_combat_sword_2" {
 	fadeout 0.2
 	fps 30
 	walkframe 140 LX LY
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 14 "event_halo_3_elite_melee" }
 }
 
 //WEAPON EQUIP AND UNEQUIP
@@ -681,6 +681,7 @@ $sequence "draw_fast_combat_sword" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 20 "event_halo_3_elite_draw_weapon" }
 	walkframe 150 LX LY
 }
 

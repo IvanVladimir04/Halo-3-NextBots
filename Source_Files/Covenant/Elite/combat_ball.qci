@@ -410,8 +410,8 @@ $sequence "move_combat_ball_up" {
 	node "move_ball"
 	fps 30
 	loop
-	{ event AE_CL_PLAYSOUND 2 "HALO3_Elite.Step" }
-	{ event AE_CL_PLAYSOUND 8 "HALO3_Elite.Step" }
+	{ event AE_CL_PLAYSOUND 2 "HALO3_elite.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_elite.Step" }
 	walkframe 145 LX LY
 }
 
@@ -430,8 +430,8 @@ $sequence "move_combat_ball_down" {
 	node "move_ball"
 	fps 30
 	loop
-	{ event AE_CL_PLAYSOUND 2 "HALO3_Elite.Step" }
-	{ event AE_CL_PLAYSOUND 8 "HALO3_Elite.Step" }
+	{ event AE_CL_PLAYSOUND 2 "HALO3_elite.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_elite.Step" }
 	walkframe 145 LX LY
 }
 
@@ -450,8 +450,8 @@ $sequence "walk_combat_ball_up" {
 	node "walk_ball"
 	fps 30
 	loop
-	{ event AE_CL_PLAYSOUND 2 "HALO3_Elite.Step" }
-	{ event AE_CL_PLAYSOUND 8 "HALO3_Elite.Step" }
+	{ event AE_CL_PLAYSOUND 2 "HALO3_elite.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_elite.Step" }
 	walkframe 145 LX LY
 }
 
@@ -470,8 +470,8 @@ $sequence "walk_combat_ball_down" {
 	node "walk_ball"
 	fps 30
 	loop
-	{ event AE_CL_PLAYSOUND 2 "HALO3_Elite.Step" }
-	{ event AE_CL_PLAYSOUND 8 "HALO3_Elite.Step" }
+	{ event AE_CL_PLAYSOUND 2 "HALO3_elite.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_elite.Step" }
 	walkframe 145 LX LY
 }
 
@@ -509,14 +509,14 @@ $sequence "land_soft_combat_ball" {
 //MELEE SEQUENCES
 
 
-$sequence "melee_combat_ball_1" {
+$sequence "melee_combat_ball" {
 	"elite_animations\combat_ball_melee.smd"
 	activity "ACT_MELEE_ATTACK1" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 10 "event_halo_3_elite_melee" }
 }
 
 //WEAPON EQUIP AND UNEQUIP

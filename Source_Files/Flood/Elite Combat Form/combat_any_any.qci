@@ -1044,6 +1044,7 @@ $sequence "airborne_any_leap_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 6 "event_halo_3_floodcombatelite_melee" }
 }
 
 $sequence "leap_any_any" {
@@ -1139,7 +1140,7 @@ $sequence "melee_combat_any_1" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 18 "event_halo_3_floodcombatelite_melee" }
+	{ event 1100 23 "event_halo_3_floodcombatelite_melee" }
 }
 
 $sequence "melee_combat_any_2" {
@@ -1149,7 +1150,7 @@ $sequence "melee_combat_any_2" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 19 "event_halo_3_floodcombatelite_melee" }
+	{ event 1100 26 "event_halo_3_floodcombatelite_melee" }
 }
 
 $sequence "melee_combat_any_tackle" {
@@ -1159,7 +1160,7 @@ $sequence "melee_combat_any_tackle" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 18 "event_halo_3_floodcombatelite_melee" }
+	{ event 1100 22 "event_halo_3_floodcombatelite_melee" }
 }
 
 
@@ -1170,7 +1171,7 @@ $sequence "melee_back_combat_any_any" {
 	fadeout 0.2
 	fps 30
 	walkframe 100 LX LY LZR
-	{ event 1100 23 "event_halo_3_floodcombatelite_melee" }
+	{ event 1100 31 "event_halo_3_floodcombatelite_melee" }
 }
 
 //FLINCH AND PING SEQUENCES

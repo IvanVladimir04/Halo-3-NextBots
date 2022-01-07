@@ -908,7 +908,7 @@ $sequence "melee_combat_pistol_2" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 8 "event_halo_3_human_melee" }
+	{ event 1100 9 "event_halo_3_human_melee" }
 }
 
 //WEAPON EQUIP AND UNEQUIP
@@ -920,6 +920,7 @@ $sequence "draw_fast_combat_pistol" {
 	fadeout 0.2
 	fps 30
 	walkframe 145 LX LY
+	{ event 1100 5 "event_halo_3_human_draw_weapon" }
 }
 
 $sequence "draw_slow_combat_pistol" {
@@ -929,6 +930,7 @@ $sequence "draw_slow_combat_pistol" {
 	fadeout 0.2
 	fps 30
 	walkframe 145 LX LY
+	{ event 1100 21 "event_halo_3_human_draw_weapon" }
 }
 
 $sequence "ready_combat_pistol" {

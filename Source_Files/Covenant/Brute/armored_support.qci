@@ -812,7 +812,7 @@ $sequence "throw_grenade_armored_support" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	{ event 1100 31 "event_halo_3_brute_throw_grenade" }
+	{ event 1100 50 "event_halo_3_brute_throw_grenade" }
 	walkframe 145 LX LY
 }
 
@@ -822,7 +822,7 @@ $sequence "throw_equipment_armored_support" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	{ event 1100 31 "event_halo_3_brute_throw_equipment" }
+	{ event 1100 27 "event_halo_3_brute_throw_equipment" }
 	walkframe 145 LX LY
 }
 
@@ -863,7 +863,7 @@ $sequence "melee_armored_support_1" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 27 "event_halo_3_brute_melee" }
+	{ event 1100 19 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_armored_support_2" {
@@ -873,7 +873,7 @@ $sequence "melee_armored_support_2" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 31 "event_halo_3_brute_melee" }
+	{ event 1100 19 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_back_armored_support" {
@@ -883,7 +883,7 @@ $sequence "melee_back_armored_support" {
 	fadeout 0.2
 	fps 30
 	walkframe 100 LX LY LZR
-	{ event 1100 34 "event_halo_3_brute_melee" }
+	{ event 1100 18 "event_halo_3_brute_melee" }
 }
 
 

@@ -227,6 +227,7 @@ $sequence "warthog_back_board_melee" {
 	fadeout 0.2
 	fps 30
 	walkframe 44 LX LY
+	{ event 1100 13 "event_halo_3_drone_melee" }
 }
 
 $sequence "warthog_back_board_exit" {
@@ -261,6 +262,8 @@ $sequence "warthog_driver_board_melee" {
 	fadeout 0.2
 	fps 30
 	walkframe 44 LX LY
+	{ event 1100 13 "event_halo_3_drone_melee" }
+	{ event 1100 27 "event_halo_3_drone_melee" }
 }
 
 $sequence "warthog_driver_board_exit" {
@@ -295,6 +298,8 @@ $sequence "warthog_passenger_board_melee" {
 	fadeout 0.2
 	fps 30
 	walkframe 44 LX LY
+	{ event 1100 12 "event_halo_3_drone_melee" }
+	{ event 1100 25 "event_halo_3_drone_melee" }
 }
 
 $sequence "warthog_passenger_board_exit" {
@@ -329,6 +334,8 @@ $sequence "warthog_gunner_board_melee" {
 	fadeout 0.2
 	fps 30
 	walkframe 44 LX LY
+	{ event 1100 13 "event_halo_3_drone_melee" }
+	{ event 1100 27 "event_halo_3_drone_melee" }
 }
 
 $sequence "warthog_gunner_board_exit" {
@@ -362,6 +369,7 @@ $sequence "scorpion_board_back_melee_1" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 13 "event_halo_3_drone_melee" }
 }
 
 $sequence "scorpion_board_back_melee_2" {
@@ -369,6 +377,7 @@ $sequence "scorpion_board_back_melee_2" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 20 "event_halo_3_drone_melee" }
 }
 
 $sequence "scorpion_board_back_exit" {
@@ -403,6 +412,9 @@ $sequence "scorpion_board_front_left_melee_1" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 13 "event_halo_3_drone_melee" }
+	{ event 1100 27 "event_halo_3_drone_melee" }
+	{ event 1100 41 "event_halo_3_drone_melee" }
 }
 
 $sequence "scorpion_board_front_left_melee_2" {
@@ -410,6 +422,7 @@ $sequence "scorpion_board_front_left_melee_2" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 23 "event_halo_3_drone_melee" }
 }
 
 $sequence "scorpion_board_front_left_exit" {
@@ -444,6 +457,9 @@ $sequence "scorpion_board_front_right_melee_1" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 13 "event_halo_3_drone_melee" }
+	{ event 1100 27 "event_halo_3_drone_melee" }
+	{ event 1100 41 "event_halo_3_drone_melee" }
 }
 
 $sequence "scorpion_board_front_right_melee_2" {
@@ -451,6 +467,7 @@ $sequence "scorpion_board_front_right_melee_2" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 20 "event_halo_3_drone_melee" }
 }
 
 $sequence "scorpion_board_front_right_exit" {
@@ -485,6 +502,9 @@ $sequence "scorpion_board_top_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 13 "event_halo_3_drone_melee" }
+	{ event 1100 27 "event_halo_3_drone_melee" }
+	{ event 1100 41 "event_halo_3_drone_melee" }
 }
 
 
@@ -518,6 +538,9 @@ $sequence "wraith_board_back_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 13 "event_halo_3_drone_melee" }
+	{ event 1100 27 "event_halo_3_drone_melee" }
+	{ event 1100 41 "event_halo_3_drone_melee" }
 }
 
 $sequence "wraith_board_back_exit" {
@@ -538,7 +561,7 @@ $sequence "wraith_board_front_left_enter" {
 //	walkframe 44 LX LY
 }
 
-$sequence "wraith_board_front_left__idle" {
+$sequence "wraith_board_front_left_idle" {
 	"drone_animations\wraith_b_l_idle_var0.smd"
 	activity "ACT_BUSY_SIT_GROUND" 1
 	fadein 0.2
@@ -546,14 +569,16 @@ $sequence "wraith_board_front_left__idle" {
 	fps 30
 }
 
-$sequence "wraith_board_front_left__melee" {
+$sequence "wraith_board_front_left_melee" {
 	"drone_animations\wraith_b_l_melee_var0.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 13 "event_halo_3_drone_melee" }
+	{ event 1100 27 "event_halo_3_drone_melee" }
 }
 
-$sequence "wraith_board_front_left__exit" {
+$sequence "wraith_board_front_left_exit" {
 	"drone_animations\wraith_b_l_exit.smd"
 	fadein 0.2
 	fadeout 0.2
@@ -570,7 +595,7 @@ $sequence "wraith_board_front_right_enter" {
 //	walkframe 44 LX LY
 }
 
-$sequence "wraith_board_front_right__idle" {
+$sequence "wraith_board_front_right_idle" {
 	"drone_animations\wraith_b_r_idle_var0.smd"
 	activity "ACT_BUSY_SIT_GROUND" 1
 	fadein 0.2
@@ -578,14 +603,16 @@ $sequence "wraith_board_front_right__idle" {
 	fps 30
 }
 
-$sequence "wraith_board_front_right__melee" {
+$sequence "wraith_board_front_right_melee" {
 	"drone_animations\wraith_b_r_melee_var0.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 13 "event_halo_3_drone_melee" }
+	{ event 1100 27 "event_halo_3_drone_melee" }
 }
 
-$sequence "wraith_board_front_right__exit" {
+$sequence "wraith_board_front_right_exit" {
 	"drone_animations\wraith_b_r_exit.smd"
 	fadein 0.2
 	fadeout 0.2

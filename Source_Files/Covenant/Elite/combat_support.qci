@@ -542,7 +542,7 @@ $sequence "throw_grenade_combat_support" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	{ event 1100 31 "event_halo_3_elite_throw_grenade" }
+	{ event 1100 36 "event_halo_3_elite_throw_grenade" }
 	walkframe 145 LX LY
 }
 
@@ -584,7 +584,7 @@ $sequence "melee_combat_support" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 5 "event_halo_3_Elite_melee" }
+	{ event 1100 13 "event_halo_3_elite_melee" }
 }
 
 //WEAPON EQUIP AND UNEQUIP

@@ -654,6 +654,7 @@ $sequence "scorpion_board_back_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 20 "event_halo_3_brute_melee" }
 }
 
 $sequence "scorpion_board_back_exit" {
@@ -687,6 +688,7 @@ $sequence "scorpion_board_front_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 25 "event_halo_3_brute_melee" }
 }
 
 $sequence "scorpion_board_front_exit" {
@@ -719,6 +721,7 @@ $sequence "wraith_board_back_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 20 "event_halo_3_brute_melee" }
 }
 
 $sequence "wraith_board_back_exit" {
@@ -752,6 +755,7 @@ $sequence "wraith_board_front_melee" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	{ event 1100 24 "event_halo_3_brute_melee" }
 }
 
 $sequence "wraith_board_front_exit" {

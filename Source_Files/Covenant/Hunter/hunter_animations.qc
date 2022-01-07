@@ -653,7 +653,7 @@ $sequence "aim_patrol_any_still_up" {
 	hidden
 }
 
-$sequence "Idle" {
+$sequence "combat_idle" {
 	"hunter_animations\any_any_idle_var0.smd"
 	activity "ACT_IDLE_AGITATED" 1
 	addlayer	"aim_any_still_up"
@@ -665,7 +665,7 @@ $sequence "Idle" {
 }
 
 
-$sequence "idle_unarmed" {
+$sequence "unarmed_idle" {
 	"hunter_animations\stunned_unarmed_idle.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_any_still_up"
@@ -675,7 +675,7 @@ $sequence "idle_unarmed" {
 	loop
 }
 
-$sequence "idle_crouch" {
+$sequence "crouch_idle" {
 	"hunter_animations\crouch_any_idle.smd"
 	activity "ACT_CROUCHIDLE" 1
 	addlayer	"aim_any_crouch_still_up"

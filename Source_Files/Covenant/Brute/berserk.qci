@@ -463,7 +463,7 @@ $sequence "melee_berserk_unarmed_1" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 27 "event_halo_3_brute_melee" }
+	{ event 1100 17 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_berserk_unarmed_2" {
@@ -473,7 +473,7 @@ $sequence "melee_berserk_unarmed_2" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 31 "event_halo_3_brute_melee" }
+	{ event 1100 22 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_berserk_unarmed_tackle" {
@@ -483,7 +483,7 @@ $sequence "melee_berserk_unarmed_tackle" {
 	fadeout 0.2
 	fps 30
 	walkframe 61 LX LY LZR
-	{ event 1100 31 "event_halo_3_brute_melee" }
+	{ event 1100 37 "event_halo_3_brute_melee" }
 }
 
 $sequence "melee_back_berserk_unarmed" {
@@ -493,7 +493,7 @@ $sequence "melee_back_berserk_unarmed" {
 	fadeout 0.2
 	fps 30
 	walkframe 100 LX LY LZR
-	{ event 1100 34 "event_halo_3_brute_melee" }
+	{ event 1100 17 "event_halo_3_brute_melee" }
 }
 
 
