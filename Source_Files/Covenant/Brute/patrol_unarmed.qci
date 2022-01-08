@@ -1,0 +1,588 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM patrol PISTOL STILL DOWN
+
+$animation "aim_patrol_unarmed_still_down_neutral" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_patrol_unarmed_still_down_down_left" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_down_center" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_down_right" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_mid_left" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_mid_center" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_mid_right" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_up_left" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_up_center" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_still_down_up_right" "brute_animations\patrol_unarmed_aim_still_down.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_patrol_unarmed_still_down_neutral" 0
+}
+
+//AIM patrol PISTOL move DOWN
+
+$animation "aim_patrol_unarmed_move_down_neutral" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_patrol_unarmed_move_down_down_left" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_down_center" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_down_right" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_mid_left" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_mid_center" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_mid_right" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_up_left" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_up_center" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+$animation "aim_patrol_unarmed_move_down_up_right" "brute_animations\patrol_unarmed_aim_move_down.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_patrol_unarmed_move_down_neutral" 0
+}
+
+
+//IDLE 2 MOVE ANIMATIONS
+
+$animation "patrol_unarmed_idle_2_patrol_move_S" "brute_animations\patrol_unarmed_idle_2_patrol_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_patrol_move_W" "brute_animations\patrol_unarmed_idle_2_patrol_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_patrol_move_E" "brute_animations\patrol_unarmed_idle_2_patrol_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_idle_2_patrol_move_N" "brute_animations\patrol_unarmed_idle_2_patrol_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+//MOVE 2 IDLE ANIMATIONS
+
+$animation "patrol_unarmed_move_2_patrol_idle_move_S" "brute_animations\patrol_unarmed_move_front_2_patrol_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_2_patrol_idle_move_W" "brute_animations\patrol_unarmed_move_front_2_patrol_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_2_patrol_idle_move_E" "brute_animations\patrol_unarmed_move_front_2_patrol_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_2_patrol_idle_move_N" "brute_animations\patrol_unarmed_move_front_2_patrol_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE ANIMATIONS
+
+$animation "patrol_unarmed_move_S" "brute_animations\patrol_unarmed_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_W" "brute_animations\patrol_unarmed_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_E" "brute_animations\patrol_unarmed_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "patrol_unarmed_move_N" "brute_animations\patrol_unarmed_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+
+//FLINCH ANIMATIONS
+
+$animation "flinch_patrol_unarmed_left_arm" "brute_animations\patrol_unarmed_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_patrol_unarmed_left_leg" "brute_animations\patrol_unarmed_h_ping_left_gut.smd" {
+	fps 30
+}
+$animation "flinch_patrol_unarmed_right_leg" "brute_animations\patrol_unarmed_h_ping_right_gut.smd" {
+	fps 30
+}
+$animation "flinch_patrol_unarmed_right_arm" "brute_animations\patrol_unarmed_h_ping_right_gut.smd" {
+	fps 30
+}
+$animation "flinch_patrol_unarmed_gut" "brute_animations\patrol_unarmed_h_ping_front_gut.smd" {
+	fps 30
+}
+$animation "flinch_patrol_unarmed_head" "brute_animations\patrol_unarmed_h_ping_front_head.smd" {
+	fps 30
+}
+//PING ANIMATIONS
+
+$animation "ping_patrol_unarmed_left_arm_pose" "brute_animations\patrol_unarmed_s_ping_left_gut_var1.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_patrol_unarmed_left_arm" "brute_animations\patrol_unarmed_s_ping_left_gut_var1.smd" {
+	fps 30
+	subtract	"ping_patrol_unarmed_left_arm_pose"	0
+}
+$animation "ping_patrol_unarmed_right_arm_pose" "brute_animations\patrol_unarmed_s_ping_right_gut_var1.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_patrol_unarmed_right_arm" "brute_animations\patrol_unarmed_s_ping_right_gut_var1.smd" {
+	fps 30
+	subtract	"ping_patrol_unarmed_right_arm_pose"	0
+}
+$animation "ping_patrol_unarmed_gut_pose" "brute_animations\patrol_unarmed_s_ping_front_gut_var1.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_patrol_unarmed_gut" "brute_animations\patrol_unarmed_s_ping_front_gut_var1.smd" {
+	fps 30
+	subtract	"ping_patrol_unarmed_gut_pose"	0
+}
+$animation "ping_patrol_unarmed_head_pose" "brute_animations\patrol_unarmed_s_ping_front_head_var1.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_patrol_unarmed_head" "brute_animations\patrol_unarmed_s_ping_front_head_var1.smd" {
+	fps 30
+	subtract	"ping_patrol_unarmed_head_pose"	0
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_patrol_unarmed_move_down" {
+	"aim_patrol_unarmed_move_down_up_right" "aim_patrol_unarmed_move_down_up_center"  "aim_patrol_unarmed_move_down_up_left"
+	"aim_patrol_unarmed_move_down_mid_right" "aim_patrol_unarmed_move_down_mid_center"  "aim_patrol_unarmed_move_down_mid_left"
+	"aim_patrol_unarmed_move_down_down_right" "aim_patrol_unarmed_move_down_down_center" "aim_patrol_unarmed_move_down_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_patrol_unarmed_still_down" {
+	"aim_patrol_unarmed_still_down_up_right" "aim_patrol_unarmed_still_down_up_center"  "aim_patrol_unarmed_still_down_up_left"
+	"aim_patrol_unarmed_still_down_mid_right" "aim_patrol_unarmed_still_down_mid_center"  "aim_patrol_unarmed_still_down_mid_left"
+	"aim_patrol_unarmed_still_down_down_right" "aim_patrol_unarmed_still_down_down_center" "aim_patrol_unarmed_still_down_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+//IDLE SEQUENCES
+
+$sequence "patrol_unarmed_idle_down" {
+	"brute_animations\patrol_unarmed_idle.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_posing_1" {
+	"brute_animations\patrol_unarmed_posing_var1.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_posing_2" {
+	"brute_animations\patrol_unarmed_posing_var1.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "patrol_unarmed_idle_posing_3" {
+	"brute_animations\patrol_unarmed_posing_var3.smd"
+	activity "ACT_IDLE_PISTOL_RELAXED" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_patrol_unarmed_up" {
+	"patrol_unarmed_move_S"
+	"patrol_unarmed_move_W"
+	"patrol_unarmed_move_N"
+	"patrol_unarmed_move_E"
+	"patrol_unarmed_move_S"
+	activity "ACT_RUN_RELAXED_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_patrol_unarmed_move_down"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_Brute.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_Brute.Step" }
+	walkframe 145 LX LY
+}
+
+
+//MOVEMENT-TRANSITORY SEQUENCES
+
+$sequence "patrol_unarmed_move_2_patrol_idle" {
+	"patrol_unarmed_move_2_patrol_idle_move_S"
+	"patrol_unarmed_move_2_patrol_idle_move_W"
+	"patrol_unarmed_move_2_patrol_idle_move_N"
+	"patrol_unarmed_move_2_patrol_idle_move_E"
+	"patrol_unarmed_move_2_patrol_idle_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "patrol_unarmed_idle_2_patrol_move" {
+	"patrol_unarmed_idle_2_patrol_move_S"
+	"patrol_unarmed_idle_2_patrol_move_W"
+	"patrol_unarmed_idle_2_patrol_move_N"
+	"patrol_unarmed_idle_2_patrol_move_E"
+	"patrol_unarmed_idle_2_patrol_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_patrol_unarmed_still_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+
+//AIRBORNE SEQUENCES
+
+
+$sequence "land_hard_patrol_unarmed" {
+	"brute_animations\patrol_unarmed_land_hard.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+$sequence "land_soft_patrol_unarmed" {
+	"brute_animations\patrol_unarmed_land_soft.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+//FLINCH AND PING SEQUENCES
+
+$sequence "flinch_patrol_unarmed_back_chest" {
+	"flinch_patrol_unarmed_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "flinch_patrol_back_gut" {
+	"flinch_patrol_unarmed_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 41 LX LY
+}
+
+$sequence "flinch_patrol_front_chest" {
+	"flinch_patrol_unarmed_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 22 LX LY
+}
+
+$sequence "flinch_patrol_front_gut_1" {
+	"flinch_patrol_unarmed_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 19 LX LY
+}
+
+$sequence "flinch_patrol_front_gut_2" {
+	"flinch_patrol_unarmed_gut"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 19 LX LY
+}
+
+$sequence "flinch_patrol_front_right_arm" {
+	"flinch_patrol_unarmed_right_arm"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 35 LX LY
+}
+
+$sequence "flinch_patrol_front_right_leg" {
+	"flinch_patrol_unarmed_right_leg"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 39 LX LY
+}
+
+$sequence "flinch_patrol_front_left_leg" {
+	"flinch_patrol_unarmed_left_leg"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 49 LX LY
+}
+
+$sequence "flinch_patrol_front_left_arm" {
+	"flinch_patrol_unarmed_left_arm"
+	activity "ACT_SMALL_FLINCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_patrol_unarmed_back_chest" {
+	"ping_patrol_unarmed_gut"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_patrol_unarmed_back_gut" {
+	"ping_patrol_unarmed_gut"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 41 LX LY
+}
+
+$sequence "pinged_patrol_unarmed_front_chest" {
+	"ping_patrol_unarmed_gut"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 22 LX LY
+}
+
+$sequence "pinged_patrol_unarmed_front_head" {
+	"ping_patrol_unarmed_head"
+	activity "ACT_FLINCH_HEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_patrol_unarmed_front_gut" {
+	"ping_patrol_unarmed_gut"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 19 LX LY
+}
+
+$sequence "pinged_patrol_unarmed_front_right_arm" {
+	"ping_patrol_unarmed_right_arm"
+	activity "ACT_FLINCH_RIGHTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 35 LX LY
+}
+
+$sequence "pinged_patrol_unarmed_front_left_arm" {
+	"ping_patrol_unarmed_left_arm"
+	activity "ACT_FLINCH_LEFTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+//TURN SEQUENCES
+
+$sequence "turn_left_patrol_unarmed" {
+	"brute_animations\patrol_unarmed_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_patrol_unarmed" {
+	"brute_animations\patrol_unarmed_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}

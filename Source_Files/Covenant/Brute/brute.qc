@@ -108,6 +108,7 @@ $include "combat_rifle.qci"
 $include "combat_pistol.qci"
 $include "combat_support.qci"
 $include "combat_unarmed.qci"
+$include "patrol_unarmed.qci"
 $include "common.qci"
 
 //$poseparameter "move_yaw" -180 180 loop 360
