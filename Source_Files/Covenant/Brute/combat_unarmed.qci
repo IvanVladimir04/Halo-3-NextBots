@@ -181,7 +181,7 @@ $sequence "aim_combat_unarmed_still_up" {
 
 $sequence "combat_unarmed_idle_down" {
 	"brute_animations\combat_unarmed_idle.smd"
-	activity "ACT_IDLE_PISTOL" 1
+	activity "ACT_IDLE_RELAXED" 1
 	addlayer	"aim_combat_unarmed_still_down"
 	fadein 0.2
 	fadeout 0.2

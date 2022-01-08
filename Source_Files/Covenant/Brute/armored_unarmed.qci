@@ -1,0 +1,35 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM armored UNARMED STILL DOWN
+
+
+//IDLE SEQUENCES
+
+$sequence "armored_unarmed_idle_down" {
+	"brute_animations\armored_unarmed_idle.smd"
+	activity "ACT_IDLE_RELAXED" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+//TURN SEQUENCES
+
+$sequence "turn_left_armored_unarmed" {
+	"brute_animations\armored_unarmed_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_armored_unarmed" {
+	"brute_animations\armored_unarmed_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}

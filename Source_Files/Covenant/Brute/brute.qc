@@ -101,6 +101,7 @@ $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861
 $include "armored_pistol.qci"
 $include "armored_rifle.qci"
 $include "armored_support.qci"
+$include "armored_unarmed.qci"
 $include "berserk.qci"
 $include "combat_hammer.qci"
 $include "combat_rifle.qci"
