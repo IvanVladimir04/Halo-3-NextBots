@@ -4,7 +4,7 @@
 	"$bumpmap" "models/halo_3/characters/covenant/grunt/grunt_zbump"
 	"$detail"  "models/halo_3/characters/covenant/grunt/skin_detail"
 	"$detailblendmode"			"0.00"
-	"$detailblendfactor"			"1.00"
+	"$detailblendfactor"			"0.20"
 	"$detailscale"			"15.00"
 	"$blendtintbybasealpha" "1"
 
@@ -16,6 +16,6 @@
 	"$phongfresnelranges" "[.7 .82 31]"
 	"$model" 1
 	"$phongalbedotint" "1"
-	"$color2" "[2 2 2]"
+//	"$color2" "[3 3 3]"
 	"$nodecal"				1
 }
