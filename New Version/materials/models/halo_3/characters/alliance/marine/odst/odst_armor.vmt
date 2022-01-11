@@ -30,22 +30,8 @@
 		{
 			min 0.1
 			max 0.65
-			srcVar1 "$color"
-			resultVar "$color"
-		}
-		Clamp
-		{
-			min 0.25
-			max 1
 			srcVar1 "$color2"
-			resultVar "$phongtint"
-		}
-		Clamp
-		{
-			min 0.25
-			max 1
-			srcVar1 "$color"
-			resultVar "$envmaptint"
+			resultVar "$color"
 		}
 	}
 }
