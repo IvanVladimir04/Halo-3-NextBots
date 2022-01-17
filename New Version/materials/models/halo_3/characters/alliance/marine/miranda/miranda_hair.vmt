@@ -2,6 +2,7 @@
 {
 	"$basetexture" "models\halo_3\characters\alliance\marine\miranda\miranda_hair"
      	"$bumpmap" "models\halo_3\characters\alliance\marine\miranda\miranda_hair_bump"
+	"$nocull"		1
 	"$halflambert" 1
 	"$alphatest"	1
 	"$phong" "1"

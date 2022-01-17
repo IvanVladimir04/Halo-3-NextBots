@@ -28,7 +28,7 @@ ENT.PossibleWeapons = {
 }
 
 function ENT:DoInit()
-	self:SetBodygroup(3,1)
+	self:SetBodygroup(3,0)
 	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
 	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
 	--print(self:GetName(),self.Weapon:GetName())

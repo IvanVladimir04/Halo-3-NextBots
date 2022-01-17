@@ -45,7 +45,7 @@ $attachment "smg" "r_hand" 3 0 0 rotate 0 15 0
 $attachment "magnum" "r_hand" 3 0 -0.5 rotate 0 15 0
 $attachment "anim_attachment_LH" "l_hand" 1.07 0.00 0.00 rotate 0 0 -180
 $attachment "backpack" "spine1" 6.52 -6.15 -0.00 rotate -45 0 -180
-$attachment "sidearm" "r_thigh" 7.45 0.00 4.85 rotate 5 180 90
+$attachment "sidearm" "r_thigh" 8.45 1.07 3.70 rotate 5 180 90
 $attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
 $cbox 0 0 0 0 0 0
 
