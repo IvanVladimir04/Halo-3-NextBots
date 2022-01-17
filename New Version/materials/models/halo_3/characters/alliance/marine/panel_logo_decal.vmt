@@ -3,4 +3,16 @@
 	"$basetexture" "models\halo_3\characters\alliance\marine\panel_logo_decal"
 	"$translucent" 1
 
+
+	Proxies
+	{
+
+		Clamp
+		{
+			min 0.1
+			max 0.65
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+	}
 }

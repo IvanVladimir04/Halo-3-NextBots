@@ -2,6 +2,8 @@
 {
 	"$basetexture" "models\halo_3\characters\alliance\marine\worker_dif"
  	"$bumpmap" "models\halo_3\characters\alliance\marine\worker_bump"
+	$blendtintbybasealpha	 "1"
+
 	"$halflambert" 1
 
 	"$phong" "1"

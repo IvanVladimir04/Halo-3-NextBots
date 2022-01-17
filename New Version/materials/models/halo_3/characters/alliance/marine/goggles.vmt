@@ -8,12 +8,10 @@
 	"$envmapsaturation"	".6"
 	"$envmapcontrast"		".3"
 	"$phong" "1"
-	"$phongboost" "50"
-//	"$phongexponent"		"10"
 	"$phongalbedotint" "45"
-	"$phongexponenttexture" "models\halo\halo_3_odst\rookie\Helmet_Phong"
-	"$phongfresnelranges" "[.5 .5 .5]"
+	"$phongexponent" 10
+	"$phongboost" 12.25
+	"$phongfresnelranges" "[1 1 1]"
 	"$model" "1"
-//	"$lightwarptexture"			"models/halo_3/shared/lw_covyshell"
 	"$color2"		"[3 1.5 .7]"
 }

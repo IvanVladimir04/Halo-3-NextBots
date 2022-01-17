@@ -4,12 +4,11 @@
 	"$bumpmap" "models\halo_3\characters\alliance\marine\odst\pilot_bump"
 	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$normalmapalphaenvmapmask" "1"
-	"$envmaptint"	"[.4 .55 .75]"
+	"$envmaptint"	"[.5 .65 1]"
 	"$phong" "1"
-	"$phongboost" "50"
-	"$phongexponenttexture" "models\halo_3\characters\alliance\marine\odst\Helmet_Phong"
-	"$phongalbedotint" "45"
-	"$phongfresnelranges" "[.5 .5 .5]"
+	"$phongexponent" 5
+	"$phongboost" 8.25
+	"$phongfresnelranges" "[1 1 1]"
 	"$model" "1"
 	"$color2"		"[2 2.2 3.5]"
 }
