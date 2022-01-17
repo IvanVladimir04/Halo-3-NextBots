@@ -5,10 +5,110 @@ include("vehiclestuff.lua")
 
 ENT.Base = "npc_iv04_base"
 
+ENT.SearchJustAsSpawned = false
+
+ENT.CanUse = true
+
 ENT.YPP = 0
 ENT.PPP = 0
 
+ENT.LastCalcTime = 0
+
+ENT.LastThinkTime = 0
+
 ENT.NThink = 0
+
+ENT.LastTimeWeShot = 0
+
+ENT.ThinkDelay = 2
+
+ENT.AimCalculationT = 3
+
+ENT.ThrownGrenades = 0
+
+ENT.MoveSpeed = 100
+
+ENT.Difficulty = 2 
+-- 1 Easy, 2 Normal, 3 Heroic, 4 Legendary
+
+ENT.WeaponAccuracy = 0 -- This is to be used along with difficulty for specific weapons
+-- like shotgun
+
+ENT.ShootDist = 1024
+
+ENT.DodgeChance = 20
+
+ENT.GrenadeRange = 768
+
+ENT.AttractAlliesRange = 768
+
+ENT.NoticedKills = 0
+
+ENT.CountedEnemies = 0
+
+ENT.MentionedSpree = false
+
+ENT.CountedAllies = 0
+
+ENT.MentionedAllySpree = false
+
+ENT.ShootCorpseFilter = { -- Stuff that could have severe consequences if shot at a corpse
+    ["astw2_haloreach_concussion_rifle"] = true,
+    ["astw2_haloreach_grenade_launcher_falcon"] = true,
+    ["astw2_haloreach_fuel_rod"] = true,
+    ["astw2_haloreach_grenade_launcher"] = true,
+    ["astw2_haloreach_rocket_launcher"] = true,
+    ["astw2_haloreach_sniper_rifle"] = true,
+    ["astw2_haloreach_spartan_laser"] = true,
+    ["astw2_haloreach_needler"] = true,
+    ["astw2_halo2a_rocketlauncher"] = true,
+    ["astw2_halo2a_fuelrod"] = true,
+    ["astw2_halo2_fuelrod"] = true,
+    ["astw2_halo2_rocketlauncher"] = true,
+    ["astw2_halo3_fuelrod"] = true,
+    ["astw2_halo3_rocketlauncher"] = true,
+    ["astw2_halo3_spartanlaser"] = true,
+    ["astw2_halo4_concussion_rifle"] = true,
+    ["astw2_halo4_fuel_rod"] = true,
+    ["astw2_halo4_rail_gun"] = true,
+    ["astw2_halo4_rocket_launcher"] = true,
+    ["astw2_halo4_spartan_laser"] = true,
+    ["astw2_halo_cea_fuel_rod"] = true,
+    ["astw2_halo_cea_rocket_launcher"] = true,
+    ["astw2_halo_cea_rocket_launcher"] = true,
+    ["astw2_halo_ce_fuel_rod"] = true,
+    ["astw2_halo_ce_rocket_launcher"] = true,
+    ["astw2_halo_custom_gauss_sniper"] = true,
+    ["astw2_halo_soi_needle_launcher"] = true,
+    ["astw2_halo_soi_rocket_launcher"] = true,
+    ["astw2_halo_soi_spartan_laser"] = true,
+    ["astw2_halo_spv3_rocket_launcher"] = true,
+    ["astw2_nightfire_sentinel"] = true,
+    ["astw2_nightfire_scorpion"] = true,
+    ["astw2_nightfire_miltek"] = true,
+    ["astw2_asw_grenadelauncher"] = true,
+    ["astw2_gow_boomshot"] = true,
+    ["astw2_gow_booshka"] = true,
+    ["astw2_gow_torquebow"] = true,
+    ["astw2_gow_trapbow"] = true,
+    ["astw2_tr5_gl"] = true,
+    ["astw2_tr3_rocket"] = true,
+    ["astw2_tr3_gl"] = true,
+    ["astw2_tr2_gl"] = true
+}
+
+ENT.PostCombatQuotes = {
+	[1] = "pstcmbt",
+	[2] = "status",
+	[3] = "pstcmbt_ez",
+	[4] = "pstcmbt_tim",
+	[5] = "pstcmbt_agg",
+	[6] = "tnt"
+}
+
+ENT.PostCombatResponses = {
+	["status"] = "status_re"
+}
 
 ENT.TransitionAnims = {}
 
@@ -235,6 +335,11 @@ ENT.HealthRegenTime = 4
 	health won't be the same as the starting health
 ]]
 
+ENT.HasArmor = false -- Or "Shield"
+ENT.ShieldRegenTimeDelay = 5
+ENT.ShieldRegenTime = 2
+ENT.MaxShield = 60
+
 ENT.BloodType = DONT_BLEED
 
 -------- Damage variables
@@ -328,10 +433,15 @@ function ENT:OnInitialize()
 	func(self)
 	if self.PossibleWeapons then
 		local wep = table.Random(self.PossibleWeapons)
-		self:Give(wep)
+		self:Give(wep,self.SpawnWithWeaponDrawn)
 	end
 	self:SetBloodColor(self.BloodType)
+	self:DoInit()
 	self:SetupAnimations()
+end
+
+function ENT:DoInit()
+
 end
 
 ENT.RifleHolds = {
@@ -362,28 +472,66 @@ ENT.TotalHolds = {
 }
 
 function ENT:SetupAnimations()
+	self.PatrolMoveAnim = {"Move_Patrol_Unarmed_Up"}
+	self.PatrolIdleAnim = {"Patrol_Unarmed_Idle_Down"}
+	self.PatrolIdlePoseAnim = {"Patrol_Unarmed_Idle_Posing_1","Patrol_Unarmed_Idle_Posing_2","Patrol_Unarmed_Idle_Posing_3"}
+	self.TransitionAnims["Patrol_Move_2_Idle"] = "Patrol_Move_2_Patrol_Idle"
+	self.TransitionAnims["Patrol_Idle_2_Move"] = "Patrol_Idle_2_Patrol_Move"
 	if IsValid(self.Weapon) then
 		local hold = self:ConfigureWeapon()
 		if self.AITemplate == "BRUTE" and self.BruteWeapons[self.Weapon:GetClass()] then
 			hold = "pistol"
 		end
 		if self.PistolHolds[hold] then
+			if self.AITemplate == "BRUTE" then
+				self.DrawSlowWeaponAnim = {"Draw_Slow_Armored_Pistol"}
+				self.DrawFastWeaponAnim = {"Draw_Fast_Armored_Pistol"}
+				self.MeleeAnim = {"Melee_Combat_Pistol_1"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Pistol"}
+			else
+				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
+				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
+				self.MeleeAnim = {"Melee_Combat_Pistol_1","Melee_Combat_Pistol_2"}
+				self.MeleeIsGesture = true
+				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
+			end
+			if self.Armored then
+				self.ShootAnim = {"attack_armored_pistol_1","attack_armored_pistol_2","attack_armored_pistol_3"}
+				self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Armored_Idle"
+				self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Armored_Idle"
+				self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Armored_Idle"
+				self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Armored_Idle"
+				self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Armored_Move"
+				self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Armored_Move"
+				self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Armored_Walk"
+				self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Armored_Walk"
+			else
+				self.ShootAnim = {"attack_combat_pistol"}
+				self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Combat_Idle"
+				self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Combat_Idle"
+				self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Combat_Idle"
+				self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Combat_Idle"
+				self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Combat_Move"
+				self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Combat_Move"
+				self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Combat_Walk"
+				self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Combat_Walk"
+			end
 			self.IdleAnim = {"Combat_Pistol_Idle_Up"}
 			self.IdleCalmAnim = {"Combat_Pistol_Idle_Down"}
 			self.RunAnim = {"Move_Combat_Pistol_Up"}
 			self.RunCalmAnim = {"Move_Combat_Pistol_Down"}
 			self.WalkAnim = {"Walk_Combat_Pistol_Up"}
 			self.WalkCalmAnim = {"Walk_Combat_Pistol_Down"}
-			self.MeleeAnim = {"Melee_Combat_Pistol_1"}
-			self.MeleeBackAnim = {"Melee_Back_Combat_Pistol"}
 			self.ReloadAnim = "Reload_Combat_Pistol"
 			self.DiveLeftAnim = "Dive_Left_Combat_Pistol"
-			self.DiveRightANim = "Dive_Right_Combat_Pistol"
+			self.DiveRightAnim = "Dive_Right_Combat_Pistol"
 			self.AirAnim = "Airborne_Combat_Pistol"
 			self.LandAnim = "Land_Soft_Combat_Pistol"
 			self.LandHardAnim = "Land_Hard_Combat_Pistol"
 			self.SurpriseAnim = "Surprised_Combat_Pistol"
-			self.WarnAnim = {"Point_Combat_Pistol",}
+			self.CrouchIdleAnim = {"crouch_rifle_pistol_up"}
+			self.CrouchMoveAnim = {"move_crouch_pistol_up"}
+			self.WarnAnim = {"Point_Combat_Pistol"}
 			self.CrouchMoveCalmAnim = {"pistol_crouch_move_passive"}
 			self.GrenadeAnim = {"Throw_Grenade_Combat_Pistol"}
 			self.PushLeftAnim = "Melee_Smash_Combat_Pistol_Left"
@@ -415,14 +563,6 @@ function ENT:SetupAnimations()
 			self.FallbackAnim = "Signal_Fallback_Combat_Pistol"
 			self.HoldAnim = "Signal_Hold_Combat_Pistol"
 			self.EquipmentAnim = "Throw_Equipment_Combat_Pistol"
-			self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Combat_Idle"
-			self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Combat_Idle"
-			self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Combat_Idle"
-			self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Combat_Idle"
-			self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Combat_Move"
-			self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Combat_Move"
-			self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Combat_Walk"
-			self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Combat_Walk"
 			--[[self.TransitionAnims["Idle_2_Guard"] = "pistol_idle_2_guard_idle"
 			self.TransitionAnims["Idle_2_Crouch"] = "pistol_idle_2_crouch_idle"
 			self.TransitionAnims["Crouch_Move_2_Crouch_Idle"] = "pistol_crouch_move_2_crouch_idle"
@@ -435,6 +575,8 @@ function ENT:SetupAnimations()
 			self.TransitionAnims["Crouch_Idle_2_Guard"] = "pistol_crouch_idle_2_guard_idle"
 			self.TransitionAnims["Crouch_Idle_2_Idle"] = "pistol_crouch_idle_2_idle"]]
 		elseif self.RifleHolds[hold] then
+			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Missile"}
+			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Missile"}
 			if self.Weapon:GetClass() == "astw2_halo3_sniper_rifle" then
 				self.Weapon.BurstLength = 1
 				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
@@ -448,6 +590,8 @@ function ENT:SetupAnimations()
 				self.ShootAnim = {"attack_combat_shotgun"}
 				self:DoGestureSeq("rifle_sg_grip",false)
 			elseif hold == "smg" then
+				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
+				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
 				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
 				self:ManipulateBoneAngles(self:LookupBone("l_hand"),Angle(0,0,90))
 			else
@@ -458,9 +602,13 @@ function ENT:SetupAnimations()
 			self.RunAnim = {"move_combat_rifle_up"}
 			self.WalkAnim = {"walk_combat_rifle_up"}
 			self.RunCalmAnim = {"move_combat_rifle_up"}
-			self.MeleeAnim = {"Melee_Combat_Rifle_1"}
-			self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
-			self.ShootAnim = {"attack_combat_rifle_1"}
+			if self.AITemplate == "BRUTE" then
+				self.MeleeAnim = {"Melee_Combat_Rifle_1"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
+			else
+				self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
+			end
 			self.ReloadAnim = "reload_combat_rifle"
 			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle"}
 			self.EquipmentAnim = "Throw_Equipment_Combat_Rifle"
@@ -519,6 +667,8 @@ function ENT:SetupAnimations()
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_rifle_idle_2_crouch_walk"
 			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_rifle_idle_2_crouch_walk"
 		elseif hold == "rpg" then
+			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Missile"}
+			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Missile"}
 			self.IdleAnim = {"combat_missile_idle_up"}
 			self.IdleCalmAnim = {"combat_missile_idle_up"}
 			self.RunAnim = {"move_combat_missile_up"}
@@ -652,6 +802,7 @@ function ENT:SetupAnimations()
 			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_support_idle_2_crouch_walk"
 		end
 	else
+		self.RunAnim = {"Move_Berserk_Unarmed_Down"}
 		self.IdleAnim = {"Combat_Unarmed_Idle_Down"}
 		self.WaveAnim = "wave_combat_unarmed"
 		self.ShakeFistAnim = "shakefist_combat_unarmed"
@@ -682,15 +833,280 @@ end
 
 -------- Misc functions
 
+function ENT:Use( activator )
+	if !self.CanUse then return end
+	if self:CheckRelationships(activator) == "friend" and activator:IsPlayer() then
+		local ply = activator
+		if ply:KeyDown(IN_WALK) then
+			self.IsFollowingPlayer = !self.IsFollowingPlayer
+			if !IsValid(self.FollowingPlayer) then
+				self.FollowingPlayer = ply
+				self:SetNWInt("optredisp",1)
+			else
+				self.FollowingPlayer = nil
+				self.StartPosition = self:GetPos()
+				self:SetNWInt("optredisp",0)
+			end
+			self.CanUse = false
+			timer.Simple( 1, function()
+				if IsValid(self) then
+					self.CanUse = true
+				end
+			end )
+		elseif IsValid(ply:GetActiveWeapon()) and IsValid(self.Weapon) and self.Weapon:GetClass() != ply:GetActiveWeapon():GetClass() and self.TotalHolds[ply:GetActiveWeapon().HoldType_Aim] then
+			self.CanUse = false
+			local stop = false
+			for i = 1, 200 do
+				timer.Simple( 0.01*i, function()
+					if stop then return end
+					if IsValid(self) then
+						if IsValid(ply) then
+							if ( !ply:KeyDown(IN_USE) and self.Weapon:GetClass() != ply:GetActiveWeapon():GetClass() ) or !self.TotalHolds[ply:GetActiveWeapon().HoldType_Aim] then
+								self.CanUse = true
+								stop = true
+							else
+								if i == 200 then
+									local gift = ply:GetActiveWeapon():GetClass()
+									local ammo = self.Weapon:Clip1()+self.Weapon:GetMaxClip1()*math.random(1,4)
+									local t = self.Weapon:GetPrimaryAmmoType()
+									local give = self.Weapon:GetClass()
+									ply:GetActiveWeapon():Remove()
+									local wep = ply:Give(give,true)
+									ply:GiveAmmo(ammo,t,true)
+									ply:SelectWeapon(give)
+									self.Weapon:Remove()
+									self:Give(gift)
+									self:SetupAnimations()
+									self.CanUse = true
+									if math.random(1,2) == 1 then self:Speak("OnTrade") end
+									--[[local clone = ents.Create(self:GetClass())
+									clone:SetPos(self:GetPos())
+									clone:SetAngles(self:GetAngles())
+									clone:SetHealth(self:Health())
+									clone.DoInit = function()
+										clone:Give(gift)
+										clone:SetSkin(self:GetSkin())
+										for i = 1, table.Count( self:GetBodyGroups() ) do
+											clone:SetBodygroup( i-1,self:GetBodygroup( i-1 ) )
+											if i == table.Count( self:GetBodyGroups() ) then
+												clone:SetBodygroup( i,self:GetBodygroup( i ) )
+											end
+										end
+									end
+									clone:Spawn()
+									undo.ReplaceEntity(self,clone)
+									self:Remove()]]
+								end
+							end
+						else
+							stop = true
+							self.CanUse = true
+						end
+					end
+				end )
+			end
+		end
+	end
+end
+
 function ENT:FaceTowards(pos) -- You put a position (vector) and the nextbot's Yaw will face it
 	local angy = (pos-self:GetPos()):GetNormalized():Angle().y
 	self:SetAngles(self:GetAngles().p,angy,0)
 end
 
-function ENT:GoToPosition( pos, anim, speed, movefunc )
-	movefunc = movefunc or self:MoveToPos(pos)
+function ENT:NearbyAllies( pos, dist )
+	local tbl = {}
+	for k, v in pairs(ents.FindInSphere(pos,dist)) do
+		if v != self and self:CheckRelationships(v) == "friend" then
+			tbl[#tbl+1] = v
+		end
+	end
+	return tbl
+end
+
+function ENT:AlertAllies(ent) -- We find allies in sphere and we alert them
+	for k, v in pairs(ents.FindInSphere( self:GetPos(), self.AttractAlliesRange ) ) do
+		if v.IV04NextBot and self:CheckRelationships(v) == "friend" and v != self then
+			if !v.RegisteredTargets[ent] then
+				v.RegisteredTargets[ent] = true
+				v.RegisteredTargetPositions[ent] = ent:GetPos()
+				v.SeenTargets = v.SeenTargets+1
+				v:OnSeenEnemy(ent)
+			end
+			--print("Alerted"..v:GetClass().."whose's index is"..v:EntIndex().."and its target is"..ent:GetClass().."")
+		end
+	end
+end
+
+function ENT:OnLostSeenEnemy(ent)
+	self:Speak("lst_cntct")
+end
+
+function ENT:NearbyReply( quote, dist, tim )
+	tim = tim or math.random(2,4)
+	dist = dist or 500
+	for k, v in ipairs(self:NearbyAllies( self:GetPos(), dist ) ) do
+		if v.IsHalo3Marine and v.Speak then
+			timer.Simple( tim, function()
+				if IsValid(v) then
+					v:Speak(quote)
+				end
+			end )
+			break
+		end
+	end
+end
+
+function ENT:OnTraceAttack( info, dir, trace )
+	if self.Unkillable then info:SetDamage(0) end
+	if trace.HitGroup == 1 and !self.HeadShotImmune then
+		info:ScaleDamage(3)
+	end
+	if self:Health() - info:GetDamage() < 1 then self.DeathHitGroup = trace.HitGroup return end
+	if self.AnimBusy then return end
+	local hg = trace.HitGroup
+	--[[if !self.IsInVehicle and self.FlinchAnims[hg] and !self.DoneFlinch and math.random(100) < self.FlinchChance and info:GetDamage() > self.FlinchDamage then
+		self.DoneFlinch = true
+		self.DoingFlinch = true
+		timer.Simple( math.random(1,2), function()
+			if IsValid(self) then
+				self.DoneFlinch = false
+			end
+		end )
+		local seq,len = self:LookupSequence(self.FlinchAnims[hg])
+		timer.Simple( len, function()
+			if IsValid(self) then
+				self.DoingFlinch = false
+			end
+		end )
+		local func = function()
+			self:PlaySequenceAndMove(seq,1,self:GetForward()*-1,self.FlinchMove[hg],0.4)
+		end
+		table.insert(self.StuffToRunInCoroutine,func)
+		self:ResetAI()
+	end]]
+end
+
+function ENT:OnLeaveGround(ent)
+	if self:Health() <= 0 then 
+		self:ResetSequence(self:LookupSequence(self.DeadAirAnim))
+	else
+		self.LastTimeOnGround = CurTime()
+		local t = self.LastTimeOnGround
+		timer.Simple( 0.6, function()
+			if IsValid(self) and self.LastTimeOnGround == t then
+				self:ResetSequence(self.AirAnim)
+			end
+		end )
+	end
+end
+
+function ENT:OnLandOnGround(ent)
+	if self.FlyingDead then
+		self.HasLanded = true
+	elseif self.LastTimeOnGround then
+		local seq = self.LandAnim
+		if ( CurTime() - self.LastTimeOnGround ) > 1 then
+			seq = self.LandHardAnim
+			self:Speak("pain_fall")
+		end
+		self.LastTimeOnGround = CurTime()
+		local func = function()
+			self:PlaySequenceAndWait(seq)
+		end
+		table.insert(self.StuffToRunInCoroutine,func)
+		self:ResetAI()
+	end
+end
+
+function ENT:StandBy()
+	self:DoTransitionAnim("Idle_2_Crouch")
+	self:ResetSequence(self.CrouchIdleAnim[math.random(#self.CrouchIdleAnim)])
+	while self:IsUndetected() do
+		coroutine.wait(1)
+	end
+	self.HaltShoot = false
+end
+
+function ENT:SneakKill(ent)
+	ent = ent or self.Enemy
+	if !IsValid(ent) then return end
+	self.GoingForSneakKill = true
+	self:DoTransitionAnim("Idle_2_Crouch")
+	if !IsValid(ent) then return end
+	self:StartMovingAnimations(self.CrouchMoveAnim[math.random(#self.CrouchMoveAnim)],self.MoveSpeed)
+	self:MoveToPos(ent:GetPos()+ent:GetForward()*-20,{callback = function()
+		if !self:IsUndetected() or !IsValid(ent) then
+			self.HaltShoot = false
+			self.GoingForSneakKill = false
+			self:ResetAI()
+		end
+	end})
+	self.GoingForSneakKill = false
+	self.HaltShoot = false
+	self:ResetAI()
+end
+
+function ENT:Dodge()
+	local r = math.random(1,2)
+	local anim = r == 1 and self.EvadeLeftAnim or self.EvadeRightAnim
+	local dir = r == 1 and -self:GetRight() or self:GetRight()
+	--print(anim)
+	self:PlaySequenceAndPWait(anim,1,self:GetPos())
+end
+
+function ENT:DodgeChecks(ent,los)
+	if math.random(1,100) <= self.DodgeChance and !self.Dodged then
+		if ( IsValid(ent) and ( ( ent.GetEnemy and ent:GetEnemy() == self ) or ( BeingStaredAt(self,ent,60) ) ) ) and los then
+			return self:Dodge()
+		end
+	end
+end
+
+function ENT:CoverChecks(ent)
+	if self.NeedsToCover then
+		self.NeedsToCover = false
+		local tbl = self:FindCoverSpots(ent)
+		if table.Count(tbl) > 0 or #tbl > 0 then
+			local area = table.Random(tbl)
+			self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+			if math.random(1,2) == 1 then
+				self:Speak("cvr")
+				self:NearbyReply("cvr_re")
+			else
+				self:Speak("newordr_support")
+			end
+			return self:ResetAI()
+		end
+	end
+end
+
+function ENT:FindCoverSpots(ent)
+	local dire = (self:GetPos()-ent:GetPos()):GetNormalized()
+	local navs = navmesh.Find( self:GetPos()+(dire*512), 1024, 100, 10 )
+	local tbl = {}
+	local found = false
+	for k, nav in pairs(navs) do
+		local covers = nav:GetHidingSpots(3)
+		if istable(covers) and #covers > 0 then
+			for i = 1, #covers do
+				if !ent:VisibleVec(covers[i]) then
+					tbl[#tbl+1] = covers[i]
+				end
+			end
+		end
+		if !nav:IsVisible( ent:WorldSpaceCenter() ) then
+			tbl[nav:GetID()] = nav:GetRandomPoint()
+		end
+	end
+	return tbl, dire
+end
+
+function ENT:GoToPosition( pos, anim, speed, movefunc, postarriveanim )
+	--print(movefunc)
+	movefunc = movefunc or self.MoveToPos
 	--[[ movefunc can be used like this
-self:GoToPosition(ent:GetPos(),self:TableRandom(self.RunAnim),self:GetRunSpeed(),self:WanderToPos(pos))
+self:GoToPosition(ent:GetPos(),self:TableRandom(self.RunAnim),self:GetRunSpeed(),self.WanderToPos)
 	]]
 	if !util.IsInWorld( pos ) then return "Tried to move out of the world!" end
 	local ani, typ = self:TransitionChecks( anim, speed )
@@ -702,15 +1118,30 @@ self:GoToPosition(ent:GetPos(),self:TableRandom(self.RunAnim),self:GetRunSpeed()
 	end
 	self.loco:SetDesiredSpeed( speed )		-- Move speed
 	self.loco:SetAcceleration( speed+speed )
-	movefunc(self)
+	movefunc(self,pos)
 	self:TransitionArrival(typ,enemy)
-	local ranim = self.IdleAnim[math.random(#self.IdleAnim)]
+	local tb = postarriveanim or self.IdleAnim
+	local ranim = tb[math.random(#tb)]
 	if type(ranim) == "string" then
 		self:ResetSequence( ranim )
 	else
 		self:StartActivity( ranim )			-- Move animation
 	end
 end	
+
+function ENT:FindNearbyPos(pos,dist)
+	local dist = dist or 512
+	local pos = pos or self:GetPos()
+	local navs = navmesh.Find( pos, dist, 100, 10 )
+	local tbl = {}
+	if table.Count(navs) > 0 or #navs > 0 then
+		local area = table.Random(navs)
+		local pos
+		if area then pos = area:GetRandomPoint() end
+		return pos
+	end
+	return self:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * math.random(256,500)
+end
 
 function ENT:DoTransitionAnim( typ )
 	if !typ then return end
@@ -839,7 +1270,12 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 			self.DoingMelee = false -- Remove the busy animation status
 		end
 	end )
-	self:PlaySequenceAndPWait(anim,1,self:GetPos())
+	if self.MeleeIsGesture then
+		self:DoGestureSeq(id)
+		coroutine.wait(len)
+	else
+		self:PlaySequenceAndPWait(anim,1,self:GetPos())
+	end
 end
 
 function ENT:DoMeleeDamage() -- No arguments needed, everything is defined on the variables
@@ -869,6 +1305,12 @@ function ENT:DoMeleeDamage() -- No arguments needed, everything is defined on th
 			d:SetDamagePosition( v:NearestPoint( self:WorldSpaceCenter() ) )
 			v:TakeDamageInfo(d)
 		end
+	end
+end
+
+function ENT:MeleeChecks(los,range)
+	if los and !self.DoneMelee and range < self.MeleeRange^2 then
+		self:DoMelee()
 	end
 end
 
@@ -910,22 +1352,28 @@ function ENT:GetActiveWeapon()
 end
 
 function ENT:Give(wep,drawn) -- You write in a weapon in a string, like self:Give("weapon_smg1")
-	local wep = ents.Create(wep)
-	local att = drawn and "anim_attachment_RH" or "sidearm"
+	local we = ents.Create(wep)
+	we:SetOwner(self)
+	we:Spawn()
+	we:PhysicsInit(SOLID_NONE)	
+	we:SetSolid(SOLID_NONE)
+	self:AdjustWeapon(we,drawn)
+	self.Weapon = we
+end
+
+function ENT:AdjustWeapon(wep,drawn)
+	local at = (self.BruteWeapons[wep:GetClass()] or wep.HoldType_Aim == "smg" or self.PistolHolds[wep.HoldType_Aim]) and "sidearm" or "backpack"
+	local att = drawn and "anim_attachment_RH" or at
 	local id = self:LookupAttachment(att)
 	local pos = self:GetAttachment(id).Pos
-	wep:SetOwner(self)
 	wep:SetPos(pos)
-	wep:Spawn()
-	wep:PhysicsInit(SOLID_NONE)	
-	wep:SetSolid(SOLID_NONE)
 	wep:SetParent(self,id)
 	wep:Fire("setparentattachment", att)
+	self.IsWeaponDrawn = drawn
 	if drawn then
 		wep:AddEffects(EF_BONEMERGE)
 	else
 	end
-	self.Weapon = wep
 end
 
 function ENT:GetAmmoCount()
@@ -972,12 +1420,150 @@ function ENT:DoAnimationEvent(a)
 end
 
 function ENT:GetCurrentWeaponProficiency()
-	return self.Difficulty or 1 -- If difficulty is defined (and has to be a number)
+	return (self.Difficulty+self.WeaponAccuracy) or 1 -- If difficulty is defined (and has to be a number)
 end -- then use it instead of 1 as a default
+
+function ENT:Shoot() -- Pretty basic, right? just shoot the weapon we are holding
+	if !IsValid(self.Weapon) then return end
+	if self.StopShoot then return end
+	if self:Health() < 1 then return end
+	self.LastTimeWeShot = CurTime()
+	self.Weapon:AI_PrimaryAttack()
+end
+
+function ENT:HasToReload()
+	return self.Weapon:Clip1() == 0
+end
+
+function ENT:OnFiring()
+	self:DoGestureSeq(self.ShootAnim[math.random(#self.ShootAnim)])
+	if !self.SpokeShoot then
+		self.SpokeShoot = true
+		timer.Simple( math.random(15,20), function()
+			if IsValid(self) then
+				self.SpokeShoot = false
+			end
+		end )
+		self:Speak("strk")
+	end
+	--if !self.SayingOnFiring and IsValid(self.Enemy) then
+		--self:Speak("OnAttack")
+		--self.SayingOnFiring = true
+		--timer.Simple( math.random(8,16), function()
+		--	if IsValid(self) then
+		--		self.SayingOnFiring = false
+		--	end
+		--end )
+	--end
+end
 
 -------------- Weapon functions
 
 -------------- Other combat functions
+
+function ENT:OnHaveEnemy(ent)
+	if !self.IsWeaponDrawn then
+		if !self.HasSeenEnemies then
+			self.HasSeenEnemies = true
+			if ( ent:IsNPC() and ent.IsVJBaseSNPC and string.StartWith(ent:GetClass(), "npc_vj_flood") ) or ent.Faction == "FACTION_FLOOD" then
+				--self:Speak("warn_pureforms") -- Save this for when we make our own
+				self.SawFlood = true
+				if ent.IsPureForm then
+					self:Speak("warn_pureforms")
+				else
+					self:Speak("warn_flood")
+				end
+			elseif ent.IsScarab then
+				self:Speak("warn_scrb")
+			elseif IsValid(ent.Weapon) and ent.Weapon:GetClass() == "astw2_haloreach_gravityhammer" then
+				self:Speak("warn_wpn_hmmer")
+			elseif ent.IsHunter then
+				self:Speak("warn_chr_hntr")
+			elseif self.IsSergeant and math.random(1,2) == 1 then
+				self:Speak("ordr_openfire")
+			elseif ent:IsPlayer() and ent:InVehicle() then
+				self:Speak("warn_incmn_vclbm")
+			else
+				if math.random(1,2) == 1 then
+					self:Speak("seefoe")
+				else
+					self:Speak("warn")
+				end
+			end
+			--self:Speak("OnAlert")
+		else
+			if !self.SpokeMore then
+				if ent.GotUp then
+					self:Speak("warn_fldreanimate")
+				elseif self.RegisteredTargetPositions[ent] then
+					self:Speak("foundfoe")
+				end
+				if ent.BeingChased then ent.BeingChased = false end
+				self.SpokeMore = true
+				timer.Simple( math.random(5,10), function()
+					if IsValid(self) then
+						self.SpokeMore = false
+					end
+				end )
+			end
+		end
+		self:AdjustWeapon(self.Weapon,true)
+		local func = function()
+			self:PlaySequenceAndWait(self:TableRandom(self.DrawFastWeaponAnim))
+		end
+		table.insert(self.StuffToRunInCoroutine,func)
+		self:ResetAI()
+	else
+		if #self:PossibleTargets() > 5 and !H3BS:WasSignalGiven("ThrowAllGrenades",5) then
+			H3BS:Signal("ThrowAllGrenades",self)
+			self:Speak("ordr_grenade_all")
+		end
+		self:AlertAllies(ent)
+		if !self.IsInVehicle then
+			if !self.DidAlertAnim then
+				if !self.BeenSurprised and math.random(1,3) == 1 then
+					self.BeenSurprised = true
+					local xy = ent:GetPos().x+ent:GetPos().y
+					local xy2 = self:GetPos().x+self:GetPos().y
+					local dif = math.abs(xy-xy2)
+					if dif < 700 then
+						local func = function()
+							local should, dif = self:ShouldFace(ent,10)
+							if should then
+								self:Turn(dif,false,true)
+								coroutine.wait(0.2)
+							end
+							self:PlaySequenceAndWait(self.SurpriseAnim)
+						end
+						table.insert(self.StuffToRunInCoroutine,func)
+					end
+				else
+					local func = function()
+						local should, dif = self:ShouldFace(ent,10)
+						if should then
+							self:Turn(dif,false,true)
+							coroutine.wait(0.2)
+						end
+						self:PlaySequenceAndWait(self.WarnAnim[math.random(#self.WarnAnim)])
+					end
+					table.insert(self.StuffToRunInCoroutine,func)
+				end	
+				self.DidAlertAnim = true
+			end
+			timer.Simple( math.random(15,20), function()
+				if IsValid(self) then
+					self.DidAlertAnim = false
+				end
+			end ) 
+			self.HasLOSToTarget = true
+			self.RegisteredTargetPositions[ent] = ent:GetPos()
+			if !self.DoneStealth and self:IsUndetected() then
+				self.HaltShoot = true
+			end
+			self:ResetAI()
+		end
+	end
+end
 
 function ENT:OnInjured(dmg)
 	--print(dmg:GetInflictor())
@@ -996,6 +1582,48 @@ function ENT:OnInjured(dmg)
 				end
 			end )
 		end
+	end
+	if self.HasArmor and self.Shield > 0 then
+		--print(self.Shield, "before")
+		self.ShieldActual = self.Shield
+		self.ShieldH = CurTime()
+		local shield = self.ShieldH
+		local dm = dmg:GetDamage()
+		total = dm-self.Shield
+		if total < 0 then total = 0 end
+		if dmg:IsBulletDamage() then
+			dmg:SubtractDamage(self.Shield*2)
+			self.Shield = self.Shield-math.abs(dm/2)
+		else
+			dmg:SubtractDamage(self.Shield)
+			self.Shield = self.Shield-math.abs(dm)
+		end
+		if self.Shield < 0 then 
+			self.Shield = 0 
+		end
+	--	self:SetNWBool("SPShield",true)
+		timer.Simple( 1, function()
+			if IsValid(self) and shield == self.ShieldH then
+				--self:SetNWBool("SPShield",false)
+			end
+		end )
+		local shild = self.Shield
+		timer.Simple( self.ShieldRegenTimeDelay, function()
+			if IsValid(self) and shield == self.ShieldH then
+				local stop = false
+				for i = 1, 10 do
+					timer.Simple( self.ShieldRegenTime*0.1, function()
+						if IsValid(self) and shield == self.ShieldH and !stop then
+							self.Shield = self.Shield+self.ShieldRegen
+							if self.Shield > self.MaxShield then 
+								self.Shield = self.MaxShield
+								stop = true
+							end
+						end
+					end )
+				end
+			end
+		end )
 	end
 	if math.abs(self:Health()) - math.abs(dmg:GetDamage()) <= 0 then return end
 	if self.AnimBusy then return end
@@ -1100,7 +1728,7 @@ function ENT:OnInjured(dmg)
 			if IsValid(self) and htt == self.HealthH then
 				--print("Starting regeneration")
 				for i = 1, 10 do
-					timer.Simple( (HealthRegenTime*0.1)*i, function()
+					timer.Simple( (self.HealthRegenTime*0.1)*i, function()
 						if IsValid(self) and htl == self.HealthActual and self:Health() > 0 then
 							--print("Regenerating", (self.HealthActual-ht)/10)
 							self:SetHealth(self:Health()+((self.HealthActual-ht)/10))
@@ -1112,9 +1740,234 @@ function ENT:OnInjured(dmg)
 	end
 end
 
-function ENT:Turn(dif,calm,anim) -- dif is the yaw number to turn, can be negative
+function ENT:OnPlasmaNadeStuck()
+	self:Speak("OnPanic")
+end
+
+function ENT:OnOtherKilled( victim, info )
+	if victim == self then return end
+	if self.AnimBusy then return end
+	if self:Health() <= 0 then return end
+	local rel = self:CheckRelationships(victim)
+	local attacker = info:GetAttacker()
+	if rel == "friend" then
+		if !victim.BeenNoticed then
+			--victim.BeenNoticed = self.IsSergeant
+			if self.SawAllyDie and !self.SawAlliesDie then self.SawAlliesDie = true end
+			if !self.SawAllyDie then self.SawAllyDie = true end
+			if !IsValid(self.Enemy) then
+				--if self:CheckRelationships(attacker) == "foe" then
+				local ang = (victim:GetPos()-self:GetPos()):Angle()
+				local dif = math.AngleDifference(self:GetAngles().y,ang.y)
+				local func = function()
+					self:TurnTo(dif)
+				end
+				table.insert(self.StuffToRunInCoroutine,func)
+				self:ResetAI()
+				--end
+				if attacker:IsPlayer() and self.FriendlyToPlayers then
+					self.NoticedKills = self.NoticedKills+1
+					if self.NoticedKills > 1 then
+						if math.random(1,2) == 1 then
+							self:Speak("betray")
+						else
+							self:Speak("crs_betrayingplr_mc")
+						end
+						self.FriendlyToPlayers = false
+						self.LastAllyKill = CurTime()
+						local last = self.LastAllyKill
+						timer.Simple( 30, function()
+							if IsValid(self) then
+								if self.LastAllyKill == last then
+									self.FriendlyToPlayers = true
+									self.NoticedKills = 0
+									self:SetEnemy(nil)
+									self:Speak("forgive")
+								end
+							end
+						end )
+					else
+						self:Speak("scld_plr_kllally")
+					end
+				elseif victim:IsPlayer() and self.FriendlyToPlayers then
+					self:Speak("lmnt_deadplr_mc")
+				else
+					self:Speak("lmnt_deadally")
+				end
+			elseif attacker:IsPlayer() and !self.FriendlyToPlayers then
+				--self:Speak("FriendKilledByEnemyPlayer")
+				self.LastAllyKill = CurTime()
+				local last = self.LastAllyKill
+				timer.Simple( 30, function()
+					if IsValid(self) then
+						if self.LastAllyKill == last then
+							self.NoticedKills = 0
+							self.FriendlyToPlayers = true
+							self:SetEnemy(nil)
+							self:Speak("forgive")
+						end
+					end
+				end )
+			else
+				if self.SawAlliesDie then
+					local AI = self.AIType
+					self.AIType = "Defensive"
+					local func = function()
+						if self.IsSergeant and !self.IsInVehicle then
+							self:Speak("newordr_fallback")
+							H3HS:Signal("Retreat",self)
+							self:PlaySequenceAndMove(self:LookupSequence(self.FallbackAnim),1,self:GetForward()*-1,50,0.7)
+						else
+							--print(HRHS:WasSignalGiven("Retreat",3))
+							if !self.FollowingRetreatOrder and H3HS:WasSignalGiven("Retreat",3) and IsValid(HRHS:GetCaller("Retreat")) and (!IsValid(HRHS:GetCaller("Retreat").S1) or !IsValid(HRHS:GetCaller("Retreat").S2) ) then
+								local leader = H3HS:GetCaller("Retreat")
+								local goal = leader:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
+								local navs = navmesh.Find(goal,256,100,20)
+								local nav = navs[math.random(#navs)]
+								local pos = goal
+								if nav then pos = nav:GetRandomPoint() end
+								self.FollowingRetreatOrder = true
+								if IsValid(leader.S1) then leader.S2 = self else leader.S1 = self end
+								timer.Simple( math.random(4,10), function() if IsValid(self) then self.FollowingRetreatOrder = false end end )
+								self:MoveToPosition( pos, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+								if leader.S1 == self then leader.S1 = nil elseif leader.S2 == self then leader.S2 = nil end
+							end
+						end
+					end
+					timer.Simple( math.random(20,30), function()
+						if IsValid(self) then
+							self.AIType = AI
+						end
+					end )
+					table.insert(self.StuffToRunInCoroutine,func)
+					self:ResetAI()
+				else
+					if victim:IsPlayer() then
+						self:Speak("lmnt_deadplr_mc")
+					end
+				--self:Speak("NearMassacre")
+				end
+			end
+		end
+	elseif rel == "foe" and !victim.BeenNoticed then
+		--victim.BeenNoticed = true
+		local spoke = false
+		self.CountedEnemies = self.CountedEnemies+1
+		if self.CountedEnemies > 4 and !self.MentionedSpree then
+			self.MentionedSpree = true
+			timer.Simple( 30, function()
+				if IsValid(self) then
+					self.MentionedSpree = false
+				end
+			end )
+			if attacker:IsPlayer() then
+				self:Speak("prs_plr_kll_lots")
+			else
+				self:Speak("taunt")
+			end
+			self.Taunting = true
+			timer.Simple( 2, function()
+				if IsValid(self) then
+					self.Taunting = false
+				end
+			end )
+			local func = function()
+				if self.IsInVehicle then return end
+				if self.IsSergeant then
+					if math.random(1,2) == 1 then
+						self:Speak("newordr_charge")
+					else
+						self:Speak("newordr_advance")
+					end
+					H3HS:Signal("Advance",self)
+					self:PlaySequenceAndPWait(self.AdvanceAnim,1,self:GetPos())
+				else
+					self:PlaySequenceAndWait(self.ShakeFistAnim)
+				end
+			end
+			if self.IsSergeant or HRHS:WasSignalGiven(sign,4) then
+				self:Speak("ordr_re")
+				local AI = self.AIType
+				self.AIType = "Offensive"
+				timer.Simple( math.random(20,30), function()
+					if IsValid(self) then
+						self.AIType = AI
+					end
+				end )
+			end
+			table.insert(self.StuffToRunInCoroutine,func)
+		else
+			if attacker:IsPlayer() then
+				if math.random(1,2) == 1 then
+					self:Speak("prs_plr_kll")
+				end
+			end
+		end
+		timer.Simple( 60, function()
+			if IsValid(self) then
+				self.CountedEnemies = self.CountedEnemies-1
+			end
+		end )
+	end
+	if victim == self.Enemy and !victim.GettingShot then
+		local spot = ( self.RegisteredTargetPositions[victim] or victim:GetPos() ) + Vector(math.random(-64,64),math.random(-64,64),0)
+		local new = self:GetATarget()
+		if attacker:IsPlayer() and math.random(1,2) == 1 then
+			self:Speak("kllmytrgt")
+		elseif attacker == self and math.random(1,2) == 1 then
+			self:Speak("chr_kllfoe")
+		end
+		if !IsValid(new) then
+			if !self.DoingMelee then
+				self:ResetAI()
+			end
+			if self.AIType == "Offensive" and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] then
+				if victim:IsPlayer() and !self.CommentedTraitorDeath then
+					self.CommentedTraitorDeath = true
+					timer.Simple( math.random(2,3), function()
+						if IsValid(self) then
+							self.CommentedTraitorDeath = false
+						end
+					end )
+					self:Speak("OnKillPlayer")
+				end
+				
+				if math.random(1,2) == 1 and isvector(spot) then
+					victim.GettingShot = true
+					self.SpecificGoal = spot
+					local func = function()
+						if self.IsInVehicle then return end
+						coroutine.wait(1)
+						self:WanderToPosition(spot,self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier)
+						self:Speak("chkfoebdy")
+						local lim = self.Weapon.BurstLength
+						local old = self.Weapon.Fire_AngleOffset
+						self.Weapon.Fire_AngleOffset = Angle(math.AngleDifference(self:GetAimVector():Angle().p,self:EyeAngles().p),math.AngleDifference(self:EyeAngles().y,self:GetAimVector():Angle().y),0)
+						for i = 1, lim do
+							timer.Simple( (self.Weapon.Primary.Delay*i), function()
+								if IsValid(self) and IsValid(self.Weapon) then
+									self.Weapon:ShootBullets()
+									self.Weapon:FiringEffects()
+									self.Weapon:EmitSound( self.Weapon.Sound, self.Weapon.Sound_Vol, self.Weapon.Sound_Pitch, 1, CHAN_WEAPON )
+									self:OnFiring()
+									if i == lim then self.SpecificGoal = nil self.Weapon.Fire_AngleOffset = old end
+								end
+							end )
+						end
+					end
+					table.insert(self.StuffToRunInCoroutine,func)
+				elseif !victim.OrderCheck then
+					victim.OrderCheck = true
+					self:Speak("ordr_chkfoebdy")
+				end
+			end
+		end
+	end
+end
+
+function ENT:Turn(dif,calm,noanim) -- dif is the yaw number to turn, can be negative
 	calm = calm or false -- calm is true or false and can be used for calm animations
-	anim = anim or true -- anim determines if play an animation when turning
+	noanim = noanim or false -- noanim determines if we don't play an animation when turning
 	local seq
 	local e
 	if dif < 0 then -- Left
@@ -1132,7 +1985,12 @@ function ENT:Turn(dif,calm,anim) -- dif is the yaw number to turn, can be negati
 			seq = self.TurnRightAnim
 		end
 	end
-	local id, len = self:LookupSequence(seq)
+	local id, len
+	if !noanim then
+		id, len = self:LookupSequence(seq)
+	else
+		len = 1
+	end
 	local t
 	if math.abs(dif) > 140 then -- Not turning more than 140 degrees
 		t = 1
@@ -1147,13 +2005,157 @@ function ENT:Turn(dif,calm,anim) -- dif is the yaw number to turn, can be negati
 			end
 		end )
 	end
-	if anim then
+	if !noanim then
 		self:SetSequence(seq) -- Turn animation
 		self:ResetSequenceInfo() -- Clean things up
 		self:SetCycle( 0 ) -- For the turn animation
 		self:SetPlaybackRate( 1 ) -- To play correctly
 		coroutine.wait(z)
 		self:ResetSequence(self.IdleAnim[math.random(#self.IdleAnim)]) -- Go back to an idle animation
+	end
+end
+
+function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
+	for i = 1, #self.IdleAnim do
+		if self.loco:GetVelocity():IsZero() and self:GetActivity() == self.IdleAnim[i] then
+			local anim = self.WanderAnim[math.random(#self.WanderAnim)]
+			if type(anim) == "string" then
+				self:ResetSequence( anim )
+			else
+				self:StartActivity( anim )			-- Move animation
+			end
+		end
+	end
+	local options = options or {}
+	local path = Path( "Follow" )
+	path:SetMinLookAheadDistance( options.lookahead or self.PathMinLookAheadDistance )
+	path:SetGoalTolerance( options.tolerance or self.PathGoalTolerance )
+	path:Compute( self, pos )
+	if ( !IsValid(path) ) then return "failed" end
+	while ( IsValid(path) ) do
+		if GetConVar( "ai_disabled" ):GetInt() == 1 then
+			return "Disabled thinking"
+		end
+		if self.UpdateTime < CurTime() then
+			if self.PushingProp and !self.DoingPush then
+				timer.Simple( 0.5, function()
+					if IsValid(self.PushedProp) then
+						local p = self.PushedProp:GetPhysicsObject()
+						if IsValid(p) then
+							p:Wake()
+							local d = self.PushedProp:GetPos()-self:GetPos()
+							p:SetVelocity(d*5)
+						end
+					end
+				end )
+				self.DoingPush = true
+				local seq = self:GetSequence()
+				self:PlaySequenceAndPWait(self.PushAnim[math.random(#self.PushAnim)])
+				self:ResetSequence(seq)
+				self.DoingPush = false
+				self.PushingProp = false
+			end
+			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
+				-- We are stuck, don't bother
+				return "Give up"
+			end
+			if options.callback then
+				options.callback()
+			end
+			self.UpdateTime = CurTime()+self.MoveUpdateTime
+		end
+		local ang = self:GetAngles()
+		path:Update( self )
+		self:SetAngles(ang)
+		if ( options.draw ) then
+			path:Draw()
+		end
+		if ( self.loco:IsStuck() ) then
+			self:HandleStuck()
+			return "stuck"
+		end
+		if ( options.maxage ) then
+			if ( path:GetAge() > options.maxage ) then return "timeout" end
+		end
+		if ( options.repath ) then
+			if ( path:GetAge() > options.repath ) then path:Compute( self, pos ) end
+		end
+		coroutine.yield()
+	end
+	return "ok"
+end
+
+function ENT:ThrowGrenade()
+	self.ThrowedGrenade = true
+	timer.Simple( math.random(5,10), function()
+		if IsValid(self) then
+			self.ThrowedGrenade = false
+		end
+	end )
+	self.ThrowingGrenade = true
+	local grenade
+	if !self:WasSignalGiven("ThrowAllGrenades",5) then 
+		self:Speak("ordr_grenade")
+	end
+	timer.Simple( 0.4, function()
+		if IsValid(self) then
+			grenade = ents.Create("astw2_halo3_frag_thrown")
+			grenade.Detonate = function() -- I can't believe what I just have done
+			if SERVER then
+				if not grenade:IsValid() then return end
+				local effectdata = EffectData()
+				effectdata:SetOrigin(grenade:GetPos() + Vector(0,0,25))
+
+				if grenade:WaterLevel() >= 1 then
+					util.Effect( "WaterSurfaceExplosion", effectdata )
+				sound.Play( "halo/halo_3/frag_expl_water" .. math.random(1,5) .. ".ogg",  grenade:GetPos(), 100, 100 )
+				else
+					ParticleEffect( "astw2_halo_3_frag_explosion", grenade:GetPos(), grenade:GetAngles() )
+				end
+			util.Decal( "astw2_halo_reach_impact_soft_terrain_explosion", grenade:GetPos(), grenade:GetPos() - Vector(0, 0, 32), grenade )
+				local resp = IsValid(grenade.Owner) and grenade.Owner or grenade
+				util.BlastDamage(grenade, resp, grenade:GetPos(), 450, 175)
+				sound.Play( "halo/halo_3/frag_expl_h3_" .. math.random(2,6) .. ".ogg",  grenade:GetPos(), 100, 100 )
+			util.ScreenShake(grenade:GetPos(),10000,100,0.8,1024)
+				grenade:Remove()
+
+			end
+		end
+			local att = self:GetAttachment(2)
+			grenade:SetPos(att.Pos)
+			grenade:SetAngles(att.Ang)
+			grenade:SetOwner(self)
+			grenade:Spawn()
+			grenade:Activate()
+			grenade:SetMoveType( MOVETYPE_NONE )
+			grenade:SetParent( self, 2 )
+			grenade.BlastRadius = 200
+			grenade.BlastDMG = 80
+		end
+	end )
+	timer.Simple( 0.8, function()
+		if IsValid(self) and IsValid(grenade) then
+			grenade:SetMoveType( MOVETYPE_VPHYSICS )
+			grenade:SetParent( nil )
+			grenade:SetPos(self:GetAttachment(2).Pos)
+			local prop = grenade:GetPhysicsObject()
+			if IsValid(prop) then
+				prop:Wake()
+				prop:EnableGravity(true)
+				local vel = (self:GetUp()*(math.random(10,50)*5))
+				vel = vel+((self:GetAimVector() * 600))
+				prop:SetVelocity( vel )
+			end
+		end
+	end )
+	self:PlaySequenceAndMove(self.GrenadeAnim[math.random(#self.GrenadeAnim)],1,self:GetForward(),40,0.8)
+	self.ThrowingGrenade = false
+	self.ThrownGrenades = self.ThrownGrenades+1
+end
+
+function ENT:WasSignalGiven(order,limit)
+	if self.IsBrute then
+		return H3BS:WasSignalGiven(order,limit)
 	end
 end
 
@@ -1291,11 +2293,11 @@ function ENT:BodyUpdate()
 			end
 		end
 	end
-	self:SetPoseParameter("body_aim_yaw",(self.YPP+(di)))
-	self.YPP = self:GetPoseParameter("body_aim_yaw")
+	self:SetPoseParameter("aim_yaw",(self.YPP+(di)))
+	self.YPP = self:GetPoseParameter("aim_yaw")
 	--print(self.YPP)
-	self:SetPoseParameter("body_aim_pitch",(self.PPP+(dip)))
-	self.PPP = self:GetPoseParameter("body_aim_pitch")
+	self:SetPoseParameter("aim_pitch",(self.PPP+(dip)))
+	self.PPP = self:GetPoseParameter("aim_pitch")
 	--print(self.PPP)
 	if !self.DoingFlinch and self:Health() > 0 and !self.ThrowingGrenade and !self.DoingMelee and !self.Taunting and !self.ThrowGrenade then
 		self:BodyMoveXY()
