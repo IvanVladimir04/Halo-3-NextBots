@@ -634,6 +634,24 @@ $animation "combat_rifle_ready" "marine_animations\combat_rifle_ready.smd" {
 	subtract	"combat_rifle_ready_pose"	0
 }
 
+//GRIP ANIMATIONS
+
+$animation "combat_rifle_sg_grip_pose" "marine_animations\combat_rifle_idle_var0.smd" {
+	fps 30
+	loop
+	frame 0 1
+}
+
+$animation "combat_rifle_sg_grip" "marine_animations\combat_rifle_sg_grip.smd" {
+	fps 30
+	subtract	"combat_rifle_sg_grip_pose"	0
+}
+
+$animation "combat_rifle_spr_grip" "marine_animations\combat_rifle_spr_grip.smd" {
+	fps 30
+	subtract	"combat_rifle_sg_grip_pose"	0
+}
+
 //AIMLAYER SEQUENCES
 
 $sequence "aim_combat_rifle_still_up" {
@@ -1230,6 +1248,28 @@ $sequence "melee_combat_rifle_2" {
 	walkframe 61 LX LY LZR
 	{ event 1100 15 "event_halo_3_human_melee" }
 }
+
+//GRIP SEQUENCES
+
+$sequence "combat_spr_grip" {
+	"combat_rifle_spr_grip"
+	activity "ACT_SMG2_IDLE2" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "combat_sg_grip" {
+	"combat_rifle_sg_grip"
+	activity "ACT_SHOTGUN_IDLE4" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+
 
 //WEAPON EQUIP AND UNEQUIP
 
