@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\miranda\miranda_hair"
+     	"$bumpmap" "models\halo_3\characters\alliance\marine\miranda\miranda_hair_bump"
+	"$halflambert" 1
+	"$alphatest"	1
+	"$phong" "1"
+	"$phongexponent" 3
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[0.01 0.5 1]"
+	"$phongtint"	"[.6 .35 .2]"
+	"$color2"		"[.35 .3 .25]"
+}

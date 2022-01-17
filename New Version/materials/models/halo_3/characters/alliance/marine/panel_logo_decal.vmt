@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\panel_logo_decal"
+	"$translucent" 1
+
+}

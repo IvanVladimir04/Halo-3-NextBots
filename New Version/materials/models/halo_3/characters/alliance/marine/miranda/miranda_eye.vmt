@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\miranda\miranda_eyes"
+  	"$bumpmap" "dev/flat_normal"
+	"$halflambert" 1
+	"$phong" "1"
+	"$phongexponent" 30
+	"$phongboost"	"15"
+	"$phongfresnelranges"	"[0.01 0.5 1]"
+	"$phongtint"	"[.8 .85 .9]"
+}

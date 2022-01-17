@@ -1,0 +1,38 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "vgui/white"
+
+	"$emissiveBlendEnabled"	 1
+	"$emissiveBlendTexture"    "vgui/white"
+	"$emissiveBlendBaseTexture"		"vgui/white"
+	"$emissiveBlendFlowTexture"     "vgui/white"
+	"$emissiveBlendTint"	 "[5 1 0]"
+	"$emissiveBlendStrength" 50
+	"$emissiveBlendScrollVector"	 "[0 0]"	
+     	"$halflambert" 1
+	"$translucent"	1
+	"$color2"		[.85. 45 .15]
+
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar" "$color2"
+			"sinemin" 0.15
+			"sinemax"  1.5
+			"sineperiod" 3
+			"timeoffset" 0.5
+		}
+		"Sine"
+		{
+			"resultVar" "$emissiveBlendTint"
+			"sinemin"	  1
+			"sinemax"  2
+			"sineperiod" 3.5
+			"timeoffset" 0.5
+		}
+		
+	
+	}
+}

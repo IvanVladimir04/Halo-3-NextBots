@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\miranda\chest_blood_decal"
+     	"$halflambert" 1
+	"$translucent"	1
+
+}
