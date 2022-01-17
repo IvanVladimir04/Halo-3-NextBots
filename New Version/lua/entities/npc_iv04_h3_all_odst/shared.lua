@@ -26,11 +26,7 @@ ENT.PossibleWeapons = {
 
 function ENT:DoInit()
 	--print(head)
-	self:SetBodygroup(1,math.random(-3,1))
-	self:SetBodygroup(2,math.random(-3,1))
-	self:SetBodygroup(4,math.random(-3,1))
-	self:SetBodygroup(5,math.random(-3,1))
-	self:SetBodygroup(3,1)
+	-- self:SetBodygroup(1,math.random(0,1))
 	self.VoiceType = "Marine"..math.random(1,6)..""
 	if math.random(1,5) == 1 then
 		self:SetSkin(2)

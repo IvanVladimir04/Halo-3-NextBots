@@ -25,11 +25,9 @@ ENT.PossibleWeapons = {
 
 function ENT:DoInit()
 	--print(head)
-	self:SetBodygroup(1,math.random(-3,1))
-	self:SetBodygroup(2,math.random(-3,1))
-	self:SetBodygroup(4,math.random(-3,1))
-	self:SetBodygroup(5,math.random(-3,1))
-	self:SetBodygroup(3,1)
+	self:SetBodygroup(1,math.random(0,1))
+	self:SetBodygroup(2,1)
+	self:SetColor(Color(200, 50, 45))
 	if math.random(1,2) == 1 then
 		--print("Stacker")
 		self.VoiceType = "Stacker"

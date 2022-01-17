@@ -18,6 +18,12 @@ ENT.PossibleWeapons = {
 	"astw2_halo3_magnum"
 }
 
+ENT.PossibleColors = {
+	Color(80,80,70),
+	Color(105,115,215),
+	Color(255,255,255)
+}
+
 ENT.PossibleHeads = {
 	0,1,2
 }
@@ -28,7 +34,9 @@ function ENT:DoInit()
 	self:SetBodygroup(1,1)
 	--self:SetBodygroup(5,math.random(-1,1))
 	local head = table.Random(self.PossibleHeads)
+	local color = table.Random(self.PossibleColors)
 	self:SetBodygroup(3,head)
+	self:SetColor(color)
 	--self:SetSkin(1)
 	--print(head)
 	--self:SetBodygroup(8,math.random(-4,3))
