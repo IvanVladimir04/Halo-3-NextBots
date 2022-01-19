@@ -5,11 +5,11 @@
 	"$halflambert" 1
 
 	"$phong" "1"
-	"$phongexponent" 	7
-	"$phongboost"	"5"
+	"$phongexponent" 	12
+	"$phongboost"	"6"
 	"$phongfresnelranges"	"[0.01 0.5 1]"
 	"$phongtint"	"{175 155 105}"
-
+	
 	$blendtintbybasealpha	 "1"
 
 	Proxies
