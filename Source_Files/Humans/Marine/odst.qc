@@ -7,12 +7,22 @@ $origin 0 0 0 -90
 
 $BodyGroup "Body"
 {
-	studio "h3_odst_body.smd"
+	studio "h3_odst_c_body.smd"
 }
 $BodyGroup "Badge"
 {
 	blank
 	studio "h3_odst_badge.smd"
+}
+$BodyGroup "Chest"
+{
+	studio "h3_odst_c_chest.smd"
+	studio "ODST_Chestplate_Pilot.smd"
+}
+$BodyGroup "Helmet"
+{
+	studio "h3_odst_c_head.smd"
+	studio "ODST_Helmet_Pilot.smd"
 }
 $BodyGroup "Rank"
 {	

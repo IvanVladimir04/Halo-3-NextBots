@@ -15,7 +15,7 @@
 	$phong					"1"
 	$phongalbedotint 				"1"
 	$phongexponent 					"6"
-	$phongboost 					"9"
+	$phongboost 					"19"
 	$phongtint 						"[.1 .1 .1]"
 	$phongfresnelranges 			"[0.2 0.2 0]"
 

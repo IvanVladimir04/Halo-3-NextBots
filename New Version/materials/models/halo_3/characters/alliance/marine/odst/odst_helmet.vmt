@@ -12,8 +12,8 @@
 
 	$phong					"1"
 	$phongalbedotint 				"1"
-	$phongexponent 					"7"
-	$phongboost 					"1.8"
+	$phongexponent 					"10"
+	$phongboost 					"3.8"
 	$phongtint 						"{115 120 170}"
 	$phongfresnelranges 			"[0.2 0.2 0]"
 
