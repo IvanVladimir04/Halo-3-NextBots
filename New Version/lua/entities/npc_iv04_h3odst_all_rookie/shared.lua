@@ -16,6 +16,8 @@ ENT.HeadShotImmune = true
 
 ENT.CanInteractWithOthers = true
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 ENT.InteractableAllies = {
 	["npc_iv04_h3_marine_odst_buck"] = "rookie_look_buck",
 	["npc_iv04_h3_marine_odst_dare"] = "rookie_look_dare"

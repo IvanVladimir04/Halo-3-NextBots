@@ -16,6 +16,8 @@ ENT.EnableFlashlight = true
 
 --ENT.SpawnWithWeaponDrawn = true
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 ENT.AITemplate = "MARINE"
 
 ENT.PossibleWeapons = {

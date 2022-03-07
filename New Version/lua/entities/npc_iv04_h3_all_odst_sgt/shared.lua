@@ -18,6 +18,8 @@ ENT.HeadShotImmune = true
 
 ENT.AITemplate = "MARINE"
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_battlerifle",
 	"astw2_halo3_shotgun"

@@ -14,6 +14,8 @@ ENT.FriendlyToPlayers = true
 
 ENT.EnableFlashlight = true
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 --ENT.SpawnWithWeaponDrawn = true
 
 ENT.AITemplate = "MARINE"

@@ -5,6 +5,7 @@ AddCSLuaFile()
 function ENT:SpartanInitialize()
 end
 function ENT:MarineInitialize()
+	self.AllowStealth = true
 	self.MoveSpeed = 76
 	self.MoveSpeedMultiplier = 2
 	self:SetCollisionBounds(Vector(10,10,70),Vector(-10,-10,0))
@@ -14,6 +15,21 @@ function ENT:MarineInitialize()
 		["Melee_Combat_Pistol_1"] = 0.5,
 		["Melee_Combat_Pistol_2"] = 0.6
 	}
+	self.IsHuman = true
+	--[[
+		Stuff I NEED (and with NEED I mean I REALLY want) to do for the marines:
+		-- Shoot when backing off (when fleeing/running to cover, they sometimes
+		turn to shoot at the chasers while running)
+		-- When spotting a lot of enemies they run to cover, sometimes 1-2
+		stay behind to cover the rest before backing off themselves
+		-- Note about the fact above, they wait to have 1-2 casualties before going to cover
+		if the numerical superiority the enemy has over them isn't bigger than 3
+		-- Defensive AI will sit comfortably behind cover while waiting for help
+		-- Offensive AI will wait a few seconds then return to the fight
+		usually in groups
+		-- When the enemy advances (could be hooked to a Chase function or
+		the squads system chase order), they repeat the retreat even further
+	]]
 end
 function ENT:EliteInitialize()
 end
@@ -357,7 +373,7 @@ function ENT:MarineBehavior(ent,range)
 	if !IsValid(self.Enemy) then return else ent = self.Enemy end
 	ent = ent or self.Enemy
 	if self.IsInVehicle then return self:VehicleBehavior(ent,range) end
-	local los = self.HasLOSToTarget
+	local los = (CurTime()-self.LastCalcTime < 1 and (self.HasLOSToTarget)) or self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter(),{self,ent,self:GetOwner(),ent:GetOwner()})
 	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
 	if !self.DistToTarget then self.DistToTarget = range end
 	local can, veh = self:CanEnterAVehicle()
@@ -376,7 +392,7 @@ function ENT:MarineBehavior(ent,range)
 	if ( !self.DoneStealth or self.GoingForSneakKill ) and self:IsUndetected() then
 		self.DoneStealth = true
 		for k, v in ipairs(self:NearbyAllies(self:GetPos(),512)) do
-			if v:IsPlayer() and v:Alive() and self.FriendlyToPlayers then
+			if ( v:IsPlayer() and v:Alive() and self.FriendlyToPlayers ) or (v.GoingForSneakKill and v.Enemy == ent) then
 				self.SawPlayer = true
 			end
 		end
@@ -459,7 +475,7 @@ function ENT:MarineBehavior(ent,range)
 			if !IsValid(ent) then return end
 			local p
 			if math.random(1,2) == 1 then p = ent:GetPos() end
-			local pos = self:FindNearbyPos(p)
+			local pos = self:FindNearbyPos(p,math.random(128,512))
 			local wait = math.Rand(0.5,1)
 			local r = math.random(1,3)
 			local walk = (r == 1 and range < 600^2)
@@ -687,7 +703,7 @@ function ENT:WeaponThink()
 			local ent = self.Enemy		
 			if self.LastCalcTime < CurTime() then -- We can do expensive actions
 				self.LastCalcTime = CurTime()+self.AimCalculationT -- Set when we can do the expensive actions again
-				local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter(),{self,ent,self:GetOwner()})
+				local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter(),{self,ent,self:GetOwner(),ent:GetOwner()})
 				if los then
 					self.HasLOSToTarget = true
 					-- No point on increasing FPS loss by calculationg distance if we can't even see target
@@ -701,7 +717,9 @@ function ENT:WeaponThink()
 							ent = obstr
 							self.HasLOSToTarget = true
 							self.DistToTarget = self:GetRangeSquaredTo(ent)
+							self.RegisteredTargetPositions[ent] = ent:GetPos()
 							self:ResetAI()
+							--print("new target found!",ros)
 							-- New target!
 						elseif ros == "friend" and obstr:IsPlayer() then
 							self:Speak("scld_plr_blocking")

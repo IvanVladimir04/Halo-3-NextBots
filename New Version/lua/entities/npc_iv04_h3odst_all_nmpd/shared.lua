@@ -16,6 +16,8 @@ ENT.EnableFlashlight = true
 
 ENT.GreetQuote = "grt"
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_assaultrifle",
 	"astw2_halo3_assaultrifle",

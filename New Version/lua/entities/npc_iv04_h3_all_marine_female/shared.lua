@@ -18,6 +18,8 @@ ENT.EnableFlashlight = true
 
 ENT.AITemplate = "MARINE"
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_assaultrifle",
 	"astw2_halo3_assaultrifle",
@@ -66,9 +68,6 @@ function ENT:DoInit()
 	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
 	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
 	--print(self:GetName(),self.Weapon:GetName())
-	if self.EnableFlashlight then
-
-	end
 end
 
 function ENT:MoveMouth()

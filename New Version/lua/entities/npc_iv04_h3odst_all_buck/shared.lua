@@ -16,6 +16,8 @@ ENT.HeadShotImmune = true
 
 ENT.GreetQuote = "grt"
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 ENT.CanInteractWithOthers = true
 
 ENT.InteractableAllies = {

@@ -5,6 +5,8 @@ include("vehiclestuff.lua")
 
 ENT.Base = "npc_iv04_base"
 
+ENT.IsHalo3NextBot = true
+
 ENT.SearchJustAsSpawned = false
 
 ENT.CanUse = true
@@ -431,6 +433,7 @@ end
 function ENT:OnInitialize()
 	local func = self.TemplateInitialize[self.AITemplate]
 	func(self)
+	self.AIType = GetConVar("halo_3_nextbots_ai_type"):GetString() or self.AIType
 	if self.PossibleWeapons then
 		local wep = table.Random(self.PossibleWeapons)
 		self:Give(wep,self.SpawnWithWeaponDrawn)
@@ -621,7 +624,7 @@ function ENT:SetupAnimations()
 			self.TurnRightAnim = "turn_right_combat_rifle"
 			self.CrouchTurnLeftAnim = "turn_right_crouch_rifle"
 			self.CrouchTurnRightAnim = "turn_left_crouch_rifle"
-			self.SurpriseAnim = "surprised_combat_rifle"
+			self.SurpriseAnim = "surprised_combat_missile"
 			self.WarnAnim = {"warn_combat_rifle"}
 			self.CrouchIdleAnim = {"crouch_rifle_idle_up"}
 			self.CrouchMoveAnim = {"move_crouch_rifle_up"}
@@ -946,7 +949,7 @@ function ENT:NearbyReply( quote, dist, tim )
 	tim = tim or math.random(2,4)
 	dist = dist or 500
 	for k, v in ipairs(self:NearbyAllies( self:GetPos(), dist ) ) do
-		if v.IsHalo3Marine and v.Speak then
+		if v.Speak then
 			timer.Simple( tim, function()
 				if IsValid(v) then
 					v:Speak(quote)
@@ -1042,8 +1045,6 @@ function ENT:SneakKill(ent)
 			self:ResetAI()
 		end
 	end})
-	self.GoingForSneakKill = false
-	self.HaltShoot = false
 	self:ResetAI()
 end
 
@@ -1259,7 +1260,7 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 	end )
 	local anim = self.MeleeAnim[math.random(#self.MeleeAnim)]
 	local id, len = self:LookupSequence(anim)
-	local hittime = self.MeleeAnimsHits[anim]
+	local hittime = self.MeleeAnimsHits[anim] or 0.6
 	timer.Simple( len*hittime, function() -- Set up a timer for the melee hit
 		if IsValid(self) then
 			self:DoMeleeDamage()
@@ -1275,6 +1276,10 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 		coroutine.wait(len)
 	else
 		self:PlaySequenceAndPWait(anim,1,self:GetPos())
+	end
+	if self.GoingForSneakKill then
+		self.GoingForSneakKill = false
+		self.HaltShoot = false
 	end
 end
 
@@ -1461,7 +1466,81 @@ end
 
 -------------- Other combat functions
 
+function ENT:IsWeaponUser()
+	return (IsValid(self.Weapon) or istable(self.PossibleWeapons))
+end
+
+function ENT:GrenadeSignalChecks()
+	if !self:IsWeaponUser() or !AllowedH3Squads[self.Faction] then return end
+	if self.Faction == "FACTION_COVENANT" then
+		if #self:PossibleTargets() > 5 and !H3BS:WasSignalGiven("ThrowAllGrenades",5) then
+			H3BS:Signal("ThrowAllGrenades",self)
+			self:Speak("ordr_grenade_all")
+		end
+	elseif self.Faction == "FACTION_ALLIANCE" then
+		if self.IsHuman then
+			if #self:PossibleTargets() > 5 and !H3HS:WasSignalGiven("ThrowAllGrenades",5) then
+				H3HS:Signal("ThrowAllGrenades",self)
+				self:Speak("ordr_grenade_all")
+			end
+		else
+			if #self:PossibleTargets() > 5 and !H3ES:WasSignalGiven("ThrowAllGrenades",5) then
+				H3ES:Signal("ThrowAllGrenades",self)
+				self:Speak("ordr_grenade_all")
+			end
+		end
+	elseif self.Faction == "FACTION_SEPARATISTS" then
+		if #self:PossibleTargets() > 5 and !H3ES:WasSignalGiven("ThrowAllGrenades",5) then
+			H3ES:Signal("ThrowAllGrenades",self)
+			self:Speak("ordr_grenade_all")
+		end
+	elseif self.CustomSquad then
+		self:CustomSquadHandling()
+	end
+end
+
+function ENT:GetSquad()
+	if self.Faction == "FACTION_COVENANT" then
+		return H3BS
+	elseif self.Faction == "FACTION_ALLIANCE" then
+		if self.IsHuman then
+			return H3HS
+		else
+			return H3ES
+		end
+	elseif self.Faction == "FACTION_SEPARATISTS" then
+		return H3ES
+	elseif self.CustomSquad then
+		return CustomH3Squads[self.Faction]
+	end
+end
+
+function ENT:CustomSquadHandling() -- For custom factions supporting the squads system
+		--[[if #self:PossibleTargets() > 5 and !H3ES:WasSignalGiven("ThrowAllGrenades",5) then
+			H3ES:Signal("ThrowAllGrenades",self)
+			self:Speak("ordr_grenade_all")
+		end]]
+		--[[ You want to make something like this, and in your autorun file you want
+		to define it like this:
+		
+		MyCustomSquad = H3S
+		
+		Now you have your own squad, and in your nextbots you must copypaste this
+		function and replace H3ES as in the example here with the name you gave
+		your squad, run this in your autorun:
+		
+		AllowedH3Squads["YOUR_FACTION_HERE"] = true
+		
+		and lastly do this in your autorun:
+		
+		CustomH3Squads["YOUR_FACTION_HERE"] = MyCustomSquad
+		]]
+end
+
 function ENT:OnHaveEnemy(ent)
+	if self.AllowStealth and !self.DoneStealth and self:IsUndetected() then		
+		self.HaltShoot = true
+	end
 	if !self.IsWeaponDrawn then
 		if !self.HasSeenEnemies then
 			self.HasSeenEnemies = true
@@ -1507,17 +1586,16 @@ function ENT:OnHaveEnemy(ent)
 				end )
 			end
 		end
-		self:AdjustWeapon(self.Weapon,true)
-		local func = function()
-			self:PlaySequenceAndWait(self:TableRandom(self.DrawFastWeaponAnim))
+		if self.PossibleWeapons or IsValid(self.Weapon) then
+			self:AdjustWeapon(self.Weapon,true)
+			local func = function()
+				self:PlaySequenceAndWait(self:TableRandom(self.DrawFastWeaponAnim))
+			end
+			table.insert(self.StuffToRunInCoroutine,func)
+			self:ResetAI()
 		end
-		table.insert(self.StuffToRunInCoroutine,func)
-		self:ResetAI()
 	else
-		if #self:PossibleTargets() > 5 and !H3BS:WasSignalGiven("ThrowAllGrenades",5) then
-			H3BS:Signal("ThrowAllGrenades",self)
-			self:Speak("ordr_grenade_all")
-		end
+		self:GrenadeSignalChecks()
 		self:AlertAllies(ent)
 		if !self.IsInVehicle then
 			if !self.DidAlertAnim then
@@ -1557,9 +1635,6 @@ function ENT:OnHaveEnemy(ent)
 			end ) 
 			self.HasLOSToTarget = true
 			self.RegisteredTargetPositions[ent] = ent:GetPos()
-			if !self.DoneStealth and self:IsUndetected() then
-				self.HaltShoot = true
-			end
 			self:ResetAI()
 		end
 	end
@@ -1598,8 +1673,18 @@ function ENT:OnInjured(dmg)
 			dmg:SubtractDamage(self.Shield)
 			self.Shield = self.Shield-math.abs(dm)
 		end
-		if self.Shield < 0 then 
+		if self.Shield <= 0 then 
+			print("no more armor!")
 			self.Shield = 0 
+			self.ShieldWentDown = true
+			if self.IsBrute then
+				self.HasArmor = false
+				self:SetBodygroup(2,0)
+				self:SetBodygroup(3,0)
+				self:SetBodygroup(4,0)
+				self:SetBodygroup(5,0)
+				self:SetBodygroup(6,0)
+			end
 		end
 	--	self:SetNWBool("SPShield",true)
 		timer.Simple( 1, function()
@@ -1609,12 +1694,12 @@ function ENT:OnInjured(dmg)
 		end )
 		local shild = self.Shield
 		timer.Simple( self.ShieldRegenTimeDelay, function()
-			if IsValid(self) and shield == self.ShieldH then
+			if IsValid(self) and shield == self.ShieldH and !self.ShieldWentDown then
 				local stop = false
 				for i = 1, 10 do
 					timer.Simple( self.ShieldRegenTime*0.1, function()
 						if IsValid(self) and shield == self.ShieldH and !stop then
-							self.Shield = self.Shield+self.ShieldRegen
+							self.Shield = self.Shield+(self.MaxShield*0.1)
 							if self.Shield > self.MaxShield then 
 								self.Shield = self.MaxShield
 								stop = true
@@ -1640,7 +1725,7 @@ function ENT:OnInjured(dmg)
 			self:SetEnemy(dmg:GetAttacker()) 
 			self:ResetAI()
 		end
-		if (self:Health() < self.StartHealth/2 or #self:PossibleTargets() > 4 )and !self.Covered then
+		if ( self:Health() < self.StartHealth/2 ) or (math.abs(#self:PossibleTargets()-#self:GetSquad():GetMembers()) > 3 ) and !self.Covered then
 			if self:Health() < self.StartHealth/4 then
 				if math.random(1,2) == 1 then
 					self:Speak("pld")

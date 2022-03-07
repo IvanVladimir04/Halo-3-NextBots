@@ -18,6 +18,8 @@ ENT.GreetQuote = "grt"
 
 ENT.CanInteractWithOthers = true
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 ENT.InteractableAllies = {
 	["npc_iv04_h3odst_all_mickey"] = "dutch_look_mickey"
 }

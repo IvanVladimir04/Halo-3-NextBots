@@ -14,6 +14,8 @@ ENT.FriendlyToPlayers = true
 
 ENT.AITemplate = "MARINE"
 
+ENT.Faction = "FACTION_ALLIANCE"
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_magnum"
 }
