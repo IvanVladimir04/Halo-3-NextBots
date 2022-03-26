@@ -114,6 +114,22 @@ ENT.PostCombatResponses = {
 
 ENT.TransitionAnims = {}
 
+ENT.WeaponlessTemplates = {
+		["HUNTER"] = true,
+		["ENGINEER"] = true,
+		["PROPHET"] = true,
+		["SCARAB"] = true,
+		["SENTINEL"] = true,
+		["ENFORCER"] = true,
+		["MONITOR"] = true,
+		["CONSTRUCTOR"] = true,
+		["FLOOD_INFECTION"] = true,
+		["FLOOD_CARRIER"] = true,
+		["FLOOD_TANK"] = true,
+		["FLOOD_STALKER"] = true,
+		["FLOOD_RANGED"] = true
+}
+
 ENT.TemplateInitialize = {
 		["SPARTAN"] = ENT.SpartanInitialize,
 		["MARINE"] = ENT.MarineInitialize,
@@ -402,8 +418,8 @@ ENT.ReloadTime = 2
 
 ENT.MeleeQuote = "melee" -- I don't suggest leaving it as nil
 
-ENT.SpeakSpeed = 0.25 -- Speed at which the mouth moves when talking
-ENT.SpeakCycle = 0.75 -- Point from 0 to 1 at which the animation starts
+ENT.SpeakSpeed = 1 -- Speed at which the mouth moves when talking
+ENT.SpeakCycle = 0 -- Point from 0 to 1 at which the animation starts
 ENT.BlinkSpeed = 0.1 -- The blink speed is actually very fast for 0.1 don't worry
 
 ENT.AllowSounds = {
@@ -428,9 +444,12 @@ function ENT:PreInit()
 	self.CustomBehaviour = self.TemplateBehaviors[self.AITemplate]
 	self.DoCustomIdle = self.TemplateIdle[self.AITemplate]
 	self.Think = self.TemplateThink[self.AITemplate]
+	self.loco:SetGravity(600)
 end
 
 function ENT:OnInitialize()
+	self.DoesntUseWeapons = self.WeaponlessTemplates[self.AITemplate]
+	--print(self.AITemplate,self.DoesntUseWeapons)
 	local func = self.TemplateInitialize[self.AITemplate]
 	func(self)
 	self.AIType = GetConVar("halo_3_nextbots_ai_type"):GetString() or self.AIType
@@ -475,11 +494,16 @@ ENT.TotalHolds = {
 }
 
 function ENT:SetupAnimations()
+	--PrintTable( self:GetSequenceList() )
 	self.PatrolMoveAnim = {"Move_Patrol_Unarmed_Up"}
 	self.PatrolIdleAnim = {"Patrol_Unarmed_Idle_Down"}
 	self.PatrolIdlePoseAnim = {"Patrol_Unarmed_Idle_Posing_1","Patrol_Unarmed_Idle_Posing_2","Patrol_Unarmed_Idle_Posing_3"}
 	self.TransitionAnims["Patrol_Move_2_Idle"] = "Patrol_Move_2_Patrol_Idle"
 	self.TransitionAnims["Patrol_Idle_2_Move"] = "Patrol_Idle_2_Patrol_Move"
+	self.DeadAirAnim = "Dead_Airborne"
+	self.DeadLandAnim = self:LookupSequence("Dead_Land") > 0 and "Dead_Land" or {"Dead_Land_1","Dead_Land_2"}
+	self.AirAnim = "any_airborne"
+	--print(self.DeadLandAnim)
 	if IsValid(self.Weapon) then
 		local hold = self:ConfigureWeapon()
 		if self.AITemplate == "BRUTE" and self.BruteWeapons[self.Weapon:GetClass()] then
@@ -566,17 +590,15 @@ function ENT:SetupAnimations()
 			self.FallbackAnim = "Signal_Fallback_Combat_Pistol"
 			self.HoldAnim = "Signal_Hold_Combat_Pistol"
 			self.EquipmentAnim = "Throw_Equipment_Combat_Pistol"
-			--[[self.TransitionAnims["Idle_2_Guard"] = "pistol_idle_2_guard_idle"
-			self.TransitionAnims["Idle_2_Crouch"] = "pistol_idle_2_crouch_idle"
-			self.TransitionAnims["Crouch_Move_2_Crouch_Idle"] = "pistol_crouch_move_2_crouch_idle"
-			self.TransitionAnims["Crouch_Move_2_Crouch_Idle_Passive"] = "pistol_crouch_move_2_crouch_idle_passive"
-			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "pistol_crouch_walk_2_crouch_idle"
-			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "pistol_crouch_walk_2_crouch_idle_passive"
-			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "pistol_crouch_idle_2_crouch_move"
-			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "pistol_crouch_idle_2_crouch_move_passive"
-			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "pistol_crouch_idle_2_crouch_walk"
-			self.TransitionAnims["Crouch_Idle_2_Guard"] = "pistol_crouch_idle_2_guard_idle"
-			self.TransitionAnims["Crouch_Idle_2_Idle"] = "pistol_crouch_idle_2_idle"]]
+			self.TransitionAnims["Idle_2_Guard"] = "Combat_Pistol_Idle_2_Patrol_Idle"
+			self.TransitionAnims["Idle_2_Crouch"] = "Combat_Pistol_Idle_2_Combat_Idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "crouch_pistol_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "crouch_pistol_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "crouch_pistol_idle_2_crouch_move"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "crouch_pistol_idle_2_crouch_move"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_pistol_idle_2_crouch_walk"
+			self.TransitionAnims["Crouch_Idle_2_Guard"] = "crouch_pistol_idle_2_patrol_idle"
+			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_pistol_move_2_crouch_idle"
 		elseif self.RifleHolds[hold] then
 			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Missile"}
 			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Missile"}
@@ -601,10 +623,10 @@ function ENT:SetupAnimations()
 				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
 			end
 			self.IdleAnim = {"combat_rifle_idle_up"}
-			self.IdleCalmAnim = {"combat_rifle_idle_up"}
+			self.IdleCalmAnim = {"combat_rifle_idle_down"}
 			self.RunAnim = {"move_combat_rifle_up"}
 			self.WalkAnim = {"walk_combat_rifle_up"}
-			self.RunCalmAnim = {"move_combat_rifle_up"}
+			self.RunCalmAnim = {"move_combat_rifle_down"}
 			if self.AITemplate == "BRUTE" then
 				self.MeleeAnim = {"Melee_Combat_Rifle_1"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
@@ -805,14 +827,32 @@ function ENT:SetupAnimations()
 			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_support_idle_2_crouch_walk"
 		end
 	else
-		self.RunAnim = {"Move_Berserk_Unarmed_Down"}
-		self.IdleAnim = {"Combat_Unarmed_Idle_Down"}
-		self.WaveAnim = "wave_combat_unarmed"
-		self.ShakeFistAnim = "shakefist_combat_unarmed"
-		self.TauntAnim = {"taunt_combat_unarmed"}
-		self.FallbackAnim = "signal_fallback_combat_unarmed"
-		self.BraceAnim = "brace_combat"
-		self.AdvanceAnim = "signal_advance_combat_unarmed"
+		if self.DoesntUseWeapons then
+			self.IdleCalmAnim = {"combat_idle"}
+			self.PatrolIdleAnim = {"patrol_idle"}
+			self.IdleAnim = {"combat_idle"}
+			self.RunAnim = {"move_any"}
+			self.CrouchMoveAnim = {"crouch_any_move"}
+			self.WanderAnim = {"move_any_patrol"}
+			self.PatrolMoveAnim = {"move_any_patrol"}
+			self.SurpriseAnim = "Surprised"
+			self.WarnAnim = "Warn"
+			self.LandAnim = "Land_Soft_Any"
+			self.LandHardAnim = "Land_Hard_Any"
+			self.MeleeAnim = {"Melee_1","Melee_2","Melee_3","Melee_4"}
+			self.MeleeBackAnim = {"Melee_Back"}
+			self.MeleeLeftAnim = {"Melee_Left"}
+			self.MeleeRightAnim = {"Melee_Right"}
+		else
+			self.RunAnim = {"Move_Berserk_Unarmed_Down"}
+			self.IdleAnim = {"Combat_Unarmed_Idle_Down"}
+			self.WaveAnim = "wave_combat_unarmed"
+			self.ShakeFistAnim = "shakefist_combat_unarmed"
+			self.TauntAnim = {"taunt_combat_unarmed"}
+			self.FallbackAnim = "signal_fallback_combat_unarmed"
+			self.BraceAnim = "brace_combat"
+			self.AdvanceAnim = "signal_advance_combat_unarmed"
+		end
 	end
 end
 
@@ -828,6 +868,7 @@ function ENT:ConfigureWeapon()
 	self.Weapon.AI_Reload = function()
 		relo(self.Weapon)
 		self:DoAnimationEvent(1689)
+		self.Reloading = false
 	end
 	return hold
 end
@@ -835,6 +876,21 @@ end
 -------- Initialize functions
 
 -------- Misc functions
+
+function ENT:DoAnimation(anim,act)
+	if istable(anim) then
+		anim = self:TableRandom(anim)
+	end
+	if type(anim) == "string" then
+		self:ResetSequence(anim)
+	elseif isnumber(anim) then
+		if act then
+			self:StartActivity(anim)
+		else
+			self:ResetSequence(anim)
+		end
+	end
+end
 
 function ENT:Use( activator )
 	if !self.CanUse then return end
@@ -845,8 +901,18 @@ function ENT:Use( activator )
 			if !IsValid(self.FollowingPlayer) then
 				self.FollowingPlayer = ply
 				self:SetNWInt("optredisp",1)
+				self:Speak("hail")
+				if self.PossibleWeapons or IsValid(self.Weapon) and !self.IsWeaponDrawn then
+					self:AdjustWeapon(self.Weapon,true)
+					local func = function()
+						self:PlaySequenceAndWait(self:TableRandom(self.DrawFastWeaponAnim))
+					end
+					table.insert(self.StuffToRunInCoroutine,func)
+					self:ResetAI()
+				end
 			else
 				self.FollowingPlayer = nil
+				self.LookTarget = nil
 				self.StartPosition = self:GetPos()
 				self:SetNWInt("optredisp",0)
 			end
@@ -961,13 +1027,17 @@ function ENT:NearbyReply( quote, dist, tim )
 end
 
 function ENT:OnTraceAttack( info, dir, trace )
-	if self.Unkillable then info:SetDamage(0) end
+	--if self.Unkillable then info:SetDamage(0) end
 	if trace.HitGroup == 1 and !self.HeadShotImmune then
 		info:ScaleDamage(3)
 	end
 	if self:Health() - info:GetDamage() < 1 then self.DeathHitGroup = trace.HitGroup return end
 	if self.AnimBusy then return end
 	local hg = trace.HitGroup
+	--print(hg)
+	if self.WeakHitGroup and hg != self.WeakHitGroup then
+		info:SetDamage(0)
+	end
 	--[[if !self.IsInVehicle and self.FlinchAnims[hg] and !self.DoneFlinch and math.random(100) < self.FlinchChance and info:GetDamage() > self.FlinchDamage then
 		self.DoneFlinch = true
 		self.DoingFlinch = true
@@ -999,6 +1069,15 @@ function ENT:OnLeaveGround(ent)
 		timer.Simple( 0.6, function()
 			if IsValid(self) and self.LastTimeOnGround == t then
 				self:ResetSequence(self.AirAnim)
+			end
+		end )
+		timer.Simple( 3, function()
+			if IsValid(self) and self.LastTimeOnGround == t then
+				self:ResetSequence(self.DeadAirAnim)
+				--self:Speak("thrwn")
+				self.FlyingDead = true
+				self:OnKilled(DamageInfo())
+				self:SetHealth(0)
 			end
 		end )
 	end
@@ -1377,6 +1456,21 @@ function ENT:AdjustWeapon(wep,drawn)
 	self.IsWeaponDrawn = drawn
 	if drawn then
 		wep:AddEffects(EF_BONEMERGE)
+		if self.EnableFlashlight then
+			self.Sprite = ents.Create("env_sprite")
+			self.Sprite:SetPos(self.Weapon:GetAttachment(1).Pos)
+			self.Sprite:SetParent(self.Weapon,1)
+			self.Sprite:SetOwner(self)
+			self.Sprite:SetAngles(self:GetAngles()+Angle(0,90,0))
+			self.Sprite:SetColor(self.MonitorColor or Color( 255, 255, 255 ))
+			self.Sprite:SetKeyValue( "scale", "0.1" )
+			self.Sprite:SetKeyValue( "model", "effects/halo3/8pt_ringed_star_flare.vmt" )
+			self.Sprite:SetKeyValue( "framerate", "30" )
+			self.Sprite:SetKeyValue( "rendermode", "9" )
+			self.Sprite:SetKeyValue( "spawnflags", "1" )
+			self.Sprite:Spawn()
+			self.Sprite:Activate()
+		end
 	else
 	end
 end
@@ -1414,9 +1508,10 @@ function ENT:DoAnimationEvent(a)
 			end
 		end )
 		if !CLIENT then
-			local a,len = self:LookupSequence("pistol_reload") -- LookupSequence finds the id of a string (name) of animation
+			local a,len = self:LookupSequence(self.ReloadAnim) -- LookupSequence finds the id of a string (name) of animation
 			local func = function() -- Prepare a function to add to the behavior
-				self:PlaySequenceAndWait(a) -- Play the sequence
+				self:DoGestureSeq(a) -- Play the sequence
+				coroutine.wait(len)
 			end
 			table.insert(self.StuffToRunInCoroutine,func) -- Place the function in queue
 			self:ResetAI() -- Let the AI know it should recalculate what to do
@@ -1437,7 +1532,7 @@ function ENT:Shoot() -- Pretty basic, right? just shoot the weapon we are holdin
 end
 
 function ENT:HasToReload()
-	return self.Weapon:Clip1() == 0
+	return self.Weapon:Clip1() <= 0
 end
 
 function ENT:OnFiring()
@@ -1608,7 +1703,7 @@ function ENT:OnHaveEnemy(ent)
 						local func = function()
 							local should, dif = self:ShouldFace(ent,10)
 							if should then
-								self:Turn(dif,false,true)
+								--self:Turn(dif,false,true)
 								coroutine.wait(0.2)
 							end
 							self:PlaySequenceAndWait(self.SurpriseAnim)
@@ -1619,7 +1714,7 @@ function ENT:OnHaveEnemy(ent)
 					local func = function()
 						local should, dif = self:ShouldFace(ent,10)
 						if should then
-							self:Turn(dif,false,true)
+							--self:Turn(dif,false,true)
 							coroutine.wait(0.2)
 						end
 						self:PlaySequenceAndWait(self.WarnAnim[math.random(#self.WarnAnim)])
@@ -1710,7 +1805,7 @@ function ENT:OnInjured(dmg)
 			end
 		end )
 	end
-	if math.abs(self:Health()) - math.abs(dmg:GetDamage()) <= 0 then return end
+	if ( ( math.abs(self:Health()) - math.abs(dmg:GetDamage())) <= 0 ) and !self.Unkillable then return end
 	if self.AnimBusy then return end
 	if self.ImmuneDMGs[dmg:GetDamageType()] then dmg:ScaleDamage(0) end
 	if IsValid(self.Enemy) then
@@ -1769,7 +1864,7 @@ function ENT:OnInjured(dmg)
 	end
 	if !self.SpokeInjured then
 		self.SpokeInjured = true
-		timer.Simple( math.random(5,10), function()
+		timer.Simple( math.random(1,2), function()
 			if IsValid(self) then
 				self.SpokeInjured = false
 			end
@@ -1798,6 +1893,7 @@ function ENT:OnInjured(dmg)
 		end
 	end
 	if self.Unkillable then
+		--print("yes")
 		dmg:SetDamage(0)
 	elseif self.AllowHealthRegeneration then
 		local total = dmg:GetDamage()
@@ -1845,7 +1941,7 @@ function ENT:OnOtherKilled( victim, info )
 				local ang = (victim:GetPos()-self:GetPos()):Angle()
 				local dif = math.AngleDifference(self:GetAngles().y,ang.y)
 				local func = function()
-					self:TurnTo(dif)
+					self:Turn(dif,false,true)
 				end
 				table.insert(self.StuffToRunInCoroutine,func)
 				self:ResetAI()
@@ -2006,7 +2102,7 @@ function ENT:OnOtherKilled( victim, info )
 			if !self.DoingMelee then
 				self:ResetAI()
 			end
-			if self.AIType == "Offensive" and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] then
+			if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] then
 				if victim:IsPlayer() and !self.CommentedTraitorDeath then
 					self.CommentedTraitorDeath = true
 					timer.Simple( math.random(2,3), function()
@@ -2248,8 +2344,170 @@ end
 
 -------------- Cosmetic functions
 
+function ENT:OnKilled( dmginfo ) -- When killed
+	hook.Call( "OnNPCKilled", GAMEMODE, self, dmginfo:GetAttacker(), dmginfo:GetInflictor() )
+	self.KilledDmgInfo = dmginfo
+	self.BehaveThread = nil
+	self.DrownThread = coroutine.create( function() self:DoKilledAnim() end )
+	coroutine.resume( self.DrownThread )
+end
+
+function ENT:DetermineDeathAnim( info )
+	local origin = info:GetAttacker():GetPos()
+	local damagepos = info:GetDamagePosition()
+	local ang = (damagepos-origin):Angle()
+	local y = ang.y - self:GetAngles().y
+	if y < 0 then y = y + 360 end
+	--print(y)
+	local anim
+	if self.DeathHitGroup then
+		if self.DeathHitGroup == 1 then
+			if y <= 135 and y > 45 then -- Left
+				anim = "Death_Front_Left_Head"
+			elseif y < 225 and y > 135 then -- Front
+				anim = "Death_Front_Head_"..math.random(1,2)..""
+			elseif y >= 225 and y < 315 then -- Right
+				anim = "Death_Front_Right_Head"
+			elseif y <= 45 or y >= 315 then -- Back
+				anim = "Death_Back_Head"
+			end
+		else
+			if y <= 135 and y > 45 then -- Right
+				anim = "Death_Front_Right_Gut"
+			elseif y < 225 and y > 135 then -- Front
+				anim = "Death_Front_Gut_"..math.random(1,2)..""
+			elseif y >= 225 and y < 315 then -- Left
+				anim = "Death_Front_Left_Gut"
+			elseif y <= 45 or y >= 315 then -- Back
+				anim = "Death_Back_Gut_"..math.random(1,2)..""
+			end
+		end
+	else
+		return true
+	end
+	return anim
+end
+
+function ENT:FinishDeadLanding()
+	while (!self.HasLanded) do
+		if self.AlternateLanded then
+			local rag
+			if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
+				timer.Simple( 60, function()
+					if IsValid(rag) then
+						rag:Remove()
+					end
+				end)
+			end
+			return
+		end
+		coroutine.wait(0.01)
+	end
+	self:PlaySequenceAndWait(self:TableRandom(self.DeadLandAnim))
+	if !self.DoesntUseWeapons then
+		local wep = ents.Create(self.Weapon:GetClass())
+		wep:SetPos(self.Weapon:GetPos())
+		wep:SetAngles(self.Weapon:GetAngles())
+		wep:Spawn()
+		self.Weapon:Remove()
+	end
+	local rag
+	if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
+		timer.Simple( 60, function()
+			if IsValid(wep) then
+				wep:Remove()
+			end
+			if IsValid(rag) then
+				rag:Remove()
+			end
+		end)
+	end
+	rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time = 0.1, randommove = true})
+end
+
+function ENT:DoKilledAnim()
+	--print(self.FlyingDead)
+	if self.FlyingDead then
+		self:Speak("dth_fall")
+		self:FinishDeadLanding()
+	elseif self.KilledDmgInfo:GetDamageType() != DMG_BLAST then
+		if self.KilledDmgInfo:GetDamage() <= 150 then
+			self:Speak("OnDeath")
+			local anim = self:DetermineDeathAnim(self.KilledDmgInfo)
+			if anim == true then 
+				if !self.DoesntUseWeapons then
+					local wep = ents.Create(self.Weapon:GetClass())
+					wep:SetPos(self.Weapon:GetPos())
+					wep:SetAngles(self.Weapon:GetAngles())
+					wep:Spawn()
+					self.Weapon:Remove()
+				end
+				local rag = self:CreateRagdoll(self.KilledDmgInfo)
+				return
+			end
+			local seq, len = self:LookupSequence(anim)
+			timer.Simple( len, function()
+				if IsValid(self) then
+					if !self.DoesntUseWeapons then
+						local wep = ents.Create(self.Weapon:GetClass())
+						wep:SetPos(self.Weapon:GetPos())
+						wep:SetAngles(self.Weapon:GetAngles())
+						wep:Spawn()
+						self.Weapon:Remove()
+					end
+					local rag
+					if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
+						timer.Simple( 60, function()
+							if IsValid(wep) and !IsValid(wep.Owner) then
+								wep:Remove()
+							end
+							if IsValid(rag) then
+								rag:Remove()
+							end
+						end)
+					end
+					rag = self:CreateRagdoll(DamageInfo())
+				end
+			end )
+			self:PlaySequenceAndPWait(seq, 1, self:GetPos())
+		else
+			self:Speak("OnDeathPainful")
+			if !self.DoesntUseWeapons then
+				local wep = ents.Create(self.Weapon:GetClass())
+				wep:SetPos(self.Weapon:GetPos())
+				wep:SetAngles(self.Weapon:GetAngles())
+				wep:Spawn()
+				self.Weapon:Remove()
+			end
+			local rag
+			if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
+				timer.Simple( 60, function()
+					if IsValid(wep) and !IsValid(wep.Owner) then
+						wep:Remove()
+					end
+					if IsValid(rag) then
+						rag:Remove()
+					end
+				end)
+			end
+			rag = self:CreateRagdoll(self.KilledDmgInfo)
+		end
+	else
+		self:Speak("thrwn")
+		self.FlyingDead = true
+		local dir = ((self:GetPos()-self.KilledDmgInfo:GetDamagePosition())):GetNormalized()
+		dir = dir+self:GetUp()*2
+		local force = self.KilledDmgInfo:GetDamage()*1.5
+		self:SetAngles(Angle(0,dir:Angle().y,0))
+		self.loco:Jump()
+		self.loco:SetVelocity(dir*force)
+		coroutine.wait(0.5)
+		self:FinishDeadLanding()
+	end
+end
+
 function ENT:MoveMouth()
-	self:DoGestureSeq("pose_face",true,self.SpeakSpeed,self.SpeakCycle)
+	self:DoGestureSeq("Talk_Overlay",true,self.SpeakSpeed,self.SpeakCycle)
 end
 
 function ENT:PoseEyes()
@@ -2308,12 +2566,23 @@ function ENT:BodyUpdate()
 		local an = (goal-(self:WorldSpaceCenter()+self:GetUp()*30)):Angle()
 		y = an.y
 		dify = math.AngleDifference(self:GetAngles().y+self.YPP,y)
-		--print(dify)
+		--print(dify,self.YPP)
+		local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
 		if math.abs(dify) > 2 then
 			if dify > 0 then
 				di = -2
+				--print(di)
+				if self.YPP+di <= (ymins*0.25) then
+					self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
+					di = 0
+				end
 			else
 				di = 2
+				--print(di)
+				if self.YPP+di >= (ymaxs*0.25) then
+					self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
+					di = 0
+				end
 			end
 		end
 		p = an.p
@@ -2363,13 +2632,21 @@ function ENT:BodyUpdate()
 			end
 		end
 	else	
+		local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
 		if self.YPP != 0 then
 			if self.YPP > 0 then
 				di = -math.Clamp( self.YPP, -2, 0 )
+				if self.PPP+di <= ymins then
+					self:SetAngles(self:GetAngles()+Angle(0,di,0))
+				end
 			else
 				di = math.Clamp( self.YPP, 0, 2 )
+				if self.PPP+di >= ymaxs then
+					self:SetAngles(self:GetAngles()+Angle(0,di,0))
+				end
 			end
 		end
+		--print(di)
 		if self.PPP != 0 then
 			if self.PPP > 0 then
 				dip = -math.Clamp( self.PPP, -2, 0 )

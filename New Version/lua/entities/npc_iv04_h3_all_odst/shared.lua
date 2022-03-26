@@ -35,6 +35,7 @@ function ENT:DoInit()
 	else
 		self:SetSkin(1)
 	end
+	self:SetBodygroup(4,1)
 	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
 	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
 	--print(self:GetName(),self.Weapon:GetName())

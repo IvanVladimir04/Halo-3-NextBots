@@ -69,6 +69,7 @@ end
 function ENT:DroneInitialize()
 end
 function ENT:HunterInitialize()
+	self:SetSkin(self.Rank)
 end
 function ENT:EngineerInitialize()
 end
@@ -177,6 +178,7 @@ end
 function ENT:DroneIdle()
 end
 function ENT:HunterIdle()
+	self:DoIdle()
 end
 function ENT:EngineerIdle()
 end
@@ -238,8 +240,8 @@ function ENT:MarineThink()
 		if self.HasLOSToTarget and !self.DoingMelee then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
-			if should then
-				self:Turn(dif,false,true)
+			if should and math.abs(dif) > 2 then
+				--self:Turn(dif,false,true)
 				--print("angle")
 				return "Gotta turn"	
 			end
@@ -277,8 +279,8 @@ function ENT:BruteThink()
 		if self.HasLOSToTarget and !self.DoingMelee then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
-			if should then
-				self:Turn(dif,false,true)
+			if should and math.abs(dif) > 2 then
+				--self:Turn(dif,false,true)
 				--print("angle")
 				return "Gotta turn"	
 			end
@@ -313,6 +315,60 @@ end
 function ENT:DroneThink()
 end
 function ENT:HunterThink()
+	if self:Health() < 1 then return end
+	if self.LastThinkTime < CurTime() then
+		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
+		local ent = self:WeaponThink()
+		if self.HasLOSToTarget and !self.DoingMelee then
+			local should, dif = self:ShouldFace(ent)
+			--print(should,dif)
+			if should and math.abs(dif) > 2 then
+				--self:Turn(dif,false,true)
+				--print("angle")
+				return "Gotta turn"	
+			end
+			self:HunterAttack(ent)
+		end
+	end
+end
+function ENT:HunterAttack(ent)
+	ent = ent or self.Enemy
+	if !self.DoneChargeAttack then
+		self:EmitSound("hunter/hunter_cannon/hunter_charge.wav",100)
+		self.DoneChargeAttack = true
+		local lim = 30
+		timer.Simple( 2, function()
+			if IsValid(self) and IsValid(ent) then
+				self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/in.wav",100)
+				for i = 1, lim do
+					self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/loop.wav",100)
+					timer.Simple( 0.05*i, function()
+						if IsValid(self) then
+							local proj = ents.Create("astw2_halo3_hunter_projectile")
+							local att = self:GetAttachment(1)
+							proj:SetPos(att.Pos)
+							proj:SetAngles(att.Ang)
+							proj:SetOwner(self)
+							proj:Activate()
+							proj:Spawn()
+							local phys = proj:GetPhysicsObject()
+							if IsValid(phys) then
+								phys:SetVelocity((self:GetAimVector()+((self:GetRight()*0.001)*math.random(1,-1))*(i))*10000)
+							end
+							if i == lim then
+								timer.Simple( 2, function()
+									if IsValid(self) then
+										self.DoneChargeAttack = false
+									end
+								end )
+								self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/out.wav",100)
+							end
+						end
+					end )
+				end
+			end
+		end )
+	end
 end
 function ENT:EngineerThink()
 end
@@ -416,7 +472,7 @@ function ENT:MarineBehavior(ent,range)
 	
 		local should, dif = self:ShouldFace(ent)
 		if should then
-			self:Turn(dif,false,true)
+			--self:Turn(dif,false,true)
 			coroutine.wait(0.2)
 			return
 		end
@@ -441,7 +497,7 @@ function ENT:MarineBehavior(ent,range)
 		end
 		local should, dif = self:ShouldFace(ent)
 		if should then
-			self:Turn(dif,false,true)
+			--self:Turn(dif,false,true)
 			coroutine.wait(0.2)
 			return
 		end
@@ -468,8 +524,8 @@ function ENT:MarineBehavior(ent,range)
 		if los then
 			local should, dif = self:ShouldFace(ent)
 			if should then
-				self:Turn(dif,false,true)
-				coroutine.wait(0.2)
+				--self:Turn(dif,false,true)
+				--coroutine.wait(0.2)
 				return
 			end
 			if !IsValid(ent) then return end
@@ -541,8 +597,8 @@ function ENT:BruteBehavior(ent,range)
 		if los then
 			local should, dif = self:ShouldFace(ent)
 			if should then
-				self:Turn(dif,false,true)
-				coroutine.wait(0.2)
+				--self:Turn(dif,false,true)
+				--coroutine.wait(0.2)
 				return
 			end
 			if !IsValid(ent) then return end
@@ -580,6 +636,48 @@ end
 function ENT:DroneBehavior(ent,range)
 end
 function ENT:HunterBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	ent = ent or self.Enemy
+	local mins, maxs = ent:GetCollisionBounds()
+	local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter()+ent:GetUp()*(maxs*0.25),{self,ent,self:GetOwner()})	if IsValid(obstr) then	
+		if ( ( obstr:IsNPC() or obstr:IsPlayer() or obstr:IsNextBot() ) and obstr:Health() > 0 ) and self:CheckRelationships(obstr) == "foe" then
+			ent = obstr
+			self:SetEnemy(ent)
+		end
+	end
+	self:MeleeChecks(los,range)
+	if los then
+		if range < 512 and math.random(1,2) == 1 then
+			self:MoveToPosition( ent:GetPos(),  self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+		else
+			if math.random(1,4) == 1 then p = ent:GetPos() end
+			local pos = self:FindNearbyPos(p,math.random(256,256))
+			local wait = math.Rand(0.5,1)
+			local r = math.random(1,3)
+			local anim = r == 1 and self.RunAnim[math.random(#self.RunAnim)] or self.CrouchMoveAnim[math.random(#self.CrouchMoveAnim)]
+			local speed = r == 1 and self.MoveSpeed*self.MoveSpeedMultiplier or self.MoveSpeed
+			--print(anim,speed)
+			self:MoveToPosition( pos, anim, speed )
+			self:DoAnimation(self.IdleAnim)
+			coroutine.wait(wait)
+		end
+	else
+		if ent.BeingChased then
+			self:Speak("join_invsgt")
+		else
+			if self.IsSergeant and math.random(1,2) == 1 then
+				self:Speak("ordr_invsgt")
+			else
+				self:Speak("invsgt")	
+			end
+		end
+		if math.random(1,2) == 1 then
+			ent.BeingChased = true
+			self:GoToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
+		end
+		self:SetEnemy(nil)
+	end
 end
 function ENT:EngineerBehavior(ent,range)
 end
@@ -613,7 +711,7 @@ function ENT:FloodRangedBehavior(ent,range)
 end
 
 function ENT:DoIdle()
-	if !self.IsWeaponDrawn then
+	if !self.IsWeaponDrawn and !self.HasSeenEnemies then
 		if math.random(1,2) == 1 then
 			local seq = self.PatrolIdleAnim[math.random(#self.PatrolIdleAnim)]
 			self:ResetSequence(seq)
@@ -663,6 +761,7 @@ function ENT:FollowingPlayerChecks()
 				self.CountedVehicles = self.CountedVehicles+1
 			end
 		end
+		self.LookTarget = self.FollowingPlayer
 		local dist = self:GetRangeSquaredTo(self.FollowingPlayer)
 		if dist > 500^2 then
 			local goal = self.FollowingPlayer:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300

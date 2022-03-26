@@ -12,7 +12,7 @@ ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true
 
-ENT.EnableFlashlight = true
+ENT.EnableFlashlight = false
 
 --ENT.SpawnWithWeaponDrawn = true
 
@@ -42,9 +42,6 @@ function ENT:DoInit()
 	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
 	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
 	--print(self:GetName(),self.Weapon:GetName())
-	if self.EnableFlashlight then
-
-	end
 	self.Unkillable = GetConVar("halo_3_nextbots_ai_heroes"):GetBool()
 end
 

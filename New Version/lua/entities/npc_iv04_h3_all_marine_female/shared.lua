@@ -12,7 +12,7 @@ ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true
 
-ENT.EnableFlashlight = true
+ENT.EnableFlashlight = false
 
 --ENT.SpawnWithWeaponDrawn = true
 

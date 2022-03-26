@@ -12,7 +12,7 @@ ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true
 
-ENT.EnableFlashlight = true
+ENT.EnableFlashlight = false
 
 ENT.AITemplate = "MARINE"
 
@@ -75,7 +75,6 @@ function ENT:DoInit()
 	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
 	--print(self:GetName(),self.Weapon:GetName())
 	if self.EnableFlashlight then
-
 	end
 end
 
