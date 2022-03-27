@@ -482,10 +482,21 @@ function ENT:MarineBehavior(ent,range)
 	elseif self.AIType == "Defensive" then
 		if self.NeedsToCover then
 			self.NeedsToCover = false
+			self.NotLookingAtEnemy = true
 			local tbl = self:FindCoverSpots(ent)
 			if table.Count(tbl) > 0 or #tbl > 0 then
 				local area = table.Random(tbl)
+				if math.random(1,2) == 1 then
+					timer.Simple( math.random(4,7), function()
+						if IsValid(self) then
+							if self.NotLookingAtEnemy then
+								self.NotLookingAtEnemy = false
+							end
+						end
+					end )
+				end
 				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+				self.NotLookingAtEnemy = false
 				if math.random(1,2) == 1 then
 					self:Speak("cvr")
 					self:NearbyReply("cvr_re")
@@ -509,9 +520,20 @@ function ENT:MarineBehavior(ent,range)
 		if self.NeedsToCover then
 			self.NeedsToCover = false
 			local tbl = self:FindCoverSpots(ent)
+			self.NotLookingAtEnemy = true
+			if math.random(1,2) == 1 then
+				timer.Simple( math.random(4,7), function()
+					if IsValid(self) then
+						if self.NotLookingAtEnemy then
+							self.NotLookingAtEnemy = false
+						end
+					end
+				end )
+			end
 			if table.Count(tbl) > 0 or #tbl > 0 then
 				local area = table.Random(tbl)
 				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+				self.NotLookingAtEnemy = false
 				if math.random(1,2) == 1 then
 					self:Speak("cvr")
 					self:NearbyReply("cvr_re")
@@ -531,7 +553,9 @@ function ENT:MarineBehavior(ent,range)
 			if !IsValid(ent) then return end
 			local p
 			if math.random(1,2) == 1 then p = ent:GetPos() end
-			local pos = self:FindNearbyPos(p,math.random(128,512))
+			local rang = math.random(128,512)
+			if p == ent:GetPos() then rang = self.DistToTarget/2 end
+			local pos = self:FindNearbyPos(p,rang)
 			local wait = math.Rand(0.5,1)
 			local r = math.random(1,3)
 			local walk = (r == 1 and range < 600^2)
@@ -558,6 +582,7 @@ function ENT:MarineBehavior(ent,range)
 			end
 		end
 	end
+	self:DoAnimation(self.IdleAnim)
 end
 function ENT:EliteBehavior(ent,range)
 end
@@ -713,8 +738,8 @@ end
 function ENT:DoIdle()
 	if !self.IsWeaponDrawn and !self.HasSeenEnemies then
 		if math.random(1,2) == 1 then
-			local seq = self.PatrolIdleAnim[math.random(#self.PatrolIdleAnim)]
-			self:ResetSequence(seq)
+			local seq = self.PatrolIdleAnim
+			self:DoAnimation(seq)
 			self:SearchEnemy()
 			timer.Simple( self:SequenceDuration(seq)/2, function()
 				if IsValid(self) then
@@ -734,8 +759,8 @@ function ENT:DoIdle()
 			self:GoToPosition( (pos), self.PatrolMoveAnim[math.random(1,#self.PatrolMoveAnim)], self.MoveSpeed*0.5, self.WanderToPos, self.PatrolIdleAnim )	
 		end
 	else
-		local seq = self.IdleCalmAnim[math.random(#self.IdleCalmAnim)]
-		self:ResetSequence(seq)
+		local seq = self.IdleCalmAnim
+		self:DoAnimation(seq)
 		self:SearchEnemy()
 		timer.Simple( self:SequenceDuration(seq)/2, function()
 			if IsValid(self) then

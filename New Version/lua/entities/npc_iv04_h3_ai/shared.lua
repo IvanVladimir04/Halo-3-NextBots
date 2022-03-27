@@ -576,7 +576,7 @@ function ENT:SetupAnimations()
 			self.ScorpionPassengerIdle = "scorpion_passenger_idle_pistol"
 			self.WaveAnim = "Wave_Combat_Pistol"
 			self.ShakeFistAnim = {"Shakefist_Combat_Pistol_1","Shakefist_Combat_Pistol_2","Shakefist_Combat_Pistol_3"}
-			self.AdvanceAnim = "Signal_Advance_1_Combat_Pistol"
+			self.AdvanceAnim = "Signal_Attack_Combat_Pistol"
 			self.CheerAnim = "Cheer_Combat_Pistol"
 			self.SignalAttackAnim = "Signal_Attack_Combat_Pistol"
 			self.WaveAnimGesture = false
@@ -660,8 +660,8 @@ function ENT:SetupAnimations()
 			self.PushLeftAnim = {"melee_smash_combat_rifle_left"}
 			self.PushRightAnim = {"melee_smash_combat_rifle_right"}
 			self.WaveAnim = "wave_combat_rifle"
-			self.AdvanceAnim = "signal_advance_combat_rifle"
-			self.ShakeFistAnim = "shakefist_combat_rifle"
+			self.AdvanceAnim = "signal_attack_combat_rifle"
+			self.ShakeFistAnim = "shakefist_combat_missile"
 			self.CheerAnim = "cheer_combat_rifle"
 			self.AllowGrenade = false
 			self.CanShootCrouch = true
@@ -793,7 +793,7 @@ function ENT:SetupAnimations()
 			self.PushLeftAnim = {"melee_smash_combat_support_left"}
 			self.PushRightAnim = {"melee_smash_combat_support_right"}
 			self.WaveAnim = "wave_combat_support"
-			self.AdvanceAnim = "signal_advance_combat_support"
+			self.AdvanceAnim = "signal_attack_combat_missile"
 			self.ShakeFistAnim = "shakefist_combat_support"
 			self.CheerAnim = "cheer_combat_support"
 			self.GrenadeAnim = {"Throw_Grenade_Combat_support"}
@@ -1062,18 +1062,18 @@ end
 
 function ENT:OnLeaveGround(ent)
 	if self:Health() <= 0 then 
-		self:ResetSequence(self:LookupSequence(self.DeadAirAnim))
+		self:DoAnimation(self.DeadAirAnim)
 	else
 		self.LastTimeOnGround = CurTime()
 		local t = self.LastTimeOnGround
 		timer.Simple( 0.6, function()
 			if IsValid(self) and self.LastTimeOnGround == t then
-				self:ResetSequence(self.AirAnim)
+				self:DoAnimation(self.AirAnim)
 			end
 		end )
 		timer.Simple( 3, function()
 			if IsValid(self) and self.LastTimeOnGround == t then
-				self:ResetSequence(self.DeadAirAnim)
+				self:DoAnimation(self.DeadAirAnim)
 				--self:Speak("thrwn")
 				self.FlyingDead = true
 				self:OnKilled(DamageInfo())
@@ -1087,9 +1087,9 @@ function ENT:OnLandOnGround(ent)
 	if self.FlyingDead then
 		self.HasLanded = true
 	elseif self.LastTimeOnGround then
-		local seq = self.LandAnim
+		local seq = self:TableRandom(self.LandAnim)
 		if ( CurTime() - self.LastTimeOnGround ) > 1 then
-			seq = self.LandHardAnim
+			seq = self:TableRandom(self.LandHardAnim)
 			self:Speak("pain_fall")
 		end
 		self.LastTimeOnGround = CurTime()
@@ -1103,7 +1103,7 @@ end
 
 function ENT:StandBy()
 	self:DoTransitionAnim("Idle_2_Crouch")
-	self:ResetSequence(self.CrouchIdleAnim[math.random(#self.CrouchIdleAnim)])
+	self:DoAnimation(self.CrouchIdleAnim)
 	while self:IsUndetected() do
 		coroutine.wait(1)
 	end
@@ -1212,7 +1212,9 @@ end
 function ENT:FindNearbyPos(pos,dist)
 	local dist = dist or 512
 	local pos = pos or self:GetPos()
-	local navs = navmesh.Find( pos, dist, 100, 10 )
+	local dir = (self:GetPos()-pos):GetNormalized()
+	if pos == self:GetPos() then dir = self:GetForward() end
+	local navs = navmesh.Find( pos+(dir*(dist)), dist, 100, 10 )
 	local tbl = {}
 	if table.Count(navs) > 0 or #navs > 0 then
 		local area = table.Random(navs)
@@ -1996,12 +1998,12 @@ function ENT:OnOtherKilled( victim, info )
 					local func = function()
 						if self.IsSergeant and !self.IsInVehicle then
 							self:Speak("newordr_fallback")
-							H3HS:Signal("Retreat",self)
+							self:GetSquad():Signal("Retreat",self)
 							self:PlaySequenceAndMove(self:LookupSequence(self.FallbackAnim),1,self:GetForward()*-1,50,0.7)
 						else
 							--print(HRHS:WasSignalGiven("Retreat",3))
-							if !self.FollowingRetreatOrder and H3HS:WasSignalGiven("Retreat",3) and IsValid(HRHS:GetCaller("Retreat")) and (!IsValid(HRHS:GetCaller("Retreat").S1) or !IsValid(HRHS:GetCaller("Retreat").S2) ) then
-								local leader = H3HS:GetCaller("Retreat")
+							if !self.FollowingRetreatOrder and self:GetSquad():WasSignalGiven("Retreat",3) and IsValid(self:GetSquad():GetCaller("Retreat")) and (!IsValid(self:GetSquad():GetCaller("Retreat").S1) or !IsValid(self:GetSquad():GetCaller("Retreat").S2) ) then
+								local leader = self:GetSquad():GetCaller("Retreat")
 								local goal = leader:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
 								local navs = navmesh.Find(goal,256,100,20)
 								local nav = navs[math.random(#navs)]
@@ -2060,13 +2062,13 @@ function ENT:OnOtherKilled( victim, info )
 					else
 						self:Speak("newordr_advance")
 					end
-					H3HS:Signal("Advance",self)
+					self:GetSquad():Signal("Advance",self)
 					self:PlaySequenceAndPWait(self.AdvanceAnim,1,self:GetPos())
 				else
-					self:PlaySequenceAndWait(self.ShakeFistAnim)
+					self:PlaySequenceAndWait(self:TableRandom(self.ShakeFistAnim))
 				end
 			end
-			if self.IsSergeant or HRHS:WasSignalGiven(sign,4) then
+			if self.IsSergeant or self:GetSquad():WasSignalGiven(sign,4) then
 				self:Speak("ordr_re")
 				local AI = self.AIType
 				self.AIType = "Offensive"
@@ -2187,12 +2189,12 @@ function ENT:Turn(dif,calm,noanim) -- dif is the yaw number to turn, can be nega
 		end )
 	end
 	if !noanim then
-		self:SetSequence(seq) -- Turn animation
+		self:DoAnimation(seq) -- Turn animation
 		self:ResetSequenceInfo() -- Clean things up
 		self:SetCycle( 0 ) -- For the turn animation
 		self:SetPlaybackRate( 1 ) -- To play correctly
 		coroutine.wait(z)
-		self:ResetSequence(self.IdleAnim[math.random(#self.IdleAnim)]) -- Go back to an idle animation
+		self:DoAnimation(self.IdleAnim) -- Go back to an idle animation
 	end
 end
 
@@ -2232,7 +2234,7 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 				self.DoingPush = true
 				local seq = self:GetSequence()
 				self:PlaySequenceAndPWait(self.PushAnim[math.random(#self.PushAnim)])
-				self:ResetSequence(seq)
+				self:DoAnimation(seq)
 				self.DoingPush = false
 				self.PushingProp = false
 			end
@@ -2330,14 +2332,17 @@ function ENT:ThrowGrenade()
 		end
 	end )
 	self:PlaySequenceAndMove(self.GrenadeAnim[math.random(#self.GrenadeAnim)],1,self:GetForward(),40,0.8)
+	timer.Simple( 1.5, function()
+		if IsValid(self) and self:Health() > 0 then
+			self:Speak("strk_grnd")
+		end
+	end )
 	self.ThrowingGrenade = false
 	self.ThrownGrenades = self.ThrownGrenades+1
 end
 
 function ENT:WasSignalGiven(order,limit)
-	if self.IsBrute then
-		return H3BS:WasSignalGiven(order,limit)
-	end
+	return self:GetSquad():WasSignalGiven(order,limit)
 end
 
 -------------- Other combat functions
@@ -2556,7 +2561,7 @@ function ENT:BodyUpdate()
 	local di = 0
 	local p
 	local dip = 0
-	if ( IsValid(self.Enemy) or IsValid(self.LookTarget) or self.SpecificGoal ) then
+	if ( (IsValid(self.Enemy) and !self.NotLookingAtEnemy )or IsValid(self.LookTarget) or self.SpecificGoal ) then
 		goal = self.SpecificGoal
 		if IsValid(self.Enemy) then
 			goal = self.Enemy:WorldSpaceCenter()
