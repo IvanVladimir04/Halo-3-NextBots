@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\rookie\odst_arms_jack"
+   	"$bumpmap" "models\halo_3_odst\characters\alliance\odst\rookie\odst_arms_n"
+	"$halflambert" 1
+	"$nodecal"			"1"
+	"$phong" "1"
+	"$phongexponent" 	18
+	"$phongboost"	"30"
+	"$phongfresnelranges"	"[0.01 0.5 1]"
+}

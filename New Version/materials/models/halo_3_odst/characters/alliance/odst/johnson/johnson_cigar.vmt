@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\johnson\cigar_dif"
+     	"$bumpmap" "models\halo_3_odst\characters\alliance\odst\johnson\cigar_zbump"
+	"$halflambert" 1
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture     	"models\halo_3_odst\characters\alliance\odst\johnson\cigar_illum"
+	$emissiveBlendBaseTexture		 "models\halo_3_odst\characters\alliance\odst\johnson\cigar_illum"
+	$emissiveBlendFlowTexture     "models\halo_3_odst\characters\alliance\odst\johnson/gear_light"
+	$emissiveBlendTint "[28 5.5 1 ]"
+	$emissiveBlendStrength 25
+	$emissiveBlendScrollVector "[0.05 0.05]"
+	"$detail"				"models\halo_3_odst\characters\alliance\odst\johnson\cigar_illum"
+	"$detailblendmode"			"5"
+	"$detailblendfactor"			"1"
+	"$detailscale"			"1.00"
+	"$nodecal"	1
+	"$phong" "1"
+	"$phongexponent" 5
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[0.01 0.5 1]"
+}

@@ -1,0 +1,28 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\odst\sarge_stripe_cc"
+	"$translucent" 1
+	"$nodecal"			"1"
+	Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2 // pass the player color value to Gmod
+			default		0.23 0.35 0.41 // unused for now.
+		}
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 5
+			max 5
+			srcVar1 "$color"
+			resultVar "$selfillumtint"
+		}
+	}
+}

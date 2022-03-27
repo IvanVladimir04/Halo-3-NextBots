@@ -1,0 +1,50 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\nmpd\police_head_diffuse"
+                "$bumpmap" "models\halo_3_odst\characters\alliance\nmpd\police_head_zbump"
+	"$detail" "models\halo_3_odst\characters\alliance\nmpd\police_head_illum"
+	"$detailblendfactor" 1
+	"$detailblendmode" 5
+	"$detailscale" 1
+	"$halflambert" 1
+	"$nodecal"	1
+	"$phong" "1"
+	"$phongexponent" 5
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[0.01 0.5 1]"
+	"$phongtint"	"{105 135 155}"
+	"$selfillum"	"1"
+	"$selfillummask"	"models\halo_3_odst\characters\alliance\nmpd\police_head_illum"
+
+	"$blendtintbybasealpha"	"1"
+	Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2 // pass the player color value to Gmod
+			default		0.23 0.35 0.41 // unused for now.
+		}
+		"Sine"
+		{
+			"resultVar" "$selfillumtint"
+			"sinemin" 0.5
+			"sinemax" 2.5
+			"sineperiod" 1.5
+			"timeoffset" 0.5
+		}
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 5
+			max 5
+			srcVar1 "$color"
+			resultVar "$selfillumtint"
+		}
+	}
+}

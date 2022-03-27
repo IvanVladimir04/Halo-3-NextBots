@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\rookie\name_tags"
+	"$translucent" 1
+	"$nodecal"			"1"
+}

@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\marine\odst\badges_diffuse"
+	"$translucent" 1
+	"$nodecal"			"1"
+}
+

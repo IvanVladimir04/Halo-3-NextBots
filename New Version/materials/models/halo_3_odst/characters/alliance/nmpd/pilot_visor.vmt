@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\custom\pilot_diffuse"
+	"$bumpmap" "models\halo_3\characters\alliance\marine\odst\pilot_bump"
+	"$nodecal"			"1"
+	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint"	"[0.1 0.02 0.002]"
+	"$phong" "1"
+	"$phongexponent" 5
+	"$phongboost" 8.25
+	"$phongtint"	"[1 .75 .1]"
+	"$phongfresnelranges" "[1 1 1]"
+	"$model" "1"
+	"$color2"		"[3 2.5 .5]"
+}

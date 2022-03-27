@@ -1,0 +1,29 @@
+"VertexLitGeneric"
+{
+	$baseTexture 					"models\halo_3_odst\characters\alliance\odst\mickey\romeo_screen"
+	$nocull							"1"
+	$additive 						"1"
+	$selfillum 						"1"
+	$selfillummaskscale 			"10"
+	"$detail"				"models\halo_3_odst\characters\alliance\odst\mickey\romeo_screen_numbers"
+	"$detailblendmode"			"5"
+	"$detailblendfactor"			"1"
+	"$detailscale"			"1.00"
+	"$nodecal"	1
+			"Proxies" 
+	{
+		UniformNoise
+		{
+			resultVar	$alpha
+			minVal	.035
+			maxVal	.035
+		}
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" 0.1
+			"texturescrollangle" -90	
+		}
+	}
+}
+

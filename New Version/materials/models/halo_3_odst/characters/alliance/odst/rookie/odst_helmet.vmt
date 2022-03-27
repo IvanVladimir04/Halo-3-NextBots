@@ -1,0 +1,45 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\rookie\odst_helmet"
+        	"$bumpmap" "models\halo_3_odst\characters\alliance\odst\rookie\odst_helmet_n"
+	"$halflambert" 1
+	$phong					"1"
+	$phongalbedotint 				"1"
+	$phongexponent 					"15"
+	$phongboost 					"7"
+	$phongtint 						"[.45 .5 .6]"
+	$phongfresnelranges 			"[0.2 0.2 0]"
+	"$nodecal"			"1"
+	$rimlight                         "1"
+	$rimlightexponent                 "50"
+	$rimlightboost                     "0.05"
+
+	"$model" "1"
+	"$detail" "models\halo_3_odst\characters\alliance\odst\rookie\Metaldetail1"
+	"$detailscale" "50"
+	"$detailblendfactor" ".4"
+	"$detailblendmode" "0"
+	"$blendtintbybasealpha"	"1"
+	Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2 // pass the player color value to Gmod
+			default		0.23 0.35 0.41 // unused for now.
+		}
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 5
+			max 5
+			srcVar1 "$color"
+			resultVar "$selfillumtint"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\dare\oni_op_eyelash"
+	"$translucent" 1
+//	"$blendtintbybasealpha"	1
+	"$color2"		"[.1 .1 .1]"
+	"$nocull"		"1"
+	"$nodecal"	1
+}

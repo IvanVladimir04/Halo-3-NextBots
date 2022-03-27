@@ -1,0 +1,27 @@
+"VertexLitGeneric"
+{
+	$baseTexture 					"models\halo_3_odst\characters\alliance\nmpd\visor_overlay_diffuse"
+	$nocull							"1"
+	$additive 						"1"
+	$selfillum 						"1"
+	$selfillummaskscale 			"10"
+	"$nodecal"	1
+	$color2				"{165 140 105}"
+
+	"Proxies" 
+	{
+		UniformNoise
+		{
+			resultVar	$alpha
+			minVal	.035
+			maxVal	.035
+		}
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" 0.1
+			"texturescrollangle" 0	
+		}
+	}
+}
+

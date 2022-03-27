@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\nmpd\police_helmet"
+	"$bumpmap" "models\halo_3_odst\characters\alliance\nmpd\police_helmet_zbump"
+	"$translucent"	"1"
+	"$detail"				"models\halo_3_odst\characters\alliance\nmpd\police_helmet"
+	"$detailblendmode"			"5"
+	"$detailblendfactor"			"0.1"
+	"$detailscale"			"1.00"
+	"$nodecal"	1
+	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint"	"[.025 .01 .002]"
+	"$phong" "1"
+	"$phongboost" "15"
+	"$phongalbedotint" "45"
+	"$phongexponent"	"7"
+	"$phongtint"	"[.7 .3 .05]"
+	"$phongfresnelranges" "[.5 .5 .5]"
+	"$model" "1"
+}

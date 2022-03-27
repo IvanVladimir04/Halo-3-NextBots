@@ -1,0 +1,307 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM combat hammer STILL UP
+
+$animation "aim_combat_hammer_still_up_neutral" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 0 1
+}
+
+$animation "aim_combat_hammer_still_up_down_left" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+$animation "aim_combat_hammer_still_up_down_center" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 3 3
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+$animation "aim_combat_hammer_still_up_down_right" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+$animation "aim_combat_hammer_still_up_mid_left" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+$animation "aim_combat_hammer_still_up_mid_center" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+$animation "aim_combat_hammer_still_up_mid_right" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+$animation "aim_combat_hammer_still_up_up_left" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+$animation "aim_combat_hammer_still_up_up_center" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+$animation "aim_combat_hammer_still_up_up_right" "marineodst_animations\combat_hammer_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_hammer_still_up_neutral" 0
+}
+
+//MOVE ANIMATIONS
+
+$animation "combat_hammer_move_S" "marineodst_animations\combat_hammer_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_hammer_move_W" "marineodst_animations\combat_hammer_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_hammer_move_E" "marineodst_animations\combat_hammer_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_hammer_move_N" "marineodst_animations\combat_hammer_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//WALK ANIMATIONS
+
+$animation "combat_hammer_walk_S" "marineodst_animations\combat_hammer_walk_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_hammer_walk_W" "marineodst_animations\combat_hammer_walk_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_hammer_walk_E" "marineodst_animations\combat_hammer_walk_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_hammer_walk_N" "marineodst_animations\combat_hammer_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//ATTACK ANIMATIONS
+
+//MELEE-ANIMATIONS
+
+$Animation "a_attack_melee_hammer_smash_pose" "marineodst_animations\combat_hammer_melee_lunge.smd" {
+	fps 30
+	frame 45 45
+}
+
+$Animation "a_attack_melee_hammer_strike_pose" "marineodst_animations\combat_hammer_melee_dash.smd" {
+	fps 30
+	frame 45 45
+}
+
+$Animation "a_attack_melee_hammer_smash" "marineodst_animations\combat_hammer_melee_lunge.smd" {
+	fps 30
+	subtract	"a_attack_melee_hammer_smash_pose"	0	
+}
+
+$Animation "a_attack_melee_hammer_strike" "marineodst_animations\combat_hammer_melee_lunge.smd" {
+	fps 30
+	subtract	"a_attack_melee_hammer_strike_pose"	0	
+}
+
+
+//READY AND PUT AWAY ANIMATIONS
+
+$animation "combat_hammer_put_away_pose" "marineodst_animations\combat_hammer_put_away.smd" {
+	fps 30
+	loop
+	frame 5 5
+}
+
+$animation "combat_hammer_put_away" "marineodst_animations\combat_hammer_put_away.smd" {
+	fps 30
+	subtract	"combat_hammer_put_away_pose"	0
+}
+
+$animation "combat_hammer_ready_pose" "marineodst_animations\combat_hammer_ready.smd" {
+	fps 30
+	loop
+	frame 49 49
+}
+
+$animation "combat_hammer_ready" "marineodst_animations\combat_hammer_ready.smd" {
+	fps 30
+	subtract	"combat_hammer_ready_pose"	0
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_combat_hammer_still_up" {
+	"aim_combat_hammer_still_up_up_right" "aim_combat_hammer_still_up_up_center"  "aim_combat_hammer_still_up_up_left"
+	"aim_combat_hammer_still_up_mid_right" "aim_combat_hammer_still_up_mid_center"  "aim_combat_hammer_still_up_mid_left"
+	"aim_combat_hammer_still_up_down_right" "aim_combat_hammer_still_up_down_center" "aim_combat_hammer_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+
+//IDLE SEQUENCES
+
+$sequence "combat_hammer_idle_up" {
+	"marineodst_animations\combat_hammer_idle.smd"
+	activity "ACT_HL2MP_IDLE_MELEE2" 1
+	addlayer	"aim_combat_hammer_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_combat_hammer_up" {
+	"combat_hammer_move_S"
+	"combat_hammer_move_W"
+	"combat_hammer_move_N"
+	"combat_hammer_move_E"
+	"combat_hammer_move_S"
+	activity "ACT_HL2MP_RUN_MELEE2" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_hammer_still_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_hammer"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_human.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_combat_hammer_up" {
+	"combat_hammer_walk_S"
+	"combat_hammer_walk_W"
+	"combat_hammer_walk_N"
+	"combat_hammer_walk_E"
+	"combat_hammer_walk_S"
+	activity "ACT_HL2MP_WALK_MELEE2" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_hammer_still_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_hammer"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_human.Step" }
+	walkframe 145 LX LY
+}
+
+//AIRBORNE SEQUENCES
+
+
+$sequence "airborne_combat_hammer" {
+	"marineodst_animations\combat_hammer_airborne.smd"
+	activity "ACT_LEAP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 140 LX LY LZ
+}
+
+$sequence "land_soft_combat_hammer" {
+	"marineodst_animations\combat_hammer_land_soft.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+//ATTACK SEQUENCES
+
+$sequence "attack_combat_hammer_1" {
+	"a_attack_melee_hammer_strike"
+	activity "ACT_GESTURE_RANGE_ATTACK_MELEE2" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "attack_combat_hammer_2" {
+	"a_attack_melee_hammer_smash"
+	activity "ACT_GESTURE_RANGE_ATTACK_MELEE2" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+//WEAPON EQUIP AND UNEQUIP
+
+$sequence "ready_combat_hammer" {
+	"combat_hammer_ready"
+	activity "ACT_ARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "put_away_combat_hammer" {
+	"combat_hammer_put_away"
+	activity "ACT_DISARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+//TURN SEQUENCES
+
+$sequence "turn_left_combat_hammer" {
+	"marineodst_animations\combat_hammer_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_combat_hammer" {
+	"marineodst_animations\combat_hammer_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}

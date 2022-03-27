@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+	$baseTexture 					"models\halo_3_odst\characters\alliance\odst\johnson\gear_light"
+	$nocull							"1"
+	$additive 						"1"
+	$selfillum 						"1"
+	$selfillummaskscale 			"10"
+	"$detail"				"models\halo_3_odst\characters\alliance\odst\johnson\gear_light"
+	"$detailblendmode"			"5"
+	"$detailblendfactor"			"1"
+	"$detailscale"			"1.00"
+	"$color2"		"[1 10 2]"
+	"$nodecal"	1
+			"Proxies" 
+	{
+		UniformNoise
+		{
+			resultVar	$alpha
+			minVal	.035
+			maxVal	.035
+		}
+	}
+}
+

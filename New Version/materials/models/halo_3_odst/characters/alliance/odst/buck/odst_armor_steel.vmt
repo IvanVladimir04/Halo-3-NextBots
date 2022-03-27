@@ -1,0 +1,41 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\rookie\odst_body"
+      	"$bumpmap" "models\halo_3_odst\characters\alliance\odst\rookie\odst_body_n"
+	"$halflambert" 1
+	"$nodecal"			"1"
+	$phong					"1"
+	$phongalbedotint 				"1"
+	$phongexponent 					"12"
+	$phongboost 					"15.95"
+	$phongtint 						"[.7 .8 .9]"
+	$phongfresnelranges 			"[0.2 0.2 0]"
+
+	$rimlight                         "1"
+	$rimlightexponent                 "50"
+	$rimlightboost                     "0.05"
+
+	"$blendtintbybasealpha"	"1"
+	Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2 // pass the player color value to Gmod
+			default		0.23 0.35 0.41 // unused for now.
+		}
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 5
+			max 5
+			srcVar1 "$color"
+			resultVar "$selfillumtint"
+		}
+	}
+}

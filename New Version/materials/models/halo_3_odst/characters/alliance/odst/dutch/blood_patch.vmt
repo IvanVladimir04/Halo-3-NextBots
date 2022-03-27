@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Models/ODSTDutch/Blood_patch"
+	"$translucent" 1
+	"$nodecal"	1
+}

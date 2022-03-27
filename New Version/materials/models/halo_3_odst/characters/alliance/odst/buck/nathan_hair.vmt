@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\buck\hair_diffuse"
+	"$alphatest" 1
+	"$alphatestreference" 	0.2
+	"$allowAlphaToCoverage" 1
+	"$nocull"		1
+	"$nodecal"	1
+//	"$color2"		"{145 115 70}"
+}

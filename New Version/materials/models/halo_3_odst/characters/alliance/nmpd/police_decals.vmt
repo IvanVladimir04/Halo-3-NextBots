@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\nmpd\police_decals"
+	"$translucent" 1
+	"$nodecal"	1
+}

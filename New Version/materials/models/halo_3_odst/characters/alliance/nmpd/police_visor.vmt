@@ -1,0 +1,36 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\nmpd\visor_overlay_diffuse"
+	"$detail" "models\halo_3_odst\characters\alliance\nmpd\visor_overlay_diffuse"
+	"$detailblendfactor" 0.1
+	"$detailblendmode" 5
+	"$detailscale" 1
+	"$translucent"	"1"
+	"$nodecal"	1
+	"$color2"		"[15 5 .2]"
+
+    "Proxies"
+    {
+	
+		"Sine"
+		{
+			"resultVar" "$detailblendfactor"
+			"sinemin" 0.1
+			"sinemax" 0.5
+			"sineperiod" 1.5
+			"timeoffset" 0.5
+		}
+                "TextureScroll"
+                {
+                        "texturescrollvar" "$baseTextureTransform"
+                        "texturescrollrate" 0.1
+                        "texturescrollangle" 0
+                }
+                "TextureScroll"
+                {
+                        "texturescrollvar" "$detailtexturetransform"
+                        "texturescrollrate" 0.1
+                        "texturescrollangle" 0
+                }
+    }
+}

@@ -1,0 +1,28 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\custom\pilot_diffuse"
+	"$bumpmap"	 "models\halo_3\characters\alliance\marine\pilot_bump"
+//	$normalmapalphaenvmapmask         "1"
+//   	$selfillum			"1"
+//	$selfillummask		"models\halo_3\characters\alliance\marine\pilot_illum"
+	"$detail"				"models\halo_3\characters\alliance\marine\pilot_illum"
+	"$detailblendmode"			"5"
+	"$detailblendfactor"			"1"
+	"$detailscale"			"1.00"
+	$color2			"[2 2 2]"
+	$envmaptint                     "[1 1.2 1.3]"
+	$envmapfresnel                     "1"
+
+	$halflambert					"1"
+	$nocull                           				 "1"
+	$phong			1
+	$phongalbedotint 				"1"
+	$phongexponent 					"8"
+	$phongboost 					"2"
+	$phongtint	"{125 150 185}"
+	$phongfresnelranges 			"[0.2 0.2 0]"
+
+	$rimlight                         "1"
+	$rimlightexponent                 "50"
+	$rimlightboost                     "0.05"
+}

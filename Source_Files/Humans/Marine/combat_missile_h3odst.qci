@@ -1,0 +1,1026 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM combat RIFLE STILL UP
+
+$animation "aim_combat_missile_still_up_neutral" "marine_animations\combat_missile_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_missile_still_up_down_left" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+$animation "aim_combat_missile_still_up_down_center" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+$animation "aim_combat_missile_still_up_down_right" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+$animation "aim_combat_missile_still_up_mid_left" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+$animation "aim_combat_missile_still_up_mid_center" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+$animation "aim_combat_missile_still_up_mid_right" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+$animation "aim_combat_missile_still_up_up_left" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+$animation "aim_combat_missile_still_up_up_center" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+$animation "aim_combat_missile_still_up_up_right" "marine_animations\combat_missile_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_missile_still_up_neutral" 0
+}
+
+//AIM combat RIFLE STILL DOWN
+
+$animation "aim_combat_missile_still_down_neutral" "marine_animations\combat_missile_aim_still_down.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_missile_still_down_down_left" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+$animation "aim_combat_missile_still_down_down_center" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+$animation "aim_combat_missile_still_down_down_right" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+$animation "aim_combat_missile_still_down_mid_left" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+$animation "aim_combat_missile_still_down_mid_center" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+$animation "aim_combat_missile_still_down_mid_right" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+$animation "aim_combat_missile_still_down_up_left" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+$animation "aim_combat_missile_still_down_up_center" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+$animation "aim_combat_missile_still_down_up_right" "marine_animations\combat_missile_aim_still_down.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_missile_still_down_neutral" 0
+}
+
+//AIM combat RIFLE MOVE UP
+
+$animation "aim_combat_missile_move_up_neutral" "marine_animations\combat_missile_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_missile_move_up_down_left" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+$animation "aim_combat_missile_move_up_down_center" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+$animation "aim_combat_missile_move_up_down_right" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+$animation "aim_combat_missile_move_up_mid_left" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+$animation "aim_combat_missile_move_up_mid_center" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+$animation "aim_combat_missile_move_up_mid_right" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+$animation "aim_combat_missile_move_up_up_left" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+$animation "aim_combat_missile_move_up_up_center" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+$animation "aim_combat_missile_move_up_up_right" "marine_animations\combat_missile_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_missile_move_up_neutral" 0
+}
+
+//AIM combat RIFLE MOVE DOWN
+
+$animation "aim_combat_missile_move_down_neutral" "marine_animations\combat_missile_aim_move_down.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_missile_move_down_down_left" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+$animation "aim_combat_missile_move_down_down_center" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+$animation "aim_combat_missile_move_down_down_right" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+$animation "aim_combat_missile_move_down_mid_left" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+$animation "aim_combat_missile_move_down_mid_center" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+$animation "aim_combat_missile_move_down_mid_right" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+$animation "aim_combat_missile_move_down_up_left" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+$animation "aim_combat_missile_move_down_up_center" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+$animation "aim_combat_missile_move_down_up_right" "marine_animations\combat_missile_aim_move_down.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_missile_move_down_neutral" 0
+}
+
+//IDLE 2 MOVE ANIMATIONS
+
+$animation "combat_missile_idle_2_combat_move_S" "marineodst_animations\combat_missile_idle_2_combat_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_idle_2_combat_move_W" "marineodst_animations\combat_missile_idle_2_combat_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_idle_2_combat_move_E" "marineodst_animations\combat_missile_idle_2_combat_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_idle_2_combat_move_N" "marineodst_animations\combat_missile_idle_2_combat_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_idle_2_combat_walk_S" "marineodst_animations\combat_missile_idle_2_combat_walk_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_idle_2_combat_walk_W" "marineodst_animations\combat_missile_idle_2_combat_walk_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_idle_2_combat_walk_E" "marineodst_animations\combat_missile_idle_2_combat_walk_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_idle_2_combat_walk_N" "marineodst_animations\combat_missile_idle_2_combat_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE 2 IDLE ANIMATIONS
+
+$animation "combat_missile_move_2_combat_idle_move_S" "marineodst_animations\combat_missile_move_back_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_move_2_combat_idle_move_W" "marineodst_animations\combat_missile_move_left_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_move_2_combat_idle_move_E" "marineodst_animations\combat_missile_move_right_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_move_2_combat_idle_move_N" "marineodst_animations\combat_missile_move_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_walk_2_combat_idle_walk_S" "marineodst_animations\combat_missile_walk_back_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_walk_2_combat_idle_walk_W" "marineodst_animations\combat_missile_walk_left_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_walk_2_combat_idle_walk_E" "marineodst_animations\combat_missile_walk_right_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_walk_2_combat_idle_walk_N" "marineodst_animations\combat_missile_walk_front_2_combat_idle.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//MOVE ANIMATIONS
+
+$animation "combat_missile_move_S" "marineodst_animations\combat_missile_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_move_W" "marineodst_animations\combat_missile_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_move_E" "marineodst_animations\combat_missile_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_move_N" "marineodst_animations\combat_missile_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//WALK ANIMATIONS
+
+$animation "combat_missile_walk_S" "marineodst_animations\combat_missile_walk_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_walk_W" "marineodst_animations\combat_missile_walk_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_walk_E" "marineodst_animations\combat_missile_walk_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_missile_walk_N" "marineodst_animations\combat_missile_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//ATTACK ANIMATIONS
+
+
+$animation "combat_missile_fire_pose" "marine_animations\combat_missile_fire_1.smd" {
+	fps 30
+	frame 15 15
+	loop
+}
+$animation "combat_missile_reload_pose" "marine_animations\combat_missile_reload_1.smd" {
+	fps 30
+	loop
+	frame 84 84
+}
+$animation "combat_missile_fire" "marine_animations\combat_missile_fire_1.smd" {
+	fps 30
+	subtract	"combat_missile_fire_pose"	0
+}
+$animation "combat_missile_reload" "marine_animations\combat_missile_reload_1.smd" {
+	fps 30
+	subtract	"combat_missile_reload_pose"	0
+}
+
+
+//READY AND PUT AWAY ANIMATIONS
+
+$animation "combat_missile_put_away_pose" "marine_animations\combat_missile_put_away.smd" {
+	fps 30
+	loop
+	frame 4 4
+}
+
+$animation "combat_missile_put_away" "marine_animations\combat_missile_put_away.smd" {
+	fps 30
+	subtract	"combat_missile_put_away_pose"	0
+}
+
+$animation "combat_missile_ready_pose" "marine_animations\combat_missile_ready.smd" {
+	fps 30
+	loop
+	frame 84 84
+}
+
+$animation "combat_missile_ready" "marine_animations\combat_missile_ready.smd" {
+	fps 30
+	subtract	"combat_missile_ready_pose"	0
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_combat_missile_still_up" {
+	"aim_combat_missile_still_up_up_right" "aim_combat_missile_still_up_up_center"  "aim_combat_missile_still_up_up_left"
+	"aim_combat_missile_still_up_mid_right" "aim_combat_missile_still_up_mid_center"  "aim_combat_missile_still_up_mid_left"
+	"aim_combat_missile_still_up_down_right" "aim_combat_missile_still_up_down_center" "aim_combat_missile_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_combat_missile_still_down" {
+	"aim_combat_missile_still_down_up_right" "aim_combat_missile_still_down_up_center"  "aim_combat_missile_still_down_up_left"
+	"aim_combat_missile_still_down_mid_right" "aim_combat_missile_still_down_mid_center"  "aim_combat_missile_still_down_mid_left"
+	"aim_combat_missile_still_down_down_right" "aim_combat_missile_still_down_down_center" "aim_combat_missile_still_down_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_combat_missile_move_up" {
+	"aim_combat_missile_move_up_up_right" "aim_combat_missile_move_up_up_center"  "aim_combat_missile_move_up_up_left"
+	"aim_combat_missile_move_up_mid_right" "aim_combat_missile_move_up_mid_center"  "aim_combat_missile_move_up_mid_left"
+	"aim_combat_missile_move_up_down_right" "aim_combat_missile_move_up_down_center" "aim_combat_missile_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_combat_missile_move_down" {
+	"aim_combat_missile_move_down_up_right" "aim_combat_missile_move_down_up_center"  "aim_combat_missile_move_down_up_left"
+	"aim_combat_missile_move_down_mid_right" "aim_combat_missile_move_down_mid_center"  "aim_combat_missile_move_down_mid_left"
+	"aim_combat_missile_move_down_down_right" "aim_combat_missile_move_down_down_center" "aim_combat_missile_move_down_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+//IDLE SEQUENCES
+
+$sequence "combat_missile_idle_down" {
+	"marineodst_animations\combat_missile_idle.smd"
+	activity "ACT_IDLE_RPG_RELAXED" 1
+	addlayer	"aim_combat_missile_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "combat_missile_idle_up" {
+	"marineodst_animations\combat_missile_idle.smd"
+	activity "ACT_IDLE_RPG" 1
+	addlayer	"aim_combat_missile_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "combat_missile_idle_posing_1" {
+	"marineodst_animations\combat_missile_idle_var2.smd"
+	activity "ACT_IDLE_RPG_RELAXED" 1
+	addlayer	"aim_combat_missile_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "combat_missile_idle_posing_2" {
+	"marineodst_animations\combat_missile_idle_var2.smd"
+	activity "ACT_IDLE_RPG_RELAXED" 1
+	addlayer	"aim_combat_missile_still_down"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_combat_missile_up" {
+	"combat_missile_move_S"
+	"combat_missile_move_W"
+	"combat_missile_move_N"
+	"combat_missile_move_E"
+	"combat_missile_move_S"
+	activity "ACT_RUN_RPG" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_missile_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_human.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "move_combat_missile_down" {
+	"combat_missile_move_S"
+	"combat_missile_move_W"
+	"combat_missile_move_N"
+	"combat_missile_move_E"
+	"combat_missile_move_S"
+	activity "ACT_RUN_RPG_RELAXED" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_missile_move_down"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_human.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_combat_missile_up" {
+	"combat_missile_walk_S"
+	"combat_missile_walk_W"
+	"combat_missile_walk_N"
+	"combat_missile_walk_E"
+	"combat_missile_walk_S"
+	activity "ACT_WALK_RPG" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_missile_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_human.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_combat_missile_down" {
+	"combat_missile_walk_S"
+	"combat_missile_walk_W"
+	"combat_missile_walk_N"
+	"combat_missile_walk_E"
+	"combat_missile_walk_S"
+	activity "ACT_WALK_RPG_RELAXED" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_missile_move_down"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_human.Step" }
+	walkframe 145 LX LY
+}
+
+//MOVEMENT-TRANSITORY SEQUENCES
+
+$sequence "combat_missile_move_2_combat_idle" {
+	"combat_missile_move_2_combat_idle_move_S"
+	"combat_missile_move_2_combat_idle_move_W"
+	"combat_missile_move_2_combat_idle_move_N"
+	"combat_missile_move_2_combat_idle_move_E"
+	"combat_missile_move_2_combat_idle_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_combat_missile_move_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "combat_missile_walk_2_combat_idle" {
+	"combat_missile_walk_2_combat_idle_walk_S"
+	"combat_missile_walk_2_combat_idle_walk_W"
+	"combat_missile_walk_2_combat_idle_walk_N"
+	"combat_missile_walk_2_combat_idle_walk_E"
+	"combat_missile_walk_2_combat_idle_walk_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_combat_missile_move_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "combat_missile_idle_2_combat_move" {
+	"combat_missile_idle_2_combat_move_S"
+	"combat_missile_idle_2_combat_move_W"
+	"combat_missile_idle_2_combat_move_N"
+	"combat_missile_idle_2_combat_move_E"
+	"combat_missile_idle_2_combat_move_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_combat_missile_move_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+$sequence "combat_missile_idle_2_combat_walk" {
+	"combat_missile_idle_2_combat_walk_S"
+	"combat_missile_idle_2_combat_walk_W"
+	"combat_missile_idle_2_combat_walk_N"
+	"combat_missile_idle_2_combat_walk_E"
+	"combat_missile_idle_2_combat_walk_S"
+	activity "ACT_READINESS_RELAXED_TO_STIMULATED" 1
+	addlayer	"aim_combat_missile_move_down"
+	blend "move_yaw" -180 180
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	walkframe 145 LX LY
+}
+
+//EVADE SEQUENCES
+
+$sequence "evade_right_combat_missile" {
+	"marine_animations\combat_missile_evade_right.smd"
+	activity "ACT_STRAFE_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event AE_CL_PLAYSOUND 14 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 16 "HALO3_human.Step" }
+	walkframe 28 LX LY
+}
+
+$sequence "evade_left_combat_missile" {
+	"marine_animations\combat_missile_evade_left.smd"
+	activity "ACT_STRAFE_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event AE_CL_PLAYSOUND 14 "HALO3_human.Step" }
+	{ event AE_CL_PLAYSOUND 16 "HALO3_human.Step" }
+	walkframe 28 LX LY
+}
+
+
+//AIRBORNE SEQUENCES
+
+
+$sequence "airborne_combat_missile" {
+	"marine_animations\combat_missile_airborne.smd"
+	activity "ACT_LEAP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 140 LX LY LZ
+}
+
+$sequence "land_hard_combat_missile" {
+	"marine_animations\combat_missile_land_hard.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+$sequence "land_soft_combat_missile" {
+	"marine_animations\combat_missile_land_soft.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+//ORDER SEQUENCES
+
+$sequence "surprised_combat_missile" {
+	"marine_animations\combat_missile_surprise_front.smd"
+	activity "ACT_SIGNAL_FORWARD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "warn_combat_missile" {
+	"marine_animations\combat_missile_warn.smd"
+	activity "ACT_SIGNAL_TAKECOVER" 1
+	fadein 0.2
+	fadeout 0.2
+	walkframe 150 LX LY
+	fps 30
+}
+
+$sequence "taunt_combat_missile" {
+	"marine_animations\combat_missile_taunt.smd"
+	activity "ACT_GMOD_TAUNT_MUSCLE" 1
+	fadein 0.2
+	fadeout 0.2
+	walkframe 150 LX LY
+	fps 30
+
+}
+
+$sequence "cheer_combat_missile" {
+	"marine_animations\combat_missile_cheer.smd"
+	activity "ACT_GMOD_TAUNT_CHEER" 1
+	fadein 0.2
+	fadeout 0.2
+	walkframe 150 LX LY
+	fps 30
+
+}
+
+$sequence "point_combat_missile" {
+	"marine_animations\combat_missile_point.smd"
+	activity "ACT_GMOD_GESTURE_POINT" 1
+	fadein 0.2
+	fadeout 0.2
+	walkframe 150 LX LY
+	fps 30
+}
+
+$sequence "signal_move_combat_missile" {
+	"marine_animations\combat_missile_signal_move.smd"
+	activity "ACT_SIGNAL1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "signal_hold_combat_missile_1" {
+	"marine_animations\combat_missile_hold_var1.smd"
+	activity "ACT_SIGNAL_HALT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "signal_hold_combat_missile_2" {
+	"marine_animations\combat_missile_hold.smd"
+	activity "ACT_SIGNAL_HALT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "signal_fallback_combat_missile" {
+	"marine_animations\combat_missile_fallback.smd"
+	activity "ACT_SIGNAL_GROUP" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+
+$sequence "signal_advance_combat_missile" {
+	"marine_animations\combat_missile_advance.smd"
+	activity "ACT_SIGNAL_ADVANCE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "signal_attack_combat_missile" {
+	"marine_animations\combat_missile_signal_attack_var1.smd"
+	activity "ACT_SIGNAL_FORWARD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "shakefist_combat_missile" {
+	"marine_animations\combat_missile_shakefist.smd"
+	activity "ACT_GMOD_GESTURE_BECON" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "wave_combat_missile" {
+	"marine_animations\combat_missile_wave.smd"
+	activity "ACT_GMOD_GESTURE_WAVE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "wave_combat_missile_nav_1" {
+	"marine_animations\combat_missile_wave_nav_var1.smd"
+	activity "ACT_GMOD_GESTURE_WAVE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 150 LX LY
+}
+
+$sequence "wave_combat_missile_nav_2" {
+	"marine_animations\combat_missile_wave_nav_var2.smd"
+	activity "ACT_GMOD_GESTURE_WAVE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	
+}
+
+//ATTACK SEQUENCES
+
+$sequence "attack_combat_missile" {
+	"combat_missile_fire"
+	activity "ACT_GESTURE_RANGE_ATTACK_RPG" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "throw_grenade_combat_missile" {
+	"marine_animations\combat_missile_throw_grenade.smd"
+	activity "ACT_GRENADE_TOSS" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	{ event 1100 35 "event_halo_3_human_throw_grenade" }
+	walkframe 145 LX LY
+}
+
+$sequence "reload_combat_missile" {
+	"combat_missile_reload"
+	activity "ACT_RELOAD_RPG" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+
+//MELEE SEQUENCES
+
+$sequence "melee_smash_combat_missile_right" {
+	"marine_animations\combat_missile_smash_right.smd"
+	activity "ACT_MELEE_ATTACK_SWING" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "melee_smash_combat_missile_left" {
+	"marine_animations\combat_missile_smash_left.smd"
+	activity "ACT_MELEE_ATTACK_SWING" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+}
+
+$sequence "melee_combat_missile_1" {
+	"marine_animations\combat_missile_melee_var1.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 61 LX LY LZR
+	{ event 1100 5 "event_halo_3_human_melee" }
+}
+
+$sequence "melee_combat_missile_2" {
+	"marine_animations\combat_missile_melee_var2.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 61 LX LY LZR
+	{ event 1100 18 "event_halo_3_human_melee" }
+}
+
+$sequence "melee_back_combat_missile" {
+	"marine_animations\combat_missile_melee_back.smd"
+	activity "ACT_MELEE_ATTACK1" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 100 LX LY LZR
+	{ event 1100 28 "event_halo_3_human_melee" }
+}
+
+//WEAPON EQUIP AND UNEQUIP
+
+$sequence "draw_fast_combat_missile" {
+	"marine_animations\combat_missile_draw_wpn_fast_var1.smd"
+	activity "ACT_PICKUP_RACK" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+	{ event 1100 12 "event_halo_3_human_draw_weapon" }
+}
+
+$sequence "draw_slow_combat_missile" {
+	"marine_animations\combat_missile_draw_wpn_slow_var1.smd"
+	activity "ACT_PICKUP_RACK" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 145 LX LY
+	{ event 1100 23 "event_halo_3_human_draw_weapon" }
+}
+
+$sequence "ready_combat_missile" {
+	"combat_missile_ready"
+	activity "ACT_ARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "put_away_combat_missile" {
+	"combat_missile_put_away"
+	activity "ACT_DISARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+//TURN SEQUENCES
+
+$sequence "turn_left_combat_missile" {
+	"marine_animations\combat_missile_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_combat_missile" {
+	"marine_animations\combat_missile_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+//MISC SEQUENCES
+
+$sequence "combat_missile_idle_2_crouch_idle" {
+	"marine_animations\combat_missile_idle_2_crouch_idle.smd"
+	activity "ACT_CROUCH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY
+}
+
+

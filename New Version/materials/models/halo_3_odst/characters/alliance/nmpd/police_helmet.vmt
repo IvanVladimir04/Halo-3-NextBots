@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\nmpd\police_helmet"
+                "$bumpmap" "models\halo_3_odst\characters\alliance\nmpd\police_helmet_zbump"
+	"$halflambert" 1
+	"$nodecal"	1
+	"$phong" "1"
+	"$phongexponent" 4
+//	"$phongexponenttexture" "models\halo\halo_3_odst\rookie\odst_body_em"
+	"$phongboost"	"8"
+	"$phongtint"	"{105 135 155}"
+	"$phongfresnelranges"	"[0.01 0.5 1]"
+}

@@ -1,0 +1,19 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3_odst\characters\alliance\odst\rookie\odst_helmet"
+	"$bumpmap" "models\halo_3_odst\characters\alliance\odst\rookie\odst_helmet_N"
+	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint"	"[.002 .005 .01]"
+	"$envmapsaturation"	".3"
+	"$envmapcontrast"		".2"
+	"$phong" "1"
+	"$phongalbedotint" "45"
+	"$phongexponent" 5
+	"$phongboost" 12.25
+	"$phongfresnelranges" "[1 1 1]"
+	"$phongtint"	"[.45 .6 .75]"
+	"$model" "1"
+	"$color2"		"[.7 .8 1]"
+	"$nodecal"			"1"
+}
