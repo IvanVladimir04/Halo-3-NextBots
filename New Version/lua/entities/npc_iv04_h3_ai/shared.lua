@@ -1601,7 +1601,7 @@ function ENT:DoAnimationEvent(a)
 				wep:SetClip1(wep:GetMaxClip1()) -- The weapon's new clip
 			end
 		end )
-		if !CLIENT then
+		if !CLIENT and self.IsWeaponDrawn then
 			local a,len = self:LookupSequence(self.ReloadAnim) -- LookupSequence finds the id of a string (name) of animation
 			local func = function() -- Prepare a function to add to the behavior
 				self:DoGestureSeq(a) -- Play the sequence
