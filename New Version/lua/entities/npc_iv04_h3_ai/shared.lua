@@ -54,6 +54,8 @@ ENT.CountedAllies = 0
 
 ENT.MentionedAllySpree = false
 
+ENT.CollisionMask = MASK_NPCSOLID
+
 ENT.ShootCorpseFilter = { -- Stuff that could have severe consequences if shot at a corpse
     ["astw2_haloreach_concussion_rifle"] = true,
     ["astw2_haloreach_grenade_launcher_falcon"] = true,
@@ -360,6 +362,10 @@ ENT.MaxShield = 60
 
 ENT.BloodType = DONT_BLEED
 
+ENT.AccumulatedDamage = 0 -- For flinching
+ENT.DamageThreshold = 20
+ENT.FlinchDelay = 0 -- None
+
 -------- Damage variables
 
 --[[ Code for sentinel trails
@@ -493,6 +499,24 @@ ENT.TotalHolds = {
 	["rpg"] = true
 }
 
+ENT.PingHitGroups = {
+	[1] = "Head",
+	[2] = "Chest",
+	[3] = "Gut",
+	[4] = "Left_Arm",
+	[5] = "Right_Arm"
+}
+
+ENT.FlinchHitGroups = {
+	[1] = "Head",
+	[2] = "Chest",
+	[3] = "Gut",
+	[4] = "Left_Arm",
+	[5] = "Right_Arm",
+	[6] = "Left_Leg",
+	[7] = "Right_Leg"
+}
+
 function ENT:SetupAnimations()
 	--PrintTable( self:GetSequenceList() )
 	self.PatrolMoveAnim = {"Move_Patrol_Unarmed_Up"}
@@ -503,6 +527,30 @@ function ENT:SetupAnimations()
 	self.DeadAirAnim = "Dead_Airborne"
 	self.DeadLandAnim = self:LookupSequence("Dead_Land") > 0 and "Dead_Land" or {"Dead_Land_1","Dead_Land_2"}
 	self.AirAnim = "any_airborne"
+	self.PingFrontAnims = {
+		["Chest"] = "Pinged_Armored_Rifle_Front_Chest",
+		["Gut"] = "Pinged_Armored_Rifle_Front_Gut",
+		["Head"] = "Pinged_Armored_Rifle_Front_Head",
+		["Left_Arm"] = "Pinged_Armored_Rifle_Front_Left_Arm",
+		["Right_Arm"] = "Pinged_Armored_Rifle_Front_Right_Arm"
+	}
+	self.PingBackAnims = {
+		["Chest"] = "Pinged_Armored_Rifle_Back_Chest",
+		["Gut"] = "Pinged_Armored_Rifle_Back_Gut"
+	}
+	self.FlinchFrontAnims = {
+		["Chest"] = "Flinch_Armored_Rifle_Front_Chest",
+		["Gut"] = "Flinch_Armored_Rifle_Front_Gut",
+		["Head"] = "Flinch_Armored_Rifle_Front_Head",
+		["Left_Arm"] = "Flinch_Armored_Rifle_Front_Left_Arm",
+		["Right_Arm"] = "Flinch_Armored_Rifle_Front_Right_Arm",
+		["Left_Leg"] = "Flinch_Armored_Rifle_Front_Left_Leg",
+		["Right_Leg"] = "Flinch_Armored_Rifle_Front_Right_Leg"
+	}
+	self.FlinchBackAnims = {
+		["Chest"] = "Flinch_Armored_Rifle_Back_Chest",
+		["Gut"] = "Flinch_Armored_Rifle_Back_Gut"
+	}
 	--print(self.DeadLandAnim)
 	if IsValid(self.Weapon) then
 		local hold = self:ConfigureWeapon()
@@ -1026,6 +1074,17 @@ function ENT:NearbyReply( quote, dist, tim )
 	end
 end
 
+--[[
+$hbox 0 - Generic - the default group of hitboxes, appears White in HLMV
+$hbox 1 - Head - Used for human NPC heads and to define where the player sits on the vehicle.mdl, appears Red in HLMV
+$hbox 2 - Chest - Used for human NPC midsection and chest, appears Green in HLMV
+$hbox 3 - Stomach - Used for human NPC stomach and pelvis, appears Yellow in HLMV
+$hbox 4 - Left Arm - Used for human Left Arm, appears Deep Blue in HLMV
+$hbox 5 - Right Arm - Used for human Right Arm, appears Bright Violet in HLMV
+$hbox 6 - Left Leg - Used for human Left Leg, appears Bright Cyan in HLMV
+$hbox 7 - Right Leg - Used for human Right Leg, appears White like the default group in HLMV
+]]
+
 function ENT:OnTraceAttack( info, dir, trace )
 	--if self.Unkillable then info:SetDamage(0) end
 	if trace.HitGroup == 1 and !self.HeadShotImmune then
@@ -1038,26 +1097,56 @@ function ENT:OnTraceAttack( info, dir, trace )
 	if self.WeakHitGroup and hg != self.WeakHitGroup then
 		info:SetDamage(0)
 	end
-	--[[if !self.IsInVehicle and self.FlinchAnims[hg] and !self.DoneFlinch and math.random(100) < self.FlinchChance and info:GetDamage() > self.FlinchDamage then
-		self.DoneFlinch = true
-		self.DoingFlinch = true
-		timer.Simple( math.random(1,2), function()
-			if IsValid(self) then
-				self.DoneFlinch = false
+	local ang = (trace.HitPos-self:WorldSpaceCenter()):GetNormalized():Angle()
+	local dif = math.AngleDifference(ang.y,self:GetAngles().y)
+	if dif < 0 then dif = dif+360 end
+	self.AccumulatedDamage = self.AccumulatedDamage+info:GetDamage()
+	local behind = (dif > 90 and dif < 270)
+	--print(behind)
+	if self.AccumulatedDamage > self.DamageThreshold then
+		self.AccumulatedDamage = 0
+		if self.FlinchHitGroups[hg] then
+			local doflinch = false
+			local flinchanim
+			if behind then
+				if self.FlinchBackAnims[self.FlinchHitGroups[hg]] then
+					doflinch = true
+					flinchanim = self.FlinchBackAnims[self.FlinchHitGroups[hg]]
+				end
+			else
+				doflinch = true
+				flinchanim = self.FlinchFrontAnims[self.FlinchHitGroups[hg]]
 			end
-		end )
-		local seq,len = self:LookupSequence(self.FlinchAnims[hg])
-		timer.Simple( len, function()
-			if IsValid(self) then
-				self.DoingFlinch = false
+			--print(flinchanim)
+			if doflinch then
+				self.AnimBusy = true
+				local func = function()
+					self:PlaySequenceAndPWait(flinchanim)
+					self.AnimBusy = false
+				end
+				table.insert(self.StuffToRunInCoroutine,func)
+				self:ResetAI()
 			end
-		end )
-		local func = function()
-			self:PlaySequenceAndMove(seq,1,self:GetForward()*-1,self.FlinchMove[hg],0.4)
 		end
-		table.insert(self.StuffToRunInCoroutine,func)
-		self:ResetAI()
-	end]]
+	elseif self.PingHitGroups[hg] then
+		if self.PingHitGroups[hg] then
+			local doping = false
+			local pinganim
+			if behind then
+				if self.FlinchBackAnims[self.PingHitGroups[hg]] then
+					doping = true
+					pinganim = self.PingBackAnims[self.PingHitGroups[hg]]
+				end
+			else
+				doping = true
+				pinganim = self.PingFrontAnims[self.PingHitGroups[hg]]
+			end
+			--print(flinchanim)
+			if doping then
+				self:DoGestureSeq(pinganim)
+			end
+		end
+	end
 end
 
 function ENT:OnLeaveGround(ent)
