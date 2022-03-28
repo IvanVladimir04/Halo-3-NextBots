@@ -4,7 +4,7 @@ ENT.Base 			= "npc_iv04_h3_ai"
 
 ENT.PrintName = "Johnson"
 
-ENT.Models = {"models/halo3/ODSTS.mdl"}
+ENT.Models = {"models/halo_3/characters/alliance/johnson.mdl"}
 
 ENT.StartHealth = 100
 
@@ -13,6 +13,8 @@ ENT.Relationship = 1
 ENT.FriendlyToPlayers = true
 
 ENT.HeadShotImmune = true
+
+ENT.AITemplate = "MARINE"
 
 ENT.Faction = "FACTION_ALLIANCE"
 
@@ -29,8 +31,6 @@ ENT.PossibleWeapons = {
 }
 
 function ENT:DoInit()
-	local wep = table.Random(self.PossibleWeapons)
-	self:Give(wep)
 	self.ColR = 255--math.random(255)
 	self.ColG = 255--math.random(255)
 	self.ColB = 255--math.random(255)
@@ -49,14 +49,11 @@ function ENT:DoInit()
 	self:SetBodygroup(14,1)
 	--print(head)
 	self.VoiceType = "Johnson"
-	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
-	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
-	--print(self:GetName(),self.Weapon:GetName())
 	self.Unkillable = GetConVar("halo_3_nextbots_ai_heroes"):GetBool()
 end
---[[
-list.Set( "NPC", "npc_iv04_h3odst_johnson", {
-	Name = "ODST Johnson",
-	Class = "npc_iv04_h3odst_johnson",
-	Category = "Halo 3 ODST"
-} ) ]]
+
+list.Set( "NPC", "npc_iv04_h3odst_all_johnson", {
+	Name = "Johnson",
+	Class = "npc_iv04_h3odst_all_johnson",
+	Category = "Halo 3: ODST"
+} )

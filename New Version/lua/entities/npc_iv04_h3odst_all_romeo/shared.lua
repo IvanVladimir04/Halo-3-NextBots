@@ -4,7 +4,7 @@ ENT.Base 			= "npc_iv04_h3_ai"
 
 ENT.PrintName = "Romeo"
 
-ENT.Models = {"models/halo3/ODSTS.mdl"}
+ENT.Models = {"models/halo_3/characters/alliance/romeo.mdl"}
 
 ENT.StartHealth = 100
 
@@ -13,6 +13,8 @@ ENT.Relationship = 1
 ENT.FriendlyToPlayers = true
 
 ENT.HeadShotImmune = true
+
+ENT.AITemplate = "MARINE"
 
 ENT.GreetQuote = "grt"
 
@@ -37,9 +39,10 @@ ENT.PossibleWeapons = {
 
 function ENT:DoInit()
 	self.VoiceType = "Romeo"
-	self.ColR = 30--math.random(255)
-	self.ColG = 60--math.random(255)
-	self.ColB = 125--math.random(255)
+	self.ColR = 55--math.random(255)
+	self.ColG = 65--math.random(255)
+	self.ColB = 135--math.random(255)
+	self:SetColor(Color(self.ColR,self.ColG,self.ColB))
 	self.GetPlayerColor = function()
 		return Vector(self.ColR/255,self.ColG/255,self.ColB/255)
 	end
@@ -47,20 +50,15 @@ function ENT:DoInit()
 	net.WriteEntity( self )
 	net.WriteVector( self:GetPlayerColor() )
 	net.Broadcast()
-	local wep = table.Random(self.PossibleWeapons)
-	self:Give(wep)
 	self:SetBodygroup(6,4)
 	self:SetBodygroup(8,4)
 	--self:SetBodygroup(14,1)
 	self:SetSkin(1)
-	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
-	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
-	--print(self:GetName(),self.Weapon:GetName())
 	self.Unkillable = GetConVar("halo_3_nextbots_ai_heroes"):GetBool()
 end
---[[
+
 list.Set( "NPC", "npc_iv04_h3odst_all_romeo", {
 	Name = "ODST Romeo",
 	Class = "npc_iv04_h3odst_all_romeo",
-	Category = "Halo 3 ODST"
-} )]]
+	Category = "Halo 3: ODST"
+} )

@@ -499,6 +499,16 @@ ENT.TotalHolds = {
 	["rpg"] = true
 }
 
+ENT.WeaponRating = {
+	["crossbow"] = "thnk_plr_btrwpn",
+	["ar2"] = "ok_plr_trdwpn",
+	["shotgun"] = "ok_plr_trdwpn",
+	["pistol"] = "scrn_plr_wrswpn",
+	["revolver"] = "scrn_plr_wrswpn",
+	["smg"] = "ok_plr_trdwpn",
+	["rpg"] = "thnk_plr_btrwpn"
+}
+
 ENT.PingHitGroups = {
 	[1] = "Head",
 	[2] = "Chest",
@@ -940,6 +950,13 @@ function ENT:DoAnimation(anim,act)
 	end
 end
 
+function ENT:ReactToTrade(wep)
+	local hold = wep.HoldType_Aim
+	local typ = self.WeaponRating[hold]
+	--print(hold,typ)
+	self:Speak(typ)
+end
+
 function ENT:Use( activator )
 	if !self.CanUse then return end
 	if self:CheckRelationships(activator) == "friend" and activator:IsPlayer() then
@@ -994,25 +1011,9 @@ function ENT:Use( activator )
 									self.Weapon:Remove()
 									self:Give(gift)
 									self:SetupAnimations()
+									self:ReactToTrade(self.Weapon)
 									self.CanUse = true
-									if math.random(1,2) == 1 then self:Speak("OnTrade") end
-									--[[local clone = ents.Create(self:GetClass())
-									clone:SetPos(self:GetPos())
-									clone:SetAngles(self:GetAngles())
-									clone:SetHealth(self:Health())
-									clone.DoInit = function()
-										clone:Give(gift)
-										clone:SetSkin(self:GetSkin())
-										for i = 1, table.Count( self:GetBodyGroups() ) do
-											clone:SetBodygroup( i-1,self:GetBodygroup( i-1 ) )
-											if i == table.Count( self:GetBodyGroups() ) then
-												clone:SetBodygroup( i,self:GetBodygroup( i ) )
-											end
-										end
-									end
-									clone:Spawn()
-									undo.ReplaceEntity(self,clone)
-									self:Remove()]]
+									--if math.random(1,2) == 1 then self:Speak("ok_plr_trdst_grn") end
 								end
 							end
 						else
@@ -1495,7 +1496,9 @@ end
 
 function ENT:GetShootPos() -- Where to calculate the aiming from
 	if IsValid(self:GetActiveWeapon()) then -- If we have a weapon, use the muzzle
-		return self:GetActiveWeapon():GetAttachment(self:GetActiveWeapon():LookupAttachment("muzzle")).Pos
+		local att = self:GetActiveWeapon():LookupAttachment("muzzle")
+		if att == 0 then att = 1 end
+		return self:GetActiveWeapon():GetAttachment(1).Pos
 	else
 		return self:WorldSpaceCenter() -- Otherwise use the entity's center
 	end
