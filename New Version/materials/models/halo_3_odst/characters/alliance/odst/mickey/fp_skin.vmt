@@ -2,7 +2,7 @@
 {
 	"$baseTexture" "models\halo_3_odst\characters\alliance\odst\rookie\handmale_1st"
 	"$bumpmap" "models\halo_3_odst\characters\alliance\odst\rookie\handmale_1st_n"
-	"$nodecal"	1
+	"$nodecal"			"1"
 "$phongexponent" "5"
  "$halflambert" "1"
 "$phong" "1"
@@ -14,4 +14,15 @@
 "$rimlightexponent" "5" 
 "$rimlightboost" "1.5" 
 "$rimmask" 1
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+	}
 }

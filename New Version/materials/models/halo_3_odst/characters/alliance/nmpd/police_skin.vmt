@@ -6,12 +6,23 @@
 "$phongexponent" "5"
  "$halflambert" "1"
 "$phong" "1"
-	"$phongboost"	"0.4"
-	"$phongfresnelranges"	"[.20 .25 .25]"
+"$phongboost"	"0.4"
+"$phongfresnelranges"	"[.20 .25 .25]"
 
 	
 "$rimlight" "1" 
 "$rimlightexponent" "5" 
 "$rimlightboost" "1.5" 
 "$rimmask" 1
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+	}
 }

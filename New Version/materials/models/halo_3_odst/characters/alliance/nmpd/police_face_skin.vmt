@@ -9,4 +9,15 @@
 //	"$phongexponenttexture" "models\halo\halo_3_odst\rookie\odst_body_em"
 	"$phongboost"	"1"
 	"$phongfresnelranges"	"[0.01 0.5 1]"
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+	}
 }

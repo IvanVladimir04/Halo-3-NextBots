@@ -11,13 +11,21 @@
 	"$detailscale"			"1.00"
 	"$color2"		"[1 10 2]"
 	"$nodecal"	1
-			"Proxies" 
+	"Proxies" 
 	{
 		UniformNoise
 		{
 			resultVar	$alpha
 			minVal	.035
 			maxVal	.035
+		}
+
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color"
 		}
 	}
 }

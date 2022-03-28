@@ -3,4 +3,15 @@
 	"$basetexture" "Models/ODSTDutch/Blood_patch"
 	"$translucent" 1
 	"$nodecal"	1
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+	}
 }

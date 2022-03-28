@@ -7,16 +7,11 @@
 	"$phong" "1"
 	"$phongexponent" 5
 //	"$phongexponenttexture" "models\halo_3_odst\characters\alliance\odst\rookie\odst_gear_em"
-	"$phongboost"	"1"
+	"$phongboost"	"10"
 	"$phongfresnelranges"	"[0.01 0.5 1]"
 	"$blendtintbybasealpha"	"1"
 	Proxies
 	{
-		PlayerColor
-		{
-			resultVar	$color2 // pass the player color value to Gmod
-			default		0.23 0.35 0.41 // unused for now.
-		}
 		Clamp
 		{
 			min 0

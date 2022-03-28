@@ -58,7 +58,7 @@ $cdmaterials "models\halo_3\characters\alliance\marine\odst\shared\"
 
 // RAGDOLL
 
-$includemodel "halo_3/players/odst_animations.mdl"
+$includemodel "halo_3/characters/alliance/marine_h3odst.mdl"
 
 
 

@@ -9,26 +9,5 @@
 	"$phongboost"	"8"
 	"$phongfresnelranges"	"[0.01 0.5 1]"
 	"$blendtintbybasealpha"	"1"
-	Proxies
-	{
-		PlayerColor
-		{
-			resultVar	$color2 // pass the player color value to Gmod
-			default		0.23 0.35 0.41 // unused for now.
-		}
-		Clamp
-		{
-			min 0.9
-			max 1
-			srcVar1 "$color2"
-			resultVar "$color"
-		}
-		Clamp
-		{
-			min 5
-			max 5
-			srcVar1 "$color"
-			resultVar "$selfillumtint"
-		}
-	}
+
 }
