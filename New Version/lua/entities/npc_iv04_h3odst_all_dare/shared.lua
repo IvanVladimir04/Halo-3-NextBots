@@ -4,7 +4,7 @@ ENT.Base 			= "npc_iv04_h3_ai"
 
 ENT.PrintName = "Dare"
 
-ENT.Models = {"models/halo3/ODST_Dare.mdl"}
+ENT.Models = {"models/halo_3/characters/alliance/dare.mdl"}
 
 ENT.StartHealth = 100
 
@@ -14,6 +14,8 @@ ENT.FriendlyToPlayers = true
 
 ENT.EnableFlashlight = true
 
+ENT.AITemplate = "MARINE"
+
 ENT.Faction = "FACTION_ALLIANCE"
 
 ENT.PossibleWeapons = {
@@ -22,17 +24,10 @@ ENT.PossibleWeapons = {
 
 
 function ENT:DoInit()
-	local wep = table.Random(self.PossibleWeapons)
-	self:Give(wep)
 	--print(head)
 	self.VoiceType = "Dare"
-	self:SetBodygroup(8,math.random(-4,3))
-	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
-	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
-	--print(self:GetName(),self.Weapon:GetName())
-	if self.EnableFlashlight then
-
-	end
+	-- self:SetBodygroup(8,math.random(-4,3))
+	self:SetColor(Color(75,85,105))
 end
 
 function ENT:MoveMouth()
@@ -45,8 +40,8 @@ function ENT:PoseEyes()
 	-- Trollge
 end
 
---list.Set( "NPC", "npc_iv04_h3odst_all_dare", {
---	Name = "ODST Dare",
---	Class = "npc_iv04_h3odst_all_dare",
---	Category = "Halo 3 ODST"
---} )
+list.Set( "NPC", "npc_iv04_h3odst_all_dare", {
+	Name = "ODST Dare",
+	Class = "npc_iv04_h3odst_all_dare",
+	Category = "Halo 3: ODST"
+} )

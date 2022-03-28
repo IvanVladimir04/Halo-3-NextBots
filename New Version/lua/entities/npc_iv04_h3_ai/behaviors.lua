@@ -345,7 +345,7 @@ function ENT:HunterAttack(ent)
 					timer.Simple( 0.05*i, function()
 						if IsValid(self) then
 							local proj = ents.Create("astw2_halo3_hunter_projectile")
-							local att = self:GetAttachment(1)
+							local att = self:GetAttachment(3)
 							proj:SetPos(att.Pos)
 							proj:SetAngles(att.Ang)
 							proj:SetOwner(self)
