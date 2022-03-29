@@ -41,7 +41,8 @@ $PoseParameter "aim_yaw" -45 45 0
 $PoseParameter "aim_pitch" -90 90 0
 $attachment "eyes" "headextend" 5.00 4.00 0.00 rotate 0 90 90
 $attachment "back" "spine1" 5.00 4.00 0.00 rotate 0 90 90
-$attachment "fuel_rod" "r_hand" 22.00 -3.70 -1.00 rotate -0 0 0
+$attachment "fuel_rod" "r_hand" 23.43 -1.50 -0.50 rotate -0 -0 -0
+$attachment "fuel_rod_projectile" "r_hand" 23.43 -1.50 -0.50 rotate -0 -0 -0
 //$attachment "1" "right hand" 4.50 1.50 1.50 rotate -10.00 -890.00 0.00
 
 
