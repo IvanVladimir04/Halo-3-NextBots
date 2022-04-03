@@ -12,8 +12,6 @@ ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true
 
-ENT.EnableFlashlight = true
-
 ENT.ODSTAnims = true
 
 ENT.GreetQuote = "grt"
@@ -70,8 +68,8 @@ function ENT:DoInit()
 	end
 end
 
---list.Set( "NPC", "npc_iv04_h3odst_all_nmpd", {
---	Name = "NMPD Officer",
---	Class = "npc_iv04_h3odst_all_nmpd",
---	Category = "Halo 3: ODST"
---} )
+list.Set( "NPC", "npc_iv04_h3odst_all_nmpd", {
+	Name = "NMPD Officer",
+	Class = "npc_iv04_h3odst_all_nmpd",
+	Category = "Halo 3: ODST"
+} )

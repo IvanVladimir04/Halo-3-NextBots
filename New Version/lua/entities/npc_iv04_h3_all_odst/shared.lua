@@ -36,12 +36,6 @@ function ENT:DoInit()
 		self:SetSkin(1)
 	end
 	self:SetBodygroup(4,1)
-	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
-	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
-	--print(self:GetName(),self.Weapon:GetName())
-	if self.EnableFlashlight then
-
-	end
 end
 
 list.Set( "NPC", "npc_iv04_h3_all_odst", {

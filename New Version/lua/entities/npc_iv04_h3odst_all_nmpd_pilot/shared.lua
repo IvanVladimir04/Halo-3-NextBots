@@ -12,8 +12,6 @@ ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true
 
-ENT.EnableFlashlight = true
-
 ENT.GreetQuote = "grt"
 
 ENT.AITemplate = "MARINE"
@@ -23,14 +21,7 @@ ENT.Faction = "FACTION_ALLIANCE"
 ENT.ODSTAnims = true
 
 ENT.PossibleWeapons = {
-	"astw2_halo3_assaultrifle",
-	"astw2_halo3_assaultrifle",
-	"astw2_halo3_smg_odst",
-	"astw2_halo3_smg_odst",
-	"astw2_halo3_smg_odst",
-	"astw2_halo3_shotgun",
-	"astw2_halo3_magnum_odst",
-	"astw2_halo3_magnum_odst",
+	"astw2_halo3_battlerifle",
 	"astw2_halo3_magnum_odst"
 	--[["astw2_haloreach_rocket_launcher",
 	"astw2_haloreach_sniper_rifle",
@@ -55,11 +46,11 @@ function ENT:DoInit()
 	net.WriteVector( self:GetPlayerColor() )
 	net.Broadcast()
 	self:SetBodygroup(3,2)
-	self:SetBodygroup(4,1)
+	self:SetBodygroup(4,math.random(0,1))
 end
 
---list.Set( "NPC", "npc_iv04_h3odst_all_nmpd_pilot", {
---	Name = "NMPD Pilot",
---	Class = "npc_iv04_h3odst_all_nmpd_pilot",
---	Category = "Halo 3: ODST"
---} )
+list.Set( "NPC", "npc_iv04_h3odst_all_nmpd_pilot", {
+	Name = "NMPD Pilot",
+	Class = "npc_iv04_h3odst_all_nmpd_pilot",
+	Category = "Halo 3: ODST"
+} )

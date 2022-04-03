@@ -135,11 +135,41 @@ local opts = {
 		sc = "Halo 3 NextBots",
 		id = "Halo_3_NextBots",
 		dv = 0,
-		d = "Enemies will always know where you are?",
-		cv = "halo_3_nextbots_ai_omniscience"
+		d = "Allow humans to have flashlights?",
+		cv = "halo_3_nextbots_ai_flashlights"
 	},
 	
 	[12] = {
+		c = "Options",
+		name = "Ivan04",
+		sc = "Halo 3 NextBots",
+		id = "Halo_3_NextBots",
+		dv = 0,
+		d = "Enable performance mode? (skips some calculations for the sake of performance)",
+		cv = "halo_3_nextbots_ai_performance"
+	},
+	
+	[13] = {
+		c = "Options",
+		name = "Ivan04",
+		sc = "Halo 3 NextBots",
+		id = "Halo_3_NextBots",
+		dv = 0,
+		d = "Enemies always know where you are?",
+		cv = "halo_3_nextbots_ai_omniscience"
+	},
+	
+	[14] = {
+		c = "Options",
+		name = "Ivan04",
+		sc = "Halo 3 NextBots",
+		id = "Halo_3_NextBots",
+		dv = 0,
+		d = "Enable shooting corpses",
+		cv = "halo_3_nextbots_ai_shootcorpses"
+	},
+	
+	[15] = {
 		c = "Options", -- Category	
 		name = "Ivan04",
 		sc = "Halo 3 NextBots", -- Subcategory

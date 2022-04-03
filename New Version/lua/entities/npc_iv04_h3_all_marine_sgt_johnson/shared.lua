@@ -12,8 +12,6 @@ ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true
 
-ENT.EnableFlashlight = false
-
 --ENT.SpawnWithWeaponDrawn = true
 
 ENT.Faction = "FACTION_ALLIANCE"

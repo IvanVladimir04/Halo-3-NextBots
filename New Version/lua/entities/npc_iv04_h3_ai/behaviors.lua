@@ -248,11 +248,13 @@ function ENT:MarineThink()
 			if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
 				local chances = 5+(#self:PossibleTargets())
 				local rand = math.random(100)
-				if rand < chances or H3BS:WasSignalGiven("ThrowAllGrenades",5) then
+				--print(self.ThrownGrenades)
+				if rand < chances or self:GetSquad():WasSignalGiven("ThrowAllGrenades",5) then
 					local func = function()
 						self:ThrowGrenade()
 					end
 					table.insert(self.StuffToRunInCoroutine,func)
+					--print("grenade")
 					return self:ResetAI()
 				end	
 			end		
@@ -287,7 +289,7 @@ function ENT:BruteThink()
 			if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
 				local chances = 5+(#self:PossibleTargets())
 				local rand = math.random(100)
-				if rand < chances or H3BS:WasSignalGiven("ThrowAllGrenades",5) then
+				if rand < chances or self:GetSquad():WasSignalGiven("ThrowAllGrenades",5) then
 					local func = function()
 						self:ThrowGrenade()
 					end
@@ -552,7 +554,8 @@ function ENT:MarineBehavior(ent,range)
 			end
 			if !IsValid(ent) then return end
 			local p
-			if math.random(1,2) == 1 then p = ent:GetPos() end
+			--print(self:IsOutNumbered())
+			if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
 			local rang = math.random(128,512)
 			if p == ent:GetPos() then rang = self.DistToTarget/2 end
 			local pos = self:FindNearbyPos(p,rang)

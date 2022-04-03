@@ -459,6 +459,7 @@ function ENT:OnInitialize()
 	local func = self.TemplateInitialize[self.AITemplate]
 	func(self)
 	self.AIType = GetConVar("halo_3_nextbots_ai_type"):GetString() or self.AIType
+	self.EnableFlashlight = GetConVar("halo_3_nextbots_ai_flashlights"):GetInt() == 1 or false
 	if self.PossibleWeapons then
 		local wep = table.Random(self.PossibleWeapons)
 		self:Give(wep,self.SpawnWithWeaponDrawn)
@@ -618,7 +619,7 @@ function ENT:SetupAnimations()
 			self.CrouchMoveAnim = {"move_crouch_pistol_up"}
 			self.WarnAnim = {"Point_Combat_Pistol"}
 			self.CrouchMoveCalmAnim = {"pistol_crouch_move_passive"}
-			self.GrenadeAnim = {"Throw_Grenade_Combat_Pistol"}
+			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
 			self.PushLeftAnim = "Melee_Smash_Combat_Pistol_Left"
 			self.PushLeftAnim = "Right_Smash_Combat_Pistol_Left"
 			self.TauntAnim = {"Taunt_Combat_Pistol"}
@@ -693,7 +694,7 @@ function ENT:SetupAnimations()
 				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
 			end
 			self.ReloadAnim = "reload_combat_rifle"
-			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle"}
+			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
 			self.EquipmentAnim = "Throw_Equipment_Combat_Rifle"
 			self.AirAnim = "airborne_combat_rifle"
 			self.LandAnim = "land_soft_combat_rifle"
@@ -721,7 +722,7 @@ function ENT:SetupAnimations()
 			self.AdvanceAnim = "signal_attack_combat_rifle"
 			self.ShakeFistAnim = "shakefist_combat_missile"
 			self.CheerAnim = "cheer_combat_rifle"
-			self.AllowGrenade = false
+			self.AllowGrenade = true
 			self.CanShootCrouch = true
 			self.CanMelee = false
 			self.TauntAnim = {"taunt_combat_rifle"}
@@ -789,7 +790,7 @@ function ENT:SetupAnimations()
 			self.ShakeFistAnim = "shakefist_combat_missile"
 			self.CheerAnim = "cheer_combat_missile"
 			self.GrenadeAnim = {"Throw_Grenade_Combat_Missile"}
-			self.AllowGrenade = false
+			self.AllowGrenade = true
 			self.CanShootCrouch = true
 			self.CanMelee = false
 			self.TauntAnim = {"taunt_combat_missile"}
@@ -854,7 +855,7 @@ function ENT:SetupAnimations()
 			self.AdvanceAnim = "signal_attack_combat_missile"
 			self.ShakeFistAnim = "shakefist_combat_support"
 			self.CheerAnim = "cheer_combat_support"
-			self.GrenadeAnim = {"Throw_Grenade_Combat_support"}
+			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
 			self.AllowGrenade = false
 			self.CanShootCrouch = true
 			self.CanMelee = false
@@ -987,7 +988,7 @@ function ENT:Use( activator )
 					self.CanUse = true
 				end
 			end )
-		elseif IsValid(ply:GetActiveWeapon()) and IsValid(self.Weapon) and self.Weapon:GetClass() != ply:GetActiveWeapon():GetClass() and self.TotalHolds[ply:GetActiveWeapon().HoldType_Aim] then
+		elseif self.IsWeaponDrawn and IsValid(ply:GetActiveWeapon()) and IsValid(self.Weapon) and self.Weapon:GetClass() != ply:GetActiveWeapon():GetClass() and self.TotalHolds[ply:GetActiveWeapon().HoldType_Aim] then
 			self.CanUse = false
 			local stop = false
 			for i = 1, 200 do
@@ -1451,6 +1452,8 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 	if self.GoingForSneakKill then
 		self.GoingForSneakKill = false
 		self.HaltShoot = false
+	else
+		self:ResetAI()
 	end
 end
 
@@ -1550,6 +1553,8 @@ function ENT:AdjustWeapon(wep,drawn)
 	self.IsWeaponDrawn = drawn
 	if drawn then
 		wep:AddEffects(EF_BONEMERGE)
+		self:SetAmmo(wep:GetMaxClip1())
+		wep:SetClip1(wep:GetMaxClip1())
 		if self.EnableFlashlight then
 			self.Sprite = ents.Create("env_sprite")
 			self.Sprite:SetPos(self.Weapon:GetAttachment(1).Pos)
@@ -1827,6 +1832,11 @@ function ENT:OnHaveEnemy(ent)
 			self:ResetAI()
 		end
 	end
+end
+
+function ENT:IsOutNumbered()
+	local dif = math.abs(#self:PossibleTargets()-#self:GetSquad():GetMembers()) > 3
+	return math.abs(#self:PossibleTargets()-#self:GetSquad():GetMembers()) > 3, dif
 end
 
 function ENT:OnInjured(dmg)
@@ -2186,7 +2196,7 @@ function ENT:OnOtherKilled( victim, info )
 	end
 	if victim == self.Enemy and !victim.GettingShot then
 		local spot = ( self.RegisteredTargetPositions[victim] or victim:GetPos() ) + Vector(math.random(-64,64),math.random(-64,64),0)
-		local new = self:GetATarget()
+		local new = self:GetATarget(true)
 		if attacker:IsPlayer() and math.random(1,2) == 1 then
 			self:Speak("kllmytrgt")
 		elseif attacker == self and math.random(1,2) == 1 then

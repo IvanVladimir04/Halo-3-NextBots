@@ -38,12 +38,6 @@ function ENT:DoInit()
 		--print("Reynolds")
 		self.VoiceType = "Reynolds"
 	end
-	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
-	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
-	--print(self:GetName(),self.Weapon:GetName())
-	if self.EnableFlashlight then
-
-	end
 end
 
 list.Set( "NPC", "npc_iv04_h3_all_odst_sgt", {

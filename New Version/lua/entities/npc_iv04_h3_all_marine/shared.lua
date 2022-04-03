@@ -12,8 +12,6 @@ ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true
 
-ENT.EnableFlashlight = false
-
 ENT.AITemplate = "MARINE"
 
 ENT.Faction = "FACTION_ALLIANCE"
@@ -71,11 +69,6 @@ function ENT:DoInit()
 	--print(head)
 	self:SetBodygroup(6,math.random(1,2))
 	self:SetBodygroup(7,math.random(-4,3))
-	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
-	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
-	--print(self:GetName(),self.Weapon:GetName())
-	if self.EnableFlashlight then
-	end
 end
 
 list.Set( "NPC", "npc_iv04_h3_all_marine", {
