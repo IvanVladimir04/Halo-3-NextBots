@@ -237,7 +237,7 @@ function ENT:MarineThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if self.HasLOSToTarget and !self.DoingMelee then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -278,7 +278,7 @@ function ENT:BruteThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if self.HasLOSToTarget and !self.DoingMelee then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -321,7 +321,7 @@ function ENT:HunterThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if self.HasLOSToTarget and !self.DoingMelee then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -825,7 +825,7 @@ function ENT:PostCombatChecks()
 	end
 end
 function ENT:WeaponThink()
-		if GetConVar("ai_disabled"):GetInt() == 1 or self.Flying or self.HaltShoot or self.AnimBusy then return end
+		if IV04_AIDisabled or self.Flying or self.HaltShoot or self.AnimBusy then return end
 		if IsValid(self.Enemy) then
 			local ent = self.Enemy		
 			if self.LastCalcTime < CurTime() then -- We can do expensive actions

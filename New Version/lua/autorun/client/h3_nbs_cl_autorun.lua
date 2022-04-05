@@ -165,7 +165,7 @@ local opts = {
 		sc = "Halo 3 NextBots",
 		id = "Halo_3_NextBots",
 		dv = 0,
-		d = "Enable shooting corpses",
+		d = "Disable shooting corpses",
 		cv = "halo_3_nextbots_ai_shootcorpses"
 	},
 	

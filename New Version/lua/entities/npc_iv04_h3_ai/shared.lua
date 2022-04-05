@@ -24,7 +24,7 @@ ENT.LastTimeWeShot = 0
 
 ENT.ThinkDelay = 2
 
-ENT.AimCalculationT = 3
+ENT.AimCalculationT = 2
 
 ENT.ThrownGrenades = 0
 
@@ -55,6 +55,10 @@ ENT.CountedAllies = 0
 ENT.MentionedAllySpree = false
 
 ENT.CollisionMask = MASK_NPCSOLID
+
+ENT.CanReactToGrenades = true
+
+ENT.GrenadeDodgeDistance = 350
 
 ENT.ShootCorpseFilter = { -- Stuff that could have severe consequences if shot at a corpse
     ["astw2_haloreach_concussion_rifle"] = true,
@@ -460,6 +464,7 @@ function ENT:OnInitialize()
 	func(self)
 	self.AIType = GetConVar("halo_3_nextbots_ai_type"):GetString() or self.AIType
 	self.EnableFlashlight = GetConVar("halo_3_nextbots_ai_flashlights"):GetInt() == 1 or false
+	self.DisableCorpseShooting = GetConVar("halo_3_nextbots_ai_shootcorpses"):GetInt() == 1 or false
 	if self.PossibleWeapons then
 		local wep = table.Random(self.PossibleWeapons)
 		self:Give(wep,self.SpawnWithWeaponDrawn)
@@ -609,9 +614,10 @@ function ENT:SetupAnimations()
 			self.WalkAnim = {"Walk_Combat_Pistol_Up"}
 			self.WalkCalmAnim = {"Walk_Combat_Pistol_Down"}
 			self.ReloadAnim = "Reload_Combat_Pistol"
-			self.DiveLeftAnim = "Dive_Left_Combat_Pistol"
-			self.DiveRightAnim = "Dive_Right_Combat_Pistol"
-			self.AirAnim = "Airborne_Combat_Pistol"
+			self.DiveLeftAnim = "Dive_Left_Combat_Unarmed"
+			self.DiveRightAnim = "Dive_Right_Combat_Unarmed"
+			self.DiveFrontAnim = "Dive_Front_Combat_Unarmed"
+			self.AirAnim = "Airborne_Combat_Unarmed"
 			self.LandAnim = "Land_Soft_Combat_Pistol"
 			self.LandHardAnim = "Land_Hard_Combat_Pistol"
 			self.SurpriseAnim = "Surprised_Combat_Pistol"
@@ -643,9 +649,9 @@ function ENT:SetupAnimations()
 			self.CanMelee = true
 			self.EvadeLeftAnim = "Evade_Left_Combat_Pistol"
 			self.EvadeRightAnim = "Evade_Right_Combat_Pistol"
-			self.DiveFrontAnim = "dive_front_combat_pistol"
-			self.DiveLeftAnim = "dive_left_combat_pistol"
-			self.DiveRightAnim = "dive_right_combat_pistol"
+			self.DiveFrontAnim = "dive_front_combat_unarmed"
+			self.DiveLeftAnim = "dive_left_combat_unarmed"
+			self.DiveRightAnim = "dive_right_combat_unarmed"
 			self.FallbackAnim = "Signal_Fallback_Combat_Pistol"
 			self.HoldAnim = "Signal_Hold_Combat_Pistol"
 			self.EquipmentAnim = "Throw_Equipment_Combat_Pistol"
@@ -728,9 +734,9 @@ function ENT:SetupAnimations()
 			self.TauntAnim = {"taunt_combat_rifle"}
 			self.EvadeLeftAnim = "evade_left_combat_rifle"
 			self.EvadeRightAnim = "evade_right_combat_rifle"
-			self.DiveFrontAnim = "dive_front_combat_rifle"
-			self.DiveLeftAnim = "dive_left_combat_rifle"
-			self.DiveRightAnim = "dive_right_combat_rifle"
+			self.DiveFrontAnim = "dive_front_combat_unarmed"
+			self.DiveLeftAnim = "dive_left_combat_unarmed"
+			self.DiveRightAnim = "dive_right_combat_unarmed"
 			self.FallbackAnim = "signal_fallback_combat_rifle"
 			self.TransitionAnims["Move_2_Idle"] = "combat_rifle_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_rifle_move_2_combat_idle"
@@ -796,9 +802,9 @@ function ENT:SetupAnimations()
 			self.TauntAnim = {"taunt_combat_missile"}
 			self.EvadeLeftAnim = "evade_left_combat_missile"
 			self.EvadeRightAnim = "evade_right_combat_missile"
-			self.DiveFrontAnim = "dive_front_combat_missile"
-			self.DiveLeftAnim = "dive_left_combat_missile"
-			self.DiveRightAnim = "dive_right_combat_missile"
+			self.DiveFrontAnim = "dive_front_combat_unarmed"
+			self.DiveLeftAnim = "dive_left_combat_unarmed"
+			self.DiveRightAnim = "dive_right_combat_unarmed"
 			self.FallbackAnim = "signal_fallback_combat_missile"
 			self.TransitionAnims["Move_2_Idle"] = "combat_missile_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_missile_move_2_combat_idle"
@@ -862,9 +868,9 @@ function ENT:SetupAnimations()
 			self.TauntAnim = {"taunt_combat_support"}
 			self.EvadeLeftAnim = "evade_left_combat_support"
 			self.EvadeRightAnim = "evade_right_combat_support"
-			self.DiveFrontAnim = "dive_front_combat_support"
-			self.DiveLeftAnim = "dive_left_combat_support"
-			self.DiveRightAnim = "dive_right_combat_support"
+			self.DiveFrontAnim = "dive_front_combat_unarmed"
+			self.DiveLeftAnim = "dive_left_combat_unarmed"
+			self.DiveRightAnim = "dive_right_combat_unarmed"
 			self.FallbackAnim = "signal_fallback_combat_support"
 			self.TransitionAnims["Move_2_Idle"] = "combat_support_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_support_move_2_combat_idle"
@@ -1393,6 +1399,7 @@ end
 function ENT:Speak(voice,character)
 	if self.Infected then return end
 	local character = character or self.Voices[self.VoiceType]
+	--print(voice,character,self.VoiceType)
 	if character and character[voice] and istable(character[voice]) then
 		if self.CurrentSound then self.CurrentSound:Stop() end
 		local sound = table.Random(character[voice])
@@ -1873,7 +1880,7 @@ function ENT:OnInjured(dmg)
 			self.Shield = self.Shield-math.abs(dm)
 		end
 		if self.Shield <= 0 then 
-			print("no more armor!")
+			--print("no more armor!")
 			self.Shield = 0 
 			self.ShieldWentDown = true
 			if self.IsBrute then
@@ -2318,7 +2325,7 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 	path:Compute( self, pos )
 	if ( !IsValid(path) ) then return "failed" end
 	while ( IsValid(path) ) do
-		if GetConVar( "ai_disabled" ):GetInt() == 1 then
+		if IV04_AIDisabled then
 			return "Disabled thinking"
 		end
 		if self.UpdateTime < CurTime() then
@@ -2368,6 +2375,73 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 		coroutine.yield()
 	end
 	return "ok"
+end
+
+function ENT:AvoidGrenade(grenade)
+	if self.AnimBusy or self.DetectedAGrenade then return end
+	self.DetectedAGrenade = true
+	timer.Simple( math.random(2,3), function()
+		if IsValid(self) and self.DetectedAGrenade then
+			self.DetectedAGrenade = false
+		end	
+	end )
+	self:DodgeEnt(grenade)
+end
+
+function ENT:DodgeEnt(thrt)
+	local dir =  ( self:GetPos() - thrt:GetPos() ):Angle()
+	local ang1 = dir
+	local dist = (self:GetRangeSquaredTo(thrt))
+	--print(math.sqrt(dist),self.GrenadeDodgeDistance)
+	--print(dist < self.GrenadeDodgeDistance^2)
+	if dist < self.GrenadeDodgeDistance^2 then -- That grenade is near us
+		local ang3 = self:GetAngles()
+		local dif2 = math.AngleDifference( ang1.y, ang3.y )
+		if dif2 < 0 then dif2 = dif2+360 end
+		--print(dif2) -- 180 = front, 270 = left, 90 = right
+		local r = math.random(1,2)
+		local diveanim
+		if dif2 <= 135 then -- Don't dodge to the right
+			if r == 1 then
+				diveanim = self.DiveFrontAnim
+			else
+				diveanim = self.DiveLeftAnim
+			end
+		elseif dif2 > 135 and dif2 < 225 then -- Don't dodge to the front
+			if r == 1 then
+				diveanim = self.DiveLeftAnim
+			else
+				diveanim = self.DiveRightAnim
+			end
+		elseif dif2 >= 225 then -- Don't dodge to the left
+			if r == 1 then
+				diveanim = self.DiveFrontAnim
+			else
+				diveanim = self.DiveRightAnim
+			end
+		end
+		self.AnimBusy = true
+		local func = function()
+			self:Speak("dive")
+			self:PlaySequenceAndPWait(diveanim)
+			self.AnimBusy = false
+		end
+		timer.Simple( 2, function()
+			if IsValid(self) and self.AnimBusy then self.AnimBusy = false end
+		end )
+		table.insert(self.StuffToRunInCoroutine,func)
+		self:ResetAI()
+	else
+		timer.Simple( 0.8, function()
+			if IsValid(self) and self.DetectedAGrenade then
+				--print("dodge again")
+				self.DetectedAGrenade = false
+				if IsValid(thrt) then
+					self:AvoidGrenade(thrt)
+				end
+			end
+		end )
+	end
 end
 
 function ENT:ThrowGrenade()

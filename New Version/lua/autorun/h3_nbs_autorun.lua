@@ -3,7 +3,7 @@ CreateConVar( "halo_3_nextbots_ai_type", "Offensive", FCVAR_ARCHIVE, "Type of AI
 CreateConVar( "halo_3_nextbots_ai_difficulty", 2, FCVAR_ARCHIVE, "Difficulty, (1 = easy, 2 = normal, 3 = heroic, 4 = legendary" )
 CreateConVar( "halo_3_nextbots_ai_heroes", 1, FCVAR_ARCHIVE, "Are hero characters invincible?" )	
 CreateConVar( "halo_3_nextbots_ai_flashlights", 1, FCVAR_ARCHIVE, "Allow humans to have flashlights?" )	
-CreateConVar( "halo_3_nextbots_ai_shootcorpses", 0, FCVAR_ARCHIVE, "Enable shooting corpses?" )	
+CreateConVar( "halo_3_nextbots_ai_shootcorpses", 0, FCVAR_ARCHIVE, "Disable shooting corpses?" )	
 CreateConVar( "halo_3_nextbots_ai_performance", 0, FCVAR_ARCHIVE, "Enable performance mode?" )
 CreateConVar( "halo_3_nextbots_ai_omniscience", 0, FCVAR_ARCHIVE, "Enemies always know where you are?" )	
 CreateConVar( "halo_3_nextbots_ai_suicidal_grunts", 1, FCVAR_ARCHIVE, "Grunts ALWAYS go kamikaze?" )		
