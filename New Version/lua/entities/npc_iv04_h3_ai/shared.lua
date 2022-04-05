@@ -2378,7 +2378,7 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 end
 
 function ENT:AvoidGrenade(grenade)
-	if self.AnimBusy or self.DetectedAGrenade or grenade:GetOwner() == selfthen return end
+	if self.AnimBusy or self.DetectedAGrenade or grenade:GetOwner() == self then return end
 	self.DetectedAGrenade = true
 	timer.Simple( math.random(2,3), function()
 		if IsValid(self) and self.DetectedAGrenade then
