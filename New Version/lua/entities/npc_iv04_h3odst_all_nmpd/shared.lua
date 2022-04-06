@@ -56,8 +56,9 @@ function ENT:DoInit()
 	if headbod == 1 then
 		-- Sarge
 		self.VoiceType = "Cop2"
-		self:SetBodygroup(1,1)
 		self:SetBodygroup(2,1)
+		self:SetBodygroup(3,1)
+		self.IsSergeant = true
 	else
 		self.VoiceType = "Cop1"
 	end

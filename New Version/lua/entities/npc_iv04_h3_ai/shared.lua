@@ -567,6 +567,21 @@ function ENT:SetupAnimations()
 		["Chest"] = "Flinch_Armored_Rifle_Back_Chest",
 		["Gut"] = "Flinch_Armored_Rifle_Back_Gut"
 	}
+	self.DeathFrontAnims = {
+		["Head"] = {"Die_Front_Head_1","Die_Front_Head_2"},
+		["Gut"] =  {"Die_Front_Gut","Die_Front_Gut_1","Die_Front_Gut_2"}
+	}
+	self.DeathBackAnims = {
+		["Head"] = {"Die_Back_Head_1"}
+	}
+	self.DeathLeftAnims = {
+		["Head"] = {"Die_Left_Head_1","Die_Left_Head_2"},
+		["Gut"] =  {"Die_Left_Gut"}
+	}
+	self.DeathRightAnims = {
+		["Head"] = {"Die_Right_Head"},
+		["Gut"] =  {"Die_Right_Gut"}
+	}
 	--print(self.DeadLandAnim)
 	if IsValid(self.Weapon) then
 		local hold = self:ConfigureWeapon()
@@ -669,23 +684,29 @@ function ENT:SetupAnimations()
 			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Missile"}
 			if self.Weapon:GetClass() == "astw2_halo3_sniper_rifle" then
 				self.Weapon.BurstLength = 1
+				self.ReloadAnim = "reload_combat_rifle"
+				self:DoGestureSeq("Combat_Spr_Grip",false)
 				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
 			elseif hold == "ar2" then
-				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_1"}
+				self.ReloadAnim = "reload_combat_rifle"
+				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
 			elseif hold == "shotgun" then
 				self.Weapon.Acc = 0
 				self.Weapon.Primary.RecoilAcc = 0
 				self.WeaponAccuracy = 9
 				self.Weapon.BurstLength = 1
 				self.ShootAnim = {"attack_combat_shotgun"}
-				self:DoGestureSeq("rifle_sg_grip",false)
+				self:DoGestureSeq("Combat_Sg_Grip",false)
+				self.ReloadAnim = "reload_combat_shotgun"
 			elseif hold == "smg" then
+				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
-				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
 				self:ManipulateBoneAngles(self:LookupBone("l_hand"),Angle(0,0,90))
+				self.ReloadAnim = "reload_combat_rifle"
 			else
 				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
+				self.ReloadAnim = "reload_combat_rifle"
 			end
 			self.IdleAnim = {"combat_rifle_idle_up"}
 			self.IdleCalmAnim = {"combat_rifle_idle_down"}
@@ -699,7 +720,6 @@ function ENT:SetupAnimations()
 				self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
 			end
-			self.ReloadAnim = "reload_combat_rifle"
 			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
 			self.EquipmentAnim = "Throw_Equipment_Combat_Rifle"
 			self.AirAnim = "airborne_combat_rifle"
@@ -962,6 +982,7 @@ function ENT:ReactToTrade(wep)
 	local typ = self.WeaponRating[hold]
 	--print(hold,typ)
 	self:Speak(typ)
+	self:AdjustWeapon(wep,true)
 end
 
 function ENT:Use( activator )
@@ -1098,7 +1119,7 @@ function ENT:OnTraceAttack( info, dir, trace )
 	if trace.HitGroup == 1 and !self.HeadShotImmune then
 		info:ScaleDamage(3)
 	end
-	if self:Health() - info:GetDamage() < 1 then self.DeathHitGroup = trace.HitGroup return end
+	if self:Health() - info:GetDamage() <= 0 then self.DeathHitGroup = trace.HitGroup return end
 	if self.AnimBusy then return end
 	local hg = trace.HitGroup
 	--print(hg)
@@ -2378,7 +2399,7 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 end
 
 function ENT:AvoidGrenade(grenade)
-	if self.AnimBusy or self.DetectedAGrenade then return end
+	if self.AnimBusy or self.DetectedAGrenade or grenade:GetOwner() == self then return end
 	self.DetectedAGrenade = true
 	timer.Simple( math.random(2,3), function()
 		if IsValid(self) and self.DetectedAGrenade then
@@ -2544,23 +2565,23 @@ function ENT:DetermineDeathAnim( info )
 	if self.DeathHitGroup then
 		if self.DeathHitGroup == 1 then
 			if y <= 135 and y > 45 then -- Left
-				anim = "Death_Front_Left_Head"
+				anim = self:TableRandom(self.DeathLeftAnims["Head"])
 			elseif y < 225 and y > 135 then -- Front
-				anim = "Death_Front_Head_"..math.random(1,2)..""
+				anim = self:TableRandom(self.DeathFrontAnims["Head"])
 			elseif y >= 225 and y < 315 then -- Right
-				anim = "Death_Front_Right_Head"
+				anim = self:TableRandom(self.DeathRightAnims["Head"])
 			elseif y <= 45 or y >= 315 then -- Back
-				anim = "Death_Back_Head"
+				anim = self:TableRandom(self.DeathBackAnims["Head"])
 			end
 		else
 			if y <= 135 and y > 45 then -- Right
-				anim = "Death_Front_Right_Gut"
+				anim = self:TableRandom(self.DeathRightAnims["Gut"])
 			elseif y < 225 and y > 135 then -- Front
-				anim = "Death_Front_Gut_"..math.random(1,2)..""
+				anim = self:TableRandom(self.DeathFrontAnims["Gut"])
 			elseif y >= 225 and y < 315 then -- Left
-				anim = "Death_Front_Left_Gut"
+				anim = self:TableRandom(self.DeathLeftAnims["Gut"])
 			elseif y <= 45 or y >= 315 then -- Back
-				anim = "Death_Back_Gut_"..math.random(1,2)..""
+				anim = self:TableRandom(self.DeathBackAnims["Head"])
 			end
 		end
 	else
@@ -2585,7 +2606,7 @@ function ENT:FinishDeadLanding()
 		coroutine.wait(0.01)
 	end
 	self:PlaySequenceAndWait(self:TableRandom(self.DeadLandAnim))
-	if !self.DoesntUseWeapons then
+	if !self.DoesntUseWeapons and IV04_DropWeapons then
 		local wep = ents.Create(self.Weapon:GetClass())
 		wep:SetPos(self.Weapon:GetPos())
 		wep:SetAngles(self.Weapon:GetAngles())
@@ -2615,7 +2636,7 @@ function ENT:DoKilledAnim()
 		if self.KilledDmgInfo:GetDamage() <= 150 then
 			self:Speak("OnDeath")
 			local anim = self:DetermineDeathAnim(self.KilledDmgInfo)
-			if anim == true then 
+			if anim == true and IV04_DropWeapons then 
 				if !self.DoesntUseWeapons then
 					local wep = ents.Create(self.Weapon:GetClass())
 					wep:SetPos(self.Weapon:GetPos())
@@ -2629,7 +2650,7 @@ function ENT:DoKilledAnim()
 			local seq, len = self:LookupSequence(anim)
 			timer.Simple( len, function()
 				if IsValid(self) then
-					if !self.DoesntUseWeapons then
+					if !self.DoesntUseWeapons and IV04_DropWeapons then
 						local wep = ents.Create(self.Weapon:GetClass())
 						wep:SetPos(self.Weapon:GetPos())
 						wep:SetAngles(self.Weapon:GetAngles())
@@ -2647,13 +2668,13 @@ function ENT:DoKilledAnim()
 							end
 						end)
 					end
-					rag = self:CreateRagdoll(DamageInfo())
+					rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time = 0.1, randommove = true})
 				end
 			end )
 			self:PlaySequenceAndPWait(seq, 1, self:GetPos())
 		else
 			self:Speak("OnDeathPainful")
-			if !self.DoesntUseWeapons then
+			if !self.DoesntUseWeapons and IV04_DropWeapons then
 				local wep = ents.Create(self.Weapon:GetClass())
 				wep:SetPos(self.Weapon:GetPos())
 				wep:SetAngles(self.Weapon:GetAngles())
@@ -2737,7 +2758,7 @@ function ENT:BodyUpdate()
 	local di = 0
 	local p
 	local dip = 0
-	if ( (IsValid(self.Enemy) and !self.NotLookingAtEnemy )or IsValid(self.LookTarget) or self.SpecificGoal ) then
+	if ( (IsValid(self.Enemy) and (!self.NotLookingAtEnemy and !self.HasLOSToTarget) )or IsValid(self.LookTarget) or self.SpecificGoal ) then
 		goal = self.SpecificGoal
 		if IsValid(self.Enemy) then
 			goal = self.Enemy:WorldSpaceCenter()
