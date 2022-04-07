@@ -10,4 +10,16 @@
 	"$phongboost" 1
 	"$phongfresnelranges" "[1 1 1]"
 	"$phongtint" "[0.3 0.45 0.7]"
+
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+	}
 }

@@ -3,18 +3,19 @@
 	"$basetexture" "models\halo_3\characters\alliance\marine\odst\odst_helmet"
 	"$bumpmap" "models\halo_3\characters\alliance\marine\odst\odst_helmet_N"
 	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
-	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask" "1"
-	"$envmaptint"	"[.002 .005 .01]"
+	"$envmaptint"	"[.18 .23 .3]"
 	"$phong" "1"
 	"$phongalbedotint" "45"
 	"$phongexponent" 5
 	"$phongboost" 12.25
-	"$phongtint"	"[0.4 0.75 1]"
 	"$phongfresnelranges" "[1 1 1]"
+	"$phongtint"	"[.25 .3 .55]"
 	"$model" "1"
 	"$color2"		"[.7 .8 1]"
-	"$nodecal"			"1"
+
+	$blendtintbybasealpha	 "1"
+
 
 
 

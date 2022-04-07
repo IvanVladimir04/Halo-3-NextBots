@@ -4,7 +4,7 @@
 	"$bumpmap" "models\halo_3\characters\alliance\spartan\campaign\visor_realtime_bump"
 	"$normalmapalphaenvmapmask" 1
 	"$nodecal" 1
-
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint" "[0.75 0.32 0.05]"
 

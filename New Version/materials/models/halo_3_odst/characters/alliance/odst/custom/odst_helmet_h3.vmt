@@ -20,4 +20,15 @@
 	$rimlight                         "1"
 	$rimlightexponent                 "5"
 	$rimlightboost                     "0.05"
+
+	Proxies
+	{
+		Clamp
+		{
+			min 0
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color"
+		}
+	}
 }
