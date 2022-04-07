@@ -1,0 +1,20 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\spartan\campaign\masterchief"
+	"$bumpmap" "models\halo_3\characters\alliance\spartan\campaign\masterchief_new_bump"
+	"$normalmapalphaenvmapmask" 1
+	"$nodecal" 1
+
+	"$detail" "models\halo_3\characters\alliance\spartan\campaign\masterchief_detail"
+	"$detailblendfactor" 1
+	"$detailblendmode" 0
+	"$detailscale" 20
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.025 0.025 0.025]"
+
+	"$phong" 1
+	"$phongexponent" 5
+	"$phongboost" 1
+	"$phongfresnelranges" "[1 1 1]"
+}

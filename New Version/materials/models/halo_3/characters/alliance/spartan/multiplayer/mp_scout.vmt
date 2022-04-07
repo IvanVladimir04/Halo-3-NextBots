@@ -1,0 +1,49 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/alliance/spartan/multiplayer/mp_scout"
+	"$bumpmap" "models/halo_3/characters/alliance/spartan/multiplayer/mp_scout_zbump"
+	"$nodecal" 1
+
+	"$detail" "models/halo_3/characters/alliance/spartan/multiplayer/masterchief_detail"
+	"$detailblendfactor" 1
+	"$detailblendmode" 0
+	"$detailscale" 10
+
+
+	"$phong" "1"
+	"$phongexponent" 10
+	"$phongboost" 10
+	"$phongfresnelranges" "[0.125 0.125 0.125]"
+
+	"$blendtintbybasealpha" 1
+
+	Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2 // pass the player color value to Gmod
+			default		0.23 0.35 0.41 // unused for now.
+		}
+		Clamp
+		{
+			min 0.1
+			max 0.65
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+		Clamp
+		{
+			min 0.25
+			max 1
+			srcVar1 "$color2"
+			resultVar "$phongtint"
+		}
+		Clamp
+		{
+			min 0.25
+			max 1
+			srcVar1 "$color"
+			resultVar "$envmaptint"
+		}
+	}
+}

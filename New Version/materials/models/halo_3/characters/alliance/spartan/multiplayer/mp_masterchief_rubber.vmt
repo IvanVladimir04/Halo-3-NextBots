@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/alliance\spartan\multiplayer\mp_masterchief"
+	"$bumpmap" "models/halo_3/characters/alliance\spartan\multiplayer\mp_masterchief_new_bump"
+	"$normalmapalphaenvmapmask" 1
+	"$nodecal" 1
+
+	"$phong" 1
+	"$phongexponent" 5
+	"$phongboost" 1
+	"$phongfresnelranges" "[1 1 1]"
+	"$phongtint" "[0.3 0.45 0.7]"
+}

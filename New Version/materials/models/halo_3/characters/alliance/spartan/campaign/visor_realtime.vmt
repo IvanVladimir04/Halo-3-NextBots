@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\spartan\campaign\visor_realtime"
+	"$bumpmap" "models\halo_3\characters\alliance\spartan\campaign\visor_realtime_bump"
+	"$normalmapalphaenvmapmask" 1
+	"$nodecal" 1
+
+	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmaptint" "[0.75 0.32 0.05]"
+
+	"$phong" 1
+	"$phongexponent" 	7
+	"$phongboost" 7.25
+	"$phongfresnelranges" "[1 1 1]"
+	"$phongtint" "[1.25 0.875 0.25]"
+}
+

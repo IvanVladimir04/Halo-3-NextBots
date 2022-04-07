@@ -1,0 +1,282 @@
+//PING ANIMATIONS
+
+$animation "ping_rifle_left_arm_pose" "spartan_animations\s_ping_left_gut_var0.smd" {
+	fps 30
+	frame 9 9
+	loop
+}
+$animation "ping_rifle_left_arm" "spartan_animations\s_ping_left_gut_var0.smd" {
+	fps 30
+	subtract	"ping_rifle_left_arm_pose"	0
+}
+$animation "ping_rifle_right_arm_pose" "spartan_animations\s_ping_right_gut_var0.smd" {
+	fps 30
+	frame 9 9
+	loop
+}
+$animation "ping_rifle_right_arm" "spartan_animations\s_ping_right_gut_var0.smd" {
+	fps 30
+	subtract	"ping_rifle_right_arm_pose"	0
+}
+$animation "ping_rifle_gut1_pose" "spartan_animations\s_ping_front_gut_var0.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_rifle_gut1" "spartan_animations\s_ping_front_gut_var0.smd" {
+	fps 30
+	subtract	"ping_rifle_gut1_pose"	0
+}
+$animation "ping_rifle_gut2_pose" "spartan_animations\s_ping_front_gut_var1.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_rifle_gut2" "spartan_animations\s_ping_front_gut_var1.smd" {
+	fps 30
+	subtract	"ping_rifle_gut2_pose"	0
+}
+$animation "ping_rifle_gut3_pose" "spartan_animations\s_ping_front_gut_var2.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_rifle_gut3" "spartan_animations\s_ping_front_gut_var2.smd" {
+	fps 30
+	subtract	"ping_rifle_gut3_pose"	0
+}
+$animation "ping_rifle_head_pose" "spartan_animations\s_ping_front_head_var0.smd" {
+	fps 30
+	frame 10 10
+	loop
+}
+$animation "ping_rifle_head" "spartan_animations\s_ping_front_head_var0.smd" {
+	fps 30
+	subtract	"ping_rifle_head_pose"	0
+}
+
+//MISC SEQUENCES
+
+$sequence "dead_airborne" {
+	"spartan_animations\combat_any_airborne_dead.smd"
+	activity "ACT_GLIDE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	walkframe	150 LX LY
+}
+
+$sequence "dead_land" {
+	"spartan_animations\combat_any_landing_dead.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe	150 LX LY
+}
+
+
+//DEATH SEQUENCES
+
+$sequence "die_front_gut" {
+	"spartan_animations\h_kill_front_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_head_1" {
+	"spartan_animations\h_kill_front_head_var1.smd"
+	activity "ACT_DIE_HEADSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_front_head_2" {
+	"spartan_animations\h_kill_front_head_var2.smd"
+	activity "ACT_DIE_HEADSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_head" {
+	"spartan_animations\h_kill_back_head.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_gut_1" {
+	"spartan_animations\h_kill_back_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_back_gut_2" {
+	"spartan_animations\h_kill_back_gut_var2.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 145 LX LY
+}
+
+$sequence "die_left_gut" {
+	"spartan_animations\h_kill_left_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_gut" {
+	"spartan_animations\h_kill_right_gut_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_left_head_1" {
+	"spartan_animations\h_kill_left_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_left_head_2" {
+	"spartan_animations\h_kill_left_head_var2.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_left_head_3" {
+	"spartan_animations\h_kill_left_head_var3.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_head_1" {
+	"spartan_animations\h_kill_right_head_var1.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+$sequence "die_right_head_2" {
+	"spartan_animations\h_kill_right_head_var2.smd"
+	activity "ACT_DIE_GUTSHOT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+	walkframe 40 LX LY
+}
+
+//PING SEQUENCES
+
+$sequence "pinged_back_chest" {
+	"ping_rifle_gut1"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_front_head" {
+	"ping_rifle_head"
+	activity "ACT_FLINCH_HEAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}
+
+$sequence "pinged_back_gut" {
+	"ping_rifle_gut1"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 41 LX LY
+}
+
+$sequence "pinged_front_chest" {
+	"ping_rifle_gut1"
+	activity "ACT_FLINCH_CHEST" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 22 LX LY
+}
+
+$sequence "pinged_front_gut" {
+	"ping_rifle_gut1"
+	activity "ACT_FLINCH_STOMACH" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 19 LX LY
+}
+
+$sequence "pinged_front_right_arm" {
+	"ping_rifle_right_arm"
+	activity "ACT_FLINCH_RIGHTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 35 LX LY
+}
+
+$sequence "pinged_front_left_arm" {
+	"ping_rifle_left_arm"
+	activity "ACT_FLINCH_LEFTARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+	walkframe 165 LX LY
+}

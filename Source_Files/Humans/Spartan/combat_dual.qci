@@ -1,0 +1,660 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM COMBAT DUAL STILL UP
+$animation "aim_combat_dual_still_up_neutral" "spartan_animations\combat_dual_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_dual_still_up_down_left" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+$animation "aim_combat_dual_still_up_down_center" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+$animation "aim_combat_dual_still_up_down_right" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+$animation "aim_combat_dual_still_up_mid_left" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+$animation "aim_combat_dual_still_up_mid_center" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+$animation "aim_combat_dual_still_up_mid_right" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+$animation "aim_combat_dual_still_up_up_left" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+$animation "aim_combat_dual_still_up_up_center" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+$animation "aim_combat_dual_still_up_up_right" "spartan_animations\combat_dual_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_dual_still_up_neutral" 0
+}
+
+//AIM COMBAT DUAL MOVE UP
+
+$animation "aim_combat_dual_move_up_neutral" "spartan_animations\combat_dual_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_combat_dual_move_up_down_left" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+$animation "aim_combat_dual_move_up_down_center" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+$animation "aim_combat_dual_move_up_down_right" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+$animation "aim_combat_dual_move_up_mid_left" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+$animation "aim_combat_dual_move_up_mid_center" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+$animation "aim_combat_dual_move_up_mid_right" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+$animation "aim_combat_dual_move_up_up_left" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+$animation "aim_combat_dual_move_up_up_center" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+$animation "aim_combat_dual_move_up_up_right" "spartan_animations\combat_dual_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_combat_dual_move_up_neutral" 0
+}
+
+//MOVE ANIMATIONS
+
+$animation "combat_dual_move_S" "spartan_animations\combat_dual_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_dual_move_W" "spartan_animations\combat_dual_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_dual_move_E" "spartan_animations\combat_dual_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_dual_move_N" "spartan_animations\combat_dual_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//WALK ANIMATIONS
+
+$animation "combat_dual_walk_S" "spartan_animations\combat_dual_walk_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_dual_walk_W" "spartan_animations\combat_dual_walk_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_dual_walk_E" "spartan_animations\combat_dual_walk_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "combat_dual_walk_N" "spartan_animations\combat_dual_walk_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//ATTACK ANIMATIONS
+
+
+$animation "combat_dual_fire_left_1_pose" "spartan_animations\combat_dual_fire_1_left_var1.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "combat_dual_fire_left_1" "spartan_animations\combat_dual_fire_1_left_var1.smd" {
+	fps 30
+	subtract	"combat_dual_fire_left_1_pose"	0
+}
+
+$animation "combat_dual_fire_left_2_pose" "spartan_animations\combat_dual_fire_1_left_var2.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "combat_dual_fire_left_2" "spartan_animations\combat_dual_fire_1_left_var2.smd" {
+	fps 30
+	subtract	"combat_dual_fire_left_2_pose"	0
+}
+
+$animation "combat_dual_fire_left_3_pose" "spartan_animations\combat_dual_fire_1_left_var2.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "combat_dual_fire_left_3" "spartan_animations\combat_dual_fire_1_left_var3.smd" {
+	fps 30
+	subtract	"combat_dual_fire_left_3_pose"	0
+}
+
+$animation "combat_dual_fire_right_1_pose" "spartan_animations\combat_dual_fire_1_var1.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "combat_dual_fire_right_1" "spartan_animations\combat_dual_fire_1_var1.smd" {
+	fps 30
+	subtract	"combat_dual_fire_right_1_pose"	0
+}
+
+$animation "combat_dual_fire_right_2_pose" "spartan_animations\combat_dual_fire_1_var2.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "combat_dual_fire_right_2" "spartan_animations\combat_dual_fire_1_var2.smd" {
+	fps 30
+	subtract	"combat_dual_fire_right_2_pose"	0
+}
+
+$animation "combat_dual_fire_right_3_pose" "spartan_animations\combat_dual_fire_1_var3.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "combat_dual_fire_right_3" "spartan_animations\combat_dual_fire_1_var3.smd" {
+	fps 30
+	subtract	"combat_dual_fire_right_3_pose"	0
+}
+
+$animation "combat_dual_fire_mauler_right_pose" "spartan_animations\combat_dual_ex_fire_1.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "combat_dual_fire_mauler_right" "spartan_animations\combat_dual_ex_fire_1.smd" {
+	fps 30
+	subtract	"combat_dual_fire_mauler_right_pose"	0
+}
+
+$animation "combat_dual_fire_mauler_left_pose" "spartan_animations\combat_dual_ex_fire_1_left.smd" {
+	fps 30
+	frame 7 7
+	loop
+}
+$animation "combat_dual_fire_mauler_left" "spartan_animations\combat_dual_ex_fire_1_left.smd" {
+	fps 30
+	subtract	"combat_dual_fire_mauler_left_pose"	0
+}
+
+$animation "combat_dual_hp_reload_left_pose" "spartan_animations\combat_dual_hp_reload_1_left.smd" {
+	fps 30
+	frame 109 109
+	loop
+}
+$animation "combat_dual_hp_reload_left" "spartan_animations\combat_dual_hp_reload_1_left.smd" {
+	fps 30
+	subtract	"combat_dual_hp_reload_left_pose"	0
+}
+
+$animation "combat_dual_hp_reload_right_pose" "spartan_animations\combat_dual_hp_reload_1.smd" {
+	fps 30
+	frame 109 109
+	loop
+}
+$animation "combat_dual_hp_reload_right" "spartan_animations\combat_dual_hp_reload_1.smd" {
+	fps 30
+	subtract	"combat_dual_hp_reload_right_pose"	0
+}
+
+$animation "combat_dual_needler_reload_right_pose" "spartan_animations\combat_dual_ne_reload_1.smd" {
+	fps 30
+	frame 109 109
+	loop
+}
+$animation "combat_dual_needler_reload_right" "spartan_animations\combat_dual_ne_reload_1.smd" {
+	fps 30
+	subtract	"combat_dual_needler_reload_right_pose"	0
+}
+
+$animation "combat_dual_needler_reload_left_pose" "spartan_animations\combat_dual_ne_reload_1_left.smd" {
+	fps 30
+	frame 64 64
+	loop
+}
+$animation "combat_dual_needler_reload_left" "spartan_animations\combat_dual_ne_reload_1_left.smd" {
+	fps 30
+	subtract	"combat_dual_needler_reload_left_pose"	0
+}
+
+$animation "combat_dual_smg_reload_right_pose" "spartan_animations\combat_dual_smg_reload_1.smd" {
+	fps 30
+	frame 109 109
+	loop
+}
+$animation "combat_dual_smg_reload_right" "spartan_animations\combat_dual_smg_reload_1.smd" {
+	fps 30
+	subtract	"combat_dual_smg_reload_right_pose"	0
+}
+
+$animation "combat_dual_smg_reload_left_pose" "spartan_animations\combat_dual_smg_reload_1_left.smd" {
+	fps 30
+	frame 109 109
+	loop
+}
+$animation "combat_dual_smg_reload_left" "spartan_animations\combat_dual_smg_reload_1_left.smd" {
+	fps 30
+	subtract	"combat_dual_smg_reload_left_pose"	0
+}
+
+//READY AND PUT AWAY ANIMATIONS
+
+$animation "combat_dual_put_away_left_pose" "spartan_animations\combat_dual_put_away_left.smd" {
+	fps 30
+	loop
+	frame 6 6
+}
+
+$animation "combat_dual_put_away_left" "spartan_animations\combat_dual_put_away_left.smd" {
+	fps 30
+	subtract	"combat_dual_put_away_left_pose"	0
+}
+
+$animation "combat_dual_put_away_right_pose" "spartan_animations\combat_dual_put_away.smd" {
+	fps 30
+	loop
+	frame 6 6
+}
+
+$animation "combat_dual_put_away_right" "spartan_animations\combat_dual_put_away.smd" {
+	fps 30
+	subtract	"combat_dual_put_away_right_pose"	0
+}
+
+$animation "combat_dual_ready_right_pose" "spartan_animations\combat_dual_ready.smd" {
+	fps 30
+	loop
+	frame 19 19
+}
+
+$animation "combat_dual_ready_right" "spartan_animations\combat_dual_ready.smd" {
+	fps 30
+	subtract	"combat_dual_ready_right_pose"	0
+}
+
+$animation "combat_dual_ready_left_pose" "spartan_animations\combat_dual_ready_left.smd" {
+	fps 30
+	loop
+	frame 19 19
+}
+
+$animation "combat_dual_ready_left" "spartan_animations\combat_dual_ready_left.smd" {
+	fps 30
+	subtract	"combat_dual_ready_left_pose"	0
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_combat_dual_still_up" {
+	"aim_combat_dual_still_up_up_right" "aim_combat_dual_still_up_up_center"  "aim_combat_dual_still_up_up_left"
+	"aim_combat_dual_still_up_mid_right" "aim_combat_dual_still_up_mid_center"  "aim_combat_dual_still_up_mid_left"
+	"aim_combat_dual_still_up_down_right" "aim_combat_dual_still_up_down_center" "aim_combat_dual_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_combat_dual_move_up" {
+	"aim_combat_dual_move_up_up_right" "aim_combat_dual_move_up_up_center"  "aim_combat_dual_move_up_up_left"
+	"aim_combat_dual_move_up_mid_right" "aim_combat_dual_move_up_mid_center"  "aim_combat_dual_move_up_mid_left"
+	"aim_combat_dual_move_up_down_right" "aim_combat_dual_move_up_down_center" "aim_combat_dual_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+//IDLE SEQUENCES
+
+$sequence "combat_dual_idle_up" {
+	"spartan_animations\combat_dual_idle.smd"
+	activity "ACT_IDLE_PISTOL" 1
+	addlayer	"aim_combat_dual_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_combat_dual_up" {
+	"combat_dual_move_S"
+	"combat_dual_move_W"
+	"combat_dual_move_N"
+	"combat_dual_move_E"
+	"combat_dual_move_S"
+	activity "ACT_RUN_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_dual_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_missile"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_spartan.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_spartan.Step" }
+	walkframe 145 LX LY
+}
+
+$sequence "walk_combat_dual_up" {
+	"combat_dual_walk_S"
+	"combat_dual_walk_W"
+	"combat_dual_walk_N"
+	"combat_dual_walk_E"
+	"combat_dual_walk_S"
+	activity "ACT_WALK_AIM_PISTOL" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_combat_dual_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "walk_pistol"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_spartan.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_spartan.Step" }
+	walkframe 145 LX LY
+}
+
+
+//AIRBORNE SEQUENCES
+
+$sequence "airborne_combat_dual" {
+	"spartan_animations\combat_dual_airborne.smd"
+	activity "ACT_HOVER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "land_hard_combat_dual" {
+	"spartan_animations\combat_dual_land_hard.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+$sequence "land_soft_combat_dual" {
+	"spartan_animations\combat_dual_land_soft.smd"
+	activity "ACT_LAND" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+
+}
+
+//ATTACK SEQUENCES
+
+$sequence "attack_combat_dual_fire_left_1" {
+	"combat_dual_fire_left_1"
+	activity "ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "attack_combat_dual_fire_left_2" {
+	"combat_dual_fire_left_2"
+	activity "ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "attack_combat_dual_fire_left_3" {
+	"combat_dual_fire_left_3"
+	activity "ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "attack_combat_dual_fire_right_1" {
+	"combat_dual_fire_right_1"
+	activity "ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "attack_combat_dual_fire_right_2" {
+	"combat_dual_fire_right_2"
+	activity "ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "attack_combat_dual_fire_right_3" {
+	"combat_dual_fire_right_3"
+	activity "ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "attack_combat_dual_fire_mauler_right" {
+	"combat_dual_fire_mauler_right"
+	activity "ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "attack_combat_dual_fire_mauler_left" {
+	"combat_dual_fire_mauler_left"
+	activity "ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+
+$sequence "reload_combat_dual_left" {
+	"combat_dual_hp_reload_left"
+	activity "ACT_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "reload_combat_dual_right" {
+	"combat_dual_hp_reload_right"
+	activity "ACT_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "reload_combat_dual_needler_left" {
+	"combat_dual_needler_reload_left"
+	activity "ACT_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "reload_combat_dual_needler_right" {
+	"combat_dual_needler_reload_right"
+	activity "ACT_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "reload_combat_dual_smg_left" {
+	"combat_dual_smg_reload_left"
+	activity "ACT_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "reload_combat_dual_smg_right" {
+	"combat_dual_smg_reload_right"
+	activity "ACT_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+
+//WEAPON EQUIP AND UNEQUIP
+
+$sequence "ready_combat_dual_left" {
+	"combat_dual_ready_left"
+	activity "ACT_ARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "ready_combat_dual_right" {
+	"combat_dual_ready_right"
+	activity "ACT_ARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "put_away_combat_dual_left" {
+	"combat_dual_put_away_left"
+	activity "ACT_DISARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+$sequence "put_away_combat_dual_right" {
+	"combat_dual_put_away_right"
+	activity "ACT_DISARM" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	delta
+}
+
+
+//TURN SEQUENCES
+
+$sequence "turn_left_combat_dual" {
+	"spartan_animations\combat_dual_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_combat_dual" {
+	"spartan_animations\combat_dual_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+

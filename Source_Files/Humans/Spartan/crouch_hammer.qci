@@ -1,0 +1,235 @@
+//AIMING ANIMATIONS
+//$origin 0 0 0 -90
+//AIM crouch hammer STILL UP
+
+$animation "aim_crouch_hammer_still_up_neutral" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_crouch_hammer_still_up_down_left" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_still_up_down_center" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_still_up_down_right" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_still_up_mid_left" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_still_up_mid_center" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_still_up_mid_right" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_still_up_up_left" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_still_up_up_center" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_still_up_up_right" "spartan_animations\crouch_hammer_aim_still_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_crouch_hammer_still_up_neutral" 0
+}
+
+
+//AIM crouch hammer MOVE UP
+
+$animation "aim_crouch_hammer_move_up_neutral" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	frame 0 1
+	fps 30
+}
+
+$animation "aim_crouch_hammer_move_up_down_left" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+	frame 4 4
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_move_up_down_center" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+
+	frame 3 3
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_move_up_down_right" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+	frame 2 2
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_move_up_mid_left" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+	frame 7 7
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_move_up_mid_center" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+	frame 6 6
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_move_up_mid_right" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+	frame 5 5
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_move_up_up_left" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+	frame 10 10
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_move_up_up_center" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+	frame 9 9
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+$animation "aim_crouch_hammer_move_up_up_right" "spartan_animations\crouch_hammer_aim_move_up.smd" {
+	fps 30
+	frame 8 8
+	subtract "aim_crouch_hammer_move_up_neutral" 0
+}
+
+//MOVE ANIMATIONS
+
+$animation "crouch_hammer_move_S" "spartan_animations\crouch_hammer_move_back.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_hammer_move_W" "spartan_animations\crouch_hammer_move_left.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_hammer_move_E" "spartan_animations\crouch_hammer_move_right.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+$animation "crouch_hammer_move_N" "spartan_animations\crouch_hammer_move_front.smd" {
+	fps 30
+	walkframe 140 LX LY
+}
+
+//AIMLAYER SEQUENCES
+
+$sequence "aim_crouch_hammer_still_up" {
+	"aim_crouch_hammer_still_up_up_right" "aim_crouch_hammer_still_up_up_center"  "aim_crouch_hammer_still_up_up_left"
+	"aim_crouch_hammer_still_up_mid_right" "aim_crouch_hammer_still_up_mid_center"  "aim_crouch_hammer_still_up_mid_left"
+	"aim_crouch_hammer_still_up_down_right" "aim_crouch_hammer_still_up_down_center" "aim_crouch_hammer_still_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+$sequence "aim_crouch_hammer_move_up" {
+	"aim_crouch_hammer_move_up_up_right" "aim_crouch_hammer_move_up_up_center"  "aim_crouch_hammer_move_up_up_left"
+	"aim_crouch_hammer_move_up_mid_right" "aim_crouch_hammer_move_up_mid_center"  "aim_crouch_hammer_move_up_mid_left"
+	"aim_crouch_hammer_move_up_down_right" "aim_crouch_hammer_move_up_down_center" "aim_crouch_hammer_move_up_down_left"
+	blend "aim_yaw" -45 45
+	blend "aim_pitch" -90 90
+	blendwidth 3
+	delta
+	fadein 0.3
+	fadeout 0.3
+	hidden
+}
+
+
+//IDLE SEQUENCES
+
+
+$sequence "crouch_hammer_idle_up" {
+	"spartan_animations\crouch_hammer_idle.smd"
+	activity "ACT_CROUCHIDLE" 1
+	addlayer	"aim_crouch_hammer_still_up"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+
+//MOVEMENT SEQUENCES
+
+$sequence "move_crouch_hammer_up" {
+	"crouch_hammer_move_S"
+	"crouch_hammer_move_W"
+	"crouch_hammer_move_N"
+	"crouch_hammer_move_E"
+	"crouch_hammer_move_S"
+	activity "ACT_WALK_CROUCH_AIM" 1
+	blend "move_yaw" -180 180
+	addlayer	"aim_crouch_hammer_move_up"
+	blendwidth 5
+	fadein 0.2
+	fadeout 0.2
+	node "move_hammer"
+	fps 30
+	loop
+	{ event AE_CL_PLAYSOUND 2 "HALO3_spartan.Step" }
+	{ event AE_CL_PLAYSOUND 8 "HALO3_spartan.Step" }
+	walkframe 145 LX LY
+}
+
+
+
+//TURN SEQUENCES
+
+$sequence "turn_left_crouch_hammer" {
+	"spartan_animations\crouch_hammer_turn_left.smd"
+	activity "ACT_TURN_LEFT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}
+
+$sequence "turn_right_crouch_hammer" {
+	"spartan_animations\crouch_hammer_turn_right.smd"
+	activity "ACT_TURN_RIGHT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LXR LYR LZR
+}

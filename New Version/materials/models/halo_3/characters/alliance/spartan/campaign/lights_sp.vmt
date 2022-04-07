@@ -1,0 +1,13 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\spartan\campaign\masterchief"
+	"$additive" 1
+	"$nodecal" 1
+
+	"$detail" "models\halo_3\characters\alliance\spartan\campaign\masterchief"
+	"$detailblendfactor"	1
+	"$detailblendmode" 0
+	"$detailscale" 1
+
+	"$color2" "[0.729 0.799 1]"
+}

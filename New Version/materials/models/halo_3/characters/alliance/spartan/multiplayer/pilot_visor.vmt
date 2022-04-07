@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\halo_3\characters\alliance\spartan\multiplayer\pilot_diffuse"
+	"$bumpmap" "models\halo_3\characters\alliance\marine\pilot_bump"
+	"$nodecal"			"1"
+	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.1 0.04 0.005]"
+	"$phong" 1
+	"$phongexponent" 5
+	"$phongboost" 5.25
+	"$phongfresnelranges" "[1 1 1]"
+	"$phongtint" "[1.25 0.875 0.25]"
+	"$model" "1"
+	"$color2"		"[3 2.5 .5]"
+}
