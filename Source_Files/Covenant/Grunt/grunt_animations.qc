@@ -2420,7 +2420,7 @@ $sequence "aim_patrol_missile_move_up" {
 	hidden
 }
 
-$sequence "missile_idle_up" {
+$sequence "combat_missile_idle_up" {
 	"grunt_animations\combat_missile_idle.smd"
 	activity "ACT_IDLE_RPG" 1
 	addlayer	"aim_missile_still_up"
@@ -2431,7 +2431,7 @@ $sequence "missile_idle_up" {
 
 }
 
-$sequence "missile_idle_down" {
+$sequence "combat_missile_idle_down" {
 	"grunt_animations\combat_missile_idle.smd"
 	activity "ACT_IDLE_RPG" 1
 	addlayer	"aim_missile_still_down"
@@ -2441,7 +2441,7 @@ $sequence "missile_idle_down" {
 	loop
 }
 
-$sequence "missile_fc_idle_up" {
+$sequence "combat_missile_fc_idle_up" {
 	"grunt_animations\combat_missile_fc_idle.smd"
 	activity "ACT_IDLE_RPG" 1
 	addlayer	"aim_missile_fc_still_up"
@@ -2452,7 +2452,7 @@ $sequence "missile_fc_idle_up" {
 
 }
 
-$sequence "missile_fc_idle_down" {
+$sequence "combat_missile_fc_idle_down" {
 	"grunt_animations\combat_missile_fc_idle.smd"
 	activity "ACT_IDLE_RPG" 1
 	addlayer	"aim_missile_fc_still_down"
@@ -2492,7 +2492,7 @@ $sequence "flee_pistol_idle" {
 	loop
 }
 
-$sequence "combat_idle_posing_1" {
+$sequence "combat_pistol_posing_1" {
 	"grunt_animations\combat_pistol_posing_var1.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2502,7 +2502,7 @@ $sequence "combat_idle_posing_1" {
 	loop
 }
 
-$sequence "combat_idle_posing_2" {
+$sequence "combat_pistol_posing_2" {
 	"grunt_animations\combat_pistol_posing_var2.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2513,7 +2513,7 @@ $sequence "combat_idle_posing_2" {
 
 }
 
-$sequence "combat_idle_posing_3" {
+$sequence "combat_pistol_posing_3" {
 	"grunt_animations\combat_pistol_posing_var3.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2524,7 +2524,7 @@ $sequence "combat_idle_posing_3" {
 }
 
 
-$sequence "combat_idle_posing_4" {
+$sequence "combat_pistol_posing_4" {
 	"grunt_animations\combat_pistol_posing_var4.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2535,7 +2535,7 @@ $sequence "combat_idle_posing_4" {
 }
 
 
-$sequence "combat_idle_posing_5" {
+$sequence "combat_pistol_posing_5" {
 	"grunt_animations\combat_pistol_posing_var5.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2546,7 +2546,7 @@ $sequence "combat_idle_posing_5" {
 }
 
 
-$sequence "combat_idle_posing_6" {
+$sequence "combat_pistol_posing_6" {
 	"grunt_animations\combat_pistol_posing_var6.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2556,7 +2556,7 @@ $sequence "combat_idle_posing_6" {
 	loop
 }
 
-$sequence "unarmed_idle_1" {
+$sequence "combat_unarmed_idle_1" {
 	"grunt_animations\combat_unarmed_idle_var0.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2566,7 +2566,7 @@ $sequence "unarmed_idle_1" {
 	loop
 }
 
-$sequence "unarmed_idle_2" {
+$sequence "combat_unarmed_idle_2" {
 	"grunt_animations\combat_unarmed_idle_var1.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2576,7 +2576,7 @@ $sequence "unarmed_idle_2" {
 	loop
 }
 
-$sequence "unarmed_idle_3" {
+$sequence "combat_unarmed_idle_3" {
 	"grunt_animations\combat_unarmed_idle_var2.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2587,7 +2587,7 @@ $sequence "unarmed_idle_3" {
 }
 
 
-$sequence "unarmed_idle_4" {
+$sequence "combat_unarmed_idle_4" {
 	"grunt_animations\combat_unarmed_idle_var3.smd"
 	activity "ACT_IDLE_RELAXED" 1
 	addlayer	"aim_pistol_still_down"
@@ -2599,7 +2599,7 @@ $sequence "unarmed_idle_4" {
 }
 
 
-$sequence "unarmed_idle_5" {
+$sequence "combat_unarmed_idle_5" {
 	"grunt_animations\combat_unarmed_idle_var4.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2611,7 +2611,7 @@ $sequence "unarmed_idle_5" {
 }
 
 
-$sequence "unarmed_idle_6" {
+$sequence "combat_unarmed_idle_6" {
 	"grunt_animations\combat_unarmed_idle_var5.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2622,7 +2622,7 @@ $sequence "unarmed_idle_6" {
 
 }
 
-$sequence "unarmed_idle_7" {
+$sequence "combat_unarmed_idle_7" {
 	"grunt_animations\combat_unarmed_idle_var6.smd"
 	activity "ACT_IDLE" 1
 	addlayer	"aim_pistol_still_down"
@@ -2707,7 +2707,7 @@ $sequence "patrol_missile_idle_3" {
 
 
 
-$sequence "pistol_idle_crouch_up" {
+$sequence "crouch_pistol_idle_up" {
 	"grunt_animations\crouch_pistol_idle.smd"
 	activity "ACT_COWER" 1
 	addlayer	"aim_pistol_crouch_up"
@@ -2717,7 +2717,7 @@ $sequence "pistol_idle_crouch_up" {
 	loop
 }
 
-$sequence "pistol_idle_crouch_down" {
+$sequence "crouch_pistol_idle_down" {
 	"grunt_animations\crouch_pistol_idle.smd"
 	activity "ACT_COWER" 1
 	addlayer	"aim_pistol_crouch_down"
@@ -2729,7 +2729,7 @@ $sequence "pistol_idle_crouch_down" {
 }
 
 
-$sequence "surprised_fuel_rod" {
+$sequence "combat_missile_surprise_front" {
 	"grunt_animations\combat_missile_surprise_front.smd"
 	activity "ACT_SIGNAL_FORWARD" 1
 	fadein 0.2
@@ -2738,7 +2738,7 @@ $sequence "surprised_fuel_rod" {
 	walkframe 20 LX LY
 }
 
-$sequence "surprised" {
+$sequence "combat_pistol_surprise_front" {
 	"grunt_animations\combat_pistol_surprise_front.smd"
 	activity "ACT_SIGNAL_FORWARD" 1
 	fadein 0.2
@@ -2747,7 +2747,7 @@ $sequence "surprised" {
 	walkframe 20 LX LY
 }
 
-$sequence "warn_fuel_rod" {
+$sequence "combat_missile_warn" {
 	"grunt_animations\combat_missile_warn.smd"
 	activity "ACT_SIGNAL_HALT" 1
 	fadein 0.2
@@ -2756,7 +2756,7 @@ $sequence "warn_fuel_rod" {
 
 }
 
-$sequence "warn" {
+$sequence "combat_pistol_warn" {
 	"grunt_animations\combat_pistol_warn.smd"
 	activity "ACT_SIGNAL_HALT" 1
 	fadein 0.2
@@ -2765,7 +2765,7 @@ $sequence "warn" {
 
 }
 
-$sequence "point" {
+$sequence "combat_pistol_point" {
 	"grunt_animations\combat_pistol_point.smd"
 	activity "ACT_GMOD_GESTURE_POINT" 1
 	fadein 0.2
@@ -3033,7 +3033,7 @@ $sequence "pinged_front_left_arm" {
 	walkframe 165 LX LY
 }
 
-$sequence "Run Flee" {
+$sequence "flee_pistol_move_front" {
 	"grunt_animations\flee_pistol_move_front.smd"
 	activity "ACT_RUN_AGITATED" 1
 	fadein 0.2
@@ -3134,7 +3134,7 @@ $sequence "land_soft_unarmed" {
 
 }
 
-$sequence "flee_land_hard" {
+$sequence "land_hard_flee" {
 	"grunt_animations\flee_pistol_land_hard.smd"
 	activity "ACT_LAND" 1
 	fadein 0.2
@@ -3143,7 +3143,7 @@ $sequence "flee_land_hard" {
 
 }
 
-$sequence "flee_land_soft" {
+$sequence "land_hard_soft" {
 	"grunt_animations\flee_pistol_land_soft.smd"
 	activity "ACT_LAND" 1
 	fadein 0.2
@@ -3208,7 +3208,7 @@ $sequence "melee_smash_missile_fc_left" {
 	walkframe 145 LX LY
 }
 
-$sequence "pistol_airborne" {
+$sequence "airborne_combat_pistol" {
 	"grunt_animations\combat_pistol_airborne.smd"
 	activity "ACT_HOVER" 1
 	fadein 0.2
@@ -3217,7 +3217,7 @@ $sequence "pistol_airborne" {
 	loop
 }
 
-$sequence "missile_airborne" {
+$sequence "airborne_combat_missile" {
 	"grunt_animations\combat_missile_airborne.smd"
 	activity "ACT_HOVER" 1
 	fadein 0.2
@@ -3227,7 +3227,7 @@ $sequence "missile_airborne" {
 
 }
 
-$sequence "missile_fc_airborne" {
+$sequence "airborne_combat_missile_fc" {
 	"grunt_animations\combat_missile_fc_airborne.smd"
 	activity "ACT_HOVER" 1
 	fadein 0.2
