@@ -589,18 +589,6 @@ function ENT:SetupAnimations()
 			hold = "pistol"
 		end
 		if self.PistolHolds[hold] then
-			if self.AITemplate == "BRUTE" then
-				self.DrawSlowWeaponAnim = {"Draw_Slow_Armored_Pistol"}
-				self.DrawFastWeaponAnim = {"Draw_Fast_Armored_Pistol"}
-				self.MeleeAnim = {"Melee_Combat_Pistol_1"}
-				self.MeleeBackAnim = {"Melee_Back_Combat_Pistol"}
-			else
-				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
-				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
-				self.MeleeAnim = {"Melee_Combat_Pistol_1","Melee_Combat_Pistol_2"}
-				self.MeleeIsGesture = true
-				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
-			end
 			if self.Armored then
 				self.ShootAnim = {"attack_armored_pistol_1","attack_armored_pistol_2","attack_armored_pistol_3"}
 				self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Armored_Idle"
@@ -636,7 +624,7 @@ function ENT:SetupAnimations()
 			self.LandAnim = "Land_Soft_Combat_Pistol"
 			self.LandHardAnim = "Land_Hard_Combat_Pistol"
 			self.SurpriseAnim = "Surprised_Combat_Pistol"
-			self.CrouchIdleAnim = {"crouch_rifle_pistol_up"}
+			self.CrouchIdleAnim = {"Crouch_Pistol_Idle_Up"}
 			self.CrouchMoveAnim = {"move_crouch_pistol_up"}
 			self.WarnAnim = {"Point_Combat_Pistol"}
 			self.CrouchMoveCalmAnim = {"pistol_crouch_move_passive"}
@@ -645,9 +633,6 @@ function ENT:SetupAnimations()
 			self.PushLeftAnim = "Right_Smash_Combat_Pistol_Left"
 			self.TauntAnim = {"Taunt_Combat_Pistol"}
 			self.WarthogPassengerIdle = "Warthog_Passenger_Idle_Pistol"
-			if self.Weapon:GetClass() == "astw2_halo3_magnum" or self.Weapon:GetClass() == "astw2_halo3_magnum_odst" then
-				self.Weapon.BurstLength = 4
-			end
 			self.HornetPassengerLeftIdle = "hornet_passenger_left_idle_pistol"
 			self.HornetPassengerRightIdle = "hornet_passenger_right_idle_pistol"
 			self.ProwlerPassengerLeftIdle = "prowler_passenger_left_idle_pistol"
@@ -670,8 +655,34 @@ function ENT:SetupAnimations()
 			self.FallbackAnim = "Signal_Fallback_Combat_Pistol"
 			self.HoldAnim = "Signal_Hold_Combat_Pistol"
 			self.EquipmentAnim = "Throw_Equipment_Combat_Pistol"
+			if self.Weapon:GetClass() == "astw2_halo3_magnum" or self.Weapon:GetClass() == "astw2_halo3_magnum_odst" then
+				self.Weapon.BurstLength = 4
+			end
+			if self.AITemplate == "BRUTE" then
+				self.DrawSlowWeaponAnim = {"Draw_Slow_Armored_Pistol"}
+				self.DrawFastWeaponAnim = {"Draw_Fast_Armored_Pistol"}
+				self.MeleeAnim = {"Melee_Combat_Pistol_1"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Pistol"}
+			elseif self.AITemplate == "SPARTAN" then
+				self.PatrolIdleAnim = {"Combat_Pistol_Idle_Down"}
+				self.PatrolMoveAnim = {"Walk_Combat_Pistol_Down"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Pistol"}
+				if self.Weapon:GetClass() == "astw2_halo3_plasmapistol" then
+					self.MeleeAnim = {"Melee_Combat_Pistol_Pp_1","Melee_Combat_Pistol_Pp_2"}
+				elseif self.Weapon:GetClass() == "astw2_halo3_needler" then
+					self.MeleeAnim = {"Melee_Combat_Pistol_Ne"}
+				else
+					self.MeleeAnim = {"Melee_Combat_Pistol_Hp_1","Melee_Combat_Pistol_Hp_2"}
+				end
+			else
+				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
+				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
+				self.MeleeAnim = {"Melee_Combat_Pistol_1","Melee_Combat_Pistol_2"}
+				self.MeleeIsGesture = true
+				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
+			end
 			self.TransitionAnims["Idle_2_Guard"] = "Combat_Pistol_Idle_2_Patrol_Idle"
-			self.TransitionAnims["Idle_2_Crouch"] = "Combat_Pistol_Idle_2_Combat_Idle"
+			self.TransitionAnims["Idle_2_Crouch"] = "Combat_Rifle_Idle_2_Crouch_Idle"
 			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "crouch_pistol_walk_2_crouch_idle"
 			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "crouch_pistol_walk_2_crouch_idle"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "crouch_pistol_idle_2_crouch_move"
@@ -682,44 +693,11 @@ function ENT:SetupAnimations()
 		elseif self.RifleHolds[hold] then
 			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Missile"}
 			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Missile"}
-			if self.Weapon:GetClass() == "astw2_halo3_sniper_rifle" then
-				self.Weapon.BurstLength = 1
-				self.ReloadAnim = "reload_combat_rifle"
-				self:DoGestureSeq("Combat_Spr_Grip",false)
-				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
-			elseif hold == "ar2" then
-				self.ReloadAnim = "reload_combat_rifle"
-				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
-			elseif hold == "shotgun" then
-				self.Weapon.Acc = 0
-				self.Weapon.Primary.RecoilAcc = 0
-				self.WeaponAccuracy = 9
-				self.Weapon.BurstLength = 1
-				self.ShootAnim = {"attack_combat_shotgun"}
-				self:DoGestureSeq("Combat_Sg_Grip",false)
-				self.ReloadAnim = "reload_combat_shotgun"
-			elseif hold == "smg" then
-				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
-				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
-				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
-				self:ManipulateBoneAngles(self:LookupBone("l_hand"),Angle(0,0,90))
-				self.ReloadAnim = "reload_combat_rifle"
-			else
-				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
-				self.ReloadAnim = "reload_combat_rifle"
-			end
 			self.IdleAnim = {"combat_rifle_idle_up"}
 			self.IdleCalmAnim = {"combat_rifle_idle_down"}
 			self.RunAnim = {"move_combat_rifle_up"}
 			self.WalkAnim = {"walk_combat_rifle_up"}
 			self.RunCalmAnim = {"move_combat_rifle_down"}
-			if self.AITemplate == "BRUTE" then
-				self.MeleeAnim = {"Melee_Combat_Rifle_1"}
-				self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
-			else
-				self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
-				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
-			end
 			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
 			self.EquipmentAnim = "Throw_Equipment_Combat_Rifle"
 			self.AirAnim = "airborne_combat_rifle"
@@ -758,6 +736,50 @@ function ENT:SetupAnimations()
 			self.DiveLeftAnim = "dive_left_combat_unarmed"
 			self.DiveRightAnim = "dive_right_combat_unarmed"
 			self.FallbackAnim = "signal_fallback_combat_rifle"
+			if self.Weapon:GetClass() == "astw2_halo3_sniperrifle" then
+				self.Weapon.BurstLength = 1
+				self.ReloadAnim = "reload_combat_rifle"
+				self:DoGestureSeq("Combat_Spr_Grip",false)
+				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
+			elseif hold == "ar2" then
+				self.ReloadAnim = "reload_combat_rifle"
+				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
+			elseif hold == "shotgun" then
+				self.Weapon.Acc = 0
+				self.Weapon.Primary.RecoilAcc = 0
+				self.WeaponAccuracy = 9
+				self.Weapon.BurstLength = 1
+				self.ShootAnim = {"attack_combat_shotgun"}
+				self:DoGestureSeq("Combat_Sg_Grip",false)
+				self.ReloadAnim = "reload_combat_shotgun"
+			elseif hold == "smg" then
+				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
+				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
+				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
+				self:ManipulateBoneAngles(self:LookupBone("l_hand"),Angle(0,0,90))
+				self.ReloadAnim = "reload_combat_rifle"
+			else
+				self.ShootAnim = {"attack_combat_rifle_1","attack_combat_rifle_2"}
+				self.ReloadAnim = "reload_combat_rifle"
+			end
+			if self.AITemplate == "BRUTE" then
+				self.MeleeAnim = {"Melee_Combat_Rifle_1"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
+			elseif self.AITemplate == "SPARTAN" then
+				self.PatrolIdleAnim = {"Combat_Rifle_Idle_Down"}
+				self.PatrolMoveAnim = {"Walk_Combat_Rifle_Down"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle"}
+				if self.Weapon:GetClass() == "astw2_halo3_carbine" then
+					self.MeleeAnim = {"Melee_Combat_Rifle_Cb_1","Melee_Combat_Rifle_Cb_2"}
+				elseif hold == "shotgun" then
+					self.MeleeAnim = {"Melee_Combat_Rifle_Sg_1","Melee_Combat_Rifle_Sg_2"}
+				else
+					self.MeleeAnim = {"Melee_Combat_Rifle_Br_1","Melee_Combat_Rifle_Br_2"}
+				end
+			else
+				self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
+			end
 			self.TransitionAnims["Move_2_Idle"] = "combat_rifle_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_rifle_move_2_combat_idle"
 			self.TransitionAnims["Walk_2_Idle"] = "combat_rifle_walk_2_combat_idle"
@@ -826,6 +848,10 @@ function ENT:SetupAnimations()
 			self.DiveLeftAnim = "dive_left_combat_unarmed"
 			self.DiveRightAnim = "dive_right_combat_unarmed"
 			self.FallbackAnim = "signal_fallback_combat_missile"
+			if self.AITemplate == "SPARTAN" then
+				self.PatrolIdleAnim = {"combat_missile_idle_up"}
+				self.PatrolMoveAnim = {"walk_combat_missile_up"}
+			end
 			self.TransitionAnims["Move_2_Idle"] = "combat_missile_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_missile_move_2_combat_idle"
 			self.TransitionAnims["Walk_2_Idle"] = "combat_missile_walk_2_combat_idle"
@@ -892,6 +918,10 @@ function ENT:SetupAnimations()
 			self.DiveLeftAnim = "dive_left_combat_unarmed"
 			self.DiveRightAnim = "dive_right_combat_unarmed"
 			self.FallbackAnim = "signal_fallback_combat_support"
+			if self.AITemplate == "SPARTAN" then
+				self.PatrolIdleAnim = {"combat_support_idle_up"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Support"}
+			end
 			self.TransitionAnims["Move_2_Idle"] = "combat_support_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_support_move_2_combat_idle"
 			self.TransitionAnims["Walk_2_Idle"] = "combat_support_walk_2_combat_idle"
@@ -1345,7 +1375,7 @@ end
 
 function ENT:DoTransitionAnim( typ )
 	if !typ then return end
-	if !self.TransitionAnims[typ] then return end
+	if !self.TransitionAnims[typ] or self.NoTransitionAnims then return end
 	--print(typ,self.TransitionAnims[typ])
 	self:PlaySequenceAndWait( self.TransitionAnims[typ] )
 end
@@ -1808,7 +1838,7 @@ function ENT:OnHaveEnemy(ent)
 				end )
 			end
 		end
-		if self.PossibleWeapons or IsValid(self.Weapon) then
+		if self.PossibleWeapons or IsValid(self.Weapon) and !self.IsWeaponDrawn then
 			self:AdjustWeapon(self.Weapon,true)
 			local func = function()
 				self:PlaySequenceAndWait(self:TableRandom(self.DrawFastWeaponAnim))
@@ -1826,7 +1856,7 @@ function ENT:OnHaveEnemy(ent)
 					local xy = ent:GetPos().x+ent:GetPos().y
 					local xy2 = self:GetPos().x+self:GetPos().y
 					local dif = math.abs(xy-xy2)
-					if dif < 700 then
+					if !self.NoSurpriseAnim and dif < 700 then
 						local func = function()
 							local should, dif = self:ShouldFace(ent,10)
 							if should then
@@ -1844,7 +1874,9 @@ function ENT:OnHaveEnemy(ent)
 							--self:Turn(dif,false,true)
 							coroutine.wait(0.2)
 						end
-						self:PlaySequenceAndWait(self.WarnAnim[math.random(#self.WarnAnim)])
+						if !self.NoWarnAnim then
+							self:PlaySequenceAndWait(self.WarnAnim[math.random(#self.WarnAnim)])
+						end
 					end
 					table.insert(self.StuffToRunInCoroutine,func)
 				end	
@@ -2208,7 +2240,9 @@ function ENT:OnOtherKilled( victim, info )
 					end
 				end )
 			end
-			table.insert(self.StuffToRunInCoroutine,func)
+			if !self.NoTaunts then
+				table.insert(self.StuffToRunInCoroutine,func)
+			end
 		else
 			if attacker:IsPlayer() then
 				if math.random(1,2) == 1 then
@@ -2528,7 +2562,12 @@ function ENT:ThrowGrenade()
 			end
 		end
 	end )
-	self:PlaySequenceAndMove(self.GrenadeAnim[math.random(#self.GrenadeAnim)],1,self:GetForward(),40,0.8)
+	if !self.GrenadeIsGesture then
+		self:PlaySequenceAndMove(self:TableRandom(self.GrenadeAnim),1,self:GetForward(),40,0.8)
+	else
+		self:DoGestureSeq(self:TableRandom(self.GrenadeAnim))
+		coroutine.wait(1)
+	end
 	timer.Simple( 1.5, function()
 		if IsValid(self) and self:Health() > 0 then
 			self:Speak("strk_grnd")
@@ -2758,7 +2797,10 @@ function ENT:BodyUpdate()
 	local di = 0
 	local p
 	local dip = 0
-	if ( (IsValid(self.Enemy) and (!self.NotLookingAtEnemy and !self.HasLOSToTarget) )or IsValid(self.LookTarget) or self.SpecificGoal ) then
+	--print( (IsValid(self.Enemy)))
+	--print( !self.NotLookingAtEnemy )
+	--print( self.HasLOSToTarget )
+	if ( (IsValid(self.Enemy) and (!self.NotLookingAtEnemy or self.HasLOSToTarget) )or IsValid(self.LookTarget) or self.SpecificGoal ) then
 		goal = self.SpecificGoal
 		if IsValid(self.Enemy) then
 			goal = self.Enemy:WorldSpaceCenter()
@@ -2768,12 +2810,12 @@ function ENT:BodyUpdate()
 		local an = (goal-(self:WorldSpaceCenter()+self:GetUp()*30)):Angle()
 		y = an.y
 		dify = math.AngleDifference(self:GetAngles().y+self.YPP,y)
-		--print(dify,self.YPP)
+		--print(dify)
 		local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
 		if math.abs(dify) > 2 then
 			if dify > 0 then
 				di = -2
-				--print(di)
+				--print(di,self.YPP,ymins)
 				if self.YPP+di <= (ymins*0.25) then
 					self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
 					di = 0
