@@ -3,6 +3,36 @@ AddCSLuaFile()
 
 
 function ENT:SpartanInitialize()
+	self.SpawnWithWeaponDrawn = true
+	self.AllowStealth = true
+	self.MoveSpeed = 100
+	self.MoveSpeedMultiplier = 2
+	self:SetCollisionBounds(Vector(10,10,100),Vector(-10,-10,0))
+	self.MeleeAnimsHits = {
+		["Melee_Combat_Missile_Rl"] = 0.5,
+		["Melee_Combat_Missile_Fc"] = 0.6,
+		["Melee_Combat_Rifle_Br_1"] = 0.5,
+		["Melee_Combat_Rifle_Br_2"] = 0.6,
+		["Melee_Combat_Rifle_Cb_1"] = 0.5,
+		["Melee_Combat_Rifle_Cb_2"] = 0.6,
+		["Melee_Combat_Rifle_Csr_1"] = 0.5,
+		["Melee_Combat_Rifle_Csr_2"] = 0.6,
+		["Melee_Combat_Rifle_Sg_1"] = 0.5,
+		["Melee_Combat_Rifle_Sg_2"] = 0.6,
+		["Melee_Combat_Pistol_Pp_1"] = 0.5,
+		["Melee_Combat_Pistol_Pp_2"] = 0.6,
+		["Melee_Combat_Pistol_Hp_1"] = 0.5,
+		["Melee_Combat_Pistol_Hp_2"] = 0.6,
+		["Melee_Combat_Pistol_Ne"] = 0.6
+	}
+	self.IsHuman = true
+	self.MeleeIsGesture = true
+	self.NoTransitionAnims = true
+	self.NoSurpriseAnim = true
+	self.NoWarnAnim = true
+	self.GrenadeIsGesture = true
+	self.NoTaunts = true
+	self.CanReactToGrenades = false
 end
 function ENT:MarineInitialize()
 	self.AllowStealth = true
@@ -32,6 +62,10 @@ function ENT:MarineInitialize()
 	]]
 end
 function ENT:EliteInitialize()
+	self.SpawnWithWeaponDrawn = true
+	self.MoveSpeed = 50
+	self.MoveSpeedMultiplier = 4
+	self:SetCollisionBounds(Vector(10,10,100),Vector(-10,-10,0))
 end
 function ENT:BruteInitialize()
 	self.HasArmor = true
@@ -134,6 +168,21 @@ function ENT:FloodRangedInitialize()
 end
 
 function ENT:SpartanIdle()
+	if self.IsInVehicle then return self:VehicleIdle() end
+	local can, veh = self:CanEnterAVehicle()
+	if can then
+		self:EnterVehicle(veh)
+		return self:VehicleIdle()
+	end
+	self:PostCombatChecks()
+	self:FollowingPlayerChecks()
+	if math.random(1,2) == 1 then
+		self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+		timer.Simple( math.random(2,3), function()
+			if IsValid(self) then self.SpecificGoal = nil end
+		end )
+	end
+	self:DoIdle()
 end
 function ENT:MarineIdle()
 	if self.IsInVehicle then return self:VehicleIdle() end
@@ -153,6 +202,21 @@ function ENT:MarineIdle()
 	self:DoIdle()
 end
 function ENT:EliteIdle()
+	if self.IsInVehicle then return self:VehicleIdle() end
+	local can, veh = self:CanEnterAVehicle()
+	if can then
+		self:EnterVehicle(veh)
+		return self:VehicleIdle()
+	end
+	self:PostCombatChecks()
+	self:FollowingPlayerChecks()
+	if math.random(1,2) == 1 then
+		self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+		timer.Simple( math.random(2,3), function()
+			if IsValid(self) then self.SpecificGoal = nil end
+		end )
+	end
+	self:DoIdle()
 end
 function ENT:BruteIdle()
 	if self.IsInVehicle then return self:VehicleIdle() end
@@ -231,8 +295,6 @@ function ENT:FloodRangedIdle()
 end
 
 function ENT:SpartanThink()
-end
-function ENT:MarineThink()
 	if self:Health() < 1 then return end
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
@@ -271,7 +333,83 @@ function ENT:MarineThink()
 		end
 	end
 end
+function ENT:MarineThink()
+	if self:Health() < 1 then return end
+	if self.LastThinkTime < CurTime() then
+		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
+		local ent = self:WeaponThink()
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
+			local should, dif = self:ShouldFace(ent)
+			--print(should,dif)
+			if should and math.abs(dif) > 2 then
+				--self:Turn(dif,false,true)
+				--print("angle")
+				return "Gotta turn"	
+			end
+			if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
+				local chances = 10+(#self:PossibleTargets())
+				local rand = math.random(100)
+				--print(self.ThrownGrenades)
+				if rand < chances or self:GetSquad():WasSignalGiven("ThrowAllGrenades",5) then
+					local func = function()
+						self:ThrowGrenade()
+					end
+					table.insert(self.StuffToRunInCoroutine,func)
+					--print("grenade")
+					return self:ResetAI()
+				end	
+			end		
+			if IsValid(self.Weapon) then
+				if self:HasToReload() then
+					if !self.Reloading then
+						self.Reloading = true
+						self:Shoot()
+					end
+				else
+					self:Shoot()
+				end
+			end	
+		end
+	end
+end
 function ENT:EliteThink()
+	if self:Health() < 1 then return end
+	if self.LastThinkTime < CurTime() then
+		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
+		local ent = self:WeaponThink()
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
+			local should, dif = self:ShouldFace(ent)
+			--print(should,dif)
+			if should and math.abs(dif) > 2 then
+				--self:Turn(dif,false,true)
+				--print("angle")
+				return "Gotta turn"	
+			end
+			if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
+				local chances = 5+(#self:PossibleTargets())
+				local rand = math.random(100)
+				--print(self.ThrownGrenades)
+				if rand < chances or self:GetSquad():WasSignalGiven("ThrowAllGrenades",5) then
+					local func = function()
+						self:ThrowGrenade()
+					end
+					table.insert(self.StuffToRunInCoroutine,func)
+					--print("grenade")
+					return self:ResetAI()
+				end	
+			end		
+			if IsValid(self.Weapon) then
+				if self:HasToReload() then
+					if !self.Reloading then
+						self.Reloading = true
+						self:Shoot()
+					end
+				else
+					self:Shoot()
+				end
+			end	
+		end
+	end
 end
 function ENT:BruteThink()
 	if self:Health() < 1 then return end
@@ -425,6 +563,163 @@ function ENT:FloodRangedThink()
 end
 
 function ENT:SpartanBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	ent = ent or self.Enemy
+	if self.IsInVehicle then return self:VehicleBehavior(ent,range) end
+	local los = (CurTime()-self.LastCalcTime < 1 and (self.HasLOSToTarget)) or self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter(),{self,ent,self:GetOwner(),ent:GetOwner()})
+	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
+	if !self.DistToTarget then self.DistToTarget = range end
+	if IsValid(ent) and !self.IsWeaponDrawn then self:AdjustWeapon(self.Weapon,true) end
+	local can, veh = self:CanEnterAVehicle()
+	if can then
+		self:EnterVehicle(veh)
+		return self:VehicleBehavior(ent,range)
+	end
+	--print(los, !self.DoneMelee, range < self.MeleeRange^2, range, self.MeleeRange^2, math.sqrt(range), self.MeleeRange )
+	self:MeleeChecks(los,range)
+	if self.AllowGrenade and range < self.GrenadeRange^2 and range > (self.MeleeRange*2)^2 then
+		self.CanThrowGrenade = true
+	else
+		self.CanThrowGrenade = false
+	end
+	if ( !self.DoneStealth or self.GoingForSneakKill ) and self:IsUndetected() then
+		self.DoneStealth = true
+		for k, v in ipairs(self:NearbyAllies(self:GetPos(),512)) do
+			if ( v:IsPlayer() and v:Alive() and self.FriendlyToPlayers ) or (v.GoingForSneakKill and v.Enemy == ent) then
+				self.SawPlayer = true
+			end
+		end
+		timer.Simple( 60, function()
+			if IsValid(self) then
+				self.DoneStealth = false
+				self.SawPlayer = false
+				self.GoingForSneakKill = false
+			end
+		end )
+		self.HaltShoot = true
+		if self.SawPlayer then
+			self:StandBy()
+		else
+			self:SneakKill(ent)
+		end
+	end
+	self.HaltShoot = false
+	if !IsValid(ent) then return end
+	if self.AIType == "Static" then
+	
+		local should, dif = self:ShouldFace(ent)
+		if should then
+			--self:Turn(dif,false,true)
+			coroutine.wait(0.2)
+			return
+		end
+		if !IsValid(ent) then return end
+		coroutine.wait(math.random(2,3))
+		
+	elseif self.AIType == "Defensive" then
+		if self.NeedsToCover then
+			self.NeedsToCover = false
+			self.NotLookingAtEnemy = true
+			local tbl = self:FindCoverSpots(ent)
+			if table.Count(tbl) > 0 or #tbl > 0 then
+				local area = table.Random(tbl)
+				if math.random(1,2) == 1 then
+					timer.Simple( math.random(4,7), function()
+						if IsValid(self) then
+							if self.NotLookingAtEnemy then
+								self.NotLookingAtEnemy = false
+							end
+						end
+					end )
+				end
+				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+				self.NotLookingAtEnemy = false
+				if math.random(1,2) == 1 then
+					self:Speak("cvr")
+					self:NearbyReply("cvr_re")
+				else
+					self:Speak("newordr_support")
+				end
+				return
+			end
+		end
+		local should, dif = self:ShouldFace(ent)
+		if should then
+			--self:Turn(dif,false,true)
+			coroutine.wait(0.2)
+			return
+		end
+		if !IsValid(ent) then return end
+		local wait = math.Rand(1,1.5)
+		coroutine.wait(wait)
+		
+	elseif self.AIType == "Offensive" then
+		if self.NeedsToCover then
+			self.NeedsToCover = false
+			local tbl = self:FindCoverSpots(ent)
+			self.NotLookingAtEnemy = true
+			if math.random(1,2) == 1 then
+				timer.Simple( math.random(4,7), function()
+					if IsValid(self) then
+						if self.NotLookingAtEnemy then
+							self.NotLookingAtEnemy = false
+						end
+					end
+				end )
+			end
+			if table.Count(tbl) > 0 or #tbl > 0 then
+				local area = table.Random(tbl)
+				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+				self.NotLookingAtEnemy = false
+				if math.random(1,2) == 1 then
+					self:Speak("cvr")
+					self:NearbyReply("cvr_re")
+				else
+					self:Speak("newordr_support")
+				end
+				return
+			end
+		end
+		if los then
+			local should, dif = self:ShouldFace(ent)
+			if should then
+				--self:Turn(dif,false,true)
+				--coroutine.wait(0.2)
+				return
+			end
+			if !IsValid(ent) then return end
+			local p
+			--print(self:IsOutNumbered())
+			if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
+			local rang = math.random(128,512)
+			if p == ent:GetPos() then rang = self.DistToTarget/2 end
+			local pos = self:FindNearbyPos(p,rang)
+			local wait = math.Rand(0.5,1)
+			local anim = self.RunAnim[math.random(#self.RunAnim)]
+			local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
+			--print(anim,speed)
+			self:MoveToPosition( pos, anim, speed )
+			coroutine.wait(wait)
+		else
+			if ent.BeingChased then
+				self:Speak("join_invsgt")
+			else
+				if self.IsSergeant and math.random(1,2) == 1 then
+					self:Speak("ordr_invsgt")
+				else
+					self:Speak("invsgt")
+				end
+			end
+			ent.BeingChased = true
+			self:SetEnemy(nil)
+			self:WanderToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,false)
+			if !IsValid(self.Enemy) then 
+				self:Speak("invsgt_fail") 
+			end
+		end
+	end
+	self:DoAnimation(self.IdleAnim)
 end
 function ENT:MarineBehavior(ent,range)
 	if !IsValid(ent) then self:GetATarget() end
@@ -589,6 +884,166 @@ function ENT:MarineBehavior(ent,range)
 	self:DoAnimation(self.IdleAnim)
 end
 function ENT:EliteBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	ent = ent or self.Enemy
+	if self.IsInVehicle then return self:VehicleBehavior(ent,range) end
+	local los = (CurTime()-self.LastCalcTime < 1 and (self.HasLOSToTarget)) or self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter(),{self,ent,self:GetOwner(),ent:GetOwner()})
+	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
+	if !self.DistToTarget then self.DistToTarget = range end
+	if IsValid(ent) and !self.IsWeaponDrawn then self:AdjustWeapon(self.Weapon,true) end
+	local can, veh = self:CanEnterAVehicle()
+	if can then
+		self:EnterVehicle(veh)
+		return self:VehicleBehavior(ent,range)
+	end
+	--print(los, !self.DoneMelee, range < self.MeleeRange^2, range, self.MeleeRange^2, math.sqrt(range), self.MeleeRange )
+	self:MeleeChecks(los,range)
+	self:DodgeChecks(ent,los)
+	if self.AllowGrenade and range < self.GrenadeRange^2 and range > (self.MeleeRange*2)^2 then
+		self.CanThrowGrenade = true
+	else
+		self.CanThrowGrenade = false
+	end
+	if ( !self.DoneStealth or self.GoingForSneakKill ) and self:IsUndetected() then
+		self.DoneStealth = true
+		for k, v in ipairs(self:NearbyAllies(self:GetPos(),512)) do
+			if ( v:IsPlayer() and v:Alive() and self.FriendlyToPlayers ) or (v.GoingForSneakKill and v.Enemy == ent) then
+				self.SawPlayer = true
+			end
+		end
+		timer.Simple( 60, function()
+			if IsValid(self) then
+				self.DoneStealth = false
+				self.SawPlayer = false
+				self.GoingForSneakKill = false
+			end
+		end )
+		self.HaltShoot = true
+		if self.SawPlayer then
+			self:StandBy()
+		else
+			self:SneakKill(ent)
+		end
+	end
+	self.HaltShoot = false
+	if !IsValid(ent) then return end
+	if self.AIType == "Static" then
+	
+		local should, dif = self:ShouldFace(ent)
+		if should then
+			--self:Turn(dif,false,true)
+			coroutine.wait(0.2)
+			return
+		end
+		if !IsValid(ent) then return end
+		coroutine.wait(math.random(2,3))
+		
+	elseif self.AIType == "Defensive" then
+		if self.NeedsToCover then
+			self.NeedsToCover = false
+			self.NotLookingAtEnemy = true
+			local tbl = self:FindCoverSpots(ent)
+			if table.Count(tbl) > 0 or #tbl > 0 then
+				local area = table.Random(tbl)
+				if math.random(1,2) == 1 then
+					timer.Simple( math.random(4,7), function()
+						if IsValid(self) then
+							if self.NotLookingAtEnemy then
+								self.NotLookingAtEnemy = false
+							end
+						end
+					end )
+				end
+				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+				self.NotLookingAtEnemy = false
+				if math.random(1,2) == 1 then
+					self:Speak("cvr")
+					self:NearbyReply("cvr_re")
+				else
+					self:Speak("newordr_support")
+				end
+				return
+			end
+		end
+		local should, dif = self:ShouldFace(ent)
+		if should then
+			--self:Turn(dif,false,true)
+			coroutine.wait(0.2)
+			return
+		end
+		if !IsValid(ent) then return end
+		local wait = math.Rand(1,1.5)
+		coroutine.wait(wait)
+		
+	elseif self.AIType == "Offensive" then
+		if self.NeedsToCover then
+			self.NeedsToCover = false
+			local tbl = self:FindCoverSpots(ent)
+			self.NotLookingAtEnemy = true
+			if math.random(1,2) == 1 then
+				timer.Simple( math.random(4,7), function()
+					if IsValid(self) then
+						if self.NotLookingAtEnemy then
+							self.NotLookingAtEnemy = false
+						end
+					end
+				end )
+			end
+			if table.Count(tbl) > 0 or #tbl > 0 then
+				local area = table.Random(tbl)
+				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+				self.NotLookingAtEnemy = false
+				if math.random(1,2) == 1 then
+					self:Speak("cvr")
+					self:NearbyReply("cvr_re")
+				else
+					self:Speak("newordr_support")
+				end
+				return
+			end
+		end
+		if los then
+			local should, dif = self:ShouldFace(ent)
+			if should then
+				--self:Turn(dif,false,true)
+				--coroutine.wait(0.2)
+				return
+			end
+			if !IsValid(ent) then return end
+			local p
+			--print(self:IsOutNumbered())
+			if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
+			local rang = math.random(128,512)
+			if p == ent:GetPos() then rang = self.DistToTarget/2 end
+			local pos = self:FindNearbyPos(p,rang)
+			local wait = math.Rand(0.5,1)
+			local r = math.random(1,3)
+			local walk = (r == 1 and range < 600^2)
+			local anim = walk and self.WalkAnim[math.random(#self.WalkAnim)] or self.RunAnim[math.random(#self.RunAnim)]
+			local speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
+			--print(anim,speed)
+			self:MoveToPosition( pos, anim, speed )
+			coroutine.wait(wait)
+		else
+			if ent.BeingChased then
+				self:Speak("join_invsgt")
+			else
+				if self.IsSergeant and math.random(1,2) == 1 then
+					self:Speak("ordr_invsgt")
+				else
+					self:Speak("invsgt")
+				end
+			end
+			ent.BeingChased = true
+			self:SetEnemy(nil)
+			self:WanderToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,false)
+			if !IsValid(self.Enemy) then 
+				self:Speak("invsgt_fail") 
+			end
+		end
+	end
+	self:DoAnimation(self.IdleAnim)
 end
 function ENT:BruteBehavior(ent,range)
 	if !IsValid(ent) then self:GetATarget() end
