@@ -30,6 +30,7 @@ $attachment "anim_attachment_LH" "l_hand" 9.00 2.50 -1.00 rotate -0 0 -180
 $attachment "backpack" "spine1" 6.94 -6.55 0.00 rotate -45 0 180
 $attachment "sidearm" "r_thigh" 7.93 -0.00 5.17 rotate 10 180 90
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
+$attachment "flashlight" "spine1" 15.00 1.00 9.00 rotate 0 90 90
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861
