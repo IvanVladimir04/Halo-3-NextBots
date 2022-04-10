@@ -156,7 +156,6 @@ function ENT:BruteInitialize()
 	if self.Rank == 4 then
 		self:SetBodygroup(1,1)
 		self:SetBodygroup(7,1)
-		self.GrenadePlasma = true
 		if self.IsWarChieftain then
 			self.IsChieftain = true
 			self:SetSkin(4)
