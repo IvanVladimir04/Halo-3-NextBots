@@ -3,6 +3,7 @@ AddCSLuaFile()
 
 
 function ENT:SpartanInitialize()
+	self.DamageThreshold = math.huge
 	self.SpawnWithWeaponDrawn = true
 	self.AllowStealth = true
 	self.MoveSpeed = 100
@@ -62,10 +63,14 @@ function ENT:MarineInitialize()
 	]]
 end
 function ENT:EliteInitialize()
-	self.SpawnWithWeaponDrawn = true
+	--self.SpawnWithWeaponDrawn = true
 	self.MoveSpeed = 50
 	self.MoveSpeedMultiplier = 4
-	self:SetCollisionBounds(Vector(10,10,100),Vector(-10,-10,0))
+	self:SetCollisionBounds(Vector(10,10,120),Vector(-10,-10,0))
+	self.GrenadeType = "astw2_halo3_plasma_thrown"
+	self.DamageThreshold = math.huge
+	self.GrenadeSpawnTime = 0.2
+	self.GrenadeDropTime = 1.2
 end
 function ENT:BruteInitialize()
 	self.HasArmor = true
@@ -1018,10 +1023,8 @@ function ENT:EliteBehavior(ent,range)
 			if p == ent:GetPos() then rang = self.DistToTarget/2 end
 			local pos = self:FindNearbyPos(p,rang)
 			local wait = math.Rand(0.5,1)
-			local r = math.random(1,3)
-			local walk = (r == 1 and range < 600^2)
-			local anim = walk and self.WalkAnim[math.random(#self.WalkAnim)] or self.RunAnim[math.random(#self.RunAnim)]
-			local speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
+			local anim = self.RunAnim[math.random(#self.RunAnim)]
+			local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
 			--print(anim,speed)
 			self:MoveToPosition( pos, anim, speed )
 			coroutine.wait(wait)
@@ -1196,7 +1199,10 @@ end
 
 function ENT:DoIdle()
 	if !self.IsWeaponDrawn and !self.HasSeenEnemies then
-		if math.random(1,2) == 1 then
+		if math.random(1,2) == 1 and IV04H3_AllowPatrol then
+			local pos = self:FindNearbyPos()
+			self:GoToPosition( (pos), self.PatrolMoveAnim[math.random(1,#self.PatrolMoveAnim)], self.MoveSpeed*0.5, self.WanderToPos, self.PatrolIdleAnim )	
+		else
 			local seq = self.PatrolIdleAnim
 			self:DoAnimation(seq)
 			self:SearchEnemy()
@@ -1213,9 +1219,6 @@ function ENT:DoIdle()
 			end )
 			coroutine.wait(self:SequenceDuration(seq))
 			self:SearchEnemy()
-		else
-			local pos = self:FindNearbyPos()
-			self:GoToPosition( (pos), self.PatrolMoveAnim[math.random(1,#self.PatrolMoveAnim)], self.MoveSpeed*0.5, self.WanderToPos, self.PatrolIdleAnim )	
 		end
 	else
 		local seq = self.IdleCalmAnim

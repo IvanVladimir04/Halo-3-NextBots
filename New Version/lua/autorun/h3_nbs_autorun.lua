@@ -69,8 +69,12 @@ cvars.AddChangeCallback("halo_3_nextbots_ai_difficulty", function(name, old, new
 	end
 end, "Difficulty Corrector")
 
+IV04H3_AllowPatrol = true
 
 
+cvars.AddChangeCallback("halo_3_nextbots_ai_patrol", function(name, old, new)
+	IV04H3_AllowPatrol = GetConVar("halo_3_nextbots_ai_patrol"):GetInt() == 1
+end)
 
 
 

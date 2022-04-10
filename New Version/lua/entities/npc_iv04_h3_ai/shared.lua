@@ -442,7 +442,7 @@ ENT.AllowSounds = {
 
 if CLIENT then
 
-	function ENT:Initialize()
+	function ENT:OnClientInitialize()
 		local func = self.TemplateCLInitialize[self.AITemplate]
 		func(self)
 		self.Think = self.TemplateThink[self.AITemplate]
@@ -667,6 +667,22 @@ function ENT:SetupAnimations()
 				self.PatrolIdleAnim = {"Combat_Pistol_Idle_Down"}
 				self.PatrolMoveAnim = {"Walk_Combat_Pistol_Down"}
 				self.GrenadeAnim = {"Throw_Grenade_Combat_Pistol"}
+				self.DeathFrontAnims = {
+					["Head"] = {"Die_Front_Head"},
+					["Gut"] =  {"Die_Front_Gut"}
+				}
+				self.DeathBackAnims = {
+					["Head"] = {"Die_Back_Head"},
+					["Gut"] =  {"Die_Back_Gut"}
+				}
+				self.DeathLeftAnims = {
+					["Head"] = {"Die_Left_Head"},
+					["Gut"] =  {"Die_Left_Gut"}
+				}
+				self.DeathRightAnims = {
+					["Head"] = {"Die_Right_Head"},
+					["Gut"] =  {"Die_Right_Gut"}
+				}
 				if self.Weapon:GetClass() == "astw2_halo3_plasmapistol" then
 					self.MeleeAnim = {"Melee_Combat_Pistol_Pp_1","Melee_Combat_Pistol_Pp_2"}
 				elseif self.Weapon:GetClass() == "astw2_halo3_needler" then
@@ -674,6 +690,32 @@ function ENT:SetupAnimations()
 				else
 					self.MeleeAnim = {"Melee_Combat_Pistol_Hp_1","Melee_Combat_Pistol_Hp_2"}
 				end
+			elseif self.AITemplate == "ELITE" then
+				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
+				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
+				self.MeleeAnim = {"Melee_Combat_Pistol"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Pistol"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Pistol"}
+				self.WarnAnim = {"Warn_Combat_Pistol"}
+				self.PatrolMoveAnim = {"Move_Patrol_Unarmed_Up"}
+				self.PatrolIdleAnim = {"Patrol_Pistol_Idle_Up"}
+				self.PatrolIdlePoseAnim = {"Patrol_Pistol_Idle_Posing_1","Patrol_Pistol_Idle_Posing_2","Patrol_Pistol_Idle_Posing_3"}
+				self.DeathFrontAnims = {
+					["Head"] = {"Die_Front_Head"},
+					["Gut"] =  {"Die_Front_Gut"}
+				}
+				self.DeathBackAnims = {
+					["Head"] = {"Die_Back_Head"},
+					["Gut"] =  {"Die_Back_Gut"}
+				}
+				self.DeathLeftAnims = {
+					["Head"] = {"Die_Left_Head"},
+					["Gut"] =  {"Die_Left_Gut"}
+				}
+				self.DeathRightAnims = {
+					["Head"] = {"Die_Right_Head"},
+					["Gut"] =  {"Die_Right_Gut"}
+				}
 			else
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
@@ -776,6 +818,34 @@ function ENT:SetupAnimations()
 				else
 					self.MeleeAnim = {"Melee_Combat_Rifle_Br_1","Melee_Combat_Rifle_Br_2"}
 				end
+			elseif self.AITemplate == "ELITE" then
+				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Rifle"}
+				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Rifle"}
+				self.MeleeAnim = {"Melee_Combat_Rifle"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle"}
+				self.SurpriseAnim = "surprised_combat_rifle"
+				self.EvadeLeftAnim = "evade_left_combat_pistol"
+				self.EvadeRightAnim = "evade_right_combat_pistol"
+				self.PatrolMoveAnim = {"Move_Patrol_Unarmed_Up"}
+				self.PatrolIdleAnim = {"Patrol_Pistol_Idle_Up"}
+				self.PatrolIdlePoseAnim = {"Patrol_Rifle_Idle_Posing_1","Patrol_Rifle_Idle_Posing_2"}
+				self.DeathFrontAnims = {
+					["Head"] = {"Die_Front_Head"},
+					["Gut"] =  {"Die_Front_Gut"}
+				}
+				self.DeathBackAnims = {
+					["Head"] = {"Die_Back_Head"},
+					["Gut"] =  {"Die_Back_Gut"}
+				}
+				self.DeathLeftAnims = {
+					["Head"] = {"Die_Left_Head"},
+					["Gut"] =  {"Die_Left_Gut"}
+				}
+				self.DeathRightAnims = {
+					["Head"] = {"Die_Right_Head"},
+					["Gut"] =  {"Die_Right_Gut"}
+				}
 			else
 				self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
@@ -851,6 +921,10 @@ function ENT:SetupAnimations()
 			if self.AITemplate == "SPARTAN" then
 				self.PatrolIdleAnim = {"combat_missile_idle_up"}
 				self.PatrolMoveAnim = {"walk_combat_missile_up"}
+			elseif self.AITemplate == "ELITE" then
+				self.MeleeAnim = {"Melee_Combat_Missile"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Missile"}
 			end
 			self.TransitionAnims["Move_2_Idle"] = "combat_missile_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_missile_move_2_combat_idle"
@@ -1665,11 +1739,13 @@ function ENT:DoAnimationEvent(a)
 			end
 		end )
 		if !CLIENT and self.IsWeaponDrawn then
+			self.HaltShoot = true
 			local a,len = self:LookupSequence(self.ReloadAnim) -- LookupSequence finds the id of a string (name) of animation
 			local func = function() -- Prepare a function to add to the behavior
 				self:DoGestureSeq(a) -- Play the sequence
-				coroutine.wait(len)
+				--coroutine.wait(len)
 			end
+			timer.Simple( len, function() if IsValid(self) then self.HaltShoot = false end end )
 			table.insert(self.StuffToRunInCoroutine,func) -- Place the function in queue
 			self:ResetAI() -- Let the AI know it should recalculate what to do
 		end
@@ -1875,7 +1951,7 @@ function ENT:OnHaveEnemy(ent)
 							coroutine.wait(0.2)
 						end
 						if !self.NoWarnAnim then
-							self:PlaySequenceAndWait(self.WarnAnim[math.random(#self.WarnAnim)])
+							self:PlaySequenceAndWait(self:TableRandom(self.WarnAnim))
 						end
 					end
 					table.insert(self.StuffToRunInCoroutine,func)
@@ -2511,28 +2587,30 @@ function ENT:ThrowGrenade()
 	if !self:WasSignalGiven("ThrowAllGrenades",5) then 
 		self:Speak("ordr_grenade")
 	end
-	timer.Simple( 0.4, function()
+	timer.Simple( self.GrenadeSpawnTime or 0.4, function()
 		if IsValid(self) then
-			grenade = ents.Create("astw2_halo3_frag_thrown")
+			grenade = ents.Create(self.GrenadeType or "astw2_halo3_frag_thrown")
+			if grenade:GetClass() == "astw2_halo3_frag_thrown" then
 			grenade.Detonate = function() -- I can't believe what I just have done
-			if SERVER then
-				if not grenade:IsValid() then return end
-				local effectdata = EffectData()
-				effectdata:SetOrigin(grenade:GetPos() + Vector(0,0,25))
+				if SERVER then
+					if not grenade:IsValid() then return end
+					local effectdata = EffectData()
+					effectdata:SetOrigin(grenade:GetPos() + Vector(0,0,25))
 
-				if grenade:WaterLevel() >= 1 then
-					util.Effect( "WaterSurfaceExplosion", effectdata )
-				sound.Play( "halo/halo_3/frag_expl_water" .. math.random(1,5) .. ".ogg",  grenade:GetPos(), 100, 100 )
-				else
-					ParticleEffect( "astw2_halo_3_frag_explosion", grenade:GetPos(), grenade:GetAngles() )
+					if grenade:WaterLevel() >= 1 then
+						util.Effect( "WaterSurfaceExplosion", effectdata )
+					sound.Play( "halo/halo_3/frag_expl_water" .. math.random(1,5) .. ".ogg",  grenade:GetPos(), 100, 100 )
+					else
+						ParticleEffect( "astw2_halo_3_frag_explosion", grenade:GetPos(), grenade:GetAngles() )
+					end
+				util.Decal( "astw2_halo_reach_impact_soft_terrain_explosion", grenade:GetPos(), grenade:GetPos() - Vector(0, 0, 32), grenade )
+					local resp = IsValid(grenade.Owner) and grenade.Owner or grenade
+					util.BlastDamage(grenade, resp, grenade:GetPos(), 450, 175)
+					sound.Play( "halo/halo_3/frag_expl_h3_" .. math.random(2,6) .. ".ogg",  grenade:GetPos(), 100, 100 )
+				util.ScreenShake(grenade:GetPos(),10000,100,0.8,1024)
+					grenade:Remove()
+
 				end
-			util.Decal( "astw2_halo_reach_impact_soft_terrain_explosion", grenade:GetPos(), grenade:GetPos() - Vector(0, 0, 32), grenade )
-				local resp = IsValid(grenade.Owner) and grenade.Owner or grenade
-				util.BlastDamage(grenade, resp, grenade:GetPos(), 450, 175)
-				sound.Play( "halo/halo_3/frag_expl_h3_" .. math.random(2,6) .. ".ogg",  grenade:GetPos(), 100, 100 )
-			util.ScreenShake(grenade:GetPos(),10000,100,0.8,1024)
-				grenade:Remove()
-
 			end
 		end
 			local att = self:GetAttachment(2)
@@ -2547,7 +2625,7 @@ function ENT:ThrowGrenade()
 			grenade.BlastDMG = 80
 		end
 	end )
-	timer.Simple( 0.8, function()
+	timer.Simple( self.GrenadeDropTime or 0.8, function()
 		if IsValid(self) and IsValid(grenade) then
 			grenade:SetMoveType( MOVETYPE_VPHYSICS )
 			grenade:SetParent( nil )
@@ -2663,7 +2741,7 @@ function ENT:FinishDeadLanding()
 			end
 		end)
 	end
-	rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time = 0.1, randommove = true})
+	rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
 end
 
 function ENT:DoKilledAnim()
@@ -2675,8 +2753,8 @@ function ENT:DoKilledAnim()
 		if self.KilledDmgInfo:GetDamage() <= 150 then
 			self:Speak("OnDeath")
 			local anim = self:DetermineDeathAnim(self.KilledDmgInfo)
-			if anim == true and IV04_DropWeapons then 
-				if !self.DoesntUseWeapons then
+			if anim == true then 
+				if !self.DoesntUseWeapons and IV04_DropWeapons then
 					local wep = ents.Create(self.Weapon:GetClass())
 					wep:SetPos(self.Weapon:GetPos())
 					wep:SetAngles(self.Weapon:GetAngles())
@@ -2707,7 +2785,7 @@ function ENT:DoKilledAnim()
 							end
 						end)
 					end
-					rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time = 0.1, randommove = true})
+					rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
 				end
 			end )
 			self:PlaySequenceAndPWait(seq, 1, self:GetPos())
