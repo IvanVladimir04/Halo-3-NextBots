@@ -78,26 +78,97 @@ function ENT:BruteInitialize()
 	self.IsBrute = true
 	self:SetCollisionBounds(Vector(20,20,0),Vector(-20,-20,100))
 	self.CanShootCrouch = false
-	self:SetSkin(self.Rank)
 	self.MoveSpeed = 100
 	self.MoveSpeedMultiplier = 1.5
 	self.Shield = 50+(self.Rank*10)
 	self.MaxShield = self.Shield
 	self.VoiceType = "Brute_"..math.random(3)..""
-	self:SetBodygroup(7,math.random(1,-4))
 	self.MeleeAnimsHits = {
 		["Melee_Combat_Pistol_1"] = 0.6
 	}
 	if self.Rank == 1 then
-		if !self.IsCaptain then
-			self:SetBodygroup(2,2)
-			self:SetBodygroup(3,2)
-		else
+		self:SetBodygroup(7,math.random(0,1))
+		if self.IsCaptain then
+			self:SetSkin(2)
 			self:SetBodygroup(2,3)
 			self:SetBodygroup(3,3)
 			self:SetBodygroup(4,3)
 			self:SetBodygroup(5,1)
 			self:SetBodygroup(6,1)
+		elseif self.IsStalker then
+			self:SetBodygroup(1,1)
+			self:SetBodygroup(2,1)
+			self:SetBodygroup(3,1)
+			self:SetBodygroup(4,1)
+			self:SetSkin(6)
+		else
+			self:SetSkin(self.Rank)
+			self:SetBodygroup(2,2)
+			self:SetBodygroup(3,2)
+		end
+	end
+	if self.Rank == 2 then
+		self:SetBodygroup(7,math.random(0,1))
+		if self.IsCaptain then
+			if math.random(1,2) == 1 then
+				self:SetSkin(4)
+			else
+				self:SetSkin(3)
+			end
+			self:SetBodygroup(2,3)
+			self:SetBodygroup(3,3)
+			self:SetBodygroup(4,3)
+			self:SetBodygroup(5,1)
+			self:SetBodygroup(6,1)
+		elseif self.IsJumpers then
+			self:SetSkin(self.Rank)
+			self:SetBodygroup(2,4)
+			self:SetBodygroup(3,4)
+			self:SetBodygroup(4,4)
+		else
+			self:SetSkin(self.Rank)
+			self:SetBodygroup(2,2)
+			self:SetBodygroup(3,2)
+			self:SetBodygroup(4,2)
+		end
+	end
+	if self.Rank == 3 then
+		self:SetBodygroup(7,math.random(0,1))
+		if self.IsCaptain then
+			self:SetBodygroup(2,3)
+			self:SetBodygroup(3,3)
+			self:SetBodygroup(4,3)
+			self:SetBodygroup(5,1)
+			self:SetBodygroup(6,1)
+			self:SetSkin(5)
+		elseif self.IsJumpers then
+			self:SetSkin(7)
+			self:SetBodygroup(2,4)
+			self:SetBodygroup(3,4)
+			self:SetBodygroup(4,4)
+		else
+			self:SetBodygroup(2,2)
+			self:SetSkin(self.Rank)
+			self:SetBodygroup(3,2)
+			self:SetBodygroup(4,2)
+		end
+	end
+	if self.Rank == 4 then
+		self:SetBodygroup(1,1)
+		self:SetBodygroup(7,1)
+		self.GrenadePlasma = true
+		if self.IsWarChieftain then
+			self.IsChieftain = true
+			self:SetSkin(4)
+			self:SetBodygroup(2,6)
+			self:SetBodygroup(3,6)
+			self:SetBodygroup(4,6)
+		else
+			self.IsChieftain = true
+			self:SetSkin(3)
+			self:SetBodygroup(2,5)
+			self:SetBodygroup(3,5)
+			self:SetBodygroup(4,5)
 		end
 	end
 end
