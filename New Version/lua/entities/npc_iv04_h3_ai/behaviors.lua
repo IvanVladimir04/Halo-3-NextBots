@@ -37,7 +37,7 @@ function ENT:SpartanInitialize()
 end
 function ENT:MarineInitialize()
 	self.AllowStealth = true
-	self.MoveSpeed = 76
+	self.MoveSpeed = 90
 	self.MoveSpeedMultiplier = 2
 	self:SetCollisionBounds(Vector(10,10,70),Vector(-10,-10,0))
 	self.MeleeAnimsHits = {
@@ -64,8 +64,8 @@ function ENT:MarineInitialize()
 end
 function ENT:EliteInitialize()
 	--self.SpawnWithWeaponDrawn = true
-	self.MoveSpeed = 50
-	self.MoveSpeedMultiplier = 4
+	self.MoveSpeed = 100
+	self.MoveSpeedMultiplier = 2
 	self:SetCollisionBounds(Vector(10,10,120),Vector(-10,-10,0))
 	self.GrenadeType = "astw2_halo3_plasma_thrown"
 	self.DamageThreshold = math.huge
