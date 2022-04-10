@@ -1364,6 +1364,76 @@ $animation "talk_mouth_overlay" "marine_animations\combat_talk.smd" {
 	fps 30
 	subtract	"talk_mouth_overlay_pose"	0
 }
+$animation "eyes_blink_overlay_pose" "marine_animations\eyes_blink.smd" {
+	fps 30
+	loop
+	frame 80 80
+}
+$animation "facial_animation_overlay_pose" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	loop
+	frame 201 201
+}
+$animation "facial_animation_overlay_1" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 7 22
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "facial_animation_overlay_2" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 27 42
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "facial_animation_overlay_3" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 47 62
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "facial_animation_overlay_4" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 67 82
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "facial_animation_overlay_5" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 87 102
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "facial_animation_overlay_6" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 107 122
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "facial_animation_overlay_7" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 127 142
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "facial_animation_overlay_8" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 147 162
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "facial_animation_overlay_9" "marine_animations\facial_animation_overlay.smd" {
+	fps 30
+	frame 167 182
+	loop
+	subtract	"facial_animation_overlay_pose"	0
+}
+$animation "eyes_blink_overlay" "marine_animations\eyes_blink.smd" {
+	fps 30
+	subtract	"eyes_blink_overlay_pose"	0
+}
+
+
 
 //AIMLAYER SEQUENCES
 
@@ -3014,5 +3084,105 @@ $sequence "talk_overlay" {
 	fadein 0.2
 	fadeout 0.2
 	fps 45
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_1" {
+	"facial_animation_overlay_1"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_2" {
+	"facial_animation_overlay_2"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_3" {
+	"facial_animation_overlay_3"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_4" {
+	"facial_animation_overlay_4"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_5" {
+	"facial_animation_overlay_5"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_6" {
+	"facial_animation_overlay_6"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_7" {
+	"facial_animation_overlay_7"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_8" {
+	"facial_animation_overlay_8"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "talk_facial_animation_overlay_9" {
+	"facial_animation_overlay_9"
+	activity "ACT_GMOD_IN_CHAT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 15
+	loop
+	delta
+}
+
+$sequence "eyes_facial_animation_blink_overlay" {
+	"eyes_blink_overlay"
+	activity "ACT_VM_FIDGET" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 22
+	loop
 	delta
 }
