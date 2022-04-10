@@ -1745,7 +1745,7 @@ function ENT:DoAnimationEvent(a)
 				self:DoGestureSeq(a) -- Play the sequence
 				--coroutine.wait(len)
 			end
-			timer.Simple( len, function() if IsValid(self) then self.HaltShoot = false end end )
+			timer.Simple( len or 2, function() if IsValid(self) then self.HaltShoot = false end end )
 			table.insert(self.StuffToRunInCoroutine,func) -- Place the function in queue
 			self:ResetAI() -- Let the AI know it should recalculate what to do
 		end
