@@ -35,7 +35,7 @@ function ENT:DoInit()
 	else
 		self:SetSkin(1)
 	end
-	self:SetBodygroup(4,1)
+	self:SetBodygroup(1,math.random(0,1))
 end
 
 list.Set( "NPC", "npc_iv04_h3_all_odst", {

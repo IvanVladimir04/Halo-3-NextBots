@@ -9,7 +9,7 @@
 	"$detailblendmode"			"5.00"
 	"$detailblendfactor"			"2.00"
 	"$detailscale"			"1.00"
-
+	"$normalmapalphaenvmapmask"	1
 	"$phong" 1
 	"$phongboost" "3"
 	"$phongexponent" "9"
@@ -24,6 +24,6 @@
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint"	"[0.05 0.02 0.01]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
-	"$color2"		"[0.4 0.04 0.02]"
+	"$color2"		"[0.34 0.12 0.15]"
 	"$nodecal"	"1"
 }

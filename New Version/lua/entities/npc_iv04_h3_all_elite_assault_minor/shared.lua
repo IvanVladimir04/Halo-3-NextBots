@@ -32,7 +32,11 @@ function ENT:DoInit()
 	--self:SetBodygroup(1,math.random(-4,1))
 	--self:SetBodygroup(4,1)
 	--self:SetBodygroup(5,8)
-	self:SetSkin(math.random(1,2))
+	self:SetSkin(2)
+	self:SetBodygroup(1,1)
+	self:SetBodygroup(2,1)
+	self:SetBodygroup(3,1)
+	self:SetBodygroup(4,1)
 	self:SetBodygroup(7,1)
 	--print(head)
 	self.VoiceType = "Elite_"..math.random(1,2)..""
@@ -41,8 +45,8 @@ function ENT:DoInit()
 	--print(self:GetName(),self.Weapon:GetName())
 end
 
-list.Set( "NPC", "npc_iv04_h3_all_elite_minor", {
-	Name = "Elite Minor",
-	Class = "npc_iv04_h3_all_elite_minor",
+list.Set( "NPC", "npc_iv04_h3_all_elite_assault_minor", {
+	Name = "Elite Assault Minor",
+	Class = "npc_iv04_h3_all_elite_assault_minor",
 	Category = "Halo 3"
 } )

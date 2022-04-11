@@ -4,7 +4,7 @@
 	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_blade_zbump"
 	"$selfillum"	"1"
 	"$selfillummask"	"models/halo_3/characters/alliance/elite/mp_blade_illumination"
-
+	"$normalmapalphaenvmapmask"	1
 	"$detail"  "models/halo_3/characters/alliance/elite/mp_blade_illumination"
 	"$detailblendmode"			"5.00"
 	"$detailblendfactor"			"2.00"

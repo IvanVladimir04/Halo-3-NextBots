@@ -179,6 +179,8 @@ function ENT:DroneInitialize()
 end
 function ENT:HunterInitialize()
 	self:SetSkin(self.Rank)
+	self.MoveSpeed = 125
+	self.MoveSpeedMultiplier = 2
 end
 function ENT:EngineerInitialize()
 end
