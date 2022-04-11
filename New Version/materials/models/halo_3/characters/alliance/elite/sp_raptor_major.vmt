@@ -11,7 +11,7 @@
 	"$phong" 1
 	"$phongboost" "2.5"
 	"$phongexponent" "6"
-	"$phongtint"	"[0.5 0.45 0.4]"
+	"$phongtint"	"{75 40 100}"
 	"$phongfresnelranges" "[.5 .85 6]"
 	"$model" 1
 	"$phongalbedotint" "1"
@@ -20,8 +20,8 @@
 	"$rimlightexponent"	"15"
 	"$rimlightboost"	"5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
-	"$envmaptint"	"[0.12 0.04 0.03]"
+	"$envmaptint"	"[0.02 0.005 0.01]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
-	"$color2"		"[0.7 0.4 0.35]"
+	"$color2"		"[.57 .2 .42]"
 }
 
