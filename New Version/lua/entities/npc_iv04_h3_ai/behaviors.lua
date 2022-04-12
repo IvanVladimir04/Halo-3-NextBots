@@ -397,7 +397,7 @@ function ENT:SpartanThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee and !self.HasMeleeWeapon then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -436,7 +436,7 @@ function ENT:MarineThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee and !self.HasMeleeWeapon then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -475,7 +475,7 @@ function ENT:EliteThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee and !self.HasMeleeWeapon then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -514,7 +514,7 @@ function ENT:BruteThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee and !self.HasMeleeWeapon then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -1113,7 +1113,7 @@ function ENT:EliteBehavior(ent,range)
 			--print(self:IsOutNumbered())
 			if self.HasMeleeWeapon then
 				self.PathGoalTolerance = 100
-				self:MoveToPosition( ent:GetPos(), self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+				self:MoveToPosition( ent:GetPos(), self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
 				self.PathGoalTolerance = 40
 			else
 				if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
@@ -1162,7 +1162,7 @@ function ENT:BruteBehavior(ent,range)
 			self:SetEnemy(ent)
 		end
 	end
-	local range = range
+	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
 	if !self.DistToTarget then self.DistToTarget = range end
 	local can, veh = self:CanEnterAVehicle()
 	if can then
@@ -1383,7 +1383,7 @@ function ENT:PostCombatChecks()
 	end
 end
 function ENT:WeaponThink()
-		if IV04_AIDisabled or self.Flying or self.HaltShoot or self.AnimBusy or self.HasMeleeWeapon then return end
+		if IV04_AIDisabled or self.Flying or self.HaltShoot or self.AnimBusy then return end
 		if IsValid(self.Enemy) then
 			local ent = self.Enemy		
 			if self.LastCalcTime < CurTime() then -- We can do expensive actions

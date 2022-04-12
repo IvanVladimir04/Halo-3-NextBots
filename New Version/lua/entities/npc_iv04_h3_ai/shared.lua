@@ -1715,11 +1715,6 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 	end	
 	self.DoneMelee = true -- Melee cooldown
 	self.DoingMelee = true -- Immediate melee animation cooldown (to stop other parts of the AI)
-	timer.Simple( math.random(self.MeleeCooldownMin,self.MeleeCooldownMax), function()
-		if IsValid(self) then
-			self.DoneMelee = false -- Remove melee cooldown
-		end
-	end )
 	local anim = self.MeleeAnim[math.random(#self.MeleeAnim)]
 	local id, len = self:LookupSequence(anim)
 	local hittime = self.MeleeAnimsHits[anim] or 0.6
@@ -1731,6 +1726,14 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 	timer.Simple( len, function()
 		if IsValid(self) then
 			self.DoingMelee = false -- Remove the busy animation status
+		end
+	end )
+	local min = self.MeleeCooldownMin
+	local max = self.MeleeCooldownMax
+	if self.HasMeleeWeapon then min = len max = len end
+	timer.Simple( math.random(min,max), function()
+		if IsValid(self) then
+			self.DoneMelee = false -- Remove melee cooldown
 		end
 	end )
 	if self.MeleeIsGesture then
@@ -1749,7 +1752,7 @@ end
 
 function ENT:DoMeleeDamage() -- No arguments needed, everything is defined on the variables
 	local damage = self.MeleeDamage
-	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter()+self:GetUp()*20, self:GetForward(), self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
+	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter()+self:GetUp()*20+self:GetForward()*-20, self:GetForward(), self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
 		if v != self and self:CheckRelationships(v) != "friend" then
 			--print(v)
 			--v:EmitSound( self.OnMeleeSoundTbl[math.random(1,#self.OnMeleeSoundTbl)] )
@@ -1778,6 +1781,7 @@ function ENT:DoMeleeDamage() -- No arguments needed, everything is defined on th
 end
 
 function ENT:MeleeChecks(los,range)
+	--print(los,range)
 	if los and !self.DoneMelee and range < self.MeleeRange^2 then
 		self:DoMelee()
 	end
@@ -2201,12 +2205,12 @@ function ENT:OnInjured(dmg)
 					ParticleEffectAttach(self.ShieldCriticalParticle,PATTACH_POINT_FOLLOW,self,6)
 				end
 			else
-				self:StopParticles()
 				self:ShieldArcLoop()
 				local shild = self.Shield
 				timer.Simple( self.ShieldRegenTimeDelay, function()
 					if IsValid(self) and shield == self.ShieldH and self.HasArmor then
 						local stop = false
+						self:StopParticles()
 						ParticleEffect(self.ShieldRechargeParticle,self:WorldSpaceCenter(),self:GetAngles(),self)
 						for i = 1, 10 do
 							timer.Simple( self.ShieldRegenTime*0.1, function()
