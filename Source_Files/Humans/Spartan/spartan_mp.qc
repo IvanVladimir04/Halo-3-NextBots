@@ -83,6 +83,9 @@ $attachment "anim_attachment_LH" "l_hand" 1.07 0.00 0.00 rotate 0 0 -180
 $attachment "backpack" "spine1" 6.52 -6.15 -0.00 rotate -45 0 -180
 $attachment "sidearm" "r_thigh" 9.93 2.00 3.70 rotate 5 180 90
 $attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
+$attachment "flashlight_L" "fx_light_flares" -0.50 0.00 0.00 rotate 15 -0 0
+$attachment "flashlight_R" "fx_light_flares.001" -0.50 0.00 0.00 rotate 15 -0 0
+$attachment "shield_fx" "spine1" 0.00 0.00 -0.00 rotate 0 90 90
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861

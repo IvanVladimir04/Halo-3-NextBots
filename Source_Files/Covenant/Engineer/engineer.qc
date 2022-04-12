@@ -27,8 +27,7 @@ $illumposition 0 0 96
 
 $cdmaterials "\models\halo_3\characters\covenant\engineer\"
 
-
-
+$attachment "shield_fx" "pelvis" 0.00 0.00 0.00 rotate 0 0 -90
 
 $poseparameter "move_yaw" -180 180 loop 360
 $PoseParameter "aim_yaw" -45 45 0

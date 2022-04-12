@@ -91,6 +91,7 @@ $attachment "sidearm" "r_thigh" 10.45 4.00 7.25 rotate 10 180 90
 $attachment "eyes" "head" 8.32 12.26 -0.00 rotate 0 70 90
 $attachment "jetpack_R" "spine1" -7 -16 -10.5 rotate 0 -170 180
 $attachment "jetpack_L" "spine1" -7 -16 10 rotate 0 -170 180
+$attachment "shield_fx" "spine1" 0.00 0.00 -0.00 rotate 0 90 90
 
 $cbox 0 0 0 0 0 0
 

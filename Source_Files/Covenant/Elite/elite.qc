@@ -103,6 +103,7 @@ $attachment "backpack" "spine1" 11.79 -14.91 -0.00 rotate -45 0 -180
 $attachment "sidearm" "r_thigh" 10.06 0.00 6.39 rotate -10 180 90
 $attachment "sidearm_L" "l_thigh" 10.71 0.00 -6.81 rotate -10 180 -90
 $attachment "sword_holster" "r_thigh" 10.71 0.00 6.81 rotate 90 90 0
+$attachment "shield_fx" "spine1" 0.00 0.00 -0.00 rotate 0 90 90
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
 $cbox 0 0 0 0 0 0
 

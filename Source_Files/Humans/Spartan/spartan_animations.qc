@@ -33,6 +33,7 @@ $attachment "sidearm" "r_thigh" 10.58 1.13 4.94 rotate -5 180 90
 $attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
 $attachment "flashlight_L" "fx_light_flares" -0.50 0.00 0.00 rotate 15 -0 0
 $attachment "flashlight_R" "fx_light_flares.001" -0.50 0.00 0.00 rotate 15 -0 0
+$attachment "shield_fx" "spine1" 0.00 0.00 -0.00 rotate 0 90 90
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861

@@ -33,6 +33,7 @@ $attachment "sidearm_L" "l_thigh" 10.71 0.00 -6.81 rotate -10 180 -90
 $attachment "sword_holster" "r_thigh" 10.71 0.00 6.81 rotate 90 90 0
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
 $attachment "flashlight" "spine1" 15.00 1.00 9.00 rotate 0 90 90
+$attachment "shield_fx" "spine1" 0.00 0.00 -0.00 rotate 0 90 90
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861
