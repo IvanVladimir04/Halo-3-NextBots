@@ -34,6 +34,15 @@ function ENT:SpartanInitialize()
 	self.GrenadeIsGesture = true
 	self.NoTaunts = true
 	self.CanReactToGrenades = false
+	self.ShieldRegenTimeDelay = 5
+	self.ShieldRegenTime = 2
+	self.ShieldImpactParticle = "iv04_halo_3_spartan_shield_impact_effect"
+	self.ShieldDepleteParticle = "iv04_halo_3_spartan_shield_deplete"
+	self.ShieldDepleteArcsParticle = "iv04_halo_3_spartan_shield_deplete_arcs"
+	self.ShieldRechargeParticle = "iv04_halo_3_spartan_shield_recharge"
+	self.MaxShield = 70
+	self.Shield = 70
+	self.HasArmor = true
 end
 function ENT:MarineInitialize()
 	self.AllowStealth = true
@@ -71,6 +80,15 @@ function ENT:EliteInitialize()
 	self.DamageThreshold = math.huge
 	self.GrenadeSpawnTime = 0.2
 	self.GrenadeDropTime = 1.2
+	self.ShieldRegenTimeDelay = 2
+	self.ShieldRegenTime = 5
+	self.ShieldImpactParticle = "iv04_halo_3_elite_shield_impact_effect"
+	self.ShieldDepleteParticle = "iv04_halo_3_elite_shield_deplete"
+	self.ShieldDepleteArcsParticle = "iv04_halo_3_elite_shield_deplete_arcs"
+	self.ShieldRechargeParticle = "iv04_halo_3_elite_shield_recharge"
+	self.MaxShield = 70
+	self.Shield = 70
+	self.HasArmor = true
 end
 function ENT:BruteInitialize()
 	self.HasArmor = true
@@ -86,6 +104,9 @@ function ENT:BruteInitialize()
 	self.MeleeAnimsHits = {
 		["Melee_Combat_Pistol_1"] = 0.6
 	}
+	self.ShieldImpactParticle = "iv04_halo_3_brute_shield_impact_effect"
+	self.ShieldCriticalParticle = "iv04_halo_3_brute_shield_critical"
+	self.ShieldDepleteParticle = "iv04_halo_3_brute_shield_deplete"
 	if self.Rank == 1 then
 		self:SetBodygroup(7,math.random(0,1))
 		if self.IsCaptain then
@@ -1090,16 +1111,22 @@ function ENT:EliteBehavior(ent,range)
 			if !IsValid(ent) then return end
 			local p
 			--print(self:IsOutNumbered())
-			if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
-			local rang = math.random(128,512)
-			if p == ent:GetPos() then rang = self.DistToTarget/2 end
-			local pos = self:FindNearbyPos(p,rang)
-			local wait = math.Rand(0.5,1)
-			local anim = self.RunAnim[math.random(#self.RunAnim)]
-			local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
-			--print(anim,speed)
-			self:MoveToPosition( pos, anim, speed )
-			coroutine.wait(wait)
+			if self.HasMeleeWeapon then
+				self.PathGoalTolerance = 100
+				self:MoveToPosition( ent:GetPos(), self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+				self.PathGoalTolerance = 40
+			else
+				if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
+				local rang = math.random(128,512)
+				if p == ent:GetPos() then rang = self.DistToTarget/2 end
+				local pos = self:FindNearbyPos(p,rang)
+				local wait = math.Rand(0.5,1)
+				local anim = self.RunAnim[math.random(#self.RunAnim)]
+				local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
+				--print(anim,speed)
+				self:MoveToPosition( pos, anim, speed )
+				coroutine.wait(wait)
+			end
 		else
 			if ent.BeingChased then
 				self:Speak("join_invsgt")
@@ -1356,7 +1383,7 @@ function ENT:PostCombatChecks()
 	end
 end
 function ENT:WeaponThink()
-		if IV04_AIDisabled or self.Flying or self.HaltShoot or self.AnimBusy then return end
+		if IV04_AIDisabled or self.Flying or self.HaltShoot or self.AnimBusy or self.HasMeleeWeapon then return end
 		if IsValid(self.Enemy) then
 			local ent = self.Enemy		
 			if self.LastCalcTime < CurTime() then -- We can do expensive actions

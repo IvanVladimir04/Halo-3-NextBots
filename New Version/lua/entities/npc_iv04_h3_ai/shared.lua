@@ -951,7 +951,7 @@ function ENT:SetupAnimations()
 			self.WalkAnim = {"walk_combat_support_up"}
 			self.RunCalmAnim = {"move_combat_support_up"}
 			self.MeleeAnim = {"Melee_Combat_support_1"}
-			self.MeleeBackAnim = {"Melee_Back_support_Pistol"}
+			self.MeleeBackAnim = {"Melee_Back_support"}
 			self.ShootAnim = {"attack_combat_support_1"}
 			self.ReloadAnim = "reload_combat_support"
 			self.AirAnim = "airborne_combat_support"
@@ -1014,6 +1014,164 @@ function ENT:SetupAnimations()
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "crouch_support_idle_2_crouch_move"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_support_idle_2_crouch_walk"
 			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_support_idle_2_crouch_walk"
+		elseif hold == "knife" or hold == "melee" then
+			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Sword"}
+			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Sword"}
+			self.IdleAnim = {"combat_Sword_idle_up"}
+			self.IdleCalmAnim = {"combat_Sword_idle_up"}
+			self.RunAnim = {"move_combat_Sword_up"}
+			self.WalkAnim = {"walk_combat_Sword_up"}
+			self.RunCalmAnim = {"move_combat_Sword_up"}
+			self.MeleeAnim = {"Melee_Combat_Sword"}
+			self.MeleeBackAnim = {"Melee_Back_Combat_Sword"}
+			self.ShootAnim = {"attack_combat_Sword_1"}
+			self.ReloadAnim = "reload_combat_Sword"
+			self.AirAnim = "airborne_combat_Sword"
+			self.LandAnim = "land_soft_combat_Sword"
+			self.LandHardAnim = "land_hard_combat_Sword"
+			self.CalmTurnLeftAnim = "turn_left_combat_Sword"
+			self.CalmTurnRightAnim = "turn_right_combat_Sword"
+			self.TurnLeftAnim = "turn_left_combat_Sword"
+			self.TurnRightAnim = "turn_right_combat_Sword"
+			self.CrouchTurnLeftAnim = "turn_right_crouch_Sword"
+			self.CrouchTurnRightAnim = "turn_left_crouch_Sword"
+			self.WarthogPassengerIdle = "warthog_passenger_idle_Sword"
+			self.HornetPassengerLeftIdle = "hornet_passenger_left_idle_Sword"
+			self.HornetPassengerRightIdle = "hornet_passenger_right_idle_Sword"
+			self.ProwlerPassengerLeftIdle = "prowler_passenger_left_idle_Sword"
+			self.ProwlerPassengerRightIdle = "prowler_passenger_right_idle_Sword"
+			self.MongoosePassengerIdle = "mongoose_passenger_idle_Sword"
+			self.ScorpionPassengerIdle = "scorpion_passenger_idle_Sword"
+			self.SurpriseAnim = "surprised_combat_Sword"
+			self.WarnAnim = {"warn_combat_Sword"}
+			self.CrouchIdleAnim = {"crouch_Sword_idle_up"}
+			self.CrouchMoveAnim = {"move_crouch_Sword_up"}
+			self.WarthogPassengerIdle = "warthog_passenger_idle_Sword"
+			self.PushLeftAnim = {"melee_smash_combat_Sword_left"}
+			self.PushRightAnim = {"melee_smash_combat_Sword_right"}
+			self.WaveAnim = "wave_combat_Sword"
+			self.AdvanceAnim = "signal_advance_combat_Sword"
+			self.ShakeFistAnim = "shakefist_combat_Sword"
+			self.CheerAnim = "cheer_combat_Sword"
+			self.GrenadeAnim = {"Throw_Grenade_Combat_Sword"}
+			self.AllowGrenade = true
+			self.CanShootCrouch = true
+			self.CanMelee = false
+			self.TauntAnim = {"taunt_combat_Sword"}
+			self.EvadeLeftAnim = "evade_left_combat_Sword"
+			self.EvadeRightAnim = "evade_right_combat_Sword"
+			self.DiveFrontAnim = "dive_front_combat_unarmed"
+			self.DiveLeftAnim = "dive_left_combat_unarmed"
+			self.DiveRightAnim = "dive_right_combat_unarmed"
+			self.FallbackAnim = "signal_fallback_combat_Sword"
+			if self.AITemplate == "SPARTAN" then
+				self.PatrolIdleAnim = {"combat_Sword_idle_up"}
+				self.PatrolMoveAnim = {"walk_combat_Sword_up"}
+			elseif self.AITemplate == "ELITE" then
+				self.MeleeAnim = {"Melee_Combat_Sword_1","Melee_Combat_Sword_2"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Sword"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Sword"}
+			end
+			self.DodgeChance = 0
+			self.MeleeDamage = 100
+			self.MeleeRange = 150
+			self.MeleeConeAngle = 120
+			self.HasMeleeWeapon = true
+			self.TransitionAnims["Move_2_Idle"] = "combat_Sword_move_2_combat_idle"
+			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_Sword_move_2_combat_idle"
+			self.TransitionAnims["Walk_2_Idle"] = "combat_Sword_walk_2_combat_idle"
+			self.TransitionAnims["Walk_2_Idle_Passive"] = "combat_Sword_walk_2_combat_idle"
+			self.TransitionAnims["Idle_2_Move"] = "combat_Sword_idle_2_combat_move"
+			self.TransitionAnims["Idle_2_Move_Passive"] = "combat_Sword_idle_2_combat_move"
+			self.TransitionAnims["Idle_2_Walk"] = "combat_Sword_idle_2_combat_walk"
+			self.TransitionAnims["Idle_2_Walk_Passive"] = "combat_Sword_idle_2_combat_walk"
+			self.TransitionAnims["Idle_2_Guard"] = "patrol_unarmed_idle_posing"
+			self.TransitionAnims["Idle_2_Crouch"] = "combat_Sword_idle_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle"] = "crouch_Sword_move_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle_Passive"] = "crouch_Sword_move_2_crouch_idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "crouch_Sword_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "crouch_Sword_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "crouch_Sword_idle_2_crouch_move"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "crouch_Sword_idle_2_crouch_move"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_Sword_idle_2_crouch_walk"
+			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_Sword_idle_2_crouch_walk"
+		elseif hold == "melee2" then
+			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Hammer"}
+			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Hammer"}
+			self.IdleAnim = {"combat_Hammer_idle_up"}
+			self.IdleCalmAnim = {"combat_Hammer_idle_up"}
+			self.RunAnim = {"move_combat_Hammer_up"}
+			self.WalkAnim = {"walk_combat_Hammer_up"}
+			self.RunCalmAnim = {"move_combat_Hammer_up"}
+			self.MeleeAnim = {"Melee_Combat_Hammer_Strike_1","Melee_Combat_Hammer_Strike_2"}
+			self.MeleeBackAnim = {"Melee_Back_Hammer"}
+			self.ShootAnim = {"attack_combat_Hammer_1"}
+			self.ReloadAnim = "reload_combat_Hammer"
+			self.AirAnim = "airborne_combat_Hammer"
+			self.LandAnim = "land_soft_combat_Hammer"
+			self.LandHardAnim = "land_hard_combat_Hammer"
+			self.CalmTurnLeftAnim = "turn_left_combat_Hammer"
+			self.CalmTurnRightAnim = "turn_right_combat_Hammer"
+			self.TurnLeftAnim = "turn_left_combat_Hammer"
+			self.TurnRightAnim = "turn_right_combat_Hammer"
+			self.CrouchTurnLeftAnim = "turn_right_crouch_Hammer"
+			self.CrouchTurnRightAnim = "turn_left_crouch_Hammer"
+			self.WarthogPassengerIdle = "warthog_passenger_idle_Hammer"
+			self.HornetPassengerLeftIdle = "hornet_passenger_left_idle_Hammer"
+			self.HornetPassengerRightIdle = "hornet_passenger_right_idle_Hammer"
+			self.ProwlerPassengerLeftIdle = "prowler_passenger_left_idle_Hammer"
+			self.ProwlerPassengerRightIdle = "prowler_passenger_right_idle_Hammer"
+			self.MongoosePassengerIdle = "mongoose_passenger_idle_Hammer"
+			self.ScorpionPassengerIdle = "scorpion_passenger_idle_Hammer"
+			self.SurpriseAnim = "surprised_combat_Hammer"
+			self.WarnAnim = {"warn_combat_Hammer"}
+			self.CrouchIdleAnim = {"crouch_Hammer_idle_up"}
+			self.CrouchMoveAnim = {"move_crouch_Hammer_up"}
+			self.WarthogPassengerIdle = "warthog_passenger_idle_Hammer"
+			self.PushLeftAnim = {"melee_smash_combat_Hammer_left"}
+			self.PushRightAnim = {"melee_smash_combat_Hammer_right"}
+			self.WaveAnim = "wave_combat_Hammer"
+			self.AdvanceAnim = "signal_advance_combat_Hammer"
+			self.ShakeFistAnim = "shakefist_combat_Hammer"
+			self.CheerAnim = "cheer_combat_Hammer"
+			self.GrenadeAnim = {"Throw_Grenade_Combat_Hammer"}
+			self.AllowGrenade = true
+			self.CanShootCrouch = true
+			self.CanMelee = false
+			self.TauntAnim = {"taunt_combat_Hammer"}
+			self.EvadeLeftAnim = "evade_left_combat_Hammer"
+			self.EvadeRightAnim = "evade_right_combat_Hammer"
+			self.DiveFrontAnim = "dive_front_combat_unarmed"
+			self.DiveLeftAnim = "dive_left_combat_unarmed"
+			self.DiveRightAnim = "dive_right_combat_unarmed"
+			self.FallbackAnim = "signal_fallback_combat_Hammer"
+			if self.AITemplate == "SPARTAN" then
+				self.PatrolIdleAnim = {"combat_Hammer_idle_up"}
+				self.PatrolMoveAnim = {"walk_combat_Hammer_up"}
+			elseif self.AITemplate == "ELITE" then
+				self.MeleeAnim = {"Melee_Combat_Hammer"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Hammer"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Hammer"}
+			end
+			self.HasMeleeWeapon = true
+			self.TransitionAnims["Move_2_Idle"] = "combat_Hammer_move_2_combat_idle"
+			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_Hammer_move_2_combat_idle"
+			self.TransitionAnims["Walk_2_Idle"] = "combat_Hammer_walk_2_combat_idle"
+			self.TransitionAnims["Walk_2_Idle_Passive"] = "combat_Hammer_walk_2_combat_idle"
+			self.TransitionAnims["Idle_2_Move"] = "combat_Hammer_idle_2_combat_move"
+			self.TransitionAnims["Idle_2_Move_Passive"] = "combat_Hammer_idle_2_combat_move"
+			self.TransitionAnims["Idle_2_Walk"] = "combat_Hammer_idle_2_combat_walk"
+			self.TransitionAnims["Idle_2_Walk_Passive"] = "combat_Hammer_idle_2_combat_walk"
+			self.TransitionAnims["Idle_2_Guard"] = "patrol_unarmed_idle_posing"
+			self.TransitionAnims["Idle_2_Crouch"] = "combat_Hammer_idle_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle"] = "crouch_Hammer_move_2_crouch_idle"
+			self.TransitionAnims["Crouch_Move_2_Crouch_Idle_Passive"] = "crouch_Hammer_move_2_crouch_idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "crouch_Hammer_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "crouch_Hammer_walk_2_crouch_idle"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "crouch_Hammer_idle_2_crouch_move"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "crouch_Hammer_idle_2_crouch_move"
+			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_Hammer_idle_2_crouch_walk"
+			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_Hammer_idle_2_crouch_walk"
 		end
 	else
 		if self.DoesntUseWeapons then
@@ -1633,7 +1791,7 @@ function ENT:GetShootPos() -- Where to calculate the aiming from
 	if IsValid(self:GetActiveWeapon()) then -- If we have a weapon, use the muzzle
 		local att = self:GetActiveWeapon():LookupAttachment("muzzle")
 		if att == 0 then att = 1 end
-		return self:GetActiveWeapon():GetAttachment(1).Pos
+		return self:GetActiveWeapon():GetAttachment(1) and self:GetActiveWeapon():GetAttachment(1).Pos or self:WorldSpaceCenter()
 	else
 		return self:WorldSpaceCenter() -- Otherwise use the entity's center
 	end
@@ -1975,6 +2133,21 @@ function ENT:IsOutNumbered()
 	return math.abs(#self:PossibleTargets()-#self:GetSquad():GetMembers()) > 3, dif
 end
 
+function ENT:ShieldArcLoop()
+	if !self.ShieldDepleteArcsParticle then return end
+	timer.Simple( 1, function()
+		if IsValid(self) then
+			if self.Shield <= 0 then
+				--self:SetNWBool("SPShield",false)
+				ParticleEffect(self.ShieldDepleteArcsParticle,self:WorldSpaceCenter(),self:GetAngles(),self)
+				self:ShieldArcLoop()
+			else
+				self:StopParticles()
+			end
+		end
+	end )
+end
+
 function ENT:OnInjured(dmg)
 	--print(dmg:GetInflictor())
 	local rel = self:CheckRelationships(dmg:GetAttacker())
@@ -2020,30 +2193,36 @@ function ENT:OnInjured(dmg)
 				self:SetBodygroup(5,0)
 				self:SetBodygroup(6,0)
 			end
+			ParticleEffect(self.ShieldDepleteParticle,self:WorldSpaceCenter(),self:GetAngles(),self)
+		else	
+			ParticleEffect(self.ShieldImpactParticle,dmg:GetDamagePosition(),self:GetAngles(),self)
+			if self.IsBrute then
+				if self.Shield <= self.MaxShield*0.5 then
+					ParticleEffectAttach(self.ShieldCriticalParticle,PATTACH_POINT_FOLLOW,self,6)
+				end
+			else
+				self:ShieldArcLoop()
+				local shild = self.Shield
+				timer.Simple( self.ShieldRegenTimeDelay, function()
+					if IsValid(self) and shield == self.ShieldH and self.HasArmor then
+						local stop = false
+						ParticleEffect(self.ShieldRechargeParticle,self:WorldSpaceCenter(),self:GetAngles(),self)
+						for i = 1, 10 do
+							timer.Simple( self.ShieldRegenTime*0.1, function()
+								if IsValid(self) and shield == self.ShieldH and !stop then
+									self.Shield = self.Shield+(self.MaxShield*0.1)
+									if self.Shield > self.MaxShield then 
+										self.Shield = self.MaxShield
+										stop = true
+									end
+								end
+							end )
+						end
+					end
+				end )
+			end
 		end
 	--	self:SetNWBool("SPShield",true)
-		timer.Simple( 1, function()
-			if IsValid(self) and shield == self.ShieldH then
-				--self:SetNWBool("SPShield",false)
-			end
-		end )
-		local shild = self.Shield
-		timer.Simple( self.ShieldRegenTimeDelay, function()
-			if IsValid(self) and shield == self.ShieldH and !self.ShieldWentDown then
-				local stop = false
-				for i = 1, 10 do
-					timer.Simple( self.ShieldRegenTime*0.1, function()
-						if IsValid(self) and shield == self.ShieldH and !stop then
-							self.Shield = self.Shield+(self.MaxShield*0.1)
-							if self.Shield > self.MaxShield then 
-								self.Shield = self.MaxShield
-								stop = true
-							end
-						end
-					end )
-				end
-			end
-		end )
 	end
 	if ( ( math.abs(self:Health()) - math.abs(dmg:GetDamage())) <= 0 ) and !self.Unkillable then return end
 	if self.AnimBusy then return end
