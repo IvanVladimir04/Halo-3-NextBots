@@ -32,7 +32,7 @@ function ENT:DoInit()
 	--self:SetBodygroup(1,math.random(-4,1))
 	--self:SetBodygroup(4,1)
 	--self:SetBodygroup(5,8)
-	self:SetSkin(6)
+	self:SetSkin(8)
 	self:SetBodygroup(7,1)
 	--print(head)
 	self.VoiceType = "Elite_"..math.random(1,2)..""

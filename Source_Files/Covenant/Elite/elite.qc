@@ -88,8 +88,10 @@ $texturegroup "skinfamilies"
 	{ "mp_elite_armor"				"sp_raptor"				"mp_predator"			"mp_raptor"				"mp_blades"				"mp_scythe"		 }
 	{ "mp_elite_armor_minor"		"sp_raptor_minor"		"mp_predator_minor"		"mp_raptor_minor"		"mp_blades_minor"		"mp_scythe_minor"		 }
 	{ "sp_elite_armor_minor"		"sp_raptor_minor"		"mp_predator_minor"		"mp_raptor_minor"		"mp_blades_minor"		"mp_scythe_minor"		 }
+	{ "sp_elite_armor_minor_assault"		"sp_raptor_minor"		"mp_predator_minor"		"mp_raptor_minor"		"mp_blades_minor"		"mp_scythe_minor"		 }
 	{ "mp_elite_armor_major" 		"sp_raptor_major"		"mp_predator_major"		"mp_raptor_major"		"mp_blades_major"		"mp_scythe_major"		 }
 	{ "sp_elite_armor_major" 		"sp_raptor_major"		"mp_predator_major"		"mp_raptor_major"		"mp_blades_major"		"mp_scythe_major"		 }
+	{ "sp_elite_armor_major_assault" 		"sp_raptor_major"		"mp_predator_major"		"mp_raptor_major"		"mp_blades_major"		"mp_scythe_major"		 }
 	{ "mp_elite_armor_zealot" 		"sp_raptor_zealot"		"mp_predator_zealot"	"mp_raptor_zealot"		"mp_blades_zealot"		"mp_scythe_zealot"		 }
 	{ "mp_elite_armor_ultra" 		"sp_raptor_ultra"		"mp_predator_ultra"		"mp_raptor_ultra"		"mp_blades_ultra"		"mp_scythe_ultra"		 }
 	{ "mp_elite_armor_specops" 		"sp_raptor_specops"		"mp_predator_specops"	"mp_raptor_specops"		"mp_blades_specops"		"mp_scythe_specops"		 }
@@ -98,7 +100,9 @@ $texturegroup "skinfamilies"
 $attachment "anim_attachment_RH" "r_hand" 8.50 2.06 1.06 rotate 0 15 0
 $attachment "anim_attachment_LH" "l_hand" 9.00 2.50 -1.00 rotate -0 0 -180
 $attachment "backpack" "spine1" 11.79 -14.91 -0.00 rotate -45 0 -180
-$attachment "sidearm" "r_thigh" 10.06 0.00 6.39 rotate -10 180 90
+$attachment "sidearm_R" "r_thigh" 10.06 0.00 6.39 rotate -10 180 90
+$attachment "sidearm_L" "l_thigh" 10.71 0.00 -6.81 rotate -10 180 -90
+$attachment "sword_holster" "r_thigh" 10.71 0.00 6.81 rotate 90 90 0
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
 $cbox 0 0 0 0 0 0
 
