@@ -2201,6 +2201,7 @@ function ENT:OnInjured(dmg)
 					ParticleEffectAttach(self.ShieldCriticalParticle,PATTACH_POINT_FOLLOW,self,6)
 				end
 			else
+				self:StopParticles()
 				self:ShieldArcLoop()
 				local shild = self.Shield
 				timer.Simple( self.ShieldRegenTimeDelay, function()
