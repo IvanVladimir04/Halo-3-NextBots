@@ -100,7 +100,7 @@ $texturegroup "skinfamilies"
 $attachment "anim_attachment_RH" "r_hand" 8.50 2.06 1.06 rotate 0 15 0
 $attachment "anim_attachment_LH" "l_hand" 9.00 2.50 -1.00 rotate -0 0 -180
 $attachment "backpack" "spine1" 11.79 -14.91 -0.00 rotate -45 0 -180
-$attachment "sidearm_R" "r_thigh" 10.06 0.00 6.39 rotate -10 180 90
+$attachment "sidearm" "r_thigh" 10.06 0.00 6.39 rotate -10 180 90
 $attachment "sidearm_L" "l_thigh" 10.71 0.00 -6.81 rotate -10 180 -90
 $attachment "sword_holster" "r_thigh" 10.71 0.00 6.81 rotate 90 90 0
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
