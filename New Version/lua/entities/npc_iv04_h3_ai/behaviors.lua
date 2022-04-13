@@ -194,6 +194,14 @@ function ENT:BruteInitialize()
 			self:SetBodygroup(3,5)
 			self:SetBodygroup(4,5)
 		end
+		if self.IsCaptain then
+			self:SetBodygroup(2,3)
+			self:SetBodygroup(3,3)
+			self:SetBodygroup(4,3)
+			self:SetBodygroup(5,1)
+			self:SetBodygroup(6,1)
+			self:SetSkin(4)
+		end
 	end
 end
 function ENT:GruntInitialize()
