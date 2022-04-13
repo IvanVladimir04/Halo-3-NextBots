@@ -11,6 +11,10 @@ ENT.SearchJustAsSpawned = false
 
 ENT.CanUse = true
 
+ENT.UpdateTime = 0
+
+ENT.MoveUpdateTime = 0.5
+
 ENT.YPP = 0
 ENT.PPP = 0
 
@@ -2139,17 +2143,17 @@ end
 
 function ENT:ShieldArcLoop()
 	if !self.ShieldDepleteArcsParticle then return end
-	timer.Simple( 1, function()
-		if IsValid(self) then
-			if self.Shield <= 0 then
+	--timer.Simple( 1, function()
+		--if IsValid(self) then
+			--if self.Shield <= 0 then
 				--self:SetNWBool("SPShield",false)
-				ParticleEffect(self.ShieldDepleteArcsParticle,self:WorldSpaceCenter(),self:GetAngles(),self)
-				self:ShieldArcLoop()
-			else
-				self:StopParticles()
-			end
-		end
-	end )
+				ParticleEffectAttach(self.ShieldDepleteArcsParticle,PATTACH_POINT_FOLLOW,self,self:LookupAttachment("shield_fx") or 1)
+				--self:ShieldArcLoop()
+			--else
+			--	self:StopParticles()
+			---end
+		--end
+	--end )
 end
 
 function ENT:OnInjured(dmg)
@@ -2196,36 +2200,39 @@ function ENT:OnInjured(dmg)
 				self:SetBodygroup(4,0)
 				self:SetBodygroup(5,0)
 				self:SetBodygroup(6,0)
-			end
-			ParticleEffect(self.ShieldDepleteParticle,self:WorldSpaceCenter(),self:GetAngles(),self)
+				self:StopParticles()
+			else
+				self:ShieldArcLoop()
+			end 
+			ParticleEffectAttach(self.ShieldDepleteParticle,PATTACH_POINT_FOLLOW,self,self:LookupAttachment("shield_fx") or 1)
 		else	
 			ParticleEffect(self.ShieldImpactParticle,dmg:GetDamagePosition(),self:GetAngles(),self)
 			if self.IsBrute then
 				if self.Shield <= self.MaxShield*0.5 then
-					ParticleEffectAttach(self.ShieldCriticalParticle,PATTACH_POINT_FOLLOW,self,6)
+					ParticleEffectAttach(self.ShieldCriticalParticle,PATTACH_POINT_FOLLOW,self,self:LookupAttachment("shield_fx") or 1)
 				end
-			else
-				self:ShieldArcLoop()
-				local shild = self.Shield
-				timer.Simple( self.ShieldRegenTimeDelay, function()
-					if IsValid(self) and shield == self.ShieldH and self.HasArmor then
-						local stop = false
-						self:StopParticles()
-						ParticleEffect(self.ShieldRechargeParticle,self:WorldSpaceCenter(),self:GetAngles(),self)
-						for i = 1, 10 do
-							timer.Simple( self.ShieldRegenTime*0.1, function()
-								if IsValid(self) and shield == self.ShieldH and !stop then
-									self.Shield = self.Shield+(self.MaxShield*0.1)
-									if self.Shield > self.MaxShield then 
-										self.Shield = self.MaxShield
-										stop = true
-									end
-								end
-							end )
-						end
-					end
-				end )
 			end
+		end
+		if self.HasArmor and !self.ArmorDoesntRegenerate then
+			local shild = self.Shield
+			timer.Simple( self.ShieldRegenTimeDelay, function()
+				if IsValid(self) and shield == self.ShieldH and self.HasArmor then
+					local stop = false
+					self:StopParticles()
+					ParticleEffectAttach(self.ShieldRechargeParticle,PATTACH_POINT_FOLLOW,self,self:LookupAttachment("shield_fx") or 1)
+					for i = 1, 10 do
+						timer.Simple( self.ShieldRegenTime*0.1, function()
+							if IsValid(self) and shield == self.ShieldH and !stop then
+								self.Shield = self.Shield+(self.MaxShield*0.1)
+								if self.Shield > self.MaxShield then 
+									self.Shield = self.MaxShield
+									stop = true
+								end
+							end
+						end )
+					end
+				end
+			end )
 		end
 	--	self:SetNWBool("SPShield",true)
 	end
@@ -2643,7 +2650,23 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 		if IV04_AIDisabled then
 			return "Disabled thinking"
 		end
+		--print(self:GetActivity())
 		if self.UpdateTime < CurTime() then
+			if self.AllowClimbing then
+				local curgoal = path:GetCurrentGoal()
+				local goal = path:GetPositionOnPath( path:GetCursorPosition()+curgoal.length )
+				local start = path:GetPositionOnPath( path:GetCursorPosition() )
+			--	debugoverlay.Sphere(goal,5,5)
+			--	print( math.abs(start.x - self:GetPos().x), math.abs(start.y - self:GetPos().y) )
+				if math.abs(start.x - self:GetPos().x) < 20 and math.abs(start.y - self:GetPos().y) < 20 and ( math.abs(self:GetPos().z-goal.z) > self.loco:GetStepHeight() and math.abs(self:GetPos().z-goal.z) < 100 ) then
+					local seq = self:GetSequence()
+					local dir = (goal-self:GetPos()):GetNormalized()
+					local ang = dir:Angle()
+					self:SetAngles(Angle(self:GetAngles().p,ang.y,self:GetAngles().r))
+					self:PlaySequenceAndPWait("Climb_Crouch")
+					self:ResetSequence(seq)
+				end
+			end
 			if self.PushingProp and !self.DoingPush then
 				timer.Simple( 0.5, function()
 					if IsValid(self.PushedProp) then
@@ -2688,6 +2711,51 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 			if ( path:GetAge() > options.repath ) then path:Compute( self, pos ) end
 		end
 		coroutine.yield()
+	end
+	return "ok"
+end
+
+function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight while we move
+	local path = Path( "Follow" )
+	path:SetMinLookAheadDistance( self.PathMinLookAheadDistance )
+	path:SetGoalTolerance( self.PathGoalTolerance )
+	local position = pos
+	path:Compute( self, position )
+	if ( !path:IsValid() ) then return "failed" end
+	while ( IsValid(path) and !IsValid(self.Enemy) ) do
+		if IV04_AIDisabled then
+			return "Disabled thinking"
+		end
+		if self.UpdateTime < CurTime() then
+			if self.AllowClimbing then
+				local curgoal = path:GetCurrentGoal()
+				local goal = path:GetPositionOnPath( path:GetCursorPosition()+curgoal.length )
+				local start = path:GetPositionOnPath( path:GetCursorPosition() )
+			--	debugoverlay.Sphere(goal,5,5)
+			--	print( math.abs(start.x - self:GetPos().x), math.abs(start.y - self:GetPos().y) )
+				if math.abs(start.x - self:GetPos().x) < 20 and math.abs(start.y - self:GetPos().y) < 20 and ( math.abs(self:GetPos().z-goal.z) > self.loco:GetStepHeight() and math.abs(self:GetPos().z-goal.z) < 100 ) then
+					local seq = self:GetSequence()
+					local dir = (goal-self:GetPos()):GetNormalized()
+					local ang = dir:Angle()
+					self:SetAngles(Angle(self:GetAngles().p,ang.y,self:GetAngles().r))
+					self:PlaySequenceAndPWait("Climb_Crouch")
+					self:ResetSequence(seq)
+				end
+			end
+			local found = self:SearchEnemy()
+			if found then return "Found an enemy" end
+			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
+				-- We are stuck, don't bother
+				return "Give up"
+			end
+			self.UpdateTime = CurTime()+self.MoveUpdateTime
+		end
+		path:Update( self )
+		if self.loco:IsStuck() then
+			self:OnStuck()
+			return "Stuck"
+		end
+		coroutine.wait(0.01)
 	end
 	return "ok"
 end

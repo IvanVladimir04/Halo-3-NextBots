@@ -45,6 +45,7 @@ function ENT:SpartanInitialize()
 	self.HasArmor = true
 end
 function ENT:MarineInitialize()
+	self.AllowClimbing = true
 	self.AllowStealth = true
 	self.MoveSpeed = 90
 	self.MoveSpeedMultiplier = 2
@@ -73,6 +74,7 @@ function ENT:MarineInitialize()
 end
 function ENT:EliteInitialize()
 	--self.SpawnWithWeaponDrawn = true
+	self.AllowClimbing = true
 	self.MoveSpeed = 100
 	self.MoveSpeedMultiplier = 2
 	self:SetCollisionBounds(Vector(10,10,120),Vector(-10,-10,0))
@@ -80,8 +82,8 @@ function ENT:EliteInitialize()
 	self.DamageThreshold = math.huge
 	self.GrenadeSpawnTime = 0.2
 	self.GrenadeDropTime = 1.2
-	self.ShieldRegenTimeDelay = 2
-	self.ShieldRegenTime = 5
+	self.ShieldRegenTimeDelay = 5
+	self.ShieldRegenTime = 2
 	self.ShieldImpactParticle = "iv04_halo_3_elite_shield_impact_effect"
 	self.ShieldDepleteParticle = "iv04_halo_3_elite_shield_deplete"
 	self.ShieldDepleteArcsParticle = "iv04_halo_3_elite_shield_deplete_arcs"
@@ -91,9 +93,11 @@ function ENT:EliteInitialize()
 	self.HasArmor = true
 end
 function ENT:BruteInitialize()
+	self.AllowClimbing = true
 	self.HasArmor = true
 	self.IsArmored = true
 	self.IsBrute = true
+	self.ArmorDoesntRegenerate = true
 	self:SetCollisionBounds(Vector(20,20,0),Vector(-20,-20,100))
 	self.CanShootCrouch = false
 	self.MoveSpeed = 100
