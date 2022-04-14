@@ -1,7 +1,7 @@
 // Created by Crowbar 0.71
 
 $modelname "halo_3/characters/alliance/master_chief.mdl"
-$scale 1.065
+$scale	1.12
 $origin 0 0 0 -90
 
 
