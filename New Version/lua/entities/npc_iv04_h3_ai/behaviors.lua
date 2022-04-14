@@ -708,7 +708,7 @@ function ENT:SpartanBehavior(ent,range)
 			end
 		end )
 		self.HaltShoot = true
-		if self.SawPlayer then
+		if self.SawPlayer and self.FriendlyToPlayers then
 			self:StandBy()
 		else
 			self:SneakKill(ent)
@@ -868,7 +868,7 @@ function ENT:MarineBehavior(ent,range)
 			end
 		end )
 		self.HaltShoot = true
-		if self.SawPlayer then
+		if self.SawPlayer and self.FriendlyToPlayers then
 			self:StandBy()
 		else
 			self:SneakKill(ent)

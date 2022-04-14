@@ -397,8 +397,8 @@ ENT.CanMeleeSound = true -- Same as above
 
 -- Melee quote can be found in the quotes section!
 
-ENT.MeleeCooldownMin = 5 -- Once the nextbot does its melee, the cooldown will be
-ENT.MeleeCooldownMax = 10 -- Random between Min and Max
+ENT.MeleeCooldownMin = 2 -- Once the nextbot does its melee, the cooldown will be
+ENT.MeleeCooldownMax = 4 -- Random between Min and Max
 ENT.MeleeAnimsHits = {
 
 	--[[
@@ -1713,18 +1713,26 @@ end
 
 function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use the ent argument when calling this
 	self:Speak(self.MeleeQuote)
-	if IsValid(ent or self.Enemy) then -- If no ent argument, use self.Enemy as target instead
+	local anim = self:TableRandom(self.MeleeAnim)
+	local turn
+	if IsValid(ent) or IsValid(self.Enemy) then -- If no ent argument, use self.Enemy as target instead
 		local ang = (self.Enemy:GetPos()-self:GetPos()):GetNormalized():Angle()
-		self:SetAngles(Angle(0,ang.y,0))
+		local ydif = math.AngleDifference(self:GetAngles().y,ang.y)
+		if ydif < 0 then ydif = ydif+360 end
+		if self.MeleeBackAnim and ydif < 270 and ydif > 90 then
+			anim = self:TableRandom(self.MeleeBackAnim)
+			turn = true
+		else
+			self:SetAngles(Angle(0,ang.y,0))
+		end
 	end	
 	self.DoneMelee = true -- Melee cooldown
 	self.DoingMelee = true -- Immediate melee animation cooldown (to stop other parts of the AI)
-	local anim = self.MeleeAnim[math.random(#self.MeleeAnim)]
 	local id, len = self:LookupSequence(anim)
 	local hittime = self.MeleeAnimsHits[anim] or 0.6
 	timer.Simple( len*hittime, function() -- Set up a timer for the melee hit
 		if IsValid(self) then
-			self:DoMeleeDamage()
+			self:DoMeleeDamage(turn)
 		end
 	end )
 	timer.Simple( len, function()
@@ -1754,9 +1762,10 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 	end
 end
 
-function ENT:DoMeleeDamage() -- No arguments needed, everything is defined on the variables
+function ENT:DoMeleeDamage(back) -- No arguments needed, everything is defined on the variables
 	local damage = self.MeleeDamage
-	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter()+self:GetUp()*20+self:GetForward()*-20, self:GetForward(), self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
+	local dir = !back and self:GetForward() or -self:GetForward()
+	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter()+self:GetUp()*20+dir*-20, self:GetForward(), self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
 		if v != self and self:CheckRelationships(v) != "friend" then
 			--print(v)
 			--v:EmitSound( self.OnMeleeSoundTbl[math.random(1,#self.OnMeleeSoundTbl)] )
@@ -2629,6 +2638,60 @@ function ENT:Turn(dif,calm,noanim) -- dif is the yaw number to turn, can be nega
 	end
 end
 
+function ENT:ClimbChecks(start,goal,curgoal)
+	local dir = (goal-self:GetPos()):GetNormalized()
+	local ang = dir:Angle()
+	--print(curgoal.type)
+	local xdif = start.x - self:GetPos().x
+	local ydif = start.y - self:GetPos().y
+	local zdif = goal.z - self:GetPos().z
+	--print(self.loco:GetStepHeight(),xdif,ydif,zdif,curgoal.forward)
+	--print( math.abs(xdif) < 25, math.abs(ydif) < 25, zdif > self.loco:GetStepHeight(), zdif < 120, zdif > 0 )
+	--print(curgoal.pos.x-goal.x,curgoal.pos.y-goal.y,curgoal.pos.z-goal.z)
+	local goaldifx = curgoal.pos.x-goal.x
+	local goaldify = curgoal.pos.y-goal.y
+	local goaldifz = curgoal.pos.z-goal.z
+	if self.SpecialClimbConditions then
+		xdif = goaldifx
+		ydif = goaldify
+		zdif = goaldifz
+	end
+	if ( curgoal.how == 9 or curgoal.type == 2 ) and ( ( ( math.abs(xdif) < 25 and math.abs(ydif) < 25 ) or self.SpecialClimbConditions ) and ( zdif > self.loco:GetStepHeight() and zdif < 120 and zdif > 0 ) ) then
+		--debugoverlay.Sphere(start,5,10)
+		--debugoverlay.Sphere(goal,5,10,Color(255,0,0))
+		--PrintTable(curgoal)
+		local seq = self:GetSequence()
+		local extray = 0
+		self.NotLookingAtEnemy = true
+		local anim = "Climb_Crouch"
+		if zdif > 80 then
+			extray = 180
+			anim = "Climb_Stand"
+		else
+			local t, vec, an = self:GetSequenceMovement(self:LookupSequence(anim),0,1)
+			--print(vec)
+			self:SetPos(self:GetPos()+(self:GetUp()*((zdif-vec.z))*1.3))
+		end
+		self:SetAngles(Angle(self:GetAngles().p,ang.y+extray,self:GetAngles().r))
+		if self.SpecialClimbConditions then self.SpecialClimbConditions = false end
+		self:PlaySequenceAndPWait(anim)
+		self.NotLookingAtEnemy = false
+		self:ResetSequence(seq)
+	else
+		if ( math.abs(goaldifx) + math.abs(goaldify) ) > 55 and ( goaldifz > self.loco:GetStepHeight() and goaldifz < 120 and goaldifz > 0 ) then
+			--print(curgoal.how)
+			--self:SetAngles(Angle(self:GetAngles().p,ang.y,self:GetAngles().r))
+			--self:SetPos(self:GetPos()-(Vector(curgoal.forward.x,curgoal.forward.z)*100))
+			--self.loco:SetVelocity((-curgoal.forward)*10)
+			--print(self.loco:GetVelocity())
+			if self.loco:GetVelocity():IsZero() then
+				self.SpecialClimbConditions = true
+			end
+			return "Retry!"
+		end
+	end
+end
+
 function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 	for i = 1, #self.IdleAnim do
 		if self.loco:GetVelocity():IsZero() and self:GetActivity() == self.IdleAnim[i] then
@@ -2658,14 +2721,8 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 				local start = path:GetPositionOnPath( path:GetCursorPosition() )
 			--	debugoverlay.Sphere(goal,5,5)
 			--	print( math.abs(start.x - self:GetPos().x), math.abs(start.y - self:GetPos().y) )
-				if math.abs(start.x - self:GetPos().x) < 20 and math.abs(start.y - self:GetPos().y) < 20 and ( math.abs(self:GetPos().z-goal.z) > self.loco:GetStepHeight() and math.abs(self:GetPos().z-goal.z) < 100 ) then
-					local seq = self:GetSequence()
-					local dir = (goal-self:GetPos()):GetNormalized()
-					local ang = dir:Angle()
-					self:SetAngles(Angle(self:GetAngles().p,ang.y,self:GetAngles().r))
-					self:PlaySequenceAndPWait("Climb_Crouch")
-					self:ResetSequence(seq)
-				end
+				local result = self:ClimbChecks(start,goal,curgoal)
+				--print(result)
 			end
 			if self.PushingProp and !self.DoingPush then
 				timer.Simple( 0.5, function()
@@ -2687,7 +2744,7 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 			end
 			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
 				-- We are stuck, don't bother
-				return "Give up"
+				--return "Give up"
 			end
 			if options.callback then
 				options.callback()
@@ -2733,20 +2790,13 @@ function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight w
 				local start = path:GetPositionOnPath( path:GetCursorPosition() )
 			--	debugoverlay.Sphere(goal,5,5)
 			--	print( math.abs(start.x - self:GetPos().x), math.abs(start.y - self:GetPos().y) )
-				if math.abs(start.x - self:GetPos().x) < 20 and math.abs(start.y - self:GetPos().y) < 20 and ( math.abs(self:GetPos().z-goal.z) > self.loco:GetStepHeight() and math.abs(self:GetPos().z-goal.z) < 100 ) then
-					local seq = self:GetSequence()
-					local dir = (goal-self:GetPos()):GetNormalized()
-					local ang = dir:Angle()
-					self:SetAngles(Angle(self:GetAngles().p,ang.y,self:GetAngles().r))
-					self:PlaySequenceAndPWait("Climb_Crouch")
-					self:ResetSequence(seq)
-				end
+				self:ClimbChecks(start,goal,curgoal)
 			end
 			local found = self:SearchEnemy()
 			if found then return "Found an enemy" end
 			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
 				-- We are stuck, don't bother
-				return "Give up"
+				--return "Give up"
 			end
 			self.UpdateTime = CurTime()+self.MoveUpdateTime
 		end
