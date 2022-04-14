@@ -2744,7 +2744,7 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 			end
 			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
 				-- We are stuck, don't bother
-				--return "Give up"
+				return "Give up"
 			end
 			if options.callback then
 				options.callback()
@@ -2796,7 +2796,7 @@ function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight w
 			if found then return "Found an enemy" end
 			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
 				-- We are stuck, don't bother
-				--return "Give up"
+				return "Give up"
 			end
 			self.UpdateTime = CurTime()+self.MoveUpdateTime
 		end
