@@ -1,0 +1,216 @@
+// Created by Crowbar 0.71
+
+$modelname "halo_3/characters/flood/human_civilian_combat_form.mdl"
+$scale 1.065
+$origin 0 0 0 -90
+
+$bodygroup "Body"
+{
+    studio "floodcombat_civilian_base.smd"
+}
+$bodygroup "Head"
+{
+    studio "floodcombat_civilian_head.smd"
+    studio "floodcombat_civilian_head_damaged.smd"
+}
+$bodygroup "Infection Form"
+{
+    studio "floodcombat_civilian_infection_form.smd"
+    studio "floodcombat_civilian_infection_form_damaged.smd"
+}
+$bodygroup "Left Arm"
+{
+    studio "floodcombat_civilian_left_claw.smd"
+    studio "floodcombat_civilian_left_claw_damaged.smd"
+}
+$bodygroup "Right Arm"
+{
+    studio "floodcombat_civilian_right_hand.smd"
+    studio "floodcombat_civilian_right_hand_damaged.smd"
+}
+$bodygroup "Misc"
+{
+    studio "human_combat_form_misc.smd"
+}
+
+
+$surfaceprop "alienflesh"
+
+$contents "solid"
+
+$illumposition 5.065 3.683 2.265
+
+$cdmaterials "\models\halo_3\characters\flood\human_combat_form\"
+
+
+$attachment "anim_attachment_RH" "r_hand" 3.5 1 -1 rotate 0 15 0
+$attachment "shotgun" "r_hand" 0 0 0 rotate 0 15 0
+$attachment "smg" "r_hand" 3 0 0 rotate 0 15 0
+$attachment "magnum" "r_hand" 3 0 -0.5 rotate 0 15 0
+$attachment "anim_attachment_LH" "l_hand" 4.14 2.20 0.00 rotate -0 0 -180
+$attachment "eyes" "head" 5.00 4.00 0.00 rotate 0 90 90
+$attachment "head" "head" 0 0 0 rotate 0 0 0
+$attachment "r_upperarm" "r_upperarm" 0 0 0 rotate 0 0 0
+$attachment "l_upperarm" "l_upperarm" 0 0 0 rotate 0 0 0
+$cbox 0 0 0 0 0 0
+
+$bbox -32.491 -44.156 -34.885 17.215 42.694 34.861
+
+//QCI includes for different holdtypes, etc.
+
+$includemodel "halo_3/characters/flood/human_combat_form.mdl"
+
+
+$include "combat_any_any.qci"
+$include "combat_pistol_smg.qci"
+$include "common.qci"
+
+//$poseparameter "move_yaw" -180 180 loop 360
+//$PoseParameter "aim_yaw" -45 45 0
+//$PoseParameter "aim_pitch" -90 90 0
+
+//REFERENCE
+$origin 0 0 0 180
+$animation "ref" "flood_human_combat_animations\REFERENCE.smd" {
+	fps 30
+}
+
+$sequence "ragdoll" {
+	"flood_human_combat_animations\reference.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fadein 1
+	fadeout 1
+	fps 10
+}
+
+//COLLISION
+
+$collisionjoints "humancombatform_h3_physics.smd"
+{
+	$mass 90.0
+	$inertia 10.00
+	$damping 0.01
+	$rotdamping 1.50
+	$rootbone "pelvis"
+
+	$jointconstrain "spine1" x limit -48.00 48.00 0.00
+	$jointconstrain "spine1" y limit -25.00 25.00 0.00
+	$jointconstrain "spine1" z limit -25.00 50.00 0.00
+
+	$jointconstrain "r_upperarm" x limit -39.00 39.00 0.00
+	$jointconstrain "r_upperarm" y limit -10.00 95.00 0.00
+	$jointconstrain "r_upperarm" z limit -36.00 36.00 0.00
+
+	$jointconstrain "r_forearm" x limit 0.00 0.00 0.00
+	$jointconstrain "r_forearm" y limit 0.00 0.00 0.00
+	$jointconstrain "r_forearm" z limit -75.00 4.00 0.00
+
+	$jointconstrain "l_upperarm" x limit -30.00 30.00 0.00
+	$jointconstrain "l_upperarm" y limit -95.00 15.00 0.00
+	$jointconstrain "l_upperarm" z limit -36.00 36.00 0.00
+
+	$jointconstrain "l_forearm" x limit 0.00 0.00 0.00
+	$jointconstrain "l_forearm" y limit 0.00 0.00 0.00
+	$jointconstrain "l_forearm" z limit -75.00 4.00 0.00
+
+	$jointconstrain "l_hand" x limit -37.00 37.00 0.00
+	$jointconstrain "l_hand" y limit 0.00 0.00 0.00
+	$jointconstrain "l_hand" z limit -57.00 59.00 0.00
+
+	$jointconstrain "r_hand" x limit -60.00 60.00 0.00
+	$jointconstrain "r_hand" y limit 0.00 0.00 0.00
+	$jointconstrain "r_hand" z limit -57.00 70.00 0.00
+
+	$jointrotdamping "r_thigh" 0.00
+	$jointconstrain "r_thigh" x limit -12.00 12.00 0.00
+	$jointconstrain "r_thigh" y limit -12.00 28.00 0.00
+	$jointconstrain "r_thigh" z limit -32.00 32.00 0.00
+
+	$jointconstrain "r_calf" x limit 0.00 0.00 0.00
+	$jointconstrain "r_calf" y limit 0.00 0.00 0.00
+	$jointconstrain "r_calf" z limit -84.00 1.00 0.00
+
+	$jointconstrain "head" x limit -30.00 30.00 0.00
+	$jointconstrain "head" y limit -25.00 25.00 0.00
+	$jointconstrain "head" z limit -13.00 30.00 0.00
+
+	$jointconstrain "l_thigh" x limit -12.00 12.00 0.00
+	$jointconstrain "l_thigh" y limit -12.00 28.00 0.00
+	$jointconstrain "l_thigh" z limit -32.00 32.00 0.00
+
+	$jointconstrain "l_calf" x limit 0.00 0.00 0.00
+	$jointconstrain "l_calf" y limit 0.00 0.00 0.00
+	$jointconstrain "l_calf" z limit -84.00 0.00 0.00
+
+	$jointconstrain "l_foot" x limit 0.00 0.00 0.00
+	$jointconstrain "l_foot" y limit -19.00 19.00 0.00
+	$jointconstrain "l_foot" z limit -15.00 35.00 0.00
+
+	$jointconstrain "r_foot" x limit 0.00 0.00 0.00
+	$jointconstrain "r_foot" y limit -25.00 6.00 0.00
+	$jointconstrain "r_foot" z limit -15.00 35.00 0.00
+}
+
+$collisiontext
+{
+	animatedfriction 
+	{
+		"animfrictionmin"		"1.000000"
+		"animfrictionmax"		"400.000000"
+		"animfrictiontimein"		"0.500000"
+		"animfrictiontimeout"		"0.300000"
+		"animfrictiontimehold"		"0.000000"
+	}
+	editparams 
+	{
+		"rootname"		"pelvis"
+		"totalmass"		"90.000000"
+		"jointmerge"		"pelvis,spine1"
+		"jointmerge"		"pelvis,spine"
+	}
+}
+
+
+$scale 0.9
+
+// .qc block generated by HLMV begins.
+
+$surfaceprop "alienflesh"
+$jointsurfaceprop "ValveBiped.Bip01_Head1"	 "alienflesh"
+$jointsurfaceprop "ValveBiped.Bip01_Neck1"	 "alienflesh"
+
+
+$hboxset "default"
+
+$hbox 3 "pelvis"	    -8.00   -5.91   -7.71     6.21    6.32    9.06
+$hbox 6 "l_thigh"	     0.00   -4.91   -4.58    20.76    5.12    4.97
+$hbox 6 "l_calf"	    -3.49   -3.95   -3.12    17.67    4.85    3.78
+$hbox 6 "l_foot"	    -1.11   -3.69   -2.30     5.39    8.70    2.61
+$hbox 7 "r_thigh"	    -0.09   -4.90   -4.89    20.76    5.20    3.48
+$hbox 7 "r_calf"	    -3.48   -3.91   -3.85    17.67    4.82    3.30
+$hbox 7 "r_foot"	    -1.11   -3.67   -2.51     5.39    8.74    2.39
+$hbox 2 "spine"	     0.00   -5.45   -7.50    12.46   10.87    4.79
+$hbox 1 "spine1"	    -4.59   -8.18   -9.26    18.59    7.31   12.65
+$hbox 9 "head"	    -7.93   -1.98   -4.83     6.18    7.88    5.38
+$hbox 4 "l_upperarm"	    -3.35   -3.87   -3.01    14.53    5.73    7.88
+$hbox 5 "r_clavicle"	     0.00   -4.50   -5.46     8.90    0.00    0.00
+$hbox 5 "r_upperarm"	    -4.49   -4.22   -6.18    12.28    5.33    2.88
+$hbox 9 "corpse_head"	    -5.57   -8.58   -4.14     4.66    3.00    2.63
+$hbox 1 "tendril1"	    -4.78   -2.06   -3.83     2.60   18.33    3.63
+$hbox 1 "tendril2"	    -4.73   -3.48   -3.51     3.11   18.48    4.37
+$hbox 1 "tendril3"	    -4.71    0.00   -4.47     3.11   18.47    3.41
+$hbox 2 "l_shoulder_mass"	    -3.25   -6.53   -5.18     5.92    7.22    8.60
+$hbox 9 "corpse_jaw"	    -0.38   -2.07   -2.22     2.95    3.11    2.35
+$hbox 4 "l_forearm"	    -3.46   -4.59   -3.01    11.30    3.89    5.14
+$hbox 4 "l_claw3_01"	    -1.01   -1.11   -1.33     6.65    1.16    1.14
+$hbox 4 "l_claw3_02"	     0.00   -0.60   -1.27     9.02    0.88    0.69
+$hbox 4 "l_claw_base"	    -1.22   -2.49   -2.02     9.13    4.92    4.22
+$hbox 4 "l_claw1_01"	    -0.16   -1.72   -4.28    17.57    1.85    2.53
+$hbox 4 "l_claw1_02"	    -1.92   -1.50   -1.00    18.46    1.39    3.69
+$hbox 4 "l_claw2_01"	    -0.28   -1.41   -3.37    13.85    1.44    1.65
+$hbox 4 "l_claw2_02"	    -1.40   -1.22   -0.81    14.86    1.22    2.92
+$hbox 4 "l_hand"	    -0.34   -1.12   -2.49     6.85    3.74    2.19
+$hbox 5 "r_forearm"	    -3.05   -3.20   -2.65    10.34    2.76    2.40
+$hbox 5 "r_hand"	    -1.11   -1.22   -1.95     3.72    1.59    2.19
+$hbox 5 "r_index1"	    -0.05   -0.87   -0.48     3.57    1.16    0.55
+$hbox 5 "r_ring1"	    -0.38   -0.57   -1.67     3.36    2.45    1.07
