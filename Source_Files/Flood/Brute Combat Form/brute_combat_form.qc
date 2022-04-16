@@ -10,7 +10,7 @@ $bodygroup "Legs"
 }
 $bodygroup "Torso"
 {
-    studio "torso_base.smd"
+    studio "torso_base2.smd"
     studio "torso_damaged.smd"
 }
 $bodygroup "Left Arm"
