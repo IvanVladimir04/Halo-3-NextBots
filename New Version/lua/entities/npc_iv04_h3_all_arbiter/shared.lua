@@ -7,6 +7,7 @@ ENT.PrintName = "Arbiter"
 ENT.Models = {"models/halo_3/characters/alliance/arbiter.mdl"}
 
 ENT.StartHealth = 100
+ENT.MaxShield = 200
 
 ENT.Relationship = 1
 

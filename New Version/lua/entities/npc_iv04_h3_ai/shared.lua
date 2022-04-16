@@ -2192,7 +2192,7 @@ function ENT:OnInjured(dmg)
 		if total < 0 then total = 0 end
 		if dmg:IsBulletDamage() then
 			dmg:SubtractDamage(self.Shield*2)
-			self.Shield = self.Shield-math.abs(dm/2)
+			self.Shield = self.Shield-math.abs(dm/4)
 		else
 			dmg:SubtractDamage(self.Shield)
 			self.Shield = self.Shield-math.abs(dm)

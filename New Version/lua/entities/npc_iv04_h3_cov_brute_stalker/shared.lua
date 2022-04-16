@@ -16,6 +16,8 @@ ENT.Faction = "FACTION_COVENANT"
 
 ENT.Rank = 1
 
+
+
 ENT.IsStalker = true
 
 

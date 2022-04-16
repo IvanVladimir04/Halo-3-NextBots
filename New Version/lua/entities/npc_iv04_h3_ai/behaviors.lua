@@ -127,6 +127,7 @@ function ENT:BruteInitialize()
 			self:SetBodygroup(3,1)
 			self:SetBodygroup(4,1)
 			self:SetSkin(6)
+			self.GrenadeType = "astw2_halo3_incendiary_thrown" 
 		else
 			self:SetSkin(self.Rank)
 			self:SetBodygroup(2,2)
