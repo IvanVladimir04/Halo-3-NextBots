@@ -4,6 +4,10 @@ ENT.Base 			= "npc_iv04_h3_ai"
 
 ENT.PrintName = "Brute Major"
 
+ENT.StartHealth = 75
+
+ENT.MaxShield = 75
+
 ENT.AITemplate = "BRUTE"
 
 ENT.Models = {"models/halo_3/characters/covenant/brute.mdl"}

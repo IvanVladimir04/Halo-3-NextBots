@@ -6,6 +6,10 @@ ENT.PrintName = "Brute Captain Ultra"
 
 ENT.AITemplate = "BRUTE"
 
+ENT.StartHealth = 130
+
+ENT.MaxShield = 145
+
 ENT.Models = {"models/halo_3/characters/covenant/brute.mdl"}
 
 ENT.Faction = "FACTION_COVENANT"

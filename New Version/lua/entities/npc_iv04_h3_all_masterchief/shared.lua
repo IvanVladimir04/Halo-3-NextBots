@@ -8,6 +8,8 @@ ENT.Models = {"models/halo_3/characters/alliance/master_chief.mdl"}
 
 ENT.StartHealth = 100
 
+ENT.MaxShield = 200
+
 ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true

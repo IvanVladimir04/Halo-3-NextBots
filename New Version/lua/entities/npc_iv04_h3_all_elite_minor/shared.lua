@@ -6,7 +6,9 @@ ENT.PrintName = "Elite"
 
 ENT.Models = {"models/halo_3/characters/alliance/elite.mdl"}
 
-ENT.StartHealth = 200
+ENT.StartHealth = 30
+
+ENT.MaxShield = 70
 
 ENT.Relationship = 1
 
