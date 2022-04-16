@@ -593,27 +593,16 @@ function ENT:SetupAnimations()
 			hold = "pistol"
 		end
 		if self.PistolHolds[hold] then
-			if self.Armored then
-				self.ShootAnim = {"attack_armored_pistol_1","attack_armored_pistol_2","attack_armored_pistol_3"}
-				self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Armored_Idle"
-				self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Armored_Idle"
-				self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Armored_Idle"
-				self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Armored_Idle"
-				self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Armored_Move"
-				self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Armored_Move"
-				self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Armored_Walk"
-				self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Armored_Walk"
-			else
-				self.ShootAnim = {"attack_combat_pistol"}
-				self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Combat_Idle"
-				self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Combat_Idle"
-				self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Combat_Idle"
-				self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Combat_Idle"
-				self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Combat_Move"
-				self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Combat_Move"
-				self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Combat_Walk"
-				self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Combat_Walk"
-			end
+			self.ShootAnim = {"attack_combat_pistol"}
+			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
+			self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Combat_Idle"
+			self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Combat_Idle"
+			self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Combat_Idle"
+			self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Combat_Idle"
+			self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Combat_Move"
+			self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Combat_Move"
+			self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Combat_Walk"
+			self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Combat_Walk"
 			self.IdleAnim = {"Combat_Pistol_Idle_Up"}
 			self.IdleCalmAnim = {"Combat_Pistol_Idle_Down"}
 			self.RunAnim = {"Move_Combat_Pistol_Up"}
@@ -632,7 +621,6 @@ function ENT:SetupAnimations()
 			self.CrouchMoveAnim = {"move_crouch_pistol_up"}
 			self.WarnAnim = {"Point_Combat_Pistol"}
 			self.CrouchMoveCalmAnim = {"pistol_crouch_move_passive"}
-			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
 			self.PushLeftAnim = "Melee_Smash_Combat_Pistol_Left"
 			self.PushLeftAnim = "Right_Smash_Combat_Pistol_Left"
 			self.TauntAnim = {"Taunt_Combat_Pistol"}
@@ -665,8 +653,24 @@ function ENT:SetupAnimations()
 			if self.AITemplate == "BRUTE" then
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Armored_Pistol"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Armored_Pistol"}
-				self.MeleeAnim = {"Melee_Combat_Pistol_1"}
-				self.MeleeBackAnim = {"Melee_Back_Combat_Pistol"}
+				if self.IsArmored then
+					self.MeleeAnim = {"Melee_Armored_Pistol_1","Melee_Armored_Pistol_2"}
+					self.MeleeBackAnim = {"Melee_Back_Armored_Pistol"}
+					self.GrenadeAnim = {"Throw_Grenade_Armored_Pistol"}
+					self.ShootAnim = {"attack_armored_pistol_1","attack_armored_pistol_2","attack_armored_pistol_3"}
+					self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Armored_Idle"
+					self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Armored_Idle"
+					self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Armored_Idle"
+					self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Armored_Idle"
+					self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Armored_Move"
+					self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Armored_Move"
+					self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Armored_Walk"
+					self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Armored_Walk"
+				else
+					self.GrenadeAnim = {"Throw_Grenade_Combat_Pistol"}
+					self.MeleeAnim = {"Melee_Combat_Pistol_1"}
+					self.MeleeBackAnim = {"Melee_Back_Combat_Pistol"}
+				end
 			elseif self.AITemplate == "SPARTAN" then
 				self.PatrolIdleAnim = {"Combat_Pistol_Idle_Down"}
 				self.PatrolMoveAnim = {"Walk_Combat_Pistol_Down"}
@@ -695,6 +699,7 @@ function ENT:SetupAnimations()
 					self.MeleeAnim = {"Melee_Combat_Pistol_Hp_1","Melee_Combat_Pistol_Hp_2"}
 				end
 			elseif self.AITemplate == "ELITE" then
+				self.ShootAnim = {"attack_combat_pistol_1"}
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
 				self.MeleeAnim = {"Melee_Combat_Pistol"}
@@ -727,15 +732,6 @@ function ENT:SetupAnimations()
 				self.MeleeIsGesture = true
 				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
 			end
-			self.TransitionAnims["Idle_2_Guard"] = "Combat_Pistol_Idle_2_Patrol_Idle"
-			self.TransitionAnims["Idle_2_Crouch"] = "Combat_Rifle_Idle_2_Crouch_Idle"
-			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "crouch_pistol_walk_2_crouch_idle"
-			self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "crouch_pistol_walk_2_crouch_idle"
-			self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "crouch_pistol_idle_2_crouch_move"
-			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "crouch_pistol_idle_2_crouch_move"
-			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_pistol_idle_2_crouch_walk"
-			self.TransitionAnims["Crouch_Idle_2_Guard"] = "crouch_pistol_idle_2_patrol_idle"
-			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_pistol_move_2_crouch_idle"
 		elseif self.RifleHolds[hold] then
 			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Missile"}
 			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Missile"}
@@ -811,6 +807,7 @@ function ENT:SetupAnimations()
 			if self.AITemplate == "BRUTE" then
 				self.MeleeAnim = {"Melee_Combat_Rifle_1"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle"}
 			elseif self.AITemplate == "SPARTAN" then
 				self.PatrolIdleAnim = {"Combat_Rifle_Idle_Down"}
 				self.PatrolMoveAnim = {"Walk_Combat_Rifle_Down"}
@@ -925,6 +922,8 @@ function ENT:SetupAnimations()
 			if self.AITemplate == "SPARTAN" then
 				self.PatrolIdleAnim = {"combat_missile_idle_up"}
 				self.PatrolMoveAnim = {"walk_combat_missile_up"}
+			elseif self.AITemplate == "BRUTE" then
+				self.GrenadeAnim = {"Throw_Grenade_Combat_Support"}
 			elseif self.AITemplate == "ELITE" then
 				self.MeleeAnim = {"Melee_Combat_Missile"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
@@ -1779,7 +1778,7 @@ function ENT:DoMeleeDamage(back) -- No arguments needed, everything is defined o
 			local dif = math.AngleDifference(ang.y,v:GetAngles().y)
 			if dif < 0 then dif = dif + 360 end
 			--print(dif)
-			if dif > 120 and dif < 240 then 
+			if dif > 120 and dif < 240 and !v.InstaKillImmune then 
 				damage = v:Health()
 			end
 			local d = DamageInfo()
@@ -2203,12 +2202,14 @@ function ENT:OnInjured(dmg)
 			self.Shield = 0 
 			self.ShieldWentDown = true
 			if self.IsBrute then
+				self.IsArmored = false
 				self.HasArmor = false
 				self:SetBodygroup(2,0)
 				self:SetBodygroup(3,0)
 				self:SetBodygroup(4,0)
 				self:SetBodygroup(5,0)
 				self:SetBodygroup(6,0)
+				self:SetupAnimations()
 				self:StopParticles()
 			else
 				self:ShieldArcLoop()
@@ -2943,7 +2944,8 @@ function ENT:ThrowGrenade()
 		end
 	end )
 	if !self.GrenadeIsGesture then
-		self:PlaySequenceAndMove(self:TableRandom(self.GrenadeAnim),1,self:GetForward(),40,0.8)
+		--self:PlaySequenceAndMove(self:TableRandom(self.GrenadeAnim),1,self:GetForward(),40,0.8)
+		self:PlaySequenceAndPWait(self:TableRandom(self.GrenadeAnim))
 	else
 		self:DoGestureSeq(self:TableRandom(self.GrenadeAnim))
 		coroutine.wait(1)
