@@ -2308,6 +2308,7 @@ function ENT:OnInjured(dmg)
 	else
 		if rel == "foe" then
 			self:SetEnemy(dmg:GetAttacker()) 
+			self:OnHaveEnemy(dmg:GetAttacker())
 		end
 	end
 	if !self.SpokeInjured then
