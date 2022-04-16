@@ -4,7 +4,7 @@
 	"$bumpmap" "models/halo_3/characters/flood/human_combat_form/floodcombat_civilian_zbump"
 	"$detail"  "models/halo_3/characters/covenant/grunt/skin_detail"
 	"$detailblendmode"			"1.00"
-	"$detailblendfactor"			"0.2"
+	"$detailblendfactor"			"0.15"
 	"$detailscale"			"15.00"
 	"$detailtint"			"[1 0.8 0.6]"
 	"$nodecal"				1
