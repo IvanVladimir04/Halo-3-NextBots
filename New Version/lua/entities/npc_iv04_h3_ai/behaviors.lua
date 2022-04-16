@@ -111,6 +111,7 @@ function ENT:BruteInitialize()
 	self.ShieldImpactParticle = "iv04_halo_3_brute_shield_impact_effect"
 	self.ShieldCriticalParticle = "iv04_halo_3_brute_shield_critical"
 	self.ShieldDepleteParticle = "iv04_halo_3_brute_shield_deplete"
+	self.GrenadeType = "astw2_halo3_spike_thrown"
 	if self.Rank == 1 then
 		self:SetBodygroup(7,math.random(0,1))
 		if self.IsCaptain then
@@ -211,6 +212,8 @@ end
 function ENT:DroneInitialize()
 end
 function ENT:HunterInitialize()
+	self.InstaKillImmune = true
+	self.DamageThreshold = math.huge -- Do this to disable flinching
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 125
 	self.MoveSpeedMultiplier = 2
@@ -855,9 +858,13 @@ function ENT:MarineBehavior(ent,range)
 	end
 	if ( !self.DoneStealth or self.GoingForSneakKill ) and self:IsUndetected() then
 		self.DoneStealth = true
-		for k, v in ipairs(self:NearbyAllies(self:GetPos(),512)) do
-			if ( v:IsPlayer() and v:Alive() and self.FriendlyToPlayers ) or (v.GoingForSneakKill and v.Enemy == ent) then
-				self.SawPlayer = true
+		if IsValid(self.FollowingPlayer) then
+			self.SawPlayer = true
+		else
+			for k, v in ipairs(self:NearbyAllies(self:GetPos(),512)) do
+				if ( v:IsPlayer() and v:Alive() and self.FriendlyToPlayers ) or (v.GoingForSneakKill and v.Enemy == ent) then
+					self.SawPlayer = true
+				end
 			end
 		end
 		timer.Simple( 60, function()
@@ -925,71 +932,86 @@ function ENT:MarineBehavior(ent,range)
 		coroutine.wait(wait)
 		
 	elseif self.AIType == "Offensive" then
-		if self.NeedsToCover then
-			self.NeedsToCover = false
-			local tbl = self:FindCoverSpots(ent)
-			self.NotLookingAtEnemy = true
-			if math.random(1,2) == 1 then
-				timer.Simple( math.random(4,7), function()
-					if IsValid(self) then
-						if self.NotLookingAtEnemy then
-							self.NotLookingAtEnemy = false
-						end
-					end
-				end )
+		if self.IsFollowingPlayer then
+			if self.FollowingPlayer:InVehicle() then
+				local ent = self.FollowingPlayer:GetVehicle():GetParent()
+				if IsValid(ent) and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
+					self.SeenVehicles[ent] = true
+					self.CountedVehicles = self.CountedVehicles+1
+				end
 			end
-			if table.Count(tbl) > 0 or #tbl > 0 then
-				local area = table.Random(tbl)
-				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
-				self.NotLookingAtEnemy = false
+			local dist = self:GetRangeSquaredTo(self.FollowingPlayer)
+			if dist > 500^2 then
+				local goal = self.FollowingPlayer:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
+				local pos = self:FindNearbyPos(goal,200)
+				self:GoToPosition( (pos), self.RunCalmAnim[math.random(1,#self.RunCalmAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )	
+			end
+		end
+			if self.NeedsToCover then
+				self.NeedsToCover = false
+				local tbl = self:FindCoverSpots(ent)
+				self.NotLookingAtEnemy = true
 				if math.random(1,2) == 1 then
-					self:Speak("cvr")
-					self:NearbyReply("cvr_re")
-				else
-					self:Speak("newordr_support")
+					timer.Simple( math.random(4,7), function()
+						if IsValid(self) then
+							if self.NotLookingAtEnemy then
+								self.NotLookingAtEnemy = false
+							end
+						end
+					end )
 				end
-				return
+				if table.Count(tbl) > 0 or #tbl > 0 then
+					local area = table.Random(tbl)
+					self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+					self.NotLookingAtEnemy = false
+					if math.random(1,2) == 1 then
+						self:Speak("cvr")
+						self:NearbyReply("cvr_re")
+					else
+						self:Speak("newordr_support")
+					end
+					return
+				end
 			end
-		end
-		if los then
-			local should, dif = self:ShouldFace(ent)
-			if should then
-				--self:Turn(dif,false,true)
-				--coroutine.wait(0.2)
-				return
-			end
-			if !IsValid(ent) then return end
-			local p
-			--print(self:IsOutNumbered())
-			if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
-			local rang = math.random(128,512)
-			if p == ent:GetPos() then rang = self.DistToTarget/2 end
-			local pos = self:FindNearbyPos(p,rang)
-			local wait = math.Rand(0.5,1)
-			local r = math.random(1,3)
-			local walk = (r == 1 and range < 600^2)
-			local anim = walk and self.WalkAnim[math.random(#self.WalkAnim)] or self.RunAnim[math.random(#self.RunAnim)]
-			local speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
-			--print(anim,speed)
-			self:MoveToPosition( pos, anim, speed )
-			coroutine.wait(wait)
-		else
-			if ent.BeingChased then
-				self:Speak("join_invsgt")
+			if los then
+				local should, dif = self:ShouldFace(ent)
+				if should then
+					--self:Turn(dif,false,true)
+					--coroutine.wait(0.2)
+					return
+				end
+				if !IsValid(ent) then return end
+				local p
+				--print(self:IsOutNumbered())
+				if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
+				local rang = math.random(128,512)
+				if p == ent:GetPos() then rang = self.DistToTarget/2 end
+				local pos = self:FindNearbyPos(p,rang)
+				local wait = math.Rand(0.5,1)
+				local r = math.random(1,3)
+				local walk = (r == 1 and range < 600^2)
+				local anim = walk and self.WalkAnim[math.random(#self.WalkAnim)] or self.RunAnim[math.random(#self.RunAnim)]
+				local speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
+				--print(anim,speed)
+				self:MoveToPosition( pos, anim, speed )
+				coroutine.wait(wait)
 			else
-				if self.IsSergeant and math.random(1,2) == 1 then
-					self:Speak("ordr_invsgt")
+				if ent.BeingChased then
+					self:Speak("join_invsgt")
 				else
-					self:Speak("invsgt")
+					if self.IsSergeant and math.random(1,2) == 1 then
+						self:Speak("ordr_invsgt")
+					else
+						self:Speak("invsgt")
+					end
+				end
+				ent.BeingChased = true
+				self:SetEnemy(nil)
+				self:WanderToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,false)
+				if !IsValid(self.Enemy) then 
+					self:Speak("invsgt_fail") 
 				end
 			end
-			ent.BeingChased = true
-			self:SetEnemy(nil)
-			self:WanderToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,false)
-			if !IsValid(self.Enemy) then 
-				self:Speak("invsgt_fail") 
-			end
-		end
 	end
 	self:DoAnimation(self.IdleAnim)
 end
@@ -1221,7 +1243,7 @@ function ENT:BruteBehavior(ent,range)
 			end
 			ent.BeingChased = true
 			self:SetEnemy(nil)
-			self:GoToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,false,self.WanderToPos)
+			self:GoToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
 			if !IsValid(self.Enemy) then 
 				self:Speak("invsgt_fail") 
 			end
