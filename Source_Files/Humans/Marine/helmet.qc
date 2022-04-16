@@ -35,7 +35,7 @@ $sequence "reference" {
 
 $collisionmodel "Marine_Helmet.smd"
 {
-	$mass 40
+	$mass 1
 	$inertia 1
 	$damping 0
 	$rotdamping 0
