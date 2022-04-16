@@ -2202,14 +2202,21 @@ function ENT:OnInjured(dmg)
 			self.Shield = 0 
 			self.ShieldWentDown = true
 			if self.IsBrute then
-				self.IsArmored = false
 				self.HasArmor = false
-				self:SetBodygroup(2,0)
-				self:SetBodygroup(3,0)
-				self:SetBodygroup(4,0)
-				self:SetBodygroup(5,0)
-				self:SetBodygroup(6,0)
-				self:SetupAnimations()
+				if !self.IsChieftain then
+					if self.IsJumpers then
+						self:SetBodygroup(3,0)
+						self:SetBodygroup(4,0)
+						self:SetBodygroup(5,0)
+						self:SetBodygroup(6,0)
+					else
+						self:SetBodygroup(2,0)
+						self:SetBodygroup(3,0)
+						self:SetBodygroup(4,0)
+						self:SetBodygroup(5,0)
+						self:SetBodygroup(6,0)
+					end
+				end 
 				self:StopParticles()
 			else
 				self:ShieldArcLoop()
