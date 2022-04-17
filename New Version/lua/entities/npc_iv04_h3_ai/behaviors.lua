@@ -1199,6 +1199,7 @@ function ENT:BruteBehavior(ent,range)
 	end
 	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
 	if !self.DistToTarget then self.DistToTarget = range end
+	if IsValid(ent) and !self.IsWeaponDrawn then self:AdjustWeapon(self.Weapon,true) end
 	local can, veh = self:CanEnterAVehicle()
 	if can then
 		self:EnterVehicle(veh)
