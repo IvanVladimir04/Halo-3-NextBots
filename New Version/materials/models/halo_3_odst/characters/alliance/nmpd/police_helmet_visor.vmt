@@ -9,6 +9,7 @@
 	"$detailscale"			"1.00"
 	"$nodecal"	1
 	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask" "1"
 	"$envmaptint"	"[.025 .01 .002]"
 	"$phong" "1"

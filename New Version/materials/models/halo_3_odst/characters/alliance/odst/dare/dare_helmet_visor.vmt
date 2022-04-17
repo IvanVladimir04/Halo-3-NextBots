@@ -7,7 +7,7 @@
    	"$bumpmap" "models\halo_3_odst\characters\alliance\odst\dare\dare_helmet_bump"
 	"$normalmapalphaenvmapmask" 1
 	"$nodecal" 1
-
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint" "[0.12 0.05 0.005]"
 
@@ -16,7 +16,7 @@
 	"$phongboost" 12.25
 	"$phongfresnelranges" "[1 1 1]"
 	"$phongtint" "[1.25 0.875 0.25]"
-
+	"$color2"		"[4 2 0.8]"
 	Proxies
 	{
 		Clamp

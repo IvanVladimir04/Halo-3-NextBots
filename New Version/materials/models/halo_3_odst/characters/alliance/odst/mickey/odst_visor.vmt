@@ -3,6 +3,7 @@
 	"$basetexture" "models\halo_3_odst\characters\alliance\odst\rookie\odst_helmet"
 	"$bumpmap" "models\halo_3_odst\characters\alliance\odst\rookie\odst_helmet_N"
 	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask" "1"
 	"$envmaptint"	"[.05 .07 .1]"
 	"$envmapsaturation"	".3"

@@ -3,6 +3,7 @@
 	"$basetexture" "models\halo_3\characters\alliance\marine\odst\pilot_diffuse"
 	"$bumpmap" "models\halo_3\characters\alliance\marine\odst\pilot_bump"
 	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask" "1"
 	"$envmaptint"	"[.5 .65 1]"
 	"$phong" "1"

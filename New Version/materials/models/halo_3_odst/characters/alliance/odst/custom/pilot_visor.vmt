@@ -2,6 +2,7 @@
 {
 	"$basetexture" "models\halo_3_odst\characters\alliance\odst\custom\pilot_diffuse"
 	"$bumpmap" "models\halo_3\characters\alliance\marine\odst\pilot_bump"
+	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$nodecal"			"1"
 	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$normalmapalphaenvmapmask" "1"
