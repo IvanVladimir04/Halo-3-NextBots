@@ -588,6 +588,23 @@ function ENT:SetupAnimations()
 		["Head"] = {"Die_Right_Head"},
 		["Gut"] =  {"Die_Right_Gut"}
 	}
+	if self.AITemplate == "BRUTE" then
+		self.DeathFrontAnims = {
+			["Gut"] =  {"Die_Front_Gut"}
+		}	
+		self.DeathBackAnims = {
+			["Head"] = {"Die_Back_Head_1"},
+			["Gut"] = {"Die_Back_Gut"}
+		}
+		self.DeathLeftAnims = {
+			["Head"] = {"Die_Left_Head"},
+			["Gut"] =  {"Die_Left_Gut_1","Die_Left_Gut_2"}
+		}
+		self.DeathRightAnims = {
+			["Head"] = {"Die_Right_Head"},
+			["Gut"] =  {"Die_Right_Gut_1","Die_Right_Gut_2"}
+		}
+	end
 	--print(self.DeadLandAnim)
 	if IsValid(self.Weapon) then
 		local hold = self:ConfigureWeapon()

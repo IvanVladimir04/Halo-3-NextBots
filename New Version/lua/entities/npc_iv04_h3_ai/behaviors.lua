@@ -184,21 +184,7 @@ function ENT:BruteInitialize()
 		end
 	end
 	if self.Rank == 4 then
-		self:SetBodygroup(1,1)
 		self:SetBodygroup(7,1)
-		if self.IsWarChieftain then
-			self.IsChieftain = true
-			self:SetSkin(4)
-			self:SetBodygroup(2,6)
-			self:SetBodygroup(3,6)
-			self:SetBodygroup(4,6)
-		else
-			self.IsChieftain = true
-			self:SetSkin(3)
-			self:SetBodygroup(2,5)
-			self:SetBodygroup(3,5)
-			self:SetBodygroup(4,5)
-		end
 		if self.IsCaptain then
 			self:SetBodygroup(2,3)
 			self:SetBodygroup(3,3)
@@ -206,6 +192,21 @@ function ENT:BruteInitialize()
 			self:SetBodygroup(5,1)
 			self:SetBodygroup(6,1)
 			self:SetSkin(4)
+		else
+			self:SetBodygroup(1,1)
+			if self.IsWarChieftain then
+				self.IsChieftain = true
+				self:SetSkin(4)
+				self:SetBodygroup(2,6)
+				self:SetBodygroup(3,6)
+				self:SetBodygroup(4,6)
+			else
+				self.IsChieftain = true
+				self:SetSkin(3)
+				self:SetBodygroup(2,5)
+				self:SetBodygroup(3,5)
+				self:SetBodygroup(4,5)
+			end
 		end
 	end
 end
