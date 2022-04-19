@@ -1339,3 +1339,12 @@ $sequence "combat_rifle_berserk" {
 	fps 30
 	walkframe 55 LX LY
 }
+
+$sequence "combat_rifle_brace" {
+	"marine_animations\combat_rifle_brace.smd"
+	activity "ACT_COWER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY
+}

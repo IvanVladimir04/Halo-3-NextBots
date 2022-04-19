@@ -838,3 +838,12 @@ $sequence "combat_unarmed_lookout" {
 	loop
 	walkframe 55 LX LY
 }
+
+$sequence "combat_unarmed_brace" {
+	"marine_animations\combat_unarmed_brace.smd"
+	activity "ACT_COWER" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	walkframe 55 LX LY
+}
