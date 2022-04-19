@@ -475,6 +475,50 @@ function ENT:OnInitialize()
 		local wep = table.Random(self.PossibleWeapons)
 		self:Give(wep,self.SpawnWithWeaponDrawn)
 	end
+	if self.EnableFlashlight then
+		if self:LookupAttachment("flashlight") != 0 then
+			self.Sprite = ents.Create("env_sprite")
+			self.Sprite:SetPos(self:GetAttachment(self:LookupAttachment("flashlight")).Pos)
+			self.Sprite:SetParent(self,self:LookupAttachment("flashlight"))
+			self.Sprite:SetOwner(self)
+			self.Sprite:SetAngles(self:GetAngles()+Angle(0,90,0))
+			self.Sprite:SetColor(self.MonitorColor or Color( 255, 255, 255 ))
+			self.Sprite:SetKeyValue( "scale", "0.1" )
+			self.Sprite:SetKeyValue( "model", "effects/halo3/8pt_ringed_star_flare.vmt" )
+			self.Sprite:SetKeyValue( "framerate", "30" )
+			self.Sprite:SetKeyValue( "rendermode", "9" )
+			self.Sprite:SetKeyValue( "spawnflags", "1" )
+			self.Sprite:Spawn()
+			self.Sprite:Activate()
+		elseif (self:LookupAttachment("flashlight_L") != 0 and self:LookupAttachment("flashlight_R") != 0) then
+			self.Sprite = ents.Create("env_sprite")
+			self.Sprite:SetPos(self:GetAttachment(self:LookupAttachment("flashlight_L")).Pos)
+			self.Sprite:SetParent(self,self:LookupAttachment("flashlight_L"))
+			self.Sprite:SetOwner(self)
+			self.Sprite:SetAngles(self:GetAngles()+Angle(0,90,0))
+			self.Sprite:SetColor(self.MonitorColor or Color( 255, 255, 255 ))
+			self.Sprite:SetKeyValue( "scale", "0.1" )
+			self.Sprite:SetKeyValue( "model", "effects/halo3/8pt_ringed_star_flare.vmt" )
+			self.Sprite:SetKeyValue( "framerate", "30" )
+			self.Sprite:SetKeyValue( "rendermode", "9" )
+			self.Sprite:SetKeyValue( "spawnflags", "1" )
+			self.Sprite:Spawn()
+			self.Sprite:Activate()
+			self.Sprite = ents.Create("env_sprite")
+			self.Sprite:SetPos(self:GetAttachment(self:LookupAttachment("flashlight_R")).Pos)
+			self.Sprite:SetParent(self,self:LookupAttachment("flashlight_R"))
+			self.Sprite:SetOwner(self)
+			self.Sprite:SetAngles(self:GetAngles()+Angle(0,90,0))
+			self.Sprite:SetColor(self.MonitorColor or Color( 255, 255, 255 ))
+			self.Sprite:SetKeyValue( "scale", "0.1" )
+			self.Sprite:SetKeyValue( "model", "effects/halo3/8pt_ringed_star_flare.vmt" )
+			self.Sprite:SetKeyValue( "framerate", "30" )
+			self.Sprite:SetKeyValue( "rendermode", "9" )
+			self.Sprite:SetKeyValue( "spawnflags", "1" )
+			self.Sprite:Spawn()
+			self.Sprite:Activate()
+		end
+	end
 	self:SetBloodColor(self.BloodType)
 	self:DoInit()
 	self:SetupAnimations()
@@ -670,6 +714,7 @@ function ENT:SetupAnimations()
 				self.Weapon.BurstLength = 4
 			end
 			if self.AITemplate == "BRUTE" then
+				self.BraceAnim = "Brace_Combat_Pistol"
 				self.AirAnim = "Airborne_Combat_Unarmed"
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Armored_Pistol"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Armored_Pistol"}
@@ -719,6 +764,7 @@ function ENT:SetupAnimations()
 					self.MeleeAnim = {"Melee_Combat_Pistol_Hp_1","Melee_Combat_Pistol_Hp_2"}
 				end
 			elseif self.AITemplate == "ELITE" then
+				self.BraceAnim = "Brace_Combat_Pistol"
 				self.ShootAnim = {"attack_combat_pistol_1"}
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
@@ -746,6 +792,7 @@ function ENT:SetupAnimations()
 					["Gut"] =  {"Die_Right_Gut"}
 				}
 			else
+				self.BraceAnim = "Combat_Pistol_Brace"
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Pistol"}
 				self.MeleeAnim = {"Melee_Combat_Pistol_1","Melee_Combat_Pistol_2"}
@@ -825,6 +872,7 @@ function ENT:SetupAnimations()
 				self.ReloadAnim = "reload_combat_rifle"
 			end
 			if self.AITemplate == "BRUTE" then
+				self.BraceAnim = "Brace_Combat_Rifle"
 				self.MeleeAnim = {"Melee_Combat_Rifle_1"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
 				self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle"}
@@ -840,6 +888,7 @@ function ENT:SetupAnimations()
 					self.MeleeAnim = {"Melee_Combat_Rifle_Br_1","Melee_Combat_Rifle_Br_2"}
 				end
 			elseif self.AITemplate == "ELITE" then
+				self.BraceAnim = "Brace_Combat_Rifle"
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Rifle"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Rifle"}
 				self.MeleeAnim = {"Melee_Combat_Rifle"}
@@ -870,6 +919,7 @@ function ENT:SetupAnimations()
 			else
 				self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
+				self.BraceAnim = "Combat_Rifle_Brace"
 			end
 			self.TransitionAnims["Move_2_Idle"] = "combat_rifle_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_rifle_move_2_combat_idle"
@@ -1021,6 +1071,8 @@ function ENT:SetupAnimations()
 			if self.AITemplate == "SPARTAN" then
 				self.PatrolIdleAnim = {"combat_support_idle_up"}
 				self.GrenadeAnim = {"Throw_Grenade_Combat_Support"}
+			else
+				self.PatrolIdleAnim = {"Patrol_Pistol_Idle_Up"}
 			end
 			self.TransitionAnims["Move_2_Idle"] = "combat_support_move_2_combat_idle"
 			self.TransitionAnims["Move_2_Idle_Passive"] = "combat_support_move_2_combat_idle"
@@ -1094,9 +1146,13 @@ function ENT:SetupAnimations()
 				self.PatrolIdleAnim = {"combat_Sword_idle_up"}
 				self.PatrolMoveAnim = {"walk_combat_Sword_up"}
 			elseif self.AITemplate == "ELITE" then
+				self.PatrolIdleAnim = {"Patrol_Pistol_Idle_Up"}
 				self.MeleeAnim = {"Melee_Combat_Sword_1","Melee_Combat_Sword_2"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Sword"}
 				self.GrenadeAnim = {"Throw_Grenade_Combat_Sword"}
+				self.BraceAnim = "Brace_Combat_Pistol"
+			else
+				self.BraceAnim = "Combat_Pistol_Brace"
 			end
 			self.DodgeChance = 0
 			self.MeleeDamage = 100
@@ -1184,7 +1240,6 @@ function ENT:SetupAnimations()
 				self.DodgeChance = 0
 			else
 				self.MeleeFromWeapon = true
-				self.DamageThreshold = self.DamageThreshold*3
 				self.MeleeAnim = {"Melee_Combat_Hammer_1","Melee_Combat_Hammer_2"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Hammer"}
 			end
@@ -1292,7 +1347,7 @@ function ENT:Use( activator )
 				self.FollowingPlayer = ply
 				self:SetNWInt("optredisp",1)
 				self:Speak("hail")
-				if self.PossibleWeapons or IsValid(self.Weapon) and !self.IsWeaponDrawn then
+				if (self.PossibleWeapons or IsValid(self.Weapon)) and !self.IsWeaponDrawn then
 					self:AdjustWeapon(self.Weapon,true)
 					local func = function()
 						self:PlaySequenceAndWait(self:TableRandom(self.DrawFastWeaponAnim))
@@ -1921,6 +1976,9 @@ end
 
 function ENT:AdjustWeapon(wep,drawn)
 	local at = (self.BruteWeapons[wep:GetClass()] or wep.HoldType_Aim == "smg" or self.PistolHolds[wep.HoldType_Aim]) and "sidearm" or "backpack"
+	if wep.HoldType_Aim == "melee" or wep.HoldType_Aim == "knife" then
+		at = "sword_holster"
+	end
 	local att = drawn and "anim_attachment_RH" or at
 	local id = self:LookupAttachment(att)
 	local pos = self:GetAttachment(id).Pos
@@ -1932,7 +1990,7 @@ function ENT:AdjustWeapon(wep,drawn)
 		wep:AddEffects(EF_BONEMERGE)
 		self:SetAmmo(wep:GetMaxClip1())
 		wep:SetClip1(wep:GetMaxClip1())
-		if self.EnableFlashlight then
+		if self.EnableFlashlight and self.AITemplate == "MARINE" then
 			self.Sprite = ents.Create("env_sprite")
 			self.Sprite:SetPos(self.Weapon:GetAttachment(1).Pos)
 			self.Sprite:SetParent(self.Weapon,1)
@@ -2890,7 +2948,7 @@ function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight w
 	return "ok"
 end
 
-function ENT:AvoidGrenade(grenade)
+function ENT:AvoidGrenade(grenade,toolate)
 	if self.AnimBusy or self.DetectedAGrenade or grenade:GetOwner() == self then return end
 	self.DetectedAGrenade = true
 	timer.Simple( math.random(2,3), function()
@@ -2898,59 +2956,76 @@ function ENT:AvoidGrenade(grenade)
 			self.DetectedAGrenade = false
 		end	
 	end )
-	self:DodgeEnt(grenade)
+	self:DodgeEnt(grenade,toolate)
 end
 
-function ENT:DodgeEnt(thrt)
+function ENT:DodgeEnt(thrt,toolate)
 	local dir =  ( self:GetPos() - thrt:GetPos() ):Angle()
 	local ang1 = dir
 	local dist = (self:GetRangeSquaredTo(thrt))
 	--print(math.sqrt(dist),self.GrenadeDodgeDistance)
 	--print(dist < self.GrenadeDodgeDistance^2)
 	if dist < self.GrenadeDodgeDistance^2 then -- That grenade is near us
-		local ang3 = self:GetAngles()
-		local dif2 = math.AngleDifference( ang1.y, ang3.y )
-		if dif2 < 0 then dif2 = dif2+360 end
-		--print(dif2) -- 180 = front, 270 = left, 90 = right
-		local r = math.random(1,2)
-		local diveanim
-		if dif2 <= 135 then -- Don't dodge to the right
-			if r == 1 then
-				diveanim = self.DiveFrontAnim
-			else
-				diveanim = self.DiveLeftAnim
+		if toolate then
+			if self.BraceAnim then
+				self:SetAngles(Angle(0,dir.y-180,0))
+				self.AnimBusy = true
+				local func = function()
+					self:Speak("dive")
+					self:PlaySequenceAndWait(self.BraceAnim)
+					self.AnimBusy = false
+				end
+				timer.Simple( 2, function()
+					if IsValid(self) and self.AnimBusy then self.AnimBusy = false end
+				end )
+				table.insert(self.StuffToRunInCoroutine,func)
+				self:ResetAI()
 			end
-		elseif dif2 > 135 and dif2 < 225 then -- Don't dodge to the front
-			if r == 1 then
-				diveanim = self.DiveLeftAnim
-			else
-				diveanim = self.DiveRightAnim
+		else
+			local ang3 = self:GetAngles()
+			local dif2 = math.AngleDifference( ang1.y, ang3.y )
+			if dif2 < 0 then dif2 = dif2+360 end
+			--print(dif2) -- 180 = front, 270 = left, 90 = right
+			local r = math.random(1,2)
+			local diveanim
+			if dif2 <= 135 then -- Don't dodge to the right
+				if r == 1 then
+					diveanim = self.DiveFrontAnim
+				else
+					diveanim = self.DiveLeftAnim
+				end
+			elseif dif2 > 135 and dif2 < 225 then -- Don't dodge to the front
+				if r == 1 then
+					diveanim = self.DiveLeftAnim
+				else
+					diveanim = self.DiveRightAnim
+				end
+			elseif dif2 >= 225 then -- Don't dodge to the left
+				if r == 1 then
+					diveanim = self.DiveFrontAnim
+				else
+					diveanim = self.DiveRightAnim
+				end
 			end
-		elseif dif2 >= 225 then -- Don't dodge to the left
-			if r == 1 then
-				diveanim = self.DiveFrontAnim
-			else
-				diveanim = self.DiveRightAnim
+			self.AnimBusy = true
+			local func = function()
+				self:Speak("dive")
+				self:PlaySequenceAndPWait(diveanim)
+				self.AnimBusy = false
 			end
+			timer.Simple( 2, function()
+				if IsValid(self) and self.AnimBusy then self.AnimBusy = false end
+			end )
+			table.insert(self.StuffToRunInCoroutine,func)
+			self:ResetAI()
 		end
-		self.AnimBusy = true
-		local func = function()
-			self:Speak("dive")
-			self:PlaySequenceAndPWait(diveanim)
-			self.AnimBusy = false
-		end
-		timer.Simple( 2, function()
-			if IsValid(self) and self.AnimBusy then self.AnimBusy = false end
-		end )
-		table.insert(self.StuffToRunInCoroutine,func)
-		self:ResetAI()
 	else
 		timer.Simple( 0.8, function()
 			if IsValid(self) and self.DetectedAGrenade then
 				--print("dodge again")
 				self.DetectedAGrenade = false
 				if IsValid(thrt) then
-					self:AvoidGrenade(thrt)
+					self:AvoidGrenade(thrt,true)
 				end
 			end
 		end )
@@ -3213,7 +3288,7 @@ function ENT:MoveMouth()
 end
 
 function ENT:PoseEyes()
-	self:DoGestureSeq("pose_eyes",true,self.BlinkSpeed)
+	self:DoGestureSeq("Eyes_Facial_Animation_Blink_Overlay",true,self.BlinkSpeed)
 end
 
 function ENT:FootstepSound()

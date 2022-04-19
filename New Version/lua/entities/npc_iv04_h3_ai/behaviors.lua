@@ -184,6 +184,7 @@ function ENT:BruteInitialize()
 		end
 	end
 	if self.Rank == 4 then
+		self.DamageThreshold = self.DamageThreshold*3
 		self:SetBodygroup(7,1)
 		if self.IsCaptain then
 			self:SetBodygroup(2,3)
