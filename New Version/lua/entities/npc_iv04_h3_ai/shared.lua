@@ -34,6 +34,8 @@ ENT.ThrownGrenades = 0
 
 ENT.MoveSpeed = 100
 
+ENT.DropHeight = 400
+
 ENT.Difficulty = 2 
 -- 1 Easy, 2 Normal, 3 Heroic, 4 Legendary
 
@@ -613,7 +615,7 @@ function ENT:SetupAnimations()
 			self.DiveLeftAnim = "Dive_Left_Combat_Unarmed"
 			self.DiveRightAnim = "Dive_Right_Combat_Unarmed"
 			self.DiveFrontAnim = "Dive_Front_Combat_Unarmed"
-			self.AirAnim = "Airborne_Combat_Unarmed"
+			self.AirAnim = "Airborne_Combat_Rifle"
 			self.LandAnim = "Land_Soft_Combat_Pistol"
 			self.LandHardAnim = "Land_Hard_Combat_Pistol"
 			self.SurpriseAnim = "Surprised_Combat_Pistol"
@@ -651,6 +653,7 @@ function ENT:SetupAnimations()
 				self.Weapon.BurstLength = 4
 			end
 			if self.AITemplate == "BRUTE" then
+				self.AirAnim = "Airborne_Combat_Unarmed"
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Armored_Pistol"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Armored_Pistol"}
 				if self.IsArmored then
@@ -869,7 +872,7 @@ function ENT:SetupAnimations()
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "crouch_rifle_idle_2_crouch_move"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_rifle_idle_2_crouch_walk"
 			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_rifle_idle_2_crouch_walk"
-		elseif hold == "rpg" then
+		elseif hold == "rpg" and self.AITemplate != "BRUTE" then
 			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Missile"}
 			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Missile"}
 			self.IdleAnim = {"combat_missile_idle_up"}
@@ -922,8 +925,6 @@ function ENT:SetupAnimations()
 			if self.AITemplate == "SPARTAN" then
 				self.PatrolIdleAnim = {"combat_missile_idle_up"}
 				self.PatrolMoveAnim = {"walk_combat_missile_up"}
-			elseif self.AITemplate == "BRUTE" then
-				self.GrenadeAnim = {"Throw_Grenade_Combat_Support"}
 			elseif self.AITemplate == "ELITE" then
 				self.MeleeAnim = {"Melee_Combat_Missile"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
@@ -947,7 +948,10 @@ function ENT:SetupAnimations()
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "crouch_missile_idle_2_crouch_move"
 			self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_missile_idle_2_crouch_walk"
 			self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_missile_idle_2_crouch_walk"
-		elseif hold == "physgun" then
+		elseif hold == "physgun" or ( hold == "rpg" and self.AITemplate == "BRUTE" ) then
+			self:AdjustWeapon(self.Weapon,true)
+			self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Support"}
+			self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Support"}
 			self.IdleAnim = {"combat_support_idle_up"}
 			self.IdleCalmAnim = {"combat_support_idle_up"}
 			self.RunAnim = {"move_combat_support_up"}
@@ -985,6 +989,8 @@ function ENT:SetupAnimations()
 			self.ShakeFistAnim = "shakefist_combat_support"
 			self.CheerAnim = "cheer_combat_support"
 			self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
+			self.NoSurpriseAnim = true
+			self.NoWarnAnim = true
 			self.AllowGrenade = false
 			self.CanShootCrouch = true
 			self.CanMelee = false
@@ -1111,6 +1117,9 @@ function ENT:SetupAnimations()
 			self.ShootAnim = {"attack_combat_Hammer_1"}
 			self.ReloadAnim = "reload_combat_Hammer"
 			self.AirAnim = "airborne_combat_Hammer"
+			self.LeapAnim = "Leap_Combat_Hammer"
+			self.LeapAirAnim = "Leap_Combat_Hammer_Airborne"
+			self.LeapMeleeAnim = "Leap_Combat_Hammer_Melee"
 			self.LandAnim = "land_soft_combat_Hammer"
 			self.LandHardAnim = "land_hard_combat_Hammer"
 			self.CalmTurnLeftAnim = "turn_left_combat_Hammer"
@@ -1148,13 +1157,19 @@ function ENT:SetupAnimations()
 			self.DiveLeftAnim = "dive_left_combat_unarmed"
 			self.DiveRightAnim = "dive_right_combat_unarmed"
 			self.FallbackAnim = "signal_fallback_combat_Hammer"
+			self.MeleeRange = 150
 			if self.AITemplate == "SPARTAN" then
 				self.PatrolIdleAnim = {"combat_Hammer_idle_up"}
 				self.PatrolMoveAnim = {"walk_combat_Hammer_up"}
 			elseif self.AITemplate == "ELITE" then
-				self.MeleeAnim = {"Melee_Combat_Hammer"}
-				self.MeleeBackAnim = {"Melee_Back_Combat_Hammer"}
 				self.GrenadeAnim = {"Throw_Grenade_Combat_Hammer"}
+				self.MeleeIsGesture = true
+				self.DodgeChance = 0
+			else
+				self.MeleeFromWeapon = true
+				self.DamageThreshold = self.DamageThreshold*3
+				self.MeleeAnim = {"Melee_Combat_Hammer_1","Melee_Combat_Hammer_2"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Hammer"}
 			end
 			self.HasMeleeWeapon = true
 			self.TransitionAnims["Move_2_Idle"] = "combat_Hammer_move_2_combat_idle"
@@ -1444,18 +1459,38 @@ function ENT:OnTraceAttack( info, dir, trace )
 end
 
 function ENT:OnLeaveGround(ent)
+	--print("jumped",CurTime())
+	self.LastTimeOnGround = CurTime()
+	local t = self.LastTimeOnGround
 	if self:Health() <= 0 then 
 		self:DoAnimation(self.DeadAirAnim)
+		--print(1)
+	elseif self.Leaping then
+		self.AnimBusy = true
+		self:DoAnimation(self.LeapAirAnim)
+		--print(2)
+		timer.Simple( 6, function()
+			if IsValid(self) and self.LastTimeOnGround == t and self.Leaping then
+				self.AnimBusy = false
+				self:DoAnimation(self.DeadAirAnim)
+				--self:Speak("thrwn")
+				--print(2.3)
+				self.FlyingDead = true
+				self:OnKilled(DamageInfo())
+				self:SetHealth(0)
+			end
+		end )
 	else
-		self.LastTimeOnGround = CurTime()
-		local t = self.LastTimeOnGround
+		--print(3)
 		timer.Simple( 0.6, function()
 			if IsValid(self) and self.LastTimeOnGround == t then
 				self:DoAnimation(self.AirAnim)
+				--print(3.1)
 			end
 		end )
 		timer.Simple( 3, function()
 			if IsValid(self) and self.LastTimeOnGround == t then
+				--print(3.2)
 				self:DoAnimation(self.DeadAirAnim)
 				--self:Speak("thrwn")
 				self.FlyingDead = true
@@ -1467,8 +1502,21 @@ function ENT:OnLeaveGround(ent)
 end
 
 function ENT:OnLandOnGround(ent)
+	--print("landed",CurTime())
 	if self.FlyingDead then
 		self.HasLanded = true
+	elseif self.Leaping then
+		self.AnimBusy = false
+		self.Leaping = false
+		self.LastTimeOnGround = CurTime()
+		local func = function()
+			local oldmelee = self.MeleeAnim
+			self.MeleeAnim = self.LeapMeleeAnim
+			self:DoMelee()
+			self.MeleeAnim = oldmelee
+		end
+		table.insert(self.StuffToRunInCoroutine,func)
+		self:ResetAI()
 	elseif self.LastTimeOnGround then
 		local seq = self:TableRandom(self.LandAnim)
 		if ( CurTime() - self.LastTimeOnGround ) > 1 then
@@ -1731,7 +1779,13 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 	local hittime = self.MeleeAnimsHits[anim] or 0.6
 	timer.Simple( len*hittime, function() -- Set up a timer for the melee hit
 		if IsValid(self) then
-			self:DoMeleeDamage(turn)
+			if self.MeleeFromWeapon then
+				--self:Speak("melee")
+				--self:Speak("charge")
+				self.Weapon:MeleeAttack()
+			else
+				self:DoMeleeDamage(turn)
+			end
 		end
 	end )
 	timer.Simple( len, function()
@@ -2570,7 +2624,7 @@ function ENT:OnOtherKilled( victim, info )
 					local func = function()
 						if self.IsInVehicle then return end
 						coroutine.wait(1)
-						self:WanderToPosition(spot,self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier)
+						self:GoToPosition(spot,self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
 						self:Speak("chkfoebdy")
 						local lim = self.Weapon.BurstLength
 						local old = self.Weapon.Fire_AngleOffset

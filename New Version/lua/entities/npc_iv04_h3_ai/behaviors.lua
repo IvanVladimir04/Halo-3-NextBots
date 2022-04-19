@@ -91,6 +91,7 @@ function ENT:EliteInitialize()
 	self.MaxShield = 70
 	self.Shield = 70
 	self.HasArmor = true
+	self.TotalHolds["melee2"] = true
 end
 function ENT:BruteInitialize()
 	self.AllowClimbing = true
@@ -106,7 +107,9 @@ function ENT:BruteInitialize()
 	self.MaxShield = self.Shield
 	self.VoiceType = "Brute_"..math.random(3)..""
 	self.MeleeAnimsHits = {
-		["Melee_Combat_Pistol_1"] = 0.6
+		["Melee_Combat_Pistol_1"] = 0.6,
+		["Melee_Combat_Hammer_1"] = 0.4,
+		["Melee_Combat_Hammer_2"] = 0.4
 	}
 	self.ShieldImpactParticle = "iv04_halo_3_brute_shield_impact_effect"
 	self.ShieldCriticalParticle = "iv04_halo_3_brute_shield_critical"
@@ -1185,6 +1188,7 @@ end
 function ENT:BruteBehavior(ent,range)
 	if !IsValid(ent) then self:GetATarget() end
 	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	if self.Leaping then return end
 	ent = ent or self.Enemy
 	if self.IsInVehicle then return self:VehicleBehavior(ent,range) end
 	local mins, maxs = ent:GetCollisionBounds()
@@ -1224,15 +1228,29 @@ function ENT:BruteBehavior(ent,range)
 				return
 			end
 			if !IsValid(ent) then return end
-			local p
-			if math.random(1,2) == 1 then p = ent:GetPos() end
-			local pos = self:FindNearbyPos()
-			local wait = math.Rand(0.5,1)
-			local anim = self.RunAnim[math.random(#self.RunAnim)]
-			local speed = self.MoveSpeed*self.MoveSpeedMultiplier
-			--print(anim,speed)
-			self:GoToPosition( pos, anim, speed )
-			coroutine.wait(wait)
+			if self.HasMeleeWeapon then
+				if range > 512^2 and range < 1200^2 then
+					self:PlaySequenceAndWait(self.LeapAnim)
+					self.Leaping = true
+					self.loco:JumpAcrossGap(ent:GetPos(),self:GetForward())
+					return
+				else
+					self.PathGoalTolerance = 100
+					self:Speak("kamikaze")
+					self:MoveToPosition( ent:GetPos(), self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
+					self.PathGoalTolerance = 40
+				end
+			else
+				local p
+				if math.random(1,2) == 1 then p = ent:GetPos() end
+				local pos = self:FindNearbyPos()
+				local wait = math.Rand(0.5,1)
+				local anim = self.RunAnim[math.random(#self.RunAnim)]
+				local speed = self.MoveSpeed*self.MoveSpeedMultiplier
+				--print(anim,speed)
+				self:GoToPosition( pos, anim, speed )
+				coroutine.wait(wait)
+			end
 		else
 			if ent.BeingChased then
 				self:Speak("join_invsgt")
