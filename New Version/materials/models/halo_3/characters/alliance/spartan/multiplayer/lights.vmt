@@ -4,7 +4,7 @@
 	"$nodecal" 1
 	"$additive" 1
 	"$selfillum" 1
-	
+	"$decal"		1	
 	"$detail" "models/halo_3/characters/alliance/spartan/multiplayer/mp_masterchief"
 	"$detailblendfactor" 1
 	"$detailblendmode" 0

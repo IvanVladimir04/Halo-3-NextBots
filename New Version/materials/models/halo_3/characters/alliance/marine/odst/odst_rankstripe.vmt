@@ -2,5 +2,6 @@
 {
 	"$basetexture" "models\halo_3\characters\alliance\marine\odst\sarge_stripe_cc"
 	"$translucent" 1
+	"$decal"		1
 
 }

@@ -3,6 +3,7 @@
 	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_diffuse_white"
 	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"	
 	"$additive" "1"
+	"$decal"		1
 	"$selfillum"		1
 	"$selfillummask"	"models/halo_3/characters/covenant/drone/bugger_pupa_illum"
 	"$phong" 1

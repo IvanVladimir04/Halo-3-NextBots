@@ -1,0 +1,23 @@
+VortWarp
+{
+
+	$basetexture	"models\halo_3\shared\overshield"
+	$flowmap		"models\halo_3\shared/plasma_clouds_a"
+	$color2	[0 1 1]
+	$selfillummap	"models\halo_3\shared/plasma_clouds_b"
+	$selfillumtint	"[ 5 3 0.25]"
+	$warpparam	1.0
+	$additive		1
+	$translucent	1
+	
+        "Proxies"
+        {
+                "AnimatedTexture"
+                {
+                         "animatedtexturevar" "$basetexture"
+                         "animatedtextureframenumvar" "$frame"
+                         "animatedtextureframerate" 27.00
+                }
+
+        }
+}

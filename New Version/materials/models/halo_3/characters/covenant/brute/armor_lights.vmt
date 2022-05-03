@@ -16,4 +16,5 @@
 	"$phongalbedotint" "1"
 	"$color2" "[5 0 0]"
 	"$nodecal"				1
+	"$decal"		1
 }

@@ -3,7 +3,7 @@
 	"$basetexture" "models\halo_3\characters\alliance\spartan\campaign\masterchief"
 	"$additive" 1
 	"$nodecal" 1
-
+	"$decal"		1
 	"$detail" "models\halo_3\characters\alliance\spartan\campaign\masterchief"
 	"$detailblendfactor"	1
 	"$detailblendmode" 0

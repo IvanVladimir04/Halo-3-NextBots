@@ -4,6 +4,7 @@
 	"$additive"	"1"
 	"$color2"		"[0.2 0.8 1]"
 	"$nodecal"				1
+	"$decal"		1
 }
 
 

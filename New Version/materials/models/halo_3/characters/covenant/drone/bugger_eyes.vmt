@@ -3,6 +3,7 @@
 	"$basetexture" "models/halo_3/characters/covenant/drone/bugger_diffuse"
 	"$bumpmap" "models/halo_3/characters/covenant/drone/bugger_zbump"	
 	"$blendtintbybasealpha" "1"
+
 	"$phong" 1
 	"$phongboost" "3"
 	"$phongexponent" "6"

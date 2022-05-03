@@ -2,6 +2,7 @@
 {
 	"$basetexture" "models\halo_3\characters\alliance\marine\pilot_decal"
 	"$translucent" 1
+	"$decal"		1
 
 	Proxies
 	{
