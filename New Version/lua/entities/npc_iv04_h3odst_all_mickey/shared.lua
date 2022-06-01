@@ -46,7 +46,7 @@ function ENT:DoInit()
 		return Vector(self.ColR/255,self.ColG/255,self.ColB/255)
 	end
 	self:SetColor(Color(self.ColR,self.ColG,self.ColB))
-	net.Start( "H3NBsHeroSpawned" )
+	net.Start( "H3NBsColoredSpawned" )
 	net.WriteEntity( self )
 	net.WriteVector( self:GetPlayerColor() )
 	net.Broadcast()

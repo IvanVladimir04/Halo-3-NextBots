@@ -89,7 +89,7 @@ H3NBsColors = {
 
 if SERVER then
 
-	util.AddNetworkString( "H3NBsHeroSpawned" )
+	util.AddNetworkString( "H3NBsColoredSpawned" )
 	
 	AllowedH3Squads = {
 		["FACTION_ALLIANCE"] = true,
@@ -162,6 +162,8 @@ if SERVER then
 	
 	H3ES = H3S -- Halo 3 Elite Squads
 	
+	H3FS = H3S -- Halo 3 Flood Squads
+	
 	hook.Add("IV04NextBotSpawned","SquadManager", function(ent)
 		--print("The hook is running")
 		if ent.IsHalo3NextBot and AllowedH3Squads[ent.Faction] then
@@ -179,7 +181,7 @@ if SERVER then
 
 else
 
-	net.Receive( "H3NBsHeroSpawned", function()
+	net.Receive( "H3NBsColoredSpawned", function()
 		local ent = net.ReadEntity()
 		local col = net.ReadVector()
 		if !IsValid(ent) then return end

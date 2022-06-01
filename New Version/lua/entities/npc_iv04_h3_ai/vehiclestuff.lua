@@ -1,32 +1,66 @@
 AddCSLuaFile()
 
+ENT.CountedVehicles = 0
+
 ENT.SeenVehicles = {}
 
 ENT.DriveThese = {
-	["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = true,
-	["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = true,
-	["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = true
+	--["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = true,
+	--["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = true,
+	--["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = true,
+	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = true
 }
 
 ENT.PassengerSlots = {
-	["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = 3,
-	["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = 3,
-	["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = 3
+	--["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = 3,
+	--["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = 3,
+	--["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = 3,
+	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = 3
 }
 
 ENT.TurretTypes = {
-	["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = "MG",
-	["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = "Gauss",
-	["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = "Rocket"
+	--["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = "MG",
+	--["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = "Gauss",
+	--["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = "Rocket",
+	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = "MG"
 }
 
-ENT.TurretBones = {
-	["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = "turret",
-	["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = "turret_2",
-	["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = "turret_2"
+ENT.TurretAttachments = {
+	--["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = "turret",
+	--["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = "turret_2",
+	--["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = "turret_2",
+	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = {
+		["Driver"] = "h3_driver",
+		["Gunner"] = "h3_gunner",
+		["Passenger"] = "h3_passenger1"
+	}
+}
+
+ENT.VehicleSlots = {
+	--["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = {
+	--	[1] = "Driver",
+	--	[2] = "Gunner",
+	--	[3] = "Passenger"
+	--},
+	--["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = {
+	--	[1] = "Driver",
+	--	[2] = "Gunner",
+	--	[3] = "Passenger"
+	--},
+	--["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = {
+	--	[1] = "Driver",
+	--	[2] = "Gunner",
+	--	[3] = "Passenger"
+	--},
+	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = {
+		[1] = "Driver",
+		[2] = "Passenger",
+		[3] = "Gunner"
+	}
 }
 
 function ENT:CanEnterAVehicle()
+	if !self.AllowVehicleFunctions then return false end
 	local ve
 	local can = false
 	for veh, bool in pairs(self.SeenVehicles) do
@@ -51,6 +85,15 @@ function ENT:CanEnterAVehicle()
 	return can, ve
 end
 
+--[[
+NextBot [180][npc_iv04_h3_all_marine] 
+Error: 
+addons/simfphys-halo-ce-vehicles-redux-pre-release-private-betatest/lua/autorun/simf_redux_snow.lua:
+2177:
+ Tried to use a NULL entity!
+
+]]
+
 function ENT:VehicleIdle()
 	self:SearchEnemy()
 	if self.VehicleRole == "Gunner" then
@@ -58,6 +101,8 @@ function ENT:VehicleIdle()
 	elseif self.VehicleRole == "Driver" then
 		if self.IsFollowingPlayer then
 			self:Drive(self.FollowingPlayer:GetPos()+self.FollowingPlayer:GetForward()*-400)
+		else
+			self:VehicleStop()
 		end
 		self:PlaySequenceAndWait(self.WarthogDriverIdle)
 	elseif self.VehicleRole == "Passenger" then
@@ -93,8 +138,11 @@ function ENT:AdjustKeys(ang)
 	local right = 0
 	local left = 0
 	if dif < 0 then dif = dif + 360 end
-	if ( dif > 195 and dif < 345 ) or ( dif < 165 and dif > 15 )then
-		if dif >= 180 then
+	--print(dif)
+	self.NotLookingAtEnemy = true
+	self.VehicleEyeAng = Angle(0,self:GetAngles().y,0)
+	if ( dif > 60 and dif < 300 ) then
+		if ( dif < 300 and dif > 180 ) then
 			veh.PressedKeys["A"] = true
 			veh.PressedKeys["D"] = false
 			veh.PressedKeys["joystick_steer_right"] = false
@@ -109,19 +157,26 @@ function ENT:AdjustKeys(ang)
 			right = 1
 			--print("right")
 		end
+		self.VehicleEyeAng = Angle(0,dif,0)
 	else
 		veh.PressedKeys["A"] = false
 		veh.PressedKeys["D"] = false
 		veh.PressedKeys["joystick_steer_right"] = false
 		veh.PressedKeys["joystick_steer_left"] = false
 	end
-	if ( dif < 90 and dif > 270 ) then
-		veh.PressedKeys["S"] = true
-		veh.PressedKeys["W"] = false
-		--print("back")
-	else
+	if ( dif < 90 or dif > 270 ) then
 		veh.PressedKeys["S"] = false
 		veh.PressedKeys["W"] = true
+		--print("back")
+	else
+		veh.PressedKeys["S"] = true
+		veh.PressedKeys["W"] = false
+		right = 0
+		veh.PressedKeys["A"] = false
+		veh.PressedKeys["D"] = false
+		veh.PressedKeys["joystick_steer_right"] = false
+		veh.PressedKeys["joystick_steer_left"] = false
+		left = 0
 		--print("front")
 	end
 	veh.PressedKeys["Space"] = false
@@ -133,6 +188,7 @@ function ENT:Drive(goal,pathed,path)
 	local pos = goal
 	local stop = false
 	local timed = false
+	--debugoverlay.Sphere(goal,10,10,10)
 	while (!stop) do
 		if pathed then
 			if !IsValid(path) then
@@ -152,6 +208,10 @@ function ENT:Drive(goal,pathed,path)
 		self:AdjustKeys(ang)
 		coroutine.wait(0.3)
 	end
+	self:VehicleStop()
+end
+
+function ENT:VehicleStop()
 	self.Vehicle.PressedKeys["Space"] = true
 	self.Vehicle.PressedKeys["S"] = false
 	self.Vehicle.PressedKeys["W"] = false
@@ -178,18 +238,41 @@ function ENT:VehicleBehavior(ent,dist)
 					timer.Simple( i*del, function()
 						if IsValid(self) and IsValid(self.Vehicle) then
 							local bullet = {}
-							bullet.Attacker = self
 							bullet.Damage = 8
 							local dir
 							local origin = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment("muzzle")).Pos
-							ParticleEffectAttach( "simphys_halo_warthog_chaingun_muzzle", PATTACH_POINT_FOLLOW, self.Vehicle, 5 )
+							ParticleEffectAttach( "imp_halo_3_muzzle_warthog_chaingun", PATTACH_POINT_FOLLOW, self.Vehicle, 5 )
 							self.Vehicle:EmitSound("hce_turret")
+							--local bullet = {}
+							bullet.Num 			= 2
+							bullet.Spread 		= Vector(0.025,0.015,0.025)
+							bullet.Tracer		= 1
+							bullet.TracerName	= "effect_simfphys_halo_warthog_chaingun_tracer"
+							bullet.Force		= 1
+							--bullet.Damage		= 32
+							bullet.HullSize		= 1
+							bullet.Attacker 	= self
+							bullet.Callback = function(att, tr, dmginfo)
+								local effectdata = EffectData()
+									effectdata:SetOrigin( tr.HitPos )
+									util.Effect( "cball_bounce", effectdata, true, true )
+
+								if tr.Entity ~= Entity(0) then
+									if simfphys.IsCar( tr.Entity ) then
+										local effectdata = EffectData()
+											effectdata:SetOrigin( tr.HitPos + shootDirection * tr.Entity:BoundingRadius() )
+											effectdata:SetNormal( shootDirection * 10 )
+										util.Effect( "manhacksparks", effectdata, true, true )
+									
+										sound.Play( Sound( "doors/vent_open"..math.random(1,3)..".wav" ), tr.HitPos, 30)
+									end
+								end
+							end
+							
 							local ens = ents.Create("prop_physics")
 							ens:SetPos(origin)
 							ens:SetAngles(self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment("muzzle")).Ang)
-							bullet.TracerName = "effect_simfphys_halo_warthog_chaingun_tracer"
 							bullet.Src = ens:GetPos()
-							bullet.Spread = Vector(0.05,0.05,0.05)
 							if IsValid(self.Enemy) then
 								dir = (self.Enemy:WorldSpaceCenter()-origin):GetNormalized()
 							end
@@ -291,51 +374,59 @@ function ENT:VehicleBehavior(ent,dist)
 	end
 end
 
-ENT.VehicleSlots = {
-	["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = {
-		[1] = "Driver",
-		[2] = "Gunner",
-		[3] = "Passenger"
-	},
-	["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = {
-		[1] = "Driver",
-		[2] = "Gunner",
-		[3] = "Passenger"
-	},
-	["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = {
-		[1] = "Driver",
-		[2] = "Gunner",
-		[3] = "Passenger"
-	}
-}
-
 function ENT:EnterVehicle(veh)
 	local dirs = {
 		[1] = veh:GetRight()*-80,
-		[2] = veh:GetForward()*-160,
-		[3] = veh:GetRight()*80
+		[3] = veh:GetForward()*-160,
+		[2] = veh:GetRight()*80
+	}
+	local voices = {
+		[1] = "entervcl_drvr",
+		[3] = "entervcl_trrt",
+		[2] = "entervcl"
 	}
 	local seat
 	local clss = veh:GetModel()
 	local e
 	for i = 1, self.PassengerSlots[clss] do
 		if !IsValid(veh.PassengerS[i]) then
-			if ( i == 1 and !IsValid(veh:GetDriver()) ) or ( IsValid(veh.pSeat[i-1]) and !IsValid(veh.pSeat[i-1]:GetDriver()) ) then
+			if ( i == 1 and !IsValid(veh:GetDriver()) ) or ( IsValid(veh.pSeat[i-1]) and !IsValid(veh.pSeat[i-1]:GetDriver()) ) or ( IsValid(veh.pSeat[i]) and !IsValid(veh.pSeat[i]:GetDriver()) ) then
 				veh.PassengerS[i] = self
-				if i == 1 then
-					seat = veh
-				else
-					seat = veh.pSeat[i-1]
-				end
+				--PrintTable(veh.pSeat)
 				e = i
+				if i == 1 then
+					seat = veh.DriverSeat
+					--i = i
+				elseif i == 2 then
+					seat = veh.pSeat[i]
+					e = 3
+				elseif i == 3 then
+					seat = veh.pSeat[1]
+					e = 2
+				else
+					seat = veh.pSeat[i-2]
+				end
 				break
 			end
 		end
 	end
 	self.VehicleRole = self.VehicleSlots[clss][e]
+	--print(self.VehicleRole)
 	self.TurretType = self.TurretTypes[clss]
-	self.TurretBone = self.TurretBones[clss]
+	self.TurretAttachment = self.TurretAttachments[clss][self.VehicleRole]
+	self:Speak(voices[e])
 	self:MoveToPosition(seat:GetPos()+dirs[e],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier)
+	--[[local oldfunc = seat.GetDriver
+	local newfunc = function()
+		if IsValid(self) and self.IsInVehicle and self.Vehicle == seat:GetParent() then 
+			return self
+		else 
+			return oldfunc(seat)
+		end 
+	end
+	print("a")
+	seat.GetDriver = newfunc
+	print("e")]]
 	for i = 1, self.PassengerSlots[clss] do
 		if veh.PassengerS[i] == self then
 			if ( i == 1 and IsValid(veh:GetDriver()) ) or ( IsValid(veh.pSeat[i-1]) and IsValid(veh.pSeat[i-1]:GetDriver()) ) then
@@ -360,7 +451,11 @@ function ENT:EnterVehicle(veh)
 	--self:SetPos(seat:GetPos())
 	self:SetParent(seat)
 	self:SetOwner(seat)
+	seat.AltDriver = self
+	--print(seat)
+	self.OldMask = self:GetSolidMask()
 	self.TraceMask = MASK_VISIBLE_AND_NPCS
+	self:SetSolidMask(self.TraceMask)
 	if self.VehicleRole == "Gunner" then
 		self.LTPP = veh:GetPoseParameter("turret_yaw")
 		self.LTP = veh:GetPoseParameter("spin_cannon")
@@ -381,4 +476,45 @@ end
 
 function ENT:GetInfoNum(no,yes)
     return 1
+end
+
+function ENT:VehicleThink()
+if self.IsInVehicle then
+			if self.InPelican then
+				local att = self.Pelican:GetAttachment(self.Pelican:LookupAttachment(self.Pelican.InfantryAtts[self.PelicanId]))
+				local ang = att.Ang
+				local pos = att.Pos
+				self:SetAngles(att.Ang)
+				if !self.PLanded then
+					self:SetPos(att.Pos+Vector(0,0,3))
+					if !self.DidPelicanIdleAnim then
+						self.DidPelicanIdleAnim = true
+						local anim
+						if self.SideAnim == "Left" then
+							anim = self.PelicanPassengerLIdleAnims[self.SAnimId]
+						else
+							anim = self.PelicanPassengerRIdleAnims[self.SAnimId]
+						end
+						local id, len = self:LookupSequence(anim)
+						self:ResetSequence(id)
+						--print(id,len)
+						timer.Simple( len, function()
+							if IsValid(self) then
+								self.DidPelicanIdleAnim = false
+							end
+						end )
+					end
+				else
+					--local off = 50*self.SAnimId
+					--if self.SideAnim == "Right" then off = -50*self.SAnimId end
+					local off = 0
+					self:SetPos(att.Pos+Vector(0,0,3)-att.Ang:Right()*off)
+				end
+				--self.loco:SetVelocity(Vector(0,0,0))
+			else
+				local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+				self:SetPos(att.Pos)
+				self:SetAngles(att.Ang)
+			end
+		end
 end
