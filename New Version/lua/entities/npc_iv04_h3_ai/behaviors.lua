@@ -46,6 +46,7 @@ function ENT:SpartanInitialize()
 	self.AllowVehicleFunctions = true
 end
 function ENT:MarineInitialize()
+	--self.BloodDecal = "Scorch"
 	self.AllowClimbing = true
 	self.AllowStealth = true
 	self.MoveSpeed = 90
@@ -90,6 +91,7 @@ function ENT:EliteInitialize()
 	self.ShieldDepleteParticle = "iv04_halo_3_elite_shield_deplete"
 	self.ShieldDepleteArcsParticle = "iv04_halo_3_elite_shield_deplete_arcs"
 	self.ShieldRechargeParticle = "iv04_halo_3_elite_shield_recharge"
+	self.BloodDecal = "iv04_halo_3_blood_splat_elite"
 	self.MaxShield = 70
 	self.Shield = 70
 	self.HasArmor = true
@@ -117,6 +119,7 @@ function ENT:BruteInitialize()
 	self.ShieldImpactParticle = "iv04_halo_3_brute_shield_impact_effect"
 	self.ShieldCriticalParticle = "iv04_halo_3_brute_shield_critical"
 	self.ShieldDepleteParticle = "iv04_halo_3_brute_shield_deplete"
+	self.BloodDecal = "iv04_halo_3_blood_splat_brute"
 	self.GrenadeType = "astw2_halo3_spike_thrown"
 	self.AllowVehicleFunctions = true
 	if self.Rank == 1 then
@@ -274,6 +277,7 @@ end
 function ENT:ConstructorInitialize()
 end
 function ENT:FloodHumanInitialize()
+	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.MoveSpeed = 40
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15

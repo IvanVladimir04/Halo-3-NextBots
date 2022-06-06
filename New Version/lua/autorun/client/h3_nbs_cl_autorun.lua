@@ -170,6 +170,16 @@ local opts = {
 	},
 	
 	[15] = {
+		c = "Options",
+		name = "Ivan04",
+		sc = "Halo 3 NextBots",
+		id = "Halo_3_NextBots",
+		dv = 0,
+		d = "AI Spawns With Weapon Drawn",
+		cv = "halo_3_nextbots_ai_combat_ready"
+	},
+	
+	[16] = {
 		c = "Options", -- Category	
 		name = "Ivan04",
 		sc = "Halo 3 NextBots", -- Subcategory

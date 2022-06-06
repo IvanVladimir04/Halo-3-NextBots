@@ -477,7 +477,7 @@ function ENT:OnInitialize()
 	self.DisableCorpseShooting = GetConVar("halo_3_nextbots_ai_shootcorpses"):GetInt() == 1 or false
 	if self.PossibleWeapons then
 		local wep = table.Random(self.PossibleWeapons)
-		self:Give(wep,self.SpawnWithWeaponDrawn)
+		self:Give(wep,GetConVar("halo_3_nextbots_ai_combat_ready"):GetInt() == 1 or self.SpawnWithWeaponDrawn)
 	end
 	if self.EnableFlashlight then
 		if self:LookupAttachment("flashlight") != 0 then
@@ -1689,6 +1689,10 @@ function ENT:OnTraceAttack( info, dir, trace )
 	--print(behind)
 	if !self.IsInVehicle and self.AccumulatedDamage > self.DamageThreshold then
 		self.AccumulatedDamage = 0
+		if self.BloodDecal then
+			--print(dir)
+			util.Decal( self.BloodDecal, info:GetDamagePosition(), (info:GetDamagePosition())+self:GetUp()*-200, self )
+		end
 		if self.FlinchHitGroups[hg] then
 			local doflinch = false
 			local flinchanim
@@ -3474,6 +3478,9 @@ function ENT:DoKilledAnim()
 		self:Speak("dth_fall")
 		self:FinishDeadLanding()
 	elseif self.KilledDmgInfo:GetDamageType() != DMG_BLAST then
+		if self.BloodDecal then
+			util.Decal( self.BloodDecal, self.KilledDmgInfo:GetDamagePosition(), (self.KilledDmgInfo:GetDamagePosition())+self:GetUp()*-100, self )
+		end
 		if self.KilledDmgInfo:GetDamage() <= 150 then
 			self:Speak("OnDeath")
 			local anim = self:DetermineDeathAnim(self.KilledDmgInfo)
