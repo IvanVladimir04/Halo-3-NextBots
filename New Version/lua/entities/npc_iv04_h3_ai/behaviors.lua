@@ -46,7 +46,7 @@ function ENT:SpartanInitialize()
 	self.AllowVehicleFunctions = true
 end
 function ENT:MarineInitialize()
-	--self.BloodDecal = "Scorch"
+	self.BloodDecal = "iv04_halo_3_blood_splat_human"
 	self.AllowClimbing = true
 	self.AllowStealth = true
 	self.MoveSpeed = 90
@@ -225,6 +225,7 @@ end
 function ENT:DroneInitialize()
 end
 function ENT:HunterInitialize()
+	self.BloodDecal = "iv04_halo_3_blood_splat_hunter"
 	self.InstaKillImmune = true
 	self.DamageThreshold = math.huge -- Do this to disable flinching
 	self:SetSkin(self.Rank)

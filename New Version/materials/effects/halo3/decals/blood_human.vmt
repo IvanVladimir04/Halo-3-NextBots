@@ -1,11 +1,11 @@
 "DecalModulate"
 {
-	"$basetexture"	"effects/halo3/decals/blood_drone"
+	"$basetexture"	"effects/halo3/decals/blood_human"
 	"$decal" 1
-	"$decalscale" 	0.3
+	"$decalscale" 	0.25
 	"$translucent" 1
 	"$decalfadeduration" 60.00
 	"$decalfadetime" 0.00
-	"$color2"		"[2 2 2]"
+	"$color2"		"[1 0.5 0.35]"
 }
 
