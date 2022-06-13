@@ -1420,6 +1420,24 @@ end
 function ENT:EnforcerBehavior(ent,range)
 end
 function ENT:MonitorBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	ent = ent or self.Enemy
+	local mins, maxs = ent:GetCollisionBounds()
+	local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter()+ent:GetUp()*(maxs*0.25),{self,ent,self:GetOwner()})
+	if IsValid(obstr) then	
+		if ( ( obstr:IsNPC() or obstr:IsPlayer() or obstr:IsNextBot() ) and obstr:Health() > 0 ) and self:CheckRelationships(obstr) == "foe" then
+			ent = obstr
+			self:SetEnemy(ent)
+		end
+	end
+	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
+	if !self.DistToTarget then self.DistToTarget = range end
+	--print(los, !self.DoneMelee, range < self.MeleeRange^2, range, self.MeleeRange^2, math.sqrt(range), self.MeleeRange )
+	self:MeleeChecks(los,range)
+	self:DodgeChecks(ent,los)
+	self.HaltShoot = false
+	if !IsValid(ent) then return end
 end
 function ENT:ConstructorBehavior(ent,range)
 end
@@ -1449,11 +1467,6 @@ function ENT:FloodHumanBehavior(ent,range)
 	--print(los, !self.DoneMelee, range < self.MeleeRange^2, range, self.MeleeRange^2, math.sqrt(range), self.MeleeRange )
 	self:MeleeChecks(los,range)
 	self:DodgeChecks(ent,los)
-	if self.AllowGrenade and range < self.GrenadeRange^2 and range > (self.MeleeRange*2)^2 then
-		self.CanThrowGrenade = true
-	else
-		self.CanThrowGrenade = false
-	end
 	self.HaltShoot = false
 	if !IsValid(ent) then return end
 		if los then

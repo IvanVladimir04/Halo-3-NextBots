@@ -377,6 +377,7 @@ ENT.MaxShield = 60
 ENT.BloodType = DONT_BLEED
 
 ENT.AccumulatedDamage = 0 -- For flinching
+ENT.AccumulatedBleedDamage = 0 -- For bleeding
 ENT.DamageThreshold = 20
 ENT.FlinchDelay = 0 -- None
 
@@ -472,6 +473,7 @@ function ENT:OnInitialize()
 	--print(self.AITemplate,self.DoesntUseWeapons)
 	local func = self.TemplateInitialize[self.AITemplate]
 	func(self)
+	self.BleedThreshold = 25
 	self.AIType = GetConVar("halo_3_nextbots_ai_type"):GetString() or self.AIType
 	self.EnableFlashlight = GetConVar("halo_3_nextbots_ai_flashlights"):GetInt() == 1 or false
 	self.DisableCorpseShooting = GetConVar("halo_3_nextbots_ai_shootcorpses"):GetInt() == 1 or false
@@ -1675,6 +1677,15 @@ function ENT:OnTraceAttack( info, dir, trace )
 		info:ScaleDamage(3)
 	end
 	if self:Health() - info:GetDamage() <= 0 then self.DeathHitGroup = trace.HitGroup return end
+	self.AccumulatedBleedDamage = self.AccumulatedBleedDamage+info:GetDamage()
+	if self.AccumulatedBleedDamage > self.BleedThreshold then
+		self.AccumulatedBleedDamage = 0
+		--print(((self.HasArmor and self.Shield <= 0) or !self.HasArmor))
+		if self.BloodDecal and ((self.HasArmor and self.Shield <= 0) or !self.HasArmor) then
+			--print(dir)
+			util.Decal( self.BloodDecal, info:GetDamagePosition(), (info:GetDamagePosition())+self:GetUp()*-200, self )
+		end
+	end
 	if self.AnimBusy then return end
 	local hg = trace.HitGroup
 	--print(hg)
@@ -1689,10 +1700,6 @@ function ENT:OnTraceAttack( info, dir, trace )
 	--print(behind)
 	if !self.IsInVehicle and self.AccumulatedDamage > self.DamageThreshold then
 		self.AccumulatedDamage = 0
-		if self.BloodDecal then
-			--print(dir)
-			util.Decal( self.BloodDecal, info:GetDamagePosition(), (info:GetDamagePosition())+self:GetUp()*-200, self )
-		end
 		if self.FlinchHitGroups[hg] then
 			local doflinch = false
 			local flinchanim
@@ -2253,8 +2260,8 @@ function ENT:AdjustWeapon(wep,drawn)
 		wep:SetClip1(wep:GetMaxClip1())
 		if self.EnableFlashlight and self.AITemplate == "MARINE" then
 			self.Sprite = ents.Create("env_sprite")
-			self.Sprite:SetPos(self.Weapon:GetAttachment(1).Pos)
-			self.Sprite:SetParent(self.Weapon,1)
+			self.Sprite:SetPos(wep:GetAttachment(1).Pos)
+			self.Sprite:SetParent(wep,1)
 			self.Sprite:SetOwner(self)
 			self.Sprite:SetAngles(self:GetAngles()+Angle(0,90,0))
 			self.Sprite:SetColor(self.MonitorColor or Color( 255, 255, 255 ))
@@ -2585,12 +2592,13 @@ function ENT:OnInjured(dmg)
 		total = dm-self.Shield
 		if total < 0 then total = 0 end
 		if dmg:IsBulletDamage() then
-			dmg:SubtractDamage(self.Shield*2)
+			dmg:SubtractDamage(self.Shield*4)
 			self.Shield = self.Shield-math.abs(dm/4)
 		else
 			dmg:SubtractDamage(self.Shield)
 			self.Shield = self.Shield-math.abs(dm)
 		end
+		--print(self.Shield, "after")
 		if self.Shield <= 0 then 
 			--print("no more armor!")
 			self.Shield = 0 
@@ -3477,7 +3485,7 @@ function ENT:DoKilledAnim()
 	if self.FlyingDead then
 		self:Speak("dth_fall")
 		self:FinishDeadLanding()
-	elseif self.KilledDmgInfo:GetDamageType() != DMG_BLAST then
+	elseif !self.KilledDmgInfo:IsDamageType(DMG_BLAST) then
 		if self.BloodDecal then
 			util.Decal( self.BloodDecal, self.KilledDmgInfo:GetDamagePosition(), (self.KilledDmgInfo:GetDamagePosition())+self:GetUp()*-100, self )
 		end
