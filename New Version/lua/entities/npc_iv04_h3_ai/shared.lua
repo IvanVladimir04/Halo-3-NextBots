@@ -1460,9 +1460,11 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 		if (ent.IsVJBaseSNPC == true or ent.CPTBase_NPC == true or ent.IsSLVBaseNPC == true or ent:GetNWBool( "bZelusSNPC" ) == true) or (ent:IsNPC() && ent:GetClass() != "npc_bullseye" && ent:Health() > 0 ) or (ent:IsPlayer() and ent:Alive()) or ((ent:IsNextBot()) and ent != self ) then
 			local d = self:GetPos()-ent:GetPos()
 			self.loco:SetVelocity(d*5)
-		end
-		if (ent:GetClass() == "prop_door_rotating" or ent:GetClass() == "func_door" or ent:GetClass() == "func_door_rotating" ) then
+		elseif (ent:GetClass() == "prop_door_rotating" or ent:GetClass() == "func_door" or ent:GetClass() == "func_door_rotating" ) then
 			ent:Fire( "Open" )
+			self:DoMelee()
+		elseif ent:GetClass() == "func_breakable_surf" then
+			self:DoMelee()
 		end
 		if self.AllowVehicleFunctions and ent:IsVehicle() and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
 			self.SeenVehicles[ent] = true
@@ -1977,18 +1979,23 @@ self:GoToPosition(ent:GetPos(),self:TableRandom(self.RunAnim),self:GetRunSpeed()
 	end
 end	
 
-function ENT:FindNearbyPos(pos,dist)
+function ENT:FindNearbyPos(goal,dist)
 	local dist = dist or 512
-	local pos = pos or self:GetPos()
-	local dir = (self:GetPos()-pos):GetNormalized()
-	if pos == self:GetPos() then dir = self:GetForward() end
-	local navs = navmesh.Find( pos+(dir*(dist)), dist, 100, 10 )
+	local goal = goal or self:GetPos()
+	local dir = (self:GetPos()-goal):GetNormalized()
+	if goal == self:GetPos() then dir = self:GetForward() end
+	local navs = navmesh.Find( goal+(dir*(dist)), dist, 100, 10 )
 	local tbl = {}
-	if table.Count(navs) > 0 or #navs > 0 then
-		local area = table.Random(navs)
+	while (table.Count(navs) > 0 or #navs > 0) do
+		local area, id = table.Random(navs)
 		local pos
-		if area then pos = area:GetRandomPoint() end
-		return pos
+		if area and area:IsVisible( goal ) then 
+			pos = area:GetRandomPoint()
+			return pos
+		else
+			table.remove(navs,id)
+			coroutine.yield()
+		end
 	end
 	return self:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * math.random(256,500)
 end
@@ -2097,6 +2104,14 @@ end
 
 function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use the ent argument when calling this
 	if self.DisableMelee then return end
+	if !coroutine.running() then 
+		local func = function()
+			self:DoMelee(ent)
+		end
+		table.insert(self.StuffToRunInCoroutine,func)
+		self:ResetAI()
+		return
+	end
 	self:Speak(self.MeleeQuote)
 	local anim = self:TableRandom(self.MeleeAnim)
 	local turn

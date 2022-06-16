@@ -77,7 +77,24 @@ cvars.AddChangeCallback("halo_3_nextbots_ai_patrol", function(name, old, new)
 	IV04H3_AllowPatrol = GetConVar("halo_3_nextbots_ai_patrol"):GetInt() == 1
 end)
 
-
+--[[sound.Add( {
+	name = "HALO3_human.Step",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 80,
+	pitch = 100,
+	sound = {
+		"footsteps/concrete_h3/run/concrete_run1.wav",
+		"footsteps/concrete_h3/run/concrete_run2.wav",
+		"footsteps/concrete_h3/run/concrete_run3.wav",
+		"footsteps/concrete_h3/run/concrete_run4.wav",
+		"footsteps/concrete_h3/run/concrete_run5.wav",
+		"footsteps/concrete_h3/run/concrete_run6.wav",
+		"footsteps/concrete_h3/run/concrete_run7.wav",
+		"footsteps/concrete_h3/run/concrete_run8.wav",
+		"footsteps/concrete_h3/run/concrete_run9.wav"
+	}
+} )]]
 
 
 H3NBsTbl = {

@@ -1611,7 +1611,7 @@ function ENT:FollowingPlayerChecks()
 		self.LookTarget = self.FollowingPlayer
 		local dist = self:GetRangeSquaredTo(self.FollowingPlayer)
 		if dist > 500^2 then
-			local goal = self.FollowingPlayer:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
+			local goal = self.FollowingPlayer:GetPos()
 			local pos = self:FindNearbyPos(goal,200)
 			self:GoToPosition( (pos), self.RunCalmAnim[math.random(1,#self.RunCalmAnim)], self.MoveSpeed*self.MoveSpeedMultiplier, self.WanderToPos )	
 		end
