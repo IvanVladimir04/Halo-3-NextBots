@@ -1453,37 +1453,62 @@ end
 
 function ENT:OnContact( ent ) -- When we touch someBODY
 	if ent == game.GetWorld() then return self:OnTouchWorld(ent) end
+	--print(ent)
 	if !self.CollidedEntities[ent] then 
 		self.CollidedEntities[ent] = true
-		--print(ent)
-		timer.Simple( 1, function() if IsValid(self) then self.CollidedEntities[ent] = nil end end )
-		if (ent.IsVJBaseSNPC == true or ent.CPTBase_NPC == true or ent.IsSLVBaseNPC == true or ent:GetNWBool( "bZelusSNPC" ) == true) or (ent:IsNPC() && ent:GetClass() != "npc_bullseye" && ent:Health() > 0 ) or (ent:IsPlayer() and ent:Alive()) or ((ent:IsNextBot()) and ent != self ) then
-			local d = self:GetPos()-ent:GetPos()
-			self.loco:SetVelocity(d*5)
-		elseif (ent:GetClass() == "prop_door_rotating" or ent:GetClass() == "func_door" or ent:GetClass() == "func_door_rotating" ) then
-			ent:Fire( "Open" )
-			self:DoMelee()
-		elseif ent:GetClass() == "func_breakable_surf" then
-			self:DoMelee()
-		end
-		if self.AllowVehicleFunctions and ent:IsVehicle() and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
-			self.SeenVehicles[ent] = true
-			self.CountedVehicles = self.CountedVehicles+1
-			if !self.IsWeaponDrawn then
-				self:AdjustWeapon(self.Weapon,true)
-				local func = function()
-					self:PlaySequenceAndWait(self:TableRandom(self.DrawSlowWeaponAnim))
-				end
-				table.insert(self.StuffToRunInCoroutine,func)
-				self:ResetAI()
+		--print(ent,ent:GetInternalVariable( "parentname" ),ent:GetName())
+		--PrintTable(ent:GetKeyValues())
+		--PrintTable(ents.FindByName( "yyy_level_2_db_2a" ))
+		timer.Simple( 1, function() if IsValid(self) and IsValid(ent) then self.CollidedEntities[ent] = nil end end )
+		if self.FlyingDead then self.AlternateLanded = true return end 
+		if ent:GetClass() == "prop_dynamic" then
+			local name = ent:GetInternalVariable( "parentname" )
+			if name then
+				local ents = ents.FindByName( name )
+				local door = ents[1]
+				--print(door)
+				--PrintTable(door:GetKeyValues())
+				if IsValid(door) then
+					ent = door
+					self.CollidedEntities[door] = true
+					timer.Simple( 1, function() if IsValid(self) and IsValid(door) then	self.CollidedEntities[door] = nil end end )
+					end
 			end
 		end
-		if (self.ThingsToAvoid[ent:GetClass()]) then
-			local p = ent:GetPhysicsObject()
-			if IsValid(p) then
-				p:Wake()
-				local d = ent:GetPos()-self:GetPos()
-				p:SetVelocity(d*5)
+		if !self.AnimBusy then
+			local dir = (ent:WorldSpaceCenter()-self:WorldSpaceCenter()):GetNormalized()
+			if (ent.IsVJBaseSNPC == true or ent.CPTBase_NPC == true or ent.IsSLVBaseNPC == true or ent:GetNWBool( "bZelusSNPC" ) == true) or (ent:IsNPC() && ent:GetClass() != "npc_bullseye" && ent:Health() > 0 ) or (ent:IsPlayer() and ent:Alive()) or ((ent:IsNextBot()) and ent != self ) then
+				local d = self:GetPos()-ent:GetPos()
+				self.loco:SetVelocity(d*5)
+			elseif (ent:GetClass() == "prop_door_rotating" or ent:GetClass() == "func_door" or ent:GetClass() == "func_door_rotating" ) then
+				ent:Fire( "Open" )
+				self:SetAngles(Angle(0,dir:Angle().y,0))
+				self:DoMelee()
+			elseif ent:GetClass() == "func_breakable_surf" then
+				self:SetAngles(Angle(0,dir:Angle().y,0))
+				self:DoMelee()
+			end
+			if self.AllowVehicleFunctions and ent:IsVehicle() and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
+				self.SeenVehicles[ent] = true
+				self.CountedVehicles = self.CountedVehicles+1
+				if !self.IsWeaponDrawn then
+					self:AdjustWeapon(self.Weapon,true)
+					local func = function()
+						self:PlaySequenceAndWait(self:TableRandom(self.DrawSlowWeaponAnim))
+					end
+					table.insert(self.StuffToRunInCoroutine,func)
+					self:ResetAI()
+				end
+			end
+			if (self.ThingsToAvoid[ent:GetClass()]) then
+				self:SetAngles(Angle(0,dir:Angle().y,0))
+				self:DoMelee()
+				local p = ent:GetPhysicsObject()
+				if IsValid(p) then
+					p:Wake()
+					local d = ent:GetPos()-self:GetPos()
+					p:SetVelocity(d*5)
+				end
 			end
 		end
 		local tbl = {
@@ -1540,12 +1565,17 @@ function ENT:ReactToTrade(wep)
 end
 
 function ENT:Use( activator )
+	--print(1)
 	if !self.CanUse then return end
+	--print(2)
 	if self:CheckRelationships(activator) == "friend" and activator:IsPlayer() then
 		local ply = activator
+		--print(3)
 		if ply:KeyDown(IN_WALK) then
+			--print(4)
 			self.IsFollowingPlayer = !self.IsFollowingPlayer
 			if !IsValid(self.FollowingPlayer) then
+				--print(5)
 				self.FollowingPlayer = ply
 				self:SetNWInt("optredisp",1)
 				self:Speak("hail")
@@ -2384,6 +2414,46 @@ function ENT:IsWeaponUser()
 	return (IsValid(self.Weapon) or istable(self.PossibleWeapons))
 end
 
+-- Squad stuff
+
+function ENT:PossibleTargets()
+	local tbl = self.RegisteredTargets
+	local targets = {}
+	local registered = {}
+	for ent, bool in pairs(tbl) do
+		if IsValid(ent) and ent != self then
+			targets[#targets+1] = ent
+			registered[ent] = true
+		else
+			self.RegisteredTargets[ent] = nil
+		end
+	end
+	if self:GetSquad() then
+		for v, bool in pairs(self:GetSquad():GetValidTargets(self)) do
+			if !registered[v] then
+				targets[#targets+1] = v
+				registered[v] = true
+			end
+		end
+	end
+	return targets
+end
+
+function ENT:GetATarget(checkdist) -- checkdist will start searching for enemies again
+	local proceed = true
+	proceed = (checkdist and !self:SearchEnemy()) or !checkdist
+	--print(proceed)
+	if proceed then -- set it to false for making the process faster
+		for id, ent in pairs(self:PossibleTargets()) do -- but may make nextbots look
+			if IsValid(ent) then -- dumber sometimes, use wisely
+				self:SetEnemy(ent)
+				return ent
+			end
+		end
+	end
+end
+
+
 function ENT:GrenadeSignalChecks()
 	if !self:IsWeaponUser() or !AllowedH3Squads[self.Faction] then return end
 	if math.random(100) >= self.GrenadeSignalChance then
@@ -2409,7 +2479,7 @@ function ENT:GrenadeSignalChecks()
 				H3ES:Signal("ThrowAllGrenades",self)
 				self:Speak("ordr_grenade_all")
 			end
-		elseif self.CustomSquad then
+		else
 			self:CustomSquadHandling("GrenadeSignal")
 		end
 	end
@@ -2428,7 +2498,7 @@ function ENT:GetSquad()
 		return H3ES
 	elseif self.Faction == "FACTION_FLOOD" then
 		return H3FS
-	elseif self.CustomSquad then
+	else
 		return CustomH3Squads[self.Faction]
 	end
 end
@@ -2455,7 +2525,13 @@ function ENT:CustomSquadHandling() -- For custom factions supporting the squads 
 		]]
 end
 
+-- Squad Stuff
+
 function ENT:OnHaveEnemy(ent)
+	if self:GetSquad() then
+		--print(self:GetSquad(),self:PossibleTargets())
+		self:GetSquad():SortValidTargets(self:PossibleTargets())
+	end
 	if self.AllowStealth and !self.DoneStealth and self:IsUndetected() then		
 		self.HaltShoot = true
 	end
@@ -2514,7 +2590,6 @@ function ENT:OnHaveEnemy(ent)
 		end
 	else
 		self:GrenadeSignalChecks()
-		self:AlertAllies(ent)
 		if !self.IsInVehicle then
 			if !self.DidAlertAnim then
 				if !self.BeenSurprised and math.random(1,3) == 1 then
@@ -2558,6 +2633,7 @@ function ENT:OnHaveEnemy(ent)
 			self:ResetAI()
 		end
 	end
+	self:AlertAllies(ent)
 end
 
 function ENT:IsOutNumbered()
@@ -3143,6 +3219,9 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 		if IV04_AIDisabled then
 			return "Disabled thinking"
 		end
+		--if IsValid(path:GetHindrance()) then
+		--	print(path:GetHindrance(), CurTime())
+		--end
 		--print(self:GetActivity())
 		if self.UpdateTime < CurTime() then
 			if self.AllowClimbing then
@@ -3174,7 +3253,10 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 			end
 			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
 				-- We are stuck, don't bother
-				return "Give up"
+				--return "Give up"
+				--print("stuck?",self.LastLocoVel)
+				self.loco:SetVelocity(((-self.LastLocoVel:GetNormalized())+self:GetRight())*self.MoveSpeed or -self:GetForward()*10)
+				coroutine.yield()
 			end
 			if options.callback then
 				options.callback()
@@ -3226,7 +3308,10 @@ function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight w
 			if found then return "Found an enemy" end
 			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
 				-- We are stuck, don't bother
-				return "Give up"
+				--return "Give up"
+				--print("stuck?",self.LastLocoVel)
+				self.loco:SetVelocity(((-self.LastLocoVel:GetNormalized())+self:GetRight())*self.MoveSpeed or -self:GetForward()*10)
+				coroutine.yield()
 			end
 			self.UpdateTime = CurTime()+self.MoveUpdateTime
 		end
@@ -3574,7 +3659,7 @@ function ENT:DoKilledAnim()
 		self:SetAngles(Angle(0,dir:Angle().y,0))
 		self.loco:Jump()
 		self.loco:SetVelocity(dir*force)
-		coroutine.wait(0.5)
+		coroutine.wait(0.25)
 		self:FinishDeadLanding()
 	end
 end
@@ -3605,6 +3690,7 @@ end
 function ENT:BodyUpdate()
 	local act = self:GetActivity()
 	if !self.loco:GetVelocity():IsZero() and self.loco:IsOnGround() and self.loco:IsAttemptingToMove() then
+		self.LastLocoVel = self.loco:GetVelocity() -- Last direction we are heading towards that works
 		if self.AllowSounds["Footstep"] then
 			if !self.LMove then
 				self.LMove = CurTime()+0.3

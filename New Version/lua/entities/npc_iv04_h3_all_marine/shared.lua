@@ -26,8 +26,6 @@ ENT.PossibleWeapons = {
 	"astw2_halo3_battlerifle",
 	"astw2_halo3_smg",
 	"astw2_halo3_smg",
-	"astw2_halo3_smg",
-	"astw2_halo3_smg",
 	"astw2_halo3_shotgun",
 	"astw2_halo3_magnum"
 	--[["astw2_haloreach_rocket_launcher",

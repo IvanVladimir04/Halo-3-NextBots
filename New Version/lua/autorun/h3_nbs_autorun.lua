@@ -112,7 +112,9 @@ if SERVER then
 	AllowedH3Squads = {
 		["FACTION_ALLIANCE"] = true,
 		["FACTION_COVENANT"] = true,
-		["FACTION_SEPARATISTS"] = true
+		["FACTION_SEPARATISTS"] = true,
+		["FACTION_FLOOD"] = true,
+		["FACTION_HUNTERS"] = true
 	}
 	
 	CustomH3Squads = {
@@ -122,6 +124,8 @@ if SERVER then
 	H3S = {} -- Halo 3 Squads
 	
 	H3S.Members = {}
+	
+	H3S.ValidTargets = {}
 	
 	H3S.Signals = {
 		--["Retreat"] = true
@@ -134,6 +138,35 @@ if SERVER then
 	H3S.SignalCaller = {
 		-- ["EntityHere"] = true
 	}
+	
+	function H3S:SortValidTargets(newtargets)
+		if !newtargets then return end
+		for id, v in pairs(newtargets) do
+			if IsValid(v) and v:Health() > 0 then
+				self.ValidTargets[v] = true
+			else
+				self.ValidTargets[v] = nil
+			end
+		end
+	end
+	
+	function H3S:GetValidTargets(caller)
+		local targets = {}
+		for v, bool in pairs(self.ValidTargets) do
+			if IsValid(v) and v:Health() > 0 then
+				if IsValid(caller) and caller.IV04NextBot then
+					if caller:CheckRelationships(v) == "foe" then
+						targets[v] = true
+					end
+				else
+					targets[v] = true
+				end
+			else
+				self.ValidTargets[v] = nil
+			end
+		end
+		return targets
+	end
 	
 	function H3S:AddMember(ent)
 		self.Members[ent] = true
@@ -181,6 +214,8 @@ if SERVER then
 	H3ES = H3S -- Halo 3 Elite Squads
 	
 	H3FS = H3S -- Halo 3 Flood Squads
+	
+	CustomH3Squads["FACTION_HUNTERS"] = H3S
 	
 	hook.Add("IV04NextBotSpawned","SquadManager", function(ent)
 		--print("The hook is running")

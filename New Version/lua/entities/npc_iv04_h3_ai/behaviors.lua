@@ -306,6 +306,7 @@ function ENT:FloodHumanInitialize()
 		[4] = "models/halo_3/characters/flood/gibs/human_combat_form/gib_left_arm.mdl",
 		[5] = "models/halo_3/characters/flood/gibs/human_combat_form/gib_right_arm.mdl"
 	}
+	self.AttractAlliesRange = math.huge
 end
 function ENT:FloodEliteInitialize()
 end
@@ -1576,6 +1577,7 @@ function ENT:DoIdle()
 			self:SearchEnemy()
 		end
 	else
+		self:GetATarget()
 		if self.PosingAnims and math.random(1,5) == 1 then
 			local seq = self.PosingAnims
 			self:DoAnimation(seq,false,true)
@@ -1613,7 +1615,9 @@ function ENT:FollowingPlayerChecks()
 		if dist > 500^2 then
 			local goal = self.FollowingPlayer:GetPos()
 			local pos = self:FindNearbyPos(goal,200)
+			self.LookTarget = nil
 			self:GoToPosition( (pos), self.RunCalmAnim[math.random(1,#self.RunCalmAnim)], self.MoveSpeed*self.MoveSpeedMultiplier, self.WanderToPos )	
+			self.LookTarget = self.FollowingPlayer
 		end
 	end
 end
