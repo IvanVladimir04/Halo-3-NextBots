@@ -1379,6 +1379,62 @@ function ENT:SetupAnimations()
 				self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_Hammer_idle_2_crouch_walk"
 			end
 		end
+		if self.ItsBerserkinTime then -- Berserk guy or something Idk
+			if self.AITemplate == "BRUTE" then
+				self.TransitionAnims["Idle_2_Move"] = "Berserk_2_Any_Move"
+				self.TransitionAnims["Move_2_Idle"] = "Berserk_Unarmed_Move_2_Any_Idle"
+				if self.IsArmored then
+					if self.BruteWeapons[self.Weapon:GetClass()] then
+						self.BerserkStartAnim = {"Berserk_Armored_Pistol"}
+					else
+						self.BerserkStartAnim = {"Berserk_Armored_Rifle_1","Berserk_Armored_Rifle_2"}
+					end
+				else
+					if self.BruteWeapons[self.Weapon:GetClass()] then
+						self.BerserkStartAnim = {"Berserk_Combat_Pistol_1"}
+					else
+						self.BerserkStartAnim = {"Berserk_Combat_Rifle_1","Berserk_Combat_Rifle_2"}
+					end
+				end
+				self.IdleAnim = {"Berserk_Unarmed_Idle_Down"}
+				self.BerserkEndAnim = {"Berserk_To_Armored_Idle_1","Berserk_To_Armored_Idle_2"}
+				self.DiveLeftAnim = "Dive_Left_Berserk_Unarmed"
+				self.DiveRightAnim = "Dive_Right_Berserk_Unarmed"
+				self.DiveFrontAnim = "Dive_Front_Berserk_Unarmed"
+				self.EvadeLeftAnim = "Evade_Left_Berserk_Unarmed"
+				self.EvadeRightAnim = "Evade_Right_Berserk_Unarmed"
+				self.FlinchFrontAnims = {
+					["Chest"] = "Flinch_Berserk_Unarmed_Front_Chest",
+					["Gut"] = "Flinch_Berserk_Unarmed_Front_Gut",
+					["Head"] = "Flinch_Berserk_Unarmed_Front_Head",
+					["Left_Arm"] = "Flinch_Berserk_Unarmed_Front_Left_Arm",
+					["Right_Arm"] = "Flinch_Berserk_Unarmed_Front_Right_Arm",
+					["Left_Leg"] = "Flinch_Berserk_Unarmed_Front_Left_Leg",
+					["Right_Leg"] = "Flinch_Berserk_Unarmed_Front_Right_Leg"
+				}
+				self.FlinchBackAnims = {
+					["Chest"] = "Flinch_Berserk_Unarmed_Back_Chest",
+					["Gut"] = "Flinch_Berserk_Unarmed_Back_Gut"
+				}
+				self.PingFrontAnims = {
+					["Chest"] = "Pinged_Berserk_Unarmed_Front_Chest",
+					["Gut"] = "Pinged_Berserk_Unarmed_Front_Gut",
+					["Head"] = "Pinged_Berserk_Unarmed_Front_Head",
+					["Left_Arm"] = "Pinged_Berserk_Unarmed_Front_Left_Arm",
+					["Right_Arm"] = "Pinged_Berserk_Unarmed_Front_Right_Arm"
+				}
+				self.PingBackAnims = {
+					["Chest"] = "Pinged_Berserk_Unarmed_Back_Chest",
+					["Gut"] = "Pinged_Berserk_Unarmed_Back_Gut"
+				}
+				self.LandAnim = "Land_Soft_Berserk_Unarmed"
+				self.MeleeAnim = {"Melee_Berserk_Unarmed_1","Melee_Berserk_Unarmed_2"}
+				self.MeleeTackleAnim = "Melee_Berserk_Unarmed_Tackle"
+				self.RunAnim = {"Move_Berserk_Unarmed_Down"}
+			else
+				self.BerserkStartAnim = {"Berserk_Combat_Pistol"}
+			end
+		end
 	else
 		if self.DoesntUseWeapons then
 			self.IdleCalmAnim = {"combat_idle"}
@@ -1501,8 +1557,15 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 				end
 			end
 			if (self.ThingsToAvoid[ent:GetClass()]) then
-				self:SetAngles(Angle(0,dir:Angle().y,0))
-				self:DoMelee()
+				if !self.AnimBusy then
+					self:SetAngles(Angle(0,dir:Angle().y,0))
+					self:DoMelee()
+					timer.Simple( 0.7, function()
+						if IsValid(self) and IsValid(ent) then
+							ent:TakeDamage(self.MeleeDamage,self,self)
+						end
+					end )
+				end
 				local p = ent:GetPhysicsObject()
 				if IsValid(p) then
 					p:Wake()
@@ -2202,7 +2265,7 @@ end
 function ENT:DoMeleeDamage(back) -- No arguments needed, everything is defined on the variables
 	local damage = self.MeleeDamage
 	local dir = !back and self:GetForward() or -self:GetForward()
-	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter()+self:GetUp()*20+dir*-20, self:GetForward(), self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
+	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter()+(self:GetUp()*20+dir*-20), dir, self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
 		if v != self and self:CheckRelationships(v) != "friend" then
 			--print(v)
 			--v:EmitSound( self.OnMeleeSoundTbl[math.random(1,#self.OnMeleeSoundTbl)] )
@@ -2233,6 +2296,7 @@ end
 function ENT:MeleeChecks(los,range)
 	--print(los,range)
 	if self.DisableMelee then return end
+	--print(los,!self.DoneMelee,range < self.MeleeRange^2)
 	if los and !self.DoneMelee and range < self.MeleeRange^2 then
 		self:DoMelee()
 	end
@@ -2296,6 +2360,12 @@ function ENT:AdjustWeapon(wep,drawn)
 	local id = self:LookupAttachment(att)
 	local pos = self:GetAttachment(id).Pos
 	wep:SetPos(pos)
+	print(drawn)
+	if !drawn then
+		wep:SetParent(nil)
+		wep:Fire("ClearParent")
+		wep:RemoveEffects(EF_BONEMERGE)
+	end
 	wep:SetParent(self,id)
 	wep:Fire("setparentattachment", att)
 	self.IsWeaponDrawn = drawn
@@ -2318,7 +2388,6 @@ function ENT:AdjustWeapon(wep,drawn)
 			self.Sprite:Spawn()
 			self.Sprite:Activate()
 		end
-	else
 	end
 end
 
@@ -2580,7 +2649,7 @@ function ENT:OnHaveEnemy(ent)
 				end )
 			end
 		end
-		if (self.PossibleWeapons or IsValid(self.Weapon)) and !self.IsWeaponDrawn then
+		if (self.PossibleWeapons or IsValid(self.Weapon)) and !self.IsWeaponDrawn and !self.ItsBerserkinTime then
 			self:AdjustWeapon(self.Weapon,true)
 			local func = function()
 				self:PlaySequenceAndWait(self:TableRandom(self.DrawFastWeaponAnim))
@@ -2921,7 +2990,7 @@ function ENT:OnOtherKilled( victim, info )
 				else
 					self:Speak("lmnt_deadally")
 				end
-			elseif attacker:IsPlayer() and !self.FriendlyToPlayers then
+			elseif attacker:IsPlayer() and !self.FriendlyToPlayers and self.NoticedKills > 0 then
 				--self:Speak("FriendKilledByEnemyPlayer")
 				self.LastAllyKill = CurTime()
 				local last = self.LastAllyKill
@@ -2937,42 +3006,55 @@ function ENT:OnOtherKilled( victim, info )
 				end )
 			else
 				if self.SawAlliesDie then
-					local AI = self.AIType
-					self.AIType = "Defensive"
-					local func = function()
-						if self.IsSergeant and !self.IsInVehicle then
-							self:Speak("newordr_fallback")
-							self:GetSquad():Signal("Retreat",self)
-							self:PlaySequenceAndMove(self:LookupSequence(self.FallbackAnim),1,self:GetForward()*-1,50,0.7)
-						else
-							--print(HRHS:WasSignalGiven("Retreat",3))
-							if !self.FollowingRetreatOrder and self:GetSquad():WasSignalGiven("Retreat",3) and IsValid(self:GetSquad():GetCaller("Retreat")) and (!IsValid(self:GetSquad():GetCaller("Retreat").S1) or !IsValid(self:GetSquad():GetCaller("Retreat").S2) ) then
-								local leader = self:GetSquad():GetCaller("Retreat")
-								local goal = leader:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
-								local navs = navmesh.Find(goal,256,100,20)
-								local nav = navs[math.random(#navs)]
-								local pos = goal
-								if nav then pos = nav:GetRandomPoint() end
-								self.FollowingRetreatOrder = true
-								if IsValid(leader.S1) then leader.S2 = self else leader.S1 = self end
-								timer.Simple( math.random(4,10), function() if IsValid(self) then self.FollowingRetreatOrder = false end end )
-								self:MoveToPosition( pos, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
-								if leader.S1 == self then leader.S1 = nil elseif leader.S2 == self then leader.S2 = nil end
+					if self.AllowBerserk then
+						self.ItsBerserkinTime = true
+						self.HasMeleeWeapon = true
+						self.MoveSpeedMultiplier = self.MoveSpeedMultiplier*1.75
+						self:SetupAnimations()
+						local func = function()
+							self:AdjustWeapon(self.Weapon,false)
+							self:PlaySequenceAndPWait( self:TableRandom(self.BerserkStartAnim) )
+						end
+						table.insert(self.StuffToRunInCoroutine,func)
+						self:ResetAI()
+					else
+						local AI = self.AIType
+						self.AIType = "Defensive"
+						local func = function()
+							if self.IsSergeant and !self.IsInVehicle then
+								self:Speak("newordr_fallback")
+								self:GetSquad():Signal("Retreat",self)
+								self:PlaySequenceAndMove(self:LookupSequence(self.FallbackAnim),1,self:GetForward()*-1,50,0.7)
+							else
+								--print(HRHS:WasSignalGiven("Retreat",3))
+								if !self.FollowingRetreatOrder and self:GetSquad():WasSignalGiven("Retreat",3) and IsValid(self:GetSquad():GetCaller("Retreat")) and (!IsValid(self:GetSquad():GetCaller("Retreat").S1) or !IsValid(self:GetSquad():GetCaller("Retreat").S2) ) then
+									local leader = self:GetSquad():GetCaller("Retreat")
+									local goal = leader:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
+									local navs = navmesh.Find(goal,256,100,20)
+									local nav = navs[math.random(#navs)]
+									local pos = goal
+									if nav then pos = nav:GetRandomPoint() end
+									self.FollowingRetreatOrder = true
+									if IsValid(leader.S1) then leader.S2 = self else leader.S1 = self end
+									timer.Simple( math.random(4,10), function() if IsValid(self) then self.FollowingRetreatOrder = false end end )
+									self:MoveToPosition( pos, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+									if leader.S1 == self then leader.S1 = nil elseif leader.S2 == self then leader.S2 = nil end
+								end
 							end
 						end
+						timer.Simple( math.random(20,30), function()
+							if IsValid(self) then
+								self.AIType = AI
+							end
+						end )
+						table.insert(self.StuffToRunInCoroutine,func)
+						self:ResetAI()
 					end
-					timer.Simple( math.random(20,30), function()
-						if IsValid(self) then
-							self.AIType = AI
-						end
-					end )
-					table.insert(self.StuffToRunInCoroutine,func)
-					self:ResetAI()
 				else
 					if victim:IsPlayer() then
 						self:Speak("lmnt_deadplr_mc")
+					--self:Speak("NearMassacre")
 					end
-				--self:Speak("NearMassacre")
 				end
 			end
 		end

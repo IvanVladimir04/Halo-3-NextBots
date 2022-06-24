@@ -18,8 +18,8 @@ ENT.Rank = 1
 
 ENT.PossibleWeapons = {
 	"astw2_halo3_spiker",
-	"astw2_halo3_plasmarifle_brute",
-	"astw2_halo3_plasmarifle",
+	--"astw2_halo3_plasmarifle_brute",
+	--"astw2_halo3_plasmarifle",
 	"astw2_halo3_spiker"
 }
 

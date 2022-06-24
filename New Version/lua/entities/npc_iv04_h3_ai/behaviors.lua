@@ -99,6 +99,8 @@ function ENT:EliteInitialize()
 	self.AllowVehicleFunctions = true
 end
 function ENT:BruteInitialize()
+	self.DisableLeap = true
+	self.AllowBerserk = true
 	self.AllowClimbing = true
 	self.HasArmor = true
 	self.IsArmored = true
@@ -214,6 +216,7 @@ function ENT:BruteInitialize()
 				self:SetBodygroup(2,5)
 				self:SetBodygroup(3,5)
 				self:SetBodygroup(4,5)
+				self.DisableLeap = false
 			end
 		end
 	end
@@ -600,7 +603,7 @@ function ENT:BruteThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee and !self.HasMeleeWeapon then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee and !self.HasMeleeWeapon and !self.ItsBerserkinTime then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -1294,7 +1297,7 @@ function ENT:BruteBehavior(ent,range)
 	end
 	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
 	if !self.DistToTarget then self.DistToTarget = range end
-	if IsValid(ent) and !self.IsWeaponDrawn then self:AdjustWeapon(self.Weapon,true) end
+	if IsValid(ent) and !self.IsWeaponDrawn and !self.ItsBerserkinTime then self:AdjustWeapon(self.Weapon,true) end
 	local can, veh = self:CanEnterAVehicle()
 	if can then
 		self:EnterVehicle(veh)
@@ -1320,7 +1323,7 @@ function ENT:BruteBehavior(ent,range)
 			end
 			if !IsValid(ent) then return end
 			if self.HasMeleeWeapon then
-				if range > 512^2 and range < 1200^2 then
+				if range > 512^2 and range < 1200^2 and !self.DisableLeap then
 					self:PlaySequenceAndWait(self.LeapAnim)
 					self.Leaping = true
 					self.loco:JumpAcrossGap(ent:GetPos(),self:GetForward())
@@ -1328,7 +1331,7 @@ function ENT:BruteBehavior(ent,range)
 				else
 					self.PathGoalTolerance = 100
 					self:Speak("kamikaze")
-					self:MoveToPosition( ent:GetPos(), self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
+					self:MoveToPosition( ent:GetPos(), self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
 					self.PathGoalTolerance = 40
 				end
 			else
