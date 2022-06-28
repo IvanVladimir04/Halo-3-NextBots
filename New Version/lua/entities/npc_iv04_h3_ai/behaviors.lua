@@ -907,7 +907,7 @@ function ENT:SpartanBehavior(ent,range)
 			if p == ent:GetPos() then rang = self.DistToTarget/2 end
 			local pos = self:FindNearbyPos(p,rang)
 			local wait = math.Rand(0.5,1)
-			local anim = self.RunAnim[math.random(#self.RunAnim)]
+			local anim = self:TableRandom(self.RunAnim)
 			local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
 			--print(anim,speed)
 			self:MoveToPosition( pos, anim, speed )
@@ -924,7 +924,7 @@ function ENT:SpartanBehavior(ent,range)
 			end
 			ent.BeingChased = true
 			self:SetEnemy(nil)
-			self:WanderToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,false)
+			self:WanderToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,false)
 			if !IsValid(self.Enemy) then 
 				self:Speak("invsgt_fail") 
 			end
@@ -1088,7 +1088,7 @@ function ENT:MarineBehavior(ent,range)
 				local wait = math.Rand(0.5,1)
 				local r = math.random(1,3)
 				local walk = (r == 1 and range < 600^2)
-				local anim = walk and self.WalkAnim[math.random(#self.WalkAnim)] or self.RunAnim[math.random(#self.RunAnim)]
+				local anim = walk and self.WalkAnim[math.random(#self.WalkAnim)] or self:TableRandom(self.RunAnim)
 				local speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
 				--print(anim,speed)
 				self:MoveToPosition( pos, anim, speed )
@@ -1105,7 +1105,7 @@ function ENT:MarineBehavior(ent,range)
 				end
 				ent.BeingChased = true
 				self:SetEnemy(nil)
-				self:WanderToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,false)
+				self:WanderToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,false)
 				if !IsValid(self.Enemy) then 
 					self:Speak("invsgt_fail") 
 				end
@@ -1245,7 +1245,7 @@ function ENT:EliteBehavior(ent,range)
 			--print(self:IsOutNumbered())
 			if self.HasMeleeWeapon then
 				self.PathGoalTolerance = 100
-				self:MoveToPosition( ent:GetPos(), self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
+				self:MoveToPosition( ent:GetPos(), self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end } )
 				self.PathGoalTolerance = 40
 			else
 				if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
@@ -1253,7 +1253,7 @@ function ENT:EliteBehavior(ent,range)
 				if p == ent:GetPos() then rang = self.DistToTarget/2 end
 				local pos = self:FindNearbyPos(p,rang)
 				local wait = math.Rand(0.5,1)
-				local anim = self.RunAnim[math.random(#self.RunAnim)]
+				local anim = self:TableRandom(self.RunAnim)
 				local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
 				--print(anim,speed)
 				self:MoveToPosition( pos, anim, speed )
@@ -1271,7 +1271,7 @@ function ENT:EliteBehavior(ent,range)
 			end
 			ent.BeingChased = true
 			self:SetEnemy(nil)
-			self:WanderToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,false)
+			self:WanderToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,false)
 			if !IsValid(self.Enemy) then 
 				self:Speak("invsgt_fail") 
 			end
@@ -1329,37 +1329,40 @@ function ENT:BruteBehavior(ent,range)
 					self.loco:JumpAcrossGap(ent:GetPos(),self:GetForward())
 					return
 				else
-					self.PathGoalTolerance = 100
-					self:Speak("kamikaze")
-					self:MoveToPosition( ent:GetPos(), self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
-					self.PathGoalTolerance = 40
+					--self.PathGoalTolerance = 100
+					self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { repath = 0.5 , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end } )
+					--self.PathGoalTolerance = 40
 				end
 			else
 				local p
 				if math.random(1,2) == 1 then p = ent:GetPos() end
 				local pos = self:FindNearbyPos()
 				local wait = math.Rand(0.5,1)
-				local anim = self.RunAnim[math.random(#self.RunAnim)]
+				local anim = self:TableRandom(self.RunAnim)
 				local speed = self.MoveSpeed*self.MoveSpeedMultiplier
 				--print(anim,speed)
 				self:GoToPosition( pos, anim, speed )
 				coroutine.wait(wait)
 			end
 		else
-			if ent.BeingChased then
-				self:Speak("join_invsgt")
+			if self.HasMeleeWeapon then
+				self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { repath = 0.5 , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end } )
 			else
-				if self.IsSergeant and math.random(1,2) == 1 then
-					self:Speak("ordr_invsgt")
+				if ent.BeingChased then
+					self:Speak("join_invsgt")
 				else
-					self:Speak("invsgt")	
+					if self.IsSergeant and math.random(1,2) == 1 then
+						self:Speak("ordr_invsgt")
+					else
+						self:Speak("invsgt")	
+					end
 				end
-			end
-			ent.BeingChased = true
-			self:SetEnemy(nil)
-			self:GoToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
-			if !IsValid(self.Enemy) then 
-				self:Speak("invsgt_fail") 
+				ent.BeingChased = true
+				self:SetEnemy(nil)
+				self:GoToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
+				if !IsValid(self.Enemy) then 
+					self:Speak("invsgt_fail") 
+				end
 			end
 		end
 end
@@ -1383,13 +1386,13 @@ function ENT:HunterBehavior(ent,range)
 	self:MeleeChecks(los,range)
 	if los then
 		if range < 512 and math.random(1,2) == 1 then
-			self:MoveToPosition( ent:GetPos(),  self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+			self:MoveToPosition( ent:GetPos(),  self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier )
 		else
 			if math.random(1,4) == 1 then p = ent:GetPos() end
 			local pos = self:FindNearbyPos(p,math.random(256,256))
 			local wait = math.Rand(0.5,1)
 			local r = math.random(1,3)
-			local anim = r == 1 and self.RunAnim[math.random(#self.RunAnim)] or self.CrouchMoveAnim[math.random(#self.CrouchMoveAnim)]
+			local anim = r == 1 and self:TableRandom(self.RunAnim) or self.CrouchMoveAnim[math.random(#self.CrouchMoveAnim)]
 			local speed = r == 1 and self.MoveSpeed*self.MoveSpeedMultiplier or self.MoveSpeed
 			--print(anim,speed)
 			self:MoveToPosition( pos, anim, speed )
@@ -1408,7 +1411,7 @@ function ENT:HunterBehavior(ent,range)
 		end
 		if math.random(1,2) == 1 then
 			ent.BeingChased = true
-			self:GoToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
+			self:GoToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
 		end
 		self:SetEnemy(nil)
 	end
@@ -1490,7 +1493,7 @@ function ENT:FloodHumanBehavior(ent,range)
 				else
 					self.PathGoalTolerance = 100
 					--self:Speak("kamikaze")
-					self:MoveToPosition( ent:GetPos(), self.RunAnim[math.random(#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
+					self:MoveToPosition( ent:GetPos(), self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
 					self.PathGoalTolerance = 40
 				end
 			else]]
@@ -1528,7 +1531,7 @@ function ENT:FloodHumanBehavior(ent,range)
 			end
 			ent.BeingChased = true
 			self:SetEnemy(nil)
-			self:GoToPosition(self.RegisteredTargetPositions[ent],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
+			self:GoToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
 			if !IsValid(self.Enemy) then 
 				self:Speak("invsgt_fail") 
 			end
@@ -1619,7 +1622,8 @@ function ENT:FollowingPlayerChecks()
 			local goal = self.FollowingPlayer:GetPos()
 			local pos = self:FindNearbyPos(goal,200)
 			self.LookTarget = nil
-			self:GoToPosition( (pos), self.RunCalmAnim[math.random(1,#self.RunCalmAnim)], self.MoveSpeed*self.MoveSpeedMultiplier, self.WanderToPos )	
+			local anim = IsValid(self.Enemy) and self.RunAnim or self.RunCalmAnim
+			self:GoToPosition( (pos), self:TableRandom(anim), self.MoveSpeed*self.MoveSpeedMultiplier, self.WanderToPos )	
 			self.LookTarget = self.FollowingPlayer
 		end
 	end

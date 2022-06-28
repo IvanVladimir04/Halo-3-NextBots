@@ -844,6 +844,9 @@ function ENT:SetupAnimations()
 						self.MeleeAnim = {"Melee_Combat_Pistol_1"}
 						self.MeleeBackAnim = {"Melee_Back_Combat_Pistol"}
 					end
+					self.DeathBackAnims = {
+						["Head"] = {"Die_Back_Head"}
+					}
 				elseif self.AITemplate == "SPARTAN" then
 					self.PatrolIdleAnim = {"Combat_Pistol_Idle_Down"}
 					self.PatrolMoveAnim = {"Walk_Combat_Pistol_Down"}
@@ -987,6 +990,9 @@ function ENT:SetupAnimations()
 					self.MeleeAnim = {"Melee_Combat_Rifle_1"}
 					self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
 					self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle"}
+					self.DeathBackAnims = {
+						["Head"] = {"Die_Back_Head"}
+					}
 				elseif self.AITemplate == "SPARTAN" then
 					self.PatrolIdleAnim = {"Combat_Rifle_Idle_Down"}
 					self.PatrolMoveAnim = {"Walk_Combat_Rifle_Down"}
@@ -1182,6 +1188,9 @@ function ENT:SetupAnimations()
 				self.DiveLeftAnim = "dive_left_combat_unarmed"
 				self.DiveRightAnim = "dive_right_combat_unarmed"
 				self.FallbackAnim = "signal_fallback_combat_support"
+				self.DeathBackAnims = {
+					["Head"] = {"Die_Back_Head"}
+				}
 				if self.AITemplate == "SPARTAN" then
 					self.PatrolIdleAnim = {"combat_support_idle_up"}
 					self.GrenadeAnim = {"Throw_Grenade_Combat_Support"}
@@ -1357,6 +1366,9 @@ function ENT:SetupAnimations()
 					self.MeleeFromWeapon = true
 					self.MeleeAnim = {"Melee_Combat_Hammer_1","Melee_Combat_Hammer_2"}
 					self.MeleeBackAnim = {"Melee_Back_Combat_Hammer"}
+					self.DeathBackAnims = {
+						["Head"] = {"Die_Back_Head"}
+					}
 				end
 				self.HasMeleeWeapon = true
 				self.TransitionAnims["Move_2_Idle"] = "combat_Hammer_move_2_combat_idle"
@@ -1381,6 +1393,9 @@ function ENT:SetupAnimations()
 		end
 		if self.ItsBerserkinTime then -- Berserk guy or something Idk
 			if self.AITemplate == "BRUTE" then
+				self.DeathBackAnims = {
+					["Head"] = {"Die_Back_Head"}
+				}
 				self.TransitionAnims["Idle_2_Move"] = "Berserk_2_Any_Move"
 				self.TransitionAnims["Move_2_Idle"] = "Berserk_Unarmed_Move_2_Any_Idle"
 				if self.IsArmored then
@@ -1452,6 +1467,21 @@ function ENT:SetupAnimations()
 			self.MeleeBackAnim = {"Melee_Back"}
 			self.MeleeLeftAnim = {"Melee_Left"}
 			self.MeleeRightAnim = {"Melee_Right"}
+			self.LeapAnim = "Leap_Airborne"
+			if self.AITemplate == "FLOOD_INFECTION" then
+				self.AirAnim = "Airborne"
+				self.IdleAnim = {"Idle_7","Idle_6","Idle_5","Idle_4","Idle_3","Idle_2","Idle_1"}
+				self.MeleeAnim = {"Melee_1","Melee_2","Melee_3"}
+				self.RunAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
+				self.CrouchMoveAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
+				self.WanderAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
+				self.PatrolMoveAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
+				self.InfectAnims = {
+					["MARINE"] = {"Flood_Wrestle"},
+					["ELITE"] = {"Flood_Wrestle_Elite"},
+					["BRUTE"] = {"Flood_Wrestle_Brute"},
+				}
+			end
 		else
 			self.RunAnim = {"Move_Berserk_Unarmed_Down"}
 			self.IdleAnim = {"Combat_Unarmed_Idle_Down"}
@@ -2044,14 +2074,23 @@ function ENT:FindCoverSpots(ent)
 end
 
 function ENT:GoToPosition( pos, anim, speed, movefunc, postarriveanim )
-	--print(movefunc)
-	movefunc = movefunc or self.MoveToPos
+	--print(pos,anim,speed,movefunc)
+	local args
+	--movefunc = movefunc or self.MoveToPos
+	local goal = pos
+	if IsEntity(pos) then goal = pos:GetPos() end
+	if istable(movefunc) then
+		args = movefunc -- We received the arguments to be used in MoveToPos
+		movefunc = self.MoveToPos
+	else
+		movefunc = movefunc or self.MoveToPos
+	end
 	--[[ movefunc can be used like this
 self:GoToPosition(ent:GetPos(),self:TableRandom(self.RunAnim),self:GetRunSpeed(),self.WanderToPos)
 	]]
-	if !util.IsInWorld( pos ) then return "Tried to move out of the world!" end
+	if !util.IsInWorld( goal ) then return "Tried to move out of the world!" end
 	local ani, typ = self:TransitionChecks( anim, speed )
-	local enemy = IsValid(self.Enemy)
+	local enemy = IsEntity(pos) and self:CheckRelationships(ent) == "foe" or IsValid(self.Enemy)
 	if type(anim) == "string" then
 		self:ResetSequence( anim )
 	else
@@ -2059,7 +2098,7 @@ self:GoToPosition(ent:GetPos(),self:TableRandom(self.RunAnim),self:GetRunSpeed()
 	end
 	self.loco:SetDesiredSpeed( speed )		-- Move speed
 	self.loco:SetAcceleration( speed+speed )
-	movefunc(self,pos)
+	movefunc(self,pos,args)
 	self:TransitionArrival(typ,enemy)
 	local tb = postarriveanim or self.IdleAnim
 	--PrintTable(tb)
@@ -2360,10 +2399,10 @@ function ENT:AdjustWeapon(wep,drawn)
 	local id = self:LookupAttachment(att)
 	local pos = self:GetAttachment(id).Pos
 	wep:SetPos(pos)
-	print(drawn)
+	--print(drawn)
 	if !drawn then
 		wep:SetParent(nil)
-		wep:Fire("ClearParent")
+		--wep:Fire("ClearParent")
 		wep:RemoveEffects(EF_BONEMERGE)
 	end
 	wep:SetParent(self,id)
@@ -3012,12 +3051,13 @@ function ENT:OnOtherKilled( victim, info )
 						self.MoveSpeedMultiplier = self.MoveSpeedMultiplier*1.75
 						self:SetupAnimations()
 						local func = function()
+							self:Speak("kamikaze")
 							self:AdjustWeapon(self.Weapon,false)
 							self:PlaySequenceAndPWait( self:TableRandom(self.BerserkStartAnim) )
 						end
 						table.insert(self.StuffToRunInCoroutine,func)
 						self:ResetAI()
-					else
+					elseif !self.ItsBerserkinTime then
 						local AI = self.AIType
 						self.AIType = "Defensive"
 						local func = function()
@@ -3280,19 +3320,25 @@ function ENT:ClimbChecks(start,goal,curgoal)
 	end
 end
 
-function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
-	for i = 1, #self.IdleAnim do
-		if self.loco:GetVelocity():IsZero() and self:GetActivity() == self.IdleAnim[i] then
-			local anim = self.WanderAnim[math.random(#self.WanderAnim)]
-			if type(anim) == "string" then
-				self:ResetSequence( anim )
-			else
-				self:StartActivity( anim )			-- Move animation
+function ENT:MoveToPos( goal, options ) -- MoveToPos but I added some stuff
+	--print(goal)
+	--print(options)
+	if IsValid(self.Enemy) then
+		for i = 1, #self.IdleAnim do
+			if self.loco:GetVelocity():IsZero() and self:GetActivity() == self.IdleAnim[i] then
+				local anim = self:TableRandom(self.WanderAnim)
+				if type(anim) == "string" then
+					self:ResetSequence( anim )
+				else
+					self:StartActivity( anim )			-- Move animation
+				end
 			end
 		end
 	end
 	local options = options or {}
 	local path = Path( "Follow" )
+	local pos = goal
+	if IsEntity(goal) then pos = goal:GetPos() end
 	path:SetMinLookAheadDistance( options.lookahead or self.PathMinLookAheadDistance )
 	path:SetGoalTolerance( options.tolerance or self.PathGoalTolerance )
 	path:Compute( self, pos )
@@ -3359,7 +3405,7 @@ function ENT:MoveToPos( pos, options ) -- MoveToPos but I added some stuff
 			if ( path:GetAge() > options.maxage ) then return "timeout" end
 		end
 		if ( options.repath ) then
-			if ( path:GetAge() > options.repath ) then path:Compute( self, pos ) end
+			if ( path:GetAge() > options.repath ) then if IsValid(goal) and IsEntity(goal) then pos = goal:GetPos() end path:Compute( self, pos ) end
 		end
 		coroutine.yield()
 	end
@@ -3387,7 +3433,7 @@ function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight w
 				self:ClimbChecks(start,goal,curgoal)
 			end
 			local found = self:SearchEnemy()
-			if found then return "Found an enemy" end
+			if found then self:DoAnimation(self.IdleAnim) return "Found an enemy" end
 			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
 				-- We are stuck, don't bother
 				--return "Give up"
@@ -3584,6 +3630,7 @@ function ENT:OnKilled( dmginfo ) -- When killed
 	hook.Call( "OnNPCKilled", GAMEMODE, self, dmginfo:GetAttacker(), dmginfo:GetInflictor() )
 	self.KilledDmgInfo = dmginfo
 	self.BehaveThread = nil
+	self.AnimBusy = false
 	self.DrownThread = coroutine.create( function() self:DoKilledAnim() end )
 	coroutine.resume( self.DrownThread )
 end
@@ -3686,6 +3733,7 @@ function ENT:DoKilledAnim()
 				return
 			end
 			local seq, len = self:LookupSequence(anim)
+			print(anim,seq,len)
 			timer.Simple( len, function()
 				if IsValid(self) then
 					if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then

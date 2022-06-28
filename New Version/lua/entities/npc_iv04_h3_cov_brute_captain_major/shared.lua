@@ -20,8 +20,8 @@ ENT.IsCaptain = true
 
 ENT.PossibleWeapons = {
 	"astw2_halo3_bruteshot",
-	"astw2_halo3_plasmarifle_brute",
-	"astw2_halo3_plasmarifle",
+	--"astw2_halo3_plasmarifle_brute",
+	--"astw2_halo3_plasmarifle",
 	"astw2_halo3_spiker",
 	"astw2_halo3_fuelrod"
 }
