@@ -425,6 +425,7 @@ $sequence "move_1_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
@@ -444,6 +445,7 @@ $sequence "move_2_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
@@ -463,6 +465,7 @@ $sequence "move_3_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
@@ -482,6 +485,7 @@ $sequence "move_4_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
@@ -501,6 +505,7 @@ $sequence "move_5_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
@@ -520,6 +525,7 @@ $sequence "move_6_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
@@ -539,6 +545,7 @@ $sequence "move_7_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
@@ -558,6 +565,7 @@ $sequence "move_8_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
@@ -577,6 +585,7 @@ $sequence "move_9_any" {
 	loop
 	{ event AE_CL_PLAYSOUND 2 "HALO3_infectionform.Step" }
 	{ event AE_CL_PLAYSOUND 8 "HALO3_infectionform.Step" }
+	{ event 1100 15 "event_halo_3_infectionform_move" }
 	walkframe 145 LX LY
 }
 
