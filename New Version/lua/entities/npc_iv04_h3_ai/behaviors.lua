@@ -316,6 +316,8 @@ end
 function ENT:FloodBruteInitialize()
 end
 function ENT:FloodInfectionInitialize()
+	self.MoveSpeed = 200
+	self.MoveSpeedMultiplier = 1
 end
 function ENT:FloodCarrierInitialize()
 end
@@ -470,6 +472,59 @@ end
 function ENT:FloodBruteIdle()
 end
 function ENT:FloodInfectionIdle()
+	if !self.IsWeaponDrawn and !self.HasSeenEnemies then
+		if math.random(1,2) == 1 and IV04H3_AllowPatrol then
+			local pos = self:FindNearbyPos()
+			self:GoToPosition( (pos), self.PatrolMoveAnim[math.random(1,#self.PatrolMoveAnim)], self.MoveSpeed, self.WanderToPos, self.PatrolIdleAnim )	
+		else
+			local seq = self.PatrolIdleAnim
+			self:DoAnimation(seq)
+			self:SearchEnemy()
+			timer.Simple( self:SequenceDuration(seq)/2, function()
+				if IsValid(self) then
+					if math.random(1,2) == 1 then
+						self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+						timer.Simple( math.random(2,3), function()
+							if IsValid(self) then self.SpecificGoal = nil end
+						end )
+					end
+					self:SearchEnemy()
+				end
+			end )
+			coroutine.wait(self:SequenceDuration(seq))
+			self:SearchEnemy()
+		end
+		--print(self.PatrolIdlePoseAnim)
+		if self.PatrolIdlePoseAnim and math.random(1,5) == 1 then
+			--print("done")
+			local seq = self.PatrolIdlePoseAnim
+			self:DoAnimation(seq,false,true)
+			self:SearchEnemy()
+		end
+	else
+		self:GetATarget()
+		if self.PosingAnims and math.random(1,5) == 1 then
+			local seq = self.PosingAnims
+			self:DoAnimation(seq,false,true)
+			self:SearchEnemy()
+		end
+		local seq = self.IdleCalmAnim
+		self:DoAnimation(seq)
+		self:SearchEnemy()
+		timer.Simple( self:SequenceDuration(seq)/2, function()
+			if IsValid(self) then
+				if math.random(1,2) == 1 then
+					self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+					timer.Simple( math.random(2,3), function()
+						if IsValid(self) then self.SpecificGoal = nil end
+					end )
+				end
+				self:SearchEnemy()
+			end
+		end )
+		coroutine.wait(self:SequenceDuration(seq))
+		self:SearchEnemy()
+	end
 end
 function ENT:FloodCarrierIdle()
 end
@@ -1042,7 +1097,7 @@ function ENT:MarineBehavior(ent,range)
 			if dist > 500^2 then
 				local goal = self.FollowingPlayer:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
 				local pos = self:FindNearbyPos(goal,200)
-				self:GoToPosition( (pos), self.RunCalmAnim[math.random(1,#self.RunCalmAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )	
+				self:GoToPosition( (pos), self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )	
 			end
 		end
 			if self.NeedsToCover then
@@ -1088,8 +1143,14 @@ function ENT:MarineBehavior(ent,range)
 				local wait = math.Rand(0.5,1)
 				local r = math.random(1,3)
 				local walk = (r == 1 and range < 600^2)
-				local anim = walk and self.WalkAnim[math.random(#self.WalkAnim)] or self:TableRandom(self.RunAnim)
+				local crouch = (r == 2)
+				local anim = walk and self:TableRandom(self.WalkAnim) or self:TableRandom(self.RunAnim)
 				local speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
+				if crouch then
+					anim = self:TableRandom(self.CrouchMoveAnim)
+					speed = self.MoveSpeed
+					self:DoTransitionAnim("Idle_2_Crouch")
+				end
 				--print(anim,speed)
 				self:MoveToPosition( pos, anim, speed )
 				coroutine.wait(wait)
@@ -1255,6 +1316,13 @@ function ENT:EliteBehavior(ent,range)
 				local wait = math.Rand(0.5,1)
 				local anim = self:TableRandom(self.RunAnim)
 				local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
+				local r = math.random(1,3)
+				local crouch = (r == 2)
+				if crouch then
+					anim = self:TableRandom(self.CrouchMoveAnim)
+					speed = self.MoveSpeed
+					self:DoTransitionAnim("Idle_2_Crouch")
+				end
 				--print(anim,speed)
 				self:MoveToPosition( pos, anim, speed )
 				coroutine.wait(wait)

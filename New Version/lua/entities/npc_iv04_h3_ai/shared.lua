@@ -1537,6 +1537,14 @@ end
 
 -------- Misc functions
 
+function ENT:HandleAnimEvent( event, eventTime, cycle, type, options )
+	--print(event, eventTime, cycle, type, options)
+	if options == "event_halo_3_infectionform_move" then
+		--print(self:GetSequence())
+		self:DoAnimation(self.RunAnim)
+	end
+end
+
 function ENT:OnContact( ent ) -- When we touch someBODY
 	if ent == game.GetWorld() then return self:OnTouchWorld(ent) end
 	--print(ent)
@@ -3045,7 +3053,7 @@ function ENT:OnOtherKilled( victim, info )
 				end )
 			else
 				if self.SawAlliesDie then
-					if self.AllowBerserk then
+					if self.AllowBerserk and !self.ItsBerserkinTime then
 						self.ItsBerserkinTime = true
 						self.HasMeleeWeapon = true
 						self.MoveSpeedMultiplier = self.MoveSpeedMultiplier*1.75
@@ -3733,7 +3741,7 @@ function ENT:DoKilledAnim()
 				return
 			end
 			local seq, len = self:LookupSequence(anim)
-			print(anim,seq,len)
+			--print(anim,seq,len)
 			timer.Simple( len, function()
 				if IsValid(self) then
 					if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
@@ -3860,6 +3868,7 @@ function ENT:BodyUpdate()
 		dify = math.AngleDifference(self:GetAngles().y+self.YPP,y)
 		--print(dify)
 		local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
+		if ymins or ymaxs then
 		if math.abs(dify) > 2 then
 			if dify > 0 then
 				di = -2
@@ -3876,6 +3885,7 @@ function ENT:BodyUpdate()
 					di = 0
 				end
 			end
+		end
 		end
 		p = an.p
 		local difp = math.AngleDifference(self:GetAngles().p+self.PPP,p)
