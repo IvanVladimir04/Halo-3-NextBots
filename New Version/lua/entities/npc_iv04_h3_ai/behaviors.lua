@@ -99,6 +99,7 @@ function ENT:EliteInitialize()
 	self.AllowVehicleFunctions = true
 end
 function ENT:BruteInitialize()
+	self.DeployedEquipment = !self.PossibleEquipment
 	self.DisableLeap = true
 	self.AllowBerserk = true
 	self.AllowClimbing = true
@@ -1390,6 +1391,37 @@ function ENT:BruteBehavior(ent,range)
 				return
 			end
 			if !IsValid(ent) then return end
+			if self.IsJumpers then -- iv04_halo_3_brute_jumppack_fx
+				if !self.JumpedAround then
+					self.JumpedAround = true
+					timer.Simple( 10, function()
+						if IsValid(self) then
+							self.JumpedAround = false
+						end
+					end )
+					self.loco:SetGravity(200)
+					self.Leaping = true
+					local pos = self:FindNearbyPos(ent:GetPos(),512)
+					ParticleEffectAttach( "iv04_halo_3_brute_jumppack_fx", PATTACH_POINT_FOLLOW, self, 6 )
+					ParticleEffectAttach( "iv04_halo_3_brute_jumppack_fx", PATTACH_POINT_FOLLOW, self, 7 )
+					self.loco:JumpAcrossGap(pos,self:GetForward())
+					return
+				end
+			end
+			if !self.DeployedEquipment then
+				timer.Simple( 1, function()
+					if IsValid(self) then
+						local eq = ents.Create(self:TableRandom(self.PossibleEquipment))
+						eq:SetPos(self:GetAttachment(2).Pos)
+						eq:Spawn()
+						eq:SetAngles(Angle(0,self:GetAngles().y,0))
+						eq:Activate()
+						eq:GetPhysicsObject():SetVelocity(self:GetForward()*200)
+					end
+				end )
+				self.DeployedEquipment = true
+				self:PlaySequenceAndWait(self.EquipmentAnim)
+			end
 			if self.HasMeleeWeapon then
 				if range > 512^2 and range < 1200^2 and !self.DisableLeap then
 					self:PlaySequenceAndWait(self.LeapAnim)

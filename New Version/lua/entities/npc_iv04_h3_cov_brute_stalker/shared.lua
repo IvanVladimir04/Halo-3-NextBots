@@ -20,6 +20,9 @@ ENT.Rank = 1
 
 ENT.IsStalker = true
 
+ENT.PossibleEquipment = {
+	"astw2_halo_3_eq_jammer_deployed"
+}
 
 ENT.PossibleWeapons = {
 	"astw2_halo3_spiker",

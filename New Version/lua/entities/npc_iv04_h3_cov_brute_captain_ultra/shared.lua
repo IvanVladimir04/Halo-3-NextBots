@@ -27,6 +27,11 @@ ENT.PossibleWeapons = {
 	"astw2_halo3_fuelrod"
 }
 
+ENT.PossibleEquipment = {
+	"astw2_halo_3_eq_deployable_cover_deployed",
+	"astw2_halo_3_eq_regenerator_deployed"
+}
+
 list.Set( "NPC", "npc_iv04_h3_cov_brute_captain_ultra", {
 	Name = "Brute Captain Ultra",
 	Class = "npc_iv04_h3_cov_brute_captain_ultra",

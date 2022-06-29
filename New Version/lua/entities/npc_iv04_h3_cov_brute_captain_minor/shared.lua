@@ -27,6 +27,10 @@ ENT.PossibleWeapons = {
 	"astw2_halo3_fuelrod"
 }
 
+ENT.PossibleEquipment = {
+	"astw2_halo_3_eq_bubbleshield_deployed"
+}
+
 list.Set( "NPC", "npc_iv04_h3_cov_brute_captain_minor", {
 	Name = "Brute Captain Minor",
 	Class = "npc_iv04_h3_cov_brute_captain_minor",

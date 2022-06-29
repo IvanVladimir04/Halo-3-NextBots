@@ -23,6 +23,11 @@ ENT.PossibleWeapons = {
 	"astw2_halo3_plasmaturret"
 }
 
+ENT.PossibleEquipment = {
+	"astw2_halo_3_eq_powerdrain_deployed",
+	"astw2_halo_3_eq_flare_deployed"
+}
+
 list.Set( "NPC", "npc_iv04_h3_cov_brute_warchieftain", {
 	Name = "Brute War Chieftain",
 	Class = "npc_iv04_h3_cov_brute_warchieftain",

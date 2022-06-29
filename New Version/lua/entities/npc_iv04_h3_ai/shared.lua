@@ -922,7 +922,7 @@ function ENT:SetupAnimations()
 				self.WalkAnim = {"walk_combat_rifle_up"}
 				self.RunCalmAnim = {"move_combat_rifle_down"}
 				self.GrenadeAnim = {"Throw_Grenade_Combat_Rifle_1","Throw_Grenade_Combat_Rifle_2"}
-				self.EquipmentAnim = "Throw_Equipment_Combat_Rifle"
+				self.EquipmentAnim = "Throw_Equipment_Combat_Support"
 				self.AirAnim = "airborne_combat_rifle"
 				self.LandAnim = "land_soft_combat_rifle"
 				self.LandHardAnim = "land_hard_combat_rifle"
@@ -1138,6 +1138,13 @@ function ENT:SetupAnimations()
 				self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_missile_idle_2_crouch_walk"
 			elseif hold == "physgun" or ( hold == "rpg" and self.AITemplate == "BRUTE" ) then
 				self:AdjustWeapon(self.Weapon,true)
+				if self.IsArmored then
+					self.EquipmentAnim = "Throw_Equipment_Armored_Support"
+					self.MeleeAnim = {"Melee_Armored_Support_1","Melee_Armored_Support_2"}
+				else
+					self.EquipmentAnim = "Throw_Equipment_Combat_Support"
+					self.MeleeAnim = {"Melee_Combat_Support_1"}
+				end
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Support"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Support"}
 				self.IdleAnim = {"combat_support_idle_up"}
@@ -1934,19 +1941,34 @@ function ENT:OnLeaveGround(ent)
 			--print(1)
 		elseif self.Leaping then
 			self.AnimBusy = true
-			self:DoAnimation(self.LeapAirAnim)
-			--print(2)
-			timer.Simple( 6, function()
-				if IsValid(self) and self.LastTimeOnGround == t and self.Leaping then
-					self.AnimBusy = false
-					self:DoAnimation(self.DeadAirAnim)
-					--self:Speak("thrwn")
-					--print(2.3)
-					self.FlyingDead = true
-					self:OnKilled(DamageInfo())
-					self:SetHealth(0)
-				end
-			end )
+			if self.IsJumpers then
+				self:DoAnimation(self.AirAnim)
+				timer.Simple( 6, function()
+					if IsValid(self) and self.LastTimeOnGround == t and self.Leaping then
+						self.AnimBusy = false
+						self:DoAnimation(self.DeadAirAnim)
+						--self:Speak("thrwn")
+						--print(2.3)
+						self.FlyingDead = true
+						self:OnKilled(DamageInfo())
+						self:SetHealth(0)
+					end
+				end )
+			else
+				self:DoAnimation(self.LeapAirAnim)
+				--print(2)
+				timer.Simple( 6, function()
+					if IsValid(self) and self.LastTimeOnGround == t and self.Leaping then
+						self.AnimBusy = false
+						self:DoAnimation(self.DeadAirAnim)
+						--self:Speak("thrwn")
+						--print(2.3)
+						self.FlyingDead = true
+						self:OnKilled(DamageInfo())
+						self:SetHealth(0)
+					end
+				end )
+			end
 		else
 			--print(3)
 			timer.Simple( 0.6, function()
@@ -1977,14 +1999,18 @@ function ENT:OnLandOnGround(ent)
 		self.AnimBusy = false
 		self.Leaping = false
 		self.LastTimeOnGround = CurTime()
-		local func = function()
-			local oldmelee = self.MeleeAnim
-			self.MeleeAnim = self.LeapMeleeAnim
-			self:DoMelee()
-			self.MeleeAnim = oldmelee
+		if !self.IsJumpers then
+			local func = function()
+				local oldmelee = self.MeleeAnim
+				self.MeleeAnim = self.LeapMeleeAnim
+				self:DoMelee()
+				self.MeleeAnim = oldmelee
+			end
+			table.insert(self.StuffToRunInCoroutine,func)
+			self:ResetAI()
+		else
+			self:StopParticles()
 		end
-		table.insert(self.StuffToRunInCoroutine,func)
-		self:ResetAI()
 	elseif self.LastTimeOnGround then
 		local seq = self:TableRandom(self.LandAnim)
 		if ( CurTime() - self.LastTimeOnGround ) > 1 then
@@ -2269,7 +2295,9 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 	end	
 	self.DoneMelee = true -- Melee cooldown
 	self.DoingMelee = true -- Immediate melee animation cooldown (to stop other parts of the AI)
+	--print(anim)
 	local id, len = self:LookupSequence(anim)
+	--print(id,len)
 	local hittime = self.MeleeAnimsHits[anim] or 0.6
 	timer.Simple( len*hittime, function() -- Set up a timer for the melee hit
 		if IsValid(self) then
@@ -2420,6 +2448,9 @@ function ENT:AdjustWeapon(wep,drawn)
 		wep:AddEffects(EF_BONEMERGE)
 		self:SetAmmo(wep:GetMaxClip1())
 		wep:SetClip1(wep:GetMaxClip1())
+		if wep:GetClass() == "astw2_halo3_energysword" then
+			wep:SetSkin(1)
+		end
 		if self.EnableFlashlight and self.AITemplate == "MARINE" then
 			self.Sprite = ents.Create("env_sprite")
 			self.Sprite:SetPos(wep:GetAttachment(1).Pos)
@@ -2826,6 +2857,19 @@ function ENT:OnInjured(dmg)
 						self:SetBodygroup(6,0)
 					end
 				end 
+				if self.AllowBerserk and !self.ItsBerserkinTime and math.random(1,2) == 1 then
+					self.ItsBerserkinTime = true
+					self.HasMeleeWeapon = true
+					self.MoveSpeedMultiplier = self.MoveSpeedMultiplier*1.75
+					self:SetupAnimations()
+					local func = function()
+						self:Speak("kamikaze")
+						self:AdjustWeapon(self.Weapon,false)
+						self:PlaySequenceAndPWait( self:TableRandom(self.BerserkStartAnim) )
+					end
+					table.insert(self.StuffToRunInCoroutine,func)
+					self:ResetAI()
+				end
 				self:StopParticles()
 			else
 				self:ShieldArcLoop()
@@ -3053,7 +3097,7 @@ function ENT:OnOtherKilled( victim, info )
 				end )
 			else
 				if self.SawAlliesDie then
-					if self.AllowBerserk and !self.ItsBerserkinTime then
+					if self.AllowBerserk and !self.ItsBerserkinTime and math.random(1,2) == 1 then
 						self.ItsBerserkinTime = true
 						self.HasMeleeWeapon = true
 						self.MoveSpeedMultiplier = self.MoveSpeedMultiplier*1.75
