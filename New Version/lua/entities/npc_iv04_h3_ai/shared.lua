@@ -759,6 +759,19 @@ function ENT:SetupAnimations()
 				self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}
 			end
 			self.PatrolIdleAnim = self.IdleCalmAnim
+			self.DeathBackAnims = {
+				["Head"] = {"Die_Back_Gut"}
+			}
+			self.DeathLeftAnims = {
+				["Gut"] =  {"Die_Left_Gut"}
+			}
+			self.DeathRightAnims = {
+				["Gut"] =  {"Die_Right_Gut"}
+			}
+			self.DeathFrontAnims = {
+				["Head"] = {"Die_Front_Head_1","Die_Front_Head_2","Die_Front_Head_3"},
+				["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
+			}
 		else
 			if self.AITemplate == "BRUTE" and self.BruteWeapons[self.Weapon:GetClass()] then
 				hold = "pistol"
@@ -1310,6 +1323,7 @@ function ENT:SetupAnimations()
 				self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_Sword_idle_2_crouch_walk"
 				self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_Sword_idle_2_crouch_walk"
 			elseif hold == "melee2" then
+				self.EquipmentAnim = "Throw_Equipment_Combat_Pistol"
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Hammer"}
 				self.DrawFastWeaponAnim = {"Draw_Fast_Combat_Hammer"}
 				self.IdleAnim = {"combat_Hammer_idle_up"}
@@ -1518,6 +1532,19 @@ function ENT:SetupAnimations()
 				self.WalkAnim = "Walk_Combat_Unarmed_Up"
 				self.WalkCalmAnim = "Walk_Combat_Unarmed_Up"
 				self.PatrolIdleAnim = self.IdleCalmAnim
+				self.DeathBackAnims = {
+					["Head"] = {"Die_Back_Gut"}
+				}
+				self.DeathLeftAnims = {
+					["Gut"] =  {"Die_Left_Gut"}
+				}
+				self.DeathRightAnims = {
+					["Gut"] =  {"Die_Right_Gut"}
+				}
+				self.DeathFrontAnims = {
+					["Head"] = {"Die_Front_Head_1","Die_Front_Head_2","Die_Front_Head_3"},
+					["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
+				}
 			end
 		end
 	end
@@ -1938,6 +1965,7 @@ function ENT:OnLeaveGround(ent)
 	if !self.IsInVehicle then
 		if self:Health() <= 0 then 
 			self:DoAnimation(self.DeadAirAnim)
+			self.AnimBusy = true
 			--print(1)
 		elseif self.Leaping then
 			self.AnimBusy = true
@@ -2251,6 +2279,9 @@ function ENT:Speak(voice,character)
 		self.CurrentSound:SetSoundLevel(100)
 		self.CurrentSound:Play()
 		self:MoveMouth()
+		if self:Health() <= 0 then
+			self.Speak = function(a,b) end
+		end
 	--else
 		--print("nosound",character,character[voice],istable(character[voice]),voice,self.VoiceType)
 	end
@@ -3683,6 +3714,7 @@ function ENT:OnKilled( dmginfo ) -- When killed
 	self.KilledDmgInfo = dmginfo
 	self.BehaveThread = nil
 	self.AnimBusy = false
+	self:SetEnemy(nil)
 	self.DrownThread = coroutine.create( function() self:DoKilledAnim() end )
 	coroutine.resume( self.DrownThread )
 end
@@ -3721,13 +3753,15 @@ function ENT:DetermineDeathAnim( info )
 	else
 		return true
 	end
+	if !anim then return true end
 	return anim
 end
 
 function ENT:FinishDeadLanding()
 	while (!self.HasLanded) do
 		if self.AlternateLanded then
-			local rag
+			--print(self.AlternateLanded)
+			local rag = self:CreateRagdoll(DamageInfo())
 			if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
 				timer.Simple( 60, function()
 					if IsValid(rag) then
@@ -3739,6 +3773,8 @@ function ENT:FinishDeadLanding()
 		end
 		coroutine.wait(0.01)
 	end
+	self.AnimBusy = false
+	--print(self, "should be playing dead land anim")
 	self:PlaySequenceAndWait(self:TableRandom(self.DeadLandAnim))
 	if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
 		local wep = ents.Create(self.Weapon:GetClass())
@@ -3809,7 +3845,7 @@ function ENT:DoKilledAnim()
 					rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
 				end
 			end )
-			self:PlaySequenceAndPWait(seq, 1, self:GetPos())
+			self:PlaySequenceAndPWait(anim, 1, self:GetPos())
 		else
 			self:Speak("OnDeathPainful")
 			if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
@@ -3837,12 +3873,14 @@ function ENT:DoKilledAnim()
 		self.FlyingDead = true
 		local dir = ((self:GetPos()-self.KilledDmgInfo:GetDamagePosition())):GetNormalized()
 		dir = dir+self:GetUp()*2
-		local force = self.KilledDmgInfo:GetDamage()*1.5
+		local force = (self.KilledDmgInfo:GetDamage()*1.5)+100
 		self:SetAngles(Angle(0,dir:Angle().y,0))
 		self.loco:Jump()
 		self.loco:SetVelocity(dir*force)
+		--print(self,"Jumped")
 		coroutine.wait(0.25)
 		self:FinishDeadLanding()
+		--print(self,"Landed")
 	end
 end
 
