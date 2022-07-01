@@ -3758,6 +3758,11 @@ function ENT:DetermineDeathAnim( info )
 end
 
 function ENT:FinishDeadLanding()
+	timer.Simple( 10, function()
+		if IsValid(self) and !self.HasLanded and !self.AlternateLanded then
+			self.AlternateLanded = true
+		end
+	end )
 	while (!self.HasLanded) do
 		if self.AlternateLanded then
 			--print(self.AlternateLanded)
@@ -3768,6 +3773,13 @@ function ENT:FinishDeadLanding()
 						rag:Remove()
 					end
 				end)
+			end
+			if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
+				local wep = ents.Create(self.Weapon:GetClass())
+				wep:SetPos(self.Weapon:GetPos())
+				wep:SetAngles(self.Weapon:GetAngles())
+				wep:Spawn()
+				self.Weapon:Remove()
 			end
 			return
 		end
