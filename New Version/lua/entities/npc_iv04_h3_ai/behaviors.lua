@@ -286,7 +286,7 @@ function ENT:FloodHumanInitialize()
 	self.MoveSpeed = 40
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
-	if math.random(1,4) == 1 then
+	if math.random(1,4) == 1 and !self.Weaponless then
 		self.SpawnWithWeaponDrawn = true
 	else
 		self.PossibleWeapons = nil
@@ -319,6 +319,21 @@ end
 function ENT:FloodInfectionInitialize()
 	self.MoveSpeed = 200
 	self.MoveSpeedMultiplier = 1
+	self.DoesntUseWeapons = true
+	self.LeapRange = 300
+	self.DeathParticle = "iv04_halo_3_flood_gib_medium"
+	self.ExplodesOnKilled = true
+	self:SetCollisionBounds(Vector(10,10,20),Vector(-10,-10,0))
+	self.InfectableTemplates = {
+		["MARINE"] = true
+	}
+	self.InfectionAnimations = {
+		["MARINE"] = {"Flood_Morph_1","Flood_Morph_2"}
+	}
+	self.InfectionArrival = {
+		["Flood_Morph_1"] = "Morph_Arrival_1",
+		["Flood_Morph_2"] = "Morph_Arrival_2"
+	}
 end
 function ENT:FloodCarrierInitialize()
 end
@@ -576,7 +591,7 @@ function ENT:SpartanThink()
 	end
 end
 function ENT:MarineThink()
-	if self:Health() < 1 then return end
+	if self:Health() < 1 or self.UnderLatchAttack then return end
 	self:VehicleThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
@@ -819,6 +834,14 @@ end
 function ENT:FloodBruteThink()
 end
 function ENT:FloodInfectionThink()
+	if self.Latched and IsValid(self:GetOwner()) then
+		if !self.Infecting then
+			self:SetAngles((self:GetOwner():NearestPoint(self:GetPos())-self:GetPos()):Angle()+Angle(-90,0,0))
+		else
+			self:SetAngles((self:GetOwner():NearestPoint(self:GetPos())-self:GetPos()):Angle()+Angle(-90,-180,0))
+		end
+		self:SetPos(self.LPos+self:GetOwner():GetPos())
+	end
 end
 function ENT:FloodCarrierThink()
 end
@@ -1430,7 +1453,7 @@ function ENT:BruteBehavior(ent,range)
 					return
 				else
 					--self.PathGoalTolerance = 100
-					self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { repath = 0.5 , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end } )
+					self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { repath = 0.5 , facepath = true , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end } )
 					--self.PathGoalTolerance = 40
 				end
 			else
@@ -1642,6 +1665,54 @@ end
 function ENT:FloodBruteBehavior(ent,range)
 end
 function ENT:FloodInfectionBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	if self.Leaping then return end
+	ent = ent or self.Enemy
+	local mins, maxs = ent:GetCollisionBounds()
+	local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter()+ent:GetUp()*(maxs*0.25),{self,ent,self:GetOwner()})	if IsValid(obstr) then	
+		if ( ( obstr:IsNPC() or obstr:IsPlayer() or obstr:IsNextBot() ) and obstr:Health() > 0 ) and self:CheckRelationships(obstr) == "foe" then
+			ent = obstr
+			self:SetEnemy(ent)
+		end
+	end
+	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
+	if !self.DistToTarget then self.DistToTarget = range end
+	if range <= self.LeapRange^2 then
+		if !self.Leaped then
+			self:Leap(ent)
+		else
+			self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { 
+			repath = 0.5, 
+			facepath = true,
+			callback = function(path)
+			--print(IsValid(self.Enemy), !self.Leaped, self.DistToTarget < self.LeapRange^2)
+			if path:GetAge() > 0.45 then
+				self.DistToTarget = path:GetLength()^2
+			end
+			if IsValid(self.Enemy) and !self.Leaped and self.DistToTarget < self.LeapRange^2 then 
+					self:Leap(self.Enemy) 
+					return 
+				end 
+			end }
+		)
+		end
+	else
+		self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { 
+			repath = 0.5, 
+			facepath = true,
+			callback = function(path)
+			--print(IsValid(self.Enemy), !self.Leaped, self.DistToTarget < self.LeapRange^2)
+			if path:GetAge() > 0.45 then
+				self.DistToTarget = path:GetLength()^2
+			end
+			if IsValid(self.Enemy) and !self.Leaped and self.DistToTarget < self.LeapRange^2 then 
+					self:Leap(self.Enemy) 
+					return 
+				end 
+			end }
+		)
+	end
 end
 function ENT:FloodCarrierBehavior(ent,range)
 end

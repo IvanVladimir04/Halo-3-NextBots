@@ -1488,7 +1488,7 @@ function ENT:SetupAnimations()
 			self.MeleeBackAnim = {"Melee_Back"}
 			self.MeleeLeftAnim = {"Melee_Left"}
 			self.MeleeRightAnim = {"Melee_Right"}
-			self.LeapAnim = "Leap_Airborne"
+			self.LeapAirAnim = "Leap_Airborne"
 			if self.AITemplate == "FLOOD_INFECTION" then
 				self.AirAnim = "Airborne"
 				self.IdleAnim = {"Idle_7","Idle_6","Idle_5","Idle_4","Idle_3","Idle_2","Idle_1"}
@@ -1514,6 +1514,7 @@ function ENT:SetupAnimations()
 			self.AdvanceAnim = "signal_advance_combat_unarmed"
 			if self.GenericWeaponAnims then
 				self.ShakeFistAnim = nil
+				self.AirAnim = "Combat_Any_Airborne"
 				self.BraceAnim = "Brace_Combat_Unarmed"
 				self.IdleAnim = {"Combat_Unarmed_Idle_Up"}
 				self.IdleCalmAnim = {"Combat_Unarmed_Idle_Up"}
@@ -1589,6 +1590,171 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 		--PrintTable(ents.FindByName( "yyy_level_2_db_2a" ))
 		timer.Simple( 1, function() if IsValid(self) and IsValid(ent) then self.CollidedEntities[ent] = nil end end )
 		if self.FlyingDead then self.AlternateLanded = true return end 
+		if self.AITemplate == "FLOOD_INFECTION" and !self.Latched and self.Leaping and ent == self.Enemy and !ent.UnderLatchAttack then
+				self.Leaping = false
+				ent.UnderLatchAttack = true
+				if ( (ent.IsVJBaseSNPC == true or ent.CPTBase_NPC == true or ent.IsSLVBaseNPC == true or ent:GetNWBool( "bZelusSNPC" ) == true) or (ent:IsNPC() && ent:GetClass() != "npc_bullseye" && ent:Health() > 0 )  or ((ent:IsNextBot()) and ent != self ) ) and !IsValid(ent:GetEnemy()) and (!ent.Shield or ent.Shield <= 0) and ent:Health() <= 150 then
+					local pos = ent:GetAttachment(1).Pos
+					self:SetOwner(ent)
+					self.LPos = ent:WorldToLocal(pos)
+					local dmg = DamageInfo()
+					dmg:SetDamage( ent:Health()*0.5 )
+					dmg:SetAttacker( self )
+					dmg:SetInflictor( self )
+					dmg:SetDamageType( DMG_SLASH )
+					dmg:SetDamagePosition( pos )
+					ent:DispatchTraceAttack( dmg, {HitGroup = 1, Entity = ent,Hit = true, HitPos = pos}, -ent:GetForward() )
+					self:SetPos(pos)
+				else
+					self:SetOwner(ent)
+					self.Latched = true
+					if self.InfectableTemplates[ent.AITemplate] then
+						timer.Simple( 10, function()
+							if IsValid(self) then
+								self.Latched = false
+							end
+							if IsValid(ent) then
+								ent.UnderLatchAttack = false
+							end
+						end )
+						--self.Leaping = true
+						self.Infecting = true
+						self.LastTimeOnGround = CurTime()
+						self.InfectVictim = ent
+						self.LPos = ent:WorldToLocal(ent:WorldSpaceCenter()+ent:GetForward()*-40)
+						local anim = self:TableRandom(self.InfectionAnimations[ent.AITemplate])
+						--print(anim)
+						local victim = ent
+						local anims = self.InfectionArrival
+						local func1 = function()
+							self:PlaySequenceAndWait(self:TableRandom(self.InfectAnims[ent.AITemplate]))
+							local func3 = function()
+									victim.Faction = "FACTION_FLOOD"
+									victim.FriendlyToPlayers = false
+									victim.AnimBusy = true
+									if IsValid(victim.Weapon) then
+										--print(0)
+										victim.Weapon:Remove()
+									end
+									victim.Enemy = nil
+									--print(1)
+									local id = victim:LookupBone("spine")
+									local pos = victim:GetBonePosition( id )
+									if pos == ent:GetPos() then
+										pos = ent:GetBoneMatrix(id):GetTranslation()
+									end
+									local muffins = {}
+									for i = 1, 3 do
+										local muffin = ents.Create("prop_dynamic")
+										muffin:SetModel("models/halo_3/characters/flood/muffin.mdl")
+										muffin:SetPos(pos+victim:GetForward()*math.random(10,0))
+										muffin:SetAngles(Angle(0,victim:GetAngles().y+(30*i),0))
+										muffin:SetOwner(victim)
+										muffin:SetMoveType( MOVETYPE_NONE )
+										muffin:SetParent(victim,6)
+										muffin:Spawn()
+										muffin:Activate()
+										muffins[#muffins+1] = muffin
+									end
+									local id = victim:LookupBone("spine1")
+									local pos = victim:GetBonePosition( id )
+									if pos == ent:GetPos() then
+										pos = ent:GetBoneMatrix(id):GetTranslation()
+									end
+									for i = 1, 3 do
+										local muffin = ents.Create("prop_dynamic")
+										muffin:SetModel("models/halo_3/characters/flood/muffin.mdl")
+										muffin:SetPos(pos+victim:GetForward()*math.random(10,0))
+										muffin:SetAngles(Angle(0,victim:GetAngles().y+(30*i),0))
+										muffin:SetOwner(victim)
+										muffin:SetMoveType( MOVETYPE_NONE )
+										muffin:SetParent(victim,6)
+										muffin:Spawn()
+										muffin:Activate()
+										muffins[#muffins+1] = muffin
+									end
+									victim:PlaySequenceAndWait(anim)
+									--print(2)
+									local flood = ents.Create("npc_iv04_h3_fld_combat_form_human")
+									flood:SetPos(victim:GetPos())
+									flood:SetAngles(victim:GetAngles())
+									flood.Weaponless = true
+									flood:Spawn()
+									for i = 1, #muffins do
+										--local id = flood:LookupBone("spine1")
+										--local pos = flood:GetBonePosition( id )
+										--if pos == flood:GetPos() then
+										--	pos = flood:GetBoneMatrix(id):GetTranslation()
+										--end
+										--muffins[i]:SetPos(pos)
+										muffins[i]:SetParent(flood)
+										muffins[i]:SetOwner(flood)
+									end
+									local func3 = function()
+										flood:PlaySequenceAndWait(anims[anim])
+									end
+									table.insert(flood.StuffToRunInCoroutine,func3)
+									flood:ResetAI()
+									undo.ReplaceEntity(victim,flood)
+									victim:Remove()
+							end
+							table.insert(ent.StuffToRunInCoroutine,func3)
+							ent:ResetAI()
+							self:Remove()
+							--self:SetNoDraw(true)
+						end
+						timer.Simple( 0.01, function()
+							if IsValid(ent) then
+								local func2 = function()
+									victim.AnimBusy = true
+									victim:Speak("panic_infctnfrm")
+									victim:PlaySequenceAndWait(self:TableRandom(self.InfectAnims[victim.AITemplate]))
+								end
+								table.insert(ent.StuffToRunInCoroutine,func2)
+								ent:ResetAI()
+							end
+						end )
+						table.insert(self.StuffToRunInCoroutine,func1)
+						self:ResetAI()
+					else
+						timer.Simple( 3, function()
+							if IsValid(self) then
+								self.Latched = false
+							end
+							if IsValid(ent) then
+								ent.UnderLatchAttack = false
+							end
+						end )
+						self.LPos = ent:WorldToLocal(self:GetPos())
+						for i = 1, 5 do
+							timer.Simple( 0.2*i, function()
+								if IsValid(self) and IsValid(self:GetOwner()) then
+									self:GetOwner():TakeDamage( 2, self, self )
+								end
+							end )
+						end
+						local func = function()
+							self:PlaySequenceAndWait("Feeding_Loop")
+							while (self.Latched and IsValid(self.Enemy)) do
+								coroutine.wait(0.01)
+							end
+							self.Latched = false
+							self:SetAngles(Angle(0,self:GetAngles().y,0))
+						end
+						table.insert(self.StuffToRunInCoroutine,func)
+						self:ResetAI()
+						timer.Simple( 1, function()
+							if IsValid(self) then
+								self.Latched = false
+							end
+							if IsValid(ent) then
+								ent.UnderLatchAttack = false
+							end
+						end )
+					end
+				end
+			return
+		end
 		if ent:GetClass() == "prop_dynamic" then
 			local name = ent:GetInternalVariable( "parentname" )
 			if name then
@@ -1600,7 +1766,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 					ent = door
 					self.CollidedEntities[door] = true
 					timer.Simple( 1, function() if IsValid(self) and IsValid(door) then	self.CollidedEntities[door] = nil end end )
-					end
+				end
 			end
 		end
 		if !self.AnimBusy then
@@ -2027,7 +2193,9 @@ function ENT:OnLandOnGround(ent)
 		self.AnimBusy = false
 		self.Leaping = false
 		self.LastTimeOnGround = CurTime()
-		if !self.IsJumpers then
+		if self.IsJumpers then
+			self:StopParticles()
+		elseif self.HasMeleeWeapon then
 			local func = function()
 				local oldmelee = self.MeleeAnim
 				self.MeleeAnim = self.LeapMeleeAnim
@@ -2037,7 +2205,7 @@ function ENT:OnLandOnGround(ent)
 			table.insert(self.StuffToRunInCoroutine,func)
 			self:ResetAI()
 		else
-			self:StopParticles()
+			self:DoAnimation(self.RunAnim)
 		end
 	elseif self.LastTimeOnGround then
 		local seq = self:TableRandom(self.LandAnim)
@@ -2522,6 +2690,7 @@ end
 ]]
 
 function ENT:DoAnimationEvent(a)
+	if self.AnimBusy then return end
 	if a == 1689 then
 		local wep = self.Weapon
 		if CLIENT then wep = self:GetNWEntity("wep") end
@@ -3403,6 +3572,20 @@ function ENT:ClimbChecks(start,goal,curgoal)
 	end
 end
 
+function ENT:Leap(goal)
+	if isentity(goal) then goal = goal:WorldSpaceCenter() end
+	local ang = (goal-self:WorldSpaceCenter()):GetNormalized():Angle()
+	self:SetAngles(Angle(0,ang.y,0))
+	self.Leaping = true
+	self.Leaped = true
+	self.loco:JumpAcrossGap(goal,self:GetForward())
+	timer.Simple( 2, function()
+		if IsValid(self) then
+			self.Leaped = false
+		end
+	end )
+end
+
 function ENT:MoveToPos( goal, options ) -- MoveToPos but I added some stuff
 	--print(goal)
 	--print(options)
@@ -3470,13 +3653,15 @@ function ENT:MoveToPos( goal, options ) -- MoveToPos but I added some stuff
 				coroutine.yield()
 			end
 			if options.callback then
-				options.callback()
+				options.callback(path)
 			end
 			self.UpdateTime = CurTime()+self.MoveUpdateTime
 		end
 		local ang = self:GetAngles()
 		path:Update( self )
-		self:SetAngles(ang)
+		if ( !options.facepath ) then
+			self:SetAngles(ang)
+		end
 		if ( options.draw ) then
 			path:Draw()
 		end
@@ -3715,8 +3900,17 @@ function ENT:OnKilled( dmginfo ) -- When killed
 	self.BehaveThread = nil
 	self.AnimBusy = false
 	self:SetEnemy(nil)
-	self.DrownThread = coroutine.create( function() self:DoKilledAnim() end )
-	coroutine.resume( self.DrownThread )
+	if self.ExplodesOnKilled then
+		ParticleEffectAttach(self.DeathParticle,PATTACH_ABSORIGIN_FOLLOW,self,0)
+		if IsValid(self.InfectVictim) then
+			self.InfectVictim:ResetAI()
+			self.InfectVictim.UnderLatchAttack = false
+		end
+		self:Remove()
+	else
+		self.DrownThread = coroutine.create( function() self:DoKilledAnim() end )
+		coroutine.resume( self.DrownThread )
+	end
 end
 
 function ENT:DetermineDeathAnim( info )
@@ -3728,8 +3922,10 @@ function ENT:DetermineDeathAnim( info )
 	if y < 0 then y = y + 360 end
 	--print(y)
 	local anim
+	--print(self.DeathHitGroup,"a")
 	if self.DeathHitGroup then
 		if self.DeathHitGroup == 1 then
+			--print(y)
 			if y <= 135 and y > 45 then -- Left
 				anim = self:TableRandom(self.DeathLeftAnims["Head"])
 			elseif y < 225 and y > 135 then -- Front
@@ -3815,12 +4011,15 @@ function ENT:DoKilledAnim()
 		self:Speak("dth_fall")
 		self:FinishDeadLanding()
 	elseif !self.KilledDmgInfo:IsDamageType(DMG_BLAST) then
+		--print("?",self.KilledDmgInfo:GetDamage())
 		if self.BloodDecal then
 			util.Decal( self.BloodDecal, self.KilledDmgInfo:GetDamagePosition(), (self.KilledDmgInfo:GetDamagePosition())+self:GetUp()*-100, self )
 		end
 		if self.KilledDmgInfo:GetDamage() <= 150 then
+			--print("death anim")
 			self:Speak("OnDeath")
 			local anim = self:DetermineDeathAnim(self.KilledDmgInfo)
+			--print(anim)
 			if anim == true then 
 				if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
 					local wep = ents.Create(self.Weapon:GetClass())
