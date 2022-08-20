@@ -3,6 +3,10 @@ AddCSLuaFile()
 
 
 function ENT:SpartanInitialize()
+	self.InterestingEntities = {
+		["prop_ragdoll"] = true,
+		["prop_dynamic"] = true
+	}
 	self.DamageThreshold = math.huge
 	self.SpawnWithWeaponDrawn = true
 	self.AllowStealth = true
@@ -50,6 +54,7 @@ function ENT:MarineInitialize()
 		["prop_ragdoll"] = true,
 		["prop_dynamic"] = true
 	}
+	self.SightAttachment = "eyes"
 	--PrintTable(self.InterestingEntities)
 	self.BloodDecal = "iv04_halo_3_blood_splat_human"
 	self.AllowClimbing = true
@@ -373,6 +378,54 @@ function ENT:SpartanIdle()
 		self:EnterVehicle(veh)
 		return self:VehicleIdle()
 	end
+	if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] and table.Count(self.SeenInterestingEntities) > 0 then
+		--print("We saw something interesting before")
+		local bool, ent = table.Random(self.SeenInterestingEntities)
+		--print(bool,ent)
+		self.DiscardedInterestingEntities[ent] = true
+		self.SeenInterestingEntities[ent] = nil
+		--print("We discarded it off our lists of to check",ent:GetModel(),ent.Faction)
+		if !ent.WasShot and isstring(ent.Faction) then
+			--print("It wasn't a friend")
+			--print("We'll go to its position")
+			local spot = ent:GetPos()
+			self:GoToPosition(spot,self.RunCalmAnim[math.random(#self.RunCalmAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
+			--print("We are next to it")
+			self:DoAnimation(self.CrouchIdleAnim)
+			local grenades = self.ThrownGrenades
+			self.ThrownGrenades = 1000
+			ent.WasShot = true
+			self.SpecificGoal = ent:WorldSpaceCenter()
+			coroutine.wait(0.5)
+			for i = 1, math.random(1,2) do
+				self:SetEnemy(ent)
+				--print("It's our target")
+				self.LastTimeWeShot = CurTime()
+				--self.Weapon:AI_PrimaryAttack()
+				self:DoMelee(ent,true)
+				self:DoAnimation(self.IdleAnim)
+				coroutine.wait(0.25)
+				self:DoAnimation(self.CrouchIdleAnim)
+				coroutine.wait(0.25)
+				self:DoAnimation(self.IdleAnim)
+				coroutine.wait(0.25)
+				self:DoMelee(ent,true)
+				self:DoAnimation(self.CrouchIdleAnim)
+				coroutine.wait(0.25)
+				self:DoAnimation(self.CrouchIdleAnim)
+				coroutine.wait(0.25)
+				self:DoAnimation(self.IdleAnim)
+				coroutine.wait(0.25)
+				self:DoMelee(ent,true)
+				self:DoAnimation(self.CrouchIdleAnim)
+				coroutine.wait(0.25)
+				--print("We are done")
+				self:SetEnemy(nil)
+				self:DoAnimation(self.IdleAnim)
+			end
+			self.ThrownGrenades = grenades
+		end
+	end
 	self:PostCombatChecks()
 	self:FollowingPlayerChecks()
 	if math.random(1,2) == 1 then
@@ -391,7 +444,7 @@ function ENT:MarineIdle()
 		return self:VehicleIdle()
 	end
 	--print(table.Count(self.SeenInterestingEntities))
-	if table.Count(self.SeenInterestingEntities) > 0 then
+	if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] and table.Count(self.SeenInterestingEntities) > 0 then
 		--print("We saw something interesting before")
 		local bool, ent = table.Random(self.SeenInterestingEntities)
 		--print(bool,ent)
@@ -452,7 +505,7 @@ function ENT:MarineIdle()
 	self:PostCombatChecks()
 	self:FollowingPlayerChecks()
 	if math.random(1,2) == 1 then
-		self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+		self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-45,45),0)):Forward()*50)
 		timer.Simple( math.random(2,3), function()
 			if IsValid(self) then self.SpecificGoal = nil end
 		end )
@@ -1913,7 +1966,7 @@ function ENT:DoIdle()
 			timer.Simple( self:SequenceDuration(seq)/2, function()
 				if IsValid(self) then
 					if math.random(1,2) == 1 then
-						self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+						self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-45,45),0)):Forward()*50)
 						timer.Simple( math.random(2,3), function()
 							if IsValid(self) then self.SpecificGoal = nil end
 						end )
@@ -1943,7 +1996,7 @@ function ENT:DoIdle()
 				timer.Simple( self:SequenceDuration(seq)/2, function()
 					if IsValid(self) then
 						if math.random(1,2) == 1 then
-							self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+							self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-45,45),0)):Forward()*50)
 							timer.Simple( math.random(2,3), function()
 								if IsValid(self) then self.SpecificGoal = nil end
 							end )
@@ -1967,7 +2020,7 @@ function ENT:DoIdle()
 		timer.Simple( self:SequenceDuration(seq)/2, function()
 			if IsValid(self) then
 				if math.random(1,2) == 1 then
-					self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+					self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-45,45),0)):Forward()*50)
 					timer.Simple( math.random(2,3), function()
 						if IsValid(self) then self.SpecificGoal = nil end
 					end )

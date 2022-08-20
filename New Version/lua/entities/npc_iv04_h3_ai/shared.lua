@@ -2616,7 +2616,7 @@ end
 
 -------- Melee functions
 
-function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use the ent argument when calling this
+function ENT:DoMelee(ent,dontwait) -- In case you want to melee a specific entity, use the ent argument when calling this
 	if self.DisableMelee then return end
 	if !coroutine.running() then 
 		local func = function()
@@ -2673,14 +2673,16 @@ function ENT:DoMelee(ent) -- In case you want to melee a specific entity, use th
 	end )
 	if self.MeleeIsGesture then
 		self:DoGestureSeq(id)
-		coroutine.wait(len)
+		if !dontwait then
+			coroutine.wait(len)
+		end
 	else
 		self:PlaySequenceAndPWait(anim,1,self:GetPos())
 	end
 	if self.GoingForSneakKill then
 		self.GoingForSneakKill = false
 		self.HaltShoot = false
-	else
+	elseif !dontwait then
 		self:ResetAI()
 	end
 end
@@ -2746,6 +2748,8 @@ function ENT:GetAimVector(pos) -- Where to direct the aiming
 	local dir -- Variable that can be modified
 	if self.SpecificGoal then -- If there's a specific goal to the nextbot
 		dir = (self.SpecificGoal-self:GetShootPos()):GetNormalized()
+		--print("specific goal!")
+		--debugoverlay.Sphere(self.SpecificGoal,5,5)
 	end
 	if IsValid(self.Enemy) then -- If there's an enemy alive
 		local p = self.Enemy:WorldSpaceCenter()
