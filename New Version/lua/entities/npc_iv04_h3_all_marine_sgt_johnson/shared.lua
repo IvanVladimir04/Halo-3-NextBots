@@ -41,6 +41,7 @@ function ENT:DoInit()
 	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
 	--print(self:GetName(),self.Weapon:GetName())
 	self.Unkillable = GetConVar("halo_3_nextbots_ai_heroes"):GetBool()
+	self.RemovableHeadBodygroups = true
 end
 
 list.Set( "NPC", "npc_iv04_h3_all_marine_sgt_johnson", {
