@@ -15,6 +15,8 @@ CreateConVar( "halo_3_nextbots_ai_great_schism", 1, FCVAR_ARCHIVE, "Allow funny 
 CreateConVar( "halo_3_nextbots_ai_flail", 1, FCVAR_ARCHIVE, "Allow them to flail?" )
 CreateConVar( "halo_3_nextbots_ai_flood_feral", 0, FCVAR_ARCHIVE, "Are the flood feral?" )	
 CreateConVar( "halo_3_nextbots_ai_flood_infection_climb", 1, FCVAR_ARCHIVE, "Allow infection forms to climb?" )
+
+CreateConVar( "halo_3_nextbots_ai_skull_catch", 0, FCVAR_ARCHIVE, "Catch skull" )
 --else
 	--print("This is the second time I do this, if it's your second time too then you are a disappointment to me")
 --end

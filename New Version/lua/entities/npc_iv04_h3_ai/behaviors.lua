@@ -70,7 +70,7 @@ function ENT:MarineInitialize()
 	}
 	self.IsHuman = true
 	self.AllowVehicleFunctions = true
-	if !self.HeadshotImmune then
+	if !self.HeadshotImmune and self.AllowHelmetDrop then
 		self.RemovableHeadBodygroups = true
 		self.RemovableBodygroup = 6
 		self.RemovableChange = 0
@@ -93,6 +93,10 @@ function ENT:MarineInitialize()
 end
 function ENT:EliteInitialize()
 	--self.SpawnWithWeaponDrawn = true
+	self.InterestingEntities = {
+		["prop_ragdoll"] = true,
+		["prop_dynamic"] = true
+	}
 	self.AllowClimbing = true
 	self.MoveSpeed = 100
 	self.MoveSpeedMultiplier = 2
@@ -234,11 +238,20 @@ function ENT:BruteInitialize()
 				self:SetBodygroup(3,5)
 				self:SetBodygroup(4,5)
 				self.DisableLeap = false
+				self.AllowBerserk = false
 			end
 		end
 	end
 end
 function ENT:GruntInitialize()
+	self.ClassesWeight = {
+		[1] = 1,
+		[2] = 5,
+		[3] = 10,
+		[4] = 25
+	}
+	self.FleeOnHigherRankDead = true
+	self.SpawnWithWeaponDrawn = true
 	self.BloodDecal = "iv04_halo_3_blood_splat_grunt"
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 30
@@ -451,6 +464,7 @@ function ENT:MarineIdle()
 		self.DiscardedInterestingEntities[ent] = true
 		self.SeenInterestingEntities[ent] = nil
 		--print("We discarded it off our lists of to check",ent:GetModel(),ent.Faction)
+		self:DrawnWeaponChecks()
 		if ent.Faction == self.Faction and !ent.Checked then
 			--print("It was a friend")
 			if #self:GetSquad():GetMembers() > 1 and !ent.MarkedForRevision then
@@ -472,7 +486,7 @@ function ENT:MarineIdle()
 				coroutine.wait( math.random(2,3) )
 				self:DoTransitionAnim("Crouch_Idle_2_Idle")
 			end
-		elseif !ent.WasShot and isstring(ent.Faction) then
+		elseif !ent.WasShot and isstring(ent.Faction) and !ent.Checked then
 			--print("It wasn't a friend")
 			--print("We'll go to its position")
 			local spot = self:FindClosePos(ent:GetPos(),128)
@@ -485,6 +499,7 @@ function ENT:MarineIdle()
 				end
 			end )
 			self:Speak("chkfoebdy")
+			self.DisableOverwriteCurrentVoiceLine = true
 			local grenades = self.ThrownGrenades
 			self.ThrownGrenades = 1000
 			ent.WasShot = true
@@ -499,6 +514,7 @@ function ENT:MarineIdle()
 				--print("We are done")
 				self:SetEnemy(nil)
 			end
+			self.DisableOverwriteCurrentVoiceLine = false
 			self.ThrownGrenades = grenades
 		end
 	end
@@ -518,6 +534,68 @@ function ENT:EliteIdle()
 	if can then
 		self:EnterVehicle(veh)
 		return self:VehicleIdle()
+	end
+	if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] and table.Count(self.SeenInterestingEntities) > 0 then
+		--print("We saw something interesting before")
+		local bool, ent = table.Random(self.SeenInterestingEntities)
+		--print(bool,ent)
+		self.DiscardedInterestingEntities[ent] = true
+		self.SeenInterestingEntities[ent] = nil
+		--print("We discarded it off our lists of to check",ent:GetModel(),ent.Faction)
+		if ent.Faction == self.Faction and !ent.Checked then
+			--print("It was a friend")
+			self:DrawnWeaponChecks()
+			if #self:GetSquad():GetMembers() > 1 and !ent.MarkedForRevision then
+				self:Speak("ask_chkallybdy")
+				ent.MarkedForRevision = true
+			else
+				self.SpecificGoal = ent:WorldSpaceCenter()
+				local spot = self:FindClosePos(ent:GetPos(),64)
+				ent.Checked = true
+				self:GoToPosition(spot,self.RunCalmAnim[math.random(#self.RunCalmAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
+				self.SpecificGoal = ent:WorldSpaceCenter()
+				self:DoTransitionAnim("Idle_2_Crouch")
+				self:ResetSequence(self:TableRandom(self.CrouchIdleAnim))
+				if math.random(1,2) == 1 then
+					self:Speak("tchkallybdy")
+				else
+					self:Speak("chckallybdy")
+				end
+				coroutine.wait( math.random(2,3) )
+				self:DoTransitionAnim("Crouch_Idle_2_Idle")
+			end
+		elseif !ent.WasShot and isstring(ent.Faction) and !ent.Checked then
+			--print("It wasn't a friend")
+			--print("We'll go to its position")
+			self:DrawnWeaponChecks()
+			local spot = self:FindClosePos(ent:GetPos(),128)
+			self:GoToPosition(spot,self.RunCalmAnim[math.random(#self.RunCalmAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
+			--print("We are next to it")
+			self.SpokeShoot = true
+			timer.Simple( math.random(15,20), function()
+				if IsValid(self) then
+					self.SpokeShoot = false
+				end
+			end )
+			self:Speak("chkfoebdy")
+			self.DisableOverwriteCurrentVoiceLine = true
+			local grenades = self.ThrownGrenades
+			self.ThrownGrenades = 1000
+			ent.WasShot = true
+			self.SpecificGoal = ent:WorldSpaceCenter()
+			coroutine.wait(0.5)
+			for i = 1, math.random(1,2) do
+				self:SetEnemy(ent)
+				--print("It's our target")
+				self.LastTimeWeShot = CurTime()
+				self.Weapon:AI_PrimaryAttack()
+				coroutine.wait(1.5)
+				--print("We are done")
+				self:SetEnemy(nil)
+			end
+			self.DisableOverwriteCurrentVoiceLine = false
+			self.ThrownGrenades = grenades
+		end
 	end
 	self:PostCombatChecks()
 	self:FollowingPlayerChecks()
@@ -1668,6 +1746,11 @@ function ENT:GruntBehavior(ent,range)
 	end
 	--print(los, !self.DoneMelee, range < self.MeleeRange^2, range, self.MeleeRange^2, math.sqrt(range), self.MeleeRange )
 	--self:MeleeChecks(los,range)
+	if self.InKamikaze then
+		--print("kamikaze", self)
+		self:GoToPosition( ent, self:TableRandom(self.FleePistolMoveAnim), (self.MoveSpeed*self.MoveSpeedMultiplier*2), { repath = 0.5 , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then if IsValid(self.Grenade1) then self.Grenade1.kt = CurTime()+0.25 self.Grenade2.kt = CurTime()+0.25 end end end }, self.FleePistolIdleAnim )
+		return
+	end
 	self:DodgeChecks(ent,los)
 	if self.AllowGrenade and range < self.GrenadeRange^2 and range > (self.MeleeRange*2)^2 then
 		self.CanThrowGrenade = true

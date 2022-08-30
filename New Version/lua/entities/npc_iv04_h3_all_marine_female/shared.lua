@@ -12,6 +12,7 @@ ENT.Relationship = 1
 
 ENT.FriendlyToPlayers = true
 
+ENT.AllowHelmetDrop = true
 --ENT.SpawnWithWeaponDrawn = true
 
 ENT.AITemplate = "MARINE"

@@ -477,6 +477,7 @@ function ENT:OnInitialize()
 	self.AIType = GetConVar("halo_3_nextbots_ai_type"):GetString() or self.AIType
 	self.EnableFlashlight = GetConVar("halo_3_nextbots_ai_flashlights"):GetInt() == 1 or false
 	self.DisableCorpseShooting = GetConVar("halo_3_nextbots_ai_shootcorpses"):GetInt() == 1 or false
+	self.CatchModifier = GetConVar("halo_3_nextbots_ai_skull_catch"):GetInt()
 	if self.PossibleWeapons then
 		local wep = table.Random(self.PossibleWeapons)
 		self:Give(wep,GetConVar("halo_3_nextbots_ai_combat_ready"):GetInt() == 1 or self.SpawnWithWeaponDrawn)
@@ -934,6 +935,8 @@ function ENT:SetupAnimations()
 					self.EvadeRightAnim = "Evade_Right"
 					self.GrenadeAnim = {"Throw_Grenade"}
 					self.AirAnim = "Airborne_Combat_Pistol"
+					self.FleePistolMoveAnim = "Flee_Pistol_Move_Front"
+					self.FleePistolIdleAnim = "Flee_Pistol_Idle"
 					self.DeathFrontAnims = {
 						["Head"] = {"Die_Front_Head_1","Die_Front_Head_2"},
 						["Gut"] =  {"Die_Front_Gut_3","Die_Front_Gut_1","Die_Front_Gut_2"}
@@ -1203,6 +1206,8 @@ function ENT:SetupAnimations()
 					self.DiveLeftAnim = "dive_left"
 					self.DiveRightAnim = "dive_right"
 					self.AirAnim = "Airborne_Combat_Missile"
+					self.FleePistolMoveAnim = "Flee_Pistol_Move_Front"
+					self.FleePistolIdleAnim = "Flee_Pistol_Idle"
 					self.DeathFrontAnims = {
 						["Head"] = {"Die_Front_Head_1","Die_Front_Head_2"},
 						["Gut"] =  {"Die_Front_Gut_3","Die_Front_Gut_1","Die_Front_Gut_2"}
@@ -2585,8 +2590,15 @@ function ENT:TransitionArrival( typ, enemy )
 	return str
 end
 
+function ENT:DrawnWeaponChecks()
+	if !self.IsWeaponDrawn then
+		self:AdjustWeapon(self.Weapon,true)
+		self:PlaySequenceAndWait(self:TableRandom(self.DrawSlowWeaponAnim))
+	end
+end
+
 function ENT:Speak(voice,character)
-	if self.Infected then return end
+	if self.Infected or self.DisableOverwriteCurrentVoiceLine then return end
 	local character = character or self.Voices[self.VoiceType]
 	--print(voice,character,self.VoiceType)
 	if character and character[voice] and istable(character[voice]) then
@@ -3395,6 +3407,51 @@ function ENT:OnPlasmaNadeStuck()
 	self:Speak("OnPanic")
 end
 
+function ENT:Kamikaze()
+	self.InKamikaze = true
+	self.Weapon:SetNoDraw(true)
+	self.DisableCorpseShooting = true
+	timer.Simple( 0.5, function()
+		if IsValid(self) then
+			local grenade1 = ents.Create("astw2_halo3_plasma_thrown")
+			local att = self:GetAttachment(1)
+			grenade1:SetPos(att.Pos)
+			grenade1:SetAngles(att.Ang)
+			grenade1:SetOwner(self)
+			grenade1.ImpactFuse = false
+			grenade1.kt = CurTime()+10
+			grenade1.FuseTime = 10
+			grenade1:Spawn()
+			grenade1:Activate()
+			grenade1:SetMoveType( MOVETYPE_NONE )
+			grenade1:SetParent( self, 1 )
+			grenade1.OPC = grenade1.PhysicsCollide
+			grenade1.PhysicsCollide = function() end
+			grenade1.BlastRadius = 200
+			grenade1.BlastDMG = 80
+			self.Grenade1 = grenade1
+			local grenade2 = ents.Create("astw2_halo3_plasma_thrown")
+			local att2 = self:GetAttachment(2)
+			grenade2:SetPos(att2.Pos)
+			grenade2:SetAngles(att2.Ang)
+			grenade2:SetOwner(self)
+			grenade2.ImpactFuse = false
+			grenade2.FuseTime = 10
+			grenade2.kt = CurTime()+10
+			grenade2:Spawn()
+			grenade2:Activate()
+			grenade2:SetMoveType( MOVETYPE_NONE )
+			grenade2:SetParent( self, 2 )
+			grenade2.OPC = grenade1.PhysicsCollide
+			grenade2.PhysicsCollide = function() end
+			grenade2.BlastRadius = 200
+			grenade2.BlastDMG = 80
+			self.Grenade2 = grenade2
+		end
+	end )
+	self:PlaySequenceAndWait("Kamikaze_Start")
+end
+
 function ENT:OnOtherKilled( victim, info )
 	if victim == self then return end
 	if self.AnimBusy then return end
@@ -3478,37 +3535,62 @@ function ENT:OnOtherKilled( victim, info )
 						table.insert(self.StuffToRunInCoroutine,func)
 						self:ResetAI()
 					elseif !self.ItsBerserkinTime then
-						local AI = self.AIType
-						self.AIType = "Defensive"
-						local func = function()
-							if self.IsSergeant and !self.IsInVehicle then
-								self:Speak("newordr_fallback")
-								self:GetSquad():Signal("Retreat",self)
-								self:PlaySequenceAndMove(self:LookupSequence(self.FallbackAnim),1,self:GetForward()*-1,50,0.7)
+						if self.FleeOnHigherRankDead and isnumber(victim.Rank) and !self.DoingKamikaze and !self.Fleeing then
+							local weight = self.ClassesWeight[victim.Rank]
+							if !weight then return end
+							local r1 = math.random(100)
+							local result = r1<weight
+							if result then
+								local func = function()
+									self:Speak("kamikaze")
+									self.HasMeleeWeapon = true
+									--if IsValid(self.Weapon) then
+									--	self.Weapon:Remove()
+									--end
+									self:Kamikaze()
+								end
+								table.insert(self.StuffToRunInCoroutine,func)
+								self:ResetAI()
 							else
-								--print(HRHS:WasSignalGiven("Retreat",3))
-								if !self.FollowingRetreatOrder and self:GetSquad():WasSignalGiven("Retreat",3) and IsValid(self:GetSquad():GetCaller("Retreat")) and (!IsValid(self:GetSquad():GetCaller("Retreat").S1) or !IsValid(self:GetSquad():GetCaller("Retreat").S2) ) then
-									local leader = self:GetSquad():GetCaller("Retreat")
-									local goal = leader:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
-									local navs = navmesh.Find(goal,256,100,20)
-									local nav = navs[math.random(#navs)]
-									local pos = goal
-									if nav then pos = nav:GetRandomPoint() end
-									self.FollowingRetreatOrder = true
-									if IsValid(leader.S1) then leader.S2 = self else leader.S1 = self end
-									timer.Simple( math.random(4,10), function() if IsValid(self) then self.FollowingRetreatOrder = false end end )
-									self:MoveToPosition( pos, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
-									if leader.S1 == self then leader.S1 = nil elseif leader.S2 == self then leader.S2 = nil end
+								if r1<(weight*2) then
+									self:Speak("rtrt_ldrdead")
+								else
+								
 								end
 							end
-						end
-						timer.Simple( math.random(20,30), function()
-							if IsValid(self) then
-								self.AIType = AI
+						else
+							local AI = self.AIType
+							self.AIType = "Defensive"
+							local func = function()
+								if self.IsSergeant and !self.IsInVehicle then
+									self:Speak("newordr_fallback")
+									self:GetSquad():Signal("Retreat",self)
+									self:PlaySequenceAndMove(self:LookupSequence(self.FallbackAnim),1,self:GetForward()*-1,50,0.7)
+								else
+									--print(HRHS:WasSignalGiven("Retreat",3))
+									if !self.FollowingRetreatOrder and self:GetSquad():WasSignalGiven("Retreat",3) and IsValid(self:GetSquad():GetCaller("Retreat")) and (!IsValid(self:GetSquad():GetCaller("Retreat").S1) or !IsValid(self:GetSquad():GetCaller("Retreat").S2) ) then
+										local leader = self:GetSquad():GetCaller("Retreat")
+										local goal = leader:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
+										local navs = navmesh.Find(goal,256,100,20)
+										local nav = navs[math.random(#navs)]
+										local pos = goal
+										if nav then pos = nav:GetRandomPoint() end
+										self.FollowingRetreatOrder = true
+										if IsValid(leader.S1) then leader.S2 = self else leader.S1 = self end
+										timer.Simple( math.random(4,10), function() if IsValid(self) then self.FollowingRetreatOrder = false end end )
+										self:MoveToPosition( pos, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+										if leader.S1 == self then leader.S1 = nil elseif leader.S2 == self then leader.S2 = nil end
+									end
+								end
 							end
-						end )
-						table.insert(self.StuffToRunInCoroutine,func)
-						self:ResetAI()
+							timer.Simple( math.random(20,30), function()
+								if IsValid(self) then
+									self.AIType = AI
+								end
+							end )
+							table.insert(self.StuffToRunInCoroutine,func)
+							self:ResetAI()
+						end
 					end
 				else
 					if victim:IsPlayer() then

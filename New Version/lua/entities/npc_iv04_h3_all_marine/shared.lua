@@ -16,6 +16,8 @@ ENT.AITemplate = "MARINE"
 
 ENT.Faction = "FACTION_ALLIANCE"
 
+ENT.AllowHelmetDrop = true
+
 --ENT.SpawnWithWeaponDrawn = true
 
 ENT.PossibleWeapons = {
