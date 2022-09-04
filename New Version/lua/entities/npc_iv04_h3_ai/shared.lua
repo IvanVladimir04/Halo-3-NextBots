@@ -376,6 +376,7 @@ ENT.MaxShield = 60
 
 ENT.BloodType = DONT_BLEED
 
+ENT.BackpackHealth = 20
 ENT.AccumulatedDamage = 0 -- For flinching
 ENT.AccumulatedBleedDamage = 0 -- For bleeding
 ENT.DamageThreshold = 20
@@ -2134,7 +2135,6 @@ function ENT:OnTraceAttack( info, dir, trace )
 	if self:Health() - info:GetDamage() <= 0 then self.DeathHitGroup = trace.HitGroup return end
 	if self.AnimBusy then return end
 	local hg = trace.HitGroup
-	--print(hg)
 	if self.WeakHitGroup and hg != self.WeakHitGroup then
 		info:SetDamage(0)
 	end
@@ -2144,6 +2144,26 @@ function ENT:OnTraceAttack( info, dir, trace )
 	self.AccumulatedDamage = self.AccumulatedDamage+info:GetDamage()
 	local behind = (dif > 90 and dif < 270)
 	--print(behind)
+	if self.BackpackModel and trace.HitGroup == self.BackpackHitGroup then
+		self.BackpackHealth = self.BackpackHealth-math.abs(info:GetDamage())
+		--print(1,self.BackpackHealth)
+		if self.BackpackHealth < 0 then
+			--print(2)
+			self:SetBodygroup(2,1)
+			local prop = ents.Create( "prop_physics" )
+			prop:SetModel( self.BackpackModel )
+			prop:SetPos(self:GetAttachment(self:LookupAttachment(self.BackpackAttachment)).Pos)
+			prop:Spawn()
+			prop:SetSkin(self.Rank)
+			self:EmitSound("halo_reach/characters/grunt/grunt_backpack_steam/grunt_backpack_steam"..math.random(1,3)..".ogg",100)
+			ParticleEffectAttach("iv04_halo_reach_grunt_methane_leak_violent",PATTACH_POINT_FOLLOW,self,self:LookupAttachment(self.BackpackAttachment))
+			timer.Simple( 30, function()
+				if IsValid(prop) then
+					prop:Remove()
+				end
+			end )
+		end
+	end
 	if !self.IsInVehicle and self.AccumulatedDamage > self.DamageThreshold then
 		self.AccumulatedDamage = 0
 		if self.FlinchHitGroups[hg] then
@@ -3429,6 +3449,7 @@ function ENT:Kamikaze()
 			grenade1.PhysicsCollide = function() end
 			grenade1.BlastRadius = 200
 			grenade1.BlastDMG = 80
+			grenade1.IsKamikazeGren = true
 			self.Grenade1 = grenade1
 			local grenade2 = ents.Create("astw2_halo3_plasma_thrown")
 			local att2 = self:GetAttachment(2)
@@ -3446,10 +3467,62 @@ function ENT:Kamikaze()
 			grenade2.PhysicsCollide = function() end
 			grenade2.BlastRadius = 200
 			grenade2.BlastDMG = 80
+			grenade2.IsKamikazeGren = true
 			self.Grenade2 = grenade2
 		end
 	end )
 	self:PlaySequenceAndWait("Kamikaze_Start")
+end
+
+function ENT:DropKamikazeGrenades()
+	if IsValid(self.Grenade1) then		
+		self.Grenade1:SetParent(nil)
+		self.Grenade1:SetMoveType( MOVETYPE_VPHYSICS )
+		self.Grenade1:Initialize()
+		self.Grenade1.PhysicsCollide = self.Grenade1.OPC
+		self.Grenade1.kt = CurTime()+2
+	end
+	if IsValid(self.Grenade2) then
+		self.Grenade2:SetParent(nil)
+		self.Grenade2:SetMoveType( MOVETYPE_VPHYSICS )
+		self.Grenade2:Initialize()
+		self.Grenade2.PhysicsCollide = self.Grenade2.OPC
+		self.Grenade2.kt = CurTime()+2
+	end
+end
+
+function ENT:Flee(ent)
+	ent = ent or self.Enemy
+	if !IsValid(ent) then return end
+	local navs = navmesh.Find( self:GetPos(), 1024, 100, 10 )
+	local tbl = {}
+	for k, nav in pairs(navs) do
+		if !nav:IsVisible( self:WorldSpaceCenter() ) then
+			tbl[nav:GetID()] = nav
+		end
+	end
+	if table.Count(tbl) > 0 or #tbl > 0 then
+		self.Hiding = true
+		local area = table.Random(tbl)
+		local goal = area:GetRandomPoint()
+		local should, dif = self:ShouldFace(goal)
+		if should then self:Turn(dif,false,true) end
+		self:GoToPosition( goal, self.FleePistolMoveAnim, (self.MoveSpeed*self.MoveSpeedMultiplier*2), {facepath = true} )
+		timer.Simple( 5, function()
+			if IsValid(self) then
+				self.Hiding = false
+			end
+		end )
+	end
+	if !self.Hiding then
+		local nav = table.Random(navs)
+		local goal = nav:GetRandomPoint()
+		local should, dif = self:ShouldFace(goal)
+		if should then self:Turn(dif,false,true) end
+		self:GoToPosition( goal, self.FleePistolMoveAnim, (self.MoveSpeed*self.MoveSpeedMultiplier*2), {facepath = true} )
+	end
+	if math.random(1,2) == 1 then self:PlaySequenceAndWait(self.FleePistolIdleAnim) end
+	self:Speak("flee")
 end
 
 function ENT:OnOtherKilled( victim, info )
@@ -3534,7 +3607,7 @@ function ENT:OnOtherKilled( victim, info )
 						end
 						table.insert(self.StuffToRunInCoroutine,func)
 						self:ResetAI()
-					elseif !self.ItsBerserkinTime then
+					elseif !self.ItsBerserkinTime and !self.Spooked and !self.InKamikaze then
 						if self.FleeOnHigherRankDead and isnumber(victim.Rank) and !self.DoingKamikaze and !self.Fleeing then
 							local weight = self.ClassesWeight[victim.Rank]
 							if !weight then return end
@@ -3552,10 +3625,19 @@ function ENT:OnOtherKilled( victim, info )
 								table.insert(self.StuffToRunInCoroutine,func)
 								self:ResetAI()
 							else
+								if self.SawAlliesDie then 
+									weight=weight+20
+								end
 								if r1<(weight*2) then
 									self:Speak("rtrt_ldrdead")
-								else
-								
+									self.Spooked = true
+									timer.Simple( math.random(5,10), function()
+										if IsValid(self) then
+											self.Spooked = false
+										end
+									end )
+									self.DisableWeaponBehavior = true
+									self:ResetAI()
 								end
 							end
 						else
@@ -3961,7 +4043,7 @@ function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight w
 end
 
 function ENT:AvoidGrenade(grenade,toolate)
-	if self.AnimBusy or self.DetectedAGrenade or grenade:GetOwner() == self then return end
+	if self.AnimBusy or self.DetectedAGrenade or grenade:GetOwner() == self or grenade.IsKamikazeGren	then return end
 	self.DetectedAGrenade = true
 	timer.Simple( math.random(2,3), function()
 		if IsValid(self) and self.DetectedAGrenade then
@@ -4139,6 +4221,7 @@ function ENT:OnKilled( dmginfo ) -- When killed
 	self.BehaveThread = nil
 	self.AnimBusy = false
 	self:SetEnemy(nil)
+	self:DropKamikazeGrenades()
 	if self.ExplodesOnKilled then
 		ParticleEffectAttach(self.DeathParticle,PATTACH_ABSORIGIN_FOLLOW,self,0)
 		if IsValid(self.InfectVictim) then
@@ -4432,7 +4515,7 @@ function ENT:BodyUpdate()
 		if self.IsInVehicle then
 			if !self.Transitioned and self.VehicleRole == "Gunner" then
 				self.VehicleEyeAng = Angle(an.p,an.y,0)
-				debugoverlay.Line(self:WorldSpaceCenter(),self:WorldSpaceCenter()+(self.VehicleEyeAng:Forward()*512),5,5)
+				--debugoverlay.Line(self:WorldSpaceCenter(),self:WorldSpaceCenter()+(self.VehicleEyeAng:Forward()*512),5,5)
 				--[[local vy = math.AngleDifference(self.Vehicle:GetAngles().y+self.LTPP,y)
 				local vp = math.AngleDifference(self.Vehicle:GetAngles().p+self.LTP,p)
 				self.VehicleEyeAng = Angle(self.LTP,self.LTPP,0)

@@ -250,9 +250,13 @@ function ENT:GruntInitialize()
 		[3] = 10,
 		[4] = 25
 	}
+	self.DisableMelee = true
 	self.FleeOnHigherRankDead = true
 	self.SpawnWithWeaponDrawn = true
+	self.BackpackHitGroup = 2
+	self.BackpackModel = "models/halo_3/characters/covenant/grunt_backpack.mdl"
 	self.BloodDecal = "iv04_halo_3_blood_splat_grunt"
+	self.BackpackAttachment = "methane_fx"
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 30
 	self.MoveSpeedMultiplier = 4
@@ -262,6 +266,7 @@ function ENT:GruntInitialize()
 	self.RemovableBodygroup = 3
 	self.RemovableChange = 1
 	self.RemovableHeadPartModel = "models/halo_3/characters/covenant/grunt_gasmask.mdl"
+	self:SetCollisionBounds(Vector(20,20,60),Vector(-20,-20,0))
 	--print(self.Rank)
 end
 function ENT:JackalInitialize()
@@ -780,6 +785,7 @@ end
 
 function ENT:GenericWeaponThink()
 	if self:Health() < 1 then return end
+	if self.DisableWeaponBehavior then return end
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
@@ -1739,6 +1745,12 @@ function ENT:GruntBehavior(ent,range)
 	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
 	if !self.DistToTarget then self.DistToTarget = range end
 	if IsValid(ent) and !self.IsWeaponDrawn and !self.ItsBerserkinTime then self:AdjustWeapon(self.Weapon,true) end
+	if self.Spooked then
+		self:Flee()
+		return
+	else
+		self.DisableWeaponBehavior = false
+	end
 	local can, veh = self:CanEnterAVehicle()
 	if can then
 		self:EnterVehicle(veh)
@@ -1748,7 +1760,7 @@ function ENT:GruntBehavior(ent,range)
 	--self:MeleeChecks(los,range)
 	if self.InKamikaze then
 		--print("kamikaze", self)
-		self:GoToPosition( ent, self:TableRandom(self.FleePistolMoveAnim), (self.MoveSpeed*self.MoveSpeedMultiplier*2), { repath = 0.5 , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then if IsValid(self.Grenade1) then self.Grenade1.kt = CurTime()+0.25 self.Grenade2.kt = CurTime()+0.25 end end end }, self.FleePistolIdleAnim )
+		self:GoToPosition( ent, self:TableRandom(self.FleePistolMoveAnim), (self.MoveSpeed*self.MoveSpeedMultiplier*2), { repath = 0.5 , maxage = 15, callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then if IsValid(self.Grenade1) then self.Grenade1.kt = CurTime()+0.25 self.Grenade2.kt = CurTime()+0.25 end end end }, self.FleePistolIdleAnim )
 		return
 	end
 	self:DodgeChecks(ent,los)
