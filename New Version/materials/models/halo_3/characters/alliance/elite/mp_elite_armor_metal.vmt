@@ -2,6 +2,7 @@
 {
 	"$basetexture" "models/halo_3/characters/alliance/elite/mp_newelite_diffuse"
 	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_elite_zbump"
+	"$normalmapalphaenvmapmask"	"1"
 	"$detail"  "models/halo_3/characters/alliance/elite/elite_newarmor_detail"
 	"$detailblendmode"			"0.00"
 	"$detailblendfactor"			"2.00"
@@ -19,7 +20,7 @@
 	"$rimlightexponent"	"15"
 	"$rimlightboost"	"5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
-	"$envmaptint"	"[0.1 0.1 0.1]"
+	"$envmaptint"	"[0.02 0.02 0.02]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$nodecal"	"1"
 	Proxies

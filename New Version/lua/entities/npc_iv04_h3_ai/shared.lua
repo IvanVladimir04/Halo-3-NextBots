@@ -4222,6 +4222,7 @@ function ENT:OnKilled( dmginfo ) -- When killed
 	self.AnimBusy = false
 	self:SetEnemy(nil)
 	self:DropKamikazeGrenades()
+	
 	if self.ExplodesOnKilled then
 		ParticleEffectAttach(self.DeathParticle,PATTACH_ABSORIGIN_FOLLOW,self,0)
 		if IsValid(self.InfectVictim) then
@@ -4247,6 +4248,7 @@ function ENT:DetermineDeathAnim( info )
 	--print(self.DeathHitGroup,"a")
 	if self.DeathHitGroup then
 		if self.DeathHitGroup == 1 then
+			self:Speak("death_headshot")
 			--print(y)
 			if y <= 135 and y > 45 then -- Left
 				anim = self:TableRandom(self.DeathLeftAnims["Head"])
@@ -4258,6 +4260,7 @@ function ENT:DetermineDeathAnim( info )
 				anim = self:TableRandom(self.DeathBackAnims["Head"])
 			end
 		else
+			self:Speak("dth_mjr")
 			if y <= 135 and y > 45 then -- Right
 				anim = self:TableRandom(self.DeathRightAnims["Gut"])
 			elseif y < 225 and y > 135 then -- Front
@@ -4339,7 +4342,7 @@ function ENT:DoKilledAnim()
 		end
 		if self.KilledDmgInfo:GetDamage() <= 150 then
 			--print("death anim")
-			self:Speak("OnDeath")
+			-- self:Speak("OnDeath")
 			local anim = self:DetermineDeathAnim(self.KilledDmgInfo)
 			--print(anim)
 			if anim == true then 
@@ -4380,7 +4383,7 @@ function ENT:DoKilledAnim()
 			end )
 			self:PlaySequenceAndPWait(anim, 1, self:GetPos())
 		else
-			self:Speak("OnDeathPainful")
+			self:Speak("dth_drama")
 			if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
 				local wep = ents.Create(self.Weapon:GetClass())
 				wep:SetPos(self.Weapon:GetPos())

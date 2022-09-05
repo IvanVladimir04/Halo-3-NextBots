@@ -2,6 +2,7 @@
 {
 	"$basetexture" "models/halo_3/characters/alliance/elite/mp_blade_diffuse"
 	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_blade_zbump"
+	"$normalmapalphaenvmapmask"	"1"
 	"$blendtintbybasealpha" "1"
 	"$selfillum"	"1"
 	"$selfillummask"	"models/halo_3/characters/alliance/elite/mp_blade_illumination"

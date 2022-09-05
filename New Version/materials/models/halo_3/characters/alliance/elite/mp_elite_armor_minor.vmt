@@ -2,9 +2,10 @@
 {
 	"$basetexture" "models/halo_3/characters/alliance/elite/mp_newelite_diffuse"
 	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_elite_zbump"
+	"$normalmapalphaenvmapmask"	"1"
 	"$detail"  "models/halo_3/characters/alliance/elite/elite_newarmor_detail"
 	"$detailblendmode"			"0.00"
-	"$detailblendfactor"			"2.00"
+	"$detailblendfactor"			"8.00"
 	"$detailscale"			"15.00"
 	"$blendtintbybasealpha" "1"
 	"$nodecal"		"1"
@@ -15,7 +16,7 @@
 	"$phongfresnelranges" "[.5 .85 6]"
 	"$model" 1
 	"$phongalbedotint" "1"
-	$ambientocclusion 1
+	"$ambientocclusion"	 1
 	"$rimlight"	"1"
 	"$rimlightexponent"	"15"
 	"$rimlightboost"	"5"
