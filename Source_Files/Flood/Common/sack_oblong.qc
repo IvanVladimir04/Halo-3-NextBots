@@ -12,7 +12,7 @@ $bodygroup "studio"
 }
 
 
-$surfaceprop "alienflesh"
+$surfaceprop "zombieflesh"
 
 $contents "solid"
 

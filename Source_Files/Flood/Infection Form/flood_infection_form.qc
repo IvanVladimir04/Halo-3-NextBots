@@ -4,7 +4,7 @@ $modelname "halo_3/characters/flood/infection_form.mdl"
 
 $scale	1.065
 $origin 	0 0 0 -90
-$surfaceprop "alienflesh"
+$surfaceprop "zombieflesh"
 
 $cdmaterials "\models\halo_3\characters\flood\infection_form\"
 
