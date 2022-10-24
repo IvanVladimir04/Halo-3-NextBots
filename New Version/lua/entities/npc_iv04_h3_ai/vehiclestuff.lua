@@ -8,21 +8,32 @@ ENT.DriveThese = {
 	--["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = true,
 	--["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = true,
 	--["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = true,
-	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = true
+	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = true,
+	["models/snowysnowtime/vehicles/halo3/warthog.mdl"] = true,
+	["models/snowysnowtime/vehicles/halo3/warthog_troop.mdl"] = true
 }
 
 ENT.PassengerSlots = {
 	--["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = 3,
 	--["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = 3,
 	--["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = 3,
-	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = 3
+	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = 3,
+	["models/snowysnowtime/vehicles/halo3/warthog.mdl"] = 3,
+	["models/snowysnowtime/vehicles/halo3/warthog_troop.mdl"] = 5
+}
+
+ENT.PassengerRoles = {
+	["Passenger"] = true,
+	["Passenger1"] = true
 }
 
 ENT.TurretTypes = {
 	--["models/snowysnowtime/vehicles/haloreach/warthog.mdl"] = "MG",
 	--["models/snowysnowtime/vehicles/haloreach/warthog_gauss.mdl"] = "Gauss",
 	--["models/snowysnowtime/vehicles/haloreach/warthog_rocket.mdl"] = "Rocket",
-	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = "MG"
+	["models/snowysnowtime/halo3/vehicles/warthogs/chain.mdl"] = "MG",
+	["models/snowysnowtime/vehicles/halo3/warthog.mdl"] = "MG",
+	["models/snowysnowtime/vehicles/halo3/warthog_troop.mdl"] = "None"
 }
 
 ENT.TurretAttachments = {
@@ -33,6 +44,16 @@ ENT.TurretAttachments = {
 		["Driver"] = "h3_driver",
 		["Gunner"] = "h3_gunner",
 		["Passenger"] = "h3_passenger1"
+	},
+	["models/snowysnowtime/vehicles/halo3/warthog.mdl"] = {
+		["Driver"] = "hcenpc_seat1",
+		["Gunner"] = "hcenpc_seat2",
+		["Passenger"] = "hcenpc_seat1"
+	},
+	["models/snowysnowtime/vehicles/halo3/warthog_troop.mdl"] = {
+		["Driver"] = "hcenpc_seat1",
+		["Passenger1"] = "hcenpc_seat1",
+		["Passenger"] = "hcenpc_seat2"
 	}
 }
 
@@ -56,14 +77,56 @@ ENT.VehicleSlots = {
 		[1] = "Driver",
 		[2] = "Passenger",
 		[3] = "Gunner"
+	},
+	["models/snowysnowtime/vehicles/halo3/warthog.mdl"] = {
+		[1] = "Driver",
+		[2] = "Passenger",
+		[3] = "Gunner"
+	},
+	["models/snowysnowtime/vehicles/halo3/warthog_troop.mdl"] = {
+		[1] = "Driver",
+		[2] = "Passenger1",
+		[3] = "Passenger",
+		[4] = "Passenger",
+		[5] = "Passenger"
 	}
 }
 
+ENT.VehicleEnterLines = {
+	["models/snowysnowtime/vehicles/halo3/warthog.mdl"] = {
+		[1] = "entervcl_drvr",
+		[3] = "entervcl_trrt",
+		[2] = "entervcl"
+	},
+	["models/snowysnowtime/vehicles/halo3/warthog_troop.mdl"] = {
+		[1] = "entervcl_drvr",
+		[2] = "entervcl",
+		[3] = "entervcl",
+		[4] = "entervcl",
+		[5] = "entervcl"
+	}
+}
+function ENT:OnSeenInterestingEntity(ent)
+	--print("seen something", ent, ent:GetModel(),ent:IsVehicle(), self.DriveThese[ent:GetModel()], !self.SeenVehicles[ent])
+	if ent:IsVehicle() and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
+		self.SeenVehicles[ent] = true
+		self.CountedVehicles = self.CountedVehicles+1
+		--print("seen vehicle")
+	end
+end
+
 function ENT:CanEnterAVehicle()
+	--print(1)
 	if !self.AllowVehicleFunctions then return false end
+	--print(2)
 	local ve
 	local can = false
+	--if ent:IsVehicle() and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
+	--	self.SeenVehicles[ent] = true
+	--	self.CountedVehicles = self.CountedVehicles+1
+	--end
 	for veh, bool in pairs(self.SeenVehicles) do
+		--print(veh,bool)
 		if IsValid(veh) then
 			if !veh.PassengerS then veh.PassengerS = {} end
 			local total = 0
@@ -82,7 +145,31 @@ function ENT:CanEnterAVehicle()
 			self.SeenVehicles[veh] = nil
 		end
 	end
+	--print(can,ve)
 	return can, ve
+end
+
+function ENT:CanEnterVehicle(veh)
+	--print(1)
+	if !self.AllowVehicleFunctions then return false end
+	--print(2)
+	local can = false
+	if IsValid(veh) then
+		if !veh.PassengerS then veh.PassengerS = {} end
+		local total = 0
+		for i = 1, #veh.PassengerS do
+			local pas = veh.PassengerS[i]
+			if IsValid(pas) or ( ( i == 1 and !IsValid(veh:GetDriver()) ) or ( IsValid(veh.pSeat[i-1]) and IsValid(veh.pSeat[i-1]:GetDriver()) ) ) then
+				total = total+1
+			end
+		end
+		if total < self.PassengerSlots[veh:GetModel()] then
+			can = true
+		end
+	else
+		self.SeenVehicles[veh] = nil
+	end
+	return can
 end
 
 --[[
@@ -105,7 +192,7 @@ function ENT:VehicleIdle()
 			self:VehicleStop()
 		end
 		self:PlaySequenceAndWait(self.WarthogDriverIdle)
-	elseif self.VehicleRole == "Passenger" then
+	elseif self.PassengerRoles[self.VehicleRole] then
 		self:PlaySequenceAndWait(self.WarthogPassengerIdle)
 	end
 end
@@ -363,14 +450,24 @@ function ENT:VehicleBehavior(ent,dist)
 		if r == 2 then r = -1 end
 		local goal = ent:GetPos()+self:GetRight()*(r*600)+self:GetForward()*math.random(100,1000)
 		self:Drive(goal,false,nil)
-	elseif self.VehicleRole == "Passenger" then
-		local y = math.AngleDifference(self:GetAngles().y,(ent:WorldSpaceCenter()-self:GetShootPos()):GetNormalized():Angle().y)
-		if math.abs(y) <= 90 then
-			self.Weapon:AI_PrimaryAttack()
+	elseif self.PassengerRoles[self.VehicleRole] then
+		if (self.VehicleRole == "Passenger" and self.SeatNumber == 2) or self.VehicleRole == "Passenger1" then
+			local should, dif = self:ShouldFace(ent,90)
+			if !should then
+				self:Shoot()
+			else
+				self:SetEnemy(nil)
+			end
+			self:PlaySequenceAndWait(self.WarthogPassengerIdle)
 		else
-			self:SetEnemy(nil)
+			local should, dif = self:ShouldFace(ent,45)
+			if !should then
+				self:Shoot()
+			else
+				self:SetEnemy(nil)
+			end
+			self:PlaySequenceAndWait(self.WarthogPassengerIdle)
 		end
-		self:PlaySequenceAndWait(self.WarthogPassengerIdle)
 	end
 end
 
@@ -378,12 +475,9 @@ function ENT:EnterVehicle(veh)
 	local dirs = {
 		[1] = veh:GetRight()*-80,
 		[3] = veh:GetForward()*-160,
-		[2] = veh:GetRight()*80
-	}
-	local voices = {
-		[1] = "entervcl_drvr",
-		[3] = "entervcl_trrt",
-		[2] = "entervcl"
+		[2] = veh:GetRight()*80,
+		[4] = (veh:GetRight()*80)+(veh:GetForward()*-80),
+		[5] = (veh:GetRight()*-80)+(veh:GetForward()*-80)
 	}
 	local seat
 	local clss = veh:GetModel()
@@ -411,9 +505,16 @@ function ENT:EnterVehicle(veh)
 		end
 	end
 	self.VehicleRole = self.VehicleSlots[clss][e]
+	--PrintTable(self.VehicleFunctions)
+	--PrintTable(self.VehicleFunctions[clss])
+	--print(clss,self.VehicleFunctions[clss],self.VehicleFunctions[clss][e],e,self.WarthogGunnerThink)
+	self.VehicleThinkFunction = self.VehicleFunctions[clss][e]
 	--print(self.VehicleRole)
 	self.TurretType = self.TurretTypes[clss]
 	self.TurretAttachment = self.TurretAttachments[clss][self.VehicleRole]
+	self.SeatNumber = e
+	--print("vehicle spotted")
+	local voices = self.VehicleEnterLines[clss]
 	self:Speak(voices[e])
 	self:MoveToPosition(seat:GetPos()+dirs[e],self.RunAnim[math.random(#self.RunAnim)],self.MoveSpeed*self.MoveSpeedMultiplier)
 	--[[local oldfunc = seat.GetDriver
@@ -440,7 +541,6 @@ function ENT:EnterVehicle(veh)
 				end
 				veh.PassengerS[i] = rude
 				self.VehicleRole = "No"
-				self:ResetSequence(self.IdleAnim[math.random(#self.IdleAnim)])
 				return
 			end
 		end
@@ -452,6 +552,7 @@ function ENT:EnterVehicle(veh)
 	self:SetParent(seat)
 	self:SetOwner(seat)
 	seat.AltDriver = self
+	print(self.VehicleRole,self)
 	--print(seat)
 	self.OldMask = self:GetSolidMask()
 	self.TraceMask = MASK_VISIBLE_AND_NPCS
@@ -468,7 +569,7 @@ function ENT:EnterVehicle(veh)
 		self.Weapon:SetNoDraw(true)
 		self:PlaySequenceAndWait(self.WarthogDriverEnter)
 		self:SetAngles(Angle(veh:GetAngles().p,veh:GetAngles().y,0))
-	elseif self.VehicleRole == "Passenger" then
+	elseif self.VehicleRole == "Passenger"  then
 		self:SetAngles(Angle(veh:GetAngles().p,veh:GetAngles().y,0))
 		self:PlaySequenceAndWait(self.WarthogPassengerEnter)
 	end
@@ -479,42 +580,109 @@ function ENT:GetInfoNum(no,yes)
 end
 
 function ENT:VehicleThink()
-if self.IsInVehicle then
-			if self.InPelican then
-				local att = self.Pelican:GetAttachment(self.Pelican:LookupAttachment(self.Pelican.InfantryAtts[self.PelicanId]))
-				local ang = att.Ang
-				local pos = att.Pos
-				self:SetAngles(att.Ang)
-				if !self.PLanded then
-					self:SetPos(att.Pos+Vector(0,0,3))
-					if !self.DidPelicanIdleAnim then
-						self.DidPelicanIdleAnim = true
-						local anim
-						if self.SideAnim == "Left" then
-							anim = self.PelicanPassengerLIdleAnims[self.SAnimId]
-						else
-							anim = self.PelicanPassengerRIdleAnims[self.SAnimId]
-						end
-						local id, len = self:LookupSequence(anim)
-						self:ResetSequence(id)
-						--print(id,len)
-						timer.Simple( len, function()
-							if IsValid(self) then
-								self.DidPelicanIdleAnim = false
-							end
-						end )
-					end
-				else
-					--local off = 50*self.SAnimId
-					--if self.SideAnim == "Right" then off = -50*self.SAnimId end
-					local off = 0
-					self:SetPos(att.Pos+Vector(0,0,3)-att.Ang:Right()*off)
-				end
-				--self.loco:SetVelocity(Vector(0,0,0))
-			else
-				local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
-				self:SetPos(att.Pos)
-				self:SetAngles(att.Ang)
-			end
+	if self.IsInVehicle then
+		if self.InPelican then
+			self:PelicanPassengerThink()
+			--self.loco:SetVelocity(Vector(0,0,0))
+		else
+			local func = self.VehicleThinkFunction
+			func(self)
 		end
+	end
 end
+
+function ENT:DriverThink()
+	local posoffset = (self:GetRight()*-20)+(self:GetForward()*-20)+(self:GetUp()*1)
+	local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+	self:SetPos(att.Pos+posoffset)
+	self:SetAngles(att.Ang+Angle(0,-90,0))
+end
+function ENT:WarthogGunnerThink()
+	local posoffset = (self:GetRight()*-8)+(self:GetForward()*-13)+(self:GetUp()*4)
+	local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+	self:SetPos(att.Pos+posoffset)
+	self:SetAngles(att.Ang+Angle(self.Vehicle:GetAngles().p,-90,0))
+	self.VehicleEyeAng = att.Ang
+end
+function ENT:PassengerThink()
+	local posoffset = (self:GetRight()*20)+(self:GetForward()*-30)+(self:GetUp()*18)
+	local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+	self:SetPos(att.Pos+posoffset)
+	self:SetAngles(att.Ang+Angle(0,-90,0))
+end
+function ENT:TroopHogDriverThink()
+	local posoffset = (self:GetRight()*-40)+(self:GetForward()*0)+(self:GetUp()*1)
+	local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+	self:SetPos(att.Pos+posoffset)
+	self:SetAngles(att.Ang+Angle(0,0,0))
+end
+function ENT:TroopHogPassenger1Think()
+	local posoffset = (self:GetRight()*0)+(self:GetForward()*-10)+(self:GetUp()*18)
+	local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+	self:SetPos(att.Pos+posoffset)
+	self:SetAngles(att.Ang+Angle(0,0,0))
+end
+function ENT:TroopHogPassenger2Think()
+	local posoffset = (self:GetRight()*8)+(self:GetForward()*10)+(self:GetUp()*35)
+	local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+	self:SetPos(att.Pos+posoffset)
+	self:SetAngles(att.Ang+Angle(0,90,0))
+end
+function ENT:TroopHogPassenger3Think()
+	local posoffset = (self:GetRight()*-8)+(self:GetForward()*10)+(self:GetUp()*35)
+	local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+	self:SetPos(att.Pos+posoffset)
+	self:SetAngles(att.Ang+Angle(0,-90,0))
+end
+function ENT:TroopHogPassenger4Think()
+	local posoffset = (self:GetRight()*-15)+(self:GetForward()*15)+(self:GetUp()*30)
+	local att = self.Vehicle:GetAttachment(self.Vehicle:LookupAttachment(self.TurretAttachment))
+	self:SetPos(att.Pos+posoffset)
+	self:SetAngles(att.Ang+Angle(0,180,0))
+end
+function ENT:PelicanPassengerThink()
+	local att = self.Pelican:GetAttachment(self.Pelican:LookupAttachment(self.Pelican.InfantryAtts[self.PelicanId]))
+	local ang = att.Ang
+	local pos = att.Pos
+	self:SetAngles(att.Ang)
+	if !self.PLanded then
+		self:SetPos(att.Pos+Vector(0,0,3))
+		if !self.DidPelicanIdleAnim then
+			self.DidPelicanIdleAnim = true
+			local anim
+			if self.SideAnim == "Left" then
+				anim = self.PelicanPassengerLIdleAnims[self.SAnimId]
+			else
+				anim = self.PelicanPassengerRIdleAnims[self.SAnimId]
+			end
+			local id, len = self:LookupSequence(anim)
+			self:ResetSequence(id)
+			--print(id,len)
+			timer.Simple( len, function()
+				if IsValid(self) then
+					self.DidPelicanIdleAnim = false
+				end
+			end )
+		end
+	else
+		--local off = 50*self.SAnimId
+		--if self.SideAnim == "Right" then off = -50*self.SAnimId end
+		local off = 0
+		self:SetPos(att.Pos+Vector(0,0,3)-att.Ang:Right()*off)
+	end
+end
+
+ENT.VehicleFunctions = {
+	["models/snowysnowtime/vehicles/halo3/warthog.mdl"] = {
+		[1] = ENT.DriverThink, -- Driver
+		[2] = ENT.PassengerThink, -- Passenger
+		[3] = ENT.WarthogGunnerThink -- Gunner
+	},
+	["models/snowysnowtime/vehicles/halo3/warthog_troop.mdl"] = {
+		[1] = ENT.TroopHogDriverThink, -- Driver
+		[2] = ENT.TroopHogPassenger1Think, -- Passenger
+		[3] = ENT.TroopHogPassenger2Think, -- Omg, Passenger again!
+		[4] = ENT.TroopHogPassenger3Think, -- Guess what! Passenger too!
+		[5] = ENT.TroopHogPassenger4Think -- end me
+	}
+}

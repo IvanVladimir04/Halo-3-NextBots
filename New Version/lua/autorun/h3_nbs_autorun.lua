@@ -8,7 +8,7 @@ CreateConVar( "halo_3_nextbots_ai_performance", 0, FCVAR_ARCHIVE, "Enable perfor
 CreateConVar( "halo_3_nextbots_ai_omniscience", 0, FCVAR_ARCHIVE, "Enemies always know where you are?" )	
 CreateConVar( "halo_3_nextbots_ai_combat_ready", 0, FCVAR_ARCHIVE, "Allow AI to draw weapons on spawn?" )
 CreateConVar( "halo_3_nextbots_ai_suicidal_grunts", 1, FCVAR_ARCHIVE, "Grunts ALWAYS go kamikaze?" )		
-CreateConVar( "halo_3_nextbots_ai_patrol", 1, FCVAR_ARCHIVE, "Do the nextbots patrol?" )	
+CreateConVar( "halo_3_nextbots_ai_patrol", 0, FCVAR_ARCHIVE, "Do the nextbots patrol?" )	
 CreateConVar( "halo_3_nextbots_ai_hostile_humans", 0, FCVAR_ARCHIVE, "Are humans hostile to players?" )
 CreateConVar( "halo_3_nextbots_ai_scarab_explosions", 14, FCVAR_ARCHIVE, "Amount of total plasma explosions the scarab uses" )
 CreateConVar( "halo_3_nextbots_ai_great_schism", 1, FCVAR_ARCHIVE, "Allow funny space monkeys to take the control?" )
@@ -72,7 +72,7 @@ cvars.AddChangeCallback("halo_3_nextbots_ai_difficulty", function(name, old, new
 	end
 end, "Difficulty Corrector")
 
-IV04H3_AllowPatrol = true
+IV04H3_AllowPatrol = false
 
 
 cvars.AddChangeCallback("halo_3_nextbots_ai_patrol", function(name, old, new)

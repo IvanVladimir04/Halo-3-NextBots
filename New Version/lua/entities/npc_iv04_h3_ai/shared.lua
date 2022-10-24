@@ -70,6 +70,8 @@ ENT.GrenadeDodgeDistance = 350
 
 ENT.VehicleEyeAng = Angle(0,0,0)
 
+ENT.DamageResistances = {}
+
 ENT.ShootCorpseFilter = { -- Stuff that could have severe consequences if shot at a corpse
     ["astw2_haloreach_concussion_rifle"] = true,
     ["astw2_haloreach_grenade_launcher_falcon"] = true,
@@ -1701,10 +1703,24 @@ function ENT:HandleAnimEvent( event, eventTime, cycle, type, options )
 	end
 end
 
+function ENT:CollideCooldown(ent)
+	self.CollidedEntities[ent] = true
+	timer.Simple( 1, function() 
+		if IsValid(self) and IsValid(ent) then	
+			self.CollidedEntities[ent] = nil 
+		end 
+	end )
+end
+
+function ENT:CollidedWith( ent )
+	return !(!self.CollidedEntities[ent] and ent:GetOwner() != self)
+end
+
 function ENT:OnContact( ent ) -- When we touch someBODY
 	if ent == game.GetWorld() then return self:OnTouchWorld(ent) end
+	if self.IsInVehicle then return end
 	--print(ent, ent:GetOwner())
-	if !self.CollidedEntities[ent] and ent:GetOwner() != self then 
+	if !self:CollidedWith(ent) then 
 		self.CollidedEntities[ent] = true
 		--print(ent,ent:GetInternalVariable( "parentname" ),ent:GetName())
 		--PrintTable(ent:GetKeyValues())
@@ -1887,8 +1903,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 				--PrintTable(door:GetKeyValues())
 				if IsValid(door) then
 					ent = door
-					self.CollidedEntities[door] = true
-					timer.Simple( 1, function() if IsValid(self) and IsValid(door) then	self.CollidedEntities[door] = nil end end )
+					self:CollideCooldown(door)
 				end
 			end
 		end
@@ -1900,10 +1915,19 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 			elseif (ent:GetClass() == "prop_door_rotating" or ent:GetClass() == "func_door" or ent:GetClass() == "func_door_rotating" ) then
 				ent:Fire( "Open" )
 				self:SetAngles(Angle(0,dir:Angle().y,0))
-				self:DoMelee()
+				if !self.DonePush then
+					self.DonePush = true
+					self:DoMelee()
+					timer.Simple( 4, function() if IsValid(self) then self.DonePush = false end end )
+				end
 			elseif ent:GetClass() == "func_breakable_surf" then
 				self:SetAngles(Angle(0,dir:Angle().y,0))
 				self:DoMelee()
+				if !self.DonePush then
+					self.DonePush = true
+					self:DoMelee()
+					timer.Simple( 4, function() if IsValid(self) then self.DonePush = false end end )
+				end
 			end
 			if self.AllowVehicleFunctions and ent:IsVehicle() and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
 				self.SeenVehicles[ent] = true
@@ -1917,7 +1941,9 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 					self:ResetAI()
 				end
 			end
-			if (self.ThingsToAvoid[ent:GetClass()]) then
+			if (self.ThingsToAvoid[ent:GetClass()]) and !self.DonePush then
+				self.DonePush = true
+				timer.Simple( 4, function() if IsValid(self) then self.DonePush = false end end )
 				if !self.AnimBusy then
 					self:SetAngles(Angle(0,dir:Angle().y,0))
 					self:DoMelee()
@@ -1966,6 +1992,8 @@ function ENT:DoAnimation(anim,act,wait)
 			self:PlaySequenceAndWait(anim)
 		else
 			self:ResetSequence(anim)
+			local len = self:SetSequence( anim )
+			if len <= 0 then print(anim, "wasn't found!") end
 		end
 	elseif isnumber(anim) then
 		if act then
@@ -1975,6 +2003,8 @@ function ENT:DoAnimation(anim,act,wait)
 				self:PlaySequenceAndWait(anim)
 			else
 				self:ResetSequence(anim)
+				local len = self:SetSequence( anim )
+				if len <= 0 then print(anim, "wasn't found!") end
 			end
 		end
 	end
@@ -2135,6 +2165,7 @@ function ENT:OnTraceAttack( info, dir, trace )
 	if self:Health() - info:GetDamage() <= 0 then self.DeathHitGroup = trace.HitGroup return end
 	if self.AnimBusy then return end
 	local hg = trace.HitGroup
+	--print(hg)
 	if self.WeakHitGroup and hg != self.WeakHitGroup then
 		info:SetDamage(0)
 	end
@@ -2144,7 +2175,7 @@ function ENT:OnTraceAttack( info, dir, trace )
 	self.AccumulatedDamage = self.AccumulatedDamage+info:GetDamage()
 	local behind = (dif > 90 and dif < 270)
 	--print(behind)
-	if self.BackpackModel and trace.HitGroup == self.BackpackHitGroup then
+	if !self.DroppedBackpack and self.BackpackModel and trace.HitGroup == self.BackpackHitGroup then
 		self.BackpackHealth = self.BackpackHealth-math.abs(info:GetDamage())
 		--print(1,self.BackpackHealth)
 		if self.BackpackHealth < 0 then
@@ -2157,6 +2188,7 @@ function ENT:OnTraceAttack( info, dir, trace )
 			prop:SetSkin(self.Rank)
 			self:EmitSound("halo_reach/characters/grunt/grunt_backpack_steam/grunt_backpack_steam"..math.random(1,3)..".ogg",100)
 			ParticleEffectAttach("iv04_halo_reach_grunt_methane_leak_violent",PATTACH_POINT_FOLLOW,self,self:LookupAttachment(self.BackpackAttachment))
+			self.DroppedBackpack = true
 			timer.Simple( 30, function()
 				if IsValid(prop) then
 					prop:Remove()
@@ -2280,10 +2312,11 @@ function ENT:OnLeaveGround(ent)
 	--print("jumped",CurTime())
 	self.LastTimeOnGround = CurTime()
 	local t = self.LastTimeOnGround
-	if !self.IsInVehicle then
+	if !self.IsInVehicle and !self.VehicleRole then
 		if self:Health() <= 0 then 
 			self:DoAnimation(self.DeadAirAnim)
 			self.AnimBusy = true
+			timer.Simple( 20, function() if IsValid(self) then self.AlternateLanded = true end end )
 			--print(1)
 		elseif self.Leaping then
 			self.AnimBusy = true
@@ -2339,6 +2372,9 @@ end
 
 function ENT:OnLandOnGround(ent)
 	--print("landed",CurTime())
+	if self.IsInVehicle or self.VehicleRole then
+		return
+	end
 	if self.FlyingDead then
 		self.HasLanded = true
 	elseif self.Leaping then
@@ -3296,6 +3332,7 @@ function ENT:OnInjured(dmg)
 	if ( ( math.abs(self:Health()) - math.abs(dmg:GetDamage())) <= 0 ) and !self.Unkillable then return end
 	if self.AnimBusy then return end
 	if self.ImmuneDMGs[dmg:GetDamageType()] then dmg:ScaleDamage(0) end
+	if self.DamageResistances[dmg:GetDamageType()] then dmg:ScaleDamage(self.DamageResistances[dmg:GetDamageType()]) end
 	if dmg:GetDamage() > 0 then
 		self.AccumulatedBleedDamage = self.AccumulatedBleedDamage+dmg:GetDamage()
 		--print(self.AccumulatedBleedDamage)
@@ -3757,7 +3794,7 @@ function ENT:OnOtherKilled( victim, info )
 				self:ResetAI()
 			end
 			--print(2)
-			if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] then
+			if self.AIType == "Offensive" and !self.DisableCorpseShooting and (IsValid(self:GetActiveWeapon()) and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] ) then
 				--print(3)
 				if victim:IsPlayer() and !self.CommentedTraitorDeath then
 					self.CommentedTraitorDeath = true
@@ -3966,7 +4003,7 @@ function ENT:MoveToPos( goal, options ) -- MoveToPos but I added some stuff
 				self.DoingPush = false
 				self.PushingProp = false
 			end
-			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
+			if self:IsStuck() then
 				-- We are stuck, don't bother
 				--return "Give up"
 				--print("stuck?",self.LastLocoVel)
@@ -4023,7 +4060,7 @@ function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight w
 			end
 			local found = self:SearchEnemy()
 			if found then self:DoAnimation(self.IdleAnim) return "Found an enemy" end
-			if self.loco:GetVelocity():IsZero() and self.loco:IsAttemptingToMove() then
+			if self:IsStuck() then
 				-- We are stuck, don't bother
 				--return "Give up"
 				--print("stuck?",self.LastLocoVel)

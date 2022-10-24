@@ -4,8 +4,8 @@ AddCSLuaFile()
 
 function ENT:SpartanInitialize()
 	self.InterestingEntities = {
-		["prop_ragdoll"] = true,
-		["prop_dynamic"] = true
+		["prop_ragdoll"] = true
+		--["prop_dynamic"] = true
 	}
 	self.DamageThreshold = math.huge
 	self.SpawnWithWeaponDrawn = true
@@ -52,7 +52,8 @@ end
 function ENT:MarineInitialize()
 	self.InterestingEntities = {
 		["prop_ragdoll"] = true,
-		["prop_dynamic"] = true
+		--["prop_dynamic"] = true,
+		["gmod_sent_vehicle_fphysics_base"] = true
 	}
 	self.SightAttachment = "eyes"
 	--PrintTable(self.InterestingEntities)
@@ -94,8 +95,8 @@ end
 function ENT:EliteInitialize()
 	--self.SpawnWithWeaponDrawn = true
 	self.InterestingEntities = {
-		["prop_ragdoll"] = true,
-		["prop_dynamic"] = true
+		["prop_ragdoll"] = true
+		--["prop_dynamic"] = true
 	}
 	self.AllowClimbing = true
 	self.MoveSpeed = 100
@@ -280,6 +281,11 @@ function ENT:HunterInitialize()
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 125
 	self.MoveSpeedMultiplier = 2
+	self.WeakHitGroup = 2
+	self:SetCollisionBounds(Vector(30,30,120),Vector(-30,-30,0))
+	self.DamageResistances = {
+		[DMG_BLAST] = 0.2
+	}
 end
 function ENT:EngineerInitialize()
 end
@@ -458,10 +464,21 @@ function ENT:MarineIdle()
 	if self.IsInVehicle then return self:VehicleIdle() end
 	local can, veh = self:CanEnterAVehicle()
 	if can then
-		self:EnterVehicle(veh)
-		return self:VehicleIdle()
+		self:DrawnWeaponChecks() 
+		if self:CanEnterVehicle(veh) then
+			self:EnterVehicle(veh)
+			return self:VehicleIdle()
+		else
+			local can, veh = self:CanEnterAVehicle()
+			if self:CanEnterVehicle(veh) then
+				self:EnterVehicle(veh)
+				return self:VehicleIdle()
+			end
+		end
 	end
 	--print(table.Count(self.SeenInterestingEntities))
+	--print(#self.SeenInterestingEntities,table.Count(self.SeenInterestingEntities))
+	--PrintTable(self.SeenInterestingEntities)
 	if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] and table.Count(self.SeenInterestingEntities) > 0 then
 		--print("We saw something interesting before")
 		local bool, ent = table.Random(self.SeenInterestingEntities)
@@ -469,6 +486,7 @@ function ENT:MarineIdle()
 		self.DiscardedInterestingEntities[ent] = true
 		self.SeenInterestingEntities[ent] = nil
 		--print("We discarded it off our lists of to check",ent:GetModel(),ent.Faction)
+		--print("?????????????????????????????")
 		self:DrawnWeaponChecks()
 		if ent.Faction == self.Faction and !ent.Checked then
 			--print("It was a friend")
@@ -665,7 +683,10 @@ function ENT:SentinelIdle()
 	local stop = false
 	local printed = false
 	self:SearchEnemy()
+	self.FlyGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-45,45),0)):Forward()*50)
+	--self.loco:SetVelocity(Vector(0,0,0))
 	coroutine.wait(1)
+	self.FlyGoal = nil
 end
 function ENT:EnforcerIdle()
 end
@@ -1012,6 +1033,16 @@ end
 function ENT:ScarabThink()
 end
 function ENT:SentinelThink()
+	if CLIENT then
+
+	else
+		if self.FlyGoal then
+			local dir = (self.FlyGoal-self:WorldSpaceCenter()):GetNormalized()
+			self.loco:SetVelocity(dir*self.MoveSpeed)
+		else
+			self.loco:SetVelocity(Vector(0,0,0))
+		end
+	end
 end
 function ENT:EnforcerThink()
 end
@@ -1259,6 +1290,7 @@ function ENT:MarineBehavior(ent,range)
 	if IsValid(ent) and !self.IsWeaponDrawn then self:AdjustWeapon(self.Weapon,true) end
 	local can, veh = self:CanEnterAVehicle()
 	if can then
+		--print("yes")
 		self:EnterVehicle(veh)
 		return self:VehicleBehavior(ent,range)
 	end
@@ -1833,6 +1865,7 @@ function ENT:HunterBehavior(ent,range)
 		end
 	end
 	self:MeleeChecks(los,range)
+	if !IsValid(self.Enemy) then return end
 	if los then
 		if range < 512 and math.random(1,2) == 1 then
 			self:MoveToPosition( ent:GetPos(),  self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier )
@@ -1840,9 +1873,8 @@ function ENT:HunterBehavior(ent,range)
 			if math.random(1,4) == 1 then p = ent:GetPos() end
 			local pos = self:FindNearbyPos(p,math.random(256,256))
 			local wait = math.Rand(0.5,1)
-			local r = math.random(1,3)
-			local anim = r == 1 and self:TableRandom(self.RunAnim) or self.CrouchMoveAnim[math.random(#self.CrouchMoveAnim)]
-			local speed = r == 1 and self.MoveSpeed*self.MoveSpeedMultiplier or self.MoveSpeed
+			local anim = self:TableRandom(self.CrouchMoveAnim)
+			local speed = self.MoveSpeed
 			--print(anim,speed)
 			self:MoveToPosition( pos, anim, speed )
 			self:DoAnimation(self.IdleAnim)

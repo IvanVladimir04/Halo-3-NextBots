@@ -94,7 +94,7 @@ local opts = {
 		name = "Ivan04",
 		sc = "Halo 3 NextBots",
 		id = "Halo_3_NextBots",
-		dv = 1,
+		dv = 0,
 		d = "Should the AI patrol?",
 		cv = "halo_3_nextbots_ai_patrol"
 	},
