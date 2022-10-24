@@ -2,6 +2,7 @@
 {
 	"$basetexture" "models/halo_3/characters/alliance/elite/mp_raptor"
 	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_raptor_zbump"
+	"$normalmapalphaenvmapmask"	"1"
 	"$blendtintbybasealpha" "1"
 	"$detail"  "models/halo_3/characters/alliance/elite/elite_newarmor_detail"
 	"$detailblendmode"			"0.00"

@@ -2,6 +2,7 @@
 {
 	"$basetexture" "models/halo_3/characters/alliance/elite/sp_newelite_diffuse"
 	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_elite_zbump"
+	"$normalmapalphaenvmapmask"	"1"
 	"$detail"  "models/halo_3/characters/alliance/elite/elite_newarmor_detail"
 	"$detailblendmode"			"0.00"
 	"$detailblendfactor"			"2.00"

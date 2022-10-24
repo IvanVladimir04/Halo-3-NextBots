@@ -2,9 +2,10 @@
 {
 	"$basetexture" "models/halo_3/characters/alliance/elite/mp_blade_diffuse"
 	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_blade_zbump"
-	"$detail"  "models/halo_3/characters/alliance/elite/mp_blade_illumination"
-	"$detailblendmode"			"5.00"
-	"$detailblendfactor"			"2.00"
+	"$normalmapalphaenvmapmask"	"1"
+	"$detail"  "models/halo_3/characters/alliance/elite/mp_blade_diffuse"
+	"$detailblendmode"			"0.00"
+	"$detailblendfactor"			"1.00"
 	"$detailscale"			"1.00"
 	"$blendtintbybasealpha" "1"
 	"$phong" 1
@@ -12,14 +13,15 @@
 	"$phongexponent" "9"
 	"$phongtint" "{165 175 185}"
 	"$phongfresnelranges" "[.5 .85 30]"
-	"$model" 1
+	"$model" 		1
 	"$phongalbedotint" "1"
-	$ambientocclusion 1
+	$ambientocclusion 	1
 	"$rimlight"	"1"
 	"$rimlightexponent"	"15"
 	"$rimlightboost"	"5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$envmaptint"	"[.15 .15 .15]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
-	"$nocull"		"1"
+	"$nocull"		"1"	
+	"$decal"		"1"
 }

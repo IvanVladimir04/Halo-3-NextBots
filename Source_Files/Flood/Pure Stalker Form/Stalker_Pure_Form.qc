@@ -20,7 +20,7 @@ $bodygroup "Tail"
 {
     studio "tail_base.smd"
 }
-$surfaceprop "alienflesh"
+$surfaceprop "zombieflesh"
 
 $contents "solid"
 

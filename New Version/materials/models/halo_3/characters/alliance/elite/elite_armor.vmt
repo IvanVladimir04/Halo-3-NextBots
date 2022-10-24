@@ -4,7 +4,7 @@
 	"$bumpmap" "models/halo_3/characters/alliance/elite/mp_elite_zbump"
 	"$detail"  "models/halo_3/characters/alliance/elite/elite_newarmor_detail"
 	"$detailblendmode"			"0.00"
-	"$detailblendfactor"			"2.00"
+	"$detailblendfactor"			"8.00"
 	"$detailscale"			"15.00"
 	"$blendtintbybasealpha" "1"
 	"$phong" 1
@@ -13,11 +13,12 @@
 	"$phongfresnelranges" "[.5 .85 6]"
 	"$model" 1
 	"$phongalbedotint" "1"
-	$ambientocclusion 1
+	"$ambientocclusion" "1"
 	"$rimlight"	"1"
 	"$rimlightexponent"	"15"
 	"$rimlightboost"	"5"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$normalmapalphaenvmapmask"	"1"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$nodecal"				1
 

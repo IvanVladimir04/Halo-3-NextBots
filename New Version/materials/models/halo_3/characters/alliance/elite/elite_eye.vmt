@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models/halo_3/characters/alliance/elite/newelitehead_diffuse"
 	"$bumpmap" "models/halo_3/characters/alliance/elite/newelitehead_zbump"
-
+	"$normalmapalphaenvmapmask"	"1"
 	"$blendtintbybasealpha" "1"
 	"$ambientocclusion" "1"
 	"$phong" 1

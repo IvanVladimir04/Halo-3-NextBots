@@ -990,14 +990,14 @@ end
 function ENT:HunterAttack(ent)
 	ent = ent or self.Enemy
 	if !self.DoneChargeAttack then
-		self:EmitSound("hunter/hunter_cannon/hunter_charge.wav",100)
+		self:EmitSound("hunter/hunter_cannon/hunter_charge.wav",75)
 		self.DoneChargeAttack = true
 		local lim = 30
 		timer.Simple( 2, function()
 			if IsValid(self) and IsValid(ent) then
-				self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/in.wav",100)
+				self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/in.wav",75)
 				for i = 1, lim do
-					self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/loop.wav",100)
+					self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/loop.wav",75)
 					timer.Simple( 0.05*i, function()
 						if IsValid(self) then
 							local proj = ents.Create("astw2_halo3_hunter_projectile")
@@ -1009,7 +1009,7 @@ function ENT:HunterAttack(ent)
 							proj:Spawn()
 							local phys = proj:GetPhysicsObject()
 							if IsValid(phys) then
-								phys:SetVelocity((self:GetAimVector()+((self:GetRight()*0.001)*math.random(1,-1))*(i))*10000)
+								phys:SetVelocity((self:GetAimVector()+((self:GetRight()*0.001)*math.random(1,-1))*(i))*1000)
 							end
 							if i == lim then
 								timer.Simple( 2, function()
