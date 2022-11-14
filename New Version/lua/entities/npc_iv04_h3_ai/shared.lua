@@ -485,6 +485,8 @@ function ENT:OnInitialize()
 		local wep = table.Random(self.PossibleWeapons)
 		self:Give(wep,GetConVar("halo_3_nextbots_ai_combat_ready"):GetInt() == 1 or self.SpawnWithWeaponDrawn)
 	end
+	self.Difficulty = GetConVar("halo_reach_nextbots_ai_difficulty"):GetInt()
+	self.MeleeDamage = (self.MeleeDamage*(self.Difficulty)*0.5)
 	if self.EnableFlashlight then
 		if self:LookupAttachment("flashlight") != 0 then
 			self.Sprite = ents.Create("env_sprite")
@@ -1289,7 +1291,7 @@ function ENT:SetupAnimations()
 				self.WalkAnim = {"walk_combat_support_up"}
 				self.RunCalmAnim = {"move_combat_support_up"}
 				self.MeleeAnim = {"Melee_Combat_support_1"}
-				self.MeleeBackAnim = {"Melee_Back_support"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
 				self.ShootAnim = {"attack_combat_support_1"}
 				self.ReloadAnim = "reload_combat_support"
 				self.AirAnim = "airborne_combat_support"
@@ -1945,7 +1947,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 				self.DonePush = true
 				timer.Simple( 4, function() if IsValid(self) then self.DonePush = false end end )
 				if !self.AnimBusy then
-					self:SetAngles(Angle(0,dir:Angle().y,0))
+					--self:SetAngles(Angle(0,dir:Angle().y,0))
 					self:DoMelee()
 					timer.Simple( 0.7, function()
 						if IsValid(self) and IsValid(ent) then

@@ -279,7 +279,7 @@ function ENT:HunterInitialize()
 	self.InstaKillImmune = true
 	self.DamageThreshold = math.huge -- Do this to disable flinching
 	self:SetSkin(self.Rank)
-	self.MoveSpeed = 125
+	self.MoveSpeed = 75
 	self.MoveSpeedMultiplier = 2
 	self.WeakHitGroup = 2
 	self:SetCollisionBounds(Vector(30,30,120),Vector(-30,-30,0))
@@ -413,12 +413,12 @@ function ENT:SpartanIdle()
 			--print("It wasn't a friend")
 			--print("We'll go to its position")
 			local spot = ent:GetPos()
+			ent.WasShot = true
 			self:GoToPosition(spot,self.RunCalmAnim[math.random(#self.RunCalmAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
 			--print("We are next to it")
 			self:DoAnimation(self.CrouchIdleAnim)
 			local grenades = self.ThrownGrenades
 			self.ThrownGrenades = 1000
-			ent.WasShot = true
 			self.SpecificGoal = ent:WorldSpaceCenter()
 			coroutine.wait(0.5)
 			for i = 1, math.random(1,2) do
@@ -513,6 +513,7 @@ function ENT:MarineIdle()
 			--print("It wasn't a friend")
 			--print("We'll go to its position")
 			local spot = self:FindClosePos(ent:GetPos(),128)
+			ent.WasShot = true
 			self:GoToPosition(spot,self.RunCalmAnim[math.random(#self.RunCalmAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
 			--print("We are next to it")
 			self.SpokeShoot = true
@@ -525,7 +526,6 @@ function ENT:MarineIdle()
 			self.DisableOverwriteCurrentVoiceLine = true
 			local grenades = self.ThrownGrenades
 			self.ThrownGrenades = 1000
-			ent.WasShot = true
 			self.SpecificGoal = ent:WorldSpaceCenter()
 			coroutine.wait(0.5)
 			for i = 1, math.random(1,2) do
@@ -592,6 +592,7 @@ function ENT:EliteIdle()
 			--print("We'll go to its position")
 			self:DrawnWeaponChecks()
 			local spot = self:FindClosePos(ent:GetPos(),128)
+			ent.WasShot = true
 			self:GoToPosition(spot,self.RunCalmAnim[math.random(#self.RunCalmAnim)],self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
 			--print("We are next to it")
 			self.SpokeShoot = true
@@ -604,7 +605,6 @@ function ENT:EliteIdle()
 			self.DisableOverwriteCurrentVoiceLine = true
 			local grenades = self.ThrownGrenades
 			self.ThrownGrenades = 1000
-			ent.WasShot = true
 			self.SpecificGoal = ent:WorldSpaceCenter()
 			coroutine.wait(0.5)
 			for i = 1, math.random(1,2) do
@@ -975,7 +975,7 @@ function ENT:HunterThink()
 	if self.LastThinkTime < CurTime() then
 		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
 		local ent = self:WeaponThink()
-		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee then
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee and !self.IsChasing then
 			local should, dif = self:ShouldFace(ent)
 			--print(should,dif)
 			if should and math.abs(dif) > 2 then
@@ -992,7 +992,7 @@ function ENT:HunterAttack(ent)
 	if !self.DoneChargeAttack then
 		self:EmitSound("hunter/hunter_cannon/hunter_charge.wav",75)
 		self.DoneChargeAttack = true
-		local lim = 30
+		local lim = self.BurstSize
 		timer.Simple( 2, function()
 			if IsValid(self) and IsValid(ent) then
 				self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/in.wav",75)
@@ -1000,7 +1000,7 @@ function ENT:HunterAttack(ent)
 					self:EmitSound("hunter/hunter_cannon/hunter_cannon_loop/hunter_cannon/loop.wav",75)
 					timer.Simple( 0.05*i, function()
 						if IsValid(self) then
-							local proj = ents.Create("astw2_halo3_hunter_projectile")
+							local proj = ents.Create(self.HunterProjectile)
 							local att = self:GetAttachment(3)
 							proj:SetPos(att.Pos)
 							proj:SetAngles(att.Ang)
@@ -1009,7 +1009,8 @@ function ENT:HunterAttack(ent)
 							proj:Spawn()
 							local phys = proj:GetPhysicsObject()
 							if IsValid(phys) then
-								phys:SetVelocity((self:GetAimVector()+((self:GetRight()*0.001)*math.random(1,-1))*(i))*1000)
+								local off = math.Rand((1/self.Difficulty)*0.5,0)
+								phys:ApplyForceCenter(((self:GetAimVector()*2)+((self:GetUp()*(off))))*2000)
 							end
 							if i == lim then
 								timer.Simple( 2, function()
@@ -1448,6 +1449,25 @@ function ENT:MarineBehavior(ent,range)
 				self:MoveToPosition( pos, anim, speed )
 				coroutine.wait(wait)
 			else
+				if self:IsOutNumbered() and math.random(1,2) == 1 then
+					local tbl = self:FindCoverSpots(ent)
+					self.NotLookingAtEnemy = true
+					if math.random(1,2) == 1 then
+						timer.Simple( math.random(4,7), function()
+							if IsValid(self) then
+								if self.NotLookingAtEnemy then
+									self.NotLookingAtEnemy = false
+								end
+							end
+						end )
+					end
+					if table.Count(tbl) > 0 or #tbl > 0 then
+						local area = table.Random(tbl)
+						self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
+						self.NotLookingAtEnemy = false
+						return
+					end
+				end
 				if ent.BeingChased then
 					self:Speak("join_invsgt")
 				else
@@ -1867,9 +1887,11 @@ function ENT:HunterBehavior(ent,range)
 	self:MeleeChecks(los,range)
 	if !IsValid(self.Enemy) then return end
 	if los then
-		if range < 512 and math.random(1,2) == 1 then
-			self:MoveToPosition( ent:GetPos(),  self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier )
+		if range < 512^2 and math.random(1,3) != 1 then
+			self.IsChasing = true
+			self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, self.ChaseEnt )
 		else
+			self.IsChasing = false
 			if math.random(1,4) == 1 then p = ent:GetPos() end
 			local pos = self:FindNearbyPos(p,math.random(256,256))
 			local wait = math.Rand(0.5,1)
