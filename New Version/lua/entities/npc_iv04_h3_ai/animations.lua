@@ -301,14 +301,14 @@ function ENT:SetupAnimations()
 						self.MeleeBackAnim = {"Melee_Back_Armored_Pistol"}
 						self.GrenadeAnim = {"Throw_Grenade_Armored_Pistol"}
 						self.ShootAnim = {"attack_armored_pistol_1","attack_armored_pistol_2","attack_armored_pistol_3"}
-						self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Armored_Idle"
-						self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Armored_Idle"
-						self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Armored_Idle"
-						self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Armored_Idle"
-						self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Armored_Move"
-						self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Armored_Move"
-						self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Armored_Walk"
-						self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Armored_Walk"
+						self.TransitionAnims["Move_2_Idle"] = "Combat_Pistol_Move_2_Combat_Idle"
+						self.TransitionAnims["Move_2_Idle_Passive"] = "Combat_Pistol_Move_2_Combat_Idle"
+						self.TransitionAnims["Walk_2_Idle"] = "Combat_Pistol_Walk_2_Combat_Idle"
+						self.TransitionAnims["Walk_2_Idle_Passive"] = "Combat_Pistol_Walk_2_Combat_Idle"
+						self.TransitionAnims["Idle_2_Move"] = "Combat_Pistol_Idle_2_Combat_Move"
+						self.TransitionAnims["Idle_2_Move_Passive"] = "Combat_Pistol_Idle_2_Combat_Move"
+						self.TransitionAnims["Idle_2_Walk"] = "Combat_Pistol_Idle_2_Combat_Walk"
+						self.TransitionAnims["Idle_2_Walk_Passive"] = "Combat_Pistol_Idle_2_Combat_Walk"
 					else
 						self.GrenadeAnim = {"Throw_Grenade_Combat_Pistol"}
 						self.MeleeAnim = {"Melee_Combat_Pistol_1"}
