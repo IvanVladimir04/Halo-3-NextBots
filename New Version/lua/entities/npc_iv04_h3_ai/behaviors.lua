@@ -1520,18 +1520,7 @@ function ENT:MarineBehavior(ent,range)
 				if p == ent:GetPos() then rang = self.DistToTarget/2 end
 				local pos = self:FindNearbyPos(p,rang)
 				local wait = math.Rand(0.5,1)
-				local r = math.random(1,3)
-				local walk = (r == 1 and range < 600^2)
-				local crouch = (r == 2)
-				local anim = walk and self:TableRandom(self.WalkAnim) or self:TableRandom(self.RunAnim)
-				local speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
-				if crouch then
-					anim = self:TableRandom(self.CrouchMoveAnim)
-					speed = self.MoveSpeed
-					self:DoTransitionAnim("Idle_2_Crouch")
-				end
-				--print(anim,speed)
-				self:MoveToPosition( pos, anim, speed )
+				self:StrafeNearby( pos, ent, true, math.random(1,2) == 1 )
 				coroutine.wait(wait)
 			else
 				if self:IsOutNumbered() and math.random(1,2) == 1 then
@@ -1711,18 +1700,8 @@ function ENT:EliteBehavior(ent,range)
 				local rang = math.random(128,512)
 				if p == ent:GetPos() then rang = self.DistToTarget/2 end
 				local pos = self:FindNearbyPos(p,rang)
+				self:StrafeNearby( pos, ent , false, math.random(1,2) == 1 )
 				local wait = math.Rand(0.5,1)
-				local anim = self:TableRandom(self.RunAnim)
-				local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
-				local r = math.random(1,3)
-				local crouch = (r == 2)
-				if crouch then
-					anim = self:TableRandom(self.CrouchMoveAnim)
-					speed = self.MoveSpeed
-					self:DoTransitionAnim("Idle_2_Crouch")
-				end
-				--print(anim,speed)
-				self:MoveToPosition( pos, anim, speed )
 				coroutine.wait(wait)
 			end
 		else

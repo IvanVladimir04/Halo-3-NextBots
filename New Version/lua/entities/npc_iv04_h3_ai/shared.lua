@@ -1496,6 +1496,42 @@ function ENT:FindClosePos(goal,dist)
 	return goal + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * dist
 end
 
+function ENT:StrafeNearby( pos, ent, walkallowed, changecourse )
+	local range = self.DistToTarget
+	local r = math.random(1,3)
+	local crouch = (r == 2)
+	local anim
+	local speed
+	if walkallowed then
+		local walk = (r == 1 and range < 600^2)
+		anim = walk and self:TableRandom(self.WalkAnim) or self:TableRandom(self.RunAnim)
+		speed = walk and self.MoveSpeed or self.MoveSpeed*self.MoveSpeedMultiplier 
+		--print(anim,speed)		
+		self:MoveToPosition( pos, anim, speed )
+	else
+		anim = self:TableRandom(self.RunAnim)
+		speed = self.MoveSpeed*self.MoveSpeedMultiplier 
+	end
+	if crouch then
+		anim = self:TableRandom(self.CrouchMoveAnim)
+		speed = self.MoveSpeed
+		self:DoTransitionAnim("Idle_2_Crouch")
+	end
+	--print(anim,speed)
+	if changecourse then
+		timer.Simple( 5, function()
+			if IsValid(self) then
+				local func = function()
+					self:StrafeNearby(pos, ent, walkallowed, false)
+				end
+				table.insert(self.StuffToRunInCoroutine,func)
+				self:ResetAI()
+			end
+		end )
+	end
+	self:MoveToPosition( pos, anim, speed )
+end
+
 function ENT:DoTransitionAnim( typ )
 	if !typ then return end
 	if !self.TransitionAnims[typ] or self.NoTransitionAnims then return end
