@@ -488,7 +488,7 @@ function ENT:OnInitialize()
 		local wep = table.Random(self.PossibleWeapons)
 		self:Give(wep,GetConVar("halo_3_nextbots_ai_combat_ready"):GetInt() == 1 or self.SpawnWithWeaponDrawn)
 	end
-	self.Difficulty = GetConVar("halo_reach_nextbots_ai_difficulty"):GetInt()
+	self.Difficulty = GetConVar("halo_3_nextbots_ai_difficulty"):GetInt()
 	self.MeleeDamage = (self.MeleeDamage*(self.Difficulty)*0.5)
 	if self.EnableFlashlight then
 		if self:LookupAttachment("flashlight") != 0 then
