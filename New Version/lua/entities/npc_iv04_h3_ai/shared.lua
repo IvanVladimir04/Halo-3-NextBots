@@ -917,7 +917,7 @@ function ENT:DoAnimation(anim,act,wait)
 		else
 			self:ResetSequence(anim)
 			local len = self:SetSequence( anim )
-			if len <= 0 then print(anim, "wasn't found!") end
+			if len <= 0 then print(anim, "wasn't found at all!") end
 		end
 	elseif isnumber(anim) then
 		if act then
@@ -928,7 +928,7 @@ function ENT:DoAnimation(anim,act,wait)
 			else
 				self:ResetSequence(anim)
 				local len = self:SetSequence( anim )
-				if len <= 0 then print(anim, "wasn't found!") end
+				if len <= 0 then print(anim, "wasn't found at all!") end
 			end
 		end
 	end
@@ -1496,10 +1496,10 @@ function ENT:FindClosePos(goal,dist)
 	return goal + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * dist
 end
 
-function ENT:StrafeNearby( pos, ent, walkallowed, changecourse )
+function ENT:StrafeNearby( pos, ent, walkallowed, changecourse, crouchdenied )
 	local range = self.DistToTarget
 	local r = math.random(1,3)
-	local crouch = (r == 2)
+	local crouch = (r == 2) and !crouchdenied
 	local anim
 	local speed
 	if walkallowed then
@@ -1522,7 +1522,7 @@ function ENT:StrafeNearby( pos, ent, walkallowed, changecourse )
 		timer.Simple( 5, function()
 			if IsValid(self) then
 				local func = function()
-					self:StrafeNearby(pos, ent, walkallowed, false)
+					self:StrafeNearby(pos, ent, walkallowed, false, crouchdenied)
 				end
 				table.insert(self.StuffToRunInCoroutine,func)
 				self:ResetAI()
@@ -2195,6 +2195,7 @@ end
 
 function ENT:OnInjured(dmg)
 	--print(dmg:GetInflictor())
+	if self:Health() <= 0 then return end
 	local rel = self:CheckRelationships(dmg:GetAttacker())
 	local ht = self:Health()
 	--ParticleEffect( self.BloodEffect, dmg:GetDamagePosition(), Angle(0,0,0), self )
@@ -3047,7 +3048,7 @@ function ENT:WanderToPos( pos ) -- Modified MoveToPos function to update sight w
 end
 
 function ENT:AvoidGrenade(grenade,toolate)
-	if self.AnimBusy or self.DetectedAGrenade or grenade:GetOwner() == self or grenade.IsKamikazeGren	then return end
+	if self.AnimBusy or self.DetectedAGrenade or grenade:GetOwner() == self or grenade.IsKamikazeGren or self:Health() <= 0	then return end
 	self.DetectedAGrenade = true
 	timer.Simple( math.random(2,3), function()
 		if IsValid(self) and self.DetectedAGrenade then
@@ -3283,11 +3284,20 @@ function ENT:DetermineDeathAnim( info )
 end
 
 function ENT:FinishDeadLanding()
+	local start = self:GetPos()
+	timer.Simple( 1, function()
+		if IsValid(self) then
+			if math.abs(math.abs(self:GetPos().z)-math.abs(start.z)) < 20 then
+				self.AlternateLanded = true
+			end
+		end
+	end )
 	timer.Simple( 10, function()
 		if IsValid(self) and !self.HasLanded and !self.AlternateLanded then
 			self.AlternateLanded = true
 		end
 	end )
+	self.AnimBusy = false
 	while (!self.HasLanded) do
 		if self.AlternateLanded then
 			--print(self.AlternateLanded)
@@ -3310,28 +3320,33 @@ function ENT:FinishDeadLanding()
 		end
 		coroutine.wait(0.01)
 	end
-	self.AnimBusy = false
 	--print(self, "should be playing dead land anim")
-	self:PlaySequenceAndWait(self:TableRandom(self.DeadLandAnim))
-	if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
-		local wep = ents.Create(self.Weapon:GetClass())
-		wep:SetPos(self.Weapon:GetPos())
-		wep:SetAngles(self.Weapon:GetAngles())
-		wep:Spawn()
-		self.Weapon:Remove()
-	end
-	local rag
-	if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
-		timer.Simple( 60, function()
-			if IsValid(wep) then
-				wep:Remove()
+	local anim = self:TableRandom(self.DeadLandAnim)
+	local id, len = self:LookupSequence(anim)
+	timer.Simple(len, function()
+		if IsValid(self) then
+			if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
+				local wep = ents.Create(self.Weapon:GetClass())
+				wep:SetPos(self.Weapon:GetPos())
+				wep:SetAngles(self.Weapon:GetAngles())
+				wep:Spawn()
+				self.Weapon:Remove()
 			end
-			if IsValid(rag) then
-				rag:Remove()
+			local rag
+			if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
+				timer.Simple( 60, function()
+					if IsValid(wep) then
+						wep:Remove()
+					end
+					if IsValid(rag) then
+						rag:Remove()
+					end
+				end)
 			end
-		end)
-	end
-	rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
+			rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
+		end 
+	end )
+	self:PlaySequenceAndWait(anim)
 end
 
 function ENT:DoKilledAnim()

@@ -396,6 +396,17 @@ function ENT:FloodEliteInitialize()
 	}
 	self.AttractAlliesRange = math.huge
 	self.MoveSpeedMultiplier = 5
+	if math.random(1,3) == 1 then
+		self.ShieldRegenTimeDelay = 5
+		self.ShieldRegenTime = 2
+		self.ShieldImpactParticle = "iv04_halo_3_elite_shield_impact_effect"
+		self.ShieldDepleteParticle = "iv04_halo_3_elite_shield_deplete"
+		self.ShieldDepleteArcsParticle = "iv04_halo_3_elite_shield_deplete_arcs"
+		self.ShieldRechargeParticle = "iv04_halo_3_elite_shield_recharge"
+		self.MaxShield = 70
+		self.Shield = 70
+		self.HasArmor = true
+	end
 end
 function ENT:FloodBruteInitialize()
 end
@@ -1339,11 +1350,8 @@ function ENT:SpartanBehavior(ent,range)
 			local rang = math.random(128,512)
 			if p == ent:GetPos() then rang = self.DistToTarget/2 end
 			local pos = self:FindNearbyPos(p,rang)
+			self:StrafeNearby( pos, ent , false, math.random(1,2) == 1 )
 			local wait = math.Rand(0.5,1)
-			local anim = self:TableRandom(self.RunAnim)
-			local speed = self.MoveSpeed*self.MoveSpeedMultiplier 
-			--print(anim,speed)
-			self:MoveToPosition( pos, anim, speed )
 			coroutine.wait(wait)
 		else
 			if ent.BeingChased then
@@ -1798,6 +1806,8 @@ function ENT:BruteBehavior(ent,range)
 				self.DeployedEquipment = true
 				self:PlaySequenceAndWait(self.EquipmentAnim)
 			end
+			ent = ent or self.Enemy
+			if !IsValid(ent) then return end
 			if self.HasMeleeWeapon then
 				if range > 512^2 and range < 1200^2 and !self.DisableLeap then
 					self:PlaySequenceAndWait(self.LeapAnim)
@@ -1811,13 +1821,12 @@ function ENT:BruteBehavior(ent,range)
 				end
 			else
 				local p
-				if math.random(1,2) == 1 then p = ent:GetPos() end
-				local pos = self:FindNearbyPos()
+				if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
+				local rang = math.random(128,512)
+				if p == ent:GetPos() then rang = self.DistToTarget/2 end
+				local pos = self:FindNearbyPos(p,rang)
+				self:StrafeNearby( pos, self.Enemy , false, math.random(1,2) == 1, true )
 				local wait = math.Rand(0.5,1)
-				local anim = self:TableRandom(self.RunAnim)
-				local speed = self.MoveSpeed*self.MoveSpeedMultiplier
-				--print(anim,speed)
-				self:GoToPosition( pos, anim, speed )
 				coroutine.wait(wait)
 			end
 		else
@@ -1902,13 +1911,12 @@ function ENT:GruntBehavior(ent,range)
 					--self.PathGoalTolerance = 40
 			else
 				local p
-				if math.random(1,2) == 1 then p = ent:GetPos() end
-				local pos = self:FindNearbyPos()
+				if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
+				local rang = math.random(128,512)
+				if p == ent:GetPos() then rang = self.DistToTarget/2 end
+				local pos = self:FindNearbyPos(p,rang)
+				self:StrafeNearby( pos, ent , false, math.random(1,2) == 1, true )
 				local wait = math.Rand(0.5,1)
-				local anim = self:TableRandom(self.RunAnim)
-				local speed = self.MoveSpeed*self.MoveSpeedMultiplier
-				--print(anim,speed)
-				self:GoToPosition( pos, anim, speed )
 				coroutine.wait(wait)
 			end
 		else

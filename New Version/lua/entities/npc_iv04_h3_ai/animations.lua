@@ -2,11 +2,6 @@ function ENT:SetupAnimations()
 	--PrintTable( self:GetSequenceList() )
 	self.PatrolMoveAnim = {"Move_Patrol_Unarmed_Up"}
 	self.PatrolIdleAnim = {"Patrol_Unarmed_Idle_Down"}
-	if self.AITemplate == "MARINE" then
-		self.PatrolIdlePoseAnim = {"Patrol_Unarmed_Idle_Posing_1","Patrol_Unarmed_Idle_Posing_2","Combat_Unarmed_Idle_Posing_1","Combat_Unarmed_Idle_Posing_3","Combat_Unarmed_Idle_Posing_2"}
-	elseif self.AITemplate == "ELITE" then
-		self.PatrolIdlePoseAnim = {"Patrol_Unarmed_Idle_Posing_1","Patrol_Unarmed_Idle_Posing_2","Patrol_Unarmed_Idle_Posing_3"}
-	end
 	self.TransitionAnims["Patrol_Move_2_Idle"] = "Patrol_Move_2_Patrol_Idle"
 	self.TransitionAnims["Patrol_Idle_2_Move"] = "Patrol_Idle_2_Patrol_Move"
 	self.DeadAirAnim = "Dead_Airborne"
@@ -114,6 +109,27 @@ function ENT:SetupAnimations()
 		self.DeathRightAnims = {
 			["Head"] = {"Die_Right_Head"},
 			["Gut"] =  {"Die_Right_Gut_1","Die_Right_Gut_2"}
+		}
+	end
+	if self.AITemplate == "MARINE" then
+		self.PatrolIdlePoseAnim = {"Patrol_Unarmed_Idle_Posing_1","Patrol_Unarmed_Idle_Posing_2","Combat_Unarmed_Idle_Posing_1","Combat_Unarmed_Idle_Posing_3","Combat_Unarmed_Idle_Posing_2"}
+	elseif self.AITemplate == "ELITE" then
+		self.PatrolIdlePoseAnim = {"Patrol_Unarmed_Idle_Posing_1","Patrol_Unarmed_Idle_Posing_2","Patrol_Unarmed_Idle_Posing_3"}
+		self.DeathFrontAnims = {
+			["Head"] = {"Die_Front_Head"},
+			["Gut"] =  {"Die_Front_Gut"}
+		}
+		self.DeathBackAnims = {
+			["Head"] = {"Die_Back_Head"},
+			["Gut"] = {"Die_Back_Gut"}
+		}
+		self.DeathLeftAnims = {
+			["Head"] = {"Die_Left_Head"},
+			["Gut"] =  {"Die_Left_Gut"}
+		}
+		self.DeathRightAnims = {
+			["Head"] = {"Die_Right_Head"},
+			["Gut"] =  {"Die_Right_Gut"}
 		}
 	end
 	--print(self.DeadLandAnim)
@@ -563,7 +579,7 @@ function ENT:SetupAnimations()
 					self.PosingAnims = {"Combat_Rifle_Idle_Posing_1","Combat_Rifle_Idle_Posing_2","Combat_Rifle_Idle_Posing_3","Combat_Rifle_Idle_Posing_4","Combat_Rifle_Idle_Posing_5"}
 				else
 					self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
-					self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
+					self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
 					self.BraceAnim = "Combat_Rifle_Brace"
 					self.PosingAnims = {"Combat_Rifle_Idle_Posing_1","Combat_Rifle_Idle_Posing_2","Combat_Rifle_Idle_Posing_3","Combat_Rifle_Idle_Posing_4","Combat_Rifle_Idle_Posing_5","Combat_Rifle_Idle_Posing_6","Combat_Rifle_Idle_Posing_7","Combat_Rifle_Idle_Posing_8","Combat_Rifle_Idle_Posing_9"}
 				end
@@ -786,6 +802,9 @@ function ENT:SetupAnimations()
 				if self.AITemplate == "SPARTAN" then
 					self.PatrolIdleAnim = {"combat_support_idle_up"}
 					self.GrenadeAnim = {"Throw_Grenade_Combat_Support"}
+				elseif self.AITemplate == "BRUTE" then
+					self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
+					self.PatrolIdleAnim = {"Patrol_Pistol_Idle_Up"}
 				else
 					self.PatrolIdleAnim = {"Patrol_Pistol_Idle_Up"}
 				end
