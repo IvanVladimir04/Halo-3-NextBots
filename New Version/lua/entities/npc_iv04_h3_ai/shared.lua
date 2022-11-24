@@ -907,16 +907,31 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 	end
 end
 
+function ENT:SearchTimer(len,delay,sequenceid)
+	local name = "SearchTimer"..self:EntIndex()..""
+	timer.Create( name, delay, 0, function()
+		if IsValid(self) and self:GetSequence() == sequenceid then
+			local result = self:SearchEnemy()
+			if result or IsValid(self.Enemy) then
+				timer.Remove(name)
+			end
+		else
+			timer.Remove(name)
+		end
+	end )
+end
+
 function ENT:DoAnimation(anim,act,wait)
 	if istable(anim) then
 		anim = self:TableRandom(anim)
 	end
+	local len
 	if type(anim) == "string" then
 		if wait then
 			self:PlaySequenceAndWait(anim)
 		else
 			self:ResetSequence(anim)
-			local len = self:SetSequence( anim )
+			len = self:SetSequence( anim )
 			if len <= 0 then print(anim, "wasn't found at all!") end
 		end
 	elseif isnumber(anim) then
@@ -927,11 +942,12 @@ function ENT:DoAnimation(anim,act,wait)
 				self:PlaySequenceAndWait(anim)
 			else
 				self:ResetSequence(anim)
-				local len = self:SetSequence( anim )
+				len = self:SetSequence( anim )
 				if len <= 0 then print(anim, "wasn't found at all!") end
 			end
 		end
 	end
+	return len
 end
 
 function ENT:ReactToTrade(wep)
@@ -1211,23 +1227,25 @@ function ENT:OnTraceAttack( info, dir, trace )
 			end
 		end
 	elseif self.RemovableHeadBodygroups and !self.DroppedHeadStuff and self.FlinchHitGroups[hg] == "Head" then
-		local prop = ents.Create("prop_physics")
-		prop:SetModel(self.RemovableHeadPartModel)
-		prop:SetPos(info:GetDamagePosition())
-		prop:SetOwner(self)
-		prop:SetAngles(self:GetAngles())
-		prop:Spawn()
-		prop:SetBodygroup(0,self:GetBodygroup(self.RemovableBodygroup)-1)
-		self:SetBodygroup(self.RemovableBodygroup,self.RemovableChange)
-		if IsValid(prop:GetPhysicsObject()) then
-			prop:GetPhysicsObject():Wake()
-			--prop:GetPhysicsObject():SetVelocity( trace.Normal*info:GetDamage()+self:GetUp()*100 )
-		end
-		timer.Simple( 60, function()
-			if IsValid(prop) then
-				prop:Remove()
+		if self.RemovableHeadPartModel then
+			local prop = ents.Create("prop_physics")
+			prop:SetModel(self.RemovableHeadPartModel)
+			prop:SetPos(info:GetDamagePosition())
+			prop:SetOwner(self)
+			prop:SetAngles(self:GetAngles())
+			prop:Spawn()
+			prop:SetBodygroup(0,self:GetBodygroup(self.RemovableBodygroup)-1)
+			if IsValid(prop:GetPhysicsObject()) then
+				prop:GetPhysicsObject():Wake()
+				--prop:GetPhysicsObject():SetVelocity( trace.Normal*info:GetDamage()+self:GetUp()*100 )
 			end
-		end )
+			timer.Simple( 60, function()
+				if IsValid(prop) then
+					prop:Remove()
+				end
+			end )
+		end
+		self:SetBodygroup(self.RemovableBodygroup,self.RemovableChange)
 		self.DroppedHeadStuff = true
 	end
 end
@@ -1413,6 +1431,65 @@ function ENT:FindCoverSpots(ent)
 		end
 	end
 	return tbl, dire
+end
+
+function ENT:ChaseTarget(ent)
+	if self.UseLineOfSight then
+		if self.HasMeleeWeapon then
+			self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { repath = 0.5 , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end } )
+		else
+			if ent.BeingChased then
+				self:Speak("join_invsgt")
+			else
+				if self.IsSergeant and math.random(1,2) == 1 then
+					self:Speak("ordr_invsgt")
+				else
+					self:Speak("invsgt")	
+				end
+			end
+			ent.BeingChased = true
+			self:SetEnemy(nil)
+			self:GoToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,self.WanderToPos)
+			if !IsValid(self.Enemy) then 
+				self:Speak("invsgt_fail") 
+			end
+		end
+	else	
+		if ent.BeingChased then
+			self:Speak("join_invsgt")
+		else
+			if self.IsSergeant and math.random(1,2) == 1 then
+				self:Speak("ordr_invsgt")
+			else
+				self:Speak("invsgt")	
+			end
+		end
+		ent.BeingChased = true
+		self:GoToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,{
+		callback = function(a)
+			if IsValid(ent) and self.Enemy == ent then
+				local target, los = self:LineOfSightChecks(ent)
+				if los or target != self.Enemy then
+					a:Invalidate()
+				end
+			end
+		end })
+	end
+end
+
+function ENT:LineOfSightChecks( ent, ignorevehicles )
+	local mins, maxs = ent:GetCollisionBounds()
+	local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter()+ent:GetUp()*(maxs*0.25),{self,ent,self:GetOwner()})	
+	if IsValid(obstr) then	
+		if !ignorevehicles and ( self.DriveThese[obstr:GetModel()] and !self.SeenVehicles[obstr] ) then
+			self.SeenVehicles[obstr] = true
+			self.CountedVehicles = self.CountedVehicles+1
+		elseif ( ( obstr:IsNPC() or obstr:IsPlayer() or obstr:IsNextBot() ) and obstr:Health() > 0 ) and self:CheckRelationships(obstr) == "foe" then
+			ent = obstr
+			self:SetEnemy(ent)
+		end
+	end
+	return ent, los
 end
 
 function ENT:GoToPosition( pos, anim, speed, movefunc, postarriveanim )
@@ -2297,6 +2374,10 @@ function ENT:OnInjured(dmg)
 		end
 	--	self:SetNWBool("SPShield",true)
 	end
+	if self.Unkillable then
+		--print("yes")
+		dmg:SetDamage(0)
+	end
 	if ( ( math.abs(self:Health()) - math.abs(dmg:GetDamage())) <= 0 ) and !self.Unkillable then return end
 	if self.AnimBusy then return end
 	if self.ImmuneDMGs[dmg:GetDamageType()] then dmg:ScaleDamage(0) end
@@ -2399,10 +2480,7 @@ function ENT:OnInjured(dmg)
 			end )
 		end
 	end
-	if self.Unkillable then
-		--print("yes")
-		dmg:SetDamage(0)
-	elseif self.AllowHealthRegeneration then
+	if self.AllowHealthRegeneration then
 		local total = dmg:GetDamage()
 		--print(self.Shield, "before")
 		self.HealthActual = self:Health()
@@ -2826,9 +2904,10 @@ function ENT:Turn(dif,calm,noanim) -- dif is the yaw number to turn, can be nega
 	else
 		t = math.abs(dif)/140
 	end
-	local z = len*t
-	for i = 1, 140*t do -- Maximum turn angle is 140, we'll turn whatever degrees
-		timer.Simple( (0.001*i)+z, function() -- we are given, using the timers
+	local z = len*t 
+	-- To increase turn time replace the 0.0004 with 0.001 and the 420 with 140
+	for i = 1, 420*t do -- Maximum turn angle is 140, we'll turn whatever degrees
+		timer.Simple( (0.0004*i)+z, function() -- we are given, using the timers
 			if IsValid(self) then -- to know when to stop
 				self:SetAngles(self:GetAngles()+Angle(0,e,0))
 			end

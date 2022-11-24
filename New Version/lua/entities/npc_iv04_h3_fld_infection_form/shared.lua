@@ -16,6 +16,8 @@ ENT.Faction = "FACTION_FLOOD"
 
 ENT.DoesntUseWeapons = true
 
+ENT.DeathParticle = "iv04_halo_3_flood_gib_small"
+
 --ENT.SpawnWithWeaponDrawn = true
 
 function ENT:DoInit()

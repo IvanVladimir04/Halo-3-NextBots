@@ -1184,4 +1184,5 @@ function ENT:SetupAnimations()
 			end
 		end
 	end
+	self:DoAnimation(self.IdleCalmAnim)
 end
