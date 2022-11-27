@@ -6,9 +6,9 @@ ENT.PrintName = "Brute Chieftain"
 
 ENT.AITemplate = "BRUTE"
 
-ENT.StartHealth = 175
+ENT.StartHealth = 500
 
-ENT.MaxShield = 200
+ENT.MaxShield = 400
 
 ENT.Models = {"models/halo_3/characters/covenant/brute.mdl"}
 

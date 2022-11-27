@@ -1109,6 +1109,9 @@ function ENT:OnTraceAttack( info, dir, trace )
 	if self.WeakHitGroup and hg != self.WeakHitGroup then
 		info:SetDamage(0)
 	end
+	if hg == self.WeakHitGroup then
+	ParticleEffect( self.BloodParticle, trace.HitPos, self:GetAngles(), self )
+	end
 	local ang = (trace.HitPos-self:WorldSpaceCenter()):GetNormalized():Angle()
 	local dif = math.AngleDifference(ang.y,self:GetAngles().y)
 	if dif < 0 then dif = dif+360 end
@@ -2275,7 +2278,11 @@ function ENT:OnInjured(dmg)
 	if self:Health() <= 0 then return end
 	local rel = self:CheckRelationships(dmg:GetAttacker())
 	local ht = self:Health()
-	--ParticleEffect( self.BloodEffect, dmg:GetDamagePosition(), Angle(0,0,0), self )
+	if !self.HasArmor or self.Shield <= 0 then
+	if !self.IsHunter then
+	ParticleEffect( self.BloodParticle, dmg:GetDamagePosition(), Angle(0,0,0), self )
+	end
+	end
 	if rel == "friend" and !dmg:GetAttacker():IsPlayer() then
 		if self.BeenInjured then
 			dmg:ScaleDamage(0)
@@ -2311,6 +2318,7 @@ function ENT:OnInjured(dmg)
 			self.ShieldWentDown = true
 			if self.IsBrute then
 				self.HasArmor = false
+				self:EmitSound("halo_3/sfx/brute_shield_depletion"..math.random(1,3)..".wav", 100, 100)
 				if !self.IsChieftain then
 					if self.IsJumpers then
 						self:SetBodygroup(3,0)
@@ -2907,7 +2915,7 @@ function ENT:Turn(dif,calm,noanim) -- dif is the yaw number to turn, can be nega
 	local z = len*t 
 	-- To increase turn time replace the 0.0004 with 0.001 and the 420 with 140
 	for i = 1, 420*t do -- Maximum turn angle is 140, we'll turn whatever degrees
-		timer.Simple( (0.0004*i)+z, function() -- we are given, using the timers
+		timer.Simple( (0.001*i)+z, function() -- we are given, using the timers
 			if IsValid(self) then -- to know when to stop
 				self:SetAngles(self:GetAngles()+Angle(0,e,0))
 			end

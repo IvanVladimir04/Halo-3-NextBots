@@ -44,6 +44,7 @@ function ENT:SpartanInitialize()
 	self.ShieldDepleteParticle = "iv04_halo_3_spartan_shield_deplete"
 	self.ShieldDepleteArcsParticle = "iv04_halo_3_spartan_shield_deplete_arcs"
 	self.ShieldRechargeParticle = "iv04_halo_3_spartan_shield_recharge"
+	self.BloodParticle = "iv04_halo_3_blood_impact_human"
 	self.MaxShield = 70
 	self.Shield = 70
 	self.HasArmor = true
@@ -58,6 +59,7 @@ function ENT:MarineInitialize()
 	self.SightAttachment = "eyes"
 	--PrintTable(self.InterestingEntities)
 	self.BloodDecal = "iv04_halo_3_blood_splat_human"
+	self.BloodParticle = "iv04_halo_3_blood_impact_human"
 	self.AllowClimbing = true
 	self.AllowStealth = true
 	self.MoveSpeed = 90
@@ -113,6 +115,7 @@ function ENT:EliteInitialize()
 	self.ShieldDepleteArcsParticle = "iv04_halo_3_elite_shield_deplete_arcs"
 	self.ShieldRechargeParticle = "iv04_halo_3_elite_shield_recharge"
 	self.BloodDecal = "iv04_halo_3_blood_splat_elite"
+	self.BloodParticle = "iv04_halo_3_blood_impact_elite"
 	self.MaxShield = 70
 	self.Shield = 70
 	self.HasArmor = true
@@ -144,6 +147,7 @@ function ENT:BruteInitialize()
 	self.ShieldCriticalParticle = "iv04_halo_3_brute_shield_critical"
 	self.ShieldDepleteParticle = "iv04_halo_3_brute_shield_deplete"
 	self.BloodDecal = "iv04_halo_3_blood_splat_brute"
+	self.BloodParticle = "iv04_halo_3_blood_impact_brute"
 	self.GrenadeType = "astw2_halo3_spike_thrown"
 	self.AllowVehicleFunctions = true
 	if self.Rank == 1 then
@@ -257,6 +261,7 @@ function ENT:GruntInitialize()
 	self.BackpackHitGroup = 2
 	self.BackpackModel = "models/halo_3/characters/covenant/grunt_backpack.mdl"
 	self.BloodDecal = "iv04_halo_3_blood_splat_grunt"
+	self.BloodParticle = "iv04_halo_3_blood_impact_grunt"
 	self.BackpackAttachment = "methane_fx"
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 30
@@ -276,7 +281,9 @@ function ENT:DroneInitialize()
 end
 function ENT:HunterInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_hunter"
+	self.BloodParticle = "iv04_halo_3_blood_impact_hunter"
 	self.InstaKillImmune = true
+	self.IsHunter = true
 	self.DamageThreshold = math.huge -- Do this to disable flinching
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 75
@@ -334,6 +341,7 @@ function ENT:ConstructorInitialize()
 end
 function ENT:FloodHumanInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
+	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.MoveSpeed = 40
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
@@ -365,6 +373,7 @@ function ENT:FloodHumanInitialize()
 end
 function ENT:FloodEliteInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
+	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.MoveSpeed = 40
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15

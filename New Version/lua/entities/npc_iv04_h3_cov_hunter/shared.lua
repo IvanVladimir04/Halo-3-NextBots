@@ -10,7 +10,7 @@ ENT.Models = {"models/halo_3/characters/covenant/hunter.mdl"}
 
 ENT.Faction = "FACTION_COVENANT"
 
-ENT.StartHealth = 200
+ENT.StartHealth = 700
 
 ENT.Rank = 1
 
