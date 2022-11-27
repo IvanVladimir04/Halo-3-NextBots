@@ -579,7 +579,7 @@ function ENT:SetupAnimations()
 					self.PosingAnims = {"Combat_Rifle_Idle_Posing_1","Combat_Rifle_Idle_Posing_2","Combat_Rifle_Idle_Posing_3","Combat_Rifle_Idle_Posing_4","Combat_Rifle_Idle_Posing_5"}
 				else
 					self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
-					self.MeleeBackAnim = {"Melee_Back_Combat_Rifle"}
+					self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
 					self.BraceAnim = "Combat_Rifle_Brace"
 					self.PosingAnims = {"Combat_Rifle_Idle_Posing_1","Combat_Rifle_Idle_Posing_2","Combat_Rifle_Idle_Posing_3","Combat_Rifle_Idle_Posing_4","Combat_Rifle_Idle_Posing_5","Combat_Rifle_Idle_Posing_6","Combat_Rifle_Idle_Posing_7","Combat_Rifle_Idle_Posing_8","Combat_Rifle_Idle_Posing_9"}
 				end
@@ -645,8 +645,8 @@ function ENT:SetupAnimations()
 				self.CanShootCrouch = true
 				self.CanMelee = false
 				self.TauntAnim = {"taunt_combat_missile"}
-				self.EvadeLeftAnim = "evade_left_combat_missile"
-				self.EvadeRightAnim = "evade_right_combat_missile"
+				self.EvadeLeftAnim = "evade_left_combat_rifle"
+				self.EvadeRightAnim = "evade_right_combat_rifle"
 				self.DiveFrontAnim = "dive_front_combat_unarmed"
 				self.DiveLeftAnim = "dive_left_combat_unarmed"
 				self.DiveRightAnim = "dive_right_combat_unarmed"
