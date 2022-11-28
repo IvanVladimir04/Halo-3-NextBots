@@ -10,9 +10,6 @@
 	"$detailblendmode" 0
 	"$detailscale" 20
 
-	"$envmap" "env_cubemap"
-	"$envmaptint" "[0.025 0.025 0.025]"
-
 	"$phong" 1
 	"$phongexponent" 5
 	"$phongboost" 1

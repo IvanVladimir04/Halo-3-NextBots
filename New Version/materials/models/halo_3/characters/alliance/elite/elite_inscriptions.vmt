@@ -10,4 +10,5 @@
 //	"$selfillum"	1
 //	"$selfillummask"	"models/halo_3/characters/alliance/elite/elite_personal_decals"
 	"$color2"		"[3 5.6 7]"
+	"$nodecal"	1
 }

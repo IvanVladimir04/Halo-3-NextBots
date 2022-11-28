@@ -640,10 +640,30 @@ function ENT:CollidedWith( ent )
 	return !(!self.CollidedEntities[ent] and ent:GetOwner() != self)
 end
 
+ENT.NextUpdateT = CurTime()
+ENT.UpdateDelay = 1
 function ENT:OnContact( ent ) -- When we touch someBODY
 	if ent == game.GetWorld() then return self:OnTouchWorld(ent) end
 	if self.IsInVehicle then return end
 	--print(ent, ent:GetOwner())
+	if ent:IsVehicle() or ent.LFS or ent.GroundVehicle then
+	if self.NextUpdateT < CurTime() then
+	self.NextUpdateT = CurTime()+self.UpdateDelay
+	local d = DamageInfo()
+			d:SetDamage( ent:GetVelocity():Length() )
+			d:SetAttacker( ent )
+			d:SetInflictor( ent )
+			d:SetDamageType( DMG_VEHICLE )
+			d:SetDamagePosition( self:NearestPoint( self:WorldSpaceCenter() ) )
+			self:TakeDamageInfo(d)
+	end
+	elseif ent:GetClass() == "func_physbox" then
+		local phys = ent:GetPhysicsObject()
+			if IsValid(phys) then
+				local dir = (ent:GetPos()-self:GetPos()):GetNormalized()
+				phys:ApplyForceOffset( dir*30000, ent:NearestPoint(self:GetPos()) )
+			end
+	end
 	if !self:CollidedWith(ent) then 
 		self.CollidedEntities[ent] = true
 		--print(ent,ent:GetInternalVariable( "parentname" ),ent:GetName())
@@ -1822,6 +1842,7 @@ function ENT:DoMeleeDamage(back) -- No arguments needed, everything is defined o
 			d:SetDamageType( self.MeleeDamageType )
 			d:SetDamagePosition( v:NearestPoint( self:WorldSpaceCenter() ) )
 			v:TakeDamageInfo(d)
+			v:EmitSound("halo/halo_3/melee/melee"..math.random(1,8)..".ogg", 90, math.random(90,110))
 		end
 	end
 end

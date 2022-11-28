@@ -15,5 +15,6 @@
 	$detailblendfactor			"0.2"
 	$detailscale			"1.00"
 	"$decal"		1
+	"$nodecal"	1
 }
 

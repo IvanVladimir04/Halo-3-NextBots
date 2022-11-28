@@ -236,6 +236,8 @@ function ENT:BruteInitialize()
 				self:SetBodygroup(2,6)
 				self:SetBodygroup(3,6)
 				self:SetBodygroup(4,6)
+				self.MoveSpeedMultiplier = 2
+				self.AllowBerserk = false
 			else
 				self.IsChieftain = true
 				self:SetSkin(3)
@@ -244,6 +246,7 @@ function ENT:BruteInitialize()
 				self:SetBodygroup(4,5)
 				self.DisableLeap = false
 				self.AllowBerserk = false
+				self.MoveSpeedMultiplier = 3.25
 			end
 		end
 	end
