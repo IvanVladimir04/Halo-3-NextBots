@@ -1149,8 +1149,8 @@ function ENT:OnTraceAttack( info, dir, trace )
 			prop:SetPos(self:GetAttachment(self:LookupAttachment(self.BackpackAttachment)).Pos)
 			prop:Spawn()
 			prop:SetSkin(self.Rank)
-			self:EmitSound("halo_reach/characters/grunt/grunt_backpack_steam/grunt_backpack_steam"..math.random(1,3)..".ogg",100)
-			ParticleEffectAttach("iv04_halo_reach_grunt_methane_leak_violent",PATTACH_POINT_FOLLOW,self,self:LookupAttachment(self.BackpackAttachment))
+			self:EmitSound("halo_3/sfx/grunt_backpack_steam"..math.random(1,3)..".wav",100)
+			ParticleEffectAttach("iv04_halo_3_grunt_methane_fx",PATTACH_POINT_FOLLOW,self,self:LookupAttachment(self.BackpackAttachment))
 			self.DroppedBackpack = true
 			timer.Simple( 30, function()
 				if IsValid(prop) then

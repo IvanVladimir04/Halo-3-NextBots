@@ -64,6 +64,7 @@ PrecacheParticleSystem( "iv04_halo_3_explosion_large" )
 PrecacheParticleSystem( "iv04_halo_3_monitor_idle_rings" )
 PrecacheParticleSystem( "iv04_halo_3_monitor_idle_rings_red" )
 PrecacheParticleSystem( "iv04_halo_3_monitor_push_fx" )
+PrecacheParticleSystem( "iv04_halo_3_grunt_methane_fx" )
 
 --Beam Effect
 PrecacheParticleSystem( "iv04_halo_3_laser_beam_red" )
