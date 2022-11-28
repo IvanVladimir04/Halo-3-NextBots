@@ -1148,7 +1148,6 @@ function ENT:OnTraceAttack( info, dir, trace )
 			prop:SetModel( self.BackpackModel )
 			prop:SetPos(self:GetAttachment(self:LookupAttachment(self.BackpackAttachment)).Pos)
 			prop:Spawn()
-			prop:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 			prop:SetSkin(self.Rank)
 			self:EmitSound("halo_reach/characters/grunt/grunt_backpack_steam/grunt_backpack_steam"..math.random(1,3)..".ogg",100)
 			ParticleEffectAttach("iv04_halo_reach_grunt_methane_leak_violent",PATTACH_POINT_FOLLOW,self,self:LookupAttachment(self.BackpackAttachment))
@@ -3413,6 +3412,7 @@ function ENT:FinishDeadLanding()
 		if self.AlternateLanded then
 			--print(self.AlternateLanded)
 			local rag = self:CreateRagdoll(DamageInfo())
+			rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 			if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
 				timer.Simple( 60, function()
 					if IsValid(rag) then
@@ -3455,6 +3455,7 @@ function ENT:FinishDeadLanding()
 				end)
 			end
 			rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
+			rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 		end 
 	end )
 	self:PlaySequenceAndWait(anim)
@@ -3484,6 +3485,7 @@ function ENT:DoKilledAnim()
 					self.Weapon:Remove()
 				end
 				local rag = self:CreateRagdoll(self.KilledDmgInfo)
+				rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 				return
 			end
 			local seq, len = self:LookupSequence(anim)
@@ -3498,6 +3500,7 @@ function ENT:DoKilledAnim()
 						self.Weapon:Remove()
 					end
 					local rag
+					-- rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 					if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
 						timer.Simple( 60, function()
 							if IsValid(wep) and !IsValid(wep.Owner) then
@@ -3509,6 +3512,7 @@ function ENT:DoKilledAnim()
 						end)
 					end
 					rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
+					rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 				end
 			end )
 			self:PlaySequenceAndPWait(anim, 1, self:GetPos())
@@ -3522,6 +3526,7 @@ function ENT:DoKilledAnim()
 				self.Weapon:Remove()
 			end
 			local rag
+			-- rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 			if GetConVar( "ai_serverragdolls" ):GetInt() == 0 then
 				timer.Simple( 60, function()
 					if IsValid(wep) and !IsValid(wep.Owner) then
@@ -3533,6 +3538,7 @@ function ENT:DoKilledAnim()
 				end)
 			end
 			rag = self:CreateRagdoll(self.KilledDmgInfo)
+			rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 		end
 	else
 		self:Speak("thrwn")
