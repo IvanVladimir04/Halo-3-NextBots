@@ -10,7 +10,6 @@
 	"$detailblendmode"			"5.00"
 	"$detailblendfactor"			"8.00"
 	"$detailscale"			"1.00"
-	"$normalmapalphaenvmapmask"	1
 	"$phong" 1
 	"$phongboost" "3"
 	"$phongexponent" "9"

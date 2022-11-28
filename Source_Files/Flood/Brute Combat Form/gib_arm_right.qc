@@ -13,14 +13,8 @@ $surfaceprop "alienflesh"
 
 $contents "solid"
 
-$illumposition 0 0 96
 
 $cdmaterials "\models\halo_3\characters\flood\brute_combat_form\"
-
-
-$cbox 0 0 0 0 0 0
-
-$bbox -9.089 -11.527 -13.175 24.027 7.405 0.169
 
 
 $sequence "reference" {
