@@ -14,7 +14,7 @@ ENT.StartHealth = 700
 
 ENT.Rank = 1
 
-ENT.MoveSpeed = 75
+ENT.MoveSpeed = 60
 
 ENT.MoveSpeedMultiplier = 3
 

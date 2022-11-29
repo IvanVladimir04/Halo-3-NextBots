@@ -481,6 +481,7 @@ function ENT:OnInitialize()
 	self.MeleeImpactSound = { "halo/halo_3/melee/melee1.ogg", "halo/halo_3/melee/melee2.ogg", "halo/halo_3/melee/melee3.ogg", "halo/halo_3/melee/melee4.ogg", "halo/halo_3/melee/melee5.ogg", 
 							"halo/halo_3/melee/melee6.ogg", "halo/halo_3/melee/melee7.ogg", "halo/halo_3/melee/melee8.ogg" }
 	self.VehicleImpactSound = "iv04.h3_impact_veh_bip_generic"
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_generic"
 	local func = self.TemplateInitialize[self.AITemplate]
 	func(self)
 	self.BleedThreshold = 25
@@ -647,6 +648,21 @@ end
 
 ENT.NextUpdateT = CurTime()
 ENT.UpdateDelay = 1
+
+function ENT:OnIgnite()
+		if !self.SpokeFire then
+		timer.Simple( math.random(0.5,1), function()
+		if IsValid(self) then self.SpokeFire = false end
+		end )
+		-- self.NVulTime = CurTime()+3
+		if self.NextUpdateT < CurTime() then
+		self.NextUpdateT = CurTime()+3
+			self:Speak("panic_onfire")
+		self.SpokeFire = true
+	end
+	end
+end
+
 function ENT:OnContact( ent ) -- When we touch someBODY
 	if ent == game.GetWorld() then return self:OnTouchWorld(ent) end
 	if self.IsInVehicle then return end
@@ -659,6 +675,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 			d:SetAttacker( ent )
 			d:SetInflictor( ent )
 			d:SetDamageType( DMG_VEHICLE )
+			d:SetDamageForce(ent:GetVelocity())
 			d:SetDamagePosition( self:NearestPoint( self:WorldSpaceCenter() ) )
 			self:TakeDamageInfo(d)
 			sound.Play(self.VehicleImpactSound, self:GetPos(), 100, 100)
@@ -1361,6 +1378,7 @@ function ENT:OnLandOnGround(ent)
 	end
 	if self.FlyingDead then
 		self.HasLanded = true
+		sound.Play(self.BodyFallImpactSound, self:GetPos(), 100, 100)
 	elseif self.Leaping then
 		self.AnimBusy = false
 		self.Leaping = false
@@ -3592,8 +3610,8 @@ end
 
 function ENT:FootstepSound()
 	local character = self.Voices[self.VoiceType]
-	if character and character["OnStep"] and istable(character["OnStep"]) then
-		local sound = table.Random(character["OnStep"])
+	if character and character["footstep"] and istable(character["footstep"]) then
+		local sound = table.Random(character["footstep"])
 		self:EmitSound(sound,60)
 	end
 end

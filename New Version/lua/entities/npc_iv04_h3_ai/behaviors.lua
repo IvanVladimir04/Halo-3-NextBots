@@ -134,6 +134,7 @@ function ENT:BruteInitialize()
 	self.ArmorDoesntRegenerate = true
 	self:SetCollisionBounds(Vector(20,20,0),Vector(-20,-20,100))
 	self.MeleeSwingSound = { "halo_3/sfx/brute_melee1.wav", "halo_3/sfx/brute_melee2.wav", "halo_3/sfx/brute_melee3.wav", "halo_3/sfx/brute_melee4.wav", "halo_3/sfx/brute_melee5.wav" }
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_brute"
 	self.CanShootCrouch = false
 	self.MoveSpeed = 100
 	self.MoveSpeedMultiplier = 1.5
@@ -273,6 +274,7 @@ function ENT:GruntInitialize()
 	self.BloodParticle = "iv04_halo_3_blood_impact_grunt"
 	self.BackpackAttachment = "methane_fx"
 	self.VehicleImpactSound = "iv04.h3_impact_veh_bip_grunt"
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_grunt"
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 30
 	self.MoveSpeedMultiplier = 4
@@ -294,12 +296,13 @@ function ENT:HunterInitialize()
 	self.BloodParticle = "iv04_halo_3_blood_impact_hunter"
 	self.MeleeSwingSound = { "halo_3/sfx/hunter_arm_melee1.wav", "halo_3/sfx/hunter_arm_melee2.wav", "halo_3/sfx/hunter_arm_melee3.wav" }
 	self.MeleeImpactSound = { "halo_3/sfx/hunter_melee_hit1.wav", "halo_3/sfx/hunter_melee_hit2.wav", "halo_3/sfx/hunter_melee_hit3.wav", "halo_3/sfx/hunter_melee_hit4.wav", "halo_3/sfx/hunter_melee_hit5.wav", "halo_3/sfx/hunter_melee_hit6.wav" }
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_hunter"
 	self.InstaKillImmune = true
 	self.IsHunter = true
 	self.DamageThreshold = math.huge -- Do this to disable flinching
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 75
-	self.MoveSpeedMultiplier = 2
+	self.MoveSpeedMultiplier = 2.5
 	self.WeakHitGroup = 2
 	self:SetCollisionBounds(Vector(30,30,120),Vector(-30,-30,0))
 	self.DamageResistances = {
@@ -358,6 +361,7 @@ function ENT:FloodHumanInitialize()
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
 	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
 	if math.random(1,4) == 1 and !self.Weaponless then
 		self.SpawnWithWeaponDrawn = true
 	else
@@ -391,6 +395,7 @@ function ENT:FloodEliteInitialize()
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
 	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
 	if math.random(1,4) == 1 and !self.Weaponless then
 		self.SpawnWithWeaponDrawn = true
 	else

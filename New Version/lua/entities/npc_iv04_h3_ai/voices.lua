@@ -2185,6 +2185,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 		["warn_trrt"]	=	{
 				"marines/marine1/warn_trrt1.ogg",
 				"marines/marine1/warn_trrt2.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Marine2"] = {
@@ -3792,6 +3795,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 		["warn_trrt"]	=	{
 				"marines/marine2/warn_trrt1.ogg",
 				"marines/marine2/warn_trrt2.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Marine3"] = {
@@ -5464,6 +5470,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 		["warn_trrt"]	=	{
 				"marines/marine3/warn_trrt1.ogg",
 				"marines/marine3/warn_trrt2.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Marine4"] = {
@@ -6951,6 +6960,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 		["warn_trrt"]	=	{
 				"marines/marine4/warn_trrt1.ogg",
 				"marines/marine4/warn_trrt2.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Marine5"] = {
@@ -8560,6 +8572,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 		["warn_trrt"]	=	{
 				"marines/marine5/warn_trrt1.ogg",
 				"marines/marine5/warn_trrt3.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Marine6"] = {
@@ -11740,6 +11755,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 		["warn_trrt"]	=	{
 				"marines/reynolds/warn_trrt1.ogg",
 				"marines/reynolds/warn_trrt2.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Stacker"] = {
@@ -13339,6 +13357,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"marines/stacker/warn_trrt1.ogg",
 				"marines/stacker/warn_trrt2.ogg",
 				"marines/stacker/warn_trrt3.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Cop1"] = {
@@ -13982,7 +14003,10 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"cop1/dth_fall6.ogg",
 				"cop1/dth_fall7.ogg",
 				"cop1/dth_fall8.ogg",
-		}
+		},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Cop2"] = {
 			["cvr_invsgt"]	=	{
@@ -14587,6 +14611,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"cop2/dth_fall7.ogg",
 				"cop2/dth_fall8.ogg",
 				"cop2/dth_fall9.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Civilian1"] = {
@@ -15222,6 +15249,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"civilian1/dth_fall6.ogg",
 				"civilian1/dth_fall7.ogg",
 				"civilian1/dth_fall8.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Civilian2"] = {
@@ -15877,6 +15907,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"civilian2/dth_fall7.ogg",
 				"civilian2/dth_fall8.ogg",
 				"civilian2/dth_fall9.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Johnson"] = {
@@ -16869,6 +16902,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"marines/johnson/approve3.ogg",
 				"marines/johnson/approve4.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Miranda"] = {
 		["scld_plr_hrt_blt"]	=	{
@@ -17112,7 +17148,10 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				},
 		["dth_sl"]	=	{
 			"miranda/dth_slw.ogg",
-		}
+		},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Dare"] = {
 		["seefoe_upthere"]	=	{
@@ -17729,6 +17768,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"dare/srprs_101.ogg",
 				"dare/srprs_102.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Dutch"] = {
 		["crs_mjrfoe"]	=	{
@@ -19397,6 +19439,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"dutch/warn_trrt1.ogg",
 				"dutch/warn_trrt3.ogg",
 			},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Buck"] = {
 		["crs_mjrfoe"]	=	{
@@ -21082,6 +21127,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"buck/warn_trrt1.ogg",
 				"buck/warn_trrt2.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Mickey"] = {
 		["crs_mjrfoe"]	=	{
@@ -22723,6 +22771,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"mickey/warn_trrt1.ogg",
 				"mickey/warn_trrt2.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Romeo"] = {
 		["crs_mjrfoe"]	=	{
@@ -24451,6 +24502,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"romeo/warn_trrt1.ogg",
 				"romeo/warn_trrt2.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Rookie"] = {
 		["shld_min_dmg"]	=	{
@@ -24826,6 +24880,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"rookie/extra_from_strk_grnd_109.ogg",
 				"rookie/extra_from_strk_grnd_110.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Female_Marine_1"] = {
 		["crs_mjrfoe"]	=	{
@@ -26383,6 +26440,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 		["warn_trrt"]	=	{
 				"marines/femalemarine1/warn_trrt1.ogg",
 				"marines/femalemarine1/warn_trrt2.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
 				}
 	},
 	["Female_Marine_2"] = {
@@ -27961,7 +28021,10 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 		["warn_trrt"]	=	{
 				"marines/femalemarine2/warn_trrt2.ogg",
 				"marines/femalemarine2/warn_trrt3.ogg",
-			}
+			},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Female_Marine_3"] = {
 		["chr_klfoe_stkplsm"]	=	{
@@ -29165,7 +29228,10 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"marines/femalemarine3/warn_trrt2.ogg",
 				"marines/femalemarine3/warn_trrt3.ogg",
 				"marines/femalemarine3/warn_trrt4.ogg",
-			}
+			},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_marine",
+				}
 	},
 	["Spartan_Male"] = {
 		["deathfall"]	=	{
@@ -29246,6 +29312,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"masterchief/death8.ogg",
 				"masterchief/death9.ogg",
 				},
+			["footstep"]	=	{
+				"iv04.h3_foley_step_spartan",
+				}
 	},
 	["Spartan_Female"] = {
 			["fall"]	=	{
@@ -29309,6 +29378,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"spartan_female/death6.ogg",
 				"spartan_female/death8.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_spartan",
+				}
 	},
 	["Elite_1"] = {
 		["ok_plr_trdst"]	=	{
@@ -31176,6 +31248,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"elite1/warn_trrt1.ogg",
 				"elite1/warn_trrt2.ogg",
 			},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_elite",
+				}
 	},
 	["Elite_2"]	= {
 		["panic_onfire"]	=	{
@@ -32762,6 +32837,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"elite2/warn_trrt2.ogg",
 				"elite2/warn_trrt3.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_elite",
+				}
 		},
 	["Arbiter"] = {
 		["look_lngtme"]	=	{
@@ -33642,6 +33720,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 			"arbiter/warn_trrt3.ogg",
 			"arbiter/warn_trrt4.ogg",
 		},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_elite",
+				}
 	},
 	["Brute_1"] = {
 		["crs_mjrfoe"]	=	{
@@ -35207,6 +35288,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"brute1/invsgt_fail8.ogg",
 				"brute1/invsgt_fail9.ogg",
 			},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_brute",
+				}
 	},
 	["Brute_2"]	= {
 		["crs_mjrfoe"]	=	{
@@ -36456,6 +36540,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"brute2/invsgt_fail6.ogg",
 				"brute2/invsgt_fail8.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_brute",
+				}
 	},
 	["Brute_3"]	= {
 		["crs_mjrfoe"]	=	{
@@ -37577,6 +37664,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"brute3/invsgt_fail8.ogg",
 				"brute3/invsgt_fail9.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_brute",
+				}
 	},
 	["Grunt_1"] = {
 ["join_re"]	=	{
@@ -38644,6 +38734,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"grunt1/dth_fall2.ogg",
 				"grunt1/dth_fall3.ogg",
 				"grunt1/dth_fall4.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_grunt",
 				}
 	},
 	["Grunt_2"] = {
@@ -39579,6 +39672,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				},
 		["srprs_"]	=	{
 				"grunt2/srprs_8.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_grunt",
 				}
 	},
 	["Grunt_3"] = {
@@ -40576,7 +40672,10 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"grunt3/invsgt_fail6.ogg",
 				"grunt3/invsgt_fail7.ogg",
 				"grunt3/invsgt_fail9.ogg",
-			}
+			},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_grunt",
+				}
 	},
 	["Grunt_4"] = {
 ["crs_mjrfoe"]	=	{
@@ -41716,6 +41815,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"grunt4/stayback_tim1.ogg",
 				"grunt4/stayback_tim2.ogg",
 				"grunt4/stayback_tim3.ogg",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_grunt",
 				}
 	},
 	["Guilty_Spark"] = {
@@ -42488,6 +42590,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"hunter/dth_fall6.ogg",
 				"hunter/dth_fall7.ogg",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_hunter",
+				}
 		},
 	["Flood_Gravemind_1"] = {
 		["lmnt_deadally"]	=	{
@@ -43717,6 +43822,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"flood/flood_gm2/floodcombat/dth_fall/50.wav",
 				"flood/flood_gm2/floodcombat/dth_fall/68.wav",
 				"flood/flood_gm2/floodcombat/dth_fall/88.wav",
+				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_flood_human",
 				}
 	},
 	["Flood_Combat_2"] = {
@@ -44015,6 +44123,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"flood/flood_gm3/floodcombat/dth_fall/68.wav",
 				"flood/flood_gm3/floodcombat/dth_fall/88.wav",
 				},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_flood_elite",
+				}
 	},
 	["Flood_Combat_Brute"] = {
 		["lift"]	=	{
@@ -44177,6 +44288,9 @@ ENT.Voices = { -- Fuck you [RS] William I am not cutting out dialogues
 				"flood/flood_gm1/floodcombat_brute/dth_fall/90.wav",
 				"flood/flood_gm1/floodcombat_brute/dth_fall/95.wav",
 				"flood/flood_gm1/floodcombat_brute/dth_fall/99.wav",
-		}
+		},
+		["footstep"]	=	{
+				"iv04.h3_foley_step_flood_brute",
+				}
 	}
 }
