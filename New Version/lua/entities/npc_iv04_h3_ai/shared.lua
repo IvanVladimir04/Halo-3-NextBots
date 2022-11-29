@@ -477,6 +477,10 @@ end
 function ENT:OnInitialize()
 	self.DoesntUseWeapons = self.WeaponlessTemplates[self.AITemplate]
 	--print(self.AITemplate,self.DoesntUseWeapons)
+	self.MeleeSwingSound = { "halo_3/sfx/gen_melee_swing1.wav", "halo_3/sfx/gen_melee_swing2.wav", "halo_3/sfx/gen_melee_swing3.wav" }
+	self.MeleeImpactSound = { "halo/halo_3/melee/melee1.ogg", "halo/halo_3/melee/melee2.ogg", "halo/halo_3/melee/melee3.ogg", "halo/halo_3/melee/melee4.ogg", "halo/halo_3/melee/melee5.ogg", 
+							"halo/halo_3/melee/melee6.ogg", "halo/halo_3/melee/melee7.ogg", "halo/halo_3/melee/melee8.ogg" }
+	self.VehicleImpactSound = "iv04.h3_impact_veh_bip_generic"
 	local func = self.TemplateInitialize[self.AITemplate]
 	func(self)
 	self.BleedThreshold = 25
@@ -490,6 +494,7 @@ function ENT:OnInitialize()
 	end
 	self.Difficulty = GetConVar("halo_3_nextbots_ai_difficulty"):GetInt()
 	self.MeleeDamage = (self.MeleeDamage*(self.Difficulty)*0.5)
+
 	if self.EnableFlashlight then
 		if self:LookupAttachment("flashlight") != 0 then
 			self.Sprite = ents.Create("env_sprite")
@@ -656,6 +661,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 			d:SetDamageType( DMG_VEHICLE )
 			d:SetDamagePosition( self:NearestPoint( self:WorldSpaceCenter() ) )
 			self:TakeDamageInfo(d)
+			sound.Play(self.VehicleImpactSound, self:GetPos(), 100, 100)
 	end
 	elseif ent:GetClass() == "func_physbox" then
 		local phys = ent:GetPhysicsObject()
@@ -1289,6 +1295,8 @@ function ENT:OnLeaveGround(ent)
 			self.AnimBusy = true
 			if self.IsJumpers then
 				self:DoAnimation(self.AirAnim)
+				self.JetPackStartSound:Play()
+				self.JetPackSound:Play()
 				timer.Simple( 6, function()
 					if IsValid(self) and self.LastTimeOnGround == t and self.Leaping then
 						self.AnimBusy = false
@@ -1337,6 +1345,15 @@ function ENT:OnLeaveGround(ent)
 	end
 end
 
+function ENT:OnRemove()
+    if SERVER then
+		self.JetPackSound = self.JetPackSound or CreateSound( self, "halo/combat_evolved/weapons/silence.ogg")
+		self.JetPackStartSound = self.JetPackStartSound or CreateSound( self, "halo/combat_evolved/weapons/silence.ogg")
+        self.JetPackSound:Stop()
+        self.JetPackStartSound:Stop()
+    end
+end
+
 function ENT:OnLandOnGround(ent)
 	--print("landed",CurTime())
 	if self.IsInVehicle or self.VehicleRole then
@@ -1350,6 +1367,9 @@ function ENT:OnLandOnGround(ent)
 		self.LastTimeOnGround = CurTime()
 		if self.IsJumpers then
 			self:StopParticles()
+			self.JetPackSound:Stop()
+			self.JetPackStartSound:Stop()
+			sound.Play("iv04.h3_brute_jetpack_out", self:GetPos(), 100, 100)
 		elseif self.HasMeleeWeapon then
 			local func = function()
 				local oldmelee = self.MeleeAnim
@@ -1757,6 +1777,7 @@ function ENT:DoMelee(ent,dontwait) -- In case you want to melee a specific entit
 		return
 	end
 	self:Speak(self.MeleeQuote)
+	self:EmitSound(self:TableRandom(self.MeleeSwingSound), 90, math.random(90,110))
 	local anim = self:TableRandom(self.MeleeAnim)
 	local turn
 	if IsValid(ent) or IsValid(self.Enemy) then -- If no ent argument, use self.Enemy as target instead
@@ -1844,7 +1865,7 @@ function ENT:DoMeleeDamage(back) -- No arguments needed, everything is defined o
 			d:SetDamageType( self.MeleeDamageType )
 			d:SetDamagePosition( v:NearestPoint( self:WorldSpaceCenter() ) )
 			v:TakeDamageInfo(d)
-			v:EmitSound("halo/halo_3/melee/melee"..math.random(1,8)..".ogg", 90, math.random(90,110))
+			v:EmitSound(self:TableRandom(self.MeleeImpactSound), 90, math.random(90,110))
 		end
 	end
 end
@@ -3337,9 +3358,14 @@ function ENT:OnKilled( dmginfo ) -- When killed
 	self.AnimBusy = false
 	self:SetEnemy(nil)
 	self:DropKamikazeGrenades()
-	
+	if IsValid(self.JetPackSound) then
+	self.JetPackSound = self.JetPackSound or CreateSound( self, "halo/combat_evolved/weapons/silence.ogg")
+	self.JetPackStartSound = self.JetPackStartSound or CreateSound( self, "halo/combat_evolved/weapons/silence.ogg")
+	self.JetPackStartSound:Stop()
+	self.JetPackSound:Stop()
+	end
 	if self.ExplodesOnKilled then
-		ParticleEffectAttach(self.DeathParticle,PATTACH_ABSORIGIN_FOLLOW,self,0)
+		ParticleEffect( self.DeathParticle, self:WorldSpaceCenter(), self:GetAngles(), self )
 		if IsValid(self.InfectVictim) then
 			self.InfectVictim:ResetAI()
 			self.InfectVictim.UnderLatchAttack = false

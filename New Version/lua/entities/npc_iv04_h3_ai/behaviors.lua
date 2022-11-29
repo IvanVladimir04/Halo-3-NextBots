@@ -101,6 +101,7 @@ function ENT:EliteInitialize()
 		--["prop_dynamic"] = true
 	}
 	self.AllowClimbing = true
+	self.MeleeSwingSound = { "halo_3/sfx/elite_melee1_1.wav", "halo_3/sfx/elite_melee1_2.wav", "halo_3/sfx/elite_melee1_3.wav" }
 	self.MoveSpeed = 100
 	self.MoveSpeedMultiplier = 2
 	self:SetCollisionBounds(Vector(10,10,120),Vector(-10,-10,0))
@@ -132,6 +133,7 @@ function ENT:BruteInitialize()
 	self.IsBrute = true
 	self.ArmorDoesntRegenerate = true
 	self:SetCollisionBounds(Vector(20,20,0),Vector(-20,-20,100))
+	self.MeleeSwingSound = { "halo_3/sfx/brute_melee1.wav", "halo_3/sfx/brute_melee2.wav", "halo_3/sfx/brute_melee3.wav", "halo_3/sfx/brute_melee4.wav", "halo_3/sfx/brute_melee5.wav" }
 	self.CanShootCrouch = false
 	self.MoveSpeed = 100
 	self.MoveSpeedMultiplier = 1.5
@@ -190,6 +192,8 @@ function ENT:BruteInitialize()
 			self:SetBodygroup(2,4)
 			self:SetBodygroup(3,4)
 			self:SetBodygroup(4,4)
+			self.JetPackSound = CreateSound( self, "iv04.h3_brute_jetpack_lp")
+			self.JetPackStartSound = CreateSound( self, "iv04.h3_brute_jetpack_in")
 		else
 			self:SetSkin(self.Rank)
 			self:SetBodygroup(2,2)
@@ -211,6 +215,8 @@ function ENT:BruteInitialize()
 			self:SetBodygroup(2,4)
 			self:SetBodygroup(3,4)
 			self:SetBodygroup(4,4)
+			self.JetPackSound = CreateSound( self, "iv04.h3_brute_jetpack_lp")
+			self.JetPackStartSound = CreateSound( self, "iv04.h3_brute_jetpack_in")
 		else
 			self:SetBodygroup(2,2)
 			self:SetSkin(self.Rank)
@@ -266,6 +272,7 @@ function ENT:GruntInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_grunt"
 	self.BloodParticle = "iv04_halo_3_blood_impact_grunt"
 	self.BackpackAttachment = "methane_fx"
+	self.VehicleImpactSound = "iv04.h3_impact_veh_bip_grunt"
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 30
 	self.MoveSpeedMultiplier = 4
@@ -285,6 +292,8 @@ end
 function ENT:HunterInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_hunter"
 	self.BloodParticle = "iv04_halo_3_blood_impact_hunter"
+	self.MeleeSwingSound = { "halo_3/sfx/hunter_arm_melee1.wav", "halo_3/sfx/hunter_arm_melee2.wav", "halo_3/sfx/hunter_arm_melee3.wav" }
+	self.MeleeImpactSound = { "halo_3/sfx/hunter_melee_hit1.wav", "halo_3/sfx/hunter_melee_hit2.wav", "halo_3/sfx/hunter_melee_hit3.wav", "halo_3/sfx/hunter_melee_hit4.wav", "halo_3/sfx/hunter_melee_hit5.wav", "halo_3/sfx/hunter_melee_hit6.wav" }
 	self.InstaKillImmune = true
 	self.IsHunter = true
 	self.DamageThreshold = math.huge -- Do this to disable flinching
@@ -348,6 +357,7 @@ function ENT:FloodHumanInitialize()
 	self.MoveSpeed = 40
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
+	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
 	if math.random(1,4) == 1 and !self.Weaponless then
 		self.SpawnWithWeaponDrawn = true
 	else
@@ -380,6 +390,7 @@ function ENT:FloodEliteInitialize()
 	self.MoveSpeed = 40
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
+	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
 	if math.random(1,4) == 1 and !self.Weaponless then
 		self.SpawnWithWeaponDrawn = true
 	else
@@ -428,6 +439,7 @@ function ENT:FloodInfectionInitialize()
 	self.DoesntUseWeapons = true
 	self.LeapRange = 300
 	self.DeathParticle = "iv04_halo_3_flood_gib_medium"
+	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.ExplodesOnKilled = true
 	self:SetCollisionBounds(Vector(10,10,20),Vector(-10,-10,0))
 	self.InfectableTemplates = {
@@ -1745,6 +1757,7 @@ function ENT:BruteBehavior(ent,range)
 					end )
 					self.loco:SetGravity(200)
 					self.Leaping = true
+					
 					local pos = self:FindNearbyPos(ent:GetPos(),512)
 					ParticleEffectAttach( "iv04_halo_3_brute_jumppack_fx", PATTACH_POINT_FOLLOW, self, 6 )
 					ParticleEffectAttach( "iv04_halo_3_brute_jumppack_fx", PATTACH_POINT_FOLLOW, self, 7 )

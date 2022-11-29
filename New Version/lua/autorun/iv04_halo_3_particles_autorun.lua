@@ -81,3 +81,53 @@ game.AddDecal( "iv04_halo_3_blood_splat_brute", "effects/halo3/decals/blood_brut
 game.AddDecal( "iv04_halo_3_blood_splat_drone", "effects/halo3/decals/blood_drone" ) 
 game.AddDecal( "iv04_halo_3_blood_splat_engineer", "effects/halo3/decals/blood_engineer" ) 
 game.AddDecal( "iv04_halo_3_blood_splat_flood", "effects/halo3/decals/blood_flood" ) 
+
+sound.Add(
+{
+    name = "iv04.h3_brute_jetpack_in",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+	pitch = { 100 },
+    sound = {"halo_3/sfx/jetpack_in.wav"}
+})
+
+sound.Add(
+{
+    name = "iv04.h3_brute_jetpack_lp",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 90,
+	pitch = { 100 },
+    sound = {"halo_3/sfx/jetpack_loop.wav"}
+})
+
+sound.Add(
+{
+    name = "iv04.h3_brute_jetpack_out",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+	pitch = { 100 },
+    sound = {"halo_3/sfx/jetpack_out.wav"}
+})
+
+sound.Add(
+{
+    name = "iv04.h3_impact_veh_bip_generic",
+    channel = CHAN_WEAPON,
+    volume = 1.25,
+    level = 120,
+	pitch = { 100 },
+    sound = {"halo_3/sfx/veh_bip_hit_generic1.wav", "halo_3/sfx/veh_bip_hit_generic2.wav", "halo_3/sfx/veh_bip_hit_generic3.wav", "halo_3/sfx/veh_bip_hit_generic4.wav"}
+})
+
+sound.Add(
+{
+    name = "iv04.h3_impact_veh_bip_grunt",
+    channel = CHAN_WEAPON,
+    volume = 1.25,
+    level = 120,
+	pitch = { 100 },
+    sound = {"halo_3/sfx/veh_hit_grunt1.wav", "halo_3/sfx/veh_hit_grunt2.wav", "halo_3/sfx/veh_hit_grunt3.wav", "halo_3/sfx/veh_hit_grunt4.wav", "halo_3/sfx/veh_hit_grunt5.wav"}
+})
