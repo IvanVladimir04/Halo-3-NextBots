@@ -18,6 +18,10 @@ ENT.Faction = "FACTION_ALLIANCE"
 
 ENT.AITemplate = "MARINE"
 
+ENT.RemovableHeadPartModel = "models/halo_3/characters/alliance/gibs/hat.mdl"
+
+ENT.AllowHelmetDrop = false
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_assaultrifle",
 	"astw2_halo3_assaultrifle",
@@ -69,7 +73,6 @@ function ENT:DoInit()
 	self:SetName(""..self:GetClass().."_"..self:EntIndex().."")
 	self.Weapon:SetName(""..self.Weapon:GetClass().."_"..self.Weapon:EntIndex().."")
 	--print(self:GetName(),self.Weapon:GetName())
-	self.RemovableHeadBodygroups = false
 end
 
 list.Set( "NPC", "npc_iv04_h3_all_marine_sgt", {

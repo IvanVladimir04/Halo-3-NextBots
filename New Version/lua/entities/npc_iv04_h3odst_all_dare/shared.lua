@@ -20,12 +20,16 @@ ENT.PossibleWeapons = {
 	"astw2_halo3_magnum_odst"
 }
 
+ENT.InteractableAllies = {
+	["npc_iv04_h3odst_all_rookie"] = "rookie_look_dare"
+}
 
 function ENT:DoInit()
 	--print(head)
 	self.VoiceType = "Dare"
 	-- self:SetBodygroup(8,math.random(-4,3))
 	self:SetColor(Color(75,85,105))
+	--PrintTable(self:GetMaterials())
 end
 
 function ENT:MoveMouth()

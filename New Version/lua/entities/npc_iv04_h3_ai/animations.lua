@@ -1,4 +1,182 @@
 function ENT:SetupAnimations()
+	-------------------------------- Events --------------------------------
+	
+	self.ServerSideEvents = {
+		["event_halo_3_infectionform_move"] = function()
+			--print(self:GetSequence())
+			self:DoAnimation(self.RunAnim)
+		end,
+		
+		---------------------------- Melee Events ----------------------------
+		
+			["event_halo_3_floodpurestalker_melee"] = function()
+				self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+			end,
+			
+			["event_halo_3_floodpuretank_melee"] = function()
+				self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+			end,
+			
+			["event_halo_3_hunter_melee"] = function()
+				self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+			end,
+			
+			-------------------- Weapon User Melee Events --------------------
+			
+				["event_halo_3_floodcombatbrute_melee"] = function()
+					if self.MeleeFromWeapon then
+						self.Weapon:MeleeAttack()
+					else
+						self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+					end
+				end,
+				
+				["event_halo_3_floodcombatelite_melee"] = function()
+					if self.MeleeFromWeapon then
+						self.Weapon:MeleeAttack()
+					else
+						self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+					end
+				end,
+				
+				["event_halo_3_floodcombathuman_melee"] = function()
+					if self.MeleeFromWeapon then
+						self.Weapon:MeleeAttack()
+					else
+						self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+					end
+				end,
+				
+				["event_halo_3_brute_melee"] = function()
+					if self.MeleeFromWeapon then
+						self.Weapon:MeleeAttack()
+					else
+						self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+					end
+				end,
+				
+				["event_halo_3_elite_melee"] = function()
+					if self.MeleeFromWeapon then
+						self.Weapon:MeleeAttack()
+					else
+						self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+					end
+				end,
+				
+				["event_halo_3_spartan_melee"] = function()
+					if self.MeleeFromWeapon then
+						self.Weapon:MeleeAttack()
+					else
+						self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+					end
+				end,
+				
+				["event_halo_3_human_melee"] = function()
+					if self.MeleeFromWeapon then
+						self.Weapon:MeleeAttack()
+					else
+						self:DoMeleeDamage(self.MeleeAttack_MustTurn)
+					end
+				end,
+			
+			-------------------- Weapon User Melee Events --------------------
+			
+		---------------------------- Melee Events ----------------------------
+		
+		---------------------------- Grenade Events ----------------------------
+
+		["event_halo_3_human_throw_grenade"] = function()
+			local grenade = self.HeldGrenade
+			if IsValid(grenade) then
+				grenade:SetMoveType( MOVETYPE_VPHYSICS )
+				grenade:SetParent( nil )
+				grenade:SetPos(self:GetAttachment(2).Pos)
+				local prop = grenade:GetPhysicsObject()
+				if IsValid(prop) then
+					prop:Wake()
+					prop:EnableGravity(true)
+					local vel = (self:GetUp()*(math.random(10,50)*5))
+					vel = vel+((self:GetAimVector() * 600))
+					prop:SetVelocity( vel )
+				end
+			end
+		end,
+		
+		["event_halo_3_elite_throw_grenade"] = function()
+			local grenade = self.HeldGrenade
+			if IsValid(grenade) then
+				grenade:SetMoveType( MOVETYPE_VPHYSICS )
+				grenade:SetParent( nil )
+				grenade:SetPos(self:GetAttachment(2).Pos)
+				local prop = grenade:GetPhysicsObject()
+				if IsValid(prop) then
+					prop:Wake()
+					prop:EnableGravity(true)
+					local vel = (self:GetUp()*(math.random(10,50)*5))
+					vel = vel+((self:GetAimVector() * 600))
+					prop:SetVelocity( vel )
+				end
+			end
+		end,
+		
+		["event_halo_3_grunt_throw_grenade"] = function()
+			local grenade = self.HeldGrenade
+			if IsValid(grenade) then
+				grenade:SetMoveType( MOVETYPE_VPHYSICS )
+				grenade:SetParent( nil )
+				grenade:SetPos(self:GetAttachment(2).Pos)
+				local prop = grenade:GetPhysicsObject()
+				if IsValid(prop) then
+					prop:Wake()
+					prop:EnableGravity(true)
+					local vel = (self:GetUp()*(math.random(10,50)*5))
+					vel = vel+((self:GetAimVector() * 600))
+					prop:SetVelocity( vel )
+				end
+			end
+		end,
+		
+		["event_halo_3_brute_throw_grenade"] = function()
+			local grenade = self.HeldGrenade
+			if IsValid(grenade) then
+				grenade:SetMoveType( MOVETYPE_VPHYSICS )
+				grenade:SetParent( nil )
+				grenade:SetPos(self:GetAttachment(2).Pos)
+				local prop = grenade:GetPhysicsObject()
+				if IsValid(prop) then
+					prop:Wake()
+					prop:EnableGravity(true)
+					local vel = (self:GetUp()*(math.random(10,50)*5))
+					vel = vel+((self:GetAimVector() * 600))
+					prop:SetVelocity( vel )
+				end
+			end
+		end,
+
+	---------------------------- Grenade Events ----------------------------
+	
+	---------------------------- Draw Weapon Events ----------------------------
+	
+		["event_halo_3_brute_draw_weapon"] = function()
+			self:AdjustWeapon(self.Weapon,true)
+		end,
+		
+	
+		["event_halo_3_human_draw_weapon"] = function()
+			self:AdjustWeapon(self.Weapon,true)
+		end,
+		
+		["event_halo_3_elite_draw_weapon"] = function()
+			self:AdjustWeapon(self.Weapon,true)
+		end
+	
+	
+	---------------------------- Draw Weapon Events ----------------------------
+		
+	}
+	
+	-------------------------------- Events --------------------------------
+
 	--PrintTable( self:GetSequenceList() )
 	self.PatrolMoveAnim = {"Move_Patrol_Unarmed_Up"}
 	self.PatrolIdleAnim = {"Patrol_Unarmed_Idle_Down"}
@@ -137,7 +315,7 @@ function ENT:SetupAnimations()
 		local hold = self:ConfigureWeapon()
 		if self.GenericWeaponAnims then
 			self.AirAnim = "Combat_Any_Airborne"
-			if self.AITemplate == "FLOOD_ELITE" then
+			if self.CombatFormSharedAnimsTemplates[self.AITemplate] then
 				self.BraceAnim = "Brace_Combat_Any_Any"
 				self.EvadeLeftAnim = "Evade_Left_Combat_Any_Any"
 				self.EvadeRightAnim = "Evade_Right_Combat_Any_Any"
@@ -276,8 +454,9 @@ function ENT:SetupAnimations()
 				self.SurpriseAnim = "Surprised_Combat_Pistol"
 				self.CrouchIdleAnim = {"Crouch_Pistol_Idle_Up"}
 				self.CrouchMoveAnim = {"move_crouch_pistol_up"}
+				self.CrouchIdleCalmAnim = {"Crouch_Pistol_Idle_Down"}
+				self.CrouchMoveCalmAnim = {"move_crouch_pistol_Down"}
 				self.WarnAnim = {"Point_Combat_Pistol"}
-				self.CrouchMoveCalmAnim = {"pistol_crouch_move_passive"}
 				self.PushLeftAnim = "Melee_Smash_Combat_Pistol_Left"
 				self.PushLeftAnim = "Right_Smash_Combat_Pistol_Left"
 				self.TauntAnim = {"Taunt_Combat_Pistol"}
@@ -444,6 +623,19 @@ function ENT:SetupAnimations()
 					else
 						self.ShootAnim = {"Attack_Plasma_Pistol"}
 					end
+				elseif self.AITemplate == "JACKAL" then
+					self.IdleAnim = {"Crouch_Pistol_Idle_Up"}
+					self.ShootAnim = {"attack_combat_pistol_1","attack_combat_pistol_2","attack_combat_pistol_3"}
+					self.RunAnim = {"Move_Crouch_Pistol_Up"}
+					self.AllowGrenade = false
+					self.DeathFrontAnims = {
+						["Head"] = {"Die_Front_Head_1","Die_Front_Head_2"},
+						["Gut"] =  {"Die_Front_Gut"}
+					}
+					self.DeathBackAnims = {
+						["Gut"] = {"Die_Back_Gut_1","Die_Back_Gut_2"},
+						["Head"] = {"Die_Back_Head"}
+					}
 				else
 					self.BraceAnim = "Combat_Pistol_Brace"
 					self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
@@ -451,8 +643,17 @@ function ENT:SetupAnimations()
 					self.MeleeAnim = {"Melee_Combat_Pistol_1","Melee_Combat_Pistol_2"}
 					self.MeleeIsGesture = true
 					self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
+					self.CanShootCrouch = true
 					self.PosingAnims = {"Combat_Pistol_Idle_Posing_1","Combat_Pistol_Idle_Posing_2"}
-					self.TransitionAnims["Crouch_Idle_2_Idle"] = "Crouch_Pistol_Idle_2_Combat_Idle"
+					self.TransitionAnims["Idle_2_Crouch"] = "Combat_Rifle_Idle_2_Crouch_Idle"
+					self.TransitionAnims["Crouch_Move_2_Crouch_Idle"] = "crouch_pistol_move_2_crouch_idle"
+					self.TransitionAnims["Crouch_Move_2_Crouch_Idle_Passive"] = "crouch_pistol_move_2_crouch_idle"
+					self.TransitionAnims["Crouch_Walk_2_Crouch_Idle"] = "crouch_pistol_walk_2_crouch_idle"
+					self.TransitionAnims["Crouch_Walk_2_Crouch_Idle_Passive"] = "crouch_pistol_walk_2_crouch_idle"
+					self.TransitionAnims["Crouch_Idle_2_Crouch_Move"] = "crouch_pistol_idle_2_crouch_move"
+					self.TransitionAnims["Crouch_Idle_2_Crouch_Move_Passive"] = "crouch_pistol_idle_2_crouch_move"
+					self.TransitionAnims["Crouch_Idle_2_Crouch_Walk"] = "crouch_pistol_idle_2_crouch_walk"
+					self.TransitionAnims["Crouch_Idle_2_Idle"] = "crouch_pistol_idle_2_crouch_walk"
 				end
 			elseif self.RifleHolds[hold] then
 				self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Missile"}
@@ -478,6 +679,8 @@ function ENT:SetupAnimations()
 				self.WarnAnim = {"warn_combat_rifle"}
 				self.CrouchIdleAnim = {"crouch_rifle_idle_up"}
 				self.CrouchMoveAnim = {"move_crouch_rifle_up"}
+				self.CrouchIdleCalmAnim = {"crouch_rifle_idle_down"}
+				self.CrouchMoveCalmAnim = {"move_crouch_rifle_down"}
 				self.WarthogPassengerIdle = "warthog_passenger_idle_rifle"
 				self.HornetPassengerLeftIdle = "hornet_passenger_left_idle_rifle"
 				self.HornetPassengerRightIdle = "hornet_passenger_right_idle_rifle"
@@ -577,6 +780,10 @@ function ENT:SetupAnimations()
 					}
 					self.PatrolIdlePoseAnim = {"Patrol_Rifle_Idle_Posing_1","Patrol_Rifle_Idle_Posing_2"}
 					self.PosingAnims = {"Combat_Rifle_Idle_Posing_1","Combat_Rifle_Idle_Posing_2","Combat_Rifle_Idle_Posing_3","Combat_Rifle_Idle_Posing_4","Combat_Rifle_Idle_Posing_5"}
+				elseif self.AITemplate == "JACKAL" then
+					self.IdleAnim = {"Crouch_Rifle_Idle_Up"}
+					self.ShootAnim = {"attack_crouch_rifle_1","attack_crouch_rifle_2"}
+					self.AllowGrenade = false
 				else
 					self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
 					self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}
@@ -634,6 +841,8 @@ function ENT:SetupAnimations()
 				self.WarnAnim = {"warn_combat_missile"}
 				self.CrouchIdleAnim = {"crouch_missile_idle_up"}
 				self.CrouchMoveAnim = {"move_crouch_missile_up"}
+				self.CrouchIdleCalmAnim = {"crouch_missile_idle_up"}
+				self.CrouchMoveCalmAnim = {"move_crouch_missile_up"}
 				self.PushLeftAnim = {"melee_smash_combat_missile_left"}
 				self.PushRightAnim = {"melee_smash_combat_missile_right"}
 				self.WaveAnim = "wave_combat_missile"
@@ -777,6 +986,8 @@ function ENT:SetupAnimations()
 				self.WarnAnim = {"warn_combat_support"}
 				self.CrouchIdleAnim = {"crouch_support_idle_up"}
 				self.CrouchMoveAnim = {"move_crouch_support_up"}
+				self.CrouchIdleCalmAnim = {"crouch_support_idle_up"}
+				self.CrouchMoveCalmAnim = {"move_crouch_support_up"}
 				self.PushLeftAnim = {"melee_smash_combat_support_left"}
 				self.PushRightAnim = {"melee_smash_combat_support_right"}
 				self.WaveAnim = "wave_combat_support"
@@ -858,6 +1069,8 @@ function ENT:SetupAnimations()
 				self.WarnAnim = {"warn_combat_Sword"}
 				self.CrouchIdleAnim = {"crouch_Sword_idle_up"}
 				self.CrouchMoveAnim = {"move_crouch_Sword_up"}
+				self.CrouchIdleCrouchAnim = {"crouch_Sword_idle_up"}
+				self.CrouchMoveCrouchAnim = {"move_crouch_Sword_up"}
 				self.PushLeftAnim = {"melee_smash_combat_Sword_left"}
 				self.PushRightAnim = {"melee_smash_combat_Sword_right"}
 				self.WaveAnim = "wave_combat_Sword"
@@ -949,6 +1162,8 @@ function ENT:SetupAnimations()
 				self.WarnAnim = {"warn_combat_Hammer"}
 				self.CrouchIdleAnim = {"crouch_Hammer_idle_up"}
 				self.CrouchMoveAnim = {"move_crouch_Hammer_up"}
+				self.CrouchIdleCrouchAnim = {"crouch_Hammer_idle_up"}
+				self.CrouchMoveCrouchAnim = {"move_crouch_Hammer_up"}
 				self.PushLeftAnim = {"melee_smash_combat_Hammer_left"}
 				self.PushRightAnim = {"melee_smash_combat_Hammer_right"}
 				self.WaveAnim = "wave_combat_Hammer"
@@ -1063,66 +1278,38 @@ function ENT:SetupAnimations()
 			end
 		end
 	else
-		if self.DoesntUseWeapons then
-			self.IdleCalmAnim = {"combat_idle"}
-			self.PatrolIdleAnim = {"patrol_idle"}
-			self.IdleAnim = {"combat_idle"}
-			self.RunAnim = {"move_any"}
-			self.CrouchMoveAnim = {"crouch_any_move"}
-			self.WanderAnim = {"move_any_patrol"}
-			self.PatrolMoveAnim = {"move_any_patrol"}
-			self.SurpriseAnim = "Surprised"
-			self.WarnAnim = "Warn"
-			self.LandAnim = "Land_Soft_Any"
-			self.LandHardAnim = "Land_Hard_Any"
-			self.MeleeAnim = {"Melee_1","Melee_2","Melee_3","Melee_4"}
-			self.MeleeBackAnim = {"Melee_Back"}
-			self.MeleeLeftAnim = {"Melee_Left"}
-			self.MeleeRightAnim = {"Melee_Right"}
-			self.LeapAirAnim = "Leap_Airborne"
-			if self.AITemplate == "FLOOD_INFECTION" then
-				self.AirAnim = "Airborne"
-				self.IdleAnim = {"Idle_7","Idle_6","Idle_5","Idle_4","Idle_3","Idle_2","Idle_1"}
-				self.MeleeAnim = {"Melee_1","Melee_2","Melee_3"}
-				self.RunAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
-				self.CrouchMoveAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
-				self.WanderAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
-				self.PatrolMoveAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
-				self.InfectAnims = {
-					["MARINE"] = {"Flood_Wrestle"},
-					["ELITE"] = {"Flood_Wrestle_Elite"},
-					["BRUTE"] = {"Flood_Wrestle_Brute"},
-				}
-			end
-		else
-			if self.AITemplate == "FLOOD_ELITE" then
+		if self.FloodPureTemplates[self.AITemplate] then
+			self.TranformFromAnims = {
+				["FLOOD_TANK"] = "Combat_From_Tank",
+				["FLOOD_STALKER"] = "Combat_From_Stalker",
+				["FLOOD_RANGED"] = "Combat_From_Ranged"
+			}
+			self.TranformToAnims = {
+				["FLOOD_TANK"] = "Combat_To_Tank",
+				["FLOOD_STALKER"] = "Combat_From_Stalker",
+				["FLOOD_RANGED"] = "Combat_To_Ranged"
+			}
+			if self.AITemplate == "FLOOD_TANK" then
 				self.BraceAnim = "Brace_Combat_Any_Any"
 				self.EvadeLeftAnim = "Evade_Left_Combat_Any_Any"
 				self.EvadeRightAnim = "Evade_Right_Combat_Any_Any"
 				self.LandHardAnim = "Land_Hard_Combat_Any_Any"
 				self.LandAnim = "Land_Soft_Combat_Any_Any"
 				self.LeapAnim = "Leap_Any_Any"
-				self.PushLeftAnim = "Melee_Smash_Any_Left"
-				self.PushRightAnim = "Melee_Smash_Any_Right"
+				self.PushLeftAnim = "Melee_Smash_Combat_Left"
+				self.PushRightAnim = "Melee_Smash_Combat_Right"
 				self.RunCalmAnim = "Move_Combat_Any_Down"
 				self.WalkCalmAnim = "Walk_Combat_Any_Down"
 				self.WalkAnim = "Walk_Combat_Any_Up"
 				self.SurpriseAnim = "Surprised_Combat_Any_Any"
 				self.RunAnim = {"Move_Combat_Any_Up"}
-				if self.HasSword then
-					self.MeleeTackleAnim = "Melee_Combat_Sword_Tackle"
-					self.MeleeAirAnim = "Melee_Combat_Sword_Airborne"
-					self.MeleeAnim = {"Melee_Combat_Sword"}
-					self.MeleeBackAnim = {"Melee_Back_Combat_Sword"}
-					self.IdleAnim = "Combat_Any_Any_Idle_Up"
-					self.IdleCalmAnim = "Combat_Any_Idle_Down"
-				else
-					self.IdleAnim = "Combat_Any_Idle_Up"
-					self.IdleCalmAnim = "Combat_Any_Idle_Down"
-					self.MeleeTackleAnim = "Melee_Combat_Any_Any_Tackle"
-					self.MeleeAnim = {"Melee_Combat_Any_1","Melee_Combat_Any_2"}
-					self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}
-				end
+				self.IdleAnim = {"Combat_Any_Idle_Up_1","Combat_Any_Idle_Up_2"}
+				self.IdleCalmAnim = {"Combat_Any_Idle_Up_1","Combat_Any_Idle_Up_2"}
+				self.IdleProtected = "Protected_Any_Idle_Up"
+				self.WalkAnim = "Walk_Protected_Any_Up"
+				self.MeleeTackleAnim = "Melee_Combat_Any_Any_Tackle"
+				self.MeleeAnim = {"Melee_Combat_Any_1","Melee_Combat_Any_2"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}
 				self.PatrolIdleAnim = self.IdleCalmAnim
 				self.DeathBackAnims = {
 					["Head"] = {"Die_Back_Gut"}
@@ -1137,35 +1324,132 @@ function ENT:SetupAnimations()
 					["Head"] = {"Die_Front_Gut_1","Die_Front_Gut_2"},
 					["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
 				}
+				self.FlinchFrontAnims = {
+					["Chest"] = "Flinch_Armored_Rifle_Front_Chest",
+					["Gut"] = {"Flinch_Armored_Rifle_Front_Gut_1","Flinch_Armored_Rifle_Front_Gut_2"},
+					["Head"] = {"Flinch_Combat_Any_Front_Head_1","Flinch_Combat_Any_Front_Head_2","Flinch_Combat_Any_Front_Head_3"},
+					["Left_Arm"] = "Flinch_Armored_Rifle_Front_Left_Arm",
+					["Right_Arm"] = "Flinch_Armored_Rifle_Front_Right_Arm",
+					["Left_Leg"] = "Flinch_Armored_Rifle_Front_Left_Leg",
+					["Right_Leg"] = "Flinch_Armored_Rifle_Front_Right_Leg"
+				}
+				self.FlinchBackAnims = {
+					["Chest"] = "Flinch_Armored_Rifle_Back_Chest",
+					["Gut"] = "Flinch_Armored_Rifle_Back_Gut"
+				}
+			elseif self.AITemplate == "FLOOD_STALKER" then
+				self.BraceAnim = "Brace_Combat_Any_Any"
+				self.EvadeLeftAnim = "Evade_Left_Combat_Any_Any"
+				self.EvadeRightAnim = "Evade_Right_Combat_Any_Any"
+				self.LandHardAnim = "Land_Hard_Combat_Any_Any"
+				self.LandAnim = "Land_Soft_Combat_Any_Any"
+				self.LeapAnim = "Leap_Any_Any"
+				self.PushLeftAnim = "Melee_Smash_Combat_Left"
+				self.PushRightAnim = "Melee_Smash_Combat_Right"
+				self.RunCalmAnim = "Move_Combat_Any_Down"
+				self.WalkCalmAnim = "Walk_Combat_Any_Down"
+				self.WalkAnim = "Walk_Combat_Any_Up"
+				self.SurpriseAnim = "Surprised_Combat_Any_Any"
+				self.RunAnim = {"Move_Combat_Any_Up_1","Move_Combat_Any_Up_2","Move_Combat_Any_Up_3","Move_Combat_Any_Up_4","Move_Combat_Any_Up_5"}
+				self.IdleAnim = {"Combat_Any_Idle_Up_1","Combat_Any_Idle_Up_2"}
+				self.IdleCalmAnim = {"Combat_Any_Idle_Up_1","Combat_Any_Idle_Up_2"}
+				self.IdleProtected = "Protected_Any_Idle_Up"
+				self.WalkAnim = "Walk_Protected_Any_Up"
+				self.MeleeTackleAnim = "Melee_Combat_Any_Any_Tackle"
+				self.MeleeAnim = {"Melee_Combat_Any_1","Melee_Combat_Any_2"}
+				self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}
+				self.PatrolIdleAnim = self.IdleCalmAnim
+				self.DeathBackAnims = {
+					["Head"] = {"Die_Back_Gut"}
+				}
+				self.DeathLeftAnims = {
+					["Gut"] =  {"Die_Left_Gut"}
+				}
+				self.DeathRightAnims = {
+					["Gut"] =  {"Die_Right_Gut"}
+				}
+				self.DeathFrontAnims = {
+					["Head"] = {"Die_Front_Gut_1","Die_Front_Gut_2"},
+					["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
+				}
+				self.FlinchFrontAnims = {
+					["Chest"] = "Flinch_Armored_Rifle_Front_Chest",
+					["Gut"] = {"Flinch_Armored_Rifle_Front_Gut_1","Flinch_Armored_Rifle_Front_Gut_2"},
+					["Head"] = {"Flinch_Combat_Any_Front_Head_1","Flinch_Combat_Any_Front_Head_2","Flinch_Combat_Any_Front_Head_3"},
+					["Left_Arm"] = "Flinch_Armored_Rifle_Front_Left_Arm",
+					["Right_Arm"] = "Flinch_Armored_Rifle_Front_Right_Arm",
+					["Left_Leg"] = "Flinch_Armored_Rifle_Front_Left_Leg",
+					["Right_Leg"] = "Flinch_Armored_Rifle_Front_Right_Leg"
+				}
+				self.FlinchBackAnims = {
+					["Chest"] = "Flinch_Armored_Rifle_Back_Chest",
+					["Gut"] = "Flinch_Armored_Rifle_Back_Gut"
+				}
+			elseif self.AITemplate == "FLOOD_RANGED" then
+			
+			end
+		else
+			if self.DoesntUseWeapons then
+				self.IdleCalmAnim = {"combat_idle"}
+				self.PatrolIdleAnim = {"patrol_idle"}
+				self.IdleAnim = {"combat_idle"}
+				self.RunAnim = {"move_any"}
+				self.CrouchMoveAnim = {"crouch_any_move"}
+				self.WanderAnim = {"move_any_patrol"}
+				self.PatrolMoveAnim = {"move_any_patrol"}
+				self.SurpriseAnim = "Surprised"
+				self.WarnAnim = "Warn"
+				self.LandAnim = "Land_Soft_Any"
+				self.LandHardAnim = "Land_Hard_Any"
+				self.MeleeAnim = {"Melee_1","Melee_2","Melee_3","Melee_4"}
+				self.MeleeBackAnim = {"Melee_Back"}
+				self.MeleeLeftAnim = {"Melee_Left"}
+				self.MeleeRightAnim = {"Melee_Right"}
+				self.LeapAirAnim = "Leap_Airborne"
+				if self.AITemplate == "FLOOD_INFECTION" then
+					self.AirAnim = "Airborne"
+					self.IdleAnim = {"Idle_7","Idle_6","Idle_5","Idle_4","Idle_3","Idle_2","Idle_1"}
+					self.MeleeAnim = {"Melee_1","Melee_2","Melee_3"}
+					self.RunAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
+					self.CrouchMoveAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
+					self.WanderAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
+					self.PatrolMoveAnim = {"Move_9_Any","Move_8_Any","Move_7_Any","Move_6_Any","Move_5_Any","Move_4_Any","Move_3_Any","Move_2_Any","Move_1_Any"}
+					self.InfectAnims = {
+						["MARINE"] = {"Flood_Wrestle"},
+						["ELITE"] = {"Flood_Wrestle_Elite"},
+						["BRUTE"] = {"Flood_Wrestle_Brute"},
+					}
+				end
 			else
-				self.RunAnim = {"Move_Berserk_Unarmed_Down"}
-				self.IdleAnim = {"Combat_Unarmed_Idle_Down"}
-				self.WaveAnim = "wave_combat_unarmed"
-				self.ShakeFistAnim = "shakefist_combat_unarmed"
-				self.TauntAnim = {"taunt_combat_unarmed"}
-				self.FallbackAnim = "signal_fallback_combat_unarmed"
-				self.BraceAnim = "brace_combat"
-				self.AdvanceAnim = "signal_advance_combat_unarmed"
-				if self.GenericWeaponAnims then
-					self.ShakeFistAnim = nil
-					self.AirAnim = "Combat_Any_Airborne"
-					self.BraceAnim = "Brace_Combat_Unarmed"
-					self.IdleAnim = {"Combat_Unarmed_Idle_Up"}
-					self.IdleCalmAnim = {"Combat_Unarmed_Idle_Up"}
-					self.MeleeTackleAnim = "Melee_Combat_Any_Any_Tackle"
-					self.MeleeAnim = {"Melee_Combat_Any_Any_1","Melee_Combat_Any_Any_2"}
-					self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}
-					self.EvadeLeftAnim = "Evade_Left_Combat_Any_Unarmed"
-					self.EvadeRightAnim = "Evade_Right_Combat_Any_Unarmed"
+				if (self.CombatFormSharedAnimsTemplates[self.AITemplate]) then
+					self.AirAnim = "Airborne_Any_Any_Leap"
+					self.BraceAnim = "Brace_Combat_Any_Any"
+					self.EvadeLeftAnim = "Evade_Left_Combat_Any_Any"
+					self.EvadeRightAnim = "Evade_Right_Combat_Any_Any"
 					self.LandHardAnim = "Land_Hard_Combat_Any_Any"
 					self.LandAnim = "Land_Soft_Combat_Any_Any"
 					self.LeapAnim = "Leap_Any_Any"
-					self.PushLeftAnim = "Melee_Smash_Unarmed_Left"
-					self.PushRightAnim = "Melee_Smash_Unarmed_Right"
-					self.RunAnim = {"Move_Combat_Unarmed_1_Up","Move_Combat_Unarmed_2_Up"}
-					self.SurpriseAnim = "Surprised_Combat_Unarmed"
-					self.WalkAnim = "Walk_Combat_Unarmed_Up"
-					self.WalkCalmAnim = "Walk_Combat_Unarmed_Up"
+					self.PushLeftAnim = "Melee_Smash_Any_Left"
+					self.PushRightAnim = "Melee_Smash_Any_Right"
+					self.RunCalmAnim = "Move_Combat_Any_Down"
+					self.WalkCalmAnim = "Walk_Combat_Any_Down"
+					self.WalkAnim = "Walk_Combat_Any_Up"
+					self.SurpriseAnim = "Surprised_Combat_Any_Any"
+					self.RunAnim = {"Move_Combat_Any_Up"}
+					if self.HasSword then
+						self.MeleeTackleAnim = "Melee_Combat_Sword_Tackle"
+						self.MeleeAirAnim = "Melee_Combat_Sword_Airborne"
+						self.MeleeAnim = {"Melee_Combat_Sword"}
+						self.MeleeBackAnim = {"Melee_Back_Combat_Sword"}
+						self.IdleAnim = "Combat_Any_Any_Idle_Up"
+						self.IdleCalmAnim = "Combat_Any_Idle_Down"
+					else
+						self.IdleAnim = "Combat_Any_Idle_Up"
+						self.IdleCalmAnim = "Combat_Any_Idle_Down"
+						self.MeleeTackleAnim = "Melee_Combat_Any_Any_Tackle"
+						self.MeleeAnim = {"Melee_Combat_Any_1","Melee_Combat_Any_2"}
+						self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}
+					end
 					self.PatrolIdleAnim = self.IdleCalmAnim
 					self.DeathBackAnims = {
 						["Head"] = {"Die_Back_Gut"}
@@ -1177,9 +1461,53 @@ function ENT:SetupAnimations()
 						["Gut"] =  {"Die_Right_Gut"}
 					}
 					self.DeathFrontAnims = {
-						["Head"] = {"Die_Front_Head_1","Die_Front_Head_2","Die_Front_Head_3"},
+						["Head"] = {"Die_Front_Gut_1","Die_Front_Gut_2"},
 						["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
 					}
+				else
+					self.RunAnim = {"Move_Berserk_Unarmed_Down"}
+					self.IdleAnim = {"Combat_Unarmed_Idle_Down"}
+					self.WaveAnim = "wave_combat_unarmed"
+					self.ShakeFistAnim = "shakefist_combat_unarmed"
+					self.TauntAnim = {"taunt_combat_unarmed"}
+					self.FallbackAnim = "signal_fallback_combat_unarmed"
+					self.BraceAnim = "brace_combat"
+					self.AdvanceAnim = "signal_advance_combat_unarmed"
+					if self.GenericWeaponAnims then
+						self.ShakeFistAnim = nil
+						self.AirAnim = "Combat_Any_Airborne"
+						self.BraceAnim = "Brace_Combat_Unarmed"
+						self.IdleAnim = {"Combat_Unarmed_Idle_Up"}
+						self.IdleCalmAnim = {"Combat_Unarmed_Idle_Up"}
+						self.MeleeTackleAnim = "Melee_Combat_Any_Any_Tackle"
+						self.MeleeAnim = {"Melee_Combat_Any_Any_1","Melee_Combat_Any_Any_2"}
+						self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}
+						self.EvadeLeftAnim = "Evade_Left_Combat_Any_Unarmed"
+						self.EvadeRightAnim = "Evade_Right_Combat_Any_Unarmed"
+						self.LandHardAnim = "Land_Hard_Combat_Any_Any"
+						self.LandAnim = "Land_Soft_Combat_Any_Any"
+						self.LeapAnim = "Leap_Any_Any"
+						self.PushLeftAnim = "Melee_Smash_Unarmed_Left"
+						self.PushRightAnim = "Melee_Smash_Unarmed_Right"
+						self.RunAnim = {"Move_Combat_Unarmed_1_Up","Move_Combat_Unarmed_2_Up"}
+						self.SurpriseAnim = "Surprised_Combat_Unarmed"
+						self.WalkAnim = "Walk_Combat_Unarmed_Up"
+						self.WalkCalmAnim = "Walk_Combat_Unarmed_Up"
+						self.PatrolIdleAnim = self.IdleCalmAnim
+						self.DeathBackAnims = {
+							["Head"] = {"Die_Back_Gut"}
+						}
+						self.DeathLeftAnims = {
+							["Gut"] =  {"Die_Left_Gut"}
+						}
+						self.DeathRightAnims = {
+							["Gut"] =  {"Die_Right_Gut"}
+						}
+						self.DeathFrontAnims = {
+							["Head"] = {"Die_Front_Head_1","Die_Front_Head_2","Die_Front_Head_3"},
+							["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
+						}
+					end
 				end
 			end
 		end

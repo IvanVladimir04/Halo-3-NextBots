@@ -30,9 +30,9 @@
 	{
 		Clamp
 		{
+			srcVar1 "$color2"
 			min 0
 			max 1
-			srcVar1 "$color2"
 			resultVar "$color"
 		}
 	}

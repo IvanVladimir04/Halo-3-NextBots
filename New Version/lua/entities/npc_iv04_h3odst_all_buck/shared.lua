@@ -23,9 +23,10 @@ ENT.Faction = "FACTION_ALLIANCE"
 ENT.CanInteractWithOthers = true
 
 ENT.InteractableAllies = {
-	["npc_iv04_h3odst_all_mickey"] = "buck_look_mickey",
-	["npc_iv04_h3odst_all_dutch"] = "buck_look_dutch",
-	["npc_iv04_h3odst_all_romeo"] = "buck_look_romeo"
+	["npc_iv04_h3odst_all_mickey"] = "mickey_look_buck",
+	["npc_iv04_h3odst_all_dutch"] = "dutch_look_buck",
+	["npc_iv04_h3odst_all_romeo"] = "romeo_look_buck",
+	["npc_iv04_h3odst_all_rookie"] = "rookie_look_buck"
 }
 
 ENT.InteractableAlliesResponses = {

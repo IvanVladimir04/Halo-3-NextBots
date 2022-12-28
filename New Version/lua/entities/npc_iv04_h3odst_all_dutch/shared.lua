@@ -23,7 +23,8 @@ ENT.AITemplate = "MARINE"
 ENT.Faction = "FACTION_ALLIANCE"
 
 ENT.InteractableAllies = {
-	["npc_iv04_h3odst_all_mickey"] = "dutch_look_mickey"
+	["npc_iv04_h3odst_all_mickey"] = "mickey_look_dutch",
+	["npc_iv04_h3odst_all_buck"] = "buck_look_dutch"
 }
 
 ENT.InteractableAlliesResponses = {
@@ -49,7 +50,7 @@ function ENT:DoInit()
 	net.WriteEntity( self )
 	net.WriteVector( self:GetPlayerColor() )
 	net.Broadcast()
-self.Unkillable = GetConVar("halo_3_nextbots_ai_heroes"):GetBool()
+	self.Unkillable = GetConVar("halo_3_nextbots_ai_heroes"):GetBool()
 end
 
 list.Set( "NPC", "npc_iv04_h3odst_all_dutch", {

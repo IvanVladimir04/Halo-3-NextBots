@@ -20,6 +20,10 @@ ENT.Faction = "FACTION_ALLIANCE"
 
 ENT.AITemplate = "SPARTAN"
 
+ENT.CanInteractWithOthers = true
+
+ENT.StareReply = "look_plr_mc"
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_assaultrifle",
 	"astw2_halo3_assaultrifle",

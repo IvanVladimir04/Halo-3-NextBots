@@ -54,8 +54,16 @@ function ENT:MarineInitialize()
 	self.InterestingEntities = {
 		["prop_ragdoll"] = true,
 		--["prop_dynamic"] = true,
-		["gmod_sent_vehicle_fphysics_base"] = true
+		["player"] = true,
+		["gmod_sent_vehicle_fphysics_base"] = true,
+		["npc_iv04_h3odst_all_rookie"] = true,
+		["npc_iv04_h3_all_masterchief"] = true,
+		["npc_iv04_h3_all_arbiter"] = true
 	}
+	for class, response in pairs(self.InteractableAllies) do 
+		self.InterestingEntities[class] = true
+	end
+	--PrintTable(self.InterestingEntities)
 	self.SightAttachment = "eyes"
 	--PrintTable(self.InterestingEntities)
 	self.BloodDecal = "iv04_halo_3_blood_splat_human"
@@ -77,7 +85,7 @@ function ENT:MarineInitialize()
 		self.RemovableHeadBodygroups = true
 		self.RemovableBodygroup = 6
 		self.RemovableChange = 0
-		self.RemovableHeadPartModel = "models/halo_3/characters/alliance/gibs/helmet.mdl"
+		self.RemovableHeadPartModel = self.RemovableHeadPartModel or "models/halo_3/characters/alliance/gibs/helmet.mdl"
 	end
 	--[[
 		Stuff I NEED (and with NEED I mean I REALLY want) to do for the marines:
@@ -97,14 +105,19 @@ end
 function ENT:EliteInitialize()
 	--self.SpawnWithWeaponDrawn = true
 	self.InterestingEntities = {
-		["prop_ragdoll"] = true
-		--["prop_dynamic"] = true
+		["prop_ragdoll"] = true,
+		--["prop_dynamic"] = true,
+		["player"] = true,
+		["gmod_sent_vehicle_fphysics_base"] = true,
+		["npc_iv04_h3_marine_odst_rookie"] = true,
+		["npc_iv04_h3_all_masterchief"] = true,
+		["npc_iv04_h3_all_arbiter"] = true
 	}
 	self.AllowClimbing = true
 	self.MeleeSwingSound = { "halo_3/sfx/elite_melee1_1.wav", "halo_3/sfx/elite_melee1_2.wav", "halo_3/sfx/elite_melee1_3.wav" }
 	self.MoveSpeed = 100
 	self.MoveSpeedMultiplier = 2
-	self:SetCollisionBounds(Vector(10,10,120),Vector(-10,-10,0))
+	self:SetCollisionBounds(Vector(15,15,80),Vector(-15,-15,0))
 	self.GrenadeType = "astw2_halo3_plasma_thrown"
 	self.DamageThreshold = math.huge
 	self.GrenadeSpawnTime = 0.2
@@ -288,6 +301,33 @@ function ENT:GruntInitialize()
 	--print(self.Rank)
 end
 function ENT:JackalInitialize()
+	self.DisableMelee = true
+	self.FleeOnHigherRankDead = true
+	self.SpawnWithWeaponDrawn = true
+	self.NoTransitionAnims = true
+	self.BloodDecal = "iv04_halo_3_blood_splat_jackal"
+	self.BloodParticle = "iv04_halo_3_blood_impact_jackal"
+	self.VehicleImpactSound = "iv04.h3_impact_veh_bip_jackal"
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_jackal"
+	self:SetBodygroup(1,self.Rank-1)
+	self.MoveSpeed = 30
+	self.MoveSpeedMultiplier = 4
+	self.VoiceType = "Jackal"
+	self.AllowGrenade = false
+	if self.IsSniper then
+		self.NoWarnAnim = true
+		self.DodgeChance = 0
+		self:SetBodygroup(2,1)
+		self.RemovableHeadBodygroups = true
+		self.RemovableBodygroup = 2
+		self.RemovableChange = 0
+		self.RemovableHeadPartModel = "models/halo_3/characters/covenant/jackal_helmet_sniper.mdl"
+	else
+		self.DamageThreshold = math.huge
+		self.JackalShield = 80*self.Rank
+		self.JackalShieldHitGroup = 20
+	end
+	self:SetCollisionBounds(Vector(20,20,80),Vector(-20,-20,0))
 end
 function ENT:DroneInitialize()
 end
@@ -308,6 +348,7 @@ function ENT:HunterInitialize()
 	self.DamageResistances = {
 		[DMG_BLAST] = 0.2
 	}
+	self.VoiceType = "Hunter"
 end
 function ENT:EngineerInitialize()
 end
@@ -437,6 +478,38 @@ function ENT:FloodEliteInitialize()
 	end
 end
 function ENT:FloodBruteInitialize()
+	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
+	self.BloodParticle = "iv04_halo_3_flood_gib_small"
+	self.MoveSpeed = 40
+	self.IsWeaponDrawn = true
+	self.MeleeDamage = 15
+	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
+	if math.random(1,4) == 1 and !self.Weaponless then
+		self.SpawnWithWeaponDrawn = true
+	else
+		self.PossibleWeapons = nil
+		--self.DoesntUseWeapons = true
+	end
+	self.RecklessTactics = true
+	self.GenericWeaponAnims = true
+	self:SetCollisionBounds(Vector(10,20,70),Vector(-10,-20,0))
+	self.DamageThreshold = math.huge
+	self.NoWarnAnim = true
+	self.FloodGibs = true
+	self.MeleeHitGroup = 4
+	self.WeaponHitGroup = 5
+	self.NoTransitionAnims = true
+	self.FloodGibGroups = {
+		[9] = 2,
+		[4] = 3,
+		[5] = 4
+	}
+	self.FloodGibModels = {
+		[4] = "models/halo_3/characters/flood/gibs/brute_combat_form/gib_arm_left.mdl",
+		[5] = "models/halo_3/characters/flood/gibs/brute_combat_form/gib_arm_right.mdl"
+	}
+	self.AttractAlliesRange = math.huge
 end
 function ENT:FloodInfectionInitialize()
 	self.MoveSpeed = 200
@@ -461,8 +534,36 @@ end
 function ENT:FloodCarrierInitialize()
 end
 function ENT:FloodTankInitialize()
+	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
+	self.BloodParticle = "iv04_halo_3_flood_gib_small"
+	self.MoveSpeed = 40
+	self.MeleeDamage = 35
+	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
+	self.RecklessTactics = true
+	self:SetCollisionBounds(Vector(10,20,100),Vector(-10,-20,0))
+	self.DamageThreshold = 30
+	self.NoWarnAnim = true
+	self.NoTransitionAnims = true
+	self.AttractAlliesRange = math.huge
+	self.WeakHitGroup = 1
+	self.CanReactToGrenades = false
 end
 function ENT:FloodStalkerInitialize()
+	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
+	self.BloodParticle = "iv04_halo_3_flood_gib_small"
+	self.MoveSpeed = 100
+	self.MeleeDamage = 15
+	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
+	self.RecklessTactics = true
+	self:SetCollisionBounds(Vector(10,20,40),Vector(-10,-20,0))
+	self.DamageThreshold = 30
+	self.NoWarnAnim = true
+	self.NoTransitionAnims = true
+	self.AttractAlliesRange = math.huge
+	self.CanReactToGrenades = false
+	self.VoiceType = "Flood_Stalker"
 end
 function ENT:FloodRangedInitialize()
 end
@@ -474,7 +575,7 @@ function ENT:SpartanIdle()
 		self:EnterVehicle(veh)
 		return self:VehicleIdle()
 	end
-	if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] and table.Count(self.SeenInterestingEntities) > 0 then
+	if self.AIType == "Offensive" and self:CanTargetCorpse() then
 		--print("We saw something interesting before")
 		local bool, ent = table.Random(self.SeenInterestingEntities)
 		--print(bool,ent)
@@ -490,7 +591,12 @@ function ENT:SpartanIdle()
 			--print("We are next to it")
 			self:DoAnimation(self.CrouchIdleAnim)
 			local grenades = self.ThrownGrenades
-			self.ThrownGrenades = 1000
+			self.ThrownGrenades = math.huge
+			timer.Simple( 5, function()
+				if IsValid(self) then
+					self.ThrownGrenades = grenades
+				end
+			end )
 			self.SpecificGoal = ent:WorldSpaceCenter()
 			coroutine.wait(0.5)
 			for i = 1, math.random(1,2) do
@@ -519,7 +625,6 @@ function ENT:SpartanIdle()
 				self:SetEnemy(nil)
 				self:DoAnimation(self.IdleAnim)
 			end
-			self.ThrownGrenades = grenades
 		end
 	end
 	self:PostCombatChecks()
@@ -551,7 +656,7 @@ function ENT:MarineIdle()
 	--print(table.Count(self.SeenInterestingEntities))
 	--print(#self.SeenInterestingEntities,table.Count(self.SeenInterestingEntities))
 	--PrintTable(self.SeenInterestingEntities)
-	if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] and table.Count(self.SeenInterestingEntities) > 0 then
+	if self.AIType == "Offensive" and self:CanTargetCorpse() then
 		--print("We saw something interesting before")
 		local bool, ent = table.Random(self.SeenInterestingEntities)
 		--print(bool,ent)
@@ -560,7 +665,7 @@ function ENT:MarineIdle()
 		--print("We discarded it off our lists of to check",ent:GetModel(),ent.Faction)
 		--print("?????????????????????????????")
 		self:DrawnWeaponChecks()
-		if ent.Faction == self.Faction and !ent.Checked then
+		if (ent.Faction == self.Faction and !ent.Checked) and ent:Health() <= 0 then
 			--print("It was a friend")
 			if #self:GetSquad():GetMembers() > 1 and !ent.MarkedForRevision then
 				self:Speak("ask_chkallybdy")
@@ -581,7 +686,7 @@ function ENT:MarineIdle()
 				coroutine.wait( math.random(2,3) )
 				self:DoTransitionAnim("Crouch_Idle_2_Idle")
 			end
-		elseif !ent.WasShot and isstring(ent.Faction) and !ent.Checked then
+		elseif (!ent.WasShot and isstring(ent.Faction) and !ent.Checked) and ent:Health() <= 0 then
 			--print("It wasn't a friend")
 			--print("We'll go to its position")
 			local spot = self:FindClosePos(ent:GetPos(),128)
@@ -597,7 +702,12 @@ function ENT:MarineIdle()
 			self:Speak("chkfoebdy")
 			self.DisableOverwriteCurrentVoiceLine = true
 			local grenades = self.ThrownGrenades
-			self.ThrownGrenades = 1000
+			self.ThrownGrenades = math.huge
+			timer.Simple( 5, function()
+				if IsValid(self) then
+					self.ThrownGrenades = grenades
+				end
+			end )
 			self.SpecificGoal = ent:WorldSpaceCenter()
 			coroutine.wait(0.5)
 			for i = 1, math.random(1,2) do
@@ -610,7 +720,6 @@ function ENT:MarineIdle()
 				self:SetEnemy(nil)
 			end
 			self.DisableOverwriteCurrentVoiceLine = false
-			self.ThrownGrenades = grenades
 		end
 	end
 	self:PostCombatChecks()
@@ -630,14 +739,14 @@ function ENT:EliteIdle()
 		self:EnterVehicle(veh)
 		return self:VehicleIdle()
 	end
-	if self.AIType == "Offensive" and !self.DisableCorpseShooting and !self.ShootCorpseFilter[self:GetActiveWeapon():GetClass()] and table.Count(self.SeenInterestingEntities) > 0 then
+	if self.AIType == "Offensive" and self:CanTargetCorpse() then
 		--print("We saw something interesting before")
 		local bool, ent = table.Random(self.SeenInterestingEntities)
 		--print(bool,ent)
 		self.DiscardedInterestingEntities[ent] = true
 		self.SeenInterestingEntities[ent] = nil
 		--print("We discarded it off our lists of to check",ent:GetModel(),ent.Faction)
-		if ent.Faction == self.Faction and !ent.Checked then
+		if (ent.Faction == self.Faction and !ent.Checked) and ent:Health() <= 0 then
 			--print("It was a friend")
 			self:DrawnWeaponChecks()
 			if #self:GetSquad():GetMembers() > 1 and !ent.MarkedForRevision then
@@ -659,7 +768,7 @@ function ENT:EliteIdle()
 				coroutine.wait( math.random(2,3) )
 				self:DoTransitionAnim("Crouch_Idle_2_Idle")
 			end
-		elseif !ent.WasShot and isstring(ent.Faction) and !ent.Checked then
+		elseif (!ent.WasShot and isstring(ent.Faction) and !ent.Checked) and ent:Health() <= 0 then
 			--print("It wasn't a friend")
 			--print("We'll go to its position")
 			self:DrawnWeaponChecks()
@@ -676,7 +785,12 @@ function ENT:EliteIdle()
 			self:Speak("chkfoebdy")
 			self.DisableOverwriteCurrentVoiceLine = true
 			local grenades = self.ThrownGrenades
-			self.ThrownGrenades = 1000
+			self.ThrownGrenades = math.huge
+			timer.Simple( 5, function()
+				if IsValid(self) then
+					self.ThrownGrenades = grenades
+				end
+			end )
 			self.SpecificGoal = ent:WorldSpaceCenter()
 			coroutine.wait(0.5)
 			for i = 1, math.random(1,2) do
@@ -689,7 +803,6 @@ function ENT:EliteIdle()
 				self:SetEnemy(nil)
 			end
 			self.DisableOverwriteCurrentVoiceLine = false
-			self.ThrownGrenades = grenades
 		end
 	end
 	self:PostCombatChecks()
@@ -737,6 +850,21 @@ function ENT:GruntIdle()
 	self:DoIdle()
 end
 function ENT:JackalIdle()
+	if self.IsInVehicle then return self:VehicleIdle() end
+	local can, veh = self:CanEnterAVehicle()
+	if can then
+		self:EnterVehicle(veh)
+		return self:VehicleIdle()
+	end
+	self:PostCombatChecks()
+	self:FollowingPlayerChecks()
+	if math.random(1,2) == 1 then
+		self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+		timer.Simple( math.random(2,3), function()
+			if IsValid(self) then self.SpecificGoal = nil end
+		end )
+	end
+	self:DoIdle()
 end
 function ENT:DroneIdle()
 end
@@ -836,6 +964,33 @@ function ENT:FloodEliteIdle()
 	end
 end
 function ENT:FloodBruteIdle()
+	if math.random(1,2) == 1 then
+		if math.random(1,2) == 1 and !self.SpecificGoal then
+			self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+			timer.Simple( math.random(2,3), function()
+				if IsValid(self) then self.SpecificGoal = nil end
+			end )
+		end
+	end
+	if math.random(1,2) == 1 and IV04H3_AllowPatrol then
+		local pos = self:FindNearbyPos()
+		self:GoToPosition( (pos), self:TableRandom(self.WalkCalmAnim), self.MoveSpeed*0.5, self.WanderToPos, self.PatrolIdleAnim )	
+	else
+		local seq = self.IdleCalmAnim
+		local len = self:DoAnimation(seq)
+		local goal = CurTime()+len
+		while(goal>CurTime()) do
+			self:SearchEnemy()
+			if math.random(1,2) == 1 and !self.SpecificGoal then
+				self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+				timer.Simple( math.random(2,3), function()
+					if IsValid(self) then self.SpecificGoal = nil end
+				end )
+			end
+			coroutine.wait(0.5)
+		end
+		self:SearchEnemy()
+	end
 end
 function ENT:FloodInfectionIdle()
 	if !self.IsWeaponDrawn and !self.HasSeenEnemies then
@@ -895,10 +1050,13 @@ end
 function ENT:FloodCarrierIdle()
 end
 function ENT:FloodTankIdle()
+	self:DoIdle()
 end
 function ENT:FloodStalkerIdle()
+	self:DoIdle()
 end
 function ENT:FloodRangedIdle()
+	self:DoIdle()
 end
 
 function ENT:GenericWeaponThink()
@@ -917,7 +1075,7 @@ function ENT:GenericWeaponThink()
 					return "Gotta turn"	
 				end
 				if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
-					local chances = 5+(#self:PossibleTargets())
+					local chances = (self.CatchModifier*20)+5+(#self:PossibleTargets())
 					local rand = math.random(100)
 					if rand < chances or self:GetSquad():WasSignalGiven("ThrowAllGrenades",5) then
 						local func = function()
@@ -955,7 +1113,7 @@ function ENT:SpartanThink()
 				return "Gotta turn"	
 			end
 			if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
-				local chances = 5+(#self:PossibleTargets())
+				local chances = (self.CatchModifier*20)+5+(#self:PossibleTargets())
 				local rand = math.random(100)
 				--print(self.ThrownGrenades)
 				if rand < chances or self:GetSquad():WasSignalGiven("ThrowAllGrenades",5) then
@@ -995,7 +1153,7 @@ function ENT:MarineThink()
 				return "Gotta turn"	
 			end
 			if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
-				local chances = 10+(#self:PossibleTargets())
+				local chances = (self.CatchModifier*20)+10+(#self:PossibleTargets())
 				local rand = math.random(100)
 				--print(self.ThrownGrenades)
 				if rand < chances or self:GetSquad():WasSignalGiven("ThrowAllGrenades",5) then
@@ -1034,7 +1192,7 @@ function ENT:EliteThink()
 				return "Gotta turn"	
 			end
 			if self.AllowGrenade and self.ThrownGrenades < 2 and ( self.DistToTarget < 1024^2 and self.DistToTarget > 256^2) then
-				local chances = 5+(#self:PossibleTargets())
+				local chances = (self.CatchModifier*20)+5+(#self:PossibleTargets())
 				local rand = math.random(100)
 				--print(self.ThrownGrenades)
 				if rand < chances or self:GetSquad():WasSignalGiven("ThrowAllGrenades",5) then
@@ -1066,8 +1224,10 @@ function ENT:GruntThink()
 	self:GenericWeaponThink()
 end
 function ENT:JackalThink()
+	self:GenericWeaponThink()
 end
 function ENT:DroneThink()
+	self:GenericWeaponThink()
 end
 function ENT:HunterThink()
 	if self:Health() < 1 then return end
@@ -1224,6 +1384,30 @@ function ENT:FloodEliteThink()
 	end
 end
 function ENT:FloodBruteThink()
+	if self:Health() < 1 then return end
+	if self.LastThinkTime < CurTime() then
+		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
+		local ent = self:WeaponThink()
+		if IsValid(ent) and self.HasLOSToTarget and !self.DoingMelee and !self.HasMeleeWeapon then
+			local should, dif = self:ShouldFace(ent)
+			--print(should,dif)
+			if should and math.abs(dif) > 2 then
+				--self:Turn(dif,false,true)
+				--print("angle")
+				return "Gotta turn"	
+			end
+			if IsValid(self.Weapon) then
+				if self:HasToReload() then
+					if !self.Reloading then
+						self.Reloading = true
+						self:Shoot()
+					end
+				else
+					self:Shoot()
+				end
+			end	
+		end
+	end
 end
 function ENT:FloodInfectionThink()
 	if self.Latched and IsValid(self:GetOwner()) then
@@ -1238,6 +1422,11 @@ end
 function ENT:FloodCarrierThink()
 end
 function ENT:FloodTankThink()
+	if self:Health() < 1 then return end
+	if self.LastThinkTime < CurTime() then
+		self.LastThinkTime = CurTime()+2
+		self:Speak("tank_idle_loop")
+	end
 end
 function ENT:FloodStalkerThink()
 end
@@ -1265,7 +1454,7 @@ function ENT:SpartanBehavior(ent,range)
 	else
 		self.CanThrowGrenade = false
 	end
-	if ( !self.DoneStealth or self.GoingForSneakKill ) and self:IsUndetected() then
+	if ( !self.DoneStealth or self.GoingForSneakKill or self.FollowingPlayer ) and self:IsUndetected() then
 		self.DoneStealth = true
 		for k, v in ipairs(self:NearbyAllies(self:GetPos(),512)) do
 			if ( v:IsPlayer() and v:Alive() and self.FriendlyToPlayers ) or (v.GoingForSneakKill and v.Enemy == ent) then
@@ -1280,14 +1469,31 @@ function ENT:SpartanBehavior(ent,range)
 			end
 		end )
 		self.HaltShoot = true
-		if self.SawPlayer and self.FriendlyToPlayers then
-			self:StandBy()
+		if (self.FollowingPlayer or self.SawPlayer) and self.FriendlyToPlayers then
+			if self.FollowingPlayer then
+				self:CrouchChecks(true,true)
+				while (self:IsUndetected() ) do 
+					if !self.FollowingPlayer then
+						self:DoAnimation(self.CrouchIdleAnim)
+						while self:IsUndetected() do
+							coroutine.wait(0.9)
+						end
+					else
+						self:FollowingPlayerChecks()
+						coroutine.wait(0.1)
+					end
+				end
+				self.HaltShoot = false
+			else
+				self:StandBy()
+			end
 		else
 			self:SneakKill(ent)
 		end
 	end
 	self.HaltShoot = false
 	if !IsValid(ent) then return end
+	self:CrouchChecks()
 	if self.AIType == "Static" then
 	
 		local should, dif = self:ShouldFace(ent)
@@ -1409,7 +1615,7 @@ function ENT:MarineBehavior(ent,range)
 	else
 		self.CanThrowGrenade = false
 	end
-	if ( !self.DoneStealth or self.GoingForSneakKill ) and self:IsUndetected() then
+	if ( ( !self.DoneStealth ) or self.GoingForSneakKill ) and self:IsUndetected() then
 		self.DoneStealth = true
 		if IsValid(self.FollowingPlayer) then
 			self.SawPlayer = true
@@ -1428,8 +1634,24 @@ function ENT:MarineBehavior(ent,range)
 			end
 		end )
 		self.HaltShoot = true
-		if self.SawPlayer and self.FriendlyToPlayers then
-			self:StandBy()
+		if (self.FollowingPlayer or self.SawPlayer) and self.FriendlyToPlayers then
+			if self.FollowingPlayer then
+				self:CrouchChecks(true,true)
+				while (self:IsUndetected() ) do 
+					if !self.FollowingPlayer then
+						self:DoAnimation(self.CrouchIdleAnim)
+						while self:IsUndetected() do
+							coroutine.wait(0.9)
+						end
+					else
+						self:FollowingPlayerChecks()
+						coroutine.wait(0.1)
+					end
+				end
+				self.HaltShoot = false
+			else
+				self:StandBy()
+			end
 		else
 			self:SneakKill(ent)
 		end
@@ -1463,6 +1685,7 @@ function ENT:MarineBehavior(ent,range)
 						end
 					end )
 				end
+				self:CrouchChecks(true,false)
 				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
 				self.NotLookingAtEnemy = false
 				if math.random(1,2) == 1 then
@@ -1515,6 +1738,7 @@ function ENT:MarineBehavior(ent,range)
 				end
 				if table.Count(tbl) > 0 or #tbl > 0 then
 					local area = table.Random(tbl)
+					self:CrouchChecks(true,false)
 					self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
 					self.NotLookingAtEnemy = false
 					if math.random(1,2) == 1 then
@@ -1558,6 +1782,7 @@ function ENT:MarineBehavior(ent,range)
 					end
 					if table.Count(tbl) > 0 or #tbl > 0 then
 						local area = table.Random(tbl)
+						self:CrouchChecks(true,false)
 						self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
 						self.NotLookingAtEnemy = false
 						return
@@ -1605,8 +1830,24 @@ function ENT:EliteBehavior(ent,range)
 			end
 		end )
 		self.HaltShoot = true
-		if self.SawPlayer then
-			self:StandBy()
+		if (self.FollowingPlayer or self.SawPlayer) and self.FriendlyToPlayers then
+			if self.FollowingPlayer then
+				self:CrouchChecks(true,true)
+				while (self:IsUndetected() ) do 
+					if !self.FollowingPlayer then
+						self:DoAnimation(self.CrouchIdleAnim)
+						while self:IsUndetected() do
+							coroutine.wait(0.9)
+						end
+					else
+						self:FollowingPlayerChecks()
+						coroutine.wait(0.1)
+					end
+				end
+				self.HaltShoot = false
+			else
+				self:StandBy()
+			end
 		else
 			self:SneakKill(ent)
 		end
@@ -1640,6 +1881,7 @@ function ENT:EliteBehavior(ent,range)
 						end
 					end )
 				end
+				self:CrouchChecks(true,false)
 				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
 				self.NotLookingAtEnemy = false
 				if math.random(1,2) == 1 then
@@ -1677,6 +1919,7 @@ function ENT:EliteBehavior(ent,range)
 			end
 			if table.Count(tbl) > 0 or #tbl > 0 then
 				local area = table.Random(tbl)
+				self:CrouchChecks(true,false)
 				self:MoveToPosition( area, self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )
 				self.NotLookingAtEnemy = false
 				if math.random(1,2) == 1 then
@@ -1700,6 +1943,7 @@ function ENT:EliteBehavior(ent,range)
 			--print(self:IsOutNumbered())
 			if self.HasMeleeWeapon then
 				self.PathGoalTolerance = 100
+				self:CrouchChecks(true,false)
 				self:MoveToPosition( ent:GetPos(), self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end } )
 				self.PathGoalTolerance = 40
 			else
@@ -1848,34 +2092,76 @@ function ENT:GruntBehavior(ent,range)
 	end
 	self.HaltShoot = false
 	if !IsValid(ent) then return end
-		self:CoverChecks(ent)
-		if los then
-			local should, dif = self:ShouldFace(ent)
-			if should then
-				--self:Turn(dif,false,true)
-				--coroutine.wait(0.2)
-				return
-			end
-			if !IsValid(ent) then return end
-			if self.HasMeleeWeapon then
-					--self.PathGoalTolerance = 100
-					self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { repath = 0.5 , facepath = true , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:OnKamikazeEnd() end end } )
-					--self.PathGoalTolerance = 40
-			else
-				local p
-				if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
-				local rang = math.random(128,512)
-				if p == ent:GetPos() then rang = self.DistToTarget/2 end
-				local pos = self:FindNearbyPos(p,rang)
-				self:StrafeNearby( pos, ent , false, math.random(1,2) == 1, true )
-				local wait = math.Rand(0.5,1)
-				coroutine.wait(wait)
-			end
-		else
-			self:ChaseTarget(ent)
+	self:CoverChecks(ent)
+	if los then
+		local should, dif = self:ShouldFace(ent)
+		if should then
+			--self:Turn(dif,false,true)
+			--coroutine.wait(0.2)
+			return
 		end
+		if !IsValid(ent) then return end
+		if self.HasMeleeWeapon then
+				--self.PathGoalTolerance = 100
+				self:GoToPosition( ent, self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, { repath = 0.5 , facepath = true , callback = function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:OnKamikazeEnd() end end } )
+				--self.PathGoalTolerance = 40
+		else
+			local p
+			if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
+			local rang = math.random(128,512)
+			if p == ent:GetPos() then rang = self.DistToTarget/2 end
+			local pos = self:FindNearbyPos(p,rang)
+			self:StrafeNearby( pos, ent , false, math.random(1,2) == 1, true )
+			local wait = math.Rand(0.5,1)
+			coroutine.wait(wait)
+		end
+	else
+		self:ChaseTarget(ent)
+	end
 end
 function ENT:JackalBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	if self.Leaping then return end
+	ent = ent or self.Enemy
+	if self.IsInVehicle then return self:VehicleBehavior(ent,range) end
+	local los
+	ent, los = self:LineOfSightChecks(ent)
+	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
+	if !self.DistToTarget then self.DistToTarget = range end
+	if IsValid(ent) and !self.IsWeaponDrawn and !self.ItsBerserkinTime then self:AdjustWeapon(self.Weapon,true) end
+	if self.Spooked then
+		self:Flee()
+		return
+	else
+		self.DisableWeaponBehavior = false
+	end
+	self:DodgeChecks(ent,los)
+	self.HaltShoot = false
+	if !IsValid(ent) then return end
+	self:CoverChecks(ent)
+	if los then
+		local should, dif = self:ShouldFace(ent)
+		if should then
+			--self:Turn(dif,false,true)
+			--coroutine.wait(0.2)
+			return
+		end
+		if !IsValid(ent) then return end
+		self:CrouchChecks()
+		if !self.IsSniper then
+			local p
+			if math.random(1,2) == 1 and !self:IsOutNumbered() then p = ent:GetPos() end
+			local rang = math.random(128,512)
+			if p == ent:GetPos() then rang = self.DistToTarget/2 end
+			local pos = self:FindNearbyPos(p,rang)
+			self:StrafeNearby( pos, ent , false, math.random(1,2) == 1, true )
+			local wait = math.Rand(0.5,1)
+			coroutine.wait(wait)
+		end
+	elseif !self.IsSniper then
+		self:ChaseTarget(ent)
+	end
 end
 function ENT:DroneBehavior(ent,range)
 end
@@ -2074,6 +2360,70 @@ function ENT:FloodEliteBehavior(ent,range)
 		end
 end
 function ENT:FloodBruteBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	if self.Leaping then return end
+	ent = ent or self.Enemy
+	if self.IsInVehicle then return self:VehicleBehavior(ent,range) end
+	local los
+	ent, los = self:LineOfSightChecks(ent)
+	local range = ((CurTime()-self.LastCalcTime) < 1 and self.DistToTarget) or range
+	if !self.DistToTarget then self.DistToTarget = range end
+	local can, veh = self:CanEnterAVehicle()
+	if can then
+		self:EnterVehicle(veh)
+		return self:VehicleBehavior(ent,range)
+	end
+	--print(los, !self.DoneMelee, range < self.MeleeRange^2, range, self.MeleeRange^2, math.sqrt(range), self.MeleeRange )
+	self:MeleeChecks(los,range)
+	self.HaltShoot = false
+	if !IsValid(ent) then return end
+		if los then
+			local should, dif = self:ShouldFace(ent)
+			if should then
+				--self:Turn(dif,false,true)
+				--coroutine.wait(0.2)
+				return
+			end
+			if !IsValid(ent) then return end
+			--[[if !IsValid(self.Weapon) then
+				if range > 512^2 and range < 1200^2 then
+					self:PlaySequenceAndWait(self.LeapAnim)
+					self.Leaping = true
+					self.loco:JumpAcrossGap(ent:GetPos(),self:GetForward())
+					return
+				else
+					self.PathGoalTolerance = 100
+					--self:Speak("kamikaze")
+					self:MoveToPosition( ent:GetPos(), self:TableRandom(self.RunAnim), self.MoveSpeed*self.MoveSpeedMultiplier, function() if IsValid(self.Enemy) and self.DistToTarget < self.MeleeRange^2 then return self:MeleeChecks(true,self.DistToTarget) end end )
+					self.PathGoalTolerance = 40
+				end
+			else]]
+			if ( range > 512^2 and range < 1536^2 ) and !self.SawAlliesDie then
+				local p
+				p = ent:GetPos()
+				local pos = self:FindNearbyPos(p)
+				local wait = math.Rand(0.5,1)
+				local anim = self:TableRandom(self.WalkAnim)
+				local speed = self.MoveSpeed
+				--print(anim,speed)
+				self:GoToPosition( pos, anim, speed, self.ChaseEnt )
+				--coroutine.wait(wait)
+			else
+				local p
+				p = ent:GetPos()
+				local pos = p
+				local wait = math.Rand(0.5,1)
+				local anim = self:TableRandom(self.RunAnim)
+				local speed = self.MoveSpeed*self.MoveSpeedMultiplier
+				--print(anim,speed)
+				self:GoToPosition( pos, anim, speed, self.ChaseEnt )
+				--coroutine.wait(wait)
+			end
+			--end
+		else
+			self:ChaseTarget(ent)
+		end
 end
 function ENT:FloodInfectionBehavior(ent,range)
 	if !IsValid(ent) then self:GetATarget() end
@@ -2123,13 +2473,74 @@ end
 function ENT:FloodCarrierBehavior(ent,range)
 end
 function ENT:FloodTankBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	ent = ent or self.Enemy
+	local los
+	ent, los = self:LineOfSightChecks(ent,true)
+	self:MeleeChecks(los,range)
+	if !IsValid(self.Enemy) then return end
+	if los then
+		if los then
+			local should, dif = self:ShouldFace(ent)
+			if should then
+				--self:Turn(dif,false,true)
+				--coroutine.wait(0.2)
+				return
+			end
+			if !IsValid(ent) then return end
+			local p
+			p = ent:GetPos()
+			local pos = p
+			local wait = math.Rand(0.5,1)
+			local anim = self:TableRandom(self.WalkAnim)
+			local speed = self.MoveSpeed
+			if ( range > 512^2 ) then
+				local anim = self:TableRandom(self.RunAnim)
+				local speed = self.MoveSpeed*self.MoveSpeedMultiplier
+			end
+			self:GoToPosition( pos, anim, speed, self.ChaseEnt )
+		else
+			self:ChaseTarget(ent)
+		end
+	else
+		self:ChaseTarget(ent)
+	end
 end
 function ENT:FloodStalkerBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	ent = ent or self.Enemy
+	local los
+	ent, los = self:LineOfSightChecks(ent,true)
+	self:MeleeChecks(los,range)
+	if !IsValid(self.Enemy) then return end
+	if los then
+		if los then
+			local should, dif = self:ShouldFace(ent)
+			if should then
+				--self:Turn(dif,false,true)
+				--coroutine.wait(0.2)
+				return
+			end
+			if !IsValid(ent) then return end
+			local p = ent:GetPos()
+			local pos = p
+			local anim = self:TableRandom(self.RunAnim)
+			local speed = self.MoveSpeed*self.MoveSpeedMultiplier
+			self:GoToPosition( pos, anim, speed, self.ChaseEnt )
+		else
+			self:ChaseTarget(ent)
+		end
+	else
+		self:ChaseTarget(ent)
+	end
 end
 function ENT:FloodRangedBehavior(ent,range)
 end
 
 function ENT:DoIdle()
+	self:FollowingPlayerChecks()
 	if !self.IsWeaponDrawn and !self.HasSeenEnemies then
 		if math.random(1,2) == 1 and IV04H3_AllowPatrol then
 			local pos = self:FindNearbyPos()
@@ -2160,12 +2571,17 @@ function ENT:DoIdle()
 			self:SearchEnemy()
 		end
 	else
+		local r = 0
+		if self.CanShootCrouch then
+			r = math.random(1,3)
+		end
+		self:CrouchChecks(true,r==1)
 		if !self.HasSeenEnemies then
 			if math.random(1,2) == 1 and IV04H3_AllowPatrol then
 				local pos = self:FindNearbyPos()
 				self:GoToPosition( (pos), self:TableRandom(self.WalkCalmAnim) or self:TableRandom(self.WalkAnim), self.MoveSpeed*0.5, self.WanderToPos, self.IdleCalmAnim )	
 			else
-				local seq = self.IdleCalmAnim
+				local seq = (self.IsCrouching and self.CrouchIdleCalmAnim) or self.IdleCalmAnim
 				local len = self:DoAnimation(seq)
 				local goal = CurTime()+len
 				while(goal>CurTime()) do
@@ -2182,14 +2598,14 @@ function ENT:DoIdle()
 			end
 		end
 		self:GetATarget()
-		if self.PosingAnims and math.random(1,5) == 1 then
+		if self.PosingAnims and r!=1 and math.random(1,5) == 1 then
 			local seq = self.PosingAnims
 			local id, len = self:LookupSequence(self:TableRandom(seq))
 			self:SearchTimer(len,0.5,id)
 			self:DoAnimation(seq,false,true)
 			self:SearchEnemy()
 		end
-		local seq = self.IdleCalmAnim
+		local seq = (self.IsCrouching and self.CrouchIdleCalmAnim) or self.IdleCalmAnim
 		local len = self:DoAnimation(seq)
 		local goal = CurTime()+len
 		while(goal>CurTime()) do
@@ -2217,12 +2633,20 @@ function ENT:FollowingPlayerChecks()
 		self.LookTarget = self.FollowingPlayer
 		local dist = self:GetRangeSquaredTo(self.FollowingPlayer)
 		if dist > 500^2 then
+			--self:CrouchChecks(true,true)
 			local goal = self.FollowingPlayer:GetPos()
 			local pos = self:FindNearbyPos(goal,200)
 			self.LookTarget = nil
 			local anim = IsValid(self.Enemy) and self.RunAnim or self.RunCalmAnim
-			self:GoToPosition( (pos), self:TableRandom(anim), self.MoveSpeed*self.MoveSpeedMultiplier, self.WanderToPos )	
+			if self.IsCrouching then
+				anim = self:TableRandom(self.CrouchMoveCalmAnim)
+				speed = self.MoveSpeed
+			end
+			--ani = self.CrouchIdleCalmAnim
+			self:GoToPosition( (pos), self:TableRandom(anim), self.MoveSpeed*self.MoveSpeedMultiplier, (!IsValid(self.Enemy) and self.WanderToPos) or nil )	
 			self.LookTarget = self.FollowingPlayer
+		else
+			self:CrouchChecks()
 		end
 	end
 end

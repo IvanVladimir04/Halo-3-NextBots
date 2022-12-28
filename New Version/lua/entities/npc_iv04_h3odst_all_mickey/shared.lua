@@ -23,7 +23,7 @@ ENT.CanInteractWithOthers = true
 ENT.Faction = "FACTION_ALLIANCE"
 
 ENT.InteractableAllies = {
-	["npc_iv04_h3odst_all_dutch"] = "mickey_look_dutch"
+	["npc_iv04_h3odst_all_dutch"] = "dutch_look_mickey"
 }
 
 ENT.InteractableAlliesResponses = {

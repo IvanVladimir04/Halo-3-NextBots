@@ -39,18 +39,38 @@ ENT.PossibleColors = {
 	Color(144,189,200),Color(70,70,70)
 }
 
+--[[if CLIENT then
+
+	function ENT:OnClientInitialize()
+		local col = self:TableRandom(self.PossibleColors)
+		self.ColR = col.r--math.random(255)
+		self.ColG = col.g--math.random(255)
+		self.ColB = col.b--math.random(255)
+		self:SetColor(col)
+		self.GetPlayerColor = function()
+			print("clientside",Vector(self.ColR/255,self.ColG/255,self.ColB/255))
+			return Vector(self.ColR/255,self.ColG/255,self.ColB/255)
+		end
+		print(col)
+	end
+
+end]]
+
 function ENT:DoInit()
 	local col = self:TableRandom(self.PossibleColors)
 	self.ColR = col.r--math.random(255)
 	self.ColG = col.g--math.random(255)
 	self.ColB = col.b--math.random(255)
-	self:SetColor(Color(self.ColR,self.ColG,self.ColB))
+	self:SetColor(col)
 	self.GetPlayerColor = function()
+		--print("serverside",Vector(self.ColR/255,self.ColG/255,self.ColB/255))
 		return Vector(self.ColR/255,self.ColG/255,self.ColB/255)
 	end
+	--print(col)
 	net.Start( "H3NBsColoredSpawned" )
 	net.WriteEntity( self )
-	net.WriteVector( self:GetPlayerColor() )
+	net.WriteVector( Vector(self.ColR/255,self.ColG/255,self.ColB/255) )
+	--net.WriteColor(Color(self.ColR,self.ColG,self.ColB))
 	net.Broadcast()
 	local headbod = math.random(1,4)
 	if headbod == 1 then

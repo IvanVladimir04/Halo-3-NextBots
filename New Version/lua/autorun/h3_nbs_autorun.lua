@@ -16,7 +16,30 @@ CreateConVar( "halo_3_nextbots_ai_flail", 1, FCVAR_ARCHIVE, "Allow them to flail
 CreateConVar( "halo_3_nextbots_ai_flood_feral", 0, FCVAR_ARCHIVE, "Are the flood feral?" )	
 CreateConVar( "halo_3_nextbots_ai_flood_infection_climb", 1, FCVAR_ARCHIVE, "Allow infection forms to climb?" )
 
-CreateConVar( "halo_3_nextbots_ai_skull_catch", 0, FCVAR_ARCHIVE, "Catch skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_assassins", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_blackeye", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_boomstick", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_catch", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_emperor", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_famine", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_ghost", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_iron", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_jacked", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_whuppopotamus", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_toughluck", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_tilt", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_thunderstorm", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_theycomeback", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_swarm", 0, FCVAR_ARCHIVE, "Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_mythic", 0, FCVAR_ARCHIVE, "Skull" )
+
+CreateConVar( "halo_3_nextbots_ai_skull_sec_iwhbyd", 0, FCVAR_ARCHIVE, "Secondary Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_sec_blind", 0, FCVAR_ARCHIVE, "Secondary Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_sec_cowbell", 0, FCVAR_ARCHIVE, "Secondary Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_sec_fog", 0, FCVAR_ARCHIVE, "Secondary Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_sec_gruntbirthday", 0, FCVAR_ARCHIVE, "Secondary Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_sec_gruntfuneral", 0, FCVAR_ARCHIVE, "Secondary Skull" )
+CreateConVar( "halo_3_nextbots_ai_skull_sec_omniscient", 0, FCVAR_ARCHIVE, "Secondary Skull" )
 --else
 	--print("This is the second time I do this, if it's your second time too then you are a disappointment to me")
 --end
@@ -98,7 +121,6 @@ end)
 	}
 } )]]
 
-
 H3NBsTbl = {
 
 }
@@ -111,140 +133,36 @@ if SERVER then
 
 	util.AddNetworkString( "H3NBsColoredSpawned" )
 	
-	AllowedH3Squads = {
-		["FACTION_ALLIANCE"] = true,
-		["FACTION_COVENANT"] = true,
-		["FACTION_SEPARATISTS"] = true,
-		["FACTION_FLOOD"] = true,
-		["FACTION_HUNTERS"] = true
-	}
+	H3HS = SquadT -- Halo 3 Human Squads
 	
-	CustomH3Squads = {
-		--["FACTION_REBELS"] = H3RS
-	}
+	H3BS = SquadT -- Halo 3 Brute Squads
 	
-	H3S = {} -- Halo 3 Squads
+	H3ES = SquadT -- Halo 3 Elite Squads
 	
-	H3S.Members = {}
-	
-	H3S.ValidTargets = {}
-	
-	H3S.Signals = {
-		--["Retreat"] = true
-	}
-	
-	H3S.SignalT = {
-		["Retreat"] = 0
-	}
-	
-	H3S.SignalCaller = {
-		-- ["EntityHere"] = true
-	}
-	
-	function H3S:SortValidTargets(newtargets)
-		if !newtargets then return end
-		for id, v in pairs(newtargets) do
-			if IsValid(v) and v:Health() > 0 then
-				self.ValidTargets[v] = true
-			else
-				self.ValidTargets[v] = nil
-			end
-		end
-	end
-	
-	function H3S:GetValidTargets(caller)
-		local targets = {}
-		for v, bool in pairs(self.ValidTargets) do
-			if IsValid(v) and v:Health() > 0 then
-				if IsValid(caller) and caller.IV04NextBot then
-					if caller:CheckRelationships(v) == "foe" then
-						targets[v] = true
-					end
-				else
-					targets[v] = true
-				end
-			else
-				self.ValidTargets[v] = nil
-			end
-		end
-		return targets
-	end
-	
-	function H3S:AddMember(ent)
-		self.Members[ent] = true
-	end
-	
-	function H3S:GetMembers()
-		local members = {}
-		for member, bool in pairs(self.Members) do
-			if IsValid(member) and member:Health() > 0 then
-				members[#members+1] = member
-			else
-				self.Members[member] = nil
-			end
-		end
-		return members
-	end
-	
-	function H3S:WasSignalGiven(sign,tolerance)
-		if self.Signals[sign] then
-			if ( self.SignalT[sign]+tolerance > CurTime() ) then
-				return true
-			else
-				self.Signals[sign] = false
-				return false
-			end
-		end
-		return false
-	end
-	
-	function H3S:Signal(sign,caller)
-		--print(sign)
-		self.Signals[sign] = true
-		self.SignalT[sign] = CurTime()
-		self.SignalCaller[sign] = caller
-	end
-	
-	function H3S:GetCaller(sign)
-		return self.SignalCaller[sign]
-	end
-
-	H3HS = H3S -- Halo 3 Human Squads
-	
-	H3BS = H3S -- Halo 3 Brute Squads
-	
-	H3ES = H3S -- Halo 3 Elite Squads
-	
-	H3FS = H3S -- Halo 3 Flood Squads
-	
-	CustomH3Squads["FACTION_HUNTERS"] = H3S
-	
-	hook.Add("IV04NextBotSpawned","SquadManager", function(ent)
-		--print("The hook is running")
-		if ent.IsHalo3NextBot and AllowedH3Squads[ent.Faction] then
-			ent:GetSquad():AddMember(ent)
-			--print(#ent:GetSquad():GetMembers())
-			--PrintTable(H3HS:GetMembers())
-			--print(ent:GetSquad(), "and", H3HS, "are the same")
-			--[[
-				Warning! the nextbots know from the start to what squad they belong
-				to and grab orders from it, but they are only registered in
-				their squad if this hook runs
-			]]
-		end
-	end )
+	H3FS = SquadT -- Halo 3 Flood Squads
 
 else
 
 	net.Receive( "H3NBsColoredSpawned", function()
 		local ent = net.ReadEntity()
 		local col = net.ReadVector()
+		--local color = net.ReadColor()
 		if !IsValid(ent) then return end
 		ent.HasSpecialColor = true
 		ent.SpecialColor = col
+		--print(color)
+		--ent:SetColor(color)
 		H3NBsColors[ent:EntIndex()] = col
-		if !ent.GetPlayerColor then ent.GetPlayerColor = function() return ent.SpecialColor or Vector(0,0,0) end end
-		--print(ent.HasSpecialColor,ent.SpecialColor,HRNBsColors[ent:EntIndex()])
+		--print(ent.SpecialColor)
+		--[[if !isfunction(ent.GetPlayerColor) then 
+			ent.GetPlayerColor = function() 
+				--print("clientside",ent.SpecialColor)
+				return Vector(self.ColR/255,self.ColG/255,self.ColB/255) --Vector(color/255,color/255,color/255)
+			end
+		end]]
+		--matproxy.Init( "PlayerColor", "PlayerColor", Material(ent:GetMaterials()[3]), {resultvar=ent:GetMaterials()[2]} )
+		--matproxy.Call( "PlayerColor", Material(ent:GetMaterials()[3]), ent )
+		--print(ent.HasSpecialColor,ent.SpecialColor,H3NBsColors[ent:EntIndex()])
 	end )
 
 end

@@ -19,6 +19,10 @@ ENT.Faction = "FACTION_ALLIANCE"
 
 ENT.AITemplate = "ELITE"
 
+ENT.CanInteractWithOthers = true
+
+ENT.StareReply = "look_plr_arb"
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_plasmarifle",
 	"astw2_halo3_plasmarifle",

@@ -29,16 +29,16 @@
 		}
 		Clamp
 		{
+			srcVar1 "$color"
 			min 0
 			max 1
-			srcVar1 "$color"
 			resultVar "$color"
 		}
 		Clamp
 		{
+			srcVar1 "$color"
 			min 5
 			max 5
-			srcVar1 "$color"
 			resultVar "$selfillumtint"
 		}
 	}
