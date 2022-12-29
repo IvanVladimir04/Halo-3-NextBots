@@ -301,6 +301,12 @@ function ENT:GruntInitialize()
 	--print(self.Rank)
 end
 function ENT:JackalInitialize()
+	self.ClassesWeight = {
+		[1] = 1,
+		[2] = 5,
+		[3] = 10,
+		[4] = 25
+	}
 	self.DisableMelee = true
 	self.FleeOnHigherRankDead = true
 	self.SpawnWithWeaponDrawn = true
