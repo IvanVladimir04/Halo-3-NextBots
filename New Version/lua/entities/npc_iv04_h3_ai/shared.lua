@@ -2127,7 +2127,7 @@ end
 
 
 function ENT:GrenadeSignalChecks()
-	if !self:IsWeaponUser() or !AllowedH3Squads[self.Faction] then return end
+	if !self:IsWeaponUser() or !AllowedSquads[self.Faction] then return end
 	if math.random(100) >= self.GrenadeSignalChance then
 		if self.Faction == "FACTION_COVENANT" then
 			if #self:PossibleTargets() > 5 and !H3BS:WasSignalGiven("ThrowAllGrenades",5) then
