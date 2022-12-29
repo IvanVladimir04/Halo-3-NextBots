@@ -132,14 +132,15 @@ H3NBsColors = {
 if SERVER then
 
 	util.AddNetworkString( "H3NBsColoredSpawned" )
-	
-	H3HS = SquadT -- Halo 3 Human Squads
-	
-	H3BS = SquadT -- Halo 3 Brute Squads
-	
-	H3ES = SquadT -- Halo 3 Elite Squads
-	
-	H3FS = SquadT -- Halo 3 Flood Squads
+	hook.Add( "Initialize", "Halo 3 Squads", function()
+		H3HS = SquadT -- Halo 3 Human Squads
+		
+		H3BS = SquadT -- Halo 3 Brute Squads
+		
+		H3ES = SquadT -- Halo 3 Elite Squads
+		
+		H3FS = SquadT -- Halo 3 Flood Squads
+	end )
 
 else
 
