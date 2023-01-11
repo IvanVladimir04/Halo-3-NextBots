@@ -11,10 +11,11 @@ ENT.IsHalo3NextBot = true
 ENT.SearchJustAsSpawned = false
 
 ENT.CanUse = true
-
+ENT.Rank = 1
 ENT.UpdateTime = 0
 
 ENT.MoveUpdateTime = 0.5
+ENT.RunBehaviourTime = 0
 
 ENT.YPP = 0
 ENT.PPP = 0
@@ -708,6 +709,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 		--PrintTable(ents.FindByName( "yyy_level_2_db_2a" ))
 		timer.Simple( 1, function() if IsValid(self) and IsValid(ent) then self.CollidedEntities[ent] = nil end end )
 		if self.FlyingDead then self.AlternateLanded = true return end 
+		if !self.loco:IsOnGround() or self.IsFlyingNextBot then return end
 		if self.AITemplate == "FLOOD_INFECTION" and !self.Latched and self.Leaping and ent == self.Enemy and !ent.UnderLatchAttack then
 				self.Leaping = false
 				ent.UnderLatchAttack = true
@@ -897,9 +899,8 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 					timer.Simple( 4, function() if IsValid(self) then self.DonePush = false end end )
 				end
 			elseif ent:GetClass() == "func_breakable_surf" then
-				self:SetAngles(Angle(0,dir:Angle().y,0))
-				self:DoMelee()
 				if !self.DonePush then
+					self:SetAngles(Angle(0,dir:Angle().y,0))
 					self.DonePush = true
 					self:DoMelee()
 					timer.Simple( 4, function() if IsValid(self) then self.DonePush = false end end )
@@ -1087,19 +1088,27 @@ function ENT:OnTraceAttack( info, dir, trace )
 	if (self.WeakHitGroup and hg != self.WeakHitGroup) or (self.JackalShield and self.JackalShield > 0 and hg == self.JackalShieldHitGroup) then
 		if self.JackalShield then
 			self.JackalShield = self.JackalShield-info:GetDamage()
+			ParticleEffect( self.ShieldParticle, trace.HitPos, self:GetAngles(), self )
+			self:EmitSound("halo_3/sfx/sheildhit"..math.random(1,3)..".wav", 75, 100)
 			if self.JackalShield <= 0 then
+				self:SetHitboxSet("sniper")
 				self:SetBodygroup(1,2)
+				ParticleEffect( self.ShieldDepleteParticle, self:GetAttachment(2).Pos, self:GetAngles(), self )
+				self:EmitSound("halo_3/sfx/jackal_shield_death"..math.random(1,3)..".wav", 90, 100)		
 				timer.Simple( 10, function()
 					if IsValid(self) then
 						self:SetBodygroup(1,self.Rank-1)
 						self.JackalShield = 20*self.Rank
+						self:SetHitboxSet("default")
+						ParticleEffect( self.ShieldDepleteParticle, self:WorldSpaceCenter(), self:GetAngles(), self )
+						self:EmitSound("halo/halo_3/instantcover/shield_redeploy.wav", 65, 115)
 					end
 				end )
 			end
 		end
 		info:SetDamage(0)
 	end
-	if hg == self.WeakHitGroup then
+	if hg == self.WeakHitGroup or (hg != self.JackalShieldHitGroup and (self.JackalShield and self.JackalShield > 0)) then
 		ParticleEffect( self.BloodParticle, trace.HitPos, self:GetAngles(), self )
 	end
 	local ang = (trace.HitPos-self:WorldSpaceCenter()):GetNormalized():Angle()
@@ -1773,6 +1782,22 @@ function ENT:HasValidQuote(voice,character)
 	return false
 end
 
+function ENT:TransformTo(clas)
+	local class = self.TransformToClasses[clas]
+	if class then
+		self:Speak(self.TransformToSounds[clas])
+		self:PlaySequenceAndWait(self.TransformToAnims[clas])
+		local new = ents.Create(class)
+		new:SetPos(self:GetPos())
+		new:SetAngles(self:GetAngles())
+		new:SetEnemy(self:GetEnemy())
+		new.TransformedFrom = self.AITemplate
+		new:Spawn()
+		undo.ReplaceEntity(self,new)
+		self:Remove()
+	end
+end
+
 -------- Misc functions
 
 -------- Melee functions
@@ -1880,6 +1905,13 @@ function ENT:DoMeleeDamage(back) -- No arguments needed, everything is defined o
 			d:SetDamageType( self.MeleeDamageType )
 			d:SetDamagePosition( v:NearestPoint( self:WorldSpaceCenter() ) )
 			v:TakeDamageInfo(d)
+			local force = d:GetDamageForce()
+			local fwd = d:GetDamagePosition()
+			local fwdpwer = fwd:LengthSqr()/400
+			v:SetVelocity(fwd * force)
+			if IsValid(v:GetPhysicsObject()) then
+				v:GetPhysicsObject():ApplyForceCenter( v:GetPhysicsObject():GetPos() +((v:GetPhysicsObject():GetPos()-self:GetPos()):GetNormalized())*self.MeleeForce )
+			end
 			v:EmitSound(self:TableRandom(self.MeleeImpactSound), 90, math.random(90,110))
 		end
 	end
@@ -2319,7 +2351,7 @@ function ENT:OnInjured(dmg)
 	local rel = self:CheckRelationships(dmg:GetAttacker())
 	local ht = self:Health()
 	if !self.HasArmor or self.Shield <= 0 then
-		if !self.IsHunter then
+		if !self.IsHunter or (self.JackalShield and self.JackalShield <= 0) then
 			ParticleEffect( self.BloodParticle, dmg:GetDamagePosition(), Angle(0,0,0), self )
 		end
 		if self.FloodTemplates[self.AITemplate] then
@@ -3901,7 +3933,7 @@ function ENT:BodyUpdate()
 			goal = self.Enemy:WorldSpaceCenter()
 		elseif IsValid(self.LookTarget) then
 			goal = self.LookTarget:WorldSpaceCenter()+(self.LookTarget:OBBMaxs()*0.3)
-		elseif isentity(self.SpecificGoal) then
+		elseif isentity(self.SpecificGoal) and IsValid(self.SpecificGoal) then
 			goal = self.SpecificGoal:WorldSpaceCenter()
 		end
 		local an = (goal-(self:WorldSpaceCenter()+self:GetUp()*30)):Angle()

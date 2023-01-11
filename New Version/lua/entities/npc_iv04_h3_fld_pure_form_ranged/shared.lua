@@ -6,28 +6,28 @@ ENT.PrintName = "Flood Ranged Form"
 
 ENT.AITemplate = "FLOOD_RANGED"
 
-ENT.Models = {"models/halo_3/characters/covenant/hunter.mdl"}
+ENT.Models = {"models/halo_3/characters/flood/ranged_pure_form.mdl"}
 
 ENT.Faction = "FACTION_FLOOD"
 
-ENT.StartHealth = 700
+ENT.StartHealth = 200
 
 ENT.Rank = 1
 
-ENT.MoveSpeed = 60
+ENT.MoveSpeed = 0
 
-ENT.MoveSpeedMultiplier = 3
+ENT.MoveSpeedMultiplier = 0
 
 ENT.DisableCorpseShooting = true
 
-ENT.WeakHitGroup = 2
+ENT.RangedProjectile = "astw2_halo3_rangedform_projectile"
 
-ENT.HunterProjectile = "astw2_halo3_hunter_projectile"
+ENT.BurstSize = 6
 
-ENT.BurstSize = 30
+ENT.CurrentProjectile = 1
 
 function ENT:GetShootPos()
-	return self:GetAttachment(1).Pos
+	return self:GetAttachment(self:LookupAttachment(self.RangedAttachments[self.CurrentProjectile])).Pos
 end
 
 list.Set( "NPC", "npc_iv04_h3_fld_pure_form_ranged", {

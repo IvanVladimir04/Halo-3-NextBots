@@ -16,6 +16,10 @@ ENT.Faction = "FACTION_COVENANT"
 
 ENT.Rank = 2
 
+ENT.ShieldParticle = "iv04_halo_3_jackal_shield_impact_effect"
+
+ENT.ShieldDepleteParticle = "iv04_halo_3_jackal_shield_deplete_major"
+
 ENT.PossibleWeapons = {
 	"astw2_halo3_plasmapistol",
 	"astw2_halo3_needler"

@@ -1279,17 +1279,26 @@ function ENT:SetupAnimations()
 		end
 	else
 		if self.FloodPureTemplates[self.AITemplate] then
-			self.TranformFromAnims = {
+			self.TransformFromAnims = {
 				["FLOOD_TANK"] = "Combat_From_Tank",
 				["FLOOD_STALKER"] = "Combat_From_Stalker",
 				["FLOOD_RANGED"] = "Combat_From_Ranged"
 			}
-			self.TranformToAnims = {
+			self.TransformToAnims = {
 				["FLOOD_TANK"] = "Combat_To_Tank",
 				["FLOOD_STALKER"] = "Combat_From_Stalker",
 				["FLOOD_RANGED"] = "Combat_To_Ranged"
 			}
+			self.TransformToClasses = {
+				["FLOOD_TANK"] = "npc_iv04_h3_fld_pure_form_tank",
+				["FLOOD_STALKER"] = "npc_iv04_h3_fld_pure_form_stalker",
+				["FLOOD_RANGED"] = "npc_iv04_h3_fld_pure_form_ranged"
+			}
 			if self.AITemplate == "FLOOD_TANK" then
+				self.TransformToSounds = {
+					["FLOOD_STALKER"] = "tank_to_stalker",
+					["FLOOD_RANGED"] = "tank_to_ranged"
+				}
 				self.BraceAnim = "Brace_Combat_Any_Any"
 				self.EvadeLeftAnim = "Evade_Left_Combat_Any_Any"
 				self.EvadeRightAnim = "Evade_Right_Combat_Any_Any"
@@ -1338,6 +1347,10 @@ function ENT:SetupAnimations()
 					["Gut"] = "Flinch_Armored_Rifle_Back_Gut"
 				}
 			elseif self.AITemplate == "FLOOD_STALKER" then
+				self.TransformToSounds = {
+					["FLOOD_TANK"] = "stalker_to_tank",
+					["FLOOD_RANGED"] = "stalker_to_ranged"
+				}
 				self.BraceAnim = "Brace_Combat_Any_Any"
 				self.EvadeLeftAnim = "Evade_Left_Combat_Any_Any"
 				self.EvadeRightAnim = "Evade_Right_Combat_Any_Any"
@@ -1357,7 +1370,6 @@ function ENT:SetupAnimations()
 				self.WalkAnim = "Walk_Protected_Any_Up"
 				self.MeleeTackleAnim = "Melee_Combat_Any_Any_Tackle"
 				self.MeleeAnim = {"Melee_Combat_Any_1","Melee_Combat_Any_2"}
-				self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}
 				self.PatrolIdleAnim = self.IdleCalmAnim
 				self.DeathBackAnims = {
 					["Head"] = {"Die_Back_Gut"}
@@ -1386,7 +1398,43 @@ function ENT:SetupAnimations()
 					["Gut"] = "Flinch_Armored_Rifle_Back_Gut"
 				}
 			elseif self.AITemplate == "FLOOD_RANGED" then
-			
+				self.TransformToSounds = {
+					["FLOOD_TANK"] = "ranged_to_tank",
+					["FLOOD_STALKER"] = "ranged_to_stalker"
+				}
+				self.IdleAnim = {"Combat_Any_Idle_Up"}
+				self.IdleCalmAnim = {"Combat_Any_Idle_Up"}
+				self.ShootAnim = "Attack_Ranged"
+				self.BraceAnim = "Brace_Combat_Any_Any"
+				self.LandHardAnim = "Land_Hard_Combat_Any_Any"
+				self.SurpriseAnim = "Surprised_Combat_Any_Any"
+				self.DeathBackAnims = {
+					["Gut"] =  {"Die_Back_Gut_2","Die_Back_Gut_1"}
+				}
+				self.DeathLeftAnims = {
+					["Gut"] =  {"Die_Left_Gut_1","Die_Left_Gut_2"}
+				}
+				self.DeathRightAnims = {
+					["Gut"] =  {"Die_Right_Gut_1","Die_Right_Gut_2"}
+				}
+				self.DeathFrontAnims = {
+					["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
+				}
+				self.FlinchFrontAnims = {
+					["Chest"] = "Flinch_Armored_Front_Chest",
+					["Gut"] = {"Flinch_Armored_Back_Gut"},
+					["Head"] = {"Flinch_Armored_Front_Chest"},
+					["Left_Arm"] = "Flinch_Armored_Rifle_Front_Left_Arm",
+					["Right_Arm"] = "Flinch_Armored_Rifle_Front_Right_Arm",
+					["Left_Leg"] = "Flinch_Armored_Rifle_Front_Left_Leg",
+					["Right_Leg"] = "Flinch_Armored_Rifle_Front_Right_Leg"
+				}
+			end
+			if self.TransformedFrom then
+				local func = function()
+					self:PlaySequenceAndWait(self.TransformFromAnims[self.TransformedFrom])
+				end
+				self:AddToCoroutine(func,true)
 			end
 		else
 			if self.DoesntUseWeapons then

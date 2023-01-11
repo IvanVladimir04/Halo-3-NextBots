@@ -320,10 +320,12 @@ function ENT:JackalInitialize()
 	self.MoveSpeedMultiplier = 4
 	self.VoiceType = "Jackal"
 	self.AllowGrenade = false
+	self:SetHitboxSet("default")
 	if self.IsSniper then
 		self.NoWarnAnim = true
 		self.DodgeChance = 0
 		self:SetBodygroup(2,1)
+		self:SetHitboxSet("sniper")
 		self.RemovableHeadBodygroups = true
 		self.RemovableBodygroup = 2
 		self.RemovableChange = 0
@@ -345,6 +347,7 @@ function ENT:HunterInitialize()
 	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_hunter"
 	self.InstaKillImmune = true
 	self.IsHunter = true
+	self.MeleeDamage = 45
 	self.DamageThreshold = math.huge -- Do this to disable flinching
 	self:SetSkin(self.Rank)
 	self.MoveSpeed = 75
@@ -366,6 +369,8 @@ function ENT:SentinelInitialize()
 	if CLIENT then
 	
 	else -- Server
+		self.IsFlyingNextBot = true
+		--self:ResetSequence("Hover")
 		self.loco:SetGravity(0)
 		self.loco:Jump()
 		self.loco:SetStepHeight(0)
@@ -563,7 +568,7 @@ function ENT:FloodStalkerInitialize()
 	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
 	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
 	self.RecklessTactics = true
-	self:SetCollisionBounds(Vector(10,20,40),Vector(-10,-20,0))
+	self:SetCollisionBounds(Vector(60,30,40),Vector(-20,-30,0))
 	self.DamageThreshold = 30
 	self.NoWarnAnim = true
 	self.NoTransitionAnims = true
@@ -572,6 +577,24 @@ function ENT:FloodStalkerInitialize()
 	self.VoiceType = "Flood_Stalker"
 end
 function ENT:FloodRangedInitialize()
+	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
+	self.BloodParticle = "iv04_halo_3_flood_gib_small"
+	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
+	self:SetCollisionBounds(Vector(10,20,80),Vector(-10,-20,0))
+	self.DamageThreshold = 30
+	self.NoWarnAnim = true
+	self.NoTransitionAnims = true
+	self.AttractAlliesRange = math.huge
+	self.CanReactToGrenades = false
+	self.VoiceType = "Flood_Ranged"
+	self.RangedAttachments = {
+		[1] = "l_spikes_bottom",
+		[2] = "r_spikes_bottom",
+		[3] = "l_spikes_mid",
+		[4] = "r_spikes_mid",
+		[5] = "l_spikes_top",
+		[6] = "r_spikes_top",
+	}
 end
 
 function ENT:SpartanIdle()
@@ -1062,7 +1085,20 @@ function ENT:FloodStalkerIdle()
 	self:DoIdle()
 end
 function ENT:FloodRangedIdle()
-	self:DoIdle()
+	local seq = self.IdleAnim
+	local len = self:DoAnimation(seq)
+	local goal = CurTime()+len
+	while(goal>CurTime()) do
+		self:SearchEnemy()
+		if math.random(1,2) == 1 and !self.SpecificGoal then
+			self.SpecificGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAngles()+Angle(0,math.random(-45,45),0)):Forward()*1)
+			timer.Simple( math.random(2,3), function()
+				if IsValid(self) then self.SpecificGoal = nil end
+			end )
+		end
+		coroutine.wait(0.5)
+	end
+	self:SearchEnemy()
 end
 
 function ENT:GenericWeaponThink()
@@ -1437,6 +1473,54 @@ end
 function ENT:FloodStalkerThink()
 end
 function ENT:FloodRangedThink()
+	if self:Health() < 1 then return end
+	if self.LastThinkTime < CurTime() then
+		self.LastThinkTime = CurTime()+self.ThinkDelay -- Set when we can think again
+		local ent = self:WeaponThink()
+		if IsValid(ent) and self.HasLOSToTarget then
+			local should, dif = self:ShouldFace(ent)
+			--print(should,dif)
+			if should and math.abs(dif) > 2 then
+				--self:Turn(dif,false,true)
+				--print("angle")
+				return "Gotta turn"	
+			end
+			self:FloodRangedAttack(ent)
+		end
+	end
+end
+function ENT:FloodRangedAttack(ent)
+	if !self.DoneRangedAttack then
+		ent = ent or self.Enemy
+		local lim = self.BurstSize
+		for i = 1, lim do
+			timer.Simple( 0.1*i, function()
+				if IsValid(self) then
+					local proj = ents.Create(self.RangedProjectile)
+					local att = self:GetAttachment(self:LookupAttachment(self.RangedAttachments[i]))
+					proj:SetPos(att.Pos)
+					proj:SetAngles(att.Ang)
+					proj:SetOwner(self)
+					proj:Activate()
+					proj:Spawn()
+					local phys = proj:GetPhysicsObject()
+					self:Speak("spike_fire_squeal")
+					self.CurrentProjectile = i
+					if IsValid(phys) then
+						local off = math.Rand((1/self.Difficulty)*0.1,0)
+						phys:ApplyForceCenter(((self:GetAimVector()*2)+((self:GetUp()*(off))))*8000)
+					end
+					if i == lim then
+						timer.Simple( 2, function()
+							if IsValid(self) then
+								self.DoneRangedAttack = false
+							end
+						end )
+					end
+				end
+			end )
+		end
+	end
 end
 
 function ENT:SpartanBehavior(ent,range)
@@ -2484,9 +2568,15 @@ function ENT:FloodTankBehavior(ent,range)
 	ent = ent or self.Enemy
 	local los
 	ent, los = self:LineOfSightChecks(ent,true)
+	self.DistToTarget = self.DistToTarget or self:GetRangeSquaredTo(ent)
 	self:MeleeChecks(los,range)
 	if !IsValid(self.Enemy) then return end
 	if los then
+		if self.DistToTarget > 1024^2 then
+			if math.random(1,2) == 1 then
+				self:TransformTo("FLOOD_RANGED")
+			end
+		end
 		if los then
 			local should, dif = self:ShouldFace(ent)
 			if should then
@@ -2510,6 +2600,9 @@ function ENT:FloodTankBehavior(ent,range)
 			self:ChaseTarget(ent)
 		end
 	else
+		if math.random(1,2) == 1 then
+			self:TransformTo("FLOOD_STALKER")
+		end
 		self:ChaseTarget(ent)
 	end
 end
@@ -2519,30 +2612,59 @@ function ENT:FloodStalkerBehavior(ent,range)
 	ent = ent or self.Enemy
 	local los
 	ent, los = self:LineOfSightChecks(ent,true)
+	self.DistToTarget = self.DistToTarget or self:GetRangeSquaredTo(ent)
 	self:MeleeChecks(los,range)
 	if !IsValid(self.Enemy) then return end
 	if los then
-		if los then
-			local should, dif = self:ShouldFace(ent)
-			if should then
-				--self:Turn(dif,false,true)
-				--coroutine.wait(0.2)
-				return
+		if self.DistToTarget < 512^2 then
+			if math.random(1,2) == 1 then
+				self:TransformTo("FLOOD_TANK")
 			end
-			if !IsValid(ent) then return end
-			local p = ent:GetPos()
-			local pos = p
-			local anim = self:TableRandom(self.RunAnim)
-			local speed = self.MoveSpeed*self.MoveSpeedMultiplier
-			self:GoToPosition( pos, anim, speed, self.ChaseEnt )
-		else
-			self:ChaseTarget(ent)
+		elseif self.DistToTarget > 1024^2 then
+			if math.random(1,2) == 1 then
+				self:TransformTo("FLOOD_RANGED")
+			end
 		end
+		local should, dif = self:ShouldFace(ent)
+		if should then
+			--self:Turn(dif,false,true)
+			--coroutine.wait(0.2)
+			return
+		end
+		if !IsValid(ent) then return end
+		local p = ent:GetPos()
+		local pos = p
+		local anim = self:TableRandom(self.RunAnim)
+		local speed = self.MoveSpeed*self.MoveSpeedMultiplier
+		self:GoToPosition( pos, anim, speed, self.ChaseEnt )
 	else
 		self:ChaseTarget(ent)
 	end
 end
 function ENT:FloodRangedBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	ent = ent or self.Enemy
+	local los
+	ent, los = self:LineOfSightChecks(ent,true)
+	self.DistToTarget = self.DistToTarget or self:GetRangeSquaredTo(ent)
+	self:MeleeChecks(los,range)
+	if !IsValid(self.Enemy) then return end
+	if los then
+		if self.DistToTarget < 512^2 then
+			if math.random(1,2) == 1 then
+				self:TransformTo("FLOOD_TANK")
+			end
+		elseif self.DistToTarget > 2048^2 then
+			if math.random(1,2) == 1 then
+				self:TransformTo("FLOOD_STALKER")
+			end
+		end
+	else
+		if math.random(1,2) == 1 then
+			self:TransformTo("FLOOD_STALKER")
+		end
+	end
 end
 
 function ENT:DoIdle()
