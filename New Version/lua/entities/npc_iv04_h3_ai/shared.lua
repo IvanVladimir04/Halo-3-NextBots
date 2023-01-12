@@ -531,6 +531,13 @@ function ENT:OnInitialize()
 	self.MeleeDamage = (self.MeleeDamage*(self.Difficulty)*0.5)
 	if self.FriendlyToPlayers then
 		self.FriendlyToPlayers = GetConVar("halo_3_nextbots_ai_hostile_humans"):GetInt() != 1
+	else
+		if GetConVar("halo_3_nextbots_ai_omniscience"):GetInt() == 1 then
+			self.SightDistance = 99999
+			self.LoseEnemyDistance = 99999
+			self.SightType = 3
+			self.UseLineOfSight = false
+		end
 	end
 	if self.EnableFlashlight then
 		if self:LookupAttachment("flashlight") != 0 then
@@ -1485,7 +1492,7 @@ function ENT:ChaseTarget(ent)
 			end
 		end
 		ent.BeingChased = true
-		self:GoToPosition(self.RegisteredTargetPositions[ent],self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,{
+		self:GoToPosition(self.RegisteredTargetPositions[ent] or ent:GetPos(),self:TableRandom(self.RunAnim),self.MoveSpeed*self.MoveSpeedMultiplier,{
 		callback = function(a)
 			if IsValid(ent) and self.Enemy == ent then
 				local target, los = self:LineOfSightChecks(ent)
@@ -1563,7 +1570,7 @@ self:GoToPosition(ent:GetPos(),self:TableRandom(self.RunAnim),self:GetRunSpeed()
 	if !util.IsInWorld( goal ) then return "Tried to move out of the world!" end
 	local ani, typ = self:TransitionChecks( anim, speed )
 	local enemy = IsEntity(pos) and self:CheckRelationships(ent) == "foe" or IsValid(self.Enemy)
-	--print(anim)
+	print(anim)
 	if type(anim) == "string" then
 		self:ResetSequence( anim )
 	else
@@ -2755,9 +2762,11 @@ end
 
 function ENT:LookedCooldown(ent)
 	self.InLookedCooldown = true
-	timer.Simple( 10, function()
+	--print("cooldown started")
+	timer.Simple( math.random(10,20), function()
 		if IsValid(self) then
 			self.InLookedCooldown = nil
+			--print("cooldown finished")
 			if IsValid(ent) then
 				self.DiscardedInterestingEntities[ent] = nil
 				ent.InteractedWith = nil
@@ -2898,7 +2907,7 @@ function ENT:OnOtherKilled( victim, info )
 							if !weight then return end
 							local r1 = math.random(100)
 							local result = r1<weight
-							if result then
+							if result and self.AllowKamikaze then
 								local func = function()
 									self:Speak("kamikaze")
 									self.HasMeleeWeapon = true
@@ -3898,23 +3907,29 @@ end
 
 function ENT:BodyUpdate()
 	local act = self:GetActivity()
-	if !self.loco:GetVelocity():IsZero() and self.loco:IsOnGround() and self.loco:IsAttemptingToMove() and !self.DetectedAGrenade then
+	if !self.loco:GetVelocity():IsZero() and ( (self.loco:IsOnGround() and self.loco:IsAttemptingToMove()) or self.IsFlyingNextBot ) and !self.DetectedAGrenade then
 		self.LastLocoVel = self.loco:GetVelocity() -- Last direction we are heading towards that works
-		if self.AllowSounds["Footstep"] then
-			if !self.LMove then
-				self.LMove = CurTime()+0.3
-			else
-				if self.LMove < CurTime() then
-					self:FootstepSound()
+		if self.IsFlyingNextBot then
+		
+		else
+			if self.AllowSounds["Footstep"] then
+				if !self.LMove then
 					self.LMove = CurTime()+0.3
+				else
+					if self.LMove < CurTime() then
+						self:FootstepSound()
+						self.LMove = CurTime()+0.3
+					end
 				end
 			end
 		end
 		local goal = self:GetPos()+self.loco:GetVelocity()
 		local y = (goal-self:GetPos()):Angle().y
 		local m_y = math.AngleDifference(self:GetAngles().y,y)
-		self:SetPoseParameter("move_yaw",m_y)
-		self:SetPoseParameter("walk_yaw",m_y)
+		local cury = self:GetPoseParameter("move_yaw")
+		local appr = math.ApproachAngle( cury, m_y, 1 )
+		self:SetPoseParameter("move_yaw",appr)
+		self:SetPoseParameter("walk_yaw",appr)
 	else
 		self.LMove = nil
 	end

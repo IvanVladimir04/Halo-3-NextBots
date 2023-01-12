@@ -636,6 +636,37 @@ function ENT:SetupAnimations()
 						["Gut"] = {"Die_Back_Gut_1","Die_Back_Gut_2"},
 						["Head"] = {"Die_Back_Head"}
 					}
+					self.FleePistolMoveAnim = "Run Flee"
+					self.FleePistolIdleAnim = "Flee_Idle"
+					--print(self:LookupSequence(self.FleePistolMoveAnim))
+					self.FlinchBackAnims = {
+						["Chest"] = "Flinch_Unarmed_Back_Chest",
+						["Gut"] = "Flinch_Unarmed_Back_Gut"
+					}
+					self.FlinchFrontAnims = {
+						["Chest"] = "Flinch_Unarmed_Front_Chest",
+						["Gut"] = "Flinch_Unarmed_Front_Gut",
+						["Head"] = "Flinch_Unarmed_Front_Head",
+						["Left_Arm"] = "Flinch_Unarmed_Front_Left_Arm",
+						["Right_Arm"] = "Flinch_Unarmed_Front_Right_Arm",
+						["Left_Leg"] = "Flinch_Unarmed_Front_Left_Leg",
+						["Right_Leg"] = "Flinch_Unarmed_Front_Right_Leg"
+					}
+					self.DeathFrontAnims = {
+						["Gut"] =  {"Die_Front_Gut","Die_Front_Gut_1","Die_Front_Gut_2"}
+					}
+					self.DeathBackAnims = {
+						["Head"] = {"Die_Back_Head"},
+						["Gut"] = {"Die_Back_Gut_1","Die_Back_Gut_2"}
+					}
+					self.DeathLeftAnims = {
+						["Head"] = {"Die_Left_Head"},
+						["Gut"] =  {"Die_Left_Gut_1","Die_Left_Gut_2"}
+					}
+					self.DeathRightAnims = {
+						["Head"] = {"Die_Right_Head"},
+						["Gut"] =  {"Die_Right_Gut_1","Die_Right_Gut_2"}
+					}
 				else
 					self.BraceAnim = "Combat_Pistol_Brace"
 					self.DrawSlowWeaponAnim = {"Draw_Slow_Combat_Pistol"}
@@ -784,6 +815,36 @@ function ENT:SetupAnimations()
 					self.IdleAnim = {"Crouch_Rifle_Idle_Up"}
 					self.ShootAnim = {"attack_crouch_rifle_1","attack_crouch_rifle_2"}
 					self.AllowGrenade = false
+					self.FleePistolMoveAnim = "Run Flee"
+					self.FleePistolIdleAnim = "Flee_Idle"
+					self.FlinchBackAnims = {
+						["Chest"] = "Flinch_Unarmed_Back_Chest",
+						["Gut"] = "Flinch_Unarmed_Back_Gut"
+					}
+					self.FlinchFrontAnims = {
+						["Chest"] = "Flinch_Unarmed_Front_Chest",
+						["Gut"] = "Flinch_Unarmed_Front_Gut",
+						["Head"] = "Flinch_Unarmed_Front_Head",
+						["Left_Arm"] = "Flinch_Unarmed_Front_Left_Arm",
+						["Right_Arm"] = "Flinch_Unarmed_Front_Right_Arm",
+						["Left_Leg"] = "Flinch_Unarmed_Front_Left_Leg",
+						["Right_Leg"] = "Flinch_Unarmed_Front_Right_Leg"
+					}
+					self.DeathFrontAnims = {
+						["Gut"] =  {"Die_Front_Gut"}
+					}
+					self.DeathBackAnims = {
+						["Head"] = {"Die_Back_Head"},
+						["Gut"] = {"Die_Back_Gut_1","Die_Back_Gut_2"}
+					}
+					self.DeathLeftAnims = {
+						["Head"] = {"Die_Left_Head"},
+						["Gut"] =  {"Die_Left_Gut_1","Die_Left_Gut_2"}
+					}
+					self.DeathRightAnims = {
+						["Head"] = {"Die_Right_Head"},
+						["Gut"] =  {"Die_Right_Gut_1","Die_Right_Gut_2"}
+					}
 				else
 					self.MeleeAnim = {"Melee_Combat_Rifle_1","Melee_Combat_Rifle_2"}
 					self.MeleeBackAnim = {"Melee_Back_Combat_Missile"}

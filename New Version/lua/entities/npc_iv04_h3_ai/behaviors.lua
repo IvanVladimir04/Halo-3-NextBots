@@ -298,6 +298,7 @@ function ENT:GruntInitialize()
 	self.RemovableChange = 1
 	self.RemovableHeadPartModel = "models/halo_3/characters/covenant/grunt_gasmask.mdl"
 	self:SetCollisionBounds(Vector(20,20,60),Vector(-20,-20,0))
+	self.AllowKamikaze = true
 	--print(self.Rank)
 end
 function ENT:JackalInitialize()
@@ -366,11 +367,11 @@ end
 function ENT:ScarabInitialize()
 end
 function ENT:SentinelInitialize()
+	self.IsSentinel = true
 	if CLIENT then
 	
 	else -- Server
 		self.IsFlyingNextBot = true
-		--self:ResetSequence("Hover")
 		self.loco:SetGravity(0)
 		self.loco:Jump()
 		self.loco:SetStepHeight(0)
@@ -907,14 +908,19 @@ end
 function ENT:ScarabIdle()
 end
 function ENT:SentinelIdle()
+	self:ResetSequence("Idle")
 	local yaw = 0
 	local t = CurTime()
 	local stop = false
 	local printed = false
 	self:SearchEnemy()
-	self.FlyGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-45,45),0)):Forward()*50)
+	self.FlyGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-180,180),0)):Forward()*math.random(50,100))
+	local dir = (self.FlyGoal-self:WorldSpaceCenter()):GetNormalized()
+	self.InitialFlyAngle = dir:Angle()
 	--self.loco:SetVelocity(Vector(0,0,0))
-	coroutine.wait(1)
+	self:SearchTimer(2,0.5,self:GetSequence())
+	self:SearchEnemy()
+	coroutine.wait(2)
 	self.FlyGoal = nil
 end
 function ENT:EnforcerIdle()
@@ -1340,7 +1346,13 @@ function ENT:SentinelThink()
 	else
 		if self.FlyGoal then
 			local dir = (self.FlyGoal-self:WorldSpaceCenter()):GetNormalized()
-			self.loco:SetVelocity(dir*self.MoveSpeed)
+			local result = (dir:Angle()-self.InitialFlyAngle)
+			if math.abs(result.x) > 10 or math.abs(result.y) > 10 then
+				self.FlyGoal = nil
+				-- Target Reached
+			else
+				self.loco:SetVelocity(dir*self.MoveSpeed)
+			end
 		else
 			self.loco:SetVelocity(Vector(0,0,0))
 		end
