@@ -7,6 +7,7 @@ game.AddParticles( "particles/iv04_h3_explosions.pcf" )
 game.AddParticles( "particles/iv04_h3_forerunner_explosions.pcf" )
 game.AddParticles( "particles/iv04_h3_covenant_vehicle_explosions.pcf" )
 game.AddParticles( "particles/iv04_h3_thruster_fx.pcf" )
+game.AddParticles( "particles/iv04_h3_misc_effects.pcf" )
 
 
 --Thruster Effects
@@ -65,6 +66,8 @@ PrecacheParticleSystem( "iv04_halo_3_monitor_idle_rings" )
 PrecacheParticleSystem( "iv04_halo_3_monitor_idle_rings_red" )
 PrecacheParticleSystem( "iv04_halo_3_monitor_push_fx" )
 PrecacheParticleSystem( "iv04_halo_3_grunt_methane_fx" )
+PrecacheParticleSystem( "iv04_halo_3_jackal_sniper_glow" )
+PrecacheParticleSystem( "iv04_halo_3_engineer_beam" )
 
 --Beam Effect
 PrecacheParticleSystem( "iv04_halo_3_laser_beam_red" )
