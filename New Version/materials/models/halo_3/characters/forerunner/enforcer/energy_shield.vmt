@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/forerunner/enforcer/energy_shield_mask"
+	"$selfillum"	"1"
+	"$detail"				"models/halo_3/characters/forerunner/enforcer/energy_shield_offset"
+	"$detailblendmode"			"5"
+	"$detailblendfactor"			"1"
+	"$detailscale"			"1.00"   	
+	"$additive"		"1"
+	"$nodecal"		"1"
+	"$nocull"			"1"
+	"$color2"			"[.1 .35 .5]"
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture     "models/halo_3/characters/forerunner/enforcer/energy_shield_offset"
+	$emissiveBlendBaseTexture	"models/halo_3/characters/forerunner/enforcer/energy_shield_mask"
+	$emissiveBlendFlowTexture     "particle/bendibeam"
+	$emissiveBlendTint "[1 0.5 0.8]"
+	$emissiveBlendStrength .05
+	$emissiveBlendScrollVector "[0.15 0.5]"
+}

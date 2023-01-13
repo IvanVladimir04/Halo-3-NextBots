@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/forerunner/enforcer/torn_up"
+	"$bumpmap" "models/halo_3/characters/forerunner/enforcer/torn_up_N"
+	"$nodecal"		"1"
+	"$nocull"			"1"
+	"$translucent"		"1"
+	"$phong" 1
+	"$phongboost" 	.2
+	"$phongexponent"		5
+	"$phongtint"	"[.6 .65 .75]"
+	"$rimlight" 1
+	"$rimlightexponent"       11
+	"$phongfresnelranges" "[1.2 3 8]"
+}

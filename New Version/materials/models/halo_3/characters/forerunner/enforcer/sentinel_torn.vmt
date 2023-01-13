@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/halo_3/characters/forerunner/enforcer/torn_up"
+	"$bumpmap" "models/halo_3/characters/forerunner/enforcer/torn_up_N"
+	"$nodecal"		"1"
+	"$nocull"			"1"
+	"$translucent"		"1"
+//	"$alphatest"		"1"
+//	"$alphatestreference"	.17
+//	"$allowalphatocoverage"	1
+}
