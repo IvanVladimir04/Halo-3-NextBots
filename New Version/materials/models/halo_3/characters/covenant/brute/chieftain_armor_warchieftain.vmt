@@ -16,7 +16,7 @@
 	"$model" 1
 	"$phongalbedotint" "1"
 	"$color2" "[1 .8 .5]"
-	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmap"	"env_cubemap"
 	"$envmaptint"	"[0.05 0.04 0.02]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask"	1

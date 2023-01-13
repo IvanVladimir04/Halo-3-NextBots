@@ -14,7 +14,7 @@
 	"$rimlight"	"1"
 	"$rimlightexponent"	"15"
 	"$rimlightboost"	"5"
-	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmap"	"env_cubemap"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$emissiveBlendEnabled"	 1
 	"$emissiveBlendTexture"    "models/halo_3/characters/covenant/grunt/grunt"

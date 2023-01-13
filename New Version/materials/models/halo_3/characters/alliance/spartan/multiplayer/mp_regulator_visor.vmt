@@ -7,7 +7,7 @@
 	"$normalmapalphaenvmapmask" 1
 	"$nodecal" 1
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
-	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmap" "env_cubemap"
 	"$envmaptint" "[0.1 0.04 0.005]"
 
 	"$phong" 1

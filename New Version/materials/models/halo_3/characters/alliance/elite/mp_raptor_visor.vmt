@@ -8,7 +8,7 @@
 	"$normalmapalphaenvmapmask" 1
 	"$nodecal" 1
 
-	"$envmap" "models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmap" "env_cubemap"
 	"$envmaptint" "[3.125 .85 0.15]"
 
 	"$phong" 1

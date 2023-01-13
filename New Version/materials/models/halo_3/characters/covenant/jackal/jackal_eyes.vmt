@@ -3,7 +3,7 @@
 	"$basetexture" "models/halo_3/characters/covenant/jackal/jackal"
 	"$bumpmap" "models/halo_3/characters/covenant/jackal/jackal_zbump"
 	"$blendtintbybasealpha" "1"
-	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmap"	"env_cubemap"
 	"$envmaptint"	"[0.15 0.12 0.1]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 

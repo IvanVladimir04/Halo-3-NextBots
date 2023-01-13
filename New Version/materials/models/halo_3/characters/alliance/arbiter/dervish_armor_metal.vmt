@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models/halo_3/characters/alliance/arbiter/dervish_body_diffuse"
 	"$bumpmap" "models/halo_3/characters/alliance/arbiter/dervish_body_zbump"
-	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
+	"$envmap"	"env_cubemap"
 	"$envmaptint"	"[.3 .27 .25]"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask" "1"
