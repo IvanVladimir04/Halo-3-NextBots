@@ -371,18 +371,15 @@ function ENT:SentinelInitialize()
 	if CLIENT then
 	
 	else -- Server
-		self.IsFlyingNextBot = true
-		self.loco:SetGravity(0)
-		self.loco:Jump()
-		self.loco:SetStepHeight(0)
-		self.loco:SetVelocity(Vector(0,0,500))
+		self:FlyInitialize()
 	end
 end
 function ENT:EnforcerInitialize()
 end
 function ENT:MonitorInitialize()
+	ParticleEffectAttach( "iv04_halo_3_monitor_idle_rings", PATTACH_POINT_FOLLOW, self, 1 )
 	if CLIENT then
-
+	
 	else
 		self.Sprite = ents.Create("env_sprite")
 		self.Sprite:SetPos(self:GetAttachment(1).Pos)
@@ -397,10 +394,7 @@ function ENT:MonitorInitialize()
 		self.Sprite:SetKeyValue( "spawnflags", "1" )
 		self.Sprite:Spawn()
 		self.Sprite:Activate()
-		self.loco:SetGravity(0)
-		self.loco:Jump()
-		self.loco:SetStepHeight(0)
-		self.loco:SetVelocity(Vector(0,0,500))
+		self:FlyInitialize()
 		self:SetColor(self.MonitorColor or Color(80,188,234))
 		util.SpriteTrail( self, 3, self.MonitorColor or Color( 35, 100, 255 ), false, 4, 16, 0.3, 1 / ( 15 + 1 ) * 1, "effects/halo3/beam" )
 	end
@@ -584,6 +578,7 @@ function ENT:FloodRangedInitialize()
 	self:SetCollisionBounds(Vector(10,20,80),Vector(-10,-20,0))
 	self.DamageThreshold = 30
 	self.NoWarnAnim = true
+	self.ThinkDelay = 0.8
 	self.NoTransitionAnims = true
 	self.AttractAlliesRange = math.huge
 	self.CanReactToGrenades = false
@@ -908,15 +903,15 @@ end
 function ENT:ScarabIdle()
 end
 function ENT:SentinelIdle()
+	self:FlyFollowingPlayerChecks()
 	self:ResetSequence("Idle")
 	local yaw = 0
 	local t = CurTime()
 	local stop = false
 	local printed = false
 	self:SearchEnemy()
-	self.FlyGoal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-180,180),0)):Forward()*math.random(50,100))
-	local dir = (self.FlyGoal-self:WorldSpaceCenter()):GetNormalized()
-	self.InitialFlyAngle = dir:Angle()
+	local goal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-180,180),0)):Forward()*math.random(50,100))
+	self:SetFlyGoal(goal)
 	--self.loco:SetVelocity(Vector(0,0,0))
 	self:SearchTimer(2,0.5,self:GetSequence())
 	self:SearchEnemy()
@@ -926,10 +921,12 @@ end
 function ENT:EnforcerIdle()
 end
 function ENT:MonitorIdle()
+	self:FlyFollowingPlayerChecks()
 	local yaw = 0
 	local t = CurTime()
 	self:SearchEnemy()
-	while (!IsValid(self.Enemy)) do
+	self.OverrideFlying = true
+	while (!IsValid(self.Enemy) and !IsValid(self.FollowingPlayer)) do
 		an =  math.rad( yaw )
 		local x = math.cos( an ) * 100
 		local y = math.sin( an ) * 100
@@ -939,6 +936,7 @@ function ENT:MonitorIdle()
 		t = CurTime()
 		coroutine.wait(0.1)
 	end
+	self.OverrideFlying = false
 end
 function ENT:ConstructorIdle()
 end
@@ -1344,18 +1342,7 @@ function ENT:SentinelThink()
 	if CLIENT then
 
 	else
-		if self.FlyGoal then
-			local dir = (self.FlyGoal-self:WorldSpaceCenter()):GetNormalized()
-			local result = (dir:Angle()-self.InitialFlyAngle)
-			if math.abs(result.x) > 10 or math.abs(result.y) > 10 then
-				self.FlyGoal = nil
-				-- Target Reached
-			else
-				self.loco:SetVelocity(dir*self.MoveSpeed)
-			end
-		else
-			self.loco:SetVelocity(Vector(0,0,0))
-		end
+		self:FlyThink()
 	end
 end
 function ENT:EnforcerThink()
@@ -1380,7 +1367,7 @@ function ENT:MonitorThink()
 			self.NThink = CurTime()+0.09
 		end
 	else
-	
+		self:FlyThink()
 	end
 end
 function ENT:ConstructorThink()
@@ -1511,16 +1498,18 @@ function ENT:FloodRangedAttack(ent)
 					local proj = ents.Create(self.RangedProjectile)
 					local att = self:GetAttachment(self:LookupAttachment(self.RangedAttachments[i]))
 					proj:SetPos(att.Pos)
-					proj:SetAngles(att.Ang)
+					proj:SetAngles(self:GetAimVector():Angle())
 					proj:SetOwner(self)
 					proj:Activate()
 					proj:Spawn()
+					proj.PlasmaDamage = (proj.PlasmaDamage*(self.Difficulty*0.5))
 					local phys = proj:GetPhysicsObject()
 					self:Speak("spike_fire_squeal")
+					self:DoGesture(self.ShootAnim)
 					self.CurrentProjectile = i
 					if IsValid(phys) then
-						local off = math.Rand((1/self.Difficulty)*0.1,0)
-						phys:ApplyForceCenter(((self:GetAimVector()*2)+((self:GetUp()*(off))))*8000)
+						local off = math.Rand((1/self.Difficulty)*0.25,0)
+						phys:ApplyForceCenter(((self:GetAimVector()*2)+((self:GetUp()*(off))+(self:GetRight()*(off*math.random(1,-1)))))*8000)
 					end
 					if i == lim then
 						timer.Simple( 2, function()
@@ -2632,7 +2621,7 @@ function ENT:FloodStalkerBehavior(ent,range)
 			if math.random(1,2) == 1 then
 				self:TransformTo("FLOOD_TANK")
 			end
-		elseif self.DistToTarget > 1024^2 then
+		elseif self.DistToTarget > 1024^2 and self.DistToTarget < 2048^2 then
 			if math.random(1,2) == 1 then
 				self:TransformTo("FLOOD_RANGED")
 			end
@@ -2759,6 +2748,27 @@ function ENT:DoIdle()
 			coroutine.wait(0.5)
 		end
 		self:SearchEnemy()
+	end
+end
+function ENT:FlyFollowingPlayerChecks()
+	if self.IsFollowingPlayer then
+		self.LookTarget = self.FollowingPlayer
+		local dist = self:GetRangeSquaredTo(self.FollowingPlayer)
+		if dist > 300^2 then
+			--self:CrouchChecks(true,true)
+			local goal = self.FollowingPlayer:GetPos()
+			local pos = self:FindNearbyPos(goal,200)
+			pos.z = goal.z + 80
+			local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,self.FollowingPlayer:WorldSpaceCenter(),{self,self.FollowingPlayer,self:GetOwner(),self.FollowingPlayer:GetOwner()})
+			self.LookTarget = nil
+			if los then
+				self:FlyToPos(pos,{directfly = true})
+			else
+				--ani = self.CrouchIdleCalmAnim
+				self:FlyToPos( pos, {distaboveground = 50, facegoal = true} )	
+			end
+			self.LookTarget = self.FollowingPlayer
+		end
 	end
 end
 function ENT:FollowingPlayerChecks()

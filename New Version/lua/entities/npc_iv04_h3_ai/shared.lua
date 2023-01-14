@@ -1506,7 +1506,7 @@ end
 
 function ENT:LineOfSightChecks( ent, ignorevehicles )
 	local mins, maxs = ent:GetCollisionBounds()
-	local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter()+ent:GetUp()*(maxs*0.25),{self,ent,self:GetOwner()})	
+	local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter()+ent:GetUp()*(maxs*0.25),{self,ent,self:GetOwner()},MASK_VISIBLE)	
 	if IsValid(obstr) then	
 		if !ignorevehicles and ( self.DriveThese[obstr:GetModel()] and !self.SeenVehicles[obstr] ) then
 			self.SeenVehicles[obstr] = true
@@ -1515,8 +1515,13 @@ function ENT:LineOfSightChecks( ent, ignorevehicles )
 			ent = obstr
 			self:SetEnemy(ent)
 		end
+		--print(obstr)
 	end
 	return ent, los
+end
+
+function ENT:OnAirTargetReached(pos)
+
 end
 
 function ENT:CrouchChecks(moving,gonnacrouch)
@@ -1570,7 +1575,7 @@ self:GoToPosition(ent:GetPos(),self:TableRandom(self.RunAnim),self:GetRunSpeed()
 	if !util.IsInWorld( goal ) then return "Tried to move out of the world!" end
 	local ani, typ = self:TransitionChecks( anim, speed )
 	local enemy = IsEntity(pos) and self:CheckRelationships(ent) == "foe" or IsValid(self.Enemy)
-	print(anim)
+	--print(anim)
 	if type(anim) == "string" then
 		self:ResetSequence( anim )
 	else

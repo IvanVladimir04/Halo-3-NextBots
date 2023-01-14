@@ -1395,17 +1395,17 @@ function ENT:SetupAnimations()
 					["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
 				}
 				self.FlinchFrontAnims = {
-					["Chest"] = "Flinch_Armored_Rifle_Front_Chest",
-					["Gut"] = {"Flinch_Armored_Rifle_Front_Gut_1","Flinch_Armored_Rifle_Front_Gut_2"},
+					["Chest"] = "Flinch_Armored_Front_Chest",
+					["Gut"] = {"Flinch_Armored_Front_Gut_1","Flinch_Armored_Front_Gut_2"},
 					["Head"] = {"Flinch_Combat_Any_Front_Head_1","Flinch_Combat_Any_Front_Head_2","Flinch_Combat_Any_Front_Head_3"},
-					["Left_Arm"] = "Flinch_Armored_Rifle_Front_Left_Arm",
-					["Right_Arm"] = "Flinch_Armored_Rifle_Front_Right_Arm",
-					["Left_Leg"] = "Flinch_Armored_Rifle_Front_Left_Leg",
-					["Right_Leg"] = "Flinch_Armored_Rifle_Front_Right_Leg"
+					["Left_Arm"] = "Flinch_Armored_Front_Left_Arm",
+					["Right_Arm"] = "Flinch_Armored_Front_Right_Arm",
+					["Left_Leg"] = "Flinch_Armored_Front_Left_Leg",
+					["Right_Leg"] = "Flinch_Armored_Front_Right_Leg"
 				}
 				self.FlinchBackAnims = {
-					["Chest"] = "Flinch_Armored_Rifle_Back_Chest",
-					["Gut"] = "Flinch_Armored_Rifle_Back_Gut"
+					["Chest"] = "Flinch_Armored_Back_Chest",
+					["Gut"] = "Flinch_Armored_Back_Gut"
 				}
 			elseif self.AITemplate == "FLOOD_STALKER" then
 				self.TransformToSounds = {
@@ -1446,17 +1446,17 @@ function ENT:SetupAnimations()
 					["Gut"] =  {"Die_Front_Gut_1","Die_Front_Gut_2"}
 				}
 				self.FlinchFrontAnims = {
-					["Chest"] = "Flinch_Armored_Rifle_Front_Chest",
-					["Gut"] = {"Flinch_Armored_Rifle_Front_Gut_1","Flinch_Armored_Rifle_Front_Gut_2"},
+					["Chest"] = "Flinch_Armored_Front_Chest",
+					["Gut"] = {"Flinch_Armored_Front_Gut_1","Flinch_Armored_Front_Gut_2"},
 					["Head"] = {"Flinch_Combat_Any_Front_Head_1","Flinch_Combat_Any_Front_Head_2","Flinch_Combat_Any_Front_Head_3"},
-					["Left_Arm"] = "Flinch_Armored_Rifle_Front_Left_Arm",
-					["Right_Arm"] = "Flinch_Armored_Rifle_Front_Right_Arm",
-					["Left_Leg"] = "Flinch_Armored_Rifle_Front_Left_Leg",
-					["Right_Leg"] = "Flinch_Armored_Rifle_Front_Right_Leg"
+					["Left_Arm"] = "Flinch_Armored_Front_Left_Arm",
+					["Right_Arm"] = "Flinch_Armored_Front_Right_Arm",
+					["Left_Leg"] = "Flinch_Armored_Front_Left_Leg",
+					["Right_Leg"] = "Flinch_Armored_Front_Right_Leg"
 				}
 				self.FlinchBackAnims = {
-					["Chest"] = "Flinch_Armored_Rifle_Back_Chest",
-					["Gut"] = "Flinch_Armored_Rifle_Back_Gut"
+					["Chest"] = "Flinch_Armored_Back_Chest",
+					["Gut"] = "Flinch_Armored_Back_Gut"
 				}
 			elseif self.AITemplate == "FLOOD_RANGED" then
 				self.TransformToSounds = {
@@ -1485,10 +1485,13 @@ function ENT:SetupAnimations()
 					["Chest"] = "Flinch_Armored_Front_Chest",
 					["Gut"] = {"Flinch_Armored_Back_Gut"},
 					["Head"] = {"Flinch_Armored_Front_Chest"},
-					["Left_Arm"] = "Flinch_Armored_Rifle_Front_Left_Arm",
-					["Right_Arm"] = "Flinch_Armored_Rifle_Front_Right_Arm",
-					["Left_Leg"] = "Flinch_Armored_Rifle_Front_Left_Leg",
-					["Right_Leg"] = "Flinch_Armored_Rifle_Front_Right_Leg"
+					["Left_Arm"] = "Flinch_Armored_Front_Left_Arm",
+					["Right_Arm"] = "Flinch_Armored_Front_Right_Arm",
+					["Left_Leg"] = "Flinch_Armored_Front_Left_Leg",
+					["Right_Leg"] = "Flinch_Armored_Front_Right_Leg"
+				}
+				self.FlinchBackAnims = {
+					["Gut"] = "Flinch_Armored_Back_Gut"
 				}
 			end
 			if self.TransformedFrom then
@@ -1621,5 +1624,7 @@ function ENT:SetupAnimations()
 			end
 		end
 	end
-	self:DoAnimation(self.IdleCalmAnim)
+	if self:LookupSequence(self:TableRandom(self.IdleCalmAnim)) > 0 then
+		self:DoAnimation(self:TableRandom(self.IdleCalmAnim))
+	end
 end
