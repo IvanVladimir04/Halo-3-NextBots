@@ -358,7 +358,7 @@ $sequence "hover" {
 	fadeout 0.2
 	snap
 	fps 30
-	frame 0 59
+//	frame 0 59
 	loop
 }
 
@@ -370,7 +370,7 @@ $sequence "fly" {
 	fadeout 0.2
 	snap
 	fps 30
-	frame 0 59
+//	frame 0 59
 	loop
 }
 
@@ -383,7 +383,7 @@ $sequence "fly_crouch" {
 	snap
 	fps 30
 	loop
-	frame 0 59
+//	frame 0 59
 	hidden
 }
 
