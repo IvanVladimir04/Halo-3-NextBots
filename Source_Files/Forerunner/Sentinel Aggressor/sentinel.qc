@@ -3,7 +3,6 @@
 $modelname "halo_3/characters/forerunner/sentinel_aggressor.mdl"
 
 $scale	1.065
-$origin 0 0 0 -90
 $bodygroup "Body"
 {
 	studio "sentinel.smd"
