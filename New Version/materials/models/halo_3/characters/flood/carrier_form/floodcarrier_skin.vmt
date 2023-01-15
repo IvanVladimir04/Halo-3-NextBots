@@ -13,7 +13,7 @@
 	"$emissiveBlendTexture"    "models/halo_3/characters/flood/carrier_form/floodcarrier"
 	"$emissiveBlendBaseTexture"		"models/halo_3/characters/flood/carrier_form/floodcarrier_illum"
 	"$emissiveBlendFlowTexture"     "Particle/Particle_Glow_05"
-	"$emissiveBlendTint"	 "[2 3 1]"
+	"$emissiveBlendTint"	 "[1 2 0]"
 	"$emissiveBlendStrength" 50
 	"$emissiveBlendScrollVector"	 "[0 0.1]"	
 
@@ -32,16 +32,16 @@
 		"Sine"
 		{
 			"resultVar" "$detailblendfactor"
-			"sinemin" 0.15
-			"sinemax"  1.5
+			"sinemin" 0.05
+			"sinemax"  0.15
 			"sineperiod" 3
 			"timeoffset" 0.5
 		}
 		"Sine"
 		{
 			"resultVar" "$detailtint"
-			"sinemin"	  1
-			"sinemax"  2
+			"sinemin"	  0
+			"sinemax"  1
 			"sineperiod" 3.5
 			"timeoffset" 0.5
 		}
