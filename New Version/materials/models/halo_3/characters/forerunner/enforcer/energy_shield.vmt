@@ -1,20 +1,37 @@
 "VertexLitGeneric"
 {
 	"$basetexture" "models/halo_3/characters/forerunner/enforcer/energy_shield_mask"
-	"$selfillum"	"1"
+//	"$selfillum"	"1"
+	"$selfillumtint"	"[0 0.1 0.1]"
 	"$detail"				"models/halo_3/characters/forerunner/enforcer/energy_shield_offset"
 	"$detailblendmode"			"5"
-	"$detailblendfactor"			"1"
+	"$detailblendfactor"			"0.2"
 	"$detailscale"			"1.00"   	
+	"$detailtint"		"[0.45 0.5 0.85]"
 	"$additive"		"1"
 	"$nodecal"		"1"
 	"$nocull"			"1"
 	"$color2"			"[.1 .35 .5]"
 	$emissiveBlendEnabled 1
 	$emissiveBlendTexture     "models/halo_3/characters/forerunner/enforcer/energy_shield_offset"
-	$emissiveBlendBaseTexture	"models/halo_3/characters/forerunner/enforcer/energy_shield_mask"
-	$emissiveBlendFlowTexture     "particle/bendibeam"
-	$emissiveBlendTint "[1 0.5 0.8]"
-	$emissiveBlendStrength .05
-	$emissiveBlendScrollVector "[0.15 0.5]"
+	$emissiveBlendBaseTexture	"models/halo_3/characters/forerunner/enforcer/energy_shield_offset"
+	$emissiveBlendFlowTexture     "models/halo_3/shared/clouds_256"
+	$emissiveBlendTint "[0.5 1.5 5]"
+	$emissiveBlendStrength 1
+	$emissiveBlendScrollVector "[0.2 0.1]"
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar" "$detailblendfactor"
+			"sinemin" 0.35
+			"sinemax"  0.45
+			"sineperiod" 3
+			"timeoffset" 0.5
+		}
+
+		
+	
+	}
 }

@@ -4,17 +4,18 @@
 	"$bumpmap" "models/halo_3/characters/forerunner/enforcer/sentinel_enforcer_N"
 	"$selfillum"		"1"
 	"$selfillummask"		"models/halo_3/characters/forerunner/enforcer/sentinel_enforcer_E"
-	"$envmap"	"env_cubemap"
+	"$envmap"		"env_cubemap"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask"	1
-	"$envmaptint"		"[.03 .03 .04]"
+	"$envmaptint"		"[.3 .4 .5]"
 	"$nodecal"		"1"
 	"$nocull"			"1"
 	"$phong" 1
-	"$phongboost" 	1
-	"$phongexponent"		45
-	"$phongtint"	"[.45 .4 .65]"
+	"$phongboost" 		3
+	"$phongexponent"		15
+	"$phongtint"	"[.45 .5 .65]"
 	"$rimlight" 1
+	"$rimlightboost"		5
 	"$rimlightexponent"       11
 	"$phongfresnelranges" "[1.2 3 8]"
 }

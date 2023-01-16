@@ -4,6 +4,7 @@
 	"$bumpmap" "models/halo_3/characters/forerunner/enforcer/sentinel_enforcer_N"
 	"$selfillum"		"1"
 	"$selfillummask"		"models/halo_3/characters/forerunner/enforcer/sentinel_enforcer_E"
+	"$selfillumtint"		"[0 1.2 0.55]"
 	"$envmap"	"models/halo_3/shared/cyborg_reflection_armor.hdr"
 	"$lightwarptexture"			"models/halo_3/shared/lw_metaldull"
 	"$normalmapalphaenvmapmask"	1

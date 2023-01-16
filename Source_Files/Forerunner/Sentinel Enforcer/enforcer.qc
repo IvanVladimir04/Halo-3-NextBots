@@ -73,7 +73,7 @@ $bodygroup "Main Eye"
 }
 
 $surfaceprop "metalvehicle"
-
+$mostlyopaque
 $contents "solid"
 
 $illumposition 0 0 96
@@ -81,12 +81,16 @@ $illumposition 0 0 96
 $cdmaterials "\models\halo_3\characters\forerunner\enforcer\"
 
 $attachment "eye_flare" "eye_flare" 0 0 0 rotate 0 0 0
-$attachment "eye_light_R" "eyelight.001" 0 0 0 rotate 0 0 0
-$attachment "eye_light" "eyelight" 0 0 0 rotate 0 0 0
+$attachment "eye_light_low_L" "eyelight" 0 0 0 rotate 0 0 0
+$attachment "eye_light_mid_L" "eyelight.001" 0 0 0 rotate 0 0 0
+$attachment "eye_light_top_L" "eyelight.002" 0 0 0 rotate 0 0 0
+$attachment "eye_light_low_R" "eyelight.003" 0 0 0 rotate 0 0 0
+$attachment "eye_light_mid_R" "eyelight.004" 0 0 0 rotate 0 0 0
+$attachment "eye_light_top_R" "eyelight.005" 0 0 0 rotate 0 0 0
 $attachment "rocketpod_R" "r_rocket_target" 0 0 0 rotate -90 0 0
 $attachment "rocketpod_L" "l_rocket_target" 0 0 0 rotate -90 0 0
-$attachment "needler_L" "l_arm_target" 0 0 0 rotate 0 -120 0
-$attachment "needler_R" "r_arm_target" 0 0 0 rotate 0 120 0
+$attachment "needler_L" "needler_trigger.002" 0 0 0 rotate 0 0 0
+$attachment "needler_R" "needler_trigger.001" 0 0 0 rotate 0 0 0
 $attachment "l_gripper" "l_gripper" 0 0 0 rotate 0 0 0
 $attachment "r_gripper" "r_gripper" 0 0 0 rotate 0 0 0
 
