@@ -1369,14 +1369,14 @@ function ENT:SetupAnimations()
 				self.PushLeftAnim = "Melee_Smash_Combat_Left"
 				self.PushRightAnim = "Melee_Smash_Combat_Right"
 				self.RunCalmAnim = "Move_Combat_Any_Down"
-				self.WalkCalmAnim = "Walk_Combat_Any_Down"
 				self.WalkAnim = "Walk_Combat_Any_Up"
+				self.WalkCalmAnim = "Walk_Combat_Any_Down"
 				self.SurpriseAnim = "Surprised_Combat_Any_Any"
 				self.RunAnim = {"Move_Combat_Any_Up"}
 				self.IdleAnim = {"Combat_Any_Idle_Up_1","Combat_Any_Idle_Up_2"}
 				self.IdleCalmAnim = {"Combat_Any_Idle_Up_1","Combat_Any_Idle_Up_2"}
 				self.IdleProtected = "Protected_Any_Idle_Up"
-				self.WalkAnim = "Walk_Protected_Any_Up"
+				self.WalkProtectedAnim = "Walk_Protected_Any_Up"
 				self.MeleeTackleAnim = "Melee_Combat_Any_Any_Tackle"
 				self.MeleeAnim = {"Melee_Combat_Any_1","Melee_Combat_Any_2"}
 				self.MeleeBackAnim = {"Melee_Back_Combat_Any_Any"}

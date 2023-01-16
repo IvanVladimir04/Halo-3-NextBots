@@ -302,41 +302,42 @@ function ENT:GruntInitialize()
 	--print(self.Rank)
 end
 function ENT:JackalInitialize()
-	self.ClassesWeight = {
-		[1] = 1,
-		[2] = 5,
-		[3] = 10,
-		[4] = 25
-	}
-	self.DisableMelee = true
-	self.FleeOnHigherRankDead = true
-	self.SpawnWithWeaponDrawn = true
-	self.NoTransitionAnims = true
-	self.BloodDecal = "iv04_halo_3_blood_splat_jackal"
-	self.BloodParticle = "iv04_halo_3_blood_impact_jackal"
-	self.VehicleImpactSound = "iv04.h3_impact_veh_bip_jackal"
-	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_jackal"
-	self:SetBodygroup(1,self.Rank-1)
-	self.MoveSpeed = 30
-	self.MoveSpeedMultiplier = 4
-	self.VoiceType = "Jackal"
-	self.AllowGrenade = false
-	self:SetHitboxSet("default")
-	if self.IsSniper then
-		self.NoWarnAnim = true
-		self.DodgeChance = 0
-		self:SetBodygroup(2,1)
-		self:SetHitboxSet("sniper")
-		self.RemovableHeadBodygroups = true
-		self.RemovableBodygroup = 2
-		self.RemovableChange = 0
-		self.RemovableHeadPartModel = "models/halo_3/characters/covenant/jackal_helmet_sniper.mdl"
-	else
-		self.DamageThreshold = math.huge
-		self.JackalShield = 80*self.Rank
-		self.JackalShieldHitGroup = 20
-	end
-	self:SetCollisionBounds(Vector(20,20,80),Vector(-20,-20,0))
+    self.ClassesWeight = {
+        [1] = 1,
+        [2] = 5,
+        [3] = 10,
+        [4] = 25
+    }
+    self.DisableMelee = true
+    self.FleeOnHigherRankDead = true
+    self.SpawnWithWeaponDrawn = true
+    self.NoTransitionAnims = true
+    self.BloodDecal = "iv04_halo_3_blood_splat_jackal"
+    self.BloodParticle = "iv04_halo_3_blood_impact_jackal"
+    self.VehicleImpactSound = "iv04.h3_impact_veh_bip_jackal"
+    self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_jackal"
+    self:SetBodygroup(1,self.Rank-1)
+    self.MoveSpeed = 30
+    self.MoveSpeedMultiplier = 4
+    self.VoiceType = "Jackal"
+    self.AllowGrenade = false
+    self:SetHitboxSet("default")
+    if self.IsSniper then
+        ParticleEffectAttach( "iv04_halo_3_jackal_sniper_glow", PATTACH_POINT_FOLLOW, self, 6 )
+        self.NoWarnAnim = true
+        self.DodgeChance = 0
+        self:SetBodygroup(2,1)
+        self:SetHitboxSet("sniper")
+        self.RemovableHeadBodygroups = true
+        self.RemovableBodygroup = 2
+        self.RemovableChange = 0
+        self.RemovableHeadPartModel = "models/halo_3/characters/covenant/jackal_helmet_sniper.mdl"
+    else
+        self.DamageThreshold = math.huge
+        self.JackalShield = 80*self.Rank
+        self.JackalShieldHitGroup = 20
+    end
+    self:SetCollisionBounds(Vector(20,20,80),Vector(-20,-20,0))
 end
 function ENT:DroneInitialize()
 end
@@ -554,6 +555,7 @@ function ENT:FloodTankInitialize()
 	self.AttractAlliesRange = math.huge
 	self.WeakHitGroup = 1
 	self.CanReactToGrenades = false
+	self.InstaKillImmune = true
 end
 function ENT:FloodStalkerInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
@@ -1590,7 +1592,7 @@ function ENT:SpartanBehavior(ent,range)
 		local should, dif = self:ShouldFace(ent)
 		if should then
 			--self:Turn(dif,false,true)
-			coroutine.wait(0.2)
+			--coroutine.wait(0.2)
 			return
 		end
 		if !IsValid(ent) then return end
@@ -1626,10 +1628,17 @@ function ENT:SpartanBehavior(ent,range)
 		local should, dif = self:ShouldFace(ent)
 		if should then
 			--self:Turn(dif,false,true)
-			coroutine.wait(0.2)
+			--coroutine.wait(0.2)
 			return
 		end
 		if !IsValid(ent) then return end
+		if los and self.DistToTarget < 768^2 then
+			local p = self:GetPos()+self:GetAimVector()*-512
+			local rang = math.random(128,512)
+			local pos = self:FindNearbyPos(p,rang)
+			local wait = math.Rand(0.5,1)
+			self:StrafeNearby( pos, ent, true, false )
+		end
 		local wait = math.Rand(1,1.5)
 		coroutine.wait(wait)
 		
@@ -1749,6 +1758,21 @@ function ENT:MarineBehavior(ent,range)
 	end
 	self.HaltShoot = false
 	if !IsValid(ent) then return end
+		if self.IsFollowingPlayer then
+			if self.FollowingPlayer:InVehicle() then
+				local ent = self.FollowingPlayer:GetVehicle():GetParent()
+				if IsValid(ent) and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
+					self.SeenVehicles[ent] = true
+					self.CountedVehicles = self.CountedVehicles+1
+				end
+			end
+			local dist = self:GetRangeSquaredTo(self.FollowingPlayer)
+			if dist > 500^2 then
+				local goal = self.FollowingPlayer:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
+				local pos = self:FindNearbyPos(goal,200)
+				self:GoToPosition( (pos), self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )	
+			end
+		end
 	if self.AIType == "Static" then
 	
 		local should, dif = self:ShouldFace(ent)
@@ -1791,29 +1815,20 @@ function ENT:MarineBehavior(ent,range)
 		local should, dif = self:ShouldFace(ent)
 		if should then
 			--self:Turn(dif,false,true)
-			coroutine.wait(0.2)
 			return
 		end
 		if !IsValid(ent) then return end
+		if los and self.DistToTarget < 768^2 then
+			local p = self:GetPos()+self:GetAimVector()*-512
+			local rang = math.random(128,512)
+			local pos = self:FindNearbyPos(p,rang)
+			local wait = math.Rand(0.5,1)
+			self:StrafeNearby( pos, ent, true, false )
+		end
 		local wait = math.Rand(1,1.5)
 		coroutine.wait(wait)
 		
 	elseif self.AIType == "Offensive" then
-		if self.IsFollowingPlayer then
-			if self.FollowingPlayer:InVehicle() then
-				local ent = self.FollowingPlayer:GetVehicle():GetParent()
-				if IsValid(ent) and self.DriveThese[ent:GetModel()] and !self.SeenVehicles[ent] then
-					self.SeenVehicles[ent] = true
-					self.CountedVehicles = self.CountedVehicles+1
-				end
-			end
-			local dist = self:GetRangeSquaredTo(self.FollowingPlayer)
-			if dist > 500^2 then
-				local goal = self.FollowingPlayer:GetPos() + Vector( math.Rand( -1, 1 ), math.Rand( -1, 1 ), 0 ) * 300
-				local pos = self:FindNearbyPos(goal,200)
-				self:GoToPosition( (pos), self.RunAnim[math.random(1,#self.RunAnim)], self.MoveSpeed*self.MoveSpeedMultiplier )	
-			end
-		end
 			if self.NeedsToCover then
 				self.NeedsToCover = false
 				local tbl = self:FindCoverSpots(ent)
@@ -1950,7 +1965,7 @@ function ENT:EliteBehavior(ent,range)
 		local should, dif = self:ShouldFace(ent)
 		if should then
 			--self:Turn(dif,false,true)
-			coroutine.wait(0.2)
+			--coroutine.wait(0.2)
 			return
 		end
 		if !IsValid(ent) then return end
@@ -1987,10 +2002,17 @@ function ENT:EliteBehavior(ent,range)
 		local should, dif = self:ShouldFace(ent)
 		if should then
 			--self:Turn(dif,false,true)
-			coroutine.wait(0.2)
+			--coroutine.wait(0.2)
 			return
 		end
 		if !IsValid(ent) then return end
+		if los and self.DistToTarget < 768^2 then
+			local p = self:GetPos()+self:GetAimVector()*-512
+			local rang = math.random(128,512)
+			local pos = self:FindNearbyPos(p,rang)
+			local wait = math.Rand(0.5,1)
+			self:StrafeNearby( pos, ent, true, false )
+		end
 		local wait = math.Rand(1,1.5)
 		coroutine.wait(wait)
 		
@@ -2591,10 +2613,9 @@ function ENT:FloodTankBehavior(ent,range)
 			local pos = p
 			local wait = math.Rand(0.5,1)
 			local anim = self:TableRandom(self.WalkAnim)
-			local speed = self.MoveSpeed
-			if ( range > 512^2 ) then
-				local anim = self:TableRandom(self.RunAnim)
-				local speed = self.MoveSpeed*self.MoveSpeedMultiplier
+			local speed = self.MoveSpeed*self.MoveSpeedMultiplier
+			if self.RecentlyInjured then
+				anim = self:TableRandom(self.WalkProtectedAnim)
 			end
 			self:GoToPosition( pos, anim, speed, self.ChaseEnt )
 		else

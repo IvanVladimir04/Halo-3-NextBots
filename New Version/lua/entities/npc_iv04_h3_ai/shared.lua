@@ -80,6 +80,8 @@ ENT.CurrentFiringGestureAct = 0
 
 ENT.JumpHeight = 100
 
+ENT.InjuredDelay = 10 -- Time before a special action regarding being injured can happen again
+
 ENT.ShootCorpseFilter = { -- Stuff that could have severe consequences if shot at a corpse
     ["astw2_haloreach_concussion_rifle"] = true,
     ["astw2_haloreach_grenade_launcher_falcon"] = true,
@@ -2479,6 +2481,12 @@ function ENT:OnInjured(dmg)
 	if self.ImmuneDMGs[dmg:GetDamageType()] then dmg:ScaleDamage(0) end
 	if self.DamageResistances[dmg:GetDamageType()] then dmg:ScaleDamage(self.DamageResistances[dmg:GetDamageType()]) end
 	if dmg:GetDamage() > 0 then
+		self.RecentlyInjured = true
+		timer.Simple( self.InjuredDelay, function()
+			if IsValid(self) then
+				self.RecentlyInjured = false
+			end
+		end )
 		self.AccumulatedBleedDamage = self.AccumulatedBleedDamage+dmg:GetDamage()
 		--print(self.AccumulatedBleedDamage)
 		if self.AccumulatedBleedDamage > self.BleedThreshold then
@@ -3932,7 +3940,20 @@ function ENT:BodyUpdate()
 		local y = (goal-self:GetPos()):Angle().y
 		local m_y = math.AngleDifference(self:GetAngles().y,y)
 		local cury = self:GetPoseParameter("move_yaw")
-		local appr = math.ApproachAngle( cury, m_y, 1 )
+		local appr = cury
+		if math.abs(math.abs(m_y)-math.abs(cury)) > 10 then
+			if m_y < cury then 
+				appr = appr-4 
+			else 
+				appr = appr+4 
+			end
+			if appr < -180 then 
+				appr = appr+360 
+			elseif appr > 180 then 
+				appr = appr-360
+			end
+		end
+		--print(m_y,y,cury,appr)
 		self:SetPoseParameter("move_yaw",appr)
 		self:SetPoseParameter("walk_yaw",appr)
 	else
@@ -3947,14 +3968,19 @@ function ENT:BodyUpdate()
 	--print( (IsValid(self.Enemy)))
 	--print( !self.NotLookingAtEnemy )
 	--print( self.HasLOSToTarget )
-	if ( (IsValid(self.Enemy) and (!self.NotLookingAtEnemy or self.HasLOSToTarget) )or IsValid(self.LookTarget) or self.SpecificGoal ) then
+	if ( (IsValid(self.Enemy) and (!self.NotLookingAtEnemy or self.HasLOSToTarget) )or ((IsValid(self.LookTarget) or self.SpecificGoal)) ) then
 		goal = self.SpecificGoal
 		if IsValid(self.Enemy) and (!self.NotLookingAtEnemy or self.HasLOSToTarget) then
 			goal = self.Enemy:WorldSpaceCenter()
-		elseif IsValid(self.LookTarget) then
-			goal = self.LookTarget:WorldSpaceCenter()+(self.LookTarget:OBBMaxs()*0.3)
-		elseif isentity(self.SpecificGoal) and IsValid(self.SpecificGoal) then
-			goal = self.SpecificGoal:WorldSpaceCenter()
+		else
+			if !self.loco:GetVelocity():IsZero() then
+				goal = self:WorldSpaceCenter()+self.loco:GetVelocity()*100
+				--print("This should be going according to plan")
+			elseif IsValid(self.LookTarget) then
+				goal = self.LookTarget:WorldSpaceCenter()+(self.LookTarget:OBBMaxs()*0.3)
+			elseif isentity(self.SpecificGoal) and IsValid(self.SpecificGoal) then
+				goal = self.SpecificGoal:WorldSpaceCenter()
+			end
 		end
 		local an = (goal-(self:WorldSpaceCenter()+self:GetUp()*30)):Angle()
 		y = an.y
@@ -3962,23 +3988,23 @@ function ENT:BodyUpdate()
 		--print(dify)
 		local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
 		if ymins or ymaxs then
-		if math.abs(dify) > 2 then
-			if dify > 0 then
-				di = -2
-				--print(di,self.YPP,ymins)
-				if self.YPP+di <= (ymins*0.25) then
-					self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
-					di = 0
-				end
-			else
-				di = 2
-				--print(di)
-				if self.YPP+di >= (ymaxs*0.25) then
-					self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
-					di = 0
+			if math.abs(dify) > 2 then
+				if dify > 0 then
+					di = -2
+					--print(di,self.YPP,ymins)
+					if self.YPP+di <= (ymins*0.25) then
+						self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
+						di = 0
+					end
+				else
+					di = 2
+					--print(di)
+					if self.YPP+di >= (ymaxs*0.25) then
+						self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
+						di = 0
+					end
 				end
 			end
-		end
 		end
 		p = an.p
 		local difp = math.AngleDifference(self:GetAngles().p+self.PPP,p)
