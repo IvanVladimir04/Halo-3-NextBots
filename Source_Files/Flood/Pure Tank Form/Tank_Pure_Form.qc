@@ -25,6 +25,16 @@ $cdmaterials "\models\halo_3\characters\flood\tank_pure_form\"
 $attachment "mouth" "head" 5.00 -8.00 0.00 rotate -0 -60 90
 $attachment "eyes" "head" 5.00 -12.00 0.00 rotate -0 -90 90
 
+$attachment "trans_muffin01" "l_klavicle02" -2.68 -5.9 -3.46 rotate 42.3 -88.6 34.6
+$attachment "trans_muffin02" "l_klavicle02" -0.5 -5.3 8.4 rotate -28.7 -58 70.4
+$attachment "trans_muffin03" "r_klavicle02" 5.73 2.368 7.9 rotate -110 -83.7 10.3
+$attachment "trans_muffin04" "r_klavicle02" -1.62 1.5 -8.52 rotate 66.7 82.8 -49.7
+$attachment "trans_muffin05" "spine1" -9.78 -2.8 -10.86 rotate 63.8 70.1 66.8
+$attachment "trans_muffin06" "spine1" -5.612 6.34 2.64 rotate -46.3 21.8 83.7
+$attachment "trans_muffin07" "pelvis" -5.8 -0.92 -10.76 rotate 34 -92.3 74.5
+$attachment "trans_muffin08" "pelvis" -4.1 6.64 3.5 rotate -34.1 87.7 -74.4
+$attachment "trans_muffin09" "pelvis" -3.31 -2 4.5 rotate 3.16 -84.2 77.2
+$attachment "trans_muffin10" "pelvis" -5.63 4.38 -4.93 rotate 28 103 -75.5
 
 $cbox 0 0 0 0 0 0
 

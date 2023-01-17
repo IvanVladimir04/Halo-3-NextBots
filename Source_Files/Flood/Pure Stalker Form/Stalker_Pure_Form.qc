@@ -31,6 +31,21 @@ $cdmaterials "\models\halo_3\characters\flood\stalker_pure_form\"
 $attachment "eyes" "head" 14.00 0.00 0.00 rotate -0 0 0
 $attachment "head" "head" 0 0 0 rotate 0 0 0
 
+$attachment "trans_muffin01" "l_leg" -0.79 3.5 -0.4 rotate 8.27 121 -104
+$attachment "trans_muffin02" "l_leg" 1.71 -4.74 0.22 rotate 7.98 -116 -75.4
+$attachment "trans_muffin03" "r_leg" 1.98 -4.74 0.85 rotate -4.64 -117 -100
+$attachment "trans_muffin04" "r_leg" -0.53 -3.5 1.47 rotate -6.23 121 -80.8
+$attachment "trans_muffin05" "tail01" 10.7 0.6 4.71 rotate -50.9 17.6 -149
+$attachment "trans_muffin06" "tail01" 9.26 7.27 -4.13 rotate 149 -91 18.6
+$attachment "trans_muffin09" "tail02" 16 4.11 -1.4 rotate -3.02 2.18 14
+$attachment "trans_muffin10" "tail02" 5.65 -5.98 -0.8 rotate 36.3 -93.9 4.09
+
+$attachment "trans_muffin_back01" "tail02" 5.38 5 -9.78 rotate -139 -93.5 -4.37
+$attachment "trans_muffin_back02" "tail02" 5.4 -3.75 -11.46 rotate -3.6 -45.5 -179
+$attachment "trans_muffin_back03" "tail02" 12 1 -11.89 rotate 176 -39.8 -0.44
+$attachment "trans_muffin_back04" "tail03" 6.95 -4.16 -9.4 rotate -29.6 -17.3 147
+$attachment "trans_muffin_back05" "tail03" 7.4 3.94 -9.2 rotate -36.4 70.7 147
+$attachment "trans_muffin_back06" "tail03" 13.68 -0.44 -6.44 rotate -36.4 70.7 147
 
 $cbox 0 0 0 0 0 0
 

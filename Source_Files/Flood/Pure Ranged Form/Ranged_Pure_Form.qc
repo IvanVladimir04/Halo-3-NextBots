@@ -36,6 +36,23 @@ $attachment "r_spikes_top" "r_spikes_top" 0 0 0 rotate 0 0 0
 $attachment "head" "head" 0 0 0 rotate 0 0 0
 $attachment "tail" "head" 0 0 0 rotate 0 0 0
 
+$attachment "trans_muffin01" "tail_base" 10.41 8.62 -13.3 rotate 23.9 59 -51.9
+$attachment "trans_muffin02" "tail_base" -3.35 -2.05 -13.3 rotate 123 -18.9 126
+$attachment "trans_muffin03" "tail_base" -4.18 -5.07 10.72 rotate -14.8 163 -50.6
+$attachment "trans_muffin04" "tail_base" 9.82 6.46 13.58 rotate 25.9 12.9 -23.7
+$attachment "trans_muffin05" "tail_base" 11.91 -11.32 9.8 rotate -20.8 -1 83.9
+$attachment "trans_muffin06" "tail_base" 13.29 -11.46 -9.28 rotate 17.6 30.8 95.1
+$attachment "trans_muffin07" "tail_base" 13.69 -13 4.78 rotate -14.2 32.2 96.5
+$attachment "trans_muffin08" "tail_base" 3.34 9.4 4.78 rotate 7.77 177 76.5
+$attachment "trans_muffin09" "tail_base" -0.53 9.76 -6.5 rotate -160 -23.7 -67.8
+
+$attachment "trans_muffin_back01" "tail03" 4.79 5.97 0.99 rotate -133 6.78 -121
+$attachment "trans_muffin_back02" "tail02" 5.71 5.62 3.66 rotate -55.3 -119 24.9
+$attachment "trans_muffin_back03" "tail02" 7.65 5.62 -2.85 rotate 152 7.48 -60
+$attachment "trans_muffin_back04" "tail04" 3.36 4.34 4.61 rotate 1.76 159 57.9
+$attachment "trans_muffin_back05" "tail04" 5.9 5.45 -2.7 rotate 120 12.9 -76
+$attachment "trans_muffin_back06" "tail03" 5.3 5 -4.78 rotate 131 76.4 -7.85
+
 
 $cbox 0 0 0 0 0 0
 

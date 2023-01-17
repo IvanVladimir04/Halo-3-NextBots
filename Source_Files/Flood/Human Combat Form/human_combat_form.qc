@@ -52,6 +52,33 @@ $attachment "head" "head" 0 0 0 rotate 0 0 0
 $attachment "r_upperarm" "r_upperarm" 0 0 0 rotate 0 0 0
 $attachment "l_upperarm" "l_upperarm" 0 0 0 rotate 0 0 0
 
+$attachment "fx_left_arm_crate" "l_upperarm" 8.89 0.09 0.51 rotate -2.84 -88.7 50.8
+$attachment "fx_right_arm_crate" "r_upperarm" 4.23 0.81 -0.89 rotate 24.9 -84 146
+$attachment "fx_l_leg_garbage" "l_thigh" 4.67 -1.94 -0.87 rotate -9.29 85.9 -93.5
+$attachment "fx_r_leg_garbage" "r_thigh" 8.8 -2.19 0.3 rotate 9.29 85.9 -86.5
+$attachment "fx_chest_crate" "spine1" 1.89 6.88 -1.72 rotate 0 -1.55 0
+
+$attachment "trans_muffin_l_arm01" "l_upperarm" 1.89 0.19 5.49 rotate 15.8 9.14 6.13
+$attachment "trans_muffin_l_arm02" "l_upperarm" 2.01 -1.4 1.95 rotate 11.7 -21.5 78.7
+$attachment "trans_muffin_l_arm03" "l_upperarm" 6.06 3.15 1.85 rotate 35.5 3.23 -106
+$attachment "trans_muffin_l_arm04" "l_upperarm" 8.73 2.47 1.77 rotate 27.7 10.6 -52.2
+
+$attachment "trans_muffin_r_arm01" "r_upperarm" 0.28 1.74 -2.52 rotate 154 36.7 65
+$attachment "trans_muffin_r_arm02" "r_upperarm" 5.48 0.25 -3.07 rotate 142 27.2 99.9
+
+$attachment "trans_muffin_l_thigh01" "l_thigh" 2.26 1.06 -2.97 rotate 6.39 -3.01 -171
+$attachment "trans_muffin_l_thigh02" "l_thigh" 5.88 0.44 -3.24 rotate 7.35 17.9 155
+
+$attachment "trans_muffin_torso_back01" "spine1" 6.92 -4.42 -6.45 rotate 118 -57.9 25.3
+$attachment "trans_muffin_torso_back02" "spine1" 6.94 -5.68 -2.52 rotate -176 -10.6 65.3
+$attachment "trans_muffin_torso_back03" "spine1" 10.32 -6.17 -0.84 rotate -40.8 0 102
+$attachment "trans_muffin_torso_back04" "l_clavicle" 4.49 5 3.32 rotate -95.3 -96.5 -39.9
+$attachment "trans_muffin_torso_back05" "spine1" 5.32 -6.06 4.73 rotate 68.6 -61.3 19.8
+$attachment "trans_muffin_torso_back06" "spine1" 6.87 -6.21 2.5 rotate -163 -2.93 90.7
+$attachment "trans_muffin_torso_back07" "spine1" -2.03 -3.13 -3.21 rotate 178 8.36 40.1
+$attachment "trans_muffin_torso_back08" "spine1" -0.76 -4.17 0.9 rotate -163 -8.14 92.2
+$attachment "trans_muffin_torso_back09" "spine1" -3.55 -3.53 -0.21 rotate 71.7 -2.93 90.7
+
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861
@@ -212,3 +239,82 @@ $hbox 5 "r_forearm"	    -3.05   -3.20   -2.65    10.34    2.76    2.40
 $hbox 5 "r_hand"	    -1.11   -1.22   -1.95     3.72    1.59    2.19
 $hbox 5 "r_index1"	    -0.05   -0.87   -0.48     3.57    1.16    0.55
 $hbox 5 "r_ring1"	    -0.38   -0.57   -1.67     3.36    2.45    1.07
+
+$hboxset "missing_arm_left"
+
+$hbox 3 "pelvis"	    -8.00   -5.91   -7.71     6.21    6.32    9.06
+$hbox 6 "l_thigh"	     0.00   -4.91   -4.58    20.76    5.12    4.97
+$hbox 6 "l_calf"	    -3.49   -3.95   -3.12    17.67    4.85    3.78
+$hbox 6 "l_foot"	    -1.11   -3.69   -2.30     5.39    8.70    2.61
+$hbox 7 "r_thigh"	    -0.09   -4.90   -4.89    20.76    5.20    3.48
+$hbox 7 "r_calf"	    -3.48   -3.91   -3.85    17.67    4.82    3.30
+$hbox 7 "r_foot"	    -1.11   -3.67   -2.51     5.39    8.74    2.39
+$hbox 2 "spine"	     0.00   -5.45   -7.50    12.46   10.87    4.79
+$hbox 1 "spine1"	    -4.59   -8.18   -9.26    18.59    7.31   12.65
+$hbox 9 "head"	    -7.93   -1.98   -4.83     6.18    7.88    5.38
+$hbox 4 "l_upperarm"	    -3.35   -3.87   -3.01    14.53    5.73    7.88
+$hbox 5 "r_clavicle"	     0.00   -4.50   -5.46     8.90    0.00    0.00
+$hbox 5 "r_upperarm"	    -4.49   -4.22   -6.18    12.28    5.33    2.88
+$hbox 9 "corpse_head"	    -5.57   -8.58   -4.14     4.66    3.00    2.63
+$hbox 1 "tendril1"	    -4.78   -2.06   -3.83     2.60   18.33    3.63
+$hbox 1 "tendril2"	    -4.73   -3.48   -3.51     3.11   18.48    4.37
+$hbox 1 "tendril3"	    -4.71    0.00   -4.47     3.11   18.47    3.41
+$hbox 2 "l_shoulder_mass"	    -3.25   -6.53   -5.18     5.92    7.22    8.60
+$hbox 9 "corpse_jaw"	    -0.38   -2.07   -2.22     2.95    3.11    2.35
+$hbox 5 "r_forearm"	    -3.05   -3.20   -2.65    10.34    2.76    2.40
+$hbox 5 "r_hand"	    -1.11   -1.22   -1.95     3.72    1.59    2.19
+$hbox 5 "r_index1"	    -0.05   -0.87   -0.48     3.57    1.16    0.55
+$hbox 5 "r_ring1"	    -0.38   -0.57   -1.67     3.36    2.45    1.07
+
+$hboxset "missing_arm_right"
+
+$hbox 3 "pelvis"	    -8.00   -5.91   -7.71     6.21    6.32    9.06
+$hbox 6 "l_thigh"	     0.00   -4.91   -4.58    20.76    5.12    4.97
+$hbox 6 "l_calf"	    -3.49   -3.95   -3.12    17.67    4.85    3.78
+$hbox 6 "l_foot"	    -1.11   -3.69   -2.30     5.39    8.70    2.61
+$hbox 7 "r_thigh"	    -0.09   -4.90   -4.89    20.76    5.20    3.48
+$hbox 7 "r_calf"	    -3.48   -3.91   -3.85    17.67    4.82    3.30
+$hbox 7 "r_foot"	    -1.11   -3.67   -2.51     5.39    8.74    2.39
+$hbox 2 "spine"	     0.00   -5.45   -7.50    12.46   10.87    4.79
+$hbox 1 "spine1"	    -4.59   -8.18   -9.26    18.59    7.31   12.65
+$hbox 9 "head"	    -7.93   -1.98   -4.83     6.18    7.88    5.38
+$hbox 4 "l_upperarm"	    -3.35   -3.87   -3.01    14.53    5.73    7.88
+$hbox 5 "r_clavicle"	     0.00   -4.50   -5.46     8.90    0.00    0.00
+$hbox 5 "r_upperarm"	    -4.49   -4.22   -6.18    12.28    5.33    2.88
+$hbox 9 "corpse_head"	    -5.57   -8.58   -4.14     4.66    3.00    2.63
+$hbox 1 "tendril1"	    -4.78   -2.06   -3.83     2.60   18.33    3.63
+$hbox 1 "tendril2"	    -4.73   -3.48   -3.51     3.11   18.48    4.37
+$hbox 1 "tendril3"	    -4.71    0.00   -4.47     3.11   18.47    3.41
+$hbox 2 "l_shoulder_mass"	    -3.25   -6.53   -5.18     5.92    7.22    8.60
+$hbox 9 "corpse_jaw"	    -0.38   -2.07   -2.22     2.95    3.11    2.35
+$hbox 4 "l_forearm"	    -3.46   -4.59   -3.01    11.30    3.89    5.14
+$hbox 4 "l_claw3_01"	    -1.01   -1.11   -1.33     6.65    1.16    1.14
+$hbox 4 "l_claw3_02"	     0.00   -0.60   -1.27     9.02    0.88    0.69
+$hbox 4 "l_claw_base"	    -1.22   -2.49   -2.02     9.13    4.92    4.22
+$hbox 4 "l_claw1_01"	    -0.16   -1.72   -4.28    17.57    1.85    2.53
+$hbox 4 "l_claw1_02"	    -1.92   -1.50   -1.00    18.46    1.39    3.69
+$hbox 4 "l_claw2_01"	    -0.28   -1.41   -3.37    13.85    1.44    1.65
+$hbox 4 "l_claw2_02"	    -1.40   -1.22   -0.81    14.86    1.22    2.92
+$hbox 4 "l_hand"	    -0.34   -1.12   -2.49     6.85    3.74    2.19
+
+$hboxset "missing_arms"
+
+$hbox 3 "pelvis"	    -8.00   -5.91   -7.71     6.21    6.32    9.06
+$hbox 6 "l_thigh"	     0.00   -4.91   -4.58    20.76    5.12    4.97
+$hbox 6 "l_calf"	    -3.49   -3.95   -3.12    17.67    4.85    3.78
+$hbox 6 "l_foot"	    -1.11   -3.69   -2.30     5.39    8.70    2.61
+$hbox 7 "r_thigh"	    -0.09   -4.90   -4.89    20.76    5.20    3.48
+$hbox 7 "r_calf"	    -3.48   -3.91   -3.85    17.67    4.82    3.30
+$hbox 7 "r_foot"	    -1.11   -3.67   -2.51     5.39    8.74    2.39
+$hbox 2 "spine"	     0.00   -5.45   -7.50    12.46   10.87    4.79
+$hbox 1 "spine1"	    -4.59   -8.18   -9.26    18.59    7.31   12.65
+$hbox 9 "head"	    -7.93   -1.98   -4.83     6.18    7.88    5.38
+$hbox 4 "l_upperarm"	    -3.35   -3.87   -3.01    14.53    5.73    7.88
+$hbox 5 "r_clavicle"	     0.00   -4.50   -5.46     8.90    0.00    0.00
+$hbox 5 "r_upperarm"	    -4.49   -4.22   -6.18    12.28    5.33    2.88
+$hbox 9 "corpse_head"	    -5.57   -8.58   -4.14     4.66    3.00    2.63
+$hbox 1 "tendril1"	    -4.78   -2.06   -3.83     2.60   18.33    3.63
+$hbox 1 "tendril2"	    -4.73   -3.48   -3.51     3.11   18.48    4.37
+$hbox 1 "tendril3"	    -4.71    0.00   -4.47     3.11   18.47    3.41
+$hbox 2 "l_shoulder_mass"	    -3.25   -6.53   -5.18     5.92    7.22    8.60
+$hbox 9 "corpse_jaw"	    -0.38   -2.07   -2.22     2.95    3.11    2.35
