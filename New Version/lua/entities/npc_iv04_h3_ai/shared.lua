@@ -1102,7 +1102,7 @@ function ENT:OnTraceAttack( info, dir, trace )
 	if self:Health() - info:GetDamage() <= 0 then self.DeathHitGroup = trace.HitGroup return end
 	if self.AnimBusy then return end
 	local hg = trace.HitGroup
-	print(hg)
+	--print(hg)
 	if (self.WeakHitGroup and hg != self.WeakHitGroup) or (self.JackalShield and self.JackalShield > 0 and hg == self.JackalShieldHitGroup) then
 		if self.JackalShield then
 			self.JackalShield = self.JackalShield-info:GetDamage()
