@@ -1102,7 +1102,7 @@ function ENT:OnTraceAttack( info, dir, trace )
 	if self:Health() - info:GetDamage() <= 0 then self.DeathHitGroup = trace.HitGroup return end
 	if self.AnimBusy then return end
 	local hg = trace.HitGroup
-	--print(hg)
+	print(hg)
 	if (self.WeakHitGroup and hg != self.WeakHitGroup) or (self.JackalShield and self.JackalShield > 0 and hg == self.JackalShieldHitGroup) then
 		if self.JackalShield then
 			self.JackalShield = self.JackalShield-info:GetDamage()
@@ -1228,6 +1228,7 @@ function ENT:OnTraceAttack( info, dir, trace )
 				end )
 				self.FloodGibModels[hg] = false
 				if hg == self.WeaponHitGroup then
+					self.LostWeaponArm = true
 					if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
 						local wep = ents.Create(self.Weapon:GetClass())
 						wep:SetPos(self.Weapon:GetPos())
@@ -1240,10 +1241,20 @@ function ENT:OnTraceAttack( info, dir, trace )
 							end
 						end )
 					end
+					if self.DisableMelee then
+						self:SetHitboxSet("missing_arms")
+					else
+						self:SetHitboxSet("missing_arm_right")
+					end
 					self.PossibleWeapons = nil
 				elseif hg == self.MeleeHitGroup then
 					--print("no melee")
 					self.DisableMelee = true
+					if self.LostWeaponArm then
+						self:SetHitboxSet("missing_arms")
+					else
+						self:SetHitboxSet("missing_arm_left")
+					end
 				end
 			end
 		end
