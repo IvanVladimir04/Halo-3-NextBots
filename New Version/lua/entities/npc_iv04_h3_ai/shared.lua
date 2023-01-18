@@ -674,54 +674,22 @@ ENT.NextUpdateT = CurTime()
 ENT.UpdateDelay = 1
 
 function ENT:OnIgnite()
-		if !self.SpokeFire then
+	if !self.SpokeFire then
 		timer.Simple( math.random(0.5,1), function()
-		if IsValid(self) then self.SpokeFire = false end
+			if IsValid(self) then self.SpokeFire = false end
 		end )
 		-- self.NVulTime = CurTime()+3
 		if self.NextUpdateT < CurTime() then
-		self.NextUpdateT = CurTime()+3
+			self.NextUpdateT = CurTime()+3
 			self:Speak("panic_onfire")
-		self.SpokeFire = true
-	end
+			self.SpokeFire = true
+		end
 	end
 end
 
-function ENT:OnContact( ent ) -- When we touch someBODY
-	if ent == game.GetWorld() then return self:OnTouchWorld(ent) end
-	if self.IsInVehicle then return end
-	--print(ent, ent:GetOwner())
-	if ent:IsVehicle() or ent.LFS or ent.GroundVehicle then
-	if self.NextUpdateT < CurTime() then
-	self.NextUpdateT = CurTime()+self.UpdateDelay
-	local d = DamageInfo()
-			d:SetDamage( ent:GetVelocity():Length() )
-			d:SetAttacker( ent )
-			d:SetInflictor( ent )
-			d:SetDamageType( DMG_VEHICLE )
-			d:SetDamageForce(ent:GetVelocity())
-			d:SetDamagePosition( self:NearestPoint( self:WorldSpaceCenter() ) )
-			self:TakeDamageInfo(d)
-			sound.Play(self.VehicleImpactSound, self:GetPos(), 100, 100)
-	end
-	elseif ent:GetClass() == "func_physbox" then
-		local phys = ent:GetPhysicsObject()
-			if IsValid(phys) then
-				local dir = (ent:GetPos()-self:GetPos()):GetNormalized()
-				phys:ApplyForceOffset( dir*30000, ent:NearestPoint(self:GetPos()) )
-			end
-	end
-	if !self:CollidedWith(ent) then 
-		self.CollidedEntities[ent] = true
-		--print(ent,ent:GetInternalVariable( "parentname" ),ent:GetName())
-		--PrintTable(ent:GetKeyValues())
-		--PrintTable(ents.FindByName( "yyy_level_2_db_2a" ))
-		timer.Simple( 1, function() if IsValid(self) and IsValid(ent) then self.CollidedEntities[ent] = nil end end )
-		if self.FlyingDead then self.AlternateLanded = true return end 
-		if !self.loco:IsOnGround() or self.IsFlyingNextBot then return end
-		if self.AITemplate == "FLOOD_INFECTION" and !self.Latched and self.Leaping and ent == self.Enemy and !ent.UnderLatchAttack then
-				self.Leaping = false
-				ent.UnderLatchAttack = true
+function ENT:InfectionFormAttack(ent)
+	self.Leaping = false
+	ent.UnderLatchAttack = true
 				if ( (ent.IsVJBaseSNPC == true or ent.CPTBase_NPC == true or ent.IsSLVBaseNPC == true or ent:GetNWBool( "bZelusSNPC" ) == true) or (ent:IsNPC() && ent:GetClass() != "npc_bullseye" && ent:Health() > 0 )  or ((ent:IsNextBot()) and ent != self ) ) and !IsValid(ent:GetEnemy()) and (!ent.Shield or ent.Shield <= 0) and ent:Health() <= 150 then
 					local pos = ent:GetAttachment(1).Pos
 					self:SetOwner(ent)
@@ -733,6 +701,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 					dmg:SetDamageType( DMG_SLASH )
 					dmg:SetDamagePosition( pos )
 					ent:DispatchTraceAttack( dmg, {HitGroup = 1, Entity = ent,Hit = true, HitPos = pos}, -ent:GetForward() )
+					self:Speak("infector_bite")
 					self:SetPos(pos)
 				else
 					self:SetOwner(ent)
@@ -844,6 +813,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 						end )
 						self:AddToCoroutine(func1,true)
 					else
+						if ent:IsPlayer() and ent:Armor() >1 then self.Latched = false ent.UnderLatchAttack = false self:TakeDamage(self:Health(),ent,ent) ent:TakeDamage(5,self,self) return end
 						timer.Simple( 3, function()
 							if IsValid(self) then
 								self.Latched = false
@@ -856,6 +826,7 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 						for i = 1, 5 do
 							timer.Simple( 0.2*i, function()
 								if IsValid(self) and IsValid(self:GetOwner()) then
+									self:Speak("infector_bite")
 									self:GetOwner():TakeDamage( 2, self, self )
 								end
 							end )
@@ -880,6 +851,44 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 					end
 				end
 			return
+end
+
+function ENT:OnContact( ent ) -- When we touch someBODY
+	if ent == game.GetWorld() then return self:OnTouchWorld(ent) end
+	if self.IsInVehicle then return end
+	--print(ent, ent:GetOwner())
+	if ent:IsVehicle() or ent.LFS or ent.GroundVehicle then
+	if self.NextUpdateT < CurTime() then
+	self.NextUpdateT = CurTime()+self.UpdateDelay
+	local d = DamageInfo()
+			d:SetDamage( ent:GetVelocity():Length() )
+			d:SetAttacker( ent )
+			d:SetInflictor( ent )
+			d:SetDamageType( DMG_VEHICLE )
+			d:SetDamageForce(ent:GetVelocity())
+			d:SetDamagePosition( self:NearestPoint( self:WorldSpaceCenter() ) )
+			self:TakeDamageInfo(d)
+			sound.Play(self.VehicleImpactSound, self:GetPos(), 100, 100)
+	end
+	elseif ent:GetClass() == "func_physbox" then
+		local phys = ent:GetPhysicsObject()
+			if IsValid(phys) then
+				local dir = (ent:GetPos()-self:GetPos()):GetNormalized()
+				phys:ApplyForceOffset( dir*30000, ent:NearestPoint(self:GetPos()) )
+			end
+	end
+	if !self:CollidedWith(ent) then 
+		self.CollidedEntities[ent] = true
+		--print(ent,ent:GetInternalVariable( "parentname" ),ent:GetName())
+		--PrintTable(ent:GetKeyValues())
+		--PrintTable(ents.FindByName( "yyy_level_2_db_2a" ))
+		timer.Simple( 1, function() if IsValid(self) and IsValid(ent) then self.CollidedEntities[ent] = nil end end )
+		if self.FlyingDead then self.AlternateLanded = true return end 
+		if (!self.loco:IsOnGround() and !(!self.Latched and self.Leaping)) or self.IsFlyingNextBot then return end
+		--print("die")
+		if self.AITemplate == "FLOOD_INFECTION" and (!self.Latched and self.Leaping) and ent == self.Enemy and !ent.UnderLatchAttack then
+				--print("I said die")
+				self:InfectionFormAttack(ent)
 		end
 		if ent:GetClass() == "prop_dynamic" then
 			local name = ent:GetInternalVariable( "parentname" )
@@ -1192,7 +1201,8 @@ function ENT:OnTraceAttack( info, dir, trace )
 	end
 	--print(hg)
 	if self.FloodGibs then
-		if self.FloodGibGroups[hg] then
+		--print(self.HasArmor,self.Shield)
+		if self.FloodGibGroups[hg] and !(self.HasArmor and self.Shield > 0)  then
 			--print(hg)
 			local num = self.FloodGibGroups[hg]
 			--print(num)
@@ -1800,6 +1810,7 @@ function ENT:TransformTo(clas)
 	local class = self.TransformToClasses[clas]
 	if class then
 		self:Speak(self.TransformToSounds[clas])
+		ParticleEffect( "iv04_halo_3_flood_gib_medium", self:GetPos(), self:GetAngles() )
 		self:PlaySequenceAndWait(self.TransformToAnims[clas])
 		local new = ents.Create(class)
 		new:SetPos(self:GetPos())
@@ -2350,13 +2361,17 @@ function ENT:ShieldArcLoop()
 		--if IsValid(self) then
 			--if self.Shield <= 0 then
 				--self:SetNWBool("SPShield",false)
-				ParticleEffectAttach(self.ShieldDepleteArcsParticle,PATTACH_POINT_FOLLOW,self,self:LookupAttachment("shield_fx") or 1)
+				ParticleEffectAttach(self.ShieldDepleteArcsParticle,PATTACH_POINT_FOLLOW,self,self:GetShieldParticleAttachment())
 				--self:ShieldArcLoop()
 			--else
 			--	self:StopParticles()
 			---end
 		--end
 	--end )
+end
+
+function ENT:GetShieldParticleAttachment()
+	return self.ShieldAttachment or self:LookupAttachment("shield_fx") or 1
 end
 
 function ENT:OnInjured(dmg)
@@ -2440,12 +2455,12 @@ function ENT:OnInjured(dmg)
 			else
 				self:ShieldArcLoop()
 			end 
-			ParticleEffectAttach(self.ShieldDepleteParticle,PATTACH_POINT_FOLLOW,self,self:LookupAttachment("shield_fx") or 1)
+			ParticleEffectAttach(self.ShieldDepleteParticle,PATTACH_POINT_FOLLOW,self,self:GetShieldParticleAttachment())
 		else	
 			ParticleEffect(self.ShieldImpactParticle,dmg:GetDamagePosition(),self:GetAngles(),self)
 			if self.IsBrute then
 				if self.Shield <= self.MaxShield*0.5 then
-					ParticleEffectAttach(self.ShieldCriticalParticle,PATTACH_POINT_FOLLOW,self,self:LookupAttachment("shield_fx") or 1)
+					ParticleEffectAttach(self.ShieldCriticalParticle,PATTACH_POINT_FOLLOW,self,self:GetShieldParticleAttachment())
 				end
 			end
 		end
@@ -2455,7 +2470,7 @@ function ENT:OnInjured(dmg)
 				if IsValid(self) and shield == self.ShieldH and self.HasArmor then
 					local stop = false
 					self:StopParticles()
-					ParticleEffectAttach(self.ShieldRechargeParticle,PATTACH_POINT_FOLLOW,self,self:LookupAttachment("shield_fx") or 1)
+					ParticleEffectAttach(self.ShieldRechargeParticle,PATTACH_POINT_FOLLOW,self,self:GetShieldParticleAttachment())
 					for i = 1, 10 do
 						timer.Simple( self.ShieldRegenTime*0.1, function()
 							if IsValid(self) and shield == self.ShieldH and !stop then
@@ -3676,11 +3691,13 @@ function ENT:OnKilled( dmginfo ) -- When killed
 		self:SetBodygroup(1,2)
 	end
 	if self.ExplodesOnKilled then
-		ParticleEffect( self.DeathParticle, self:WorldSpaceCenter(), self:GetAngles(), self )
+		--print("?",self.DeathParticle)
+		ParticleEffect( self.DeathParticle, self:GetPos(), self:GetAngles() )
 		if IsValid(self.InfectVictim) then
 			self.InfectVictim:ResetAI()
 			self.InfectVictim.UnderLatchAttack = false
 		end
+		self:Speak("pop")
 		self:Remove()
 	else
 		self.DrownThread = coroutine.create( function() self:DoKilledAnim() end )

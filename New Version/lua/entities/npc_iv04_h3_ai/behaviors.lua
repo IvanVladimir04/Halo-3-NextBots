@@ -437,6 +437,7 @@ function ENT:FloodHumanInitialize()
 	self.AttractAlliesRange = math.huge
 end
 function ENT:FloodEliteInitialize()
+	self.ShieldAttachment = 11
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.MoveSpeed = 40
@@ -500,7 +501,7 @@ function ENT:FloodBruteInitialize()
 	end
 	self.RecklessTactics = true
 	self.GenericWeaponAnims = true
-	self:SetCollisionBounds(Vector(10,20,70),Vector(-10,-20,0))
+	self:SetCollisionBounds(Vector(30,40,70),Vector(-20,-30,0))
 	self.DamageThreshold = math.huge
 	self.NoWarnAnim = true
 	self.FloodGibs = true
@@ -508,13 +509,13 @@ function ENT:FloodBruteInitialize()
 	self.WeaponHitGroup = 5
 	self.NoTransitionAnims = true
 	self.FloodGibGroups = {
-		[9] = 2,
-		[4] = 3,
-		[5] = 4
+		[9] = 1,
+		[5] = 3,
+		[4] = 2
 	}
 	self.FloodGibModels = {
-		[4] = "models/halo_3/characters/flood/gibs/brute_combat_form/gib_arm_left.mdl",
-		[5] = "models/halo_3/characters/flood/gibs/brute_combat_form/gib_arm_right.mdl"
+		[5] = "models/halo_3/characters/flood/gibs/brute_combat_form/gib_arm_left.mdl",
+		[4] = "models/halo_3/characters/flood/gibs/brute_combat_form/gib_arm_right.mdl"
 	}
 	self.AttractAlliesRange = math.huge
 end
@@ -541,6 +542,7 @@ end
 function ENT:FloodCarrierInitialize()
 end
 function ENT:FloodTankInitialize()
+	self.DisableTalkAnims = true
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.MoveSpeed = 40
@@ -558,6 +560,7 @@ function ENT:FloodTankInitialize()
 	self.InstaKillImmune = true
 end
 function ENT:FloodStalkerInitialize()
+	self.DisableTalkAnims = true
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.MoveSpeed = 100
@@ -574,6 +577,7 @@ function ENT:FloodStalkerInitialize()
 	self.VoiceType = "Flood_Stalker"
 end
 function ENT:FloodRangedInitialize()
+	self.DisableTalkAnims = true
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
@@ -1453,6 +1457,10 @@ function ENT:FloodBruteThink()
 	end
 end
 function ENT:FloodInfectionThink()
+	if self.LastThinkTime < CurTime() then
+		self.LastThinkTime = CurTime()+2
+		self:Speak("infector_sound")
+	end
 	if self.Latched and IsValid(self:GetOwner()) then
 		if !self.Infecting then
 			self:SetAngles((self:GetOwner():NearestPoint(self:GetPos())-self:GetPos()):Angle()+Angle(-90,0,0))
@@ -1472,6 +1480,11 @@ function ENT:FloodTankThink()
 	end
 end
 function ENT:FloodStalkerThink()
+	if self:Health() < 1 then return end
+	if self.LastThinkTime < CurTime() then
+		self.LastThinkTime = CurTime()+2.5
+		self:Speak("idle_loop")
+	end
 end
 function ENT:FloodRangedThink()
 	if self:Health() < 1 then return end

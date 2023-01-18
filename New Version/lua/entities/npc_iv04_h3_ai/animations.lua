@@ -1448,7 +1448,6 @@ function ENT:SetupAnimations()
 				self.FlinchFrontAnims = {
 					["Chest"] = "Flinch_Armored_Front_Chest",
 					["Gut"] = {"Flinch_Armored_Front_Gut_1","Flinch_Armored_Front_Gut_2"},
-					["Head"] = {"Flinch_Combat_Any_Front_Head_1","Flinch_Combat_Any_Front_Head_2","Flinch_Combat_Any_Front_Head_3"},
 					["Left_Arm"] = "Flinch_Armored_Front_Left_Arm",
 					["Right_Arm"] = "Flinch_Armored_Front_Right_Arm",
 					["Left_Leg"] = "Flinch_Armored_Front_Left_Leg",
@@ -1496,6 +1495,7 @@ function ENT:SetupAnimations()
 			end
 			if self.TransformedFrom then
 				local func = function()
+					ParticleEffect( "iv04_halo_3_flood_gib_medium", self:GetPos(), self:GetAngles() )
 					self:PlaySequenceAndWait(self.TransformFromAnims[self.TransformedFrom])
 				end
 				self:AddToCoroutine(func,true)
