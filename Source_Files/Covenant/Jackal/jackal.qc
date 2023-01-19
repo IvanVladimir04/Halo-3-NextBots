@@ -54,7 +54,10 @@ $attachment "anim_attachment_LH" "r_hand" 4.00 3.00 1.00 rotate 0 0 0
 $attachment "backpack" "spine1" 8.79 -11.00 -0.00 rotate 45 180 -90
 $attachment "sidearm" "l_thigh" 5.00 2.00 -5.50 rotate 0 -0 -90
 $attachment "eyes" "head" 5.33 9.26 0.00 rotate -0 90 90
-$attachment "sniper_flare" "head" 3.95 17.50 2.00 rotate 0 90 90
+$attachment "fx_sniper_flare_large" "head" 4.6 15.69 2.8 rotate 0 92 90
+$attachment "fx_sniper_flare_small_1" "head" 4.87 13.65 2.04 rotate 0 92 90
+$attachment "fx_sniper_flare_small_2" "head" 3.8 14.15 3.15 rotate 0 92 90
+$attachment "fx_sniper_flare_small_3" "head" 3.65 16.48 1.78 rotate 0 92 90
 
 //REFERENCE
 
