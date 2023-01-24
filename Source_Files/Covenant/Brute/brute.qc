@@ -93,6 +93,70 @@ $attachment "jetpack_R" "spine1" -7 -16 -10.5 rotate 0 -170 180
 $attachment "jetpack_L" "spine1" -7 -16 10 rotate 0 -170 180
 $attachment "shield_fx" "spine1" 0.00 0.00 -0.00 rotate 0 90 90
 
+$attachment "fx_exhaust_front_r" "spine1" -2.62 31.23 -7 rotate 0 -176 90
+$attachment "fx_exhaust_front_l" "spine1" -2.62 31.23 7 rotate 0 -176 90
+
+$attachment "fx_jetpack_destruction" "spine1" 0.38 -15.71 0 rotate 0 -135 -90
+$attachment "fx_jump_l" "spine1" -14.56 -11.23 10.5 rotate -174 8.29 -81
+$attachment "fx_jump_r" "spine1" -14.64 -11.24 -10.51 rotate 6.39 -172 81
+$attachment "fx_jump_light" "spine1" -21.89 -17.1 0 rotate 0 -140 -90
+
+$attachment "fx_shield_collapse" "spine1" 1.82 0 0 rotate 0 95 90
+$attachment "fx_shield_down01" "spine1" 6.89 10.61 0 rotate 0 74 -90
+$attachment "fx_shield_down02" "spine1" 4.28 -7.44 -10 rotate 30 -106 -90
+$attachment "fx_shield_down03" "spine1" 4.28 -7.44 10 rotate -30 -106 -90
+
+$attachment "hammer_detonation" "r_hand" -4.23 -2.94 45.35 rotate -7.46 -3.16 7.63
+
+$attachment "infection_back" "spine1" 11.55 -6.75 3.89 rotate 0 -80 -90
+$attachment "infection_front" "spine1" 7.65 8.49 2.48 rotate 0 88.6 90
+
+$attachment "shield_recharge" "pelvis" -9.02 0.96 0 rotate 0 0 90
+
+$attachment "spore_abs" "spine" 3.48 4.42 0.55 rotate 30.5 73.6 -117
+$attachment "spore_back01" "spine1" 9.17 -3.98 -4.25 rotate 30.5 -48.5 117
+$attachment "spore_back02" "spine1" 4.84 -4.74 4.48 rotate -33.9 -46.2 58.4
+$attachment "spore_chest" "spine1" 6.7 4.82 4.7 rotate -19.5 45.3 -74
+$attachment "spore_head" "head" 4.16 6.49 0.05 rotate 0 25 90
+$attachment "spore_l_knee" "l_calf" 11.15 0.94 0.15 rotate 5.69 161 95.2
+$attachment "spore_l_shoulder" "l_upperarm" 0.6 -0.35 1.69 rotate -55.6 136 -44.1
+$attachment "spore_l_thigh" "l_thigh" 7.59 3.81852 0.39 rotate 5.69 99.9 95.2
+$attachment "spore_neck" "spine1" 15.87 -0.05 -0.16 rotate 30.5 -48.5 117
+$attachment "spore_r_forearm" "r_forearm" 8.7 0.57 -0.34 rotate 34.7 -64.3 157
+$attachment "spore_r_knee" "r_thigh" 25.68 -7.25 0.95 rotate -5.69 99.9 84.8
+$attachment "spore_r_shoulder" "r_upperarm" 0.25 -0.35 -1.3 rotate 145 73.3 -22.7
+$attachment "spore_r_thigh" "r_thigh" 4.77 3.54 -0.49 rotate -5.69 99.9 84.8
+
+$attachment "trans_muffin_l_arm01" "l_upperarm" 7.85 3.98 2.18 rotate 7.08 25.6 -32.6
+$attachment "trans_muffin_l_thigh" "l_thigh" 1.57 1.62 -3.14 rotate -18.2 81.3 -62.4
+$attachment "trans_muffin_r_arm" "r_upperarm" 11.08 -0.67 -2.29 rotate 12.9 -15.1 156
+$attachment "trans_muffin_r_thigh" "l_thigh" 0.52 -2.86 18.83 rotate -24.3 -34.7 101
+$attachment "trans_muffin_torso_back01" "neck" 1.72 -3.88 -2.37 rotate -147 54.9 59.8
+$attachment "trans_muffin_torso_back02" "spine1" 12.78 -8.1 4.18 rotate 8.84 25.1 91.6
+$attachment "trans_muffin_torso_back03" "r_upperarm" -5.59 0.84 -0.3 rotate 6.27 86 -134
+$attachment "trans_muffin_torso_back04" "spine1" 10.49 -7.57 -8.7 rotate 68.6 -5.7 83.8
+$attachment "trans_muffin_torso_back05" "spine1" 9.55 -8.76 -4.15 rotate 164 0.785 92.4
+$attachment "trans_muffin_torso_back06" "spine1" 9.31 -8.6 2.36 rotate -136 26.4 87.8
+$attachment "trans_muffin_torso_back07" "spine1" 8.05 -7.84 8.77 rotate 13.7 -0.435 67.7
+$attachment "trans_muffin_torso_back08" "spine1" 3.66 -8.17 4.56 rotate 104 9.38 99.5
+$attachment "trans_muffin_torso_back09" "spine1" 3.17 -6.76 8.9 rotate -28.6 153 -54.5
+$attachment "trans_muffin_torso_back10" "spine1" 1.89 -6.89 6.8 rotate -14.8 151 -82.2
+$attachment "trans_muffin_torso_back11" "spine1" 4.38 -7.97 -7.29 rotate 104 9.38 99.5
+$attachment "trans_muffin_torso_back12" "spine1" 2.66 -5.97 -9.1 rotate -170 -24.5 32.1
+$attachment "trans_muffin_torso_back13" "spine1" 0.5 -6.57 -5.16 rotate 1.19 166 -93.2
+$attachment "trans_muffin_torso_back14" "spine" 6.46 -4.33 -3.3 rotate 162 -1.59 74.4
+$attachment "trans_muffin_torso_back15" "spine" 7.34 -4.36 -0.75 rotate 164 0 86.5
+$attachment "trans_muffin_torso_back16" "spine" 2.9 -4.07 1.57 rotate -16.3 -147 -93.8
+$attachment "trans_muffin_torso_front01" "spine1" 10.89 6.67 7.42 rotate -121 -28.2 -100
+$attachment "trans_muffin_torso_front02" "l_upperarm" -3.51 -0.77 0.73 rotate -44 40.8 -1.61
+$attachment "trans_muffin_torso_front03" "spine1" 11.28 7.64 -2.43 rotate 35.2 -55.9 4.96
+$attachment "trans_muffin_torso_front04" "r_upperarm" -0.91 -3.75 2.03 rotate -26 -58.4 -153
+$attachment "trans_muffin_torso_front05" "spine1" 2.15 10.05 -6.86 rotate 127 52.1 48.2
+$attachment "trans_muffin_torso_front06" "spine1" -1.18 12.1 -1.43 rotate -56.5 -3.93 1.59
+$attachment "trans_muffin_torso_front07" "spine1" -1.13 10.26 5.43 rotate 15.8 2.14 32.2
+$attachment "trans_muffin_torso_front08" "spine1" 3.8 8.67 8.18 rotate -24.9 -145 33.4
+$attachment "trans_muffinl_arm02" "l_upperarm" 11.93 -0.54 2.13 rotate 9.93 -31.6 37.9
+
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861

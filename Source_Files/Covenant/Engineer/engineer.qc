@@ -27,7 +27,21 @@ $illumposition 0 0 96
 
 $cdmaterials "\models\halo_3\characters\covenant\engineer\"
 
-$attachment "shield_fx" "pelvis" 0.00 0.00 0.00 rotate 0 0 -90
+$attachment "fx_shield" "pelvis" -7.78 1.34 -0.42 rotate -1.23 153 0.38
+$attachment "fx_chest_bomb" "pelvis" 6.2 -4.34 0 rotate -1.23 -17.1 0.38
+$attachment "fx_eyebeam" "neck4" 9.6 -1.45 0 rotate 0 -9.24 -90
+
+$attachment "fx_petal_glow_1" "rosack2" -14.35 -2.58 2.22 rotate -38.7 -39.4 64.3
+$attachment "fx_petal_glow_2" "losack2" 14.68 2.75 -2.37 rotate 141 -40.7 -64.5
+$attachment "fx_petal_glow_3" "risack2" -3.4 -4.65 2.9 rotate -25.3 -14.8 61.1
+$attachment "fx_petal_glow_4" "lisack2" 3.42 4.6 -2.83 rotate 168 -21.8 -63.4
+$attachment "fx_petal_glow_5" "rosack1" -15 -4 -0.365 rotate 0.171 -49 89.6
+$attachment "fx_petal_glow_6" "losack1" 15.3 4.325 0.34 rotate -0.177 132 90.3
+
+$attachment "fx_petal_glow_7" "risack1" -5 -4.65 0 rotate -1.37 -22.9 95
+$attachment "fx_petal_glow_8" "lisack1" 5 4.625 0 rotate 4.32 158 85
+$attachment "fx_petal_glow_9" "csack2" 16.45 5.5 0 rotate 0 134 90
+
 
 $poseparameter "move_yaw" -180 180 loop 360
 $PoseParameter "aim_yaw" -45 45 0
