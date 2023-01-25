@@ -105,6 +105,48 @@ $attachment "sidearm_L" "l_thigh" 10.71 0.00 -6.81 rotate -10 180 -90
 $attachment "sword_holster" "r_thigh" 10.71 0.00 6.81 rotate 90 90 0
 $attachment "shield_fx" "spine1" 0.00 0.00 -0.00 rotate 0 90 90
 $attachment "eyes" "head" 6.00 11.26 0.00 rotate -0 70 90
+
+$attachment "flashlight" "head" -7.19 -2.34 7.9 rotate 0 35 90
+$attachment "fx_fire_large" "spine1" 3.61 -1.4 0 rotate 0 0 90
+$attachment "fx_fire_small_l_leg" "l_thigh" 7.73 2.19 0 rotate 0 115 0
+$attachment "fx_fire_small_r_arm" "r_upperarm" 4.49 0 0 rotate 90 0 0
+$attachment "fx_fire_small_l_arm" "l_upperarm" 4.49 0 0 rotate -90 86.7 -86.7
+$attachment "fx_fire_small_r_leg" "r_thigh" 7.6 2.34 0 rotate 0 115 0
+
+$attachment "hammer_detonation" "r_hand" 4.9 -1.43 31.52 rotate 9.57 -9.68 1.13
+$attachment "infection_back" "spine1" 10.31 -6.54 5.85 rotate -28 -72.2 -101
+$attachment "infection_front" "spine1" -3.4 5.84 0.82 rotate 0 80 90
+$attachment "shield_recharge" "pelvis" -9.02 0.96 0 rotate 0 0 90
+
+$attachment "trans_muffin_l_arm01" "l_upperarm" 2.69 -2.37 -1.07 rotate -10.5 4.4 79.3
+$attachment "trans_muffin_l_arm02" "l_upperarm" 6.83 4.64 0 rotate 38.4 -8.71 -99.7
+$attachment "trans_muffin_l_arm03" "l_upperarm" 11.08 -1.63 2.17 rotate 16.9 -25.9
+$attachment "trans_muffin_l_thigh01" "l_thigh" 1.96 1.55 -3.2 rotate 17.6 -16.3 -150
+$attachment "trans_muffin_l_thigh02" "spine" -5.7 -4.48 4.92 rotate 3.25 -180 34
+$attachment "trans_muffin_neck01" "neck" 3.04 -1.85 -2.64 rotate -150 108 -1.63
+$attachment "trans_muffin_neck02" "neck" 1.44 -3.74 1.86 rotate -38.9 33.5 67
+$attachment "trans_muffin_r_arm01" "r_upperarm" -1.16 -2.03 0.4 rotate -67.4 -89.7 -107
+$attachment "trans_muffin_r_arm02" "r_upperarm" -1.48 2.05 0.59 rotate -32.3 41.5 -97.2
+$attachment "trans_muffin_r_arm03" "spine1" 4.06 -3.88 -11.21 rotate 3.68 -174 -81
+$attachment "trans_muffin_r_arm04" "r_upperarm" 7.66 -2.8 -1.28 rotate -27.3 -10.8 -146
+$attachment "trans_muffin_r_arm05" "r_upperarm" 7.93 4.46 -1.4 rotate -10 0.129 5.36
+$attachment "trans_muffin_r_arm06" "r_upperarm" 12.1 0.81 -2.25 rotate 4.93 11.6 -44.8
+$attachment "trans_muffin_r_thigh01" "l_thigh" -1.63 0.13 11.6 rotate -61.9 -74.1 58.5
+$attachment "trans_muffin_r_thigh02" "spine" -5.7 -4.48 -5.66 rotate -32.4 -139 -55.1
+$attachment "trans_muffin_r_thigh03" "spine" -5.47 -1.85 -7.35 rotate -178 54.8 22.1
+$attachment "trans_muffin_torso_back01" "spine1" 13.58 -5.74 -5.74 rotate 150 30.9 64.7
+$attachment "trans_muffin_torso_back02" "spine1" 11.88 -7.49 5.94 rotate -148 14.3 106
+$attachment "trans_muffin_torso_back03" "spine1" 4.3 -9.6 4.38 rotate -79.3 -9.29 94.7
+$attachment "trans_muffin_torso_back04" "spine" 7.79 -10.42 0.47 rotate -145 -19.9 95
+$attachment "trans_muffin_torso_back05" "spine1" 7.29 -11.58 -0.56 rotate 160 12.2 86
+$attachment "trans_muffin_torso_back06" "spine1" -2.04 -8.16 -0.17 rotate 163 -9.03 79.1
+$attachment "trans_muffin_torso_back07" "spine" 1.42 -6.81 2.91 rotate -14.9 168 35.3
+$attachment "trans_muffin_torso_back08" "spine1" 1.99 -7.6 6.77 rotate -12.1 135 -78.4
+$attachment "trans_muffin_torso_back09" "spine" 2.66 -7.5 -2.47 rotate 147 -57.9 46.3
+$attachment "trans_muffin_torso_front01" "spine1" 5.01 8.25 -0.14 rotate -17.6 -7.9 -96.7
+$attachment "trans_muffin_torso_front02" "spine1" 2.75 8 -0.41 rotate -128 6.75 -86.1
+$attachment "trans_muffin_torso_front03" "spine1" -2.56 6.19 -1.57 rotate 153 11.1 -73.1
+$attachment "trans_muffin_torso_front04" "spine1" -2.37 6.18 2.5 rotate -169 9.37  -87.5
 $cbox 0 0 0 0 0 0
 
 $bbox -32.491 -44.156 -34.885 17.215 42.694 34.861
