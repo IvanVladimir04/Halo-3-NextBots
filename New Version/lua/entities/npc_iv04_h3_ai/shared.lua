@@ -1914,7 +1914,7 @@ function ENT:DoMelee(ent,dontwait) -- In case you want to melee a specific entit
 	end
 end
 
-function ENT:DoMeleeDamage(back) -- No arguments needed, everything is defined on the variables
+function ENT:DoMeleeDamage(back)
 	local damage = self.MeleeDamage
 	local dir = !back and self:GetForward() or -self:GetForward()
 	for	k,v in pairs(ents.FindInCone(self:WorldSpaceCenter()+(self:GetUp()*20+dir*-20), dir, self.MeleeRange,  math.cos( math.rad( self.MeleeConeAngle ) ))) do
@@ -2391,7 +2391,7 @@ function ENT:OnInjured(dmg)
 	local rel = self:CheckRelationships(dmg:GetAttacker())
 	local ht = self:Health()
 	if !self.HasArmor or self.Shield <= 0 then
-		if !self.IsHunter or (self.JackalShield and self.JackalShield <= 0) then
+		if (!self.IsHunter or (self.JackalShield and self.JackalShield <= 0)) and self.BloodParticle then
 			ParticleEffect( self.BloodParticle, dmg:GetDamagePosition(), Angle(0,0,0), self )
 		end
 		if self.FloodTemplates[self.AITemplate] then
@@ -3068,7 +3068,7 @@ function ENT:OnOtherKilled( victim, info )
 			if attacker:IsPlayer() then
 				local r = math.random(1,2)
 				if r == 1 then
-					if victim.Rank > 2 then
+					if victim.Rank and victim.Rank > 2 then
 						self:Speak("prs_plr_kll_mjr")
 					else
 						self:Speak("prs_plr_kll")
@@ -3819,7 +3819,7 @@ function ENT:FinishDeadLanding()
 					end
 				end)
 			end
-			rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
+			rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = false})
 			rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 		end 
 	end )
@@ -3876,11 +3876,16 @@ function ENT:DoKilledAnim()
 							end
 						end)
 					end
-					rag = self:CreateRagdoll(DamageInfo(),true,{doit = true, time1 = 0.01, time2 = 0.01, randommove = true})
-					rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
 				end
 			end )
+			--[[rag = CreateAnimatedRagdoll( self, DamageInfo(), {
+				seq = seq,
+				len = len
+			} )
+			rag:SetCollisionGroup(COLLISION_GROUP_DEBRIS)]]
 			self:PlaySequenceAndPWait(anim, 1, self:GetPos())
+			rag = self:CreateRagdoll(DamageInfo(),true,{animlen = len,doit = true, time1 = 0.01, time2 = 0, randommove = false})
+			self:Remove()
 		else
 			self:Speak("dth_drama")
 			if !self.DoesntUseWeapons and IsValid(self.Weapon) and IV04_DropWeapons then
@@ -3965,11 +3970,23 @@ function ENT:BodyUpdate()
 			end
 		end
 		local goal = self:GetPos()+self.loco:GetVelocity()
-		local y = (goal-self:GetPos()):Angle().y
-		local m_y = math.AngleDifference(self:GetAngles().y,y)
+		local y1 = (goal-self:GetPos()):Angle().y
+		local y2 = self:GetAngles().y
+		--y1 = math.NormalizeAngle(y1)
+		--y2 = math.NormalizeAngle(y2)
+		--math.NormalizeAngle(m_y)
+		local m_y = math.AngleDifference(y2,y1)
+		m_Y = math.NormalizeAngle(m_y)
 		local cury = self:GetPoseParameter("move_yaw")
-		local appr = cury
-		if math.abs(math.abs(m_y)-math.abs(cury)) > 10 then
+		local appr = math.ApproachAngle( cury, m_y, 4 )--cury
+		if appr < -180 then
+			appr = appr+360 
+		elseif appr > 180 then
+			appr = appr-360 
+		end
+		--print(y1,m_y,cury,m_y+cury)
+		--print(cury, y1, appr, m_y)
+		--[[if m_y+cury > 10 or m_y+cury <-10 then
 			if m_y < cury then 
 				appr = appr-4 
 			else 
@@ -3980,7 +3997,7 @@ function ENT:BodyUpdate()
 			elseif appr > 180 then 
 				appr = appr-360
 			end
-		end
+		end]]
 		--print(m_y,y,cury,appr)
 		self:SetPoseParameter("move_yaw",appr)
 		self:SetPoseParameter("walk_yaw",appr)

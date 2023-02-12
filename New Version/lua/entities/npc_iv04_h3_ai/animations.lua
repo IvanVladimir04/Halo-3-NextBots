@@ -1,3 +1,5 @@
+AddCSLuaFile()
+
 function ENT:SetupAnimations()
 	-------------------------------- Events --------------------------------
 	

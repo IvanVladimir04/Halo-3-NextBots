@@ -369,6 +369,7 @@ function ENT:ScarabInitialize()
 end
 function ENT:SentinelInitialize()
 	self.IsSentinel = true
+	self.MoveSpeed = 150
 	if CLIENT then
 	
 	else -- Server
@@ -739,6 +740,7 @@ function ENT:MarineIdle()
 					self.ThrownGrenades = grenades
 				end
 			end )
+			if !IsValid(ent) then self.DisableOverwriteCurrentVoiceLine = false return end
 			self.SpecificGoal = ent:WorldSpaceCenter()
 			coroutine.wait(0.5)
 			for i = 1, math.random(1,2) do
@@ -916,13 +918,26 @@ function ENT:SentinelIdle()
 	local stop = false
 	local printed = false
 	self:SearchEnemy()
-	local goal = ((self:WorldSpaceCenter()+self:GetUp()*30)+(self:GetAimVector():Angle()+Angle(0,math.random(-180,180),0)):Forward()*math.random(50,100))
+	local info = {
+		start = self:WorldSpaceCenter(),
+		filter = {self},
+		distmin = 128,
+		distmax = 512,
+		startdir = self:GetForward(),
+		validang = Angle(90,360,0),
+		hullmins = self:OBBMins(),
+		hullmaxs = self:OBBMaxs(),
+		attemptslimit = 10
+	}
+	local goal = self:GetNearbyFlyGoal(info)
+	--debugoverlay.Sphere(goal,5,5)
 	self:SetFlyGoal(goal)
 	--self.loco:SetVelocity(Vector(0,0,0))
-	self:SearchTimer(2,0.5,self:GetSequence())
-	self:SearchEnemy()
-	coroutine.wait(2)
-	self.FlyGoal = nil
+	while(self.FlyGoal) do
+		self:SearchEnemy()
+		coroutine.wait(0.5)
+	end
+	coroutine.wait(math.random(2,5))
 end
 function ENT:EnforcerIdle()
 end
@@ -2326,6 +2341,54 @@ end
 function ENT:ScarabBehavior(ent,range)
 end
 function ENT:SentinelBehavior(ent,range)
+	if !IsValid(ent) then self:GetATarget() end
+	if !IsValid(self.Enemy) then return else ent = self.Enemy end
+	ent = ent or self.Enemy
+	local los
+	ent, los = self:LineOfSightChecks(ent,true)
+	if !IsValid(self.Enemy) then return end
+	if los then
+		local goal
+		if math.random(1,2) == 1 then
+			local info = {
+				start = self:WorldSpaceCenter(),
+				filter = {self},
+				distmin = 256,
+				distmax = 1024,
+				startdir = self:GetForward(),
+				validang = Angle(90,360,0),
+				hullmins = self:OBBMins(),
+				hullmaxs = self:OBBMaxs(),
+				attemptslimit = 10
+			}
+			goal = self:GetNearbyFlyGoal(info)
+		else
+			local info = {
+				start = ent:WorldSpaceCenter(),
+				filter = {ent},
+				distmin = 512,
+				distmax = 1024,
+				startdir = self:GetForward(),
+				validang = Angle(90,360,0),
+				hullmins = self:OBBMins(),
+				hullmaxs = self:OBBMaxs(),
+				attemptslimit = 10
+			}
+			goal = self:GetNearbyFlyGoal(info)
+		end
+		self:SetFlyGoal(goal)
+		while(self.FlyGoal) do
+			coroutine.wait(0.5)
+		end
+		coroutine.wait(math.random(1,2))
+	else
+		local goal = self.Enemy:GetPos()
+		local pos = self:FindNearbyPos(goal,200)
+		pos.z = goal.z + 80
+		self.LookTarget = nil
+		self:FlyToPos( pos, {distaboveground = 90,draw = true, facegoal = true, tolerance = 200, lookahead = 100} )	
+		self.LookTarget = self.Enemy
+	end
 end
 function ENT:EnforcerBehavior(ent,range)
 end
