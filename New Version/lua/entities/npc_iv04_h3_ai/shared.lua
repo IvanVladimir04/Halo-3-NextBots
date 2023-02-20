@@ -3702,14 +3702,49 @@ function ENT:OnKilled( dmginfo ) -- When killed
 		self:SetBodygroup(1,2)
 	end
 	if self.ExplodesOnKilled then
-		--print("?",self.DeathParticle)
-		ParticleEffect( self.DeathParticle, self:GetPos(), self:GetAngles() )
-		if IsValid(self.InfectVictim) then
-			self.InfectVictim:ResetAI()
-			self.InfectVictim.UnderLatchAttack = false
+		if self.DropsToGroundOnKilled then
+			--print("?",self.DeathParticle)
+			local gibs = self.DeathGibs
+			if dmginfo:IsDamageType(DMG_BLAST) or dmginfo:IsDamageType(DMG_PLASMA) or dmginfo:IsDamageType(DMG_ENERGYBEAM) or dmginfo:GetDamage() >= 100 then
+				gibs.pos = self:GetPos()
+				gibs.ang = self:GetAngles()
+				IV04_CreateGibs(gibs)
+				ParticleEffect( self.DeathParticle, self:GetPos(), self:GetAngles() )
+				self:Remove()
+			else
+				local ragdoll = self:CreateProp(DamageInfo())
+				--ParticleEffect( self.DeathParticle, self:GetPos(), self:GetAngles() )
+				local part = self.DeathParticle
+				--local func = function( ent, data )
+					--ParticleEffect( part, ent:GetPos(), ent:GetAngles() )
+					--gibs.pos = ent:GetPos()
+					--gibs.ang = ent:GetAngles()
+					--IV04_CreateGibs(gibs)
+					--ent:Remove()
+				--end
+				--ragdoll:AddCallback( "PhysicsCollide", func )
+				timer.Simple( 1, function()
+					if IsValid(ragdoll) then
+						ParticleEffect( part, ragdoll:GetPos(), ragdoll:GetAngles() )
+						gibs.pos = ragdoll:GetPos()
+						gibs.ang = ragdoll:GetAngles()
+						IV04_CreateGibs(gibs)
+						ragdoll:Remove()
+					end
+				end )
+				--print(ragdoll)
+				--self:Remove()
+			end
+		else
+			--print("?",self.DeathParticle)
+			ParticleEffect( self.DeathParticle, self:GetPos(), self:GetAngles() )
+			if IsValid(self.InfectVictim) then
+				self.InfectVictim:ResetAI()
+				self.InfectVictim.UnderLatchAttack = false
+			end
+			self:Speak("pop")
+			self:Remove()
 		end
-		self:Speak("pop")
-		self:Remove()
 	else
 		self.DrownThread = coroutine.create( function() self:DoKilledAnim() end )
 		coroutine.resume( self.DrownThread )

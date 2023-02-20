@@ -369,12 +369,40 @@ function ENT:ScarabInitialize()
 end
 function ENT:SentinelInitialize()
 	self.IsSentinel = true
+	self.ExplodesOnKilled = true
+	self.DropsToGroundOnKilled = true
 	self.MoveSpeed = 150
+	self.DeathParticle = "iv04_halo_3_sentinel_death_explosion"
+	self.DamageThreshold = math.huge
+	self.DeathGibs = {
+		gibs = {
+			["models/halo_3/characters/forerunner/gibs/sentinel_arm.mdl"] = true,
+			["models/halo_3/characters/forerunner/gibs/sentinel_fuselage.mdl"] = true,
+			["models/halo_3/characters/forerunner/gibs/sentinel_head.mdl"] = true
+		}
+	}
 	if CLIENT then
 	
 	else -- Server
 		self:FlyInitialize()
 	end
+	--[[
+		self.LaserLoopSound = self.LaserLoopSound or CreateSound(self, "halo/halo_3/sentinel_beam_loop.wav")
+		self.LaserStopSound = self.LaserStopSound or CreateSound(self, "halo/halo_3/sentinel_beam_out.ogg")
+		self.LaserStartSound = self.LaserStartSound or CreateSound(self, "halo/halo_3/sentinel_beam_in.ogg")
+		Impact Sounds:
+		sound.Play( "halo/halo_3/1untitled_marker_" .. math.random(1,5) .. ".ogg",  tr.HitPos, 65, 100 )
+
+		Effects:
+
+		Sentinel Beam Effects:
+		util.Effect( "effect_astw2_halo2_tracer_beam", t )
+		ParticleEffect( "astw2_halo_3_sentinel_impact_red", tr.HitPos, self:GetAngles() )
+
+		Elite Sentinel Beam Effects:
+		util.Effect( "effect_astw2_halo2_tracer_beam_blue", t )
+		ParticleEffect( "astw2_halo_3_sentinel_impact_blue", tr.HitPos, self:GetAngles() )
+	]]
 end
 function ENT:EnforcerInitialize()
 end
