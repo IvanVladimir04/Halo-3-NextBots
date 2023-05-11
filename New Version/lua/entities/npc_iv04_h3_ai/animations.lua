@@ -1,6 +1,16 @@
 AddCSLuaFile()
 
 function ENT:SetupAnimations()
+
+	local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
+	self.YawPoseParamMultiplier = 90/ymaxs
+	self.YMaxs = ymaxs
+	self.YMins = ymins
+	local pmins, pmaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_pitch") )
+	self.PitchPoseParamMultiplier = 90/pmaxs
+	self.PMaxs = pmaxs
+	self.PMins = pmins
+
 	-------------------------------- Events --------------------------------
 	
 	self.ServerSideEvents = {
@@ -88,6 +98,23 @@ function ENT:SetupAnimations()
 		---------------------------- Grenade Events ----------------------------
 
 		["event_halo_3_human_throw_grenade"] = function()
+			local grenade = self.HeldGrenade
+			if IsValid(grenade) then
+				grenade:SetMoveType( MOVETYPE_VPHYSICS )
+				grenade:SetParent( nil )
+				grenade:SetPos(self:GetAttachment(2).Pos)
+				local prop = grenade:GetPhysicsObject()
+				if IsValid(prop) then
+					prop:Wake()
+					prop:EnableGravity(true)
+					local vel = (self:GetUp()*(math.random(10,50)*5))
+					vel = vel+((self:GetAimVector() * 600))
+					prop:SetVelocity( vel )
+				end
+			end
+		end,
+		
+		["event_halo_3_spartan_throw_grenade"] = function()
 			local grenade = self.HeldGrenade
 			if IsValid(grenade) then
 				grenade:SetMoveType( MOVETYPE_VPHYSICS )
@@ -275,6 +302,9 @@ function ENT:SetupAnimations()
 		["Gut"] =  {"Die_Right_Gut"}
 	}
 	if self.AITemplate == "BRUTE" then
+		self.YMins = -45
+		self.YMaxs = 45 
+		self.YawPoseParamMultiplier = 0.5
 		self.DeathFrontAnims = {
 			["Gut"] =  {"Die_Front_Gut"}
 		}	
@@ -586,6 +616,7 @@ function ENT:SetupAnimations()
 					self.AirAnim = "Airborne_Combat_Pistol"
 					self.FleePistolMoveAnim = "Flee_Pistol_Move_Front"
 					self.FleePistolIdleAnim = "Flee_Pistol_Idle"
+					self.DisableDirectionalHeadshotDeathAnims = true
 					self.DeathFrontAnims = {
 						["Head"] = {"Die_Front_Head_1","Die_Front_Head_2"},
 						["Gut"] =  {"Die_Front_Gut_3","Die_Front_Gut_1","Die_Front_Gut_2"}
@@ -631,7 +662,7 @@ function ENT:SetupAnimations()
 					self.RunAnim = {"Move_Crouch_Pistol_Up"}
 					self.AllowGrenade = false
 					self.DeathFrontAnims = {
-						["Head"] = {"Die_Front_Head_1","Die_Front_Head_2"},
+						["Head"] = {"Die_Front_Head"},
 						["Gut"] =  {"Die_Front_Gut"}
 					}
 					self.DeathBackAnims = {
@@ -653,9 +684,6 @@ function ENT:SetupAnimations()
 						["Right_Arm"] = "Flinch_Unarmed_Front_Right_Arm",
 						["Left_Leg"] = "Flinch_Unarmed_Front_Left_Leg",
 						["Right_Leg"] = "Flinch_Unarmed_Front_Right_Leg"
-					}
-					self.DeathFrontAnims = {
-						["Gut"] =  {"Die_Front_Gut","Die_Front_Gut_1","Die_Front_Gut_2"}
 					}
 					self.DeathBackAnims = {
 						["Head"] = {"Die_Back_Head"},

@@ -13,6 +13,8 @@ ENT.SearchJustAsSpawned = false
 ENT.CanUse = true
 ENT.Rank = 1
 ENT.UpdateTime = 0
+ENT.YawPoseParamMultiplier = 1
+ENT.PitchPoseParamMultiplier = 1
 
 ENT.MoveUpdateTime = 0.5
 ENT.RunBehaviourTime = 0
@@ -858,9 +860,9 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 	if self.IsInVehicle then return end
 	--print(ent, ent:GetOwner())
 	if ent:IsVehicle() or ent.LFS or ent.GroundVehicle then
-	if self.NextUpdateT < CurTime() then
-	self.NextUpdateT = CurTime()+self.UpdateDelay
-	local d = DamageInfo()
+		if self.NextUpdateT < CurTime() then
+			self.NextUpdateT = CurTime()+self.UpdateDelay
+			local d = DamageInfo()
 			d:SetDamage( ent:GetVelocity():Length() )
 			d:SetAttacker( ent )
 			d:SetInflictor( ent )
@@ -869,20 +871,20 @@ function ENT:OnContact( ent ) -- When we touch someBODY
 			d:SetDamagePosition( self:NearestPoint( self:WorldSpaceCenter() ) )
 			self:TakeDamageInfo(d)
 			sound.Play(self.VehicleImpactSound, self:GetPos(), 100, 100)
-	end
+		end
 	elseif ent:GetClass() == "func_physbox" then
 		local phys = ent:GetPhysicsObject()
-			if IsValid(phys) then
-				local dir = (ent:GetPos()-self:GetPos()):GetNormalized()
-				phys:ApplyForceOffset( dir*30000, ent:NearestPoint(self:GetPos()) )
-			end
+		if IsValid(phys) then
+			local dir = (ent:GetPos()-self:GetPos()):GetNormalized()
+			phys:ApplyForceOffset( dir*30000, ent:NearestPoint(self:GetPos()) )
+		end
 	end
 	if !self:CollidedWith(ent) then 
 		self.CollidedEntities[ent] = true
 		--print(ent,ent:GetInternalVariable( "parentname" ),ent:GetName())
 		--PrintTable(ent:GetKeyValues())
 		--PrintTable(ents.FindByName( "yyy_level_2_db_2a" ))
-		timer.Simple( 1, function() if IsValid(self) and IsValid(ent) then self.CollidedEntities[ent] = nil end end )
+		timer.Simple( 10, function() if IsValid(self) and IsValid(ent) then self.CollidedEntities[ent] = nil end end )
 		if self.FlyingDead then self.AlternateLanded = true return end 
 		if (!self.loco:IsOnGround() and !(!self.Latched and self.Leaping)) or self.IsFlyingNextBot then return end
 		--print("die")
@@ -1432,6 +1434,8 @@ function ENT:Dodge()
 	local anim = r == 1 and self.EvadeLeftAnim or self.EvadeRightAnim
 	local dir = r == 1 and -self:GetRight() or self:GetRight()
 	--print(anim)
+	self.Dodged = true
+	timer.Simple( math.random(2,5), function() if IsValid(self) then self.Dodged = false end end )
 	self:PlaySequenceAndPWait(anim,1,self:GetPos())
 end
 
@@ -1699,6 +1703,7 @@ function ENT:StrafeNearby( pos, ent, walkallowed, changecourse, crouchdenied )
 			end
 		end )
 	end
+	self.NotLookingAtEnemy = false
 	self:GoToPosition( pos, anim, speed )
 end
 
@@ -1847,6 +1852,7 @@ function ENT:DoMelee(ent,dontwait) -- In case you want to melee a specific entit
 		self:AddToCoroutine(func,true)
 		return
 	end
+	self:CrouchChecks(true,false)
 	self:Speak(self.MeleeQuote)
 	self:EmitSound(self:TableRandom(self.MeleeSwingSound), 90, math.random(90,110))
 	local anim = self:TableRandom(self.MeleeAnim)
@@ -3267,6 +3273,8 @@ end
 function ENT:MoveToPos( goal, options ) -- MoveToPos but I added some stuff
 	--print(goal)
 	--print(options)
+	local options = options or {}
+	local path = Path( "Follow" )
 	if IsValid(self.Enemy) then
 		for i = 1, #self.IdleAnim do
 			if self.loco:GetVelocity():IsZero() and self:GetActivity() == self.IdleAnim[i] then
@@ -3278,12 +3286,14 @@ function ENT:MoveToPos( goal, options ) -- MoveToPos but I added some stuff
 				end
 			end
 		end
+		if self.NotLookingAtEnemy then
+			self.SpecificGoal = goal
+		else
+			options.facepath = false
+		end
 	end
-	local options = options or {}
-	local path = Path( "Follow" )
 	local pos = goal
 	if IsEntity(goal) then pos = goal:GetPos() end
-	self.SpecificGoal = goal
 	path:SetMinLookAheadDistance( options.lookahead or self.PathMinLookAheadDistance )
 	path:SetGoalTolerance( options.tolerance or self.PathGoalTolerance )
 	path:Compute( self, pos )
@@ -3765,14 +3775,18 @@ function ENT:DetermineDeathAnim( info )
 		if self.DeathHitGroup == 1 then
 			self:Speak("death_headshot")
 			--print(y)
-			if y <= 135 and y > 45 then -- Left
-				anim = self:TableRandom(self.DeathLeftAnims["Head"])
-			elseif y < 225 and y > 135 then -- Front
+			if !self.DisableDirectionalHeadshotDeathAnims then
+				if y <= 135 and y > 45 then -- Left
+					anim = self:TableRandom(self.DeathLeftAnims["Head"])
+				elseif y < 225 and y > 135 then -- Front
+					anim = self:TableRandom(self.DeathFrontAnims["Head"])
+				elseif y >= 225 and y < 315 then -- Right
+					anim = self:TableRandom(self.DeathRightAnims["Head"])
+				elseif y <= 45 or y >= 315 then -- Back
+					anim = self:TableRandom(self.DeathBackAnims["Head"])
+				end
+			else
 				anim = self:TableRandom(self.DeathFrontAnims["Head"])
-			elseif y >= 225 and y < 315 then -- Right
-				anim = self:TableRandom(self.DeathRightAnims["Head"])
-			elseif y <= 45 or y >= 315 then -- Back
-				anim = self:TableRandom(self.DeathBackAnims["Head"])
 			end
 		else
 			self:Speak("dth_mjr")
@@ -3986,6 +4000,10 @@ end
 	Plays footstep sound if allowed
 ]]
 
+function ENT:GetTrueYValue()
+	return (self.YPP*self.YawPoseParamMultiplier)
+end
+
 function ENT:BodyUpdate()
 	local act = self:GetActivity()
 	if !self.loco:GetVelocity():IsZero() and ( (self.loco:IsOnGround() and self.loco:IsAttemptingToMove()) or self.IsFlyingNextBot ) and !self.DetectedAGrenade then
@@ -4045,41 +4063,60 @@ function ENT:BodyUpdate()
 	local di = 0
 	local p
 	local dip = 0
+	--local draw = false
+	
+	--[[if !self.DrawedWithDelay then
+		self.DrawedWithDelay = true
+		draw = true
+		timer.Simple( 2, function() if IsValid(self) then self.DrawedWithDelay = false end end )
+	end]]
 	--print( (IsValid(self.Enemy)))
 	--print( !self.NotLookingAtEnemy )
 	--print( self.HasLOSToTarget )
+	local ymins = self.YMins
+	local ymaxs = self.YMaxs
+	--print(IsValid(self.Enemy), (!self.NotLookingAtEnemy or self.HasLOSToTarget), IsValid(self.LookTarget), self.SpecificGoal)
 	if ( (IsValid(self.Enemy) and (!self.NotLookingAtEnemy or self.HasLOSToTarget) )or ((IsValid(self.LookTarget) or self.SpecificGoal)) ) then
 		goal = self.SpecificGoal
-		if IsValid(self.Enemy) and (!self.NotLookingAtEnemy or self.HasLOSToTarget) then
-			goal = self.Enemy:WorldSpaceCenter()
-		else
-			if !self.loco:GetVelocity():IsZero() then
-				goal = self:WorldSpaceCenter()+self.loco:GetVelocity()*100
-				--print("This should be going according to plan")
-			elseif IsValid(self.LookTarget) then
-				goal = self.LookTarget:WorldSpaceCenter()+(self.LookTarget:OBBMaxs()*0.3)
-			elseif isentity(self.SpecificGoal) and IsValid(self.SpecificGoal) then
-				goal = self.SpecificGoal:WorldSpaceCenter()
-			end
+		if (IsValid(self.Enemy) or (IsEntity(goal) and IsValid(goal)) ) and (!self.NotLookingAtEnemy or self.HasLOSToTarget) then
+			local e = self.Enemy or (IsEntity(goal) and IsValid(goal)) and goal
+			goal = e:WorldSpaceCenter()
+		elseif !self.loco:GetVelocity():IsZero() then
+			goal = self:WorldSpaceCenter()+self.loco:GetVelocity()*100
+			--print("This should be going according to plan")
+		elseif IsValid(self.LookTarget) then
+			goal = self.LookTarget:WorldSpaceCenter()+(self.LookTarget:OBBMaxs()*0.3)
+		elseif isentity(self.SpecificGoal) and IsValid(self.SpecificGoal) then
+			goal = self.SpecificGoal:WorldSpaceCenter()
 		end
+		if !isvector(goal) then print(goal) return self:FrameAdvance() end
 		local an = (goal-(self:WorldSpaceCenter()+self:GetUp()*30)):Angle()
-		y = an.y
-		dify = math.AngleDifference(self:GetAngles().y+self.YPP,y)
+		y = math.NormalizeAngle( an.y )
+		dify = math.AngleDifference(self:GetAngles().y+self:GetTrueYValue(),y)
+		if dify > 360 then dify = dify-360 end
+		if dify < -360 then dify = dify+360 end
 		--print(dify)
-		local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
+		--print(ymins,ymaxs,self)
 		if ymins or ymaxs then
+			--print("x",dify,self.YPP)
+			--if draw then
+			--	debugoverlay.Line((self:WorldSpaceCenter()+self:GetUp()*30),(self:WorldSpaceCenter()+self:GetUp()*30)+an:Forward()*100,2,Color(0,255,0))
+			--	debugoverlay.Line((self:WorldSpaceCenter()+self:GetUp()*30),(self:WorldSpaceCenter()+self:GetUp()*30)+Angle(0,self:GetAngles().y+self.YPP,0):Forward()*100,2,Color(0,0,255))
+			--end
 			if math.abs(dify) > 2 then
-				if dify > 0 then
-					di = -2
+				if dify < 0 then
+					di = 2
 					--print(di,self.YPP,ymins)
-					if self.YPP+di <= (ymins*0.25) then
+					--print("left",self.YPP,di)
+					if self.YPP+di < (ymaxs) then
 						self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
 						di = 0
 					end
 				else
-					di = 2
+					di = -2
 					--print(di)
-					if self.YPP+di >= (ymaxs*0.25) then
+					--print("right",self.YPP,di)
+					if self.YPP+di > ymins then
 						self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
 						di = 0
 					end
@@ -4140,19 +4177,19 @@ function ENT:BodyUpdate()
 			end
 		end
 	else	
-		local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
 		if self.YPP != 0 then
 			if self.YPP > 0 then
 				di = -math.Clamp( self.YPP, -2, 0 )
-				if self.PPP+di <= ymins then
+				if self.YPP+di <= ymins then
 					self:SetAngles(self:GetAngles()+Angle(0,di,0))
 				end
 			else
 				di = math.Clamp( self.YPP, 0, 2 )
-				if self.PPP+di >= ymaxs then
+				if self.YPP+di >= ymaxs then
 					self:SetAngles(self:GetAngles()+Angle(0,di,0))
 				end
 			end
+			--print("cancelled")
 		end
 		--print(di)
 		if self.PPP != 0 then
@@ -4163,14 +4200,21 @@ function ENT:BodyUpdate()
 			end
 		end
 	end
-	self:SetPoseParameter("aim_yaw",(self.YPP+(di)))
-	self.YPP = self:GetPoseParameter("aim_yaw")
+	local finalyaw = math.Clamp( ((self.YPP+(di))*self.YawPoseParamMultiplier), self.YMins, self.YMaxs )
+	--print(finalyaw,self:GetPoseParameter("aim_yaw"))
+	self:SetPoseParameter("aim_yaw",finalyaw)
+	self.YPP = finalyaw
+	--if draw then
+	--	debugoverlay.Line((self:WorldSpaceCenter()+self:GetUp()*30),(self:WorldSpaceCenter()+self:GetUp()*30)+Angle(0,self.YPP+self:GetAngles().y,0):Forward()*100,2,Color(255,0,0))
+	--end
 	--print(self.YPP)
-	self:SetPoseParameter("aim_pitch",(self.PPP+(dip)))
-	self.PPP = self:GetPoseParameter("aim_pitch")
+	local finalpitch = math.Clamp( ((self.PPP+(dip))*self.PitchPoseParamMultiplier), self.PMins, self.PMaxs )
+	self:SetPoseParameter("aim_pitch",finalpitch)
+	self.PPP = finalpitch
 	--print(self.PPP)
 	if !self.DoingFlinch and self:Health() > 0 and !self.ThrowingGrenade and !self.DoingMelee and !self.Taunting and !self.ThrowGrenade then
 		self:BodyMoveXY()
+		return
 	end
 	self:FrameAdvance()
 end

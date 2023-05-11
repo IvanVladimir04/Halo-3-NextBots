@@ -386,6 +386,16 @@ function ENT:SentinelInitialize()
 	else -- Server
 		self:FlyInitialize()
 	end
+	if self.HasEliteSentinelBeam then
+		self.BeamEffect = "effect_astw2_halo2_tracer_beam_blue"
+		self.BeamParticle = "astw2_halo_3_sentinel_impact_blue"
+	else
+		self.BeamEffect = "effect_astw2_halo2_tracer_beam"
+		self.BeamParticle = "astw2_halo_3_sentinel_impact_red"
+	end
+	self.LaserLoopSound = self.LaserLoopSound or CreateSound(self, "halo/halo_3/sentinel_beam_loop.wav")
+	self.LaserStopSound = self.LaserStopSound or CreateSound(self, "halo/halo_3/sentinel_beam_out.ogg")
+	self.LaserStartSound = self.LaserStartSound or CreateSound(self, "halo/halo_3/sentinel_beam_in.ogg")
 	--[[
 		self.LaserLoopSound = self.LaserLoopSound or CreateSound(self, "halo/halo_3/sentinel_beam_loop.wav")
 		self.LaserStopSound = self.LaserStopSound or CreateSound(self, "halo/halo_3/sentinel_beam_out.ogg")
@@ -1392,6 +1402,85 @@ function ENT:SentinelThink()
 
 	else
 		self:FlyThink()
+		local target = self:FlyingThink()
+		if !self.InCoolDown and IsValid(target) then
+			local rdir = (target:GetForward()+target:GetRight())*math.random(1,-1)
+			self:BeamAttack(target:WorldSpaceCenter()+rdir*math.random(64,128),target:WorldSpaceCenter())
+		end
+	end
+end
+function ENT:FlyingThink()
+	if IV04_AIDisabled or self.Flying or self.HaltShoot or self.AnimBusy or (self.IsInVehicle and self.VehicleRole != "Passenger") then return end
+	if IsValid(self.Enemy) then
+		local ent = self.Enemy		
+		if self.LastCalcTime < CurTime() then -- We can do expensive actions
+			self.LastCalcTime = CurTime()+self.AimCalculationT -- Set when we can do the expensive actions again
+			local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,ent:WorldSpaceCenter(),{self,ent,self:GetOwner(),ent:GetOwner()})
+			if los then
+				self.HasLOSToTarget = true
+				-- No point on increasing FPS loss by calculationg distance if we can't even see target
+				self.DistToTarget = self:GetRangeSquaredTo(ent)
+				self.RegisteredTargetPositions[ent] = ent:GetPos()
+			else
+				if IsValid(obstr) then
+					local ros = self:CheckRelationships(obstr)
+					if ros == "foe" then
+						self:SetEnemy(obstr)
+						ent = obstr
+						self.HasLOSToTarget = true
+						self.DistToTarget = self:GetRangeSquaredTo(ent)
+						self.RegisteredTargetPositions[ent] = ent:GetPos()
+						self:ResetAI()
+						--print("new target found!",ros)
+						-- New target!
+					elseif ros == "friend" and obstr:IsPlayer() then
+						self:Speak("scld_plr_blocking")
+					else
+						if ( self.DriveThese[obstr:GetModel()] and !self.SeenVehicles[obstr] ) then
+							self.SeenVehicles[obstr] = true
+							self.CountedVehicles = self.CountedVehicles+1
+						end
+						self.HasLOSToTarget = false
+					end
+				else
+					self.HasLOSToTarget = false
+				end
+			end
+		end
+		return ent
+		--print(self.HasLOSToTarget)
+	end
+end
+
+function ENT:BeamAttack(startpos,endpos)
+	--ent = ent or self.Enemy
+	--local dist = startpos:Distance(endpos)
+	local xdif = endpos.x-startpos.x
+	local ydif = endpos.y-startpos.y
+	local dir = (endpos-startpos):GetNormalized()
+	local lim = 12
+	self.InCoolDown = true
+	timer.Simple( 4, function() if IsValid(self) then self.InCoolDown = false end end )
+	for i = 1, lim do
+		timer.Simple( i/3, function()
+			if IsValid(self) then
+				local trdir = (self:GetShootPos()+Vector(xdif/6,ydif/6,0)-self:GetShootPos()):GetNormalized()
+				local tr = util.TraceLine( {
+					start = self:GetShootPos(),
+					endpos = startpos+Vector(xdif/6,ydif/6,0),
+					filter = self
+				} )
+				local t = EffectData()
+				t:SetEntity( self )
+				t:SetOrigin( tr.HitPos )
+				t:SetNormal( trdir )
+				util.Effect( self.BeamEffect, t )
+				ParticleEffect( self.BeamParticle, tr.HitPos, self:GetAngles() )
+			--	if i == lim then
+			--		self.InCoolDown = true
+			--	end
+			end
+		end )
 	end
 end
 function ENT:EnforcerThink()
@@ -2875,27 +2964,6 @@ function ENT:DoIdle()
 		self:SearchEnemy()
 	end
 end
-function ENT:FlyFollowingPlayerChecks()
-	if self.IsFollowingPlayer then
-		self.LookTarget = self.FollowingPlayer
-		local dist = self:GetRangeSquaredTo(self.FollowingPlayer)
-		if dist > 300^2 then
-			--self:CrouchChecks(true,true)
-			local goal = self.FollowingPlayer:GetPos()
-			local pos = self:FindNearbyPos(goal,200)
-			pos.z = goal.z + 80
-			local los, obstr = self:IsOnLineOfSight(self:WorldSpaceCenter()+self:GetUp()*40,self.FollowingPlayer:WorldSpaceCenter(),{self,self.FollowingPlayer,self:GetOwner(),self.FollowingPlayer:GetOwner()})
-			self.LookTarget = nil
-			if los then
-				self:FlyToPos(pos,{directfly = true})
-			else
-				--ani = self.CrouchIdleCalmAnim
-				self:FlyToPos( pos, {distaboveground = 50, facegoal = true} )	
-			end
-			self.LookTarget = self.FollowingPlayer
-		end
-	end
-end
 function ENT:FollowingPlayerChecks()
 	if self.IsFollowingPlayer then
 		if self.FollowingPlayer:InVehicle() then
@@ -2913,12 +2981,13 @@ function ENT:FollowingPlayerChecks()
 			local pos = self:FindNearbyPos(goal,200)
 			self.LookTarget = nil
 			local anim = IsValid(self.Enemy) and self.RunAnim or self.RunCalmAnim
+			local speed = self.MoveSpeed*self.MoveSpeedMultiplier
 			if self.IsCrouching then
 				anim = self:TableRandom(self.CrouchMoveCalmAnim)
-				speed = self.MoveSpeed
+				speed = self.MoveSpeed--*0.75
 			end
 			--ani = self.CrouchIdleCalmAnim
-			self:GoToPosition( (pos), self:TableRandom(anim), self.MoveSpeed*self.MoveSpeedMultiplier, (!IsValid(self.Enemy) and self.WanderToPos) or nil )	
+			self:GoToPosition( (pos), self:TableRandom(anim), speed, (!IsValid(self.Enemy) and self.WanderToPos) or nil )	
 			self.LookTarget = self.FollowingPlayer
 		else
 			self:CrouchChecks()
