@@ -1436,7 +1436,9 @@ function ENT:Dodge()
 	--print(anim)
 	self.Dodged = true
 	timer.Simple( math.random(2,5), function() if IsValid(self) then self.Dodged = false end end )
+	self.Dodging = true
 	self:PlaySequenceAndPWait(anim,1,self:GetPos())
+	self.Dodging = false
 end
 
 function ENT:DodgeChecks(ent,los)
@@ -4004,6 +4006,16 @@ function ENT:GetTrueYValue()
 	return (self.YPP*self.YawPoseParamMultiplier)
 end
 
+function ENT:GetYMins()
+	if !self.YMins then return 0 end
+	return (self.YMins*self.YawPoseParamMultiplier)
+end
+
+function ENT:GetYMaxs()
+	if !self.YMaxs then return 0 end
+	return (self.YMaxs*self.YawPoseParamMultiplier)
+end
+
 function ENT:BodyUpdate()
 	local act = self:GetActivity()
 	if !self.loco:GetVelocity():IsZero() and ( (self.loco:IsOnGround() and self.loco:IsAttemptingToMove()) or self.IsFlyingNextBot ) and !self.DetectedAGrenade then
@@ -4073,8 +4085,8 @@ function ENT:BodyUpdate()
 	--print( (IsValid(self.Enemy)))
 	--print( !self.NotLookingAtEnemy )
 	--print( self.HasLOSToTarget )
-	local ymins = self.YMins
-	local ymaxs = self.YMaxs
+	local ymins = self:GetYMins()
+	local ymaxs = self:GetYMaxs()
 	--print(IsValid(self.Enemy), (!self.NotLookingAtEnemy or self.HasLOSToTarget), IsValid(self.LookTarget), self.SpecificGoal)
 	if ( (IsValid(self.Enemy) and (!self.NotLookingAtEnemy or self.HasLOSToTarget) )or ((IsValid(self.LookTarget) or self.SpecificGoal)) ) then
 		goal = self.SpecificGoal
@@ -4086,8 +4098,6 @@ function ENT:BodyUpdate()
 			--print("This should be going according to plan")
 		elseif IsValid(self.LookTarget) then
 			goal = self.LookTarget:WorldSpaceCenter()+(self.LookTarget:OBBMaxs()*0.3)
-		elseif isentity(self.SpecificGoal) and IsValid(self.SpecificGoal) then
-			goal = self.SpecificGoal:WorldSpaceCenter()
 		end
 		if !isvector(goal) then print(goal) return self:FrameAdvance() end
 		local an = (goal-(self:WorldSpaceCenter()+self:GetUp()*30)):Angle()
@@ -4104,23 +4114,25 @@ function ENT:BodyUpdate()
 			--	debugoverlay.Line((self:WorldSpaceCenter()+self:GetUp()*30),(self:WorldSpaceCenter()+self:GetUp()*30)+Angle(0,self:GetAngles().y+self.YPP,0):Forward()*100,2,Color(0,0,255))
 			--end
 			if math.abs(dify) > 2 then
+				--print(dify)
 				if dify < 0 then
 					di = 2
-					--print(di,self.YPP,ymins)
+					if self.YPP+di > (ymaxs) then
+					--print(di,self.YPP,ymaxs)
 					--print("left",self.YPP,di)
-					if self.YPP+di < (ymaxs) then
 						self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
 						di = 0
 					end
 				else
 					di = -2
-					--print(di)
+					if self.YPP+di < (ymins) then
+					--print(di,self.YPP,ymins)
 					--print("right",self.YPP,di)
-					if self.YPP+di > ymins then
 						self:SetAngles(self:GetAngles()+Angle(0,di*2,0))
 						di = 0
 					end
 				end
+				--print(di)
 			end
 		end
 		p = an.p
@@ -4179,12 +4191,14 @@ function ENT:BodyUpdate()
 	else	
 		if self.YPP != 0 then
 			if self.YPP > 0 then
-				di = -math.Clamp( self.YPP, -2, 0 )
+				di = math.Clamp( self.YPP, -2, 0 )
+				--print(di,self.YPP,"+")
 				if self.YPP+di <= ymins then
 					self:SetAngles(self:GetAngles()+Angle(0,di,0))
 				end
 			else
 				di = math.Clamp( self.YPP, 0, 2 )
+				--print(di,self.YPP,"-")
 				if self.YPP+di >= ymaxs then
 					self:SetAngles(self:GetAngles()+Angle(0,di,0))
 				end
@@ -4200,19 +4214,22 @@ function ENT:BodyUpdate()
 			end
 		end
 	end
-	local finalyaw = math.Clamp( ((self.YPP+(di))*self.YawPoseParamMultiplier), self.YMins, self.YMaxs )
-	--print(finalyaw,self:GetPoseParameter("aim_yaw"))
+	--print(di,self.YPP,((self.YPP+(di))*self.YawPoseParamMultiplier),self.YMins,self.YMaxs)
+	local finalyaw = math.Clamp( (((self.YPP)+(di))), self.YMins or 0, self.YMaxs or 0 )
+	--print(finalyaw,self:GetPoseParameter("aim_yaw"),self.YMins*self.YawPoseParamMultiplier,self.YMaxs*self.YawPoseParamMultiplier)
+	--print(finalyaw)
 	self:SetPoseParameter("aim_yaw",finalyaw)
+	--print(finalyaw,self:GetPoseParameter("aim_yaw"))
 	self.YPP = finalyaw
 	--if draw then
 	--	debugoverlay.Line((self:WorldSpaceCenter()+self:GetUp()*30),(self:WorldSpaceCenter()+self:GetUp()*30)+Angle(0,self.YPP+self:GetAngles().y,0):Forward()*100,2,Color(255,0,0))
 	--end
 	--print(self.YPP)
-	local finalpitch = math.Clamp( ((self.PPP+(dip))*self.PitchPoseParamMultiplier), self.PMins, self.PMaxs )
+	local finalpitch = math.Clamp( ((self.PPP+(dip))*self.PitchPoseParamMultiplier), self.PMins or 0, self.PMaxs or 0 )
 	self:SetPoseParameter("aim_pitch",finalpitch)
 	self.PPP = finalpitch
 	--print(self.PPP)
-	if !self.DoingFlinch and self:Health() > 0 and !self.ThrowingGrenade and !self.DoingMelee and !self.Taunting and !self.ThrowGrenade then
+	if !self.DoingFlinch and self:Health() > 0 and !self.Dodging and !self.AnimBusy and !self.ThrowingGrenade and !self.DoingMelee and !self.Taunting and !self.loco:GetVelocity():IsZero() then
 		self:BodyMoveXY()
 		return
 	end

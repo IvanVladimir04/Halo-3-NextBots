@@ -71,7 +71,7 @@ function ENT:MarineInitialize()
 	self.AllowClimbing = true
 	self.AllowStealth = true
 	self.MoveSpeed = 90
-	self.MoveSpeedMultiplier = 2
+	self.MoveSpeedMultiplier = 1.6
 	self:SetCollisionBounds(Vector(10,10,70),Vector(-10,-10,0))
 	self.MeleeAnimsHits = {
 		["Melee_Combat_Rifle_1"] = 0.5,
@@ -317,7 +317,7 @@ function ENT:JackalInitialize()
     self.VehicleImpactSound = "iv04.h3_impact_veh_bip_jackal"
     self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_jackal"
     self:SetBodygroup(1,self.Rank-1)
-    self.MoveSpeed = 30
+    self.MoveSpeed = 10
     self.MoveSpeedMultiplier = 4
     self.VoiceType = "Jackal"
     self.AllowGrenade = false
@@ -352,8 +352,8 @@ function ENT:HunterInitialize()
 	self.MeleeDamage = 45
 	self.DamageThreshold = math.huge -- Do this to disable flinching
 	self:SetSkin(self.Rank)
-	self.MoveSpeed = 75
-	self.MoveSpeedMultiplier = 2.5
+	self.MoveSpeed = 50
+	self.MoveSpeedMultiplier = 3
 	self.WeakHitGroup = 2
 	self:SetCollisionBounds(Vector(30,30,120),Vector(-30,-30,0))
 	self.DamageResistances = {
@@ -444,7 +444,8 @@ end
 function ENT:FloodHumanInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
-	self.MoveSpeed = 40
+	self.MoveSpeed = 30
+	self.MoveSpeedMultiplier = 6
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
 	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
@@ -479,7 +480,8 @@ function ENT:FloodEliteInitialize()
 	self.ShieldAttachment = 11
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
-	self.MoveSpeed = 40
+	self.MoveSpeed = 35
+	self.MoveSpeedMultiplier = 6
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
 	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
@@ -511,7 +513,6 @@ function ENT:FloodEliteInitialize()
 		[9] = "models/halo_3/characters/flood/gibs/elite_combat_form/gib_head.mdl"
 	}
 	self.AttractAlliesRange = math.huge
-	self.MoveSpeedMultiplier = 5
 	if math.random(1,3) == 1 then
 		self.ShieldRegenTimeDelay = 5
 		self.ShieldRegenTime = 2
@@ -527,7 +528,8 @@ end
 function ENT:FloodBruteInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
-	self.MoveSpeed = 40
+	self.MoveSpeed = 35
+	self.MoveSpeedMultiplier = 5.5
 	self.IsWeaponDrawn = true
 	self.MeleeDamage = 15
 	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
@@ -585,6 +587,7 @@ function ENT:FloodTankInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.MoveSpeed = 40
+	self.MoveSpeedMultiplier = 1.6
 	self.MeleeDamage = 35
 	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
 	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
@@ -603,6 +606,7 @@ function ENT:FloodStalkerInitialize()
 	self.BloodDecal = "iv04_halo_3_blood_splat_flood"
 	self.BloodParticle = "iv04_halo_3_flood_gib_small"
 	self.MoveSpeed = 100
+	self.MoveSpeedMultiplier = 2.5
 	self.MeleeDamage = 15
 	self.MeleeSwingSound = { "halo_3/sfx/fld_melee_swish1.wav", "halo_3/sfx/fld_melee_swish2.wav", "halo_3/sfx/fld_melee_swish3.wav", "halo_3/sfx/fld_melee_swish4.wav", "halo_3/sfx/fld_melee_swish5.wav", "halo_3/sfx/fld_melee_swish6.wav" }
 	self.BodyFallImpactSound = "iv04.h3_foley_bodyfall_flood_combat"
