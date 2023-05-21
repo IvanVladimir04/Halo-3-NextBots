@@ -3,10 +3,14 @@ AddCSLuaFile()
 function ENT:SetupAnimations()
 
 	local ymins, ymaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_yaw") )
+	if !ymins then ymins = 0 end
+	if !ymaxs then ymaxs = 0 end
 	self.YawPoseParamMultiplier = 90/ymaxs
 	self.YMaxs = ymaxs
 	self.YMins = ymins
 	local pmins, pmaxs = self:GetPoseParameterRange( self:LookupPoseParameter("aim_pitch") )
+	if !pmins then pmins = 0 end
+	if !pmaxs then pmaxs = 0 end
 	self.PitchPoseParamMultiplier = 90/pmaxs
 	self.PMaxs = pmaxs
 	self.PMins = pmins
